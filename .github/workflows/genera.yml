@@ -12,12 +12,6 @@ on:
         default: auto
         type: choice
         options: [auto, movie, tvshow, anime]
-      esecuzione:
-        description: "Dove eseguire: github (server americano) oppure mio-computer (runner installato da te, serve per siti limitati all'Italia)"
-        required: false
-        default: github
-        type: choice
-        options: [github, mio-computer]
       attesa:
         description: "Secondi di attesa dopo ogni pagina"
         required: false
@@ -28,7 +22,7 @@ permissions:
 
 jobs:
   genera:
-    runs-on: ${{ inputs.esecuzione == 'mio-computer' && 'self-hosted' || 'ubuntu-latest' }}
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
