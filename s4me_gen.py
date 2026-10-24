@@ -260,6 +260,8 @@ class Sessione:
         for i in range(min(n_sel, 3)):
             try:
                 sel = self.page.locator('select').nth(i)
+                if sel.evaluate("e => !!e.closest('footer, header, nav')"):
+                    continue
                 opts = sel.locator('option').evaluate_all("els => els.map(o => [o.value, o.textContent.trim()])")
                 corrente = sel.input_value()
                 nome_corr = sel.evaluate("e => e.options[e.selectedIndex].textContent.trim()")
@@ -794,6 +796,154 @@ def trova_episodi_api(net):
             if not best or len(dicts) > len(best['lista']):
                 best = {'entry': e, 'path': path, 'lista': dicts, 'chiavi': ris, 'json': j}
     return best
+
+
+SORT_PROVA = ['POPULAR', 'TRENDING', 'ALPHABETICAL', 'RANDOM', 'RELEASE_YEAR', 'TMDB_POPULARITY', 'IMDB_SCORE',
+              'LAST_ADDED', 'NEWEST', 'RATING', 'TITLE', 'POPULARITY']
+SORT_NOMI = {'POPULAR': 'Popolari', 'TRENDING': 'Di tendenza', 'ALPHABETICAL': 'Ordine alfabetico', 'RANDOM': 'Casuale',
+             'RELEASE_YEAR': 'Anno di uscita', 'TMDB_POPULARITY': 'Popolarità TMDB', 'IMDB_SCORE': 'Punteggio IMDb',
+             'LAST_ADDED': 'Ultimi aggiunti', 'NEWEST': 'Più recenti', 'RATING': 'Valutazione', 'TITLE': 'Titolo',
+             'POPULARITY': 'Popolari'}
+LINGUA_RE = re.compile(r'(lang|country|locale|region|culture)', re.I)
+
+
+def variabili_di(post):
+    """Ritorna (json completo, dizionario delle variabili) di una richiesta con corpo JSON."""
+    try:
+        j = json.loads(post)
+    except Exception:
+        return None, None
+    v = j.get('variables') if isinstance(j, dict) and isinstance(j.get('variables'), dict) else (j if isinstance(j, dict) else None)
+    return j, v
+
+
+def percorsi_variabili(v, pre=(), prof=0):
+    out = []
+    for k, val in v.items():
+        if isinstance(val, dict) and prof < 3:
+            out += percorsi_variabili(val, pre + (k,), prof + 1)
+        else:
+            out.append((pre + (k,), val))
+    return out
+
+
+def imposta(v, percorso, valore):
+    for k in percorso[:-1]:
+        v = v[k]
+    v[percorso[-1]] = valore
+
+
+def differenze_variabili(post1, post2):
+    _, a = variabili_di(post1 or '')
+    _, b = variabili_di(post2 or '')
+    if a is None or b is None:
+        return {}
+    da, db = dict(percorsi_variabili(a)), dict(percorsi_variabili(b))
+    return {p: (da.get(p), db.get(p)) for p in set(da) | set(db) if da.get(p) != db.get(p)}
+
+
+def solo_lingua(post1, post2):
+    d = differenze_variabili(post1, post2)
+    return bool(d) and all(LINGUA_RE.search('.'.join(p)) for p in d)
+
+
+def leggi(d, path):
+    for p in path.split('.'):
+        if isinstance(d, dict):
+            d = d.get(p)
+        elif isinstance(d, list) and p.isdigit() and int(p) < len(d):
+            d = d[int(p)]
+        else:
+            return None
+    return d
+
+
+def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
+    """Prova a rigiocare la richiesta dell'elenco cambiando tipo, ordinamento e filtro gratuito."""
+    e = api['entry']
+    if e.get('method') != 'POST' or not e.get('post'):
+        return []
+    j0, v0 = variabili_di(e['post'])
+    if v0 is None:
+        return []
+    chiave_tipo = api['chiavi'].get('type')
+    tipi_visti = set()
+    if chiave_tipo:
+        for lst_ in [api['lista']] + [z['api']['lista'] for z in altre]:
+            tipi_visti |= {str(appiattisci(x).get(chiave_tipo, '')).upper() for x in lst_}
+        tipi_visti = sorted(tipi_visti - {''})
+
+    def forma_tipo(t):
+        return [t] if isinstance(dict(percorsi_variabili(v0)).get(p_tipo), list) else t
+
+    def rigioca(modifiche):
+        j, v = variabili_di(e['post'])
+        for pth, val in modifiche:
+            imposta(v, pth, val)
+        try:
+            r = s.page.request.post(e['url'], data=json.dumps(j), headers={'Content-Type': 'application/json'}, timeout=20000)
+            risp = r.json()
+        except BaseException:
+            return None, None
+        lst = leggi(risp, api['path']) if isinstance(risp, dict) else None
+        if isinstance(risp, dict) and risp.get('errors'):
+            return None, None
+        if not isinstance(lst, list) or not lst:
+            return None, None
+        return json.dumps(j), [x for x in lst if isinstance(x, dict)]
+
+    p_tipo = p_sort = None
+    for pth, val in percorsi_variabili(v0):
+        nome = pth[-1]
+        if p_tipo is None and re.search(r'type', nome, re.I) and tipi_visti and (
+                isinstance(val, list) or (isinstance(val, str) and val.isupper())):
+            p_tipo = pth
+        if p_sort is None and re.search(r'sort', nome, re.I) and isinstance(val, str) and val.isupper():
+            p_sort = pth
+    rp('Sonda API: variabile dei tipi =', '.'.join(p_tipo) if p_tipo else 'nessuna',
+       '| variabile dell\'ordinamento =', '.'.join(p_sort) if p_sort else 'nessuna')
+    base_mod = list(filtro_free.items())
+    tipi_ok = []
+    if p_tipo:
+        for t in tipi_visti:
+            post, lst = rigioca([(p_tipo, forma_tipo(t))])
+            if lst:
+                chiave = api['chiavi'].get('type')
+                if all(str(appiattisci(x).get(chiave, '')).upper() == t for x in lst):
+                    tipi_ok.append((t, 'tvshow' if re.search(r'show|serie|tv', t, re.I) else 'movie'))
+    sort_ok = []
+    sequenze = set()
+    if p_sort:
+        for so in SORT_PROVA:
+            mod = [(p_sort, so)] + ([(p_tipo, forma_tipo(tipi_ok[0][0]))] if tipi_ok else [])
+            post, lst = rigioca(mod)
+            if lst:
+                seq = tuple(str(appiattisci(x).get(api['chiavi'].get('title', ''), '')) for x in lst[:10])
+                if seq not in sequenze:  # un alias con gli stessi risultati non serve
+                    sequenze.add(seq)
+                    sort_ok.append(so)
+    rp('Sonda API: tipi riconosciuti =', [t for t, _ in tipi_ok], '| ordinamenti riconosciuti =', sort_ok)
+    sezioni = []
+    for t, tp in (tipi_ok or [(None, ctx['tipo'])]):
+        for so in (sort_ok or [None]):
+            mod = list(base_mod)
+            if t and p_tipo:
+                mod.append((p_tipo, forma_tipo(t)))
+            if so and p_sort:
+                mod.append((p_sort, so))
+            if not mod and not so:
+                continue
+            post, lst = rigioca(mod)
+            if not lst:
+                continue
+            ent = dict(e)
+            ent['post'] = post
+            ent['body'] = None
+            nome = SORT_NOMI.get(so, (so or 'Titoli').replace('_', ' ').title()) if so else \
+                ('Film' if tp == 'movie' else 'Serie TV')
+            sezioni.append({'nome': nome, 'tipo': tp, 'entry': ent, 'lista': api['path'], 'pag': paginazione(e),
+                            'api': {'entry': ent, 'path': api['path'], 'lista': lst, 'chiavi': api['chiavi']}})
+    return sezioni
 
 
 def trasforma_id(testo, candidati):
@@ -1546,9 +1696,15 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
             return 'tvshow' if re.search(r'show|serie|tv|series', v, re.I) else 'movie'
         return fallback
 
+    filtro_free = {}
+    base_post = api['entry'].get('post') or ''
+
     def aggiungi(nome, a, fallback):
         f = firma_richiesta(a['entry'])
         if f in viste:
+            return None
+        if base_post and sezioni and solo_lingua(base_post, a['entry'].get('post') or ''):
+            rp('Scartata (cambia solo la lingua o il paese):', nome)
             return None
         viste.add(f)
         pag = paginazione(a['entry'])
@@ -1557,7 +1713,16 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         z = {'nome': nome, 'tipo': tipo_elemento(a['lista'][0], a['chiavi'], fallback), 'entry': a['entry'],
              'lista': a['path'], 'pag': pag, 'api': a}
         sezioni.append(z)
-        rp('Sezione:', nome, '| tipo:', z['tipo'], '| titoli:', len(a['lista']))
+        diff = differenze_variabili(base_post, a['entry'].get('post') or '')
+        rp('Sezione:', nome, '| tipo:', z['tipo'], '| titoli:', len(a['lista']), '| richiesta:',
+           a['entry']['url'][:70], '| cambia:', json.dumps({'.'.join(k): v[1] for k, v in list(diff.items())[:5]},
+                                                          ensure_ascii=False)[:200] if diff else 'niente')
+        # una sezione gratuita insegna quale filtro (provider o tipo di offerta) usare per tutte le altre
+        if FREE_RE.search(nome + ' ' + a['entry']['url']) or any(
+                re.search(r'(package|monetiz)', '.'.join(k), re.I) and v[1] for k, v in diff.items()):
+            for k, v in diff.items():
+                if re.search(r'(package|monetiz)', '.'.join(k), re.I) and v[1]:
+                    filtro_free[k] = v[1]
         return z
 
     def con_varianti(nome, a, fallback):
@@ -1581,6 +1746,10 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
 
     # altre sezioni: menu, percorsi dei titoli, link a contenuti gratuiti
     cand = []
+    for a_ in soup.find_all('a', href=True):
+        t = a_.get_text(' ', strip=True)
+        if FREE_RE.search(t + ' ' + a_['href']) and len(t) < 40:
+            cand.append((t or nome_da_url(a_['href']), urljoin(base, a_['href'])))
     for t, u in ctx['menu']:
         cand.append((t, u))
     for el in api['lista'][:5]:
@@ -1591,10 +1760,6 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
                 par = posixpath.dirname(v)
                 if par and par != '/':
                     cand.append((nome_da_url(par), urljoin(base, par)))
-    for a_ in soup.find_all('a', href=True):
-        t = a_.get_text(' ', strip=True)
-        if FREE_RE.search(t + ' ' + a_['href']) and len(t) < 40:
-            cand.append((t or nome_da_url(a_['href']), urljoin(base, a_['href'])))
     visti = {pagina_elenco.rstrip('/')}
     n = 0
     for t, u in cand:
@@ -1602,13 +1767,32 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         if u.rstrip('/') in visti or urlparse(u).netloc != urlparse(base).netloc:
             continue
         visti.add(u.rstrip('/'))
-        if n >= 10:
+        if n >= 14:
             break
         n += 1
         e = s.vai(u, attesa=tempo)
         a2 = trova_elenco_api(e['net'])
         if a2:
             con_varianti(t, a2, fallback0)
+        else:
+            rp('Pagina senza elenco API:', u)
+    if filtro_free:
+        rp('Filtro gratuito ricavato dalle sezioni:', json.dumps({'.'.join(k): v for k, v in filtro_free.items()}, ensure_ascii=False))
+    # prova a rigiocare la richiesta cambiando tipo, ordinamento e filtro gratuito
+    for z in sonda_api(s, ctx, api, rp, filtro_free, list(sezioni)):
+        f = firma_richiesta(z['entry'])
+        if f not in viste:
+            viste.add(f)
+            sezioni.append(z)
+    visti_titoli, unici = set(), []
+    for z in sezioni:
+        k = z['api']['chiavi'].get('title', '')
+        seq = (z['tipo'], tuple(str(appiattisci(x).get(k, '')) for x in z['api']['lista'][:10]))
+        if seq in visti_titoli:
+            continue
+        visti_titoli.add(seq)
+        unici.append(z)
+    sezioni[:] = unici
     ctx['sezioni'] = sezioni
     rp('Sezioni trovate:', len(sezioni))
 

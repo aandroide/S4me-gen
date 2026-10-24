@@ -39,7 +39,8 @@ def det_serie(i):
 
 def nodo(i, tipo):
     t = 'Movie' if tipo == 'MOVIE' else 'Show'
-    nome = (FILM if tipo == 'MOVIE' else SERIE)[i % 4]
+    L = FILM if tipo == 'MOVIE' else SERIE
+    nome = L[i % len(L)] + ('' if i < len(L) else ' %d' % i)
     base = '/film/' if tipo == 'MOVIE' else '/serie-tv/'
     return {'node': {'__typename': t, 'id': ('tm' if tipo == 'MOVIE' else 'ts') + str(i),
                      'content': {'title': nome, 'fullPath': base + str(i), 'originalReleaseYear': 1990 + i,
@@ -56,7 +57,9 @@ class H(BaseHTTPRequestHandler):
         if self.path != '/graphql': return self._s('lic', 'application/octet-stream')
         j = json.loads(raw); op = j['operationName']; v = j['variables']
         if op == 'GetPopularTitles':
-            off = 0 if v['sort'] == 'POPULAR' else 10
+            if v['sort'] not in ('POPULAR', 'RECENT', 'ALPHABETICAL'):
+                return self._s(json.dumps({'errors': [{'message': 'invalid enum'}]}), 'application/json')
+            off = {'POPULAR': 0, 'RECENT': 10, 'ALPHABETICAL': 20}[v['sort']]
             ed = [nodo(off + i, v['type']) for i in range(6)]
             return self._s(json.dumps({'data': {'popularTitles': {'edges': ed, 'pageInfo': {'endCursor': 'c1', 'hasNextPage': False}}}}), 'application/json')
         if op == 'GetEpisodes':
