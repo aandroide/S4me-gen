@@ -217,9 +217,9 @@ class Sessione:
         except Exception:
             pass
 
-    def vai(self, url, attesa=4):
+    def vai(self, url, attesa=4, timeout=60000):
         self.net = []
-        self.page.goto(url, wait_until='domcontentloaded', timeout=60000)
+        self.page.goto(url, wait_until='domcontentloaded', timeout=timeout)
         self._assesta(attesa)
         return self.stato()
 
@@ -1686,6 +1686,7 @@ def riproduci(s, args, rp, cattura, chiave):
 def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo=''):
     """Per i siti con API: scopre sezioni e ordinamenti, poi apre un film e una serie per trovare episodi e riproduzione."""
     import posixpath
+    t0 = time.time()
     sezioni, viste = [], set()
     tempo = min(args.attesa, 4)
 
@@ -1770,7 +1771,14 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         if n >= 14:
             break
         n += 1
-        e = s.vai(u, attesa=tempo)
+        if time.time() - t0 > 240:
+            rp('Esplorazione delle sezioni interrotta dopo 4 minuti')
+            break
+        try:
+            e = s.vai(u, attesa=tempo, timeout=25000)
+        except Exception as ex:
+            rp('Pagina non raggiungibile:', u)
+            continue
         a2 = trova_elenco_api(e['net'])
         if a2:
             con_varianti(t, a2, fallback0)
