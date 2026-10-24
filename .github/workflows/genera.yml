@@ -12,6 +12,12 @@ on:
         default: auto
         type: choice
         options: [auto, movie, tvshow, anime]
+      esecuzione:
+        description: "Dove eseguire: github (server americano) oppure mio-computer (runner installato da te, serve per siti limitati all'Italia)"
+        required: false
+        default: github
+        type: choice
+        options: [github, mio-computer]
       attesa:
         description: "Secondi di attesa dopo ogni pagina"
         required: false
@@ -22,7 +28,7 @@ permissions:
 
 jobs:
   genera:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.esecuzione == 'mio-computer' && 'self-hosted' || 'ubuntu-latest' }}
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -60,6 +66,7 @@ jobs:
           SITO: ${{ inputs.sito }}
           TIPO: ${{ inputs.tipo }}
           ATTESA: ${{ inputs.attesa }}
+          PROXY_URL: ${{ secrets.PROXY_URL }}
         run: |
           # nome della cartella: dominio senza http, www e estensione
           NOME=$(python3 - <<'PY'

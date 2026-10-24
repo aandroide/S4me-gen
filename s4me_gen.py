@@ -177,7 +177,7 @@ def con_timeout(sec, fn, *a, **k):
 
 
 class Sessione:
-    def __init__(self, headless=True, chromium=None, dns=None):
+    def __init__(self, headless=True, chromium=None, dns=None, proxy=None):
         from playwright.sync_api import sync_playwright
         self._pw = sync_playwright().start()
         kw = {'headless': headless}
@@ -188,6 +188,12 @@ class Sessione:
             kw['args'] = ['--enable-features=DnsOverHttps',
                           '--force-fieldtrial-params=DnsOverHttps.Fallback:Fallback/true/Templates/https%3A%2F%2F' + dns + '%2Fdns-query',
                           '--force-fieldtrials=DnsOverHttps/Fallback']
+        if proxy:
+            pu = urlsplit(proxy)
+            kw['proxy'] = {'server': '%s://%s' % (pu.scheme or 'http', pu.netloc.split('@')[-1])}
+            if pu.username:
+                kw['proxy']['username'] = pu.username
+                kw['proxy']['password'] = pu.password or ''
         self.browser = self._pw.chromium.launch(**kw)
         self.ctx = self.browser.new_context(user_agent=CF['ua'] or UA, locale='it-IT',
                                             viewport={'width': 1366, 'height': 900})
@@ -1802,6 +1808,12 @@ def riproduci(s, args, rp, cattura, chiave):
     pl = s.prova_play(attesa=args.attesa + 4)
     cattura[chiave] = {'url': pl['url'], 'cliccato': pl.get('cliccato'), 'net': pl['net']}
     man, lic = trova_manifest(pl['net'])
+    for e_ in pl['net']:
+        m_ = re.search(r'"errorCode"\s*:\s*"([A-Z_]*(?:GEO|REGION|COUNTRY|RESTRICT)[A-Z_]*)"', e_.get('body') or '')
+        if m_:
+            rp('ATTENZIONE: il sito rifiuta la riproduzione per il paese di questo computer (%s). '
+               'Serve un indirizzo del paese giusto: usa il proxy (PROXY_URL / --proxy) o esegui il tool sul tuo computer.' % m_.group(1))
+            break
     if not man:
         rp('Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).')
         return None
@@ -2024,6 +2036,20 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         cattura['serie'] = {'url': det['url'], 'net': det['net']}
         ep = trova_episodi_api(det['net'])
         if not ep:
+            try:
+                cache = s.page.evaluate(
+                    "() => { const c = window.__APOLLO_CLIENT__; if (!c) return null; const x = c.cache.extract(); "
+                    "const o = {}; for (const k of Object.keys(x)) { if (/^(Show|Season|Episode|Offer|OfferEpisode):/.test(k) "
+                    "|| k === 'ROOT_QUERY') { const s = JSON.stringify(x[k]); o[k] = s.length > 6000 ? s.slice(0, 6000) : s; } } return o; }")
+            except BaseException as ex:
+                cache = None
+                rp('Cache Apollo non letta:', str(ex)[:100])
+            if cache:
+                nep = sum(1 for k in cache if k.startswith('Episode:'))
+                rp('Cache Apollo della serie: %d voci, di cui %d episodi' % (len(cache), nep))
+                cattura['serie_cache'] = cache
+            elif cache is None:
+                rp('Nessun client Apollo nella pagina della serie.')
             rp('Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.')
             continue
         e = ep['entry']
@@ -2064,7 +2090,8 @@ def analizza(url, args):
     ctx = {'base': base, 'menu': [], 'tipo': 'movie', 'next': '', 'patron': '', 'episodi': None, 'patron_ep': '',
            'ricerca': None, 'api': None, 'search_api': '', 'pag': None, 'manifest': None}
 
-    s = Sessione(headless=not (args.mostra or args.pausa), chromium=args.chromium, dns=DOH.get(args.dns))
+    s = Sessione(headless=not (args.mostra or args.pausa), chromium=args.chromium, dns=DOH.get(args.dns),
+                 proxy=args.proxy or os.environ.get('PROXY_URL') or None)
     cattura = {}
     try:
         rp('Apro', url)
@@ -2287,6 +2314,7 @@ def main():
                     help='indirizzo di FlareSolverr (per esempio http://localhost:8191) per superare Cloudflare')
     ap.add_argument('--controlla-cf', action='store_true',
                     help='stampa true se il sito mostra la challenge di Cloudflare, false altrimenti, ed esce')
+    ap.add_argument('--proxy', help='proxy del paese giusto (http://utente:password@host:porta), anche dalla variabile PROXY_URL')
     ap.add_argument('--chromium', help='percorso di un chromium gia installato')
     args = ap.parse_args()
     if args.controlla_cf:
