@@ -20,3 +20,9 @@ al browser del tool. In locale: `python3 s4me_gen.py SITO --flaresolverr http://
 Gli IP dei runner GitHub a volte vengono bloccati da Cloudflare: in quel caso rilancia la action.
 Se continua a fallire usa il tool sul PC con --pausa.
 Controlla sempre il rapporto: le righe TODO vanno completate a mano.
+
+## Paese del sito
+I runner GitHub sono negli Stati Uniti: i siti che scelgono il paese dall'IP (come JustWatch) aprono la versione americana.
+Scrivi nel campo "sito" l'indirizzo con il paese, per esempio `https://www.justwatch.com/it`.
+
+Se la run si blocca, il log stampa dopo 5 minuti lo stato del programma e la run si ferma da sola dopo 20 minuti.

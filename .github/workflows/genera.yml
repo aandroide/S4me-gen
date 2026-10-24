@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       sito:
-        description: "Indirizzo del sito, per esempio https://esempio.it"
+        description: "Indirizzo del sito. Se il sito cambia per paese scrivi quello italiano, per esempio https://www.justwatch.com/it"
         required: true
       tipo:
         description: "Tipo di contenuti"
@@ -28,6 +28,7 @@ permissions:
 jobs:
   genera:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 

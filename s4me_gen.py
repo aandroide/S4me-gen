@@ -21,6 +21,8 @@ Cosa fa:
 """
 
 import argparse
+import faulthandler
+import signal
 import json
 import os
 import re
@@ -133,6 +135,26 @@ def flaresolverr(endpoint, url):
     return True
 
 
+class Scaduto(Exception):
+    pass
+
+
+def con_timeout(sec, fn, *a, **k):
+    """Esegue fn e la interrompe dopo sec secondi (evita che una lettura di rete blocchi tutto)."""
+    def _h(sig, frm):
+        raise Scaduto()
+    try:
+        vecchio = signal.signal(signal.SIGALRM, _h)
+    except Exception:
+        return fn(*a, **k)
+    signal.alarm(sec)
+    try:
+        return fn(*a, **k)
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, vecchio)
+
+
 class Sessione:
     def __init__(self, headless=True, chromium=None, dns=None):
         from playwright.sync_api import sync_playwright
@@ -167,7 +189,7 @@ class Sessione:
                 entry['post'] = req.post_data
             except Exception:
                 entry['post'] = '(binario)'
-            if re.search(r'json|text|mpegurl|dash|xml|javascript', ct) and req.resource_type in (
+            if re.search(r'json|text|mpegurl|dash|xml|javascript', ct) and 'event-stream' not in ct and req.resource_type in (
                     'xhr', 'fetch', 'document', 'other'):
                 entry['_resp'] = r  # il corpo si legge dopo, fuori dal gestore dell'evento
             self.net.append(entry)
@@ -198,10 +220,14 @@ class Sessione:
             r = e.pop('_resp', None)
             if r is not None and e.get('body') is None:
                 try:
-                    e['body'] = r.text()[:400000]
-                except Exception:
-                    pass
-        return {'url': self.page.url, 'html': self.page.content(), 'net': net}
+                    e['body'] = con_timeout(8, r.text)[:400000]
+                except BaseException:
+                    e['body'] = ''
+        try:
+            html = con_timeout(20, self.page.content)
+        except BaseException:
+            html = ''
+        return {'url': self.page.url, 'html': html, 'net': net}
 
     def cerca(self, selettore_input, testo='matrix', attesa=4):
         self.net = []
@@ -1236,6 +1262,7 @@ def main():
                     help='indirizzo di FlareSolverr (per esempio http://localhost:8191) per superare Cloudflare')
     ap.add_argument('--chromium', help='percorso di un chromium gia installato')
     args = ap.parse_args()
+    faulthandler.dump_traceback_later(300, repeat=True)  # se si blocca, il log mostra dove
     srv = attiva_dns(args.dns)
     if srv:
         log('DNS over HTTPS attivo:', args.dns, srv)
