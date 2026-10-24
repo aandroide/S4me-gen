@@ -35,6 +35,8 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 
 TITOLO_KEYS = ['title', 'name', 'titolo', 'nome', 'label', 'original_title', 'originalTitle']
 ID_KEYS = ['slug', 'id', 'uuid', 'fullPath', 'full_path', 'permalink', 'url', 'href', 'link', 'path']
+RUMORE = re.compile(r'(sentry|usercentrics|doubleclick|googletagmanager|google-analytics|tw\.cx|facebook|hotjar)', re.I)
+LOGO_RE = re.compile(r'(logo|icon|avatar|flag|sprite|badge|favicon)', re.I)
 IMG_RE = re.compile(r'(poster|image|img|thumb|cover|picture|locandina|foto|backdrop)', re.I)
 ANNO_RE = re.compile(r'(year|anno|release|date)', re.I)
 PLOT_RE = re.compile(r'(plot|desc|overview|synopsis|trama|summary|abstract)', re.I)
@@ -45,7 +47,8 @@ SKIP_NAV = re.compile(r'(login|accedi|registr|contatt|privacy|dmca|cookie|termin
 NO_RISORSE = re.compile(r'\.(png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|css|m4s|ts|mp4|js|map)(\?|$)', re.I)
 PLAY_SELETTORI = ['button[aria-label*="lay" i]', '.vjs-big-play-button', '.jw-icon-display',
                   '[class*="play-button" i]', '[class*="btn-play" i]', '[class*="play" i] button',
-                  'a[href*="watch" i]', 'a[href*="guarda" i]', 'video', '[class*="play" i]']
+                  'a[href*="watch" i]', 'a[href*="guarda" i]', 'button:has-text("Guarda")', 'a:has-text("Guarda")',
+                  'button:has-text("Watch")', 'a:has-text("Watch")', 'video', '[class*="play" i]']
 
 
 def log(*a):
@@ -329,6 +332,10 @@ def trova_card(soup):
             continue
         if len(str(el)) > 5000:
             continue
+        # loghi, icone dei provider e bandiere non sono titoli
+        if LOGO_RE.search(' '.join([img.get('src', ''), img.get('data-src', ''), ' '.join(img.get('class', [])),
+                                    img.get('alt', '')])) or '/provider' in _href(el):
+            continue
         gruppi.setdefault(firma(el), []).append(el)
     migliore = None
     punti = 0
@@ -336,7 +343,7 @@ def trova_card(soup):
         hrefs = {_href(e) for e in els}
         if len(els) < 4 or len(hrefs) < 4:
             continue
-        p = len(hrefs)
+        p = len(hrefs) + sum(1 for h in hrefs if h.strip('/').count('/') >= 1)
         if p > punti:
             punti = p
             migliore = els
@@ -502,6 +509,9 @@ def trova_menu(soup, base):
             h = a['href']
             if not t or len(t) > 30 or h.startswith('#') or h.startswith('javascript'):
                 continue
+            if re.fullmatch(r'[\d\W]+', t) or re.search(r'[?&](page|p|pg|paged)=', h) or \
+                    re.fullmatch(r'(next|prev|successiv\w*|precedent\w*)', t, re.I):
+                continue
             if SKIP_NAV.search(t) or SKIP_NAV.search(h):
                 continue
             full = urljoin(base, h)
@@ -639,6 +649,23 @@ def trova_elenco_api(net):
                 best = {'entry': e, 'path': path, 'lista': dicts, 'chiavi': ris,
                         'punteggio': punteggio, 'json': j}
     return best
+
+
+def titoli_api(api):
+    k = api['chiavi'].get('title')
+    return {str(appiattisci(x).get(k, '')).strip().lower() for x in api['lista']} - {''}
+
+
+def titoli_html(patron, html_norm):
+    out = set()
+    try:
+        for m in re.finditer(patron, html_norm, re.I):
+            t = (m.groupdict().get('title') or '').strip().lower()
+            if t:
+                out.add(t)
+    except re.error:
+        pass
+    return out
 
 
 def paginazione(entry):
@@ -906,6 +933,7 @@ def records(risposta):
         if DETTAGLIO:
             url = host + DETTAGLIO.format(idv) if DETTAGLIO.startswith('/') else DETTAGLIO.format(idv)
         thumb = prendi(el, CAMPI['thumb']) if 'thumb' in CAMPI else ''
+        thumb = str(thumb).replace('{profile}', 's332').replace('{format}', 'jpg')
         if thumb and thumb.startswith('/'):
             thumb = host + thumb
         plot = prendi(el, CAMPI['plot']) if 'plot' in CAMPI else ''
@@ -1140,7 +1168,16 @@ def analizza(url, args):
                '| regex sull\'html grezzo:', collaudo_grezzo[0])
             collaudo = collaudo_grezzo
         modo = None
-        if card and collaudo[0] >= 3:
+        if card and collaudo[0] >= 3 and api:
+            # tutte e due le strade funzionano: vale quella i cui titoli coincidono con la API
+            th = titoli_html(patron, grezzo)
+            ta = titoli_api(api)
+            comuni = len(th & ta)
+            rp('Titoli HTML:', len(th), '| titoli API:', len(ta), '| in comune:', comuni)
+            modo = 'html' if th and comuni >= 0.5 * len(th) else 'api'
+            if modo == 'api':
+                rp('I titoli letti dall\'HTML non coincidono con quelli della API: scelgo la API.')
+        elif card and collaudo[0] >= 3:
             modo = 'html'
         elif api:
             modo = 'api'
@@ -1159,7 +1196,12 @@ def analizza(url, args):
             rp('Pagina successiva:', prossima or 'non trovata')
             if collaudo[1]:
                 rp('Esempi di risultati della regex:', json.dumps(collaudo[1], ensure_ascii=False)[:600])
-            primo = urljoin(base, _href(card[0]))
+            primo = ''
+            for c0 in card:
+                h0 = urljoin(base, _href(c0))
+                if h0.rstrip('/') != base.rstrip('/') and urlparse(h0).path.strip('/'):
+                    primo = h0
+                    break
         elif modo == 'api':
             ctx['api'] = api
             ctx['pag'] = paginazione(api['entry'])
@@ -1169,17 +1211,18 @@ def analizza(url, args):
                '| elementi:', len(api['lista']))
             rp('Campi:', json.dumps(api['chiavi'], ensure_ascii=False))
             rp('Paginazione:', json.dumps(ctx['pag']) if ctx['pag'] else 'non trovata (TODO)')
+            if ctx['pag'] and ctx['pag']['tipo'] == 'cursore':
+                rp('ATTENZIONE: paginazione a cursore, non supportata dal canale generato: la pagina successiva va scritta a mano.')
             el0 = api['lista'][0]
             ris, piatto = scegli_chiavi(el0)
             primo = ''
-            if card:
+            for k in ris.get('ids', []):
+                v = str(piatto.get(k, ''))
+                if v.startswith('http') or v.startswith('/'):
+                    primo = urljoin(base, v)
+                    break
+            if not primo and card:
                 primo = urljoin(base, _href(card[0]))
-            else:
-                for k in ris.get('ids', []):
-                    v = str(piatto.get(k, ''))
-                    if v.startswith('http') or v.startswith('/'):
-                        primo = urljoin(base, v)
-                        break
             ctx['primo_id'] = str(piatto.get(ris['ids'][0], '')) if ris.get('ids') else ''
         else:
             primo = ''
@@ -1297,6 +1340,13 @@ def main():
             ctx['patron'] = r'<a [^>]*?href="(?P<url>[^"]+)"[^>]*>.*?<img [^>]*?src="(?P<thumb>[^"]+)".*?(?P<title>[^<]+)<'
             rapporto.append('TODO: regex patron non generata, scritta una regex di esempio da adattare.')
         py = genera_html(nome, ctx)
+    mancano = []
+    if not ctx.get('manifest'):
+        mancano.append('riproduzione (nessun manifest rilevato: findvideos generico con support.server)')
+    if not ctx.get('ricerca') and not ctx.get('search_api'):
+        mancano.append('ricerca')
+    if mancano:
+        rapporto.append('INCOMPLETO, da completare a mano: ' + '; '.join(mancano))
     open(os.path.join(args.out, id_ + '.py'), 'w', encoding='utf-8').write(py)
     open(os.path.join(args.out, id_ + '.json'), 'w', encoding='utf-8').write(genera_json(id_, nome, ctx['tipo']))
     open(os.path.join(args.out, 'riga_channels_json.txt'), 'w', encoding='utf-8').write(
@@ -1308,8 +1358,10 @@ def main():
     # la cattura serve per capire cosa e successo, senza i corpi troppo grandi
     for st in cattura.values():
         for e in st.get('net', []):
-            if e.get('body') and len(e['body']) > 20000:
-                e['body'] = e['body'][:20000] + '...(tagliato)'
+            if RUMORE.search(e['url']) or 'TrackSraEvent' in (e.get('post') or '') or 'GetFinalClickoutUrl' in (e.get('post') or ''):
+                e['body'] = ''
+            elif e.get('body') and len(e['body']) > 150000:
+                e['body'] = e['body'][:150000] + '...(tagliato)'
     open(os.path.join(args.out, id_ + '_cattura.json'), 'w', encoding='utf-8').write(
         json.dumps({k: {kk: vv for kk, vv in v.items() if kk != 'html'} for k, v in cattura.items()},
                    indent=1, ensure_ascii=False))
