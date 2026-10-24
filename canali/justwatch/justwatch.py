@@ -192,17 +192,7 @@ SEZIONI = [{'nome': 'Titoli',
                     '  mediaDealId\n'
                     '}'},
   'lista': 'data.popularTitles.edges',
-  'pag': {'dove': 'corpo', 'chiave': 'offset', 'tipo': 'offset', 'valore': 0, 'passo': 40}},
- {'nome': 'Titoli Italiano',
-  'tipo': 'movie',
-  'url': 'https://v1.api.service.cmp.usercentrics.eu/latest/i18n/en/TCF/pNbv5DOWe/93.24.260',
-  'params': {'activeTcfVendorsListVersion': '182',
-             'previousTcfVendorsListVersion': '182',
-             'previousTcfPolicyVersion': '5',
-             'theme': 'uc'},
-  'body': None,
-  'lista': 'services.54s8nFgf.details.storedInfoContent.disclosures',
-  'pag': None}]
+  'pag': {'dove': 'corpo', 'chiave': 'offset', 'tipo': 'offset', 'valore': 0, 'passo': 40}}]
 CAMPI = {"title": "node.content.title", "type": "node.__typename", "year": "node.content.originalReleaseYear", "plot": "node.content.shortDescription", "thumb": "node.content.posterUrl"}
 IDS = ["node.id", "node.watchNowOffer.id", "node.watchNowOffer.package.id", "node.content.fullPath"]  # campi che identificano il titolo, in ordine di preferenza
 DETTAGLIO = ''  # pagina del titolo, {} al posto dell'id
@@ -213,8 +203,6 @@ EPISODI = None  # episodi non rilevati sul sito
 def mainlist(item):
     tvshow = ['',
            ('Titoli', ['', 'peliculas', '0', 'tvshow'])]
-    film = ['',
-           ('Titoli Italiano', ['', 'peliculas', '1', 'movie'])]
     search = ''
     return locals()
 
