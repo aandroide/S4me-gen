@@ -3,17 +3,42 @@ Voci di menu trovate: 0
 Nessuna voce di menu: aggiungo la pagina di partenza come voce unica.
 Card trovate nel DOM: 40 | regex sul DOM: 40 | regex sull'html grezzo: 40
 Titoli HTML: 40 | titoli API: 40 | in comune: 36
-Modalita scelta: html
-Il sito mescola tipi diversi, riconosciuti dall'url: {"tvshow": ["serie-tv"], "movie": ["film"]}
-Pagina successiva: /it?page=2
-Esempi di risultati della regex: [{"url": "/it/serie-tv/mobland", "title": "MobLand", "thumb": "https://images.justwatch.com/poster/355099105/s332/mobland.jpg"}, {"url": "/it/serie-tv/carrie", "title": "Carrie", "thumb": "https://images.justwatch.com/poster/355561667/s332/carrie.jpg"}, {"url": "/it/serie-tv/the-gentlemen", "title": "The Gentlemen", "thumb": "https://images.justwatch.com/poster/312658395/s332/the-gentlemen.jpg"}]
+L'HTML e la API mostrano gli stessi titoli, ma la API ha la paginazione (offset) e i tipi di contenuto: scelgo la API, che permette anche sezioni, serie ed episodi.
+Modalita scelta: api
+API elenco: POST https://apis.justwatch.com/graphql | lista: data.popularTitles.edges | elementi: 40
+Campi: {"title": "node.content.title", "type": "node.__typename", "ids": ["node.id", "node.watchNowOffer.id", "node.watchNowOffer.package.id", "node.content.fullPath"], "year": "node.content.originalReleaseYear", "plot": "node.content.shortDescription", "thumb": "node.content.posterUrl"}
+Paginazione: {"dove": "corpo", "chiave": "offset", "tipo": "offset", "valore": 0, "passo": 40}
 Campo di ricerca: input[type=search]
 Url di ricerca: /it/cerca?q=%s
-Apro il primo titolo: https://www.justwatch.com/it/serie-tv/mobland
-Iframe nella pagina: ['https://web.cmp.usercentrics.eu/cdcs/v/1.0.0/index.html']
+Sezione: Titoli | tipo: tvshow | titoli: 40
+Sezione: Titoli Italiano | tipo: movie | titoli: 20
+Sezione: Titoli български | tipo: movie | titoli: 20
+Sezione: Titoli Čeština | tipo: movie | titoli: 20
+Sezione: Titoli Dansk | tipo: movie | titoli: 20
+Sezione: Titoli Deutsch | tipo: movie | titoli: 20
+Sezione: Titoli Ελληνικά | tipo: movie | titoli: 20
+Sezione: Titoli Español | tipo: movie | titoli: 20
+Sezione: Gratis TV | tipo: tvshow | titoli: 8
+Sezione: Gratis TV | tipo: tvshow | titoli: 8
+Sezione: Gratis TV | tipo: tvshow | titoli: 8
+Sezione: Gratis TV | tipo: tvshow | titoli: 8
+Sezioni trovate: 12
+Apro un film di esempio: https://www.justwatch.com/it/film/spider-man-4
 Provo a far partire il video...
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
-INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server)
+Apro un film di esempio: https://www.justwatch.com/it/film/naza
+Provo a far partire il video...
+Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
+Apro un film di esempio: https://www.justwatch.com/it/film/the-long-walk
+Provo a far partire il video...
+Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
+Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/mobland
+Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
+Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/carrie
+Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
+Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/the-gentlemen
+Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
+INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server); episodi delle serie (nessuna richiesta di episodi rilevata)
 
 File scritti in canali/justwatch: justwatch.py, justwatch.json, riga_channels_json.txt
 Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), caricare l'icona justwatch.png nella repo media.
