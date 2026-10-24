@@ -620,6 +620,10 @@ def scegli_chiavi(item):
                 break
         if 'title' in ris:
             break
+    for k in chiavi:
+        if ultima(k) == '__typename' and isinstance(piatto[k], str):
+            ris['type'] = k
+            break
     for ik in ID_KEYS:
         for k in sorted(chiavi, key=lambda x: x.count('.')):
             if ultima(k) == ik:
@@ -799,11 +803,13 @@ HEADER = '''# -*- coding: utf-8 -*-
 # ------------------------------------------------------------
 
 import json
+import re
+import difflib
 from urllib.parse import urlencode
 
-from core import support, httptools
-from core.item import Item
-from platformcode import config, logger
+from core import support, httptools, tmdb
+from core.item import Item, InfoLabels
+from platformcode import config, logger, platformtools
 
 host = support.config.get_channel_url().rstrip('/')
 headers = [['Referer', host + '/']]
@@ -925,16 +931,65 @@ def prendi(d, path, default=''):
     return d
 
 
-def chiama(pagina):
+def cerca_chiave(d, chiave):
+    # cerca una chiave (per esempio endCursor) in qualsiasi punto della risposta
+    if isinstance(d, dict):
+        if d.get(chiave) not in (None, ''):
+            return d[chiave]
+        for v in d.values():
+            r = cerca_chiave(v, chiave)
+            if r not in (None, ''):
+                return r
+    elif isinstance(d, list):
+        for v in d:
+            r = cerca_chiave(v, chiave)
+            if r not in (None, ''):
+                return r
+    return None
+
+
+def cerca_lista(d, chiave_titolo):
+    # prima lista di oggetti che contengono il campo del titolo
+    if isinstance(d, list):
+        if d and isinstance(d[0], dict) and prendi(d[0], chiave_titolo):
+            return d
+        for v in d:
+            r = cerca_lista(v, chiave_titolo)
+            if r:
+                return r
+    elif isinstance(d, dict):
+        for v in d.values():
+            r = cerca_lista(v, chiave_titolo)
+            if r:
+                return r
+    return []
+
+
+def chiama(item):
     params = dict(PARAMS)
     body = json.loads(json.dumps(BODY)) if BODY is not None else None
+    url = API
+    pagina = int(item.pagina) if item.pagina else 1
+    if item.search_text and RICERCA_BODY is not None:
+        body = json.loads(RICERCA_BODY.replace('__TESTO__', json.dumps(item.search_text)[1:-1]))
+        url = RICERCA_URL or API
+    elif item.search_text and RICERCA:
+        return httptools.downloadpage(RICERCA % item.search_text.replace(' ', '+'),
+                                      headers={'Referer': host + '/'}).json
     if PAGINAZIONE:
-        n = pagina if PAGINAZIONE['tipo'] == 'pagina' else (pagina - 1) * int(PAGINAZIONE.get('passo', 20))
+        ch = PAGINAZIONE['chiave']
         if PAGINAZIONE['dove'] == 'query':
-            params[PAGINAZIONE['chiave']] = n
-        elif body is not None:
-            (body.get('variables') if 'variables' in body else body)[PAGINAZIONE['chiave']] = n
-    url = API + ('?' + urlencode(params) if params else '')
+            bersaglio = params
+        else:
+            bersaglio = body.get('variables') if 'variables' in body else body
+        if PAGINAZIONE['tipo'] == 'cursore':
+            if item.after:
+                bersaglio[ch] = item.after
+        elif PAGINAZIONE['tipo'] == 'pagina':
+            bersaglio[ch] = pagina
+        else:
+            bersaglio[ch] = (pagina - 1) * int(PAGINAZIONE.get('passo', 20))
+    url = url + ('?' + urlencode(params) if params else '')
     opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
     if body is not None:
         opt['post'] = json.dumps(body)
@@ -948,10 +1003,46 @@ def mainlist(item):
     return locals()
 
 
-def records(risposta):
-    # trasforma la risposta JSON in record testuali che @support.scrape legge con un patron
-    out = []
-    for el in prendi(risposta, LISTA, []):
+def simile(a, b):
+    na = re.sub(r'[^a-z0-9]', '', (a or '').lower())
+    nb = re.sub(r'[^a-z0-9]', '', (b or '').lower())
+    if not na or not nb:
+        return 0
+    if na in nb or nb in na:
+        return 1
+    return difflib.SequenceMatcher(None, na, nb).ratio()
+
+
+def verificaTmdb(itemlist):
+    # se TMDB ha scelto un altro titolo (risultato sbagliato) si torna ai dati del sito
+    for it in itemlist:
+        info = it.infoLabels
+        if not info.get('tmdb_id') or not it.sito_title:
+            continue
+        trovati = [info.get('originaltitle'), info.get('title')]
+        if max([simile(it.sito_title, t) for t in trovati]) >= 0.9:
+            continue
+        logger.debug('TMDB scartato per', it.sito_title, trovati)
+        pulite = {'year': it.sito_year} if it.sito_year else {}
+        if it.contentType == 'movie':
+            pulite['title'] = it.sito_title
+        else:
+            pulite['tvshowtitle'] = it.sito_title
+        if it.sito_plot:
+            pulite['plot'] = it.sito_plot
+        it.__dict__['infoLabels'] = InfoLabels(pulite)
+        it.thumbnail = it.sito_thumb
+        it.fanart = ''
+
+
+def peliculas(item):
+    logger.debug()
+    itemlist = []
+    risposta = chiama(item)
+    lista = prendi(risposta, LISTA, [])
+    if not lista:
+        lista = cerca_lista(risposta, CAMPI.get('title', 'title'))
+    for el in lista:
         titolo = prendi(el, CAMPI.get('title', 'title'))
         if not titolo:
             continue
@@ -962,35 +1053,54 @@ def records(risposta):
                 break
         anno = prendi(el, CAMPI['year']) if 'year' in CAMPI else ''
         m = re.search(r'(19|20)\\d{2}', str(anno))
-        url = host + '/'
+        anno = m.group(0) if m else ''
+        url = ''
         if DETTAGLIO:
             url = host + DETTAGLIO.format(idv) if DETTAGLIO.startswith('/') else DETTAGLIO.format(idv)
         thumb = prendi(el, CAMPI['thumb']) if 'thumb' in CAMPI else ''
         thumb = str(thumb).replace('{profile}', 's332').replace('{format}', 'jpg')
-        if thumb and thumb.startswith('/'):
+        if thumb.startswith('/'):
             thumb = host + thumb
         plot = prendi(el, CAMPI['plot']) if 'plot' in CAMPI else ''
-        campi = [url + '#id=' + str(idv), titolo, m.group(0) if m else '', thumb, plot]
-        campi = [re.sub(r'[<>\\r\\n]+', ' ', str(c)) for c in campi]
-        out.append('<item><url>%s</url><title>%s</title><year>%s</year><thumb>%s</thumb><plot>%s</plot></item>' % tuple(campi))
-    return ''.join(out) + '<fine></fine>'
+        tipo = '__TIPO__'
+        if 'type' in CAMPI:
+            tipo = 'tvshow' if re.search(r'show|serie|tv|series', str(prendi(el, CAMPI['type'])), re.I) else 'movie'
+        comuni = dict(channel=item.channel, title=titolo, fulltitle=titolo, show=titolo,
+                      thumbnail=thumb, url=url, idv=str(idv),
+                      sito_title=titolo, sito_year=anno, sito_plot=str(plot or ''), sito_thumb=thumb)
+        if tipo == 'tvshow':
+            itemlist.append(Item(action='episodios', contentType='tvshow', contentSerieName=titolo,
+                                 infoLabels={'tvshowtitle': titolo, 'year': anno} if anno else {'tvshowtitle': titolo},
+                                 **comuni))
+        else:
+            itemlist.append(Item(action='findvideos', contentType='movie', contentTitle=titolo,
+                                 infoLabels={'year': anno} if anno else {}, **comuni))
+    try:
+        tmdb.set_infoLabels_itemlist(itemlist, seekTmdb=True)
+        verificaTmdb(itemlist)
+    except:
+        logger.error('TMDB non disponibile')
+
+    if itemlist and PAGINAZIONE and not item.search_text:
+        if PAGINAZIONE['tipo'] == 'cursore':
+            fine = cerca_chiave(risposta, 'endCursor')
+            ancora = cerca_chiave(risposta, 'hasNextPage')
+            if fine and ancora is not False:
+                itemlist.append(item.clone(title=support.typo(config.get_localized_string(30992), 'color kod bold'),
+                                           action='peliculas', after=fine, thumbnail=support.thumb()))
+        else:
+            itemlist.append(item.clone(title=support.typo(config.get_localized_string(30992), 'color kod bold'),
+                                       action='peliculas', pagina=(int(item.pagina) if item.pagina else 1) + 1,
+                                       thumbnail=support.thumb()))
+    return itemlist
 
 
-@support.scrape
-def peliculas(item):
-    # il decoratore fa il resto: TMDB, titoli formattati, videoteca, pagina successiva
-    pagina = int(support.match(item.url, string=True, patron=r'#pagina=(\\d+)').match or 1)
-    cerca = support.match(item.url, string=True, patron=r'#cerca=(.+)').match
-    if cerca:
-        risposta = httptools.downloadpage(RICERCA % cerca, headers={'Referer': host + '/'}).json
-    else:
-        risposta = chiama(pagina)
-    data = records(risposta)
-    patron = r'<item><url>(?P<url>[^<]*)</url><title>(?P<title>[^<]*)</title><year>(?P<year>[^<]*)</year><thumb>(?P<thumb>[^<]*)</thumb><plot>(?P<plot>[^<]*)</plot></item>'
-    action = 'findvideos'
-    if PAGINAZIONE and not cerca and '<item>' in data:
-        nextPageUrl = host + '/#pagina=%d' % (pagina + 1)
-    return locals()
+def episodios(item):
+    logger.debug()
+    # TODO: episodi non generati dal tool. Serve la richiesta che elenca stagioni ed episodi della serie
+    # (item.idv e l'id del titolo); ogni episodio va restituito con action='findvideos'.
+    platformtools.dialog_ok('__NOME__', 'Episodi non ancora implementati')
+    return []
 
 """
 
@@ -1011,7 +1121,7 @@ def genera_api(nome, ctx):
             post = None
     dett = ctx.get('dettaglio', '')
 
-    cod = HEADER.replace('__NOME__', nome).replace('import json\n', 'import json\nimport re\n', 1)
+    cod = HEADER.replace('__NOME__', nome)
     cod += "API = %s\n" % espr_url(e['url'], base)
     cod += "PARAMS = %s\n" % json.dumps(query, ensure_ascii=False)
     cod += "BODY = %s\n" % (json.dumps(post, ensure_ascii=False) if post is not None else 'None')
@@ -1020,18 +1130,20 @@ def genera_api(nome, ctx):
     cod += "IDS = %s  # campi che identificano il titolo, in ordine di preferenza\n" % json.dumps(chiavi.get('ids', []))
     cod += "DETTAGLIO = %s  # pagina del titolo, {} al posto dell'id\n" % py_str(dett)
     cod += "PAGINAZIONE = %s\n" % json.dumps(pag, ensure_ascii=False)
-    corpo = TEMPLATE_API.replace('__TIPO__', ctx['tipo'])
-    corpo = corpo.replace('__CONTENUTO__', 'contentTitle' if ctx['tipo'] == 'movie' else 'contentSerieName')
+    s = ctx['search_api']
+    sb = ctx.get('search_body')
+    cod += "RICERCA = %s\n" % (espr_url_ricerca(s, base) if s else 'None')
+    cod += "RICERCA_BODY = %s\n" % (py_str(sb['post']) if sb else 'None')
+    cod += "RICERCA_URL = %s\n" % (espr_url(sb['url'], base) if sb and sb['url'] != e['url'] else "''")
+    corpo = TEMPLATE_API.replace('__TIPO__', ctx['tipo']).replace('__NOME__', nome)
     cod += '\n' + corpo
 
-    s = ctx['search_api']
-    if s:
-        cod += "RICERCA = %s\n" % espr_url_ricerca(s, base)
+    if s or sb:
         cod += """
 
 def search(item, text):
-    support.info(text)
-    item.url = host + '/#cerca=' + text.replace(' ', '+')
+    logger.debug(text)
+    item.search_text = text
     try:
         return peliculas(item)
     except:
@@ -1049,7 +1161,7 @@ def search(item, text):
     return []
 
 """
-    cod += genera_findvideos_api(ctx)
+    cod += genera_findvideos_api(ctx, nome)
     return cod
 
 
@@ -1062,7 +1174,7 @@ def espr_url_ricerca(url, base):
     return py_str(urlunsplit((sp.scheme, sp.netloc, '', '', '')) + resto)
 
 
-def genera_findvideos_api(ctx):
+def genera_findvideos_api(ctx, nome='canale'):
     man = ctx.get('manifest')
     base = ctx['base']
     if man and man.get('sorgente'):
@@ -1086,7 +1198,7 @@ def genera_findvideos_api(ctx):
         return """
 def findvideos(item):
     support.info(item)
-    idv = item.url.split('#id=')[-1]
+    idv = item.idv
     url = (__URL__).replace('{ID}', idv)
     corpo = __CORPO__.replace('{ID}', idv)
     opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
@@ -1095,8 +1207,13 @@ def findvideos(item):
     r = httptools.downloadpage(url, **opt).json
     manifest = prendi(r, __PERCORSO__)
     if not manifest:
+        logger.error('Manifest non trovato', r)
+        platformtools.dialog_ok('__NOME__', 'Stream non disponibile')
         return []
     licenza = __LICENZA__
+    if not licenza:
+        platformtools.dialog_ok('__NOME__', 'Licenza non trovata')
+        return []
     it = item.clone(server='directo', url=manifest, manifest='__TIPO__',
                     drm='com.widevine.alpha',
                     license=licenza + '|' + urlencode({'Content-Type': 'application/octet-stream',
@@ -1106,7 +1223,7 @@ def findvideos(item):
     return support.server(item, itemlist=[it], Download=False, Videolibrary=False)
 """.replace('__URL__', url_espr).replace('__CORPO__', py_str(corpo_t)) \
             .replace('__PERCORSO__', py_str(src['path'])).replace('__TIPO__', tipo) \
-            .replace('__LICENZA__', lic_espr)
+            .replace('__LICENZA__', lic_espr).replace('__NOME__', nome)
     return """
 def findvideos(item):
     support.info(item)
@@ -1294,6 +1411,12 @@ def analizza(url, args):
                     if 'matrix' in e['url'].lower() and e['method'] == 'GET':
                         ctx['search_api'] = e['url']
                         rp('Ricerca via API:', e['url'][:120])
+                        break
+                    if e['method'] == 'POST' and 'matrix' in (e.get('post') or '').lower() \
+                            and not RUMORE.search(e['url']) and 'Track' not in (e.get('post') or ''):
+                        ctx['search_body'] = {'url': e['url'],
+                                              'post': re.sub('matrix', '__TESTO__', e['post'], flags=re.I)}
+                        rp('Ricerca via API (POST):', e['url'][:120])
                         break
             ctx['ricerca'] = ric
 

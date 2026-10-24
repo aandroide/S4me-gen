@@ -26,3 +26,6 @@ I runner GitHub sono negli Stati Uniti: i siti che scelgono il paese dall'IP (co
 Scrivi nel campo "sito" l'indirizzo con il paese, per esempio `https://www.justwatch.com/it`.
 
 Se la run si blocca, il log stampa dopo 5 minuti lo stato del programma e la run si ferma da sola dopo 20 minuti.
+
+## Riferimento
+La cartella `riferimento/` contiene il canale JustWatch TV scritto a mano e verificato nell addon: è il modello di quello che il tool deve produrre per i siti con API (menu, cursore, TMDB con controllo, riproduzione Widevine).
