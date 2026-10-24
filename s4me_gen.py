@@ -897,26 +897,35 @@ def leggi(d, path):
 
 
 def posta_json(s, url, corpo, hdr=None):
-    """POST JSON con le intestazioni della richiesta originale: prima dalla pagina, poi dal contesto del browser."""
+    """POST JSON con le intestazioni della richiesta originale: dalla pagina, poi dal contesto del browser.
+    Riprova se la risposta non e JSON (limite di richieste, risposta vuota) e dice cosa ha ricevuto."""
     h = dict(hdr or {})
     h.setdefault('content-type', 'application/json')
     errori = []
-    try:
-        testo = s.page.evaluate(
-            "async ([u, b, h]) => { const r = await fetch(u, {method: 'POST', headers: h, body: b, credentials: 'include'}); "
-            "return r.status + ' ' + await r.text(); }", [url, corpo, h])
-        return testo.partition(' ')[2]
-    except BaseException as ex:
-        errori.append('fetch nella pagina (%s): %s' % (s.page.url[:60], str(ex)[:60]))
-    try:
-        h2 = dict(h)
-        h2['referer'] = s.page.url
-        h2['origin'] = '{0.scheme}://{0.netloc}'.format(urlparse(s.page.url))
-        r = s.ctx.request.post(url, data=corpo, headers=h2, timeout=20000)
-        return r.text()
-    except BaseException as ex:
-        errori.append('richiesta del contesto: %s' % str(ex)[:60])
-    raise RuntimeError(' | '.join(errori))
+    for tentativo in range(3):
+        stato, testo = None, None
+        try:
+            r = s.page.evaluate(
+                "async ([u, b, h]) => { const r = await fetch(u, {method: 'POST', headers: h, body: b, credentials: 'include'}); "
+                "return [r.status, await r.text()]; }", [url, corpo, h])
+            stato, testo = r[0], r[1]
+        except BaseException as ex:
+            errori.append('fetch nella pagina (%s): %s' % (s.page.url[:60], str(ex)[:60]))
+        if testo is None:
+            try:
+                h2 = dict(h)
+                h2['referer'] = s.page.url
+                h2['origin'] = '{0.scheme}://{0.netloc}'.format(urlparse(s.page.url))
+                r = s.ctx.request.post(url, data=corpo, headers=h2, timeout=20000)
+                stato, testo = r.status, r.text()
+            except BaseException as ex:
+                errori.append('richiesta del contesto: %s' % str(ex)[:60])
+        if testo is not None and testo.lstrip()[:1] in ('{', '['):
+            return testo
+        if testo is not None:
+            errori.append('risposta non JSON (stato %s, %d byte): %r' % (stato, len(testo), testo[:100]))
+        s.page.wait_for_timeout(3000 * (tentativo + 1))
+    raise RuntimeError(' | '.join(dict.fromkeys(errori)))
 
 
 def operazione_di(post):
@@ -991,7 +1000,11 @@ def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
     def forma_tipo(t):
         return [t] if isinstance(dict(percorsi_variabili(v0)).get(p_tipo), list) else t
 
+    guasti = []
+
     def rigioca(modifiche):
+        if len(guasti) >= 2:  # l'API non risponde in JSON: inutile insistere con le altre prove
+            return None, None
         j, v = variabili_di(e['post'])
         for pth, val in modifiche:
             imposta(v, pth, val)
@@ -1000,6 +1013,7 @@ def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
             risp = json.loads(corpo)
         except BaseException as ex:
             errori.append('richiesta fallita: %s' % str(ex)[:300])
+            guasti.append(1)
             return None, None
         lst = leggi(risp, api['path']) if isinstance(risp, dict) else None
         if isinstance(risp, dict) and risp.get('errors'):
@@ -1925,14 +1939,14 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
                               'html': html_pulito(e['html']) if len(sez_debug) < 3 else ''})
     if filtro_free:
         rp('Filtro gratuito ricavato dalle sezioni:', json.dumps({'.'.join(k): v for k, v in filtro_free.items()}, ensure_ascii=False))
-    if not filtro_free:
-        pagine_free = [u for t_, u in cand if FREE_RE.search(t_ + ' ' + u)] + [d['url'] for d in sez_debug if FREE_RE.search(d['url'])]
-        filtro_free.update(trova_filtro_free(s, api, pagine_free, rp))
     # prova a rigiocare la richiesta cambiando tipo, ordinamento e filtro gratuito
     try:
         s.vai(pagina_elenco, attesa=2, timeout=25000)
     except Exception:
         pass
+    if not filtro_free:
+        pagine_free = [u for t_, u in cand if FREE_RE.search(t_ + ' ' + u)] + [d['url'] for d in sez_debug if FREE_RE.search(d['url'])]
+        filtro_free.update(trova_filtro_free(s, api, pagine_free, rp))
     for z in sonda_api(s, ctx, api, rp, filtro_free, list(sezioni)):
         f = firma_richiesta(z['entry'])
         if f not in viste:
