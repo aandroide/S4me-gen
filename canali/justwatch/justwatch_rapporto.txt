@@ -1,14 +1,15 @@
 Apro https://www.justwatch.com/it
 Voci di menu trovate: 0
-Card trovate nel DOM: 40 | regex sul DOM: 20 | regex sull'html grezzo: 20
-Titoli HTML: 20 | titoli API: 40 | in comune: 19
+Nessuna voce di menu: aggiungo la pagina di partenza come voce unica.
+Card trovate nel DOM: 40 | regex sul DOM: 40 | regex sull'html grezzo: 40
+Titoli HTML: 40 | titoli API: 40 | in comune: 36
 Modalita scelta: html
+Il sito mescola tipi diversi, riconosciuti dall'url: {"tvshow": ["serie-tv"], "movie": ["film"]}
 Pagina successiva: /it?page=2
-Esempi di risultati della regex: [{"url": "/it/serie-tv/mobland", "thumb": "https://images.justwatch.com/poster/355099105/s332/mobland.jpg", "title": "Carrie"}, {"url": "/it/serie-tv/the-gentlemen", "thumb": "https://images.justwatch.com/poster/312658395/s332/the-gentlemen.jpg", "title": "Lanterns"}, {"url": "/it/serie-tv/east-of-eden", "thumb": "https://images.justwatch.com/poster/355253708/s332/east-of-eden.jpg", "title": "Ted Lasso"}]
+Esempi di risultati della regex: [{"url": "/it/serie-tv/mobland", "title": "MobLand", "thumb": "https://images.justwatch.com/poster/355099105/s332/mobland.jpg"}, {"url": "/it/serie-tv/carrie", "title": "Carrie", "thumb": "https://images.justwatch.com/poster/355561667/s332/carrie.jpg"}, {"url": "/it/serie-tv/the-gentlemen", "title": "The Gentlemen", "thumb": "https://images.justwatch.com/poster/312658395/s332/the-gentlemen.jpg"}]
 Campo di ricerca: input[type=search]
 Url di ricerca: /it/cerca?q=%s
 Apro il primo titolo: https://www.justwatch.com/it/serie-tv/mobland
-Episodi rilevati: 20 (titolo esempio: Stagione 4)
 Iframe nella pagina: ['https://web.cmp.usercentrics.eu/cdcs/v/1.0.0/index.html']
 Provo a far partire il video...
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).

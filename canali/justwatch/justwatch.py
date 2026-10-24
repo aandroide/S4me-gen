@@ -5,11 +5,14 @@
 # ------------------------------------------------------------
 
 import json
+import re
+import base64
+import difflib
 from urllib.parse import urlencode
 
-from core import support, httptools
-from core.item import Item
-from platformcode import config, logger
+from core import support, httptools, tmdb
+from core.item import Item, InfoLabels
+from platformcode import config, logger, platformtools
 
 host = support.config.get_channel_url().rstrip('/')
 headers = [['Referer', host + '/']]
@@ -17,6 +20,7 @@ headers = [['Referer', host + '/']]
 
 @support.menu
 def mainlist(item):
+    top = [('Titoli', ['/it', 'peliculas', '', 'movie'])]
     search = ''
     return locals()
 
@@ -24,19 +28,10 @@ def mainlist(item):
 @support.scrape
 def peliculas(item):
     support.info(item)
-    action = 'episodios'
-    patron = r'''<div[^>]*class="title\-list\-grid__item".*?<a [^>]*?href="(?P<url>[^"]+)".*?<img [^>]*?src="(?P<thumb>[^"]+)".*?<img [^>]*?alt="(?P<title>[^"]+)"'''
+    action = 'findvideos'
+    patron = r'''<div[^>]*class="title\-list\-grid__item"(?:(?!<div[^>]*class="title\-list\-grid__item").)*?<a [^>]*?href="(?P<url>[^"]*?/(?P<type>serie\-tv|film)/[^"]*)"(?:(?!<div[^>]*class="title\-list\-grid__item").)*?<img (?=[^>]*?alt="(?P<title>[^"]+)")[^>]*?src="(?P<thumb>[^"]+)"'''
     patronNext = r'''<a [^>]*?rel="next"[^>]*?href="([^"]+)"|<a [^>]*?href="([^"]+)"[^>]*?rel="next"'''
     #debug = True  # apre regex101 con pagina e regex
-    return locals()
-
-
-@support.scrape
-def episodios(item):
-    support.info(item)
-    action = 'findvideos'
-    patron = r'''<a[^>]*?href="(?P<url>[^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)\s*<'''
-    #debug = True
     return locals()
 
 
