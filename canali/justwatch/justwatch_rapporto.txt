@@ -10,19 +10,24 @@ Campi: {"title": "node.content.title", "type": "node.__typename", "ids": ["node.
 Paginazione: {"dove": "corpo", "chiave": "offset", "tipo": "offset", "valore": 0, "passo": 40}
 Campo di ricerca: input[type=search]
 Url di ricerca: /it/cerca?q=%s
-Sezione: Titoli | tipo: tvshow | titoli: 40
-Sezione: Titoli Italiano | tipo: movie | titoli: 20
-Sezione: Titoli български | tipo: movie | titoli: 20
-Sezione: Titoli Čeština | tipo: movie | titoli: 20
-Sezione: Titoli Dansk | tipo: movie | titoli: 20
-Sezione: Titoli Deutsch | tipo: movie | titoli: 20
-Sezione: Titoli Ελληνικά | tipo: movie | titoli: 20
-Sezione: Titoli Español | tipo: movie | titoli: 20
-Sezione: Gratis TV | tipo: tvshow | titoli: 8
-Sezione: Gratis TV | tipo: tvshow | titoli: 8
-Sezione: Gratis TV | tipo: tvshow | titoli: 8
-Sezione: Gratis TV | tipo: tvshow | titoli: 8
-Sezioni trovate: 12
+Sezione: Titoli | tipo: tvshow | titoli: 40 | richiesta: https://apis.justwatch.com/graphql | cambia: niente
+Sezione: Titoli Italiano | tipo: movie | titoli: 20 | richiesta: https://v1.api.service.cmp.usercentrics.eu/latest/i18n/en/TCF/pNbv5DOW | cambia: niente
+Sezione: Titoli български | tipo: movie | titoli: 20 | richiesta: https://v1.api.service.cmp.usercentrics.eu/latest/i18n/bg/TCF/pNbv5DOW | cambia: niente
+Sezione: Titoli Čeština | tipo: movie | titoli: 20 | richiesta: https://v1.api.service.cmp.usercentrics.eu/latest/i18n/cs/TCF/pNbv5DOW | cambia: niente
+Sezione: Titoli Dansk | tipo: movie | titoli: 20 | richiesta: https://v1.api.service.cmp.usercentrics.eu/latest/i18n/da/TCF/pNbv5DOW | cambia: niente
+Sezione: Titoli Deutsch | tipo: movie | titoli: 20 | richiesta: https://v1.api.service.cmp.usercentrics.eu/latest/i18n/de/TCF/pNbv5DOW | cambia: niente
+Sezione: Titoli Ελληνικά | tipo: movie | titoli: 20 | richiesta: https://v1.api.service.cmp.usercentrics.eu/latest/i18n/el/TCF/pNbv5DOW | cambia: niente
+Sezione: Titoli Español | tipo: movie | titoli: 20 | richiesta: https://v1.api.service.cmp.usercentrics.eu/latest/i18n/es/TCF/pNbv5DOW | cambia: niente
+Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/ted-lasso
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/slow-horses
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/doc-nelle-tue-mani
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/dark-matter-2024
+Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free/novit%C3%A0
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv
+Sonda API: variabile dei tipi = popularTitlesFilter.objectTypes | variabile dell'ordinamento = popularTitlesSortBy
+Sonda API: tipi riconosciuti = [] | ordinamenti riconosciuti = []
+Sezioni trovate: 2
 Apro un film di esempio: https://www.justwatch.com/it/film/spider-man-4
 Provo a far partire il video...
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
