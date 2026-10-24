@@ -217,9 +217,26 @@ class Sessione:
         except Exception:
             pass
 
+    def chiudi_banner(self):
+        # banner dei cookie: se coprono la pagina bloccano click e menu
+        for sel in ['#uc-btn-accept-banner', 'button[data-testid="uc-accept-all-button"]', '#onetrust-accept-btn-handler',
+                    'button:has-text("Accetta tutto")', 'button:has-text("Accetta")', 'button:has-text("Accept all")',
+                    'button:has-text("Consenti tutto")', 'button:has-text("Accetto")']:
+            try:
+                loc = self.page.locator(sel)
+                if loc.count() and loc.first.is_visible():
+                    loc.first.click(timeout=2000)
+                    self.page.wait_for_timeout(500)
+                    return True
+            except BaseException:
+                continue
+        return False
+
     def vai(self, url, attesa=4, timeout=60000):
         self.net = []
         self.page.goto(url, wait_until='domcontentloaded', timeout=timeout)
+        self.page.wait_for_timeout(1500)
+        self.chiudi_banner()
         self._assesta(attesa)
         return self.stato()
 
@@ -705,11 +722,28 @@ def scegli_chiavi(item):
     return ris, piatto
 
 
+def html_pulito(html, limite=100000):
+    """Pagina senza script, stili e svg, per capire com'e fatta senza scaricare megabyte."""
+    h = re.sub(r'<(script|style|svg|noscript)\b.*?</\1>', '', html or '', flags=re.S | re.I)
+    return re.sub(r'\s+', ' ', h)[:limite]
+
+
+def dominio_base(url):
+    """Parte principale del dominio (justwatch per apis.justwatch.com e www.justwatch.com)."""
+    h = urlparse(url).netloc.lower().split(':')[0].split('.')
+    return h[-2] if len(h) >= 2 else h[0]
+
+
+SITO_BASE = ['']
+
+
 def trova_elenco_api(net):
-    """Tra le risposte JSON sceglie la lista di titoli piu grande."""
+    """Tra le risposte JSON sceglie la lista di titoli piu grande (solo richieste del sito, non di terze parti)."""
     best = None
     for e in net:
         if not e.get('body') or 'json' not in e.get('ct', ''):
+            continue
+        if RUMORE.search(e['url']) or (SITO_BASE[0] and dominio_base(e['url']) != SITO_BASE[0]):
             continue
         try:
             j = json.loads(e['body'])
@@ -873,6 +907,8 @@ def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
             tipi_visti |= {str(appiattisci(x).get(chiave_tipo, '')).upper() for x in lst_}
         tipi_visti = sorted(tipi_visti - {''})
 
+    errori = []
+
     def forma_tipo(t):
         return [t] if isinstance(dict(percorsi_variabili(v0)).get(p_tipo), list) else t
 
@@ -881,14 +917,20 @@ def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
         for pth, val in modifiche:
             imposta(v, pth, val)
         try:
-            r = s.page.request.post(e['url'], data=json.dumps(j), headers={'Content-Type': 'application/json'}, timeout=20000)
-            risp = r.json()
-        except BaseException:
+            testo = s.page.evaluate(
+                "async ([u, b]) => { const r = await fetch(u, {method: 'POST', headers: {'content-type': 'application/json'}, "
+                "body: b}); return r.status + ' ' + await r.text(); }", [e['url'], json.dumps(j)])
+            stato, _, corpo = testo.partition(' ')
+            risp = json.loads(corpo)
+        except BaseException as ex:
+            errori.append('richiesta fallita: %s' % str(ex)[:80])
             return None, None
         lst = leggi(risp, api['path']) if isinstance(risp, dict) else None
         if isinstance(risp, dict) and risp.get('errors'):
+            errori.append('errore API: %s' % json.dumps(risp['errors'], ensure_ascii=False)[:160])
             return None, None
         if not isinstance(lst, list) or not lst:
+            errori.append('risposta senza elenco (stato %s): %s' % (stato, corpo[:120]))
             return None, None
         return json.dumps(j), [x for x in lst if isinstance(x, dict)]
 
@@ -923,6 +965,8 @@ def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
                     sequenze.add(seq)
                     sort_ok.append(so)
     rp('Sonda API: tipi riconosciuti =', [t for t, _ in tipi_ok], '| ordinamenti riconosciuti =', sort_ok)
+    for er in sorted(set(errori))[:4]:
+        rp('Sonda API, motivo dei rifiuti:', er)
     sezioni = []
     for t, tp in (tipi_ok or [(None, ctx['tipo'])]):
         for so in (sort_ok or [None]):
@@ -1762,6 +1806,7 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
                 if par and par != '/':
                     cand.append((nome_da_url(par), urljoin(base, par)))
     visti = {pagina_elenco.rstrip('/')}
+    sez_debug = []
     n = 0
     for t, u in cand:
         u = u.split('#')[0]
@@ -1783,10 +1828,28 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         if a2:
             con_varianti(t, a2, fallback0)
         else:
-            rp('Pagina senza elenco API:', u)
+            ops = []
+            for x in e['net']:
+                if x.get('post') and 'graphql' in x['url'] and not RUMORE.search(x['url']):
+                    try:
+                        o = json.loads(x['post']).get('operationName')
+                    except Exception:
+                        o = None
+                    if o and o not in ops and not o.startswith('Track'):
+                        ops.append(o)
+            rp('Pagina senza elenco API:', u, '| operazioni GraphQL viste:', ops[:8] if ops else 'nessuna',
+               '| titoli nel DOM:', len(trova_card(soup_di(e['html'])) or []))
+            sez_debug.append({'url': u, 'nome': t, 'net': [{k: (str(v)[:1500] if k == 'post' else v) for k, v in x.items()
+                                                           if k in ('url', 'method', 'post', 'status')} for x in e['net']
+                                                          if not RUMORE.search(x['url'])],
+                              'html': html_pulito(e['html']) if len(sez_debug) < 3 else ''})
     if filtro_free:
         rp('Filtro gratuito ricavato dalle sezioni:', json.dumps({'.'.join(k): v for k, v in filtro_free.items()}, ensure_ascii=False))
     # prova a rigiocare la richiesta cambiando tipo, ordinamento e filtro gratuito
+    try:
+        s.vai(pagina_elenco, attesa=2, timeout=25000)
+    except Exception:
+        pass
     for z in sonda_api(s, ctx, api, rp, filtro_free, list(sezioni)):
         f = firma_richiesta(z['entry'])
         if f not in viste:
@@ -1802,6 +1865,7 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         unici.append(z)
     sezioni[:] = unici
     ctx['sezioni'] = sezioni
+    cattura['sezioni_senza_elenco'] = {'net': [], 'pagine': sez_debug}
     rp('Sezioni trovate:', len(sezioni))
 
     # un film e una serie di esempio
@@ -1888,6 +1952,7 @@ def analizza(url, args):
         log(riga)
 
     base = '{0.scheme}://{0.netloc}'.format(urlparse(url))
+    SITO_BASE[0] = dominio_base(url)
     id_ = args.nome or id_da_url(url)
     nome = args.titolo or id_.capitalize()
     ctx = {'base': base, 'menu': [], 'tipo': 'movie', 'next': '', 'patron': '', 'episodi': None, 'patron_ep': '',
