@@ -11,18 +11,22 @@ Paginazione: {"dove": "corpo", "chiave": "offset", "tipo": "offset", "valore": 0
 Campo di ricerca: input[type=search]
 Url di ricerca: /it/cerca?q=%s
 Sezione: Titoli | tipo: tvshow | titoli: 40 | richiesta: https://apis.justwatch.com/graphql | cambia: niente
-Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free | operazioni GraphQL viste: ['RegisterSessionStart', 'GetSrPlacement'] | titoli nel DOM: 40
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/ted-lasso | operazioni GraphQL viste: nessuna | titoli nel DOM: 81
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/slow-horses | operazioni GraphQL viste: nessuna | titoli nel DOM: 84
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/doc-nelle-tue-mani | operazioni GraphQL viste: nessuna | titoli nel DOM: 81
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/dark-matter-2024 | operazioni GraphQL viste: nessuna | titoli nel DOM: 80
-Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free/novit%C3%A0 | operazioni GraphQL viste: nessuna | titoli nel DOM: 24
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv | operazioni GraphQL viste: nessuna | titoli nel DOM: 40
+Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free | operazioni GraphQL viste: ['RegisterSessionStart', 'GetSrPlacement', 'GetFinalClickoutUrl'] | titoli nel DOM: 40
+Sezione: Gratis TV | tipo: tvshow | titoli: 8 | richiesta: https://apis.justwatch.com/graphql | cambia: {"popularTitlesFilter.searchQuery": null, "offerFilters.preAffiliate": true, "popularTitlesFilter.excludeGenres": null, "watchNowFilter.monetizationTypes": null, "popularTitlesFilter.excludeProduction
+Sezione: Gratis TV | tipo: tvshow | titoli: 8 | richiesta: https://apis.justwatch.com/graphql | cambia: {"popularTitlesFilter.searchQuery": null, "offerFilters.preAffiliate": true, "popularTitlesFilter.excludeGenres": null, "watchNowFilter.monetizationTypes": null, "popularTitlesFilter.excludeProduction
+Sezione: Gratis TV | tipo: tvshow | titoli: 8 | richiesta: https://apis.justwatch.com/graphql | cambia: {"popularTitlesFilter.searchQuery": null, "offerFilters.preAffiliate": true, "popularTitlesFilter.excludeGenres": null, "watchNowFilter.monetizationTypes": null, "popularTitlesFilter.excludeProduction
+Sezione: Gratis TV | tipo: tvshow | titoli: 8 | richiesta: https://apis.justwatch.com/graphql | cambia: {"popularTitlesFilter.searchQuery": null, "offerFilters.preAffiliate": true, "popularTitlesFilter.excludeGenres": null, "watchNowFilter.monetizationTypes": null, "popularTitlesFilter.excludeProduction
+Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free/novit%C3%A0 | operazioni GraphQL viste: ['RegisterSessionStart', 'GetSrPlacement', 'GetFinalClickoutUrl'] | titoli nel DOM: 25
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv | operazioni GraphQL viste: ['RegisterSessionStart', 'GetSrPlacement', 'GetFinalClickoutUrl'] | titoli nel DOM: 40
+Filtro gratuito: pacchetti letti dall API: 107
+Filtro gratuito ricavato dall API: JustWatch TV Free -> jwt
 Sonda API: variabile dei tipi = popularTitlesFilter.objectTypes | variabile dell'ordinamento = popularTitlesSortBy
-Sonda API: tipi riconosciuti = [] | ordinamenti riconosciuti = []
-Sonda API, motivo dei rifiuti: richiesta fallita: Page.evaluate: TypeError: Failed to fetch (apis.justwatch.com)
-    at https://ww
-Sezioni trovate: 1
+Sonda API: tipi riconosciuti = ['MOVIE', 'SHOW'] | ordinamenti riconosciuti = ['POPULAR', 'TRENDING', 'ALPHABETICAL', 'RANDOM', 'RELEASE_YEAR', 'TMDB_POPULARITY', 'IMDB_SCORE']
+Sonda API, motivo dei rifiuti: errore API: [{"message": "LAST_ADDED is not a valid PopularTitlesSorting", "path": ["variable", "popularTitlesSortBy"], "extensions": {"code": "GRAPHQL_VALIDATION_FAILED"}}
+Sonda API, motivo dei rifiuti: errore API: [{"message": "NEWEST is not a valid PopularTitlesSorting", "path": ["variable", "popularTitlesSortBy"], "extensions": {"code": "GRAPHQL_VALIDATION_FAILED"}}]
+Sonda API, motivo dei rifiuti: errore API: [{"message": "POPULARITY is not a valid PopularTitlesSorting", "path": ["variable", "popularTitlesSortBy"], "extensions": {"code": "GRAPHQL_VALIDATION_FAILED"}}
+Sonda API, motivo dei rifiuti: errore API: [{"message": "RATING is not a valid PopularTitlesSorting", "path": ["variable", "popularTitlesSortBy"], "extensions": {"code": "GRAPHQL_VALIDATION_FAILED"}}]
+Sezioni trovate: 19
 Apro un film di esempio: https://www.justwatch.com/it/film/spider-man-4
 Provo a far partire il video...
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
