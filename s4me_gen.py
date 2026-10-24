@@ -919,6 +919,13 @@ def posta_json(s, url, corpo, hdr=None):
     raise RuntimeError(' | '.join(errori))
 
 
+def operazione_di(post):
+    try:
+        return json.loads(post).get('operationName') or ''
+    except Exception:
+        return ''
+
+
 def trova_filtro_free(s, api, pagine_free, rp):
     """Ricava il filtro dei contenuti gratuiti interrogando l'elenco dei fornitori dell'API GraphQL."""
     e = api['entry']
@@ -1054,7 +1061,7 @@ def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
             ent['body'] = None
             nome = SORT_NOMI.get(so, (so or 'Titoli').replace('_', ' ').title()) if so else \
                 ('Film' if tp == 'movie' else 'Serie TV')
-            sezioni.append({'nome': nome, 'tipo': tp, 'entry': ent, 'lista': api['path'], 'pag': paginazione(e),
+            sezioni.append({'nome': nome, 'tipo': tp, 'entry': ent, 'gratis': bool(base_mod), 'lista': api['path'], 'pag': paginazione(e),
                             'api': {'entry': ent, 'path': api['path'], 'lista': lst, 'chiavi': api['chiavi']}})
     return sezioni
 
@@ -1820,6 +1827,10 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         if base_post and sezioni and solo_lingua(base_post, a['entry'].get('post') or ''):
             rp('Scartata (cambia solo la lingua o il paese):', nome)
             return None
+        op_base, op_new = operazione_di(base_post), operazione_di(a['entry'].get('post') or '')
+        if op_base and op_new and op_base != op_new:
+            rp('Scartata (operazione diversa dall\'elenco, probabile area sponsorizzata):', nome, '|', op_new)
+            return None
         viste.add(f)
         pag = paginazione(a['entry'])
         if pag and pag['tipo'] == 'offset':
@@ -1936,6 +1947,12 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         visti_titoli.add(seq)
         unici.append(z)
     sezioni[:] = unici
+    if filtro_free and any(z.get('gratis') for z in sezioni):
+        # il canale mostra solo i contenuti gratuiti: le liste senza filtro (a pagamento) si tolgono
+        tolte = [z['nome'] for z in sezioni if not z.get('gratis')]
+        if tolte:
+            rp('Tolte le sezioni senza filtro gratuito:', tolte)
+        sezioni[:] = [z for z in sezioni if z.get('gratis')]
     ctx['sezioni'] = sezioni
     cattura['sezioni_senza_elenco'] = {'net': [], 'pagine': sez_debug}
     rp('Sezioni trovate:', len(sezioni))
@@ -1943,7 +1960,7 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
     # un film e una serie di esempio
     campioni = {}
     for z in sezioni:
-        gratis = bool(FREE_RE.search(z['nome'] + ' ' + z['entry']['url'] + ' ' + (z['entry'].get('post') or '')))
+        gratis = bool(z.get('gratis') or FREE_RE.search(z['nome'] + ' ' + z['entry']['url'] + ' ' + (z['entry'].get('post') or '')))
         for el in z['api']['lista'][:20]:
             tp = tipo_elemento(el, z['api']['chiavi'], z['tipo'])
             campioni.setdefault(tp, []).append((not gratis, len(campioni.get(tp, [])), el, z['api']['chiavi']))
