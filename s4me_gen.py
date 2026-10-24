@@ -210,6 +210,10 @@ class Sessione:
                 entry['post'] = req.post_data
             except Exception:
                 entry['post'] = '(binario)'
+            if req.method == 'POST' and req.resource_type in ('xhr', 'fetch'):
+                entry['hdr'] = {k: v for k, v in req.headers.items() if k.lower() not in (
+                    'host', 'content-length', 'origin', 'referer', 'user-agent', 'cookie', 'accept-encoding',
+                    'connection') and not k.lower().startswith(('sec-', ':'))}
             if re.search(r'json|text|mpegurl|dash|xml|javascript', ct) and 'event-stream' not in ct and req.resource_type in (
                     'xhr', 'fetch', 'document', 'other'):
                 entry['_resp'] = r  # il corpo si legge dopo, fuori dal gestore dell'evento
@@ -892,6 +896,74 @@ def leggi(d, path):
     return d
 
 
+def posta_json(s, url, corpo, hdr=None):
+    """POST JSON con le intestazioni della richiesta originale: prima dalla pagina, poi dal contesto del browser."""
+    h = dict(hdr or {})
+    h.setdefault('content-type', 'application/json')
+    errori = []
+    try:
+        testo = s.page.evaluate(
+            "async ([u, b, h]) => { const r = await fetch(u, {method: 'POST', headers: h, body: b, credentials: 'include'}); "
+            "return r.status + ' ' + await r.text(); }", [url, corpo, h])
+        return testo.partition(' ')[2]
+    except BaseException as ex:
+        errori.append('fetch nella pagina (%s): %s' % (s.page.url[:60], str(ex)[:60]))
+    try:
+        h2 = dict(h)
+        h2['referer'] = s.page.url
+        h2['origin'] = '{0.scheme}://{0.netloc}'.format(urlparse(s.page.url))
+        r = s.ctx.request.post(url, data=corpo, headers=h2, timeout=20000)
+        return r.text()
+    except BaseException as ex:
+        errori.append('richiesta del contesto: %s' % str(ex)[:60])
+    raise RuntimeError(' | '.join(errori))
+
+
+def trova_filtro_free(s, api, pagine_free, rp):
+    """Ricava il filtro dei contenuti gratuiti interrogando l'elenco dei fornitori dell'API GraphQL."""
+    e = api['entry']
+    if 'graphql' not in e['url'] or not e.get('post'):
+        return {}
+    j0, v0 = variabili_di(e['post'])
+    if v0 is None:
+        return {}
+    p_pack = p_mon = None
+    paese = lingua = None
+    for pth, val in percorsi_variabili(v0):
+        if p_pack is None and re.search(r'package', pth[-1], re.I) and isinstance(val, list):
+            p_pack = pth
+        if p_mon is None and re.search(r'monetiz', pth[-1], re.I) and isinstance(val, list):
+            p_mon = pth
+        if pth[-1] == 'country' and isinstance(val, str):
+            paese = val
+    if not p_pack:
+        rp('Filtro gratuito: la richiesta non ha una variabile dei pacchetti')
+        return {}
+    paese = paese if paese and re.fullmatch(r'[A-Z]{2}', paese) else 'IT'
+    nomi = []
+    for u in pagine_free:
+        sl = urlparse(u).path.strip('/').split('/')
+        nomi += [re.sub(r'[^a-z0-9]', '', x.lower()) for x in sl[-2:] if x]
+    q = '{ packages(country: %s, platform: WEB) { shortName clearName technicalName } }' % paese
+    try:
+        corpo = posta_json(s, e['url'], json.dumps({'query': q}), e.get('hdr'))
+        pacchetti = (json.loads(corpo).get('data') or {}).get('packages') or []
+    except BaseException as ex:
+        rp('Filtro gratuito: elenco pacchetti non letto:', str(ex)[:200])
+        return {}
+    rp('Filtro gratuito: pacchetti letti dall API:', len(pacchetti))
+    for pk in pacchetti:
+        cn = re.sub(r'[^a-z0-9]', '', (pk.get('clearName') or '').lower())
+        if cn and (cn in nomi or any(cn == n for n in nomi)) and FREE_RE.search(' '.join(pagine_free) + ' ' + (pk.get('clearName') or '')):
+            f = {p_pack: [pk['shortName']]}
+            if p_mon:
+                f[p_mon] = ['FREE']
+            rp('Filtro gratuito ricavato dall API:', pk.get('clearName'), '->', pk['shortName'])
+            return f
+    rp('Filtro gratuito: nessun pacchetto corrisponde a', nomi[:4])
+    return {}
+
+
 def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
     """Prova a rigiocare la richiesta dell'elenco cambiando tipo, ordinamento e filtro gratuito."""
     e = api['entry']
@@ -917,20 +989,17 @@ def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
         for pth, val in modifiche:
             imposta(v, pth, val)
         try:
-            testo = s.page.evaluate(
-                "async ([u, b]) => { const r = await fetch(u, {method: 'POST', headers: {'content-type': 'application/json'}, "
-                "body: b}); return r.status + ' ' + await r.text(); }", [e['url'], json.dumps(j)])
-            stato, _, corpo = testo.partition(' ')
+            corpo = posta_json(s, e['url'], json.dumps(j), e.get('hdr'))
             risp = json.loads(corpo)
         except BaseException as ex:
-            errori.append('richiesta fallita: %s' % str(ex)[:80])
+            errori.append('richiesta fallita: %s' % str(ex)[:300])
             return None, None
         lst = leggi(risp, api['path']) if isinstance(risp, dict) else None
         if isinstance(risp, dict) and risp.get('errors'):
             errori.append('errore API: %s' % json.dumps(risp['errors'], ensure_ascii=False)[:160])
             return None, None
         if not isinstance(lst, list) or not lst:
-            errori.append('risposta senza elenco (stato %s): %s' % (stato, corpo[:120]))
+            errori.append('risposta senza elenco: %s' % corpo[:120])
             return None, None
         return json.dumps(j), [x for x in lst if isinstance(x, dict)]
 
@@ -1845,6 +1914,9 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
                               'html': html_pulito(e['html']) if len(sez_debug) < 3 else ''})
     if filtro_free:
         rp('Filtro gratuito ricavato dalle sezioni:', json.dumps({'.'.join(k): v for k, v in filtro_free.items()}, ensure_ascii=False))
+    if not filtro_free:
+        pagine_free = [u for t_, u in cand if FREE_RE.search(t_ + ' ' + u)] + [d['url'] for d in sez_debug if FREE_RE.search(d['url'])]
+        filtro_free.update(trova_filtro_free(s, api, pagine_free, rp))
     # prova a rigiocare la richiesta cambiando tipo, ordinamento e filtro gratuito
     try:
         s.vai(pagina_elenco, attesa=2, timeout=25000)
