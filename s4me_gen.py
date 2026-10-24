@@ -1615,9 +1615,13 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
     # un film e una serie di esempio
     campioni = {}
     for z in sezioni:
+        gratis = bool(FREE_RE.search(z['nome'] + ' ' + z['entry']['url'] + ' ' + (z['entry'].get('post') or '')))
         for el in z['api']['lista'][:20]:
             tp = tipo_elemento(el, z['api']['chiavi'], z['tipo'])
-            campioni.setdefault(tp, (el, z['api']['chiavi']))
+            campioni.setdefault(tp, []).append((not gratis, len(campioni.get(tp, [])), el, z['api']['chiavi']))
+    # prima i titoli delle sezioni gratuite, al massimo tre tentativi per tipo
+    for tp in campioni:
+        campioni[tp] = [(el, ch) for _, _, el, ch in sorted(campioni[tp], key=lambda x: (x[0], x[1]))[:3]]
     ctx['id_episodi'] = []
 
     def apri(el, chiavi):
@@ -1631,56 +1635,57 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
                 idv = v
         return url, idv, piatto
 
-    if 'movie' in campioni:
-        el, chiavi = campioni['movie']
+    for el, chiavi in campioni.get('movie', []):
         url, idv, piatto = apri(el, chiavi)
         if not url and primo:
             url = primo  # nessun percorso nei dati: si usa il link della prima card
-        if url:
-            rp('Apro un film di esempio:', url)
-            det = s.vai(url, attesa=args.attesa)
-            cattura['dettaglio'] = {'url': det['url'], 'net': det['net']}
-            ctx['primo_id'] = idv
-            if idv and idv in det['url']:
-                ctx['dettaglio'] = det['url'].replace(idv, '{}')
-                if ctx['dettaglio'].startswith(base):
-                    ctx['dettaglio'] = ctx['dettaglio'][len(base):]
-            info = riproduci(s, args, rp, cattura, 'play')
-            if info:
-                ctx['manifest'] = info
-    if 'tvshow' in campioni:
-        el, chiavi = campioni['tvshow']
+        if not url:
+            continue
+        rp('Apro un film di esempio:', url)
+        det = s.vai(url, attesa=args.attesa)
+        cattura['dettaglio'] = {'url': det['url'], 'net': det['net']}
+        ctx['primo_id'] = idv
+        if idv and idv in det['url']:
+            ctx['dettaglio'] = det['url'].replace(idv, '{}')
+            if ctx['dettaglio'].startswith(base):
+                ctx['dettaglio'] = ctx['dettaglio'][len(base):]
+        info = riproduci(s, args, rp, cattura, 'play')
+        if info:
+            ctx['manifest'] = info
+            break
+    for el, chiavi in campioni.get('tvshow', []):
         url, idv, piatto = apri(el, chiavi)
-        if url:
-            rp('Apro una serie di esempio:', url)
-            det = s.vai(url, attesa=args.attesa)
-            cattura['serie'] = {'url': det['url'], 'net': det['net']}
-            ep = trova_episodi_api(det['net'])
-            if not ep:
-                rp('Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina della serie.')
-            else:
-                e = ep['entry']
-                valori = [idv] + [str(v) for v in piatto.values() if isinstance(v, (str, int)) and len(str(v)) >= 3]
-                tr = trasforma_id((e['url'] or '') + ' ' + (e.get('post') or ''), valori)
-                if not tr:
-                    rp('ATTENZIONE: episodi trovati ma non so in quale punto della richiesta compare l\'id della serie.')
-                else:
-                    sp = urlsplit(e['url'])
-                    rel = urlunsplit(('', '', sp.path, sp.query, '')) if sp.netloc == urlparse(base).netloc else e['url']
-                    ch = dict(ep['chiavi'])
-                    ctx['episodi_api'] = {'url': rel.replace(tr['id'], '{ID}'),
-                                          'body': (e.get('post') or '').replace(tr['id'], '{ID}') if e.get('post') else '',
-                                          'lista': ep['path'], 'chiavi': ch}
-                    rp('Episodi: %d nella risposta, richiesta %s, stagione=%s episodio=%s titolo=%s' % (
-                        len(ep['lista']), e['method'], ch.get('season'), ch.get('episode'), ch.get('title')))
-                    pe = appiattisci(ep['lista'][0])
-                    ctx['id_episodi'] = [str(pe[k]) for k in ch.get('ids', []) if k in pe]
-            info = riproduci(s, args, rp, cattura, 'play_serie')
-            if info and not ctx.get('manifest'):
-                ctx['manifest'] = info
-            elif info:
-                rp('Riproduzione di un episodio rilevata (stessa sorgente del film).')
-
+        if not url:
+            continue
+        rp('Apro una serie di esempio:', url)
+        det = s.vai(url, attesa=args.attesa)
+        cattura['serie'] = {'url': det['url'], 'net': det['net']}
+        ep = trova_episodi_api(det['net'])
+        if not ep:
+            rp('Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.')
+            continue
+        e = ep['entry']
+        valori = [idv] + [str(v) for v in piatto.values() if isinstance(v, (str, int)) and len(str(v)) >= 3]
+        tr = trasforma_id((e['url'] or '') + ' ' + (e.get('post') or ''), valori)
+        if not tr:
+            rp('ATTENZIONE: episodi trovati ma non so in quale punto della richiesta compare l\'id della serie.')
+            continue
+        sp = urlsplit(e['url'])
+        rel = urlunsplit(('', '', sp.path, sp.query, '')) if sp.netloc == urlparse(base).netloc else e['url']
+        ch = dict(ep['chiavi'])
+        ctx['episodi_api'] = {'url': rel.replace(tr['id'], '{ID}'),
+                              'body': (e.get('post') or '').replace(tr['id'], '{ID}') if e.get('post') else '',
+                              'lista': ep['path'], 'chiavi': ch}
+        rp('Episodi: %d nella risposta, richiesta %s, stagione=%s episodio=%s titolo=%s' % (
+            len(ep['lista']), e['method'], ch.get('season'), ch.get('episode'), ch.get('title')))
+        pe = appiattisci(ep['lista'][0])
+        ctx['id_episodi'] = [str(pe[k]) for k in ch.get('ids', []) if k in pe]
+        info = riproduci(s, args, rp, cattura, 'play_serie')
+        if info and not ctx.get('manifest'):
+            ctx['manifest'] = info
+        elif info:
+            rp('Riproduzione di un episodio rilevata (stessa sorgente del film).')
+        break
 
 def analizza(url, args):
     rapporto = []
@@ -1745,8 +1750,16 @@ def analizza(url, args):
             ta = titoli_api(api)
             comuni = len(th & ta)
             rp('Titoli HTML:', len(th), '| titoli API:', len(ta), '| in comune:', comuni)
-            modo = 'html' if th and comuni >= 0.5 * len(th) else 'api'
-            if modo == 'api':
+            stessi = bool(th) and comuni >= 0.5 * len(th)
+            pag_api = paginazione(api['entry'])
+            if stessi and pag_api and len(api['lista']) >= 10:
+                modo = 'api'
+                rp('L\'HTML e la API mostrano gli stessi titoli, ma la API ha la paginazione (%s) e i tipi di contenuto: '
+                   'scelgo la API, che permette anche sezioni, serie ed episodi.' % pag_api['tipo'])
+            elif stessi:
+                modo = 'html'
+            else:
+                modo = 'api'
                 rp('I titoli letti dall\'HTML non coincidono con quelli della API: scelgo la API.')
         elif card and collaudo[0] >= 3:
             modo = 'html'
