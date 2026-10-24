@@ -17,9 +17,6 @@ headers = [['Referer', host + '/']]
 
 @support.menu
 def mainlist(item):
-    top = [('1', ['/it', 'peliculas', '', 'movie']),
-           ('2', ['/it?page=2', 'peliculas', '', 'movie']),
-           ('3', ['/it?page=3', 'peliculas', '', 'movie'])]
     search = ''
     return locals()
 
@@ -28,7 +25,7 @@ def mainlist(item):
 def peliculas(item):
     support.info(item)
     action = 'episodios'
-    patron = r'''<a[^>]*?href="(?P<url>[^"]+)"(?:(?!</a>).)*?<img [^>]*?src="(?P<thumb>[^"]+)".*?<img [^>]*?alt="(?P<title>[^"]+)"'''
+    patron = r'''<div[^>]*class="title\-list\-grid__item".*?<a [^>]*?href="(?P<url>[^"]+)".*?<img [^>]*?src="(?P<thumb>[^"]+)".*?<img [^>]*?alt="(?P<title>[^"]+)"'''
     patronNext = r'''<a [^>]*?rel="next"[^>]*?href="([^"]+)"|<a [^>]*?href="([^"]+)"[^>]*?rel="next"'''
     #debug = True  # apre regex101 con pagina e regex
     return locals()

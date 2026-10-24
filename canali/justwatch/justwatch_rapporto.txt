@@ -1,16 +1,18 @@
 Apro https://www.justwatch.com/it
-Voci di menu trovate: 3
-Card trovate nel DOM: 104 | regex sul DOM: 72 | regex sull'html grezzo: 72
+Voci di menu trovate: 0
+Card trovate nel DOM: 40 | regex sul DOM: 20 | regex sull'html grezzo: 20
+Titoli HTML: 20 | titoli API: 40 | in comune: 19
 Modalita scelta: html
 Pagina successiva: /it?page=2
-Esempi di risultati della regex: [{"url": "/", "thumb": "/appassets/img/logo/JustWatch-logo-small.png", "title": "Netflix"}, {"url": "/it/provider/amazon-prime-video", "thumb": "https://images.justwatch.com/icon/322992749/s100/amazonprimevideo.jpeg", "title": "Apple TV"}, {"url": "/it/provider/disney-plus", "thumb": "https://images.justwatch.com/icon/313118777/s100/disneyplus.jpeg", "title": "JustWatch TV Free"}]
+Esempi di risultati della regex: [{"url": "/it/serie-tv/mobland", "thumb": "https://images.justwatch.com/poster/355099105/s332/mobland.jpg", "title": "Carrie"}, {"url": "/it/serie-tv/the-gentlemen", "thumb": "https://images.justwatch.com/poster/312658395/s332/the-gentlemen.jpg", "title": "Lanterns"}, {"url": "/it/serie-tv/east-of-eden", "thumb": "https://images.justwatch.com/poster/355253708/s332/east-of-eden.jpg", "title": "Ted Lasso"}]
 Campo di ricerca: input[type=search]
 Url di ricerca: /it/cerca?q=%s
-Apro il primo titolo: https://www.justwatch.com/
-Episodi rilevati: 5 (titolo esempio: Between Steps Stagione 1)
+Apro il primo titolo: https://www.justwatch.com/it/serie-tv/mobland
+Episodi rilevati: 20 (titolo esempio: Stagione 4)
 Iframe nella pagina: ['https://web.cmp.usercentrics.eu/cdcs/v/1.0.0/index.html']
 Provo a far partire il video...
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
+INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server)
 
 File scritti in canali/justwatch: justwatch.py, justwatch.json, riga_channels_json.txt
 Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), caricare l'icona justwatch.png nella repo media.
