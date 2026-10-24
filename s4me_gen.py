@@ -110,9 +110,26 @@ def attiva_dns(nome):
 CF = {'cookies': [], 'ua': None}
 
 
-def flaresolverr(endpoint, url):
-    """Supera la challenge con FlareSolverr e salva cookie e user agent per il browser."""
+def ha_challenge(url):
+    """True se il sito risponde con la challenge di Cloudflare."""
     import requests
+    try:
+        r = requests.get(url, headers={'User-Agent': UA}, timeout=20)
+    except Exception:
+        return False
+    t = r.text[:20000].lower()
+    return (r.headers.get('cf-mitigated') == 'challenge' or
+            (r.status_code in (403, 429, 503) and 'cloudflare' in (r.headers.get('server', '') + t).lower()) or
+            'just a moment' in t or 'challenge-platform' in t and r.status_code != 200)
+
+
+def flaresolverr(endpoint, url):
+    """Se il sito mostra la challenge, la supera con FlareSolverr e salva cookie e user agent."""
+    import requests
+    if not ha_challenge(url):
+        log('Nessuna challenge Cloudflare rilevata: FlareSolverr non serve')
+        return False
+    log('Challenge Cloudflare rilevata, uso FlareSolverr')
     try:
         r = requests.post(endpoint.rstrip('/') + '/v1',
                           json={'cmd': 'request.get', 'url': url, 'maxTimeout': 90000},
@@ -131,7 +148,7 @@ def flaresolverr(endpoint, url):
         if c.get('expires') and c['expires'] > 0:
             k['expires'] = c['expires']
         CF['cookies'].append(k)
-    log('FlareSolverr: challenge superata, cookie ricevuti:', len(CF['cookies']))
+    log('FlareSolverr: risposta ricevuta, cookie:', len(CF['cookies']))
     return True
 
 
