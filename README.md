@@ -29,3 +29,7 @@ Se la run si blocca, il log stampa dopo 5 minuti lo stato del programma e la run
 
 ## Riferimento
 La cartella `riferimento/` contiene il canale JustWatch TV scritto a mano e verificato nell addon: è il modello di quello che il tool deve produrre per i siti con API (menu, cursore, TMDB con controllo, riproduzione Widevine).
+
+## Cosa scopre da solo
+Per i siti con API il tool visita le sezioni del menu, i percorsi dei titoli e i link a contenuti gratuiti, prova i menu a tendina (ordinamenti e filtri), apre un film e una serie di esempio, cerca la richiesta degli episodi (stagione ed episodio) e prova a far partire un film e un episodio. Il canale generato ha una voce di menu per ogni sezione e ordinamento trovati.
+In `test/` ci sono un sito di prova (`server_c.py`) con sezioni, ordinamenti, serie, episodi e riproduzione, e lo script `run_c.py` che prova il canale generato.

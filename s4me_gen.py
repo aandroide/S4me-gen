@@ -21,6 +21,7 @@ Cosa fa:
 """
 
 import argparse
+import pprint
 import faulthandler
 import signal
 import json
@@ -248,6 +249,69 @@ class Sessione:
         except BaseException:
             html = ''
         return {'url': self.page.url, 'html': html, 'net': net}
+
+    def varianti(self, attesa=3):
+        """Prova i menu a tendina della pagina (ordinamenti, filtri) e registra le richieste che ne escono."""
+        out = []
+        try:
+            n_sel = self.page.locator('select').count()
+        except Exception:
+            n_sel = 0
+        for i in range(min(n_sel, 3)):
+            try:
+                sel = self.page.locator('select').nth(i)
+                opts = sel.locator('option').evaluate_all("els => els.map(o => [o.value, o.textContent.trim()])")
+                corrente = sel.input_value()
+                nome_corr = sel.evaluate("e => e.options[e.selectedIndex].textContent.trim()")
+            except Exception:
+                continue
+            out.append({'label': nome_corr, 'base': True, 'net': None})
+            for val, testo in opts[:8]:
+                if val == corrente or not val:
+                    continue
+                self.net = []
+                try:
+                    sel.select_option(val, timeout=3000)
+                except Exception:
+                    continue
+                self._assesta(attesa)
+                out.append({'label': testo, 'base': False, 'net': self.stato()['net']})
+            try:
+                self.net = []
+                sel.select_option(corrente, timeout=3000)
+                self._assesta(1)
+            except Exception:
+                pass
+            break
+        if out:
+            return out
+        # menu personalizzati (non select): pulsante che apre una lista di opzioni
+        try:
+            for bott in self.page.locator('[aria-haspopup], [role=combobox]').all()[:3]:
+                try:
+                    bott.click(timeout=2000)
+                    voci = self.page.locator('[role=option], [role=menuitem], [role=menuitemradio]')
+                    testi = [t.strip() for t in voci.all_inner_texts() if t.strip()][:8]
+                except Exception:
+                    continue
+                for t in testi:
+                    self.net = []
+                    try:
+                        self.page.locator('[role=option], [role=menuitem], [role=menuitemradio]').get_by_text(
+                            t, exact=True).first.click(timeout=2000)
+                    except Exception:
+                        continue
+                    self._assesta(attesa)
+                    out.append({'label': t, 'base': False, 'net': self.stato()['net']})
+                    try:
+                        bott.click(timeout=2000)
+                    except Exception:
+                        break
+                if out:
+                    break
+        except Exception:
+            pass
+        return out
 
     def cerca(self, selettore_input, testo='matrix', attesa=4):
         self.net = []
@@ -588,19 +652,19 @@ def appiattisci(d, prefisso='', prof=0, out=None):
     return out
 
 
-def liste_json(obj, path='', prof=0, out=None):
+def liste_json(obj, path='', prof=0, out=None, minimo=4):
     out = [] if out is None else out
     if prof > 6:
         return out
     if isinstance(obj, list):
         dicts = [x for x in obj if isinstance(x, dict)]
-        if len(dicts) >= 4:
+        if len(dicts) >= minimo:
             out.append((path, obj))
         for i, x in enumerate(obj[:1]):
-            liste_json(x, path, prof + 1, out)
+            liste_json(x, path, prof + 1, out, minimo)
     elif isinstance(obj, dict):
         for k, v in obj.items():
-            liste_json(v, (path + '.' if path else '') + k, prof + 1, out)
+            liste_json(v, (path + '.' if path else '') + k, prof + 1, out, minimo)
     return out
 
 
@@ -678,6 +742,80 @@ def tipi_da_url(hrefs):
                 if seg in nomi:
                     trovati.setdefault(tipo, set()).add(seg)
     return {k: sorted(v) for k, v in trovati.items()} if len(trovati) >= 2 else {}
+
+
+FREE_RE = re.compile(r'(free|gratis|gratuit|senza abbonamento)', re.I)
+SEASON_RE = re.compile(r'^(season|stagione)(number|num|n|no)?$', re.I)
+EPISODE_RE = re.compile(r'^(episode|episodio|ep)(number|num|n|no)?$|^number$', re.I)
+
+
+def firma_richiesta(e):
+    """Identifica una richiesta ignorando i parametri di pagina."""
+    post = e.get('post') or ''
+    try:
+        j = json.loads(post)
+        v = j.get('variables') if isinstance(j, dict) and 'variables' in j else j
+        if isinstance(v, dict):
+            for k in PAGE_KEYS + OFFSET_KEYS + ['after', 'cursor', 'endCursor']:
+                v.pop(k, None)
+        post = json.dumps(j, sort_keys=True)
+    except Exception:
+        pass
+    sp = urlsplit(e['url'])
+    q = [(k, v) for k, v in parse_qsl(sp.query, keep_blank_values=True) if k not in PAGE_KEYS + OFFSET_KEYS]
+    return (sp.path, tuple(sorted(q)), post)
+
+
+def trova_episodi_api(net):
+    """Cerca una risposta JSON che contiene l'elenco degli episodi (campi stagione e episodio)."""
+    best = None
+    for e in net:
+        if not e.get('body') or 'json' not in e.get('ct', ''):
+            continue
+        try:
+            j = json.loads(e['body'])
+        except Exception:
+            continue
+        for path, lst in liste_json(j, minimo=2):
+            dicts = [x for x in lst if isinstance(x, dict)]
+            piatto = appiattisci(dicts[0])
+            sk = ek = None
+            for k in sorted(piatto, key=lambda x: x.count('.')):
+                ult = k.split('.')[-1]
+                if sk is None and SEASON_RE.match(ult) and isinstance(piatto[k], (int, float, str)):
+                    sk = k
+                if ek is None and EPISODE_RE.match(ult) and isinstance(piatto[k], (int, float, str)):
+                    ek = k
+            if not sk or not ek:
+                continue
+            ris, _ = scegli_chiavi(dicts[0])
+            ris['season'] = sk
+            ris['episode'] = ek
+            if not best or len(dicts) > len(best['lista']):
+                best = {'entry': e, 'path': path, 'lista': dicts, 'chiavi': ris, 'json': j}
+    return best
+
+
+def trasforma_id(testo, candidati):
+    """Trova dove compare l'id del titolo in una richiesta: diretto oppure dentro un valore base64."""
+    import base64
+    for idv in candidati:
+        if idv and idv in testo:
+            return {'tipo': 'dir', 'id': idv}
+    for tok in set(re.findall(r'[A-Za-z0-9+/]{12,}={0,2}', testo)):
+        try:
+            dec = base64.b64decode(tok + '=' * (-len(tok) % 4)).decode('utf-8')
+        except Exception:
+            continue
+        for idv in candidati:
+            if idv and idv in dec:
+                return {'tipo': 'b64', 'id': idv, 'token': tok, 'formato': dec.replace(idv, '{ID}')}
+    return None
+
+
+def nome_da_url(u):
+    seg = [x for x in urlparse(u).path.split('/') if x]
+    return (seg[-1] if seg else 'Titoli').replace('-', ' ').replace('_', ' ').title()
 
 
 def titoli_api(api):
@@ -804,6 +942,7 @@ HEADER = '''# -*- coding: utf-8 -*-
 
 import json
 import re
+import base64
 import difflib
 from urllib.parse import urlencode
 
@@ -965,14 +1104,20 @@ def cerca_lista(d, chiave_titolo):
     return []
 
 
+def sezione(item):
+    return SEZIONI[int(item.args)] if str(item.args).isdigit() and int(item.args) < len(SEZIONI) else SEZIONI[0]
+
+
 def chiama(item):
-    params = dict(PARAMS)
-    body = json.loads(json.dumps(BODY)) if BODY is not None else None
-    url = API
+    sez = sezione(item)
+    PAGINAZIONE = sez['pag']
+    params = dict(sez['params'])
+    body = json.loads(json.dumps(sez['body'])) if sez['body'] is not None else None
+    url = sez['url'] if sez['url'].startswith('http') else host + sez['url']
     pagina = int(item.pagina) if item.pagina else 1
     if item.search_text and RICERCA_BODY is not None:
         body = json.loads(RICERCA_BODY.replace('__TESTO__', json.dumps(item.search_text)[1:-1]))
-        url = RICERCA_URL or API
+        url = RICERCA_URL or url
     elif item.search_text and RICERCA:
         return httptools.downloadpage(RICERCA % item.search_text.replace(' ', '+'),
                                       headers={'Referer': host + '/'}).json
@@ -994,13 +1139,6 @@ def chiama(item):
     if body is not None:
         opt['post'] = json.dumps(body)
     return httptools.downloadpage(url, **opt).json
-
-
-@support.menu
-def mainlist(item):
-    top = [('Titoli', ['', 'peliculas', '', '__TIPO__'])]
-    search = ''
-    return locals()
 
 
 def simile(a, b):
@@ -1038,8 +1176,10 @@ def verificaTmdb(itemlist):
 def peliculas(item):
     logger.debug()
     itemlist = []
+    sez = sezione(item)
+    PAGINAZIONE = sez['pag']
     risposta = chiama(item)
-    lista = prendi(risposta, LISTA, [])
+    lista = prendi(risposta, sez['lista'], [])
     if not lista:
         lista = cerca_lista(risposta, CAMPI.get('title', 'title'))
     for el in lista:
@@ -1062,7 +1202,7 @@ def peliculas(item):
         if thumb.startswith('/'):
             thumb = host + thumb
         plot = prendi(el, CAMPI['plot']) if 'plot' in CAMPI else ''
-        tipo = '__TIPO__'
+        tipo = sez['tipo']
         if 'type' in CAMPI:
             tipo = 'tvshow' if re.search(r'show|serie|tv|series', str(prendi(el, CAMPI['type'])), re.I) else 'movie'
         comuni = dict(channel=item.channel, title=titolo, fulltitle=titolo, show=titolo,
@@ -1097,10 +1237,54 @@ def peliculas(item):
 
 def episodios(item):
     logger.debug()
-    # TODO: episodi non generati dal tool. Serve la richiesta che elenca stagioni ed episodi della serie
-    # (item.idv e l'id del titolo); ogni episodio va restituito con action='findvideos'.
-    platformtools.dialog_ok('__NOME__', 'Episodi non ancora implementati')
-    return []
+    itemlist = []
+    if not EPISODI:
+        platformtools.dialog_ok('__NOME__', 'Episodi non rilevati sul sito')
+        return []
+    url = EPISODI['url'].replace('{ID}', item.idv)
+    if not url.startswith('http'):
+        url = host + url
+    opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
+    if EPISODI['body']:
+        opt['post'] = EPISODI['body'].replace('{ID}', item.idv)
+    risposta = httptools.downloadpage(url, **opt).json
+    ch = EPISODI['chiavi']
+    lista = prendi(risposta, EPISODI['lista'], []) or cerca_lista(risposta, ch.get('title', 'title'))
+    titolo_serie = item.sito_title or item.contentSerieName or item.fulltitle
+    anno = item.sito_year or item.infoLabels.get('year', '')
+    for ep in lista:
+        try:
+            stagione = int(float(prendi(ep, ch['season'])))
+            numero = int(float(prendi(ep, ch['episode'])))
+        except (ValueError, TypeError):
+            continue
+        nome = prendi(ep, ch['title']) if 'title' in ch else ''
+        idv = ''
+        for k in ch.get('ids', []):
+            idv = prendi(ep, k)
+            if idv:
+                break
+        itemlist.append(Item(channel=item.channel,
+                             action='findvideos',
+                             contentType='episode',
+                             title=support.typo('{}x{:02d}'.format(stagione, numero) + (' - ' + nome if nome else ''), 'bold'),
+                             fulltitle=titolo_serie,
+                             show=titolo_serie,
+                             contentSerieName=titolo_serie,
+                             contentSeason=stagione,
+                             contentEpisodeNumber=numero,
+                             infoLabels={'season': stagione, 'episode': numero,
+                                         'tvshowtitle': titolo_serie, 'year': anno},
+                             thumbnail=item.thumbnail,
+                             idv=str(idv),
+                             url=''))
+    if itemlist and config.get_setting('episode_info'):
+        try:
+            tmdb.set_infoLabels_itemlist(itemlist, seekTmdb=True)
+        except:
+            logger.error('TMDB non disponibile')
+    support.videolibrary(itemlist, item)
+    return itemlist
 
 """
 
@@ -1122,14 +1306,39 @@ def genera_api(nome, ctx):
     dett = ctx.get('dettaglio', '')
 
     cod = HEADER.replace('__NOME__', nome)
-    cod += "API = %s\n" % espr_url(e['url'], base)
-    cod += "PARAMS = %s\n" % json.dumps(query, ensure_ascii=False)
-    cod += "BODY = %s\n" % (json.dumps(post, ensure_ascii=False) if post is not None else 'None')
-    cod += "LISTA = %s  # percorso dell'elenco dentro la risposta\n" % py_str(api['path'])
+    sezioni = ctx.get('sezioni') or [{'nome': 'Titoli', 'tipo': ctx['tipo'], 'entry': e, 'lista': api['path'], 'pag': pag}]
+    elenco = []
+    for z in sezioni:
+        ez = z['entry']
+        spz = urlsplit(ez['url'])
+        try:
+            bz = json.loads(ez['post']) if ez.get('post') else None
+        except Exception:
+            bz = None
+        rel = urlunsplit(('', '', spz.path, '', '')) if spz.netloc == urlparse(base).netloc else \
+            urlunsplit((spz.scheme, spz.netloc, spz.path, '', ''))
+        elenco.append({'nome': z['nome'], 'tipo': z['tipo'], 'url': rel,
+                       'params': dict(parse_qsl(spz.query, keep_blank_values=True)), 'body': bz,
+                       'lista': z['lista'], 'pag': z.get('pag')})
+    cod += "SEZIONI = %s\n" % pprint.pformat(elenco, width=110, sort_dicts=False)
     cod += "CAMPI = %s\n" % json.dumps({k: v for k, v in chiavi.items() if k != 'ids'}, ensure_ascii=False)
     cod += "IDS = %s  # campi che identificano il titolo, in ordine di preferenza\n" % json.dumps(chiavi.get('ids', []))
     cod += "DETTAGLIO = %s  # pagina del titolo, {} al posto dell'id\n" % py_str(dett)
-    cod += "PAGINAZIONE = %s\n" % json.dumps(pag, ensure_ascii=False)
+    epi = ctx.get('episodi_api')
+    if epi:
+        cod += "EPISODI = %s\n" % pprint.pformat(epi, width=110, sort_dicts=False)
+    else:
+        cod += "EPISODI = None  # episodi non rilevati sul sito\n"
+    # menu: una voce per sezione, raggruppate per tipo come negli altri canali S4Me
+    gruppi = {}
+    for i, z in enumerate(elenco):
+        gruppi.setdefault(z['tipo'], []).append("('%s', ['', 'peliculas', '%d', '%s'])" % (z['nome'].replace("'", ''), i, z['tipo']))
+    righe = []
+    for tp, voci in gruppi.items():
+        chiave = tp if tp in ('movie', 'tvshow', 'anime') else 'movie'
+        chiave = {'movie': 'film'}.get(chiave, chiave)
+        righe.append("    %s = ['',\n           %s]" % (chiave, ',\n           '.join(voci)))
+    cod += "\n\n@support.menu\ndef mainlist(item):\n" + '\n'.join(righe) + "\n    search = ''\n    return locals()\n\n\n"
     s = ctx['search_api']
     sb = ctx.get('search_body')
     cod += "RICERCA = %s\n" % (espr_url_ricerca(s, base) if s else 'None')
@@ -1181,10 +1390,16 @@ def genera_findvideos_api(ctx, nome='canale'):
         src = man['sorgente']
         e = src['entry']
         corpo = e.get('post') or ''
-        idv = ctx.get('primo_id', '')
-        # sostituisce l'id del titolo con un segnaposto, se compare nella richiesta
+        # l'id del titolo (o dell'episodio) compare nella richiesta in chiaro oppure dentro un valore base64
+        cands = [x for x in ([ctx.get('primo_id', '')] + ctx.get('id_episodi', [])) if x]
+        tr = trasforma_id(e['url'] + ' ' + corpo, cands)
+        idv = tr['id'] if tr else ''
+        b64 = tr if tr and tr['tipo'] == 'b64' else None
         url_t = e['url'].replace(idv, '{ID}') if idv and idv in e['url'] else e['url']
-        corpo_t = corpo.replace(idv, '{ID}') if idv and idv in corpo else corpo
+        if b64:
+            corpo_t = corpo.replace(b64['token'], '{B64}')
+        else:
+            corpo_t = corpo.replace(idv, '{ID}') if idv and idv in corpo else corpo
         tipo = 'mpd' if re.search(r'\.mpd|dash', man['url'], re.I) else 'hls'
         if man.get('licenza_percorso'):
             lic_espr = "prendi(r, %s)" % py_str(man['licenza_percorso'])
@@ -1200,7 +1415,7 @@ def findvideos(item):
     support.info(item)
     idv = item.idv
     url = (__URL__).replace('{ID}', idv)
-    corpo = __CORPO__.replace('{ID}', idv)
+    corpo = __CORPO__.replace('{ID}', idv)__B64__
     opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
     if corpo:
         opt['post'] = corpo
@@ -1222,6 +1437,7 @@ def findvideos(item):
                     referer=host + '/', no_return=True)
     return support.server(item, itemlist=[it], Download=False, Videolibrary=False)
 """.replace('__URL__', url_espr).replace('__CORPO__', py_str(corpo_t)) \
+            .replace('__B64__', ("\n    corpo = corpo.replace('{B64}', base64.b64encode(%s.replace('{ID}', idv).encode('utf-8')).decode('utf-8'))" % py_str(b64['formato'])) if b64 else '') \
             .replace('__PERCORSO__', py_str(src['path'])).replace('__TIPO__', tipo) \
             .replace('__LICENZA__', lic_espr).replace('__NOME__', nome)
     return """
@@ -1264,6 +1480,180 @@ def scarica_grezzo(url):
         return requests.get(url, headers={'User-Agent': CF['ua'] or UA}, cookies={c['name']: c['value'] for c in CF['cookies']}, timeout=20).text
     except Exception as e:
         return ''
+
+
+
+def riproduci(s, args, rp, cattura, chiave):
+    """Prova a far partire il video nella pagina aperta e ritorna le informazioni sul manifest."""
+    rp('Provo a far partire il video...')
+    pl = s.prova_play(attesa=args.attesa + 4)
+    cattura[chiave] = {'url': pl['url'], 'cliccato': pl.get('cliccato'), 'net': pl['net']}
+    man, lic = trova_manifest(pl['net'])
+    if not man:
+        rp('Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).')
+        return None
+    m = man[0]
+    rp('Manifest:', m['url'][:140])
+    info = {'url': m['url'], 'licenza': '', 'sorgente': sorgente_manifest(pl['net'], m['url'])}
+    if lic:
+        info['licenza'] = lic[0]['url']
+        rp('Licenza DRM:', lic[0]['method'], lic[0]['url'][:140])
+        if info['sorgente']:
+            info['licenza_percorso'] = percorso_valore(info['sorgente']['json'], lic[0]['url'].split('?')[0])
+            if info['licenza_percorso']:
+                rp('La licenza arriva dalla stessa risposta:', info['licenza_percorso'])
+    if info['sorgente']:
+        rp('Il manifest arriva da:', info['sorgente']['entry']['url'][:120], '| percorso:', info['sorgente']['path'])
+    return info
+
+
+def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo=''):
+    """Per i siti con API: scopre sezioni e ordinamenti, poi apre un film e una serie per trovare episodi e riproduzione."""
+    import posixpath
+    sezioni, viste = [], set()
+    tempo = min(args.attesa, 4)
+
+    def tipo_elemento(el, chiavi, fallback):
+        k = chiavi.get('type')
+        if k:
+            v = str(appiattisci(el).get(k, ''))
+            return 'tvshow' if re.search(r'show|serie|tv|series', v, re.I) else 'movie'
+        return fallback
+
+    def aggiungi(nome, a, fallback):
+        f = firma_richiesta(a['entry'])
+        if f in viste:
+            return None
+        viste.add(f)
+        pag = paginazione(a['entry'])
+        if pag and pag['tipo'] == 'offset':
+            pag['passo'] = len(a['lista'])
+        z = {'nome': nome, 'tipo': tipo_elemento(a['lista'][0], a['chiavi'], fallback), 'entry': a['entry'],
+             'lista': a['path'], 'pag': pag, 'api': a}
+        sezioni.append(z)
+        rp('Sezione:', nome, '| tipo:', z['tipo'], '| titoli:', len(a['lista']))
+        return z
+
+    def con_varianti(nome, a, fallback):
+        var = s.varianti(attesa=tempo)
+        base_label = next((v['label'] for v in var if v['base']), '')
+        z = aggiungi(nome + (' ' + base_label if base_label and any(not v['base'] for v in var) else ''), a, fallback)
+        for v in var:
+            if v['base'] or not v['net']:
+                continue
+            a2 = trova_elenco_api(v['net'])
+            if a2:
+                aggiungi(nome + ' ' + v['label'], a2, fallback)
+        return z
+
+    # sezione di partenza e suoi ordinamenti
+    fallback0 = ctx['tipo']
+    nome0 = next((t for t, u in ctx['menu'] if u.rstrip('/') == pagina_elenco.rstrip('/')), '') or \
+        (nome_da_url(pagina_elenco) if urlparse(pagina_elenco).path.strip('/') else 'Titoli')
+    s.vai(pagina_elenco, attesa=tempo)
+    con_varianti(nome0, api, fallback0)
+
+    # altre sezioni: menu, percorsi dei titoli, link a contenuti gratuiti
+    cand = []
+    for t, u in ctx['menu']:
+        cand.append((t, u))
+    for el in api['lista'][:5]:
+        piatto = appiattisci(el)
+        for k in api['chiavi'].get('ids', []):
+            v = str(piatto.get(k, ''))
+            if v.startswith('/'):
+                par = posixpath.dirname(v)
+                if par and par != '/':
+                    cand.append((nome_da_url(par), urljoin(base, par)))
+    for a_ in soup.find_all('a', href=True):
+        t = a_.get_text(' ', strip=True)
+        if FREE_RE.search(t + ' ' + a_['href']) and len(t) < 40:
+            cand.append((t or nome_da_url(a_['href']), urljoin(base, a_['href'])))
+    visti = {pagina_elenco.rstrip('/')}
+    n = 0
+    for t, u in cand:
+        u = u.split('#')[0]
+        if u.rstrip('/') in visti or urlparse(u).netloc != urlparse(base).netloc:
+            continue
+        visti.add(u.rstrip('/'))
+        if n >= 10:
+            break
+        n += 1
+        e = s.vai(u, attesa=tempo)
+        a2 = trova_elenco_api(e['net'])
+        if a2:
+            con_varianti(t, a2, fallback0)
+    ctx['sezioni'] = sezioni
+    rp('Sezioni trovate:', len(sezioni))
+
+    # un film e una serie di esempio
+    campioni = {}
+    for z in sezioni:
+        for el in z['api']['lista'][:20]:
+            tp = tipo_elemento(el, z['api']['chiavi'], z['tipo'])
+            campioni.setdefault(tp, (el, z['api']['chiavi']))
+    ctx['id_episodi'] = []
+
+    def apri(el, chiavi):
+        piatto = appiattisci(el)
+        url, idv = '', ''
+        for k in chiavi.get('ids', []):
+            v = str(piatto.get(k, ''))
+            if (v.startswith('http') or v.startswith('/')) and not url:
+                url = urljoin(base, v)
+            elif v and not v.startswith('/') and not idv:
+                idv = v
+        return url, idv, piatto
+
+    if 'movie' in campioni:
+        el, chiavi = campioni['movie']
+        url, idv, piatto = apri(el, chiavi)
+        if not url and primo:
+            url = primo  # nessun percorso nei dati: si usa il link della prima card
+        if url:
+            rp('Apro un film di esempio:', url)
+            det = s.vai(url, attesa=args.attesa)
+            cattura['dettaglio'] = {'url': det['url'], 'net': det['net']}
+            ctx['primo_id'] = idv
+            if idv and idv in det['url']:
+                ctx['dettaglio'] = det['url'].replace(idv, '{}')
+                if ctx['dettaglio'].startswith(base):
+                    ctx['dettaglio'] = ctx['dettaglio'][len(base):]
+            info = riproduci(s, args, rp, cattura, 'play')
+            if info:
+                ctx['manifest'] = info
+    if 'tvshow' in campioni:
+        el, chiavi = campioni['tvshow']
+        url, idv, piatto = apri(el, chiavi)
+        if url:
+            rp('Apro una serie di esempio:', url)
+            det = s.vai(url, attesa=args.attesa)
+            cattura['serie'] = {'url': det['url'], 'net': det['net']}
+            ep = trova_episodi_api(det['net'])
+            if not ep:
+                rp('Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina della serie.')
+            else:
+                e = ep['entry']
+                valori = [idv] + [str(v) for v in piatto.values() if isinstance(v, (str, int)) and len(str(v)) >= 3]
+                tr = trasforma_id((e['url'] or '') + ' ' + (e.get('post') or ''), valori)
+                if not tr:
+                    rp('ATTENZIONE: episodi trovati ma non so in quale punto della richiesta compare l\'id della serie.')
+                else:
+                    sp = urlsplit(e['url'])
+                    rel = urlunsplit(('', '', sp.path, sp.query, '')) if sp.netloc == urlparse(base).netloc else e['url']
+                    ch = dict(ep['chiavi'])
+                    ctx['episodi_api'] = {'url': rel.replace(tr['id'], '{ID}'),
+                                          'body': (e.get('post') or '').replace(tr['id'], '{ID}') if e.get('post') else '',
+                                          'lista': ep['path'], 'chiavi': ch}
+                    rp('Episodi: %d nella risposta, richiesta %s, stagione=%s episodio=%s titolo=%s' % (
+                        len(ep['lista']), e['method'], ch.get('season'), ch.get('episode'), ch.get('title')))
+                    pe = appiattisci(ep['lista'][0])
+                    ctx['id_episodi'] = [str(pe[k]) for k in ch.get('ids', []) if k in pe]
+            info = riproduci(s, args, rp, cattura, 'play_serie')
+            if info and not ctx.get('manifest'):
+                ctx['manifest'] = info
+            elif info:
+                rp('Riproduzione di un episodio rilevata (stessa sorgente del film).')
 
 
 def analizza(url, args):
@@ -1375,7 +1765,7 @@ def analizza(url, args):
             rp('Campi:', json.dumps(api['chiavi'], ensure_ascii=False))
             rp('Paginazione:', json.dumps(ctx['pag']) if ctx['pag'] else 'non trovata (TODO)')
             if ctx['pag'] and ctx['pag']['tipo'] == 'cursore':
-                rp('ATTENZIONE: paginazione a cursore, non supportata dal canale generato: la pagina successiva va scritta a mano.')
+                rp('Paginazione a cursore: gestita dal canale generato (endCursor e hasNextPage).')
             el0 = api['lista'][0]
             ris, piatto = scegli_chiavi(el0)
             primo = ''
@@ -1419,6 +1809,10 @@ def analizza(url, args):
                         rp('Ricerca via API (POST):', e['url'][:120])
                         break
             ctx['ricerca'] = ric
+
+        if modo == 'api':
+            esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo)
+            primo = ''  # il dettaglio e gia stato esplorato
 
         # Pagina di dettaglio
         if primo:
@@ -1519,6 +1913,8 @@ def main():
         mancano.append('riproduzione (nessun manifest rilevato: findvideos generico con support.server)')
     if not ctx.get('ricerca') and not ctx.get('search_api'):
         mancano.append('ricerca')
+    if ctx.get('modo') == 'api' and any(z['tipo'] == 'tvshow' for z in ctx.get('sezioni', [])) and not ctx.get('episodi_api'):
+        mancano.append('episodi delle serie (nessuna richiesta di episodi rilevata)')
     if mancano:
         rapporto.append('INCOMPLETO, da completare a mano: ' + '; '.join(mancano))
     open(os.path.join(args.out, id_ + '.py'), 'w', encoding='utf-8').write(py)
