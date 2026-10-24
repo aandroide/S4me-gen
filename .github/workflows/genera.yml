@@ -12,11 +12,6 @@ on:
         default: auto
         type: choice
         options: [auto, movie, tvshow, anime]
-      cloudflare:
-        description: "Usa FlareSolverr per superare Cloudflare"
-        required: false
-        default: true
-        type: boolean
       attesa:
         description: "Secondi di attesa dopo ogni pagina"
         required: false
@@ -41,8 +36,17 @@ jobs:
           pip install -r requirements.txt
           playwright install --with-deps chromium
 
+      - name: Controlla se il sito ha Cloudflare
+        id: cf
+        env:
+          SITO: ${{ inputs.sito }}
+        run: |
+          RIS=$(python3 s4me_gen.py "$SITO" --controlla-cf | tail -1)
+          echo "Challenge Cloudflare: $RIS"
+          echo "serve=$RIS" >> "$GITHUB_OUTPUT"
+
       - name: Avvia FlareSolverr
-        if: ${{ inputs.cloudflare }}
+        if: steps.cf.outputs.serve == 'true'
         run: |
           docker run -d --name flaresolverr -p 8191:8191 -e LANG=en-US ghcr.io/flaresolverr/flaresolverr:latest
           for i in $(seq 1 30); do
@@ -52,7 +56,7 @@ jobs:
 
       - name: Genera il canale
         env:
-          CLOUDFLARE: ${{ inputs.cloudflare }}
+          CLOUDFLARE: ${{ steps.cf.outputs.serve }}
           SITO: ${{ inputs.sito }}
           TIPO: ${{ inputs.tipo }}
           ATTESA: ${{ inputs.attesa }}

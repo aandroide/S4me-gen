@@ -416,23 +416,28 @@ def costruisci_patron(el):
         i = s.find(stringa, da)
         return i if i >= 0 else None
 
-    # url
+    # url (se il titolo e un attributo dello stesso <a> si legge con una lookahead, senza un secondo <a>)
     a = el if el.name == 'a' else el.find('a', href=True)
+    t = campi.get('title')
+    titolo_su_a = bool(t and t[0] == 'attr' and t[1] == 'a')
+    titolo_su_img = bool(t and t[0] == 'attr' and t[1] == 'img' and 'thumb' in campi)
+    la_a = (r'(?=[^>]*?' + t[2] + r'="(?P<title>[^"]+)")') if titolo_su_a else ''
     if el.name == 'a':
-        inizio = _tagre(el) + r'[^>]*?href="(?P<url>[^"]+)"'
+        inizio = _tagre(el) + la_a + r'[^>]*?href="(?P<url>[^"]+)"'
         pezzi.append((0, inizio))
     else:
         pezzi.append((0, _tagre(el)))
         p = pos_di(_apertura(a))
-        pezzi.append((p if p is not None else 1, r'<a [^>]*?href="(?P<url>[^"]+)"'))
-    # thumb
+        pezzi.append((p if p is not None else 1, r'<a ' + la_a + r'[^>]*?href="(?P<url>[^"]+)"'))
+    # thumb (se il titolo e l'alt dello stesso <img>, i due campi si leggono insieme)
     if 'thumb' in campi:
         img = el.find('img')
         p = pos_di(_apertura(img))
+        la_img = (r'(?=[^>]*?' + t[2] + r'="(?P<title>[^"]+)")') if titolo_su_img else ''
         pezzi.append((p if p is not None else 2,
-                      r'<img [^>]*?' + campi['thumb'][2] + r'="(?P<thumb>[^"]+)"'))
+                      r'<img ' + la_img + r'[^>]*?' + campi['thumb'][2] + r'="(?P<thumb>[^"]+)"'))
     # titolo
-    if 'title' in campi:
+    if 'title' in campi and not titolo_su_a and not titolo_su_img:
         t = campi['title']
         if t[0] == 'attr':
             tag = el.find(t[1]) if t[1] != 'a' else a
@@ -460,10 +465,14 @@ def costruisci_patron(el):
                       _tagre(tag) + r'[^>]*>\s*(?P<plot>[^<]+)'))
     pezzi.sort(key=lambda x: x[0])
     if el.name == 'a':
-        # il titolo e la locandina devono stare dentro lo stesso link
-        return '.*?'.join(p[1] for p in pezzi).replace(
-            r'(?P<url>[^"]+)"' + '.*?', r'(?P<url>[^"]+)"' + r'(?:(?!</a>).)*?', 1)
-    return '.*?'.join(p[1] for p in pezzi)
+        # tutto deve stare dentro lo stesso link
+        giunto = r'(?:(?!</a>).)*?'
+    elif el.get('class'):
+        # i campi non possono scavalcare l'inizio della card successiva
+        giunto = r'(?:(?!' + pezzi[0][1] + r').)*?'
+    else:
+        giunto = '.*?'
+    return giunto.join(p[1] for p in pezzi)
 
 
 def collauda(patron, html_norm):
@@ -556,7 +565,7 @@ def trova_episodi(soup):
     cand = {}
     for a in soup.find_all('a', href=True):
         t = a.get_text(' ', strip=True)
-        if re.search(r'(\d+\s*[x×]\s*\d+|episod|stagione|\bS\d+\s*E\d+|\bep\.?\s*\d+)', t, re.I):
+        if re.search(r'(\d+\s*[x×]\s*\d+|episod|\bS\d+\s*E\d+|\bep\.?\s*\d+)', t, re.I):
             cand.setdefault(firma(a), []).append(a)
     best = max(cand.values(), key=len) if cand else None
     return best if best and len(best) >= 3 else None
@@ -649,6 +658,22 @@ def trova_elenco_api(net):
                 best = {'entry': e, 'path': path, 'lista': dicts, 'chiavi': ris,
                         'punteggio': punteggio, 'json': j}
     return best
+
+
+TIPI_URL = {'movie': ['film', 'films', 'movie', 'movies', 'filmes', 'cinema'],
+            'tvshow': ['serie-tv', 'serie', 'series', 'tv', 'show', 'shows', 'serietv', 'telefilm', 'tv-show'],
+            'anime': ['anime']}
+
+
+def tipi_da_url(hrefs):
+    """Se i link delle card contengono sia /film/ sia /serie-tv/ ecc., ritorna i tipi trovati."""
+    trovati = {}
+    for h in hrefs:
+        for seg in urlparse(h).path.lower().split('/'):
+            for tipo, nomi in TIPI_URL.items():
+                if seg in nomi:
+                    trovati.setdefault(tipo, set()).add(seg)
+    return {k: sorted(v) for k, v in trovati.items()} if len(trovati) >= 2 else {}
 
 
 def titoli_api(api):
@@ -813,7 +838,15 @@ def peliculas(item):
     action = '__AZIONE__'
     patron = __PATRON__
 ''' + ("    patronNext = " + raw(ctx['next']) + "\n" if ctx['next'] else "    # patronNext: pagina successiva non trovata\n")
-    cod = cod.replace('__AZIONE__', 'episodios' if ctx['episodi'] and ctx['tipo'] == 'tvshow' else 'findvideos')
+    tipi = ctx.get('tipi') or {}
+    if tipi:
+        cod = cod.replace('__AZIONE__', 'findvideos')
+        righe = "    typeContentDict = %s\n" % json.dumps({k: v for k, v in tipi.items() if k in ('movie', 'tvshow', 'anime')})
+        if tipi.get('tvshow'):
+            righe += "    typeActionDict = %s\n" % json.dumps({'episodios': tipi['tvshow']})
+        cod = cod.replace("    #debug = True  # apre regex101", righe + "    #debug = True  # apre regex101", 1)
+    else:
+        cod = cod.replace('__AZIONE__', 'episodios' if ctx['episodi'] and ctx['tipo'] == 'tvshow' else 'findvideos')
     cod = cod.replace('__PATRON__', raw(ctx['patron']))
     cod += '''    #debug = True  # apre regex101 con pagina e regex
     return locals()
@@ -1083,8 +1116,10 @@ def findvideos(item):
 """
 
 
-def genera_json(id_, nome, tipo, ricerca_globale=True):
+def genera_json(id_, nome, tipo, ricerca_globale=True, tipi=None):
     cat = {'movie': ['movie'], 'tvshow': ['tvshow'], 'anime': ['anime']}.get(tipo, ['movie'])
+    if tipi:
+        cat = [k for k in ('movie', 'tvshow', 'anime') if k in tipi]
     d = {
         'id': id_,
         'name': nome,
@@ -1143,6 +1178,9 @@ def analizza(url, args):
         soup = soup_di(elenco['html'])
         ctx['menu'] = trova_menu(soup, base)
         rp('Voci di menu trovate:', len(ctx['menu']))
+        if not ctx['menu']:
+            rp('Nessuna voce di menu: aggiungo la pagina di partenza come voce unica.')
+            ctx['menu'] = [('Titoli', url)]
 
         # Se la home non ha l'elenco, prova la prima voce di menu
         card = trova_card(soup)
@@ -1192,6 +1230,14 @@ def analizza(url, args):
 
         if modo == 'html':
             ctx['patron'] = patron
+            if card and collaudo_dom[0] < 0.7 * len(card):
+                rp('ATTENZIONE: la regex trova %d titoli su %d card: controllare il patron.' % (collaudo_dom[0], len(card)))
+            tipi = tipi_da_url([_href(c) for c in card]) if card else {}
+            if tipi and '(?P<url>[^"]+)' in patron:
+                alt = '|'.join(re.escape(x) for v in tipi.values() for x in v)
+                ctx['patron'] = patron.replace('(?P<url>[^"]+)', '(?P<url>[^"]*?/(?P<type>' + alt + ')/[^"]*)', 1)
+                ctx['tipi'] = tipi
+                rp('Il sito mescola tipi diversi, riconosciuti dall\'url:', json.dumps(tipi))
             ctx['next'], prossima = trova_next(soup)
             rp('Pagina successiva:', prossima or 'non trovata')
             if collaudo[1]:
@@ -1320,8 +1366,13 @@ def main():
                     help='DNS over HTTPS per le richieste (predefinito cloudflare, come S4Me)')
     ap.add_argument('--flaresolverr', default=os.environ.get('FLARESOLVERR_URL', ''),
                     help='indirizzo di FlareSolverr (per esempio http://localhost:8191) per superare Cloudflare')
+    ap.add_argument('--controlla-cf', action='store_true',
+                    help='stampa true se il sito mostra la challenge di Cloudflare, false altrimenti, ed esce')
     ap.add_argument('--chromium', help='percorso di un chromium gia installato')
     args = ap.parse_args()
+    if args.controlla_cf:
+        print('true' if ha_challenge(args.url if '://' in args.url else 'https://' + args.url) else 'false')
+        return
     faulthandler.dump_traceback_later(300, repeat=True)  # se si blocca, il log mostra dove
     srv = attiva_dns(args.dns)
     if srv:
@@ -1348,7 +1399,7 @@ def main():
     if mancano:
         rapporto.append('INCOMPLETO, da completare a mano: ' + '; '.join(mancano))
     open(os.path.join(args.out, id_ + '.py'), 'w', encoding='utf-8').write(py)
-    open(os.path.join(args.out, id_ + '.json'), 'w', encoding='utf-8').write(genera_json(id_, nome, ctx['tipo']))
+    open(os.path.join(args.out, id_ + '.json'), 'w', encoding='utf-8').write(genera_json(id_, nome, ctx['tipo'], tipi=ctx.get('tipi')))
     open(os.path.join(args.out, 'riga_channels_json.txt'), 'w', encoding='utf-8').write(
         '        "%s": "%s",\n' % (id_, base))
     rapporto += ['', 'File scritti in %s: %s.py, %s.json, riga_channels_json.txt' % (args.out, id_, id_),

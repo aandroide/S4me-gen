@@ -12,7 +12,7 @@ Genera il canale S4Me (file .py e .json) analizzando un sito.
 Il nome della cartella e dato dal dominio senza www e senza estensione.
 
 ## Cloudflare
-Nella action c'e l'opzione "cloudflare" (attiva di default): avvia FlareSolverr in Docker con LANG=en-US
+La action controlla prima se il sito mostra la challenge di Cloudflare. Solo in quel caso avvia FlareSolverr in Docker con LANG=en-US
 (serve perche la challenge in italiano non viene riconosciuta), supera la challenge e passa cookie e user agent
 al browser del tool. In locale: `python3 s4me_gen.py SITO --flaresolverr http://localhost:8191`.
 
