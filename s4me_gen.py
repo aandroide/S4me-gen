@@ -1141,6 +1141,23 @@ def chiama(item):
     return httptools.downloadpage(url, **opt).json
 
 
+def url_in_chiaro(d):
+    # primo url di manifest (m3u8 o mpd) presente in qualsiasi punto della risposta
+    if isinstance(d, str):
+        return d if re.match(r'https?://', d) and re.search(r'\\.(m3u8|mpd)(\\?|$)', d) else ''
+    if isinstance(d, dict):
+        valori = d.values()
+    elif isinstance(d, list):
+        valori = d
+    else:
+        return ''
+    for v in valori:
+        r = url_in_chiaro(v)
+        if r:
+            return r
+    return ''
+
+
 def simile(a, b):
     na = re.sub(r'[^a-z0-9]', '', (a or '').lower())
     nb = re.sub(r'[^a-z0-9]', '', (b or '').lower())
@@ -1407,7 +1424,7 @@ def genera_findvideos_api(ctx, nome='canale'):
             lic = man['licenza'].replace(idv, '{ID}') if idv and idv in man['licenza'] else man['licenza']
             lic_espr = "%s.replace('{ID}', idv)" % py_str(lic)
         else:
-            lic_espr = "''  # TODO: licenza non rilevata"
+            lic_espr = "''  # nessuna licenza DRM rilevata: stream in chiaro"
         url_espr = espr_url(url_t.split('?')[0], base) + (
             (" + '?' + " + py_str(urlsplit(url_t).query)) if urlsplit(url_t).query else '')
         return """
@@ -1421,14 +1438,22 @@ def findvideos(item):
         opt['post'] = corpo
     r = httptools.downloadpage(url, **opt).json
     manifest = prendi(r, __PERCORSO__)
-    if not manifest:
-        logger.error('Manifest non trovato', r)
-        platformtools.dialog_ok('__NOME__', 'Stream non disponibile')
+    licenza = __LICENZA__ if manifest else ''
+    if not manifest or (__DRM__ and not licenza):
+        # alcuni contenuti non hanno DRM: lo stream e un manifest in chiaro in un altro campo della risposta
+        chiaro = url_in_chiaro(r)
+        if chiaro:
+            logger.info('Stream senza DRM: {}'.format(chiaro))
+            it = item.clone(server='directo', url=chiaro, manifest='mpd' if '.mpd' in chiaro else 'hls',
+                            drm='', license='', referer=host + '/', no_return=True)
+            return support.server(item, itemlist=[it], Download=False, Videolibrary=False)
+        logger.error('Stream non trovato', r)
+        platformtools.dialog_ok('__NOME__', 'Stream non disponibile' if not manifest else 'Licenza non trovata')
         return []
-    licenza = __LICENZA__
     if not licenza:
-        platformtools.dialog_ok('__NOME__', 'Licenza non trovata')
-        return []
+        it = item.clone(server='directo', url=manifest, manifest='__TIPO__', drm='', license='',
+                        referer=host + '/', no_return=True)
+        return support.server(item, itemlist=[it], Download=False, Videolibrary=False)
     it = item.clone(server='directo', url=manifest, manifest='__TIPO__',
                     drm='com.widevine.alpha',
                     license=licenza + '|' + urlencode({'Content-Type': 'application/octet-stream',
@@ -1439,7 +1464,8 @@ def findvideos(item):
 """.replace('__URL__', url_espr).replace('__CORPO__', py_str(corpo_t)) \
             .replace('__B64__', ("\n    corpo = corpo.replace('{B64}', base64.b64encode(%s.replace('{ID}', idv).encode('utf-8')).decode('utf-8'))" % py_str(b64['formato'])) if b64 else '') \
             .replace('__PERCORSO__', py_str(src['path'])).replace('__TIPO__', tipo) \
-            .replace('__LICENZA__', lic_espr).replace('__NOME__', nome)
+            .replace('__LICENZA__', lic_espr).replace('__NOME__', nome) \
+            .replace('__DRM__', 'True' if (man.get('licenza') or man.get('licenza_percorso')) else 'False')
     return """
 def findvideos(item):
     support.info(item)

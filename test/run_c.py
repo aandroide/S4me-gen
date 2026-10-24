@@ -18,7 +18,7 @@ tm = types.ModuleType('core.tmdb'); tm.set_infoLabels_itemlist = lambda *a, **k:
 it = types.ModuleType('core.item'); it.Item = Item; it.InfoLabels = dict
 core = types.ModuleType('core'); core.support = sup; core.httptools = ht; core.tmdb = tm
 pc = types.ModuleType('platformcode'); pc.config = types.SimpleNamespace(get_localized_string=lambda n: 'Pagina successiva', get_setting=lambda *a: False)
-pc.logger = types.SimpleNamespace(error=print, debug=lambda *a: None); pc.platformtools = types.SimpleNamespace(dialog_ok=print)
+pc.logger = types.SimpleNamespace(error=print, debug=lambda *a: None, info=lambda *a: None); pc.platformtools = types.SimpleNamespace(dialog_ok=print)
 for n, m in [('core', core), ('core.support', sup), ('core.httptools', ht), ('core.tmdb', tm), ('core.item', it), ('platformcode', pc)]: sys.modules[n] = m
 sp = importlib.util.spec_from_file_location('canale', sys.argv[1]); c = importlib.util.module_from_spec(sp); sp.loader.exec_module(c)
 m = c.mainlist(Item())
@@ -32,3 +32,6 @@ print('play ep', [(v.url, v.license.split('|')[0]) for v in c.findvideos(eps[0])
 film = [i for i in c.peliculas(Item(channel='x', args='0', contentType='movie')) if i.action == 'findvideos'][0]
 print('play film', [(v.url, v.manifest) for v in c.findvideos(film)])
 print('search', len(c.search(Item(channel='x'), 'matrix')))
+
+clear = [i for i in c.peliculas(Item(channel='x', args='0', contentType='movie')) if i.idv == 'tm1'][0]
+print('play senza DRM', [(v.url, v.manifest, v.drm) for v in c.findvideos(clear)])

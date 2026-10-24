@@ -65,6 +65,8 @@ class H(BaseHTTPRequestHandler):
         if op == 'GetPlay':
             oid = base64.b64decode(v['input']['offerId']).decode().split('|')[1].split(':')[0]
             b = 'http://127.0.0.1:%d' % PORT
+            if oid in ('tm1', 'tm11'):
+                return self._s(json.dumps({'data': {'getPlayInformation': {'streams': [], 'offer': {'streamUrlExternalPlayer': b + '/clear/' + oid + '/index.m3u8'}}}}), 'application/json')
             return self._s(json.dumps({'data': {'getPlayInformation': {'streams': [{'manifestUrlDash': b + '/media/' + oid + '/m.mpd', 'drmConfigs': [{'laURL': b + '/drm/license?playbackId=' + oid}]}]}}}), 'application/json')
         return self._s('{}', 'application/json')
     def do_GET(self):
