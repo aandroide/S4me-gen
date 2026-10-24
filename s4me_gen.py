@@ -1,0 +1,1276 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+s4me_gen.py: analizza un sito e prepara il canale per S4Me (file .py e .json).
+
+Uso:
+    python s4me_gen.py https://www.sito.it
+    python s4me_gen.py https://www.sito.it --nome miosito --out canali
+    python s4me_gen.py https://www.sito.it --mostra      (apre il browser visibile)
+
+Requisiti:
+    pip install playwright beautifulsoup4
+    playwright install chromium
+
+Cosa fa:
+    1. apre il sito con un browser vero e registra tutte le chiamate di rete
+    2. riconosce se i contenuti stanno nell'HTML (scraping con regex, decoratore support.scrape)
+       oppure arrivano da un'API JSON o GraphQL
+    3. apre il primo titolo, prova la ricerca e prova a far partire il video
+    4. scrive <id>.py, <id>.json, la riga per channels.json e un rapporto con cio che va controllato
+"""
+
+import argparse
+import json
+import os
+import re
+import sys
+import time
+from urllib.parse import urlparse, urljoin, urlsplit, urlunsplit, parse_qsl, urlencode, quote
+
+UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
+
+TITOLO_KEYS = ['title', 'name', 'titolo', 'nome', 'label', 'original_title', 'originalTitle']
+ID_KEYS = ['slug', 'id', 'uuid', 'fullPath', 'full_path', 'permalink', 'url', 'href', 'link', 'path']
+IMG_RE = re.compile(r'(poster|image|img|thumb|cover|picture|locandina|foto|backdrop)', re.I)
+ANNO_RE = re.compile(r'(year|anno|release|date)', re.I)
+PLOT_RE = re.compile(r'(plot|desc|overview|synopsis|trama|summary|abstract)', re.I)
+PAGE_KEYS = ['page', 'p', 'pg', 'paged', 'pagina', 'pageNumber']
+OFFSET_KEYS = ['offset', 'start', 'skip', 'from']
+SKIP_NAV = re.compile(r'(login|accedi|registr|contatt|privacy|dmca|cookie|termini|faq|chi siamo|about|'
+                      r'richiest|segnala|telegram|facebook|twitter|instagram|whatsapp|youtube|home)', re.I)
+NO_RISORSE = re.compile(r'\.(png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|css|m4s|ts|mp4|js|map)(\?|$)', re.I)
+PLAY_SELETTORI = ['button[aria-label*="lay" i]', '.vjs-big-play-button', '.jw-icon-display',
+                  '[class*="play-button" i]', '[class*="btn-play" i]', '[class*="play" i] button',
+                  'a[href*="watch" i]', 'a[href*="guarda" i]', 'video', '[class*="play" i]']
+
+
+def log(*a):
+    print('[s4me_gen]', *a, flush=True)
+
+
+# ---------------------------------------------------------------------------
+# 1. Cattura con il browser
+# ---------------------------------------------------------------------------
+
+def normalizza(html):
+    """Stessa pulizia che support.scrape fa alla pagina prima di applicare le regex."""
+    html = re.sub(r"='([^']+)'", r'="\1"', html)
+    return re.sub(r"\s+|&nbsp;", " ", html)
+
+
+# ---------------------------------------------------------------------------
+# DNS over HTTPS (Cloudflare), come fa il resolver di S4Me
+# ---------------------------------------------------------------------------
+DOH = {'cloudflare': '1.0.0.1', 'google': '8.8.8.8'}
+_doh_cache = {}
+
+
+def doh_risolvi(host, server):
+    """Risolve host con DoH (JSON). Ritorna un IPv4 o None."""
+    import requests
+    if host in _doh_cache:
+        return _doh_cache[host]
+    if re.match(r'^[\d.]+$', host) or host == 'localhost':
+        return host
+    try:
+        r = requests.get('https://%s/dns-query' % server, params={'name': host, 'type': 'A'},
+                         headers={'accept': 'application/dns-json'}, timeout=8)
+        for a in r.json().get('Answer', []):
+            if a.get('type') == 1:
+                _doh_cache[host] = a['data']
+                return a['data']
+    except Exception:
+        pass
+    return None
+
+
+def attiva_dns(nome):
+    """Fa passare per DoH le richieste Python (requests). Ritorna il server usato o None."""
+    server = DOH.get((nome or '').lower())
+    if not server:
+        return None
+    import urllib3.util.connection as uc
+    orig = uc.create_connection
+
+    def conn(address, *a, **k):
+        host, port = address
+        ip = doh_risolvi(host, server)
+        return orig((ip or host, port), *a, **k)
+    uc.create_connection = conn
+    return server
+
+
+# ---------------------------------------------------------------------------
+# Cloudflare: FlareSolverr (come nelle Action gia usate per i mirror)
+# ---------------------------------------------------------------------------
+CF = {'cookies': [], 'ua': None}
+
+
+def flaresolverr(endpoint, url):
+    """Supera la challenge con FlareSolverr e salva cookie e user agent per il browser."""
+    import requests
+    try:
+        r = requests.post(endpoint.rstrip('/') + '/v1',
+                          json={'cmd': 'request.get', 'url': url, 'maxTimeout': 90000},
+                          timeout=120).json()
+    except Exception as e:
+        log('FlareSolverr non raggiungibile:', e)
+        return False
+    if r.get('status') != 'ok':
+        log('FlareSolverr:', r.get('message'))
+        return False
+    sol = r['solution']
+    CF['ua'] = sol.get('userAgent')
+    for c in sol.get('cookies', []):
+        k = {'name': c['name'], 'value': c['value'], 'domain': c.get('domain', ''),
+             'path': c.get('path', '/'), 'httpOnly': bool(c.get('httpOnly')), 'secure': bool(c.get('secure'))}
+        if c.get('expires') and c['expires'] > 0:
+            k['expires'] = c['expires']
+        CF['cookies'].append(k)
+    log('FlareSolverr: challenge superata, cookie ricevuti:', len(CF['cookies']))
+    return True
+
+
+class Sessione:
+    def __init__(self, headless=True, chromium=None, dns=None):
+        from playwright.sync_api import sync_playwright
+        self._pw = sync_playwright().start()
+        kw = {'headless': headless}
+        if chromium:
+            kw['executable_path'] = chromium
+        if dns:
+            # Chromium: DoH integrato, con l'indirizzo IP del provider come modello
+            kw['args'] = ['--enable-features=DnsOverHttps',
+                          '--force-fieldtrial-params=DnsOverHttps.Fallback:Fallback/true/Templates/https%3A%2F%2F' + dns + '%2Fdns-query',
+                          '--force-fieldtrials=DnsOverHttps/Fallback']
+        self.browser = self._pw.chromium.launch(**kw)
+        self.ctx = self.browser.new_context(user_agent=CF['ua'] or UA, locale='it-IT',
+                                            viewport={'width': 1366, 'height': 900})
+        if CF['cookies']:
+            self.ctx.add_cookies(CF['cookies'])
+        self.page = self.ctx.new_page()
+        self.net = []
+        self.page.on('response', self._on_response)
+
+    def _on_response(self, r):
+        try:
+            req = r.request
+            url = r.url
+            if NO_RISORSE.search(url.split('#')[0]) and not re.search(r'\.(m3u8|mpd)', url):
+                return
+            ct = (r.headers.get('content-type') or '').lower()
+            entry = {'url': url, 'method': req.method, 'status': r.status, 'tipo': req.resource_type,
+                     'ct': ct, 'post': None, 'body': None}
+            try:
+                entry['post'] = req.post_data
+            except Exception:
+                entry['post'] = '(binario)'
+            if re.search(r'json|text|mpegurl|dash|xml|javascript', ct) and req.resource_type in (
+                    'xhr', 'fetch', 'document', 'other'):
+                entry['_resp'] = r  # il corpo si legge dopo, fuori dal gestore dell'evento
+            self.net.append(entry)
+        except Exception:
+            pass
+
+    def vai(self, url, attesa=4):
+        self.net = []
+        self.page.goto(url, wait_until='domcontentloaded', timeout=60000)
+        self._assesta(attesa)
+        return self.stato()
+
+    def _assesta(self, attesa):
+        try:
+            self.page.wait_for_load_state('networkidle', timeout=15000)
+        except Exception:
+            pass
+        for _ in range(3):
+            try:
+                self.page.mouse.wheel(0, 2500)
+            except Exception:
+                pass
+            self.page.wait_for_timeout(int(attesa * 1000 / 6.0))  # con sleep() gli eventi di rete non arrivano
+
+    def stato(self):
+        net = list(self.net)
+        for e in net:
+            r = e.pop('_resp', None)
+            if r is not None and e.get('body') is None:
+                try:
+                    e['body'] = r.text()[:400000]
+                except Exception:
+                    pass
+        return {'url': self.page.url, 'html': self.page.content(), 'net': net}
+
+    def cerca(self, selettore_input, testo='matrix', attesa=4):
+        self.net = []
+        try:
+            box = self.page.locator(selettore_input).first
+            box.fill(testo, timeout=5000)
+            box.press('Enter', timeout=5000)
+        except Exception as e:
+            return {'errore': str(e), 'url': self.page.url, 'html': '', 'net': []}
+        self._assesta(attesa)
+        return self.stato()
+
+    def prova_play(self, attesa=10):
+        self.net = []
+        cliccato = ''
+        for sel in PLAY_SELETTORI:
+            try:
+                loc = self.page.locator(sel)
+                if loc.count():
+                    loc.first.click(timeout=3000, force=True)
+                    cliccato = sel
+                    break
+            except Exception:
+                continue
+        self.page.wait_for_timeout(int(attesa * 1000))
+        st = self.stato()
+        st['cliccato'] = cliccato
+        return st
+
+    def chiudi(self):
+        try:
+            self.browser.close()
+            self._pw.stop()
+        except Exception:
+            pass
+
+
+# ---------------------------------------------------------------------------
+# 2. Analisi HTML
+# ---------------------------------------------------------------------------
+
+def soup_di(html):
+    from bs4 import BeautifulSoup
+    try:
+        return BeautifulSoup(html, 'lxml')
+    except Exception:
+        return BeautifulSoup(html, 'html.parser')
+
+
+def firma(el):
+    return (el.name, tuple(el.get('class', [])))
+
+
+def _href(el):
+    a = el if el.name == 'a' else el.find('a', href=True)
+    if not a:
+        return ''
+    h = a.get('href', '')
+    if not h or h.startswith('#') or h.lower().startswith('javascript'):
+        return ''
+    return h
+
+
+def _thumb_attr(img):
+    for at in ('data-src', 'data-original', 'data-lazy-src', 'data-lazy', 'src'):
+        v = img.get(at, '')
+        if v and not v.startswith('data:'):
+            return at, v
+    return '', ''
+
+
+def trova_card(soup):
+    """Cerca il gruppo di elementi ripetuti (locandina + link) che e la lista dei titoli."""
+    gruppi = {}
+    for el in soup.find_all(True):
+        if el.name in ('html', 'body', 'head', 'script', 'style', 'ul', 'ol', 'section', 'main', 'form'):
+            continue
+        if any(p.name in ('nav', 'header', 'footer') for p in el.parents):
+            continue
+        img = el.find('img')
+        if not img or not _href(el):
+            continue
+        if len(str(el)) > 5000:
+            continue
+        gruppi.setdefault(firma(el), []).append(el)
+    migliore = None
+    punti = 0
+    for f, els in gruppi.items():
+        hrefs = {_href(e) for e in els}
+        if len(els) < 4 or len(hrefs) < 4:
+            continue
+        p = len(hrefs)
+        if p > punti:
+            punti = p
+            migliore = els
+    return migliore
+
+
+def campi_card(el):
+    """Individua dove stanno url, locandina, titolo, anno e trama dentro una card."""
+    c = {}
+    a = el if el.name == 'a' else el.find('a', href=True)
+    c['url'] = ('attr', 'a', 'href')
+    img = el.find('img')
+    at, _ = _thumb_attr(img)
+    if at:
+        c['thumb'] = ('attr', 'img', at)
+    # titolo: intestazione, poi title del link, poi alt, poi testo del link
+    titolo = None
+    h = el.find(re.compile(r'^h[1-6]$'))
+    if h and h.get_text(strip=True):
+        titolo = ('testo', h)
+    if not titolo:
+        for cand in el.find_all(True, class_=re.compile(r'(title|titolo|name|nome)', re.I)):
+            if cand.get_text(strip=True) and not cand.find('img'):
+                titolo = ('testo', cand)
+                break
+    if not titolo and a.get('title'):
+        titolo = ('attr', 'a', 'title')
+    if not titolo and img.get('alt'):
+        titolo = ('attr', 'img', 'alt')
+    if not titolo and a.get_text(strip=True):
+        titolo = ('testo', a)
+    if titolo:
+        c['title'] = titolo
+    # anno
+    for cand in el.find_all(True):
+        t = cand.get_text(strip=True)
+        if cand is not titolo and re.fullmatch(r'\(?(19|20)\d{2}\)?', t or '') and not cand.find(True):
+            c['year'] = ('testo', cand)
+            break
+    # trama
+    for p in el.find_all('p'):
+        if len(p.get_text(strip=True)) > 70:
+            c['plot'] = ('testo', p)
+            break
+    return c
+
+
+def _apertura(tag):
+    """Il tag di apertura cosi come appare nell'html."""
+    s = str(tag)
+    return s[:s.index('>') + 1]
+
+
+def _tagre(tag, attrs_extra=''):
+    """Pezzo di regex che riconosce un tag per nome e classe."""
+    cl = tag.get('class')
+    parte = '<' + tag.name
+    if cl:
+        parte += r'[^>]*class="' + re.escape(' '.join(cl)) + '"'
+    return parte + attrs_extra
+
+
+def costruisci_patron(el):
+    """Costruisce la regex 'patron' da una card di esempio."""
+    campi = campi_card(el)
+    s = str(el)
+    pezzi = []  # (posizione, regex)
+
+    def pos_di(stringa, da=0):
+        i = s.find(stringa, da)
+        return i if i >= 0 else None
+
+    # url
+    a = el if el.name == 'a' else el.find('a', href=True)
+    if el.name == 'a':
+        inizio = _tagre(el) + r'[^>]*?href="(?P<url>[^"]+)"'
+        pezzi.append((0, inizio))
+    else:
+        pezzi.append((0, _tagre(el)))
+        p = pos_di(_apertura(a))
+        pezzi.append((p if p is not None else 1, r'<a [^>]*?href="(?P<url>[^"]+)"'))
+    # thumb
+    if 'thumb' in campi:
+        img = el.find('img')
+        p = pos_di(_apertura(img))
+        pezzi.append((p if p is not None else 2,
+                      r'<img [^>]*?' + campi['thumb'][2] + r'="(?P<thumb>[^"]+)"'))
+    # titolo
+    if 'title' in campi:
+        t = campi['title']
+        if t[0] == 'attr':
+            tag = el.find(t[1]) if t[1] != 'a' else a
+            p = pos_di(_apertura(tag))
+            pezzi.append((p if p is not None else 3,
+                          '<' + t[1] + r' [^>]*?' + t[2] + r'="(?P<title>[^"]+)"'))
+        else:
+            tag = t[1]
+            p = pos_di(_apertura(tag))
+            if tag is a or tag is el:
+                pezzi.append((p if p is not None else 3,
+                              r'>\s*(?P<title>[^<]+?)\s*<'))
+            else:
+                pezzi.append((p if p is not None else 3,
+                              _tagre(tag) + r'[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)\s*<'))
+    if 'year' in campi:
+        tag = campi['year'][1]
+        p = pos_di(_apertura(tag))
+        pezzi.append((p if p is not None else 4,
+                      _tagre(tag) + r'[^>]*>\s*\(?(?P<year>[0-9]{4})\)?'))
+    if 'plot' in campi:
+        tag = campi['plot'][1]
+        p = pos_di(_apertura(tag))
+        pezzi.append((p if p is not None else 5,
+                      _tagre(tag) + r'[^>]*>\s*(?P<plot>[^<]+)'))
+    pezzi.sort(key=lambda x: x[0])
+    if el.name == 'a':
+        # il titolo e la locandina devono stare dentro lo stesso link
+        return '.*?'.join(p[1] for p in pezzi).replace(
+            r'(?P<url>[^"]+)"' + '.*?', r'(?P<url>[^"]+)"' + r'(?:(?!</a>).)*?', 1)
+    return '.*?'.join(p[1] for p in pezzi)
+
+
+def collauda(patron, html_norm):
+    """Applica la regex come fa support.scrape e restituisce (n, esempi)."""
+    try:
+        ms = [m.groupdict() for m in re.finditer(patron, html_norm, re.DOTALL)]
+    except re.error as e:
+        return 0, [], str(e)
+    buoni = [m for m in ms if m.get('url') and m.get('title')]
+    return len(buoni), buoni[:3], ''
+
+
+def trova_next(soup):
+    for a in soup.find_all('a', href=True):
+        rel = a.get('rel') or []
+        testo = a.get_text(' ', strip=True)
+        cl = ' '.join(a.get('class', []))
+        if 'next' in rel:
+            return r'<a [^>]*?rel="next"[^>]*?href="([^"]+)"|<a [^>]*?href="([^"]+)"[^>]*?rel="next"', a['href']
+    for a in soup.find_all('a', href=True):
+        testo = a.get_text(' ', strip=True)
+        cl = ' '.join(a.get('class', []))
+        aria = a.get('aria-label', '') + ' ' + a.get('title', '')
+        if re.search(r'(next|success|avanti|prossim)', cl + ' ' + aria, re.I) or \
+                re.fullmatch(r'(»|›|>|>>|Avanti|Successiv[ao]|Next|Pagina successiva)', testo or '', re.I):
+            if a['href'] in ('#', '') or a['href'].startswith('javascript'):
+                continue
+            if a.get('class'):
+                return (r'<a [^>]*?class="' + re.escape(' '.join(a['class'])) +
+                        r'"[^>]*?href="([^"]+)"'), a['href']
+            return (r'<a [^>]*?href="([^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*' +
+                    re.escape(testo)), a['href']
+    return '', ''
+
+
+def trova_menu(soup, base):
+    voci = []
+    visti = set()
+    cont = soup.find_all(['nav', 'header'])
+    for blocco in cont:
+        for a in blocco.find_all('a', href=True):
+            t = a.get_text(' ', strip=True)
+            h = a['href']
+            if not t or len(t) > 30 or h.startswith('#') or h.startswith('javascript'):
+                continue
+            if SKIP_NAV.search(t) or SKIP_NAV.search(h):
+                continue
+            full = urljoin(base, h)
+            if urlparse(full).netloc != urlparse(base).netloc:
+                continue
+            if full in visti or full.rstrip('/') == base.rstrip('/'):
+                continue
+            visti.add(full)
+            voci.append((t, full))
+    return voci[:14]
+
+
+def tipo_da_testo(t):
+    t = t.lower()
+    if re.search(r'anime', t):
+        return 'anime'
+    if re.search(r'(serie|tv|telefilm|fiction|episod)', t):
+        return 'tvshow'
+    return 'movie'
+
+
+def trova_ricerca(soup, base):
+    for f in soup.find_all('form'):
+        inp = f.find('input', attrs={'type': re.compile('^(search|text)$', re.I)}) or \
+            f.find('input', attrs={'name': re.compile('(s|q|query|search|story|keyword)', re.I)})
+        if not inp or not inp.get('name'):
+            continue
+        sel = 'input[name="%s"]' % inp['name']
+        return {'selettore': sel, 'nome': inp['name'],
+                'azione': urljoin(base, f.get('action') or base),
+                'metodo': (f.get('method') or 'get').lower()}
+    inp = soup.find('input', attrs={'type': 'search'}) or soup.find(
+        'input', attrs={'placeholder': re.compile('(cerca|search)', re.I)})
+    if inp:
+        sel = ('input[name="%s"]' % inp['name']) if inp.get('name') else 'input[type=search]'
+        return {'selettore': sel, 'nome': inp.get('name', ''), 'azione': '', 'metodo': ''}
+    return None
+
+
+def trova_episodi(soup):
+    """Sulla pagina di dettaglio cerca un gruppo di link che sembrano episodi."""
+    cand = {}
+    for a in soup.find_all('a', href=True):
+        t = a.get_text(' ', strip=True)
+        if re.search(r'(\d+\s*[x×]\s*\d+|episod|stagione|\bS\d+\s*E\d+|\bep\.?\s*\d+)', t, re.I):
+            cand.setdefault(firma(a), []).append(a)
+    best = max(cand.values(), key=len) if cand else None
+    return best if best and len(best) >= 3 else None
+
+
+# ---------------------------------------------------------------------------
+# 3. Analisi API
+# ---------------------------------------------------------------------------
+
+def appiattisci(d, prefisso='', prof=0, out=None):
+    out = {} if out is None else out
+    if prof > 3 or not isinstance(d, dict):
+        return out
+    for k, v in d.items():
+        p = prefisso + k
+        if isinstance(v, dict):
+            appiattisci(v, p + '.', prof + 1, out)
+        elif isinstance(v, (str, int, float)) and not isinstance(v, bool):
+            out[p] = v
+    return out
+
+
+def liste_json(obj, path='', prof=0, out=None):
+    out = [] if out is None else out
+    if prof > 6:
+        return out
+    if isinstance(obj, list):
+        dicts = [x for x in obj if isinstance(x, dict)]
+        if len(dicts) >= 4:
+            out.append((path, obj))
+        for i, x in enumerate(obj[:1]):
+            liste_json(x, path, prof + 1, out)
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            liste_json(v, (path + '.' if path else '') + k, prof + 1, out)
+    return out
+
+
+def scegli_chiavi(item):
+    """Per un elemento dell'elenco decide quale campo e titolo, id, locandina, anno, trama."""
+    piatto = appiattisci(item)
+    chiavi = list(piatto.keys())
+
+    def ultima(k):
+        return k.split('.')[-1]
+
+    ris = {}
+    for tk in TITOLO_KEYS:
+        for k in sorted(chiavi, key=lambda x: x.count('.')):
+            if ultima(k).lower() == tk.lower() and isinstance(piatto[k], str) and len(piatto[k]) > 1:
+                ris['title'] = k
+                break
+        if 'title' in ris:
+            break
+    for ik in ID_KEYS:
+        for k in sorted(chiavi, key=lambda x: x.count('.')):
+            if ultima(k) == ik:
+                ris.setdefault('ids', []).append(k)
+    for k in sorted(chiavi, key=lambda x: x.count('.')):
+        v = piatto[k]
+        if isinstance(v, str) and 'thumb' not in ris and IMG_RE.search(ultima(k)):
+            ris['thumb'] = k
+        if 'year' not in ris and ANNO_RE.search(ultima(k)) and re.search(r'(19|20)\d{2}', str(v)):
+            ris['year'] = k
+        if 'plot' not in ris and PLOT_RE.search(ultima(k)) and isinstance(v, str) and len(v) > 30:
+            ris['plot'] = k
+    return ris, piatto
+
+
+def trova_elenco_api(net):
+    """Tra le risposte JSON sceglie la lista di titoli piu grande."""
+    best = None
+    for e in net:
+        if not e.get('body') or 'json' not in e.get('ct', ''):
+            continue
+        try:
+            j = json.loads(e['body'])
+        except Exception:
+            continue
+        for path, lst in liste_json(j):
+            dicts = [x for x in lst if isinstance(x, dict)]
+            ris, _ = scegli_chiavi(dicts[0])
+            if 'title' not in ris or not ris.get('ids'):
+                continue
+            titolati = sum(1 for x in dicts if scegli_chiavi(x)[0].get('title'))
+            if titolati < 0.6 * len(dicts):
+                continue
+            punteggio = len(dicts) + (3 if 'thumb' in ris else 0)
+            if not best or punteggio > best['punteggio']:
+                best = {'entry': e, 'path': path, 'lista': dicts, 'chiavi': ris,
+                        'punteggio': punteggio, 'json': j}
+    return best
+
+
+def paginazione(entry):
+    """Trova il parametro di pagina nell'url o nel corpo della richiesta."""
+    sp = urlsplit(entry['url'])
+    query = dict(parse_qsl(sp.query, keep_blank_values=True))
+    for k in PAGE_KEYS:
+        if k in query:
+            return {'dove': 'query', 'chiave': k, 'tipo': 'pagina', 'valore': query[k]}
+    for k in OFFSET_KEYS:
+        if k in query:
+            return {'dove': 'query', 'chiave': k, 'tipo': 'offset', 'valore': query[k]}
+    if entry.get('post'):
+        try:
+            body = json.loads(entry['post'])
+        except Exception:
+            return None
+        variabili = body.get('variables', body) if isinstance(body, dict) else {}
+        for k in PAGE_KEYS:
+            if k in variabili:
+                return {'dove': 'corpo', 'chiave': k, 'tipo': 'pagina', 'valore': variabili[k]}
+        for k in OFFSET_KEYS:
+            if k in variabili:
+                return {'dove': 'corpo', 'chiave': k, 'tipo': 'offset', 'valore': variabili[k]}
+        for k in ('after', 'cursor', 'endCursor'):
+            if k in variabili:
+                return {'dove': 'corpo', 'chiave': k, 'tipo': 'cursore', 'valore': variabili[k]}
+    return None
+
+
+def trova_manifest(net):
+    """Cerca manifest m3u8/mpd e richieste di licenza DRM nella rete."""
+    man = []
+    lic = []
+    for e in net:
+        u = e['url']
+        if re.search(r'\.(m3u8|mpd)(\?|$)', u) or 'mpegurl' in e.get('ct', '') or 'dash+xml' in e.get('ct', ''):
+            man.append(e)
+        if re.search(r'(licen[sc]e|widevine|drm|playready)', u, re.I) and e['method'] in ('POST', 'GET') \
+                and not re.search(r'\.(m3u8|mpd)', u):
+            lic.append(e)
+    return man, lic
+
+
+def percorso_valore(obj, valore, path=''):
+    """Cerca in un JSON la stringa 'valore' e restituisce il percorso (a.b.0.c)."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            r = percorso_valore(v, valore, (path + '.' if path else '') + k)
+            if r is not None:
+                return r
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            r = percorso_valore(v, valore, (path + '.' if path else '') + str(i))
+            if r is not None:
+                return r
+    elif isinstance(obj, str) and valore in obj:
+        return path
+    return None
+
+
+def sorgente_manifest(net, manifest_url):
+    """Quale risposta JSON contiene l'url del manifest? Restituisce la richiesta che lo produce."""
+    for e in net:
+        if not e.get('body') or 'json' not in e.get('ct', ''):
+            continue
+        if manifest_url.split('?')[0] not in e['body'] and manifest_url not in e['body']:
+            continue
+        try:
+            j = json.loads(e['body'])
+        except Exception:
+            continue
+        p = percorso_valore(j, manifest_url.split('?')[0])
+        if p:
+            return {'entry': e, 'path': p, 'json': j}
+    return None
+
+
+# ---------------------------------------------------------------------------
+# 4. Generazione dei file
+# ---------------------------------------------------------------------------
+
+def id_da_url(url):
+    host = urlparse(url).netloc.lower()
+    host = re.sub(r'^(www|m)\.', '', host)
+    parti = host.split('.')
+    base = parti[0] if len(parti) > 1 else host
+    return re.sub(r'[^a-z0-9]', '', base) or 'canale'
+
+
+def py_str(s):
+    return repr(s)
+
+
+def raw(s):
+    """Stringa raw tra apici tripli, per le regex."""
+    if "'''" in s:
+        return repr(s)
+    return "r'''" + s + "'''"
+
+
+HEADER = '''# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# Canale per __NOME__
+# Generato da s4me_gen.py: controllare le regex e provare ogni voce del menu
+# ------------------------------------------------------------
+
+import json
+from urllib.parse import urlencode
+
+from core import support, httptools
+from core.item import Item
+from platformcode import config, logger
+
+host = support.config.get_channel_url().rstrip('/')
+headers = [['Referer', host + '/']]
+
+'''
+
+
+def genera_menu(voci, tipo_default):
+    film, serie, anime, top = [], [], [], []
+    for nome, full in voci:
+        t = tipo_da_testo(nome)
+        path = urlparse(full).path + (('?' + urlparse(full).query) if urlparse(full).query else '')
+        riga = "('%s', ['%s', 'peliculas', '', '%s'])" % (nome.replace("'", ''), path, t)
+        top.append(riga)
+    righe = ['    top = [' + ',\n           '.join(top) + ']'] if top else []
+    return '\n'.join(righe)
+
+
+def genera_html(nome, ctx):
+    cod = HEADER.replace('__NOME__', nome)
+    menu = genera_menu(ctx['menu'], ctx['tipo'])
+    cod += '''
+@support.menu
+def mainlist(item):
+''' + (menu + '\n' if menu else '') + '''    search = ''
+    return locals()
+
+
+@support.scrape
+def peliculas(item):
+    support.info(item)
+    action = '__AZIONE__'
+    patron = __PATRON__
+''' + ("    patronNext = " + raw(ctx['next']) + "\n" if ctx['next'] else "    # patronNext: pagina successiva non trovata\n")
+    cod = cod.replace('__AZIONE__', 'episodios' if ctx['episodi'] and ctx['tipo'] == 'tvshow' else 'findvideos')
+    cod = cod.replace('__PATRON__', raw(ctx['patron']))
+    cod += '''    #debug = True  # apre regex101 con pagina e regex
+    return locals()
+
+'''
+    if ctx['episodi']:
+        cod += '''
+@support.scrape
+def episodios(item):
+    support.info(item)
+    action = 'findvideos'
+    patron = __PATRONEP__
+    #debug = True
+    return locals()
+
+'''.replace('__PATRONEP__', raw(ctx['patron_ep']))
+    # ricerca
+    r = ctx['ricerca']
+    if r and r.get('url_modello'):
+        cod += '''
+def search(item, text):
+    support.info(text)
+    item.url = host + '__URLR__' % text.replace(' ', '+')
+    try:
+        return peliculas(item)
+    except:
+        import sys
+        for line in sys.exc_info():
+            logger.error('%s' % line)
+        return []
+
+'''.replace('__URLR__', r['url_modello'].replace('%', '%%').replace('%%s', '%s'))
+    else:
+        cod += '''
+def search(item, text):
+    # TODO: ricerca non rilevata automaticamente, impostare l'url della ricerca del sito
+    support.info(text)
+    item.url = host + '/?s=' + text.replace(' ', '+')
+    try:
+        return peliculas(item)
+    except:
+        import sys
+        for line in sys.exc_info():
+            logger.error('%s' % line)
+        return []
+
+'''
+    cod += '''
+def findvideos(item):
+    support.info(item)
+    return support.server(item, headers=headers)
+'''
+    return cod
+
+
+def espr_url(url, base):
+    """Espressione Python per un url: relativo all'host del canale se il sito e lo stesso."""
+    sp = urlsplit(url)
+    if sp.netloc == urlparse(base).netloc:
+        rel = urlunsplit(('', '', sp.path, '', ''))
+        return 'host + ' + py_str(rel)
+    return py_str(urlunsplit((sp.scheme, sp.netloc, sp.path, '', '')))
+
+
+TEMPLATE_API = """
+def prendi(d, path, default=''):
+    for p in path.split('.'):
+        if isinstance(d, dict):
+            d = d.get(p)
+        elif isinstance(d, list) and p.isdigit() and int(p) < len(d):
+            d = d[int(p)]
+        else:
+            return default
+        if d is None:
+            return default
+    return d
+
+
+def chiama(pagina):
+    params = dict(PARAMS)
+    body = json.loads(json.dumps(BODY)) if BODY is not None else None
+    if PAGINAZIONE:
+        n = pagina if PAGINAZIONE['tipo'] == 'pagina' else (pagina - 1) * int(PAGINAZIONE.get('passo', 20))
+        if PAGINAZIONE['dove'] == 'query':
+            params[PAGINAZIONE['chiave']] = n
+        elif body is not None:
+            (body.get('variables') if 'variables' in body else body)[PAGINAZIONE['chiave']] = n
+    url = API + ('?' + urlencode(params) if params else '')
+    opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
+    if body is not None:
+        opt['post'] = json.dumps(body)
+    return httptools.downloadpage(url, **opt).json
+
+
+@support.menu
+def mainlist(item):
+    top = [('Titoli', ['', 'peliculas', '', '__TIPO__'])]
+    search = ''
+    return locals()
+
+
+def records(risposta):
+    # trasforma la risposta JSON in record testuali che @support.scrape legge con un patron
+    out = []
+    for el in prendi(risposta, LISTA, []):
+        titolo = prendi(el, CAMPI.get('title', 'title'))
+        if not titolo:
+            continue
+        idv = ''
+        for k in IDS:
+            idv = prendi(el, k)
+            if idv:
+                break
+        anno = prendi(el, CAMPI['year']) if 'year' in CAMPI else ''
+        m = re.search(r'(19|20)\\d{2}', str(anno))
+        url = host + '/'
+        if DETTAGLIO:
+            url = host + DETTAGLIO.format(idv) if DETTAGLIO.startswith('/') else DETTAGLIO.format(idv)
+        thumb = prendi(el, CAMPI['thumb']) if 'thumb' in CAMPI else ''
+        if thumb and thumb.startswith('/'):
+            thumb = host + thumb
+        plot = prendi(el, CAMPI['plot']) if 'plot' in CAMPI else ''
+        campi = [url + '#id=' + str(idv), titolo, m.group(0) if m else '', thumb, plot]
+        campi = [re.sub(r'[<>\\r\\n]+', ' ', str(c)) for c in campi]
+        out.append('<item><url>%s</url><title>%s</title><year>%s</year><thumb>%s</thumb><plot>%s</plot></item>' % tuple(campi))
+    return ''.join(out) + '<fine></fine>'
+
+
+@support.scrape
+def peliculas(item):
+    # il decoratore fa il resto: TMDB, titoli formattati, videoteca, pagina successiva
+    pagina = int(support.match(item.url, string=True, patron=r'#pagina=(\\d+)').match or 1)
+    cerca = support.match(item.url, string=True, patron=r'#cerca=(.+)').match
+    if cerca:
+        risposta = httptools.downloadpage(RICERCA % cerca, headers={'Referer': host + '/'}).json
+    else:
+        risposta = chiama(pagina)
+    data = records(risposta)
+    patron = r'<item><url>(?P<url>[^<]*)</url><title>(?P<title>[^<]*)</title><year>(?P<year>[^<]*)</year><thumb>(?P<thumb>[^<]*)</thumb><plot>(?P<plot>[^<]*)</plot></item>'
+    action = 'findvideos'
+    if PAGINAZIONE and not cerca and '<item>' in data:
+        nextPageUrl = host + '/#pagina=%d' % (pagina + 1)
+    return locals()
+
+"""
+
+
+def genera_api(nome, ctx):
+    api = ctx['api']
+    e = api['entry']
+    base = ctx['base']
+    sp = urlsplit(e['url'])
+    query = dict(parse_qsl(sp.query, keep_blank_values=True))
+    pag = ctx['pag']
+    chiavi = api['chiavi']
+    post = None
+    if e.get('post'):
+        try:
+            post = json.loads(e['post'])
+        except Exception:
+            post = None
+    dett = ctx.get('dettaglio', '')
+
+    cod = HEADER.replace('__NOME__', nome).replace('import json\n', 'import json\nimport re\n', 1)
+    cod += "API = %s\n" % espr_url(e['url'], base)
+    cod += "PARAMS = %s\n" % json.dumps(query, ensure_ascii=False)
+    cod += "BODY = %s\n" % (json.dumps(post, ensure_ascii=False) if post is not None else 'None')
+    cod += "LISTA = %s  # percorso dell'elenco dentro la risposta\n" % py_str(api['path'])
+    cod += "CAMPI = %s\n" % json.dumps({k: v for k, v in chiavi.items() if k != 'ids'}, ensure_ascii=False)
+    cod += "IDS = %s  # campi che identificano il titolo, in ordine di preferenza\n" % json.dumps(chiavi.get('ids', []))
+    cod += "DETTAGLIO = %s  # pagina del titolo, {} al posto dell'id\n" % py_str(dett)
+    cod += "PAGINAZIONE = %s\n" % json.dumps(pag, ensure_ascii=False)
+    corpo = TEMPLATE_API.replace('__TIPO__', ctx['tipo'])
+    corpo = corpo.replace('__CONTENUTO__', 'contentTitle' if ctx['tipo'] == 'movie' else 'contentSerieName')
+    cod += '\n' + corpo
+
+    s = ctx['search_api']
+    if s:
+        cod += "RICERCA = %s\n" % espr_url_ricerca(s, base)
+        cod += """
+
+def search(item, text):
+    support.info(text)
+    item.url = host + '/#cerca=' + text.replace(' ', '+')
+    try:
+        return peliculas(item)
+    except:
+        import sys
+        for line in sys.exc_info():
+            logger.error('%s' % line)
+        return []
+
+"""
+    else:
+        cod += """
+
+def search(item, text):
+    # TODO: ricerca non rilevata automaticamente
+    return []
+
+"""
+    cod += genera_findvideos_api(ctx)
+    return cod
+
+
+def espr_url_ricerca(url, base):
+    """Url di ricerca con %s al posto del testo, relativo all'host se possibile."""
+    sp = urlsplit(url)
+    resto = urlunsplit(('', '', sp.path, sp.query, '')).replace('%', '%%').replace('matrix', '%s')
+    if sp.netloc == urlparse(base).netloc:
+        return 'host + ' + py_str(resto)
+    return py_str(urlunsplit((sp.scheme, sp.netloc, '', '', '')) + resto)
+
+
+def genera_findvideos_api(ctx):
+    man = ctx.get('manifest')
+    base = ctx['base']
+    if man and man.get('sorgente'):
+        src = man['sorgente']
+        e = src['entry']
+        corpo = e.get('post') or ''
+        idv = ctx.get('primo_id', '')
+        # sostituisce l'id del titolo con un segnaposto, se compare nella richiesta
+        url_t = e['url'].replace(idv, '{ID}') if idv and idv in e['url'] else e['url']
+        corpo_t = corpo.replace(idv, '{ID}') if idv and idv in corpo else corpo
+        tipo = 'mpd' if re.search(r'\.mpd|dash', man['url'], re.I) else 'hls'
+        if man.get('licenza_percorso'):
+            lic_espr = "prendi(r, %s)" % py_str(man['licenza_percorso'])
+        elif man.get('licenza'):
+            lic = man['licenza'].replace(idv, '{ID}') if idv and idv in man['licenza'] else man['licenza']
+            lic_espr = "%s.replace('{ID}', idv)" % py_str(lic)
+        else:
+            lic_espr = "''  # TODO: licenza non rilevata"
+        url_espr = espr_url(url_t.split('?')[0], base) + (
+            (" + '?' + " + py_str(urlsplit(url_t).query)) if urlsplit(url_t).query else '')
+        return """
+def findvideos(item):
+    support.info(item)
+    idv = item.url.split('#id=')[-1]
+    url = (__URL__).replace('{ID}', idv)
+    corpo = __CORPO__.replace('{ID}', idv)
+    opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
+    if corpo:
+        opt['post'] = corpo
+    r = httptools.downloadpage(url, **opt).json
+    manifest = prendi(r, __PERCORSO__)
+    if not manifest:
+        return []
+    licenza = __LICENZA__
+    it = item.clone(server='directo', url=manifest, manifest='__TIPO__',
+                    drm='com.widevine.alpha',
+                    license=licenza + '|' + urlencode({'Content-Type': 'application/octet-stream',
+                                                       'User-Agent': httptools.get_user_agent(),
+                                                       'Origin': host, 'Referer': host + '/'}) + '|R{SSM}|',
+                    referer=host + '/', no_return=True)
+    return support.server(item, itemlist=[it], Download=False, Videolibrary=False)
+""".replace('__URL__', url_espr).replace('__CORPO__', py_str(corpo_t)) \
+            .replace('__PERCORSO__', py_str(src['path'])).replace('__TIPO__', tipo) \
+            .replace('__LICENZA__', lic_espr)
+    return """
+def findvideos(item):
+    support.info(item)
+    # TODO: sorgente del video non rilevata automaticamente: se la pagina del titolo ha iframe
+    # o link ai server, support.server li trova da solo
+    return support.server(item, headers=headers)
+"""
+
+
+def genera_json(id_, nome, tipo, ricerca_globale=True):
+    cat = {'movie': ['movie'], 'tvshow': ['tvshow'], 'anime': ['anime']}.get(tipo, ['movie'])
+    d = {
+        'id': id_,
+        'name': nome,
+        'language': ['ita'],
+        'active': True,
+        'thumbnail': id_ + '.png',
+        'banner': id_ + '.png',
+        'categories': cat,
+        'not_active': ['include_in_newest'],
+        'settings': [
+            {'id': 'include_in_global_search', 'type': 'bool', 'label': 'Includi in Ricerca Globale',
+             'default': ricerca_globale, 'enabled': True, 'visible': True}
+        ]
+    }
+    return json.dumps(d, indent=4, ensure_ascii=False) + '\n'
+
+
+# ---------------------------------------------------------------------------
+# 5. Programma principale
+# ---------------------------------------------------------------------------
+
+def scarica_grezzo(url):
+    import requests
+    try:
+        return requests.get(url, headers={'User-Agent': CF['ua'] or UA}, cookies={c['name']: c['value'] for c in CF['cookies']}, timeout=20).text
+    except Exception as e:
+        return ''
+
+
+def analizza(url, args):
+    rapporto = []
+
+    def rp(*a):
+        riga = ' '.join(str(x) for x in a)
+        rapporto.append(riga)
+        log(riga)
+
+    base = '{0.scheme}://{0.netloc}'.format(urlparse(url))
+    id_ = args.nome or id_da_url(url)
+    nome = args.titolo or id_.capitalize()
+    ctx = {'base': base, 'menu': [], 'tipo': 'movie', 'next': '', 'patron': '', 'episodi': None, 'patron_ep': '',
+           'ricerca': None, 'api': None, 'search_api': '', 'pag': None, 'manifest': None}
+
+    s = Sessione(headless=not (args.mostra or args.pausa), chromium=args.chromium, dns=DOH.get(args.dns))
+    cattura = {}
+    try:
+        rp('Apro', url)
+        elenco = s.vai(url, attesa=args.attesa)
+        if args.pausa:
+            input('Supera a mano eventuali controlli o banner nel browser, poi premi Invio qui... ')
+            s.net = []
+            s.page.reload(wait_until='domcontentloaded')
+            s._assesta(args.attesa)
+            elenco = s.stato()
+        cattura['elenco'] = elenco
+        soup = soup_di(elenco['html'])
+        ctx['menu'] = trova_menu(soup, base)
+        rp('Voci di menu trovate:', len(ctx['menu']))
+
+        # Se la home non ha l'elenco, prova la prima voce di menu
+        card = trova_card(soup)
+        api = trova_elenco_api(elenco['net'])
+        if not card and not api and ctx['menu']:
+            rp('Nessun elenco nella home, provo la prima voce di menu:', ctx['menu'][0][1])
+            elenco = s.vai(ctx['menu'][0][1], attesa=args.attesa)
+            cattura['elenco2'] = elenco
+            soup = soup_di(elenco['html'])
+            card = trova_card(soup)
+            api = trova_elenco_api(elenco['net'])
+        pagina_elenco = elenco['url']
+
+        # Tipo di sito: HTML se il contenuto sta nell'html grezzo, altrimenti API
+        patron = ''
+        collaudo = (0, [], '')
+        grezzo = normalizza(scarica_grezzo(pagina_elenco))
+        if card:
+            patron = costruisci_patron(card[len(card) // 2])
+            collaudo_grezzo = collauda(patron, grezzo) if grezzo else (0, [], '')
+            collaudo_dom = collauda(patron, normalizza(elenco['html']))
+            rp('Card trovate nel DOM:', len(card), '| regex sul DOM:', collaudo_dom[0],
+               '| regex sull\'html grezzo:', collaudo_grezzo[0])
+            collaudo = collaudo_grezzo
+        modo = None
+        if card and collaudo[0] >= 3:
+            modo = 'html'
+        elif api:
+            modo = 'api'
+        elif card:
+            modo = 'html'
+            rp('ATTENZIONE: la regex non trova i titoli nell\'html grezzo: il sito genera la lista con JavaScript '
+               'e non e stata trovata nessuna API JSON. S4Me non vede la pagina come il browser.')
+        else:
+            rp('Non ho trovato nessun elenco di titoli ne nell\'html ne nelle chiamate di rete.')
+        ctx['modo'] = modo
+        rp('Modalita scelta:', modo)
+
+        if modo == 'html':
+            ctx['patron'] = patron
+            ctx['next'], prossima = trova_next(soup)
+            rp('Pagina successiva:', prossima or 'non trovata')
+            if collaudo[1]:
+                rp('Esempi di risultati della regex:', json.dumps(collaudo[1], ensure_ascii=False)[:600])
+            primo = urljoin(base, _href(card[0]))
+        elif modo == 'api':
+            ctx['api'] = api
+            ctx['pag'] = paginazione(api['entry'])
+            if ctx['pag'] and ctx['pag']['tipo'] == 'offset':
+                ctx['pag']['passo'] = len(api['lista'])
+            rp('API elenco:', api['entry']['method'], api['entry']['url'][:120], '| lista:', api['path'],
+               '| elementi:', len(api['lista']))
+            rp('Campi:', json.dumps(api['chiavi'], ensure_ascii=False))
+            rp('Paginazione:', json.dumps(ctx['pag']) if ctx['pag'] else 'non trovata (TODO)')
+            el0 = api['lista'][0]
+            ris, piatto = scegli_chiavi(el0)
+            primo = ''
+            if card:
+                primo = urljoin(base, _href(card[0]))
+            else:
+                for k in ris.get('ids', []):
+                    v = str(piatto.get(k, ''))
+                    if v.startswith('http') or v.startswith('/'):
+                        primo = urljoin(base, v)
+                        break
+            ctx['primo_id'] = str(piatto.get(ris['ids'][0], '')) if ris.get('ids') else ''
+        else:
+            primo = ''
+
+        if ctx['menu'] and not args.tipo:
+            ctx['tipo'] = tipo_da_testo(urlparse(pagina_elenco).path + ' ' + (ctx['menu'][0][0] if ctx['menu'] else ''))
+        if args.tipo:
+            ctx['tipo'] = args.tipo
+
+        # Ricerca
+        ric = trova_ricerca(soup, base)
+        if ric:
+            rp('Campo di ricerca:', ric['selettore'])
+            s.vai(pagina_elenco, attesa=2)
+            r = s.cerca(ric['selettore'], 'matrix', attesa=args.attesa)
+            cattura['ricerca'] = {'url': r.get('url'), 'net': r.get('net', [])}
+            if 'matrix' in r.get('url', '').lower():
+                ricerca_url = r['url'].replace('matrix', '%s')
+                ric['url_modello'] = ricerca_url[len(base):] if ricerca_url.startswith(base) else ricerca_url
+                rp('Url di ricerca:', ric['url_modello'])
+            else:
+                for e in r.get('net', []):
+                    if 'matrix' in e['url'].lower() and e['method'] == 'GET':
+                        ctx['search_api'] = e['url']
+                        rp('Ricerca via API:', e['url'][:120])
+                        break
+            ctx['ricerca'] = ric
+
+        # Pagina di dettaglio
+        if primo:
+            rp('Apro il primo titolo:', primo)
+            det = s.vai(primo, attesa=args.attesa)
+            cattura['dettaglio'] = {'url': det['url'], 'net': det['net']}
+            dsoup = soup_di(det['html'])
+            eps = trova_episodi(dsoup)
+            if eps:
+                ctx['episodi'] = eps
+                ep0 = eps[len(eps) // 2]
+                campi = {'url': ('attr', 'a', 'href')}
+                ctx['patron_ep'] = (_tagre(ep0) + r'[^>]*?href="(?P<url>[^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*'
+                                    r'(?P<title>[^<]+?)\s*<') if ep0.name == 'a' else \
+                    r'<a [^>]*?href="(?P<url>[^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)\s*<'
+                ctx['patron_ep'] = ctx['patron_ep'].replace('<a<', '<a')
+                rp('Episodi rilevati:', len(eps), '(titolo esempio:', ep0.get_text(' ', strip=True)[:40] + ')')
+                ctx['tipo'] = 'tvshow' if not args.tipo else args.tipo
+            ifr = [i.get('src') for i in dsoup.find_all('iframe') if i.get('src')]
+            rp('Iframe nella pagina:', ifr[:3] if ifr else 'nessuno')
+            # url della pagina titolo con segnaposto
+            if modo == 'api' and ctx.get('primo_id') and ctx['primo_id'] in det['url']:
+                ctx['dettaglio'] = det['url'].replace(ctx['primo_id'], '{}')
+                if ctx['dettaglio'].startswith(base):
+                    ctx['dettaglio'] = ctx['dettaglio'][len(base):]
+                    ctx['dettaglio'] = '{}' if False else ctx['dettaglio']
+
+            # Riproduzione
+            rp('Provo a far partire il video...')
+            pl = s.prova_play(attesa=args.attesa + 4)
+            cattura['play'] = {'url': pl['url'], 'cliccato': pl.get('cliccato'), 'net': pl['net']}
+            man, lic = trova_manifest(pl['net'])
+            if man:
+                m = man[0]
+                rp('Manifest:', m['url'][:140])
+                info = {'url': m['url'], 'licenza': '', 'sorgente': sorgente_manifest(pl['net'], m['url'])}
+                if lic:
+                    info['licenza'] = lic[0]['url']
+                    rp('Licenza DRM:', lic[0]['method'], lic[0]['url'][:140])
+                    if info['sorgente']:
+                        info['licenza_percorso'] = percorso_valore(info['sorgente']['json'], lic[0]['url'].split('?')[0])
+                        if info['licenza_percorso']:
+                            rp('La licenza arriva dalla stessa risposta:', info['licenza_percorso'])
+                if info['sorgente']:
+                    rp('Il manifest arriva da:', info['sorgente']['entry']['url'][:120],
+                       '| percorso:', info['sorgente']['path'])
+                ctx['manifest'] = info
+            else:
+                rp('Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).')
+    finally:
+        s.chiudi()
+
+    return id_, nome, ctx, cattura, rapporto, base
+
+
+def main():
+    ap = argparse.ArgumentParser(description='Genera un canale S4Me da un sito')
+    ap.add_argument('url')
+    ap.add_argument('--nome', help='id del canale (nome dei file)')
+    ap.add_argument('--titolo', help='nome mostrato in S4Me')
+    ap.add_argument('--tipo', choices=['movie', 'tvshow', 'anime'], help='forza il tipo di contenuti')
+    ap.add_argument('--out', default='canali_generati')
+    ap.add_argument('--attesa', type=int, default=5, help='secondi di attesa dopo ogni pagina')
+    ap.add_argument('--mostra', action='store_true', help='browser visibile')
+    ap.add_argument('--pausa', action='store_true',
+                    help='browser visibile e pausa dopo la prima pagina: utile per superare Cloudflare o i banner a mano')
+    ap.add_argument('--dns', default='cloudflare', choices=['cloudflare', 'google', 'nessuno'],
+                    help='DNS over HTTPS per le richieste (predefinito cloudflare, come S4Me)')
+    ap.add_argument('--flaresolverr', default=os.environ.get('FLARESOLVERR_URL', ''),
+                    help='indirizzo di FlareSolverr (per esempio http://localhost:8191) per superare Cloudflare')
+    ap.add_argument('--chromium', help='percorso di un chromium gia installato')
+    args = ap.parse_args()
+    srv = attiva_dns(args.dns)
+    if srv:
+        log('DNS over HTTPS attivo:', args.dns, srv)
+
+    url = args.url if '://' in args.url else 'https://' + args.url
+    if args.flaresolverr:
+        flaresolverr(args.flaresolverr, url)
+    id_, nome, ctx, cattura, rapporto, base = analizza(url, args)
+
+    os.makedirs(args.out, exist_ok=True)
+    if ctx['modo'] == 'api':
+        py = genera_api(nome, ctx)
+    else:
+        if not ctx['patron']:
+            ctx['patron'] = r'<a [^>]*?href="(?P<url>[^"]+)"[^>]*>.*?<img [^>]*?src="(?P<thumb>[^"]+)".*?(?P<title>[^<]+)<'
+            rapporto.append('TODO: regex patron non generata, scritta una regex di esempio da adattare.')
+        py = genera_html(nome, ctx)
+    open(os.path.join(args.out, id_ + '.py'), 'w', encoding='utf-8').write(py)
+    open(os.path.join(args.out, id_ + '.json'), 'w', encoding='utf-8').write(genera_json(id_, nome, ctx['tipo']))
+    open(os.path.join(args.out, 'riga_channels_json.txt'), 'w', encoding='utf-8').write(
+        '        "%s": "%s",\n' % (id_, base))
+    rapporto += ['', 'File scritti in %s: %s.py, %s.json, riga_channels_json.txt' % (args.out, id_, id_),
+                 'Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), '
+                 'caricare l\'icona %s.png nella repo media.' % id_]
+    open(os.path.join(args.out, id_ + '_rapporto.txt'), 'w', encoding='utf-8').write('\n'.join(rapporto) + '\n')
+    # la cattura serve per capire cosa e successo, senza i corpi troppo grandi
+    for st in cattura.values():
+        for e in st.get('net', []):
+            if e.get('body') and len(e['body']) > 20000:
+                e['body'] = e['body'][:20000] + '...(tagliato)'
+    open(os.path.join(args.out, id_ + '_cattura.json'), 'w', encoding='utf-8').write(
+        json.dumps({k: {kk: vv for kk, vv in v.items() if kk != 'html'} for k, v in cattura.items()},
+                   indent=1, ensure_ascii=False))
+    log('Fatto. File in', os.path.abspath(args.out))
+
+
+if __name__ == '__main__':
+    main()

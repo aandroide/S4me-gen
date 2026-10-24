@@ -1,0 +1,90 @@
+name: Genera canale S4Me
+
+on:
+  workflow_dispatch:
+    inputs:
+      sito:
+        description: "Indirizzo del sito, per esempio https://esempio.it"
+        required: true
+      tipo:
+        description: "Tipo di contenuti"
+        required: false
+        default: auto
+        type: choice
+        options: [auto, movie, tvshow, anime]
+      cloudflare:
+        description: "Usa FlareSolverr per superare Cloudflare"
+        required: false
+        default: true
+        type: boolean
+      attesa:
+        description: "Secondi di attesa dopo ogni pagina"
+        required: false
+        default: "6"
+
+permissions:
+  contents: write
+
+jobs:
+  genera:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installa dipendenze
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Avvia FlareSolverr
+        if: ${{ inputs.cloudflare }}
+        run: |
+          docker run -d --name flaresolverr -p 8191:8191 -e LANG=en-US ghcr.io/flaresolverr/flaresolverr:latest
+          for i in $(seq 1 30); do
+            curl -s http://localhost:8191 > /dev/null && break
+            sleep 2
+          done
+
+      - name: Genera il canale
+        env:
+          CLOUDFLARE: ${{ inputs.cloudflare }}
+          SITO: ${{ inputs.sito }}
+          TIPO: ${{ inputs.tipo }}
+          ATTESA: ${{ inputs.attesa }}
+        run: |
+          # nome della cartella: dominio senza http, www e estensione
+          NOME=$(python3 - <<'PY'
+          import os, re
+          from urllib.parse import urlparse
+          u = os.environ['SITO'].strip()
+          h = urlparse(u if '://' in u else 'https://' + u).netloc.lower()
+          h = re.sub(r'^www\d*\.', '', h)
+          parti = h.split('.')
+          nome = parti[-2] if len(parti) > 1 else parti[0]
+          print(re.sub(r'[^a-z0-9]', '', nome) or 'canale')
+          PY
+          )
+          echo "NOME=$NOME" >> "$GITHUB_ENV"
+          ARGS=""
+          if [ "$TIPO" != "auto" ]; then ARGS="--tipo $TIPO"; fi
+          if [ "$CLOUDFLARE" = "true" ]; then export FLARESOLVERR_URL=http://localhost:8191; fi
+          python3 s4me_gen.py "$SITO" --nome "$NOME" --out "canali/$NOME" --attesa "$ATTESA" $ARGS
+
+      - name: Salva i file nella repo
+        run: |
+          git config user.name "aandroide"
+          git config user.email "aandroide@users.noreply.github.com"
+          git add "canali/$NOME"
+          git commit -m "Canale generato: $NOME" || echo "Nessuna modifica"
+          git pull --rebase
+          git push
+
+      - name: Allega anche come artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.NOME }}
+          path: canali/${{ env.NOME }}
