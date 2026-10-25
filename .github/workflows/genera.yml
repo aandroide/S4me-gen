@@ -12,6 +12,11 @@ on:
         default: auto
         type: choice
         options: [auto, movie, tvshow, anime]
+      proxy_italiano:
+        description: "Cerca un proxy pubblico italiano (per siti che funzionano solo dall'Italia). Se hai il segreto PROXY_URL si usa quello."
+        required: false
+        default: false
+        type: boolean
       attesa:
         description: "Secondi di attesa dopo ogni pagina"
         required: false
@@ -23,7 +28,9 @@ permissions:
 jobs:
   genera:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
+    env:
+      PROXY_SEGRETO: ${{ secrets.PROXY_URL }}
     steps:
       - uses: actions/checkout@v4
 
@@ -54,13 +61,18 @@ jobs:
             sleep 2
           done
 
+      - name: Cerca un proxy italiano
+        if: inputs.proxy_italiano && env.PROXY_SEGRETO == ''
+        env:
+          SITO: ${{ inputs.sito }}
+        run: python3 scegli_proxy.py "$SITO"
+
       - name: Genera il canale
         env:
           CLOUDFLARE: ${{ steps.cf.outputs.serve }}
           SITO: ${{ inputs.sito }}
           TIPO: ${{ inputs.tipo }}
           ATTESA: ${{ inputs.attesa }}
-          PROXY_URL: ${{ secrets.PROXY_URL }}
         run: |
           # nome della cartella: dominio senza http, www e estensione
           NOME=$(python3 - <<'PY'
@@ -77,6 +89,8 @@ jobs:
           echo "NOME=$NOME" >> "$GITHUB_ENV"
           ARGS=""
           if [ "$TIPO" != "auto" ]; then ARGS="--tipo $TIPO"; fi
+          if [ -z "$PROXY_URL" ] && [ -n "$PROXY_SEGRETO" ]; then export PROXY_URL="$PROXY_SEGRETO"; fi
+          if [ -n "$PROXY_URL" ]; then echo "Uso un proxy per il browser"; fi
           if [ "$CLOUDFLARE" = "true" ]; then export FLARESOLVERR_URL=http://localhost:8191; fi
           python3 s4me_gen.py "$SITO" --nome "$NOME" --out "canali/$NOME" --attesa "$ATTESA" $ARGS
 
