@@ -11,41 +11,38 @@ Paginazione: {"dove": "corpo", "chiave": "offset", "tipo": "offset", "valore": 0
 Campo di ricerca: input[type=search]
 Url di ricerca: /it/cerca?q=%s
 Sezione: Titoli | tipo: tvshow | titoli: 40 | richiesta: https://apis.justwatch.com/graphql | cambia: niente
-Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free | operazioni GraphQL viste: ['RegisterSessionStart', 'GetSrPlacement', 'GetFinalClickoutUrl'] | titoli nel DOM: 40
-Scartata (operazione diversa dall'elenco, probabile area sponsorizzata): Gratis TV | GetSimilarTitles
-Scartata (operazione diversa dall'elenco, probabile area sponsorizzata): Gratis TV | GetSimilarTitles
-Scartata (operazione diversa dall'elenco, probabile area sponsorizzata): Gratis TV | GetSimilarTitles
-Esplorazione delle sezioni interrotta dopo 4 minuti
-Filtro gratuito: pacchetti letti dall API: 107
-Filtro gratuito ricavato dall API: JustWatch TV Free -> jwt
+Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free | operazioni GraphQL viste: nessuna | titoli nel DOM: 40
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/ted-lasso | operazioni GraphQL viste: nessuna | titoli nel DOM: 80
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/slow-horses | operazioni GraphQL viste: nessuna | titoli nel DOM: 84
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/doc-nelle-tue-mani | operazioni GraphQL viste: nessuna | titoli nel DOM: 78
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/dark-matter-2024 | operazioni GraphQL viste: nessuna | titoli nel DOM: 82
+Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free/novit%C3%A0 | operazioni GraphQL viste: nessuna | titoli nel DOM: 24
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv | operazioni GraphQL viste: nessuna | titoli nel DOM: 40
+Filtro gratuito: elenco pacchetti non letto: fetch nella pagina (https://www.justwatch.com/it): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset="utf-8"><meta n
 Sonda API: variabile dei tipi = popularTitlesFilter.objectTypes | variabile dell'ordinamento = popularTitlesSortBy
-Sonda API: tipi riconosciuti = ['MOVIE', 'SHOW'] | ordinamenti riconosciuti = ['POPULAR', 'TRENDING', 'ALPHABETICAL', 'RANDOM', 'RELEASE_YEAR', 'TMDB_POPULARITY', 'IMDB_SCORE']
-Sonda API, motivo dei rifiuti: errore API: [{"message": "LAST_ADDED is not a valid PopularTitlesSorting", "path": ["variable", "popularTitlesSortBy"], "extensions": {"code": "GRAPHQL_VALIDATION_FAILED"}}
-Sonda API, motivo dei rifiuti: errore API: [{"message": "NEWEST is not a valid PopularTitlesSorting", "path": ["variable", "popularTitlesSortBy"], "extensions": {"code": "GRAPHQL_VALIDATION_FAILED"}}]
-Sonda API, motivo dei rifiuti: errore API: [{"message": "POPULARITY is not a valid PopularTitlesSorting", "path": ["variable", "popularTitlesSortBy"], "extensions": {"code": "GRAPHQL_VALIDATION_FAILED"}}
-Sonda API, motivo dei rifiuti: errore API: [{"message": "RATING is not a valid PopularTitlesSorting", "path": ["variable", "popularTitlesSortBy"], "extensions": {"code": "GRAPHQL_VALIDATION_FAILED"}}]
-Tolte le sezioni senza filtro gratuito: ['Titoli']
-Sezioni trovate: 14
-Apro un film di esempio: https://www.justwatch.com/it/film/fight-club
+Sonda API: tipi riconosciuti = [] | ordinamenti riconosciuti = []
+Sonda API, motivo dei rifiuti: richiesta fallita: fetch nella pagina (https://www.justwatch.com/it): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset="utf-8"><meta name=viewport content="width=device-width, initial-scale='
+Sezioni trovate: 1
+Apro un film di esempio: https://www.justwatch.com/it/film/spider-man-4
 Provo a far partire il video...
-ATTENZIONE: il sito rifiuta la riproduzione per il paese di questo computer (GEO_RESTRICTED). Serve un indirizzo del paese giusto: usa il proxy (PROXY_URL / --proxy) o esegui il tool sul tuo computer.
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
-Apro un film di esempio: https://www.justwatch.com/it/film/birdman
+Apro un film di esempio: https://www.justwatch.com/it/film/naza
 Provo a far partire il video...
-ATTENZIONE: il sito rifiuta la riproduzione per il paese di questo computer (GEO_RESTRICTED). Serve un indirizzo del paese giusto: usa il proxy (PROXY_URL / --proxy) o esegui il tool sul tuo computer.
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
-Apro un film di esempio: https://www.justwatch.com/it/film/fantastic-mr-fox
+Apro un film di esempio: https://www.justwatch.com/it/film/the-long-walk
 Provo a far partire il video...
-ATTENZIONE: il sito rifiuta la riproduzione per il paese di questo computer (GEO_RESTRICTED). Serve un indirizzo del paese giusto: usa il proxy (PROXY_URL / --proxy) o esegui il tool sul tuo computer.
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
-Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/u-s-navy-seals
-Cache Apollo della serie: 59 voci, di cui 3 episodi
+Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/mobland
+Cache Apollo della serie: 112 voci, di cui 3 episodi
+Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/mobland): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charse
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
-Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/the-beast-must-die
-Cache Apollo della serie: 103 voci, di cui 3 episodi
+Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/carrie
+Cache Apollo della serie: 95 voci, di cui 3 episodi
+Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/carrie): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
-Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/the-beverly-hillbillies
-Cache Apollo della serie: 507 voci, di cui 59 episodi
+Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/the-gentlemen
+Cache Apollo della serie: 88 voci, di cui 3 episodi
+Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/the-gentlemen): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta 
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
 INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server); episodi delle serie (nessuna richiesta di episodi rilevata)
 
