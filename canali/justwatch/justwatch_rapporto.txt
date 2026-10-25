@@ -1,9 +1,9 @@
 Apro https://www.justwatch.com/it
 Voci di menu trovate: 0
 Nessuna voce di menu: aggiungo la pagina di partenza come voce unica.
-Card trovate nel DOM: 40 | regex sul DOM: 40 | regex sull'html grezzo: 40
-Titoli HTML: 40 | titoli API: 40 | in comune: 36
-L'HTML e la API mostrano gli stessi titoli, ma la API ha la paginazione (offset) e i tipi di contenuto: scelgo la API, che permette anche sezioni, serie ed episodi.
+Card trovate nel DOM: 40 | regex sul DOM: 31 | regex sull'html grezzo: 31
+Titoli HTML: 1 | titoli API: 40 | in comune: 0
+I titoli letti dall'HTML non coincidono con quelli della API: scelgo la API.
 Modalita scelta: api
 API elenco: POST https://apis.justwatch.com/graphql | lista: data.popularTitles.edges | elementi: 40
 Campi: {"title": "node.content.title", "type": "node.__typename", "ids": ["node.id", "node.watchNowOffer.id", "node.watchNowOffer.package.id", "node.content.fullPath"], "year": "node.content.originalReleaseYear", "plot": "node.content.shortDescription", "thumb": "node.content.posterUrl"}
@@ -15,9 +15,7 @@ Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free
 Scartata (operazione diversa dall'elenco, probabile area sponsorizzata): Gratis TV | GetSimilarTitles
 Scartata (operazione diversa dall'elenco, probabile area sponsorizzata): Gratis TV | GetSimilarTitles
 Scartata (operazione diversa dall'elenco, probabile area sponsorizzata): Gratis TV | GetSimilarTitles
-Scartata (operazione diversa dall'elenco, probabile area sponsorizzata): Gratis TV | GetSimilarTitles
-Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free/novit%C3%A0 | operazioni GraphQL viste: ['RegisterSessionStart', 'GetSrPlacement', 'GetFinalClickoutUrl'] | titoli nel DOM: 25
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv | operazioni GraphQL viste: ['RegisterSessionStart', 'GetSrPlacement', 'GetFinalClickoutUrl'] | titoli nel DOM: 40
+Esplorazione delle sezioni interrotta dopo 4 minuti
 Filtro gratuito: pacchetti letti dall API: 107
 Filtro gratuito ricavato dall API: JustWatch TV Free -> jwt
 Sonda API: variabile dei tipi = popularTitlesFilter.objectTypes | variabile dell'ordinamento = popularTitlesSortBy
@@ -30,18 +28,24 @@ Tolte le sezioni senza filtro gratuito: ['Titoli']
 Sezioni trovate: 14
 Apro un film di esempio: https://www.justwatch.com/it/film/fight-club
 Provo a far partire il video...
+ATTENZIONE: il sito rifiuta la riproduzione per il paese di questo computer (GEO_RESTRICTED). Serve un indirizzo del paese giusto: usa il proxy (PROXY_URL / --proxy) o esegui il tool sul tuo computer.
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
 Apro un film di esempio: https://www.justwatch.com/it/film/birdman
 Provo a far partire il video...
+ATTENZIONE: il sito rifiuta la riproduzione per il paese di questo computer (GEO_RESTRICTED). Serve un indirizzo del paese giusto: usa il proxy (PROXY_URL / --proxy) o esegui il tool sul tuo computer.
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
 Apro un film di esempio: https://www.justwatch.com/it/film/fantastic-mr-fox
 Provo a far partire il video...
+ATTENZIONE: il sito rifiuta la riproduzione per il paese di questo computer (GEO_RESTRICTED). Serve un indirizzo del paese giusto: usa il proxy (PROXY_URL / --proxy) o esegui il tool sul tuo computer.
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
 Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/u-s-navy-seals
+Cache Apollo della serie: 59 voci, di cui 3 episodi
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
 Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/the-beast-must-die
+Cache Apollo della serie: 103 voci, di cui 3 episodi
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
 Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/the-beverly-hillbillies
+Cache Apollo della serie: 507 voci, di cui 59 episodi
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
 INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server); episodi delle serie (nessuna richiesta di episodi rilevata)
 
