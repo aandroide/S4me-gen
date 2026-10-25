@@ -1802,6 +1802,133 @@ def scarica_grezzo(url):
 
 
 
+def gql_valore(v, nome=''):
+    """Scrive un valore della cache Apollo come letterale GraphQL (paese, lingua e piattaforma diventano variabili)."""
+    if isinstance(v, bool):
+        return 'true' if v else 'false'
+    if isinstance(v, (int, float)):
+        return str(v)
+    if isinstance(v, str):
+        n = nome.lower()
+        if n in ('country', 'releasedincountry') :
+            return '$country'
+        if n == 'language':
+            return '$language'
+        if n == 'platform':
+            return '$platform'
+        if re.fullmatch(r'[A-Z][A-Z0-9_]*', v) and n not in ('packages', 'providers'):
+            return v  # valore di un enum
+        return json.dumps(v)
+    if isinstance(v, list):
+        return '[' + ', '.join(gql_valore(x, nome) for x in v) + ']'
+    if isinstance(v, dict):
+        return '{' + ', '.join('%s: %s' % (k, gql_valore(x, k)) for k, x in v.items()) + '}'
+    return 'null'
+
+
+def campo_con_argomenti(chiave, extra=None):
+    """'offers({"country":"IT"})' -> 'offers(country: $country)'"""
+    m = re.match(r'^([A-Za-z_]\w*)(?:\((.*)\))?$', chiave, re.S)
+    if not m:
+        return None, {}
+    nome, a = m.group(1), m.group(2)
+    args = {}
+    if a:
+        try:
+            args = json.loads(a)
+        except Exception:
+            return None, {}
+    if extra:
+        args = extra(args)
+    if not args:
+        return nome, {}
+    return '%s(%s)' % (nome, ', '.join('%s: %s' % (k, gql_valore(v, k)) for k, v in args.items())), args
+
+
+def episodi_da_cache(s, cache, entry_api, id_serie, filtro_free, rp):
+    """Costruisce la richiesta degli episodi a partire dalla cache Apollo della pagina e la prova."""
+    show = cache.get('Show:' + id_serie) or cache.get(id_serie)
+    if not isinstance(show, dict):
+        rp('Episodi dalla cache: voce della serie non trovata (%s)' % id_serie)
+        return None
+    chiavi_show = show.get('_chiavi', [])
+    ek = next((k for k in chiavi_show if k.startswith('episodes')), None)
+    if not ek:
+        rp('Episodi dalla cache: la serie non ha un campo degli episodi. Campi:', [k[:40] for k in chiavi_show][:25])
+        return None
+    ep_id = next((n for n in cache if n.startswith('Episode:')), None)
+    ep = cache.get(ep_id) if ep_id else None
+    if not isinstance(ep, dict):
+        return None
+    sel = ['id']
+    ck = next((k for k in ep.get('_chiavi', []) if k.startswith('content(')), None)
+    campi_contenuto = [c for c in ep.get('_contenuto', []) if c in (
+        'title', 'shortDescription', 'episodeNumber', 'seasonNumber', 'runtime', 'posterUrl', 'originalReleaseDate')]
+    if not ck or not campi_contenuto:
+        rp('Episodi dalla cache: contenuto dell\'episodio non letto')
+        return None
+    sel_c, _ = campo_con_argomenti(ck)
+    sel.append('%s { %s }' % (sel_c, ' '.join(campi_contenuto)))
+    ok_off = [k for k in ep.get('_chiavi', []) if k.startswith('offers(') and re.search(r'FREE|ADS', k)]
+    if ok_off:
+        def aggiungi_pacchetto(args):
+            f = dict(args.get('filter') or {})
+            for pth, val in filtro_free.items():
+                if re.search(r'package', pth[-1], re.I):
+                    f['packages'] = val
+            args = dict(args)
+            args['filter'] = f
+            return args
+        sel_o, _ = campo_con_argomenti(ok_off[0], aggiungi_pacchetto)
+        if sel_o:
+            sel.append('%s { id }' % sel_o)
+    cep, argep = campo_con_argomenti(ek)
+    usate = set()
+    corpo_q = '%s { %s }' % (cep, ' '.join(sel))
+    for v in ('country', 'language', 'platform'):
+        if '$' + v in corpo_q:
+            usate.add(v)
+    tipi = {'country': 'Country!', 'language': 'Language!', 'platform': 'Platform! = WEB'}
+    dich = ', '.join('$%s: %s' % (v, tipi[v]) for v in ('country', 'language', 'platform') if v in usate)
+    query = 'query Episodi(%s) { node(id: "{ID}") { ... on Show { %s } } }' % (dich, corpo_q)
+    j0, v0 = variabili_di(entry_api.get('post') or '')
+    vv = {}
+    for v in usate:
+        for pth, val in percorsi_variabili(v0 or {}):
+            if pth[-1] == v:
+                vv[v] = val
+                break
+    if 'country' in usate and 'country' not in vv:
+        vv['country'] = 'IT'
+    if 'language' in usate and 'language' not in vv:
+        vv['language'] = 'it'
+    if 'platform' in usate and 'platform' not in vv:
+        vv['platform'] = 'WEB'
+    corpo = {'operationName': 'Episodi', 'variables': vv, 'query': query}
+    prova_ = dict(corpo)
+    prova_['query'] = query.replace('{ID}', id_serie)
+    try:
+        testo = posta_json(s, entry_api['url'], json.dumps(prova_), entry_api.get('hdr'))
+        risp = json.loads(testo)
+    except BaseException as ex:
+        rp('Episodi dalla cache: richiesta non riuscita:', str(ex)[:200])
+        return None
+    if risp.get('errors'):
+        rp('Episodi dalla cache: errore API:', json.dumps(risp['errors'], ensure_ascii=False)[:300], '| richiesta:', query[:300])
+        return None
+    lst = (((risp.get('data') or {}).get('node') or {}).get('episodes'))
+    if not isinstance(lst, list) or not lst:
+        rp('Episodi dalla cache: la risposta non ha episodi:', testo[:200])
+        return None
+    rp('Episodi dalla cache: %d episodi ricevuti con la richiesta ricostruita' % len(lst))
+    ids = ['id'] + (['offers.0.id'] if ok_off else [])
+    chiavi = {'title': 'content.title', 'season': 'content.seasonNumber', 'episode': 'content.episodeNumber', 'ids': ids}
+    if 'shortDescription' in campi_contenuto:
+        chiavi['plot'] = 'content.shortDescription'
+    return {'url': entry_api['url'], 'body': json.dumps(corpo, ensure_ascii=False), 'lista': 'data.node.episodes',
+            'chiavi': chiavi, 'lista_prova': lst}
+
+
 def riproduci(s, args, rp, cattura, chiave):
     """Prova a far partire il video nella pagina aperta e ritorna le informazioni sul manifest."""
     rp('Provo a far partire il video...')
@@ -2039,8 +2166,12 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
             try:
                 cache = s.page.evaluate(
                     "() => { const c = window.__APOLLO_CLIENT__; if (!c) return null; const x = c.cache.extract(); "
-                    "const o = {}; for (const k of Object.keys(x)) { if (/^(Show|Season|Episode|Offer|OfferEpisode):/.test(k) "
-                    "|| k === 'ROOT_QUERY') { const s = JSON.stringify(x[k]); o[k] = s.length > 6000 ? s.slice(0, 6000) : s; } } return o; }")
+                    "const o = {}; for (const k of Object.keys(x)) { "
+                    "if (/^(Show|Episode):/.test(k)) { const v = x[k]; const e = {_chiavi: Object.keys(v)}; "
+                    "const ck = Object.keys(v).find(n => n.startsWith('content(')); "
+                    "if (ck && v[ck] && typeof v[ck] === 'object') e._contenuto = Object.keys(v[ck]).filter(n => v[ck][n] === null || typeof v[ck][n] !== 'object').map(n => n); "
+                    "o[k] = e; } "
+                    "else if (/^(Season|Offer|OfferEpisode):/.test(k) || k === 'ROOT_QUERY') { const s = JSON.stringify(x[k]); o[k] = s.length > 3000 ? s.slice(0, 3000) : s; } } return o; }")
             except BaseException as ex:
                 cache = None
                 rp('Cache Apollo non letta:', str(ex)[:100])
@@ -2048,6 +2179,14 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
                 nep = sum(1 for k in cache if k.startswith('Episode:'))
                 rp('Cache Apollo della serie: %d voci, di cui %d episodi' % (len(cache), nep))
                 cattura['serie_cache'] = cache
+                if nep and idv and not ctx.get('episodi_api'):
+                    ec = episodi_da_cache(s, cache, api['entry'], idv, filtro_free, rp)
+                    if ec:
+                        lp = ec.pop('lista_prova')
+                        ctx['episodi_api'] = ec
+                        ctx['id_episodi'] = [str(appiattisci(lp[0]).get(k, '')) for k in ec['chiavi']['ids']
+                                             if appiattisci(lp[0]).get(k)]
+                        break
             elif cache is None:
                 rp('Nessun client Apollo nella pagina della serie.')
             rp('Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.')
