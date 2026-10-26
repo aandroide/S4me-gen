@@ -153,7 +153,7 @@
     <img src="/assets/img/mars-logo.png?v=1780688490" alt="AnimeMars" width="32" height="32" class="size-8 object-contain drop-shadow-[0_0_10px_color-mix(in_oklch,var(--color-primary)_55%,transparent)]">
             <span class="am-side-hide text-lg font-extrabold tracking-tight leading-none">Anime<span class="am-wordmark">Mars</span></span>
     </a>
-        <button type="button" class="btn btn-text btn-circle btn-sm" aria-label="Chiudi menu" data-overlay="#am-drawer" aria-expanded="false">
+        <button type="button" class="btn btn-text btn-circle btn-sm" aria-label="Chiudi menu" data-overlay="#am-drawer">
             <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"></path></svg>
         </button>
     </div>
@@ -244,7 +244,7 @@
 
 <div class="am-main flex min-h-screen flex-col">
     <header class="sticky top-0 z-20 flex h-16 items-center gap-2 border-b border-base-300 bg-base-100/85 px-3 backdrop-blur-xl sm:px-5" x-data="searchBox()">
-    <button type="button" class="am-iconbtn lg:hidden" aria-label="Apri menu" data-overlay="#am-drawer" aria-expanded="false">
+    <button type="button" class="am-iconbtn lg:hidden" aria-label="Apri menu" data-overlay="#am-drawer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
     </button>
 
@@ -329,7 +329,7 @@
     
     <main class="flex-1">
         
-<div class="am-page" x-data="watchPage({&quot;animeName&quot;:&quot;.hack\/\/G.U. Returner&quot;,&quot;animeUrl&quot;:&quot;\/stream\/hack-g-u-returner-8PrAP&quot;,&quot;animeSlug&quot;:&quot;hack-g-u-returner-8PrAP&quot;,&quot;prev&quot;:&quot;&quot;,&quot;next&quot;:&quot;&quot;,&quot;currentUrl&quot;:&quot;\/stream\/hack-g-u-returner-8PrAP\/ep-1&quot;,&quot;episodeId&quot;:45138,&quot;displayNumber&quot;:&quot;Episodio 1&quot;,&quot;totalEps&quot;:1,&quot;currentIdx&quot;:0,&quot;rangeSize&quot;:50,&quot;currentRangeIdx&quot;:0,&quot;useVidstack&quot;:false,&quot;initialVideoUrl&quot;:&quot;https:\/\/play.marscdn.org\/embed\/45138?token=29a3a3353c5a02f54a7878264a1b7c0f\u0026expires=1793096614&quot;,&quot;initialEmbed&quot;:true,&quot;servers&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;Server principale&quot;,&quot;slug&quot;:&quot;serverstock&quot;,&quot;icon&quot;:&quot;\/assets\/img\/saturn.png&quot;,&quot;link&quot;:&quot;https:\/\/play.marscdn.org\/embed\/45138?token=29a3a3353c5a02f54a7878264a1b7c0f\u0026expires=1793096614&quot;,&quot;embed&quot;:true,&quot;auto&quot;:true,&quot;download&quot;:false,&quot;downloadUrl&quot;:null}],&quot;currentServer&quot;:1})">
+<div class="am-page" x-data="watchPage({&quot;animeName&quot;:&quot;.hack\/\/G.U. Returner&quot;,&quot;animeUrl&quot;:&quot;\/stream\/hack-g-u-returner-8PrAP&quot;,&quot;animeSlug&quot;:&quot;hack-g-u-returner-8PrAP&quot;,&quot;prev&quot;:&quot;&quot;,&quot;next&quot;:&quot;&quot;,&quot;currentUrl&quot;:&quot;\/stream\/hack-g-u-returner-8PrAP\/ep-1&quot;,&quot;episodeId&quot;:45138,&quot;displayNumber&quot;:&quot;Episodio 1&quot;,&quot;totalEps&quot;:1,&quot;currentIdx&quot;:0,&quot;rangeSize&quot;:50,&quot;currentRangeIdx&quot;:0,&quot;useVidstack&quot;:false,&quot;initialVideoUrl&quot;:&quot;https:\/\/play.marscdn.org\/embed\/45138?token=724c992ce65579d86adc0baf90889066\u0026expires=1793097312&quot;,&quot;initialEmbed&quot;:true,&quot;servers&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;Server principale&quot;,&quot;slug&quot;:&quot;serverstock&quot;,&quot;icon&quot;:&quot;\/assets\/img\/saturn.png&quot;,&quot;link&quot;:&quot;https:\/\/play.marscdn.org\/embed\/45138?token=724c992ce65579d86adc0baf90889066\u0026expires=1793097312&quot;,&quot;embed&quot;:true,&quot;auto&quot;:true,&quot;download&quot;:false,&quot;downloadUrl&quot;:null}],&quot;currentServer&quot;:1})">
     <h1 class="sr-only">.hack//G.U. Returner — Episodio 1 Streaming Sub ITA e ITA</h1>
 
     <div x-show="lightsOff" class="watch-lights" @click="lightsOff = false" style="display: none;"></div>
@@ -370,7 +370,7 @@
                 </div>
                 <div class="player-shell !rounded-none" id="player-shell">
                     <div class="am-player-loader" aria-hidden="true"><img class="am-player-loader__logo" src="/assets/img/mars-logo.png?v=1780688490" alt=""></div>
-                                            <iframe id="watch-iframe" src="https://play.marscdn.org/embed/45138?token=29a3a3353c5a02f54a7878264a1b7c0f&amp;expires=1793096614" title=".hack//G.U. Returner Episodio 1" class="absolute inset-0 z-[1] h-full w-full" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen="" referrerpolicy="origin"></iframe>
+                                            <iframe id="watch-iframe" src="https://play.marscdn.org/embed/45138?token=724c992ce65579d86adc0baf90889066&amp;expires=1793097312" title=".hack//G.U. Returner Episodio 1" class="absolute inset-0 z-[1] h-full w-full" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen="" referrerpolicy="origin"></iframe>
                                     </div>
             </div>
 
