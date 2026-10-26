@@ -1470,6 +1470,19 @@ __PATRONB__    #debug = True
         if item.season:
             it.season = item.season
         return it
+
+    def itemlistHook(itemlist):
+        # S4Me scrive il titolo dell'episodio solo nelle info, non nell'etichetta: lo aggiungo accanto a 1x01
+        if config.get_setting('episode_info') and itemlist and itemlist[0].season:
+            try:
+                tmdb.set_infoLabels_itemlist(itemlist, seekTmdb=True)
+            except Exception:
+                pass
+            for it in itemlist:
+                nome = it.infoLabels.get('title') if it.infoLabels else ''
+                if nome and nome != it.fulltitle and nome not in it.title:
+                    it.title += support.typo(nome, '-- bold')
+        return itemlist
     return locals()
 
 '''.replace('__STAGIONE__', (
