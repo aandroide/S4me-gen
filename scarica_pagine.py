@@ -5,6 +5,7 @@ import json, os, re, sys, time
 from urllib.parse import urlparse
 
 OUT = os.environ.get('PAGINE_OUT', 'pagine')
+DOMINI = os.environ.get('PAGINE_DOMINI', r'marscdn|streampeaker')  # domini di cui salvare sempre i corpi (anche gli script)
 
 
 def nome_file(url):
@@ -16,18 +17,22 @@ def main(urls, attesa=6):
     from playwright.sync_api import sync_playwright
     os.makedirs(OUT, exist_ok=True)
     with sync_playwright() as pw:
-        br = pw.chromium.launch()
+        br = pw.chromium.launch(args=['--disable-blink-features=AutomationControlled'])
         ctx = br.new_context(locale='it-IT', user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36')
         for url in urls:
             pag = ctx.new_page()
             rete = []
+            rete_utili = []
             def risposta(r):
                 voce = {'url': r.url[:300], 'status': r.status, 'tipo': r.request.resource_type, 'ct': r.headers.get('content-type', '')}
-                if r.request.resource_type in ('fetch', 'xhr', 'document') and not re.search(r'google|doubleclick|a-ads|connatix|jwpcdn', r.url):
+                if r.request.resource_type in ('fetch', 'xhr', 'document', 'script') and not re.search(r'google|doubleclick|a-ads|connatix|jwpcdn|rubicon|pubmatic|sync|liadm|hadronid', r.url):
                     voce['intestazioni_richiesta'] = {k: v for k, v in r.request.headers.items() if k.lower() not in ('cookie',)}
                     voce['intestazioni_risposta'] = {k: v for k, v in r.headers.items() if k.lower() not in ('set-cookie',)}
                 # corpo delle risposte dati (playlist, api) e delle pagine dei player in iframe
-                if r.request.resource_type in ('fetch', 'xhr', 'document') and r.status == 200 and not re.search(r'google|doubleclick|a-ads|connatix|jwpcdn|cloudflare|cdn-cgi', r.url):
+                interessa = re.search(DOMINI, r.url) if DOMINI else False
+                if (interessa and r.request.resource_type in ('fetch', 'xhr', 'document', 'script')) or (
+                        r.request.resource_type in ('fetch', 'xhr', 'document') and r.status == 200 and not re.search(
+                            r'google|doubleclick|a-ads|connatix|jwpcdn|cloudflare|cdn-cgi|rubicon|pubmatic|openx|seedtag|yellowblue|minutemedia|liadm|adform|criteo|temu|gumgum|onetag|amazon-adsystem|bidr|deepintent|sync', r.url)):
                     try:
                         voce['corpo'] = r.text()[:200000]
                     except Exception:
@@ -38,6 +43,15 @@ def main(urls, attesa=6):
             try:
                 pag.goto(url, wait_until='domcontentloaded', timeout=45000)
                 time.sleep(attesa)
+                for fr in pag.frames:
+                    if re.search(DOMINI or 'zzzz', fr.url):
+                        for sel in ('.jw-icon-display', '.jw-icon-playback', 'video', '[class*=play]'):
+                            try:
+                                fr.locator(sel).first.click(timeout=3000, force=True)
+                                break
+                            except Exception:
+                                continue
+                time.sleep(attesa)
                 html = pag.content()
                 grezzo = ''
                 try:
@@ -47,7 +61,7 @@ def main(urls, attesa=6):
                 frames = [{'url': f.url, 'name': f.name} for f in pag.frames]
                 open(os.path.join(OUT, nome + '.dom.html'), 'w', encoding='utf-8').write(html[:1500000])
                 open(os.path.join(OUT, nome + '.grezzo.html'), 'w', encoding='utf-8').write(grezzo[:1500000])
-                json.dump({'url': url, 'finale': pag.url, 'frames': frames, 'rete': rete[:300]},
+                json.dump({'url': url, 'finale': pag.url, 'frames': frames, 'rete': [x for x in rete if not re.search(r'sync|pubmatic|rubicon|openx|seedtag|yellowblue|minutemedia|criteo|adform|temu|gumgum|onetag|amazon-adsystem|bidr|deepintent|liadm|connatix|pippio|loopme|smartadserver|360yield|omnitag|a-mo|plusoneads|unruly|cognitiv|everesttech|mxptint|ingage', x['url'])][:400]},
                           open(os.path.join(OUT, nome + '.rete.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
                 print('OK', url, len(html), 'frame:', len(frames))
             except Exception as e:
