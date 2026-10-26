@@ -61,7 +61,9 @@ def main(urls, attesa=6):
                 frames = [{'url': f.url, 'name': f.name} for f in pag.frames]
                 open(os.path.join(OUT, nome + '.dom.html'), 'w', encoding='utf-8').write(html[:1500000])
                 open(os.path.join(OUT, nome + '.grezzo.html'), 'w', encoding='utf-8').write(grezzo[:1500000])
-                json.dump({'url': url, 'finale': pag.url, 'frames': frames, 'rete': [x for x in rete if not re.search(r'sync|pubmatic|rubicon|openx|seedtag|yellowblue|minutemedia|criteo|adform|temu|gumgum|onetag|amazon-adsystem|bidr|deepintent|liadm|connatix|pippio|loopme|smartadserver|360yield|omnitag|a-mo|plusoneads|unruly|cognitiv|everesttech|mxptint|ingage', x['url'])][:400]},
+                utili = [x for x in rete if re.search(DOMINI or 'zzzz', x['url']) or urlparse(x['url']).netloc == urlparse(url).netloc]
+                altri = [x for x in rete if x not in utili and x['tipo'] in ('fetch', 'xhr', 'media', 'document')][:60]
+                json.dump({'url': url, 'finale': pag.url, 'frames': frames[:12], 'rete': utili + altri},
                           open(os.path.join(OUT, nome + '.rete.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
                 print('OK', url, len(html), 'frame:', len(frames))
             except Exception as e:
