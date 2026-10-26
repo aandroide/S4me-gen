@@ -902,13 +902,54 @@ def leggi(d, path):
     return d
 
 
+def posta_via_pagina(s, url, corpo):
+    """Fa partire la richiesta dal browser vero: sostituisce il corpo della prima richiesta GraphQL della pagina,
+    cosi partono le stesse intestazioni, cookie e controlli del sito (una richiesta ricostruita puo essere respinta)."""
+    risultato = {}
+    chiave = url.split('?')[0]
+
+    def gestore(route, request):
+        try:
+            pd = request.post_data or ''
+            if (not risultato.get('fatto') and request.method == 'POST' and chiave in request.url
+                    and not re.search(r'"operationName"\s*:\s*"(Track|Register|Send)', pd)):
+                risultato['fatto'] = True
+                risultato['orig'] = pd
+                route.continue_(post_data=corpo)
+            else:
+                route.continue_()
+        except BaseException:
+            try:
+                route.continue_()
+            except BaseException:
+                pass
+
+    s.page.route('**/*graphql*', gestore)
+    try:
+        s.net = []
+        s.page.reload(wait_until='domcontentloaded', timeout=30000)
+        s.page.wait_for_timeout(6000)
+        st = s.stato()
+    except BaseException:
+        return None
+    finally:
+        try:
+            s.page.unroute('**/*graphql*', gestore)
+        except BaseException:
+            pass
+    for e in st['net']:
+        if e.get('post') in (corpo, risultato.get('orig')) and (e.get('body') or '').lstrip()[:1] in ('{', '['):
+            return e['body']
+    return None
+
+
 def posta_json(s, url, corpo, hdr=None):
-    """POST JSON con le intestazioni della richiesta originale: dalla pagina, poi dal contesto del browser.
+    """POST JSON con le intestazioni della richiesta originale: dalla pagina, poi dal browser vero, poi dal contesto.
     Riprova se la risposta non e JSON (limite di richieste, risposta vuota) e dice cosa ha ricevuto."""
     h = dict(hdr or {})
     h.setdefault('content-type', 'application/json')
     errori = []
-    for tentativo in range(3):
+    for tentativo in range(2):
         stato, testo = None, None
         try:
             r = s.page.evaluate(
@@ -924,15 +965,20 @@ def posta_json(s, url, corpo, hdr=None):
                 h2['origin'] = '{0.scheme}://{0.netloc}'.format(urlparse(s.page.url))
                 r = s.ctx.request.post(url, data=corpo, headers=h2, timeout=20000)
                 stato, testo = r.status, r.text()
+                errori.append('intestazioni della risposta: %s' % json.dumps(
+                    {k: v for k, v in r.headers.items() if k.lower() in ('server', 'retry-after', 'via', 'x-cache', 'cf-ray')}))
             except BaseException as ex:
                 errori.append('richiesta del contesto: %s' % str(ex)[:60])
         if testo is not None and testo.lstrip()[:1] in ('{', '['):
             return testo
         if testo is not None:
-            errori.append('risposta non JSON (stato %s, %d byte): %r' % (stato, len(testo), testo[:100]))
-        if tentativo < 2:
-            # 429: il sito limita le richieste, si aspetta di piu prima di riprovare
-            s.page.wait_for_timeout((30000 if stato == 429 else 3000) * (tentativo + 1))
+            errori.append('risposta non JSON (stato %s, %d byte): %r' % (stato, len(testo), testo[:200]))
+        via = posta_via_pagina(s, url, corpo)
+        if via:
+            return via
+        errori.append('anche la richiesta fatta partire dalla pagina non ha dato una risposta')
+        if tentativo < 1:
+            s.page.wait_for_timeout(30000)
     raise RuntimeError(' | '.join(dict.fromkeys(errori)))
 
 
