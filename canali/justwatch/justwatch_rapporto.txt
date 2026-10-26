@@ -11,16 +11,18 @@ Paginazione: {"dove": "corpo", "chiave": "offset", "tipo": "offset", "valore": 0
 Campo di ricerca: input[type=search]
 Url di ricerca: /it/cerca?q=%s
 Sezione: Titoli | tipo: tvshow | titoli: 40 | richiesta: https://apis.justwatch.com/graphql | cambia: niente
-Filtro gratuito: elenco pacchetti non letto: fetch nella pagina (https://www.justwatch.com/it): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset="utf-8"><meta n
+Filtro gratuito: pacchetti letti dall API: 107
+Filtro gratuito ricavato dall API: JustWatch TV Free -> jwt
+Sonda API: variabile dei tipi = popularTitlesFilter.objectTypes | variabile dell'ordinamento = popularTitlesSortBy
+Sonda API: tipi riconosciuti = ['MOVIE', 'SHOW'] | ordinamenti riconosciuti = ['POPULAR', 'TRENDING', 'ALPHABETICAL']
+Sonda API, motivo dei rifiuti: richiesta fallita: fetch nella pagina (https://www.justwatch.com/it): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | intestazioni della risposta: {} | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset="utf-8"><meta name=viewport content="width=device-width, initial-scale=1"><title>
 Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free | operazioni GraphQL viste: nessuna | titoli nel DOM: 40
 Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/ted-lasso | operazioni GraphQL viste: nessuna | titoli nel DOM: 81
 Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/slow-horses | operazioni GraphQL viste: nessuna | titoli nel DOM: 84
 Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/doc-nelle-tue-mani | operazioni GraphQL viste: nessuna | titoli nel DOM: 79
 Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/dark-matter-2024 | operazioni GraphQL viste: nessuna | titoli nel DOM: 83
 Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free/novit%C3%A0 | operazioni GraphQL viste: nessuna | titoli nel DOM: 24
-Sonda API: variabile dei tipi = popularTitlesFilter.objectTypes | variabile dell'ordinamento = popularTitlesSortBy
-Sonda API: tipi riconosciuti = [] | ordinamenti riconosciuti = []
-Sonda API, motivo dei rifiuti: richiesta fallita: fetch nella pagina (https://www.justwatch.com/it): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset="utf-8"><meta name=viewport content="width=device-width, initial-scale='
+Filtro gratuito ricavato dalle sezioni: {"popularTitlesFilter.packages": ["jwt"], "popularTitlesFilter.monetizationTypes": ["FREE"]}
 Sezioni trovate: 1
 Apro un film di esempio: https://www.justwatch.com/it/film/spider-man-4
 Provo a far partire il video...
@@ -33,15 +35,15 @@ Provo a far partire il video...
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
 Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/mobland
 Cache Apollo della serie: 114 voci, di cui 3 episodi
-Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/mobland): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charse
+Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/mobland): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | intestazioni della risposta: {} | risposta non JSON (stato 429, 142 b
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
 Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/carrie
 Cache Apollo della serie: 95 voci, di cui 3 episodi
-Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/carrie): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset
+Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/carrie): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | intestazioni della risposta: {} | risposta non JSON (stato 429, 142 by
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
 Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/east-of-eden
 Cache Apollo della serie: 93 voci, di cui 3 episodi
-Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/east-of-eden): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta c
+Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/east-of-eden): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | intestazioni della risposta: {} | risposta non JSON (stato 429, 
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
 INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server); episodi delle serie (nessuna richiesta di episodi rilevata)
 
