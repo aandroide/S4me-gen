@@ -23,6 +23,9 @@ def main(urls, attesa=6):
             rete = []
             def risposta(r):
                 voce = {'url': r.url[:300], 'status': r.status, 'tipo': r.request.resource_type, 'ct': r.headers.get('content-type', '')}
+                if r.request.resource_type in ('fetch', 'xhr', 'document') and not re.search(r'google|doubleclick|a-ads|connatix|jwpcdn', r.url):
+                    voce['intestazioni_richiesta'] = {k: v for k, v in r.request.headers.items() if k.lower() not in ('cookie',)}
+                    voce['intestazioni_risposta'] = {k: v for k, v in r.headers.items() if k.lower() not in ('set-cookie',)}
                 # corpo delle risposte dati (playlist, api) e delle pagine dei player in iframe
                 if r.request.resource_type in ('fetch', 'xhr', 'document') and r.status == 200 and not re.search(r'google|doubleclick|a-ads|connatix|jwpcdn|cloudflare|cdn-cgi', r.url):
                     try:
