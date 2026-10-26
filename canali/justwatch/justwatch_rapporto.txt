@@ -1,9 +1,9 @@
 Apro https://www.justwatch.com/it
 Voci di menu trovate: 0
 Nessuna voce di menu: aggiungo la pagina di partenza come voce unica.
-Card trovate nel DOM: 40 | regex sul DOM: 31 | regex sull'html grezzo: 31
-Titoli HTML: 1 | titoli API: 40 | in comune: 0
-I titoli letti dall'HTML non coincidono con quelli della API: scelgo la API.
+Card trovate nel DOM: 40 | regex sul DOM: 40 | regex sull'html grezzo: 40
+Titoli HTML: 40 | titoli API: 40 | in comune: 37
+L'HTML e la API mostrano gli stessi titoli, ma la API ha la paginazione (offset) e i tipi di contenuto: scelgo la API, che permette anche sezioni, serie ed episodi.
 Modalita scelta: api
 API elenco: POST https://apis.justwatch.com/graphql | lista: data.popularTitles.edges | elementi: 40
 Campi: {"title": "node.content.title", "type": "node.__typename", "ids": ["node.id", "node.watchNowOffer.id", "node.watchNowOffer.package.id", "node.content.fullPath"], "year": "node.content.originalReleaseYear", "plot": "node.content.shortDescription", "thumb": "node.content.posterUrl"}
@@ -11,14 +11,13 @@ Paginazione: {"dove": "corpo", "chiave": "offset", "tipo": "offset", "valore": 0
 Campo di ricerca: input[type=search]
 Url di ricerca: /it/cerca?q=%s
 Sezione: Titoli | tipo: tvshow | titoli: 40 | richiesta: https://apis.justwatch.com/graphql | cambia: niente
-Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free | operazioni GraphQL viste: nessuna | titoli nel DOM: 40
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/ted-lasso | operazioni GraphQL viste: nessuna | titoli nel DOM: 80
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/slow-horses | operazioni GraphQL viste: nessuna | titoli nel DOM: 84
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/doc-nelle-tue-mani | operazioni GraphQL viste: nessuna | titoli nel DOM: 78
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/dark-matter-2024 | operazioni GraphQL viste: nessuna | titoli nel DOM: 82
-Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free/novit%C3%A0 | operazioni GraphQL viste: nessuna | titoli nel DOM: 24
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv | operazioni GraphQL viste: nessuna | titoli nel DOM: 40
 Filtro gratuito: elenco pacchetti non letto: fetch nella pagina (https://www.justwatch.com/it): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset="utf-8"><meta n
+Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free | operazioni GraphQL viste: nessuna | titoli nel DOM: 40
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/ted-lasso | operazioni GraphQL viste: nessuna | titoli nel DOM: 81
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/slow-horses | operazioni GraphQL viste: nessuna | titoli nel DOM: 84
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/doc-nelle-tue-mani | operazioni GraphQL viste: nessuna | titoli nel DOM: 79
+Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/dark-matter-2024 | operazioni GraphQL viste: nessuna | titoli nel DOM: 83
+Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free/novit%C3%A0 | operazioni GraphQL viste: nessuna | titoli nel DOM: 24
 Sonda API: variabile dei tipi = popularTitlesFilter.objectTypes | variabile dell'ordinamento = popularTitlesSortBy
 Sonda API: tipi riconosciuti = [] | ordinamenti riconosciuti = []
 Sonda API, motivo dei rifiuti: richiesta fallita: fetch nella pagina (https://www.justwatch.com/it): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset="utf-8"><meta name=viewport content="width=device-width, initial-scale='
@@ -33,16 +32,16 @@ Apro un film di esempio: https://www.justwatch.com/it/film/the-long-walk
 Provo a far partire il video...
 Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
 Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/mobland
-Cache Apollo della serie: 112 voci, di cui 3 episodi
+Cache Apollo della serie: 114 voci, di cui 3 episodi
 Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/mobland): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charse
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
 Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/carrie
 Cache Apollo della serie: 95 voci, di cui 3 episodi
 Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/carrie): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
-Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/the-gentlemen
-Cache Apollo della serie: 88 voci, di cui 3 episodi
-Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/the-gentlemen): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta 
+Apro una serie di esempio: https://www.justwatch.com/it/serie-tv/east-of-eden
+Cache Apollo della serie: 93 voci, di cui 3 episodi
+Episodi dalla cache: richiesta non riuscita: fetch nella pagina (https://www.justwatch.com/it/serie-tv/east-of-eden): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta c
 Episodi: nessuna risposta JSON con stagioni ed episodi trovata nella pagina di questa serie.
 INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server); episodi delle serie (nessuna richiesta di episodi rilevata)
 
