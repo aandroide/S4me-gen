@@ -1412,7 +1412,7 @@ def genera_menu(voci, tipo_default):
         if t == 'movie' and not re.search(r'(film|movie|cinema)', nome, re.I):
             t = tipo_default
         path = urlparse(full).path + (('?' + urlparse(full).query) if urlparse(full).query else '')
-        riga = "('%s', ['%s', 'peliculas', '', '%s'])" % (nome.replace("'", ''), path, t)
+        riga = "('%s', ['%s', 'peliculas', '', '%s'])" % (nome.replace("'", ''), path, 'tvshow' if t == 'anime' else t)
         top.append(riga)
     righe = ['    top = [' + ',\n           '.join(top) + ']'] if top else []
     return '\n'.join(righe)
@@ -1432,7 +1432,7 @@ def mainlist(item):
 def peliculas(item):
     support.info(item)
     action = '__AZIONE__'
-    patron = __PATRON__
+''' + ("    anime = True\n" if ctx.get('anime') else '') + '''    patron = __PATRON__
 ''' + ("    patronNext = " + raw(ctx['next']) + "\n" if ctx['next'] else "    # patronNext: pagina successiva non trovata\n")
     tipi = ctx.get('tipi') or {}
     if tipi:
@@ -1442,7 +1442,7 @@ def peliculas(item):
             righe += "    typeActionDict = %s\n" % json.dumps({'episodios': tipi['tvshow']})
         cod = cod.replace("    #debug = True  # apre regex101", righe + "    #debug = True  # apre regex101", 1)
     else:
-        cod = cod.replace('__AZIONE__', 'episodios' if ctx['episodi'] and ctx['tipo'] == 'tvshow' else 'findvideos')
+        cod = cod.replace('__AZIONE__', 'episodios' if ctx['episodi'] and ctx['tipo'] in ('tvshow', 'anime') else 'findvideos')
     cod = cod.replace('__PATRON__', raw(ctx['patron']))
     cod += '''    #debug = True  # apre regex101 con pagina e regex
 '''
@@ -1464,7 +1464,7 @@ def peliculas(item):
 def episodios(item):
     support.info(item)
     action = 'findvideos'
-__STAGIONE__    patron = __PATRONEP__
+''' + ("    anime = True\n" if ctx.get('anime') else '') + '''__STAGIONE__    patron = __PATRONEP__
 __PATRONB__    if '(?P<episode>' in patron and '(?P<season>' not in patron and not item.season:
         # nessuna stagione nel sito: una sola, cosi S4Me mostra 1x01 e cerca i titoli degli episodi su TMDB
         item.season = '1'
@@ -1495,6 +1495,10 @@ __PATRONB__    if '(?P<episode>' in patron and '(?P<season>' not in patron and n
             "    if not item.infoLabels.get('year'):\n"
             "        anno = support.match(item.url, patron=r'(?:years=|[Aa]nno|[Uu]scita|[Yy]ear|[Rr]elease)[^<]{0,60}?((?:19|20)\\d{2})').match\n"
             "        if anno:\n            item.infoLabels['year'] = anno\n"
+            "    if item.infoLabels.get('year') and not item.infoLabels.get('tmdb_id'):\n"
+            "        # titolo e anno a TMDB per riconoscere la serie, come fanno gli altri canali\n"
+            "        item.infoLabels['tvshowtitle'] = item.contentSerieName or item.fulltitle\n"
+            "        try:\n            tmdb.set_infoLabels_item(item, seekTmdb=True)\n        except Exception:\n            pass\n"
             if '(?P<episode>' in ctx['patron_ep'] + (ctx.get('patron_ep_b') or '') and '(?P<season>' not in ctx['patron_ep'] else '')).replace('__PATRONEP__', raw(ctx['patron_ep'])).replace('__PATRONB__', (
             "    if not re.search(r'/[^/]*\\d+/?$', item.url):\n        patron = " + raw(ctx['patron_ep_b']) + "\n") if ctx.get('patron_ep_b') else '')
     # ricerca
@@ -3232,6 +3236,24 @@ def analizza(url, args):
                     esplora_catena(s, det, primo, base, args, rp, cattura, ctx)
                 except BaseException as ex:
                     rp('Catena scheda-episodio-player non completata:', str(ex)[:120])
+            if modo == 'html':
+                ctx['anime'] = args.tipo == 'anime' or bool(re.search(r'anime', base, re.I))
+                if ctx['anime']:
+                    rp('Sito di anime: il canale usera anime = True (rinumerazione dal menu contestuale)')
+                # tengo solo le voci di menu che aprono davvero un elenco di titoli (stessa regex delle schede)
+                if ctx.get('patron') and len(ctx['menu']) > 1:
+                    buone = []
+                    for nome_m, url_m in ctx['menu']:
+                        try:
+                            pg = s.vai(url_m, attesa=max(2, args.attesa // 2))
+                            n_m = collauda(ctx['patron'], normalizza(pg['html']))[0]
+                        except BaseException:
+                            n_m = 0
+                        rp('Voce di menu', nome_m, url_m[:80], '| titoli trovati:', n_m)
+                        if n_m >= 3:
+                            buone.append((nome_m, url_m))
+                    if buone:
+                        ctx['menu'] = buone
             # url della pagina titolo con segnaposto
             if modo == 'api' and ctx.get('primo_id') and ctx['primo_id'] in det['url']:
                 ctx['dettaglio'] = det['url'].replace(ctx['primo_id'], '{}')
