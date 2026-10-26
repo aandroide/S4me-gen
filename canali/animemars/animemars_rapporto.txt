@@ -1,18 +1,23 @@
 Nessun proxy: il sito vede l'IP del computer che esegue il tool.
-Apro https://www.animemars.org/
+Apro https://www.animemars.org
 Voci di menu trovate: 11
-Card trovate nel DOM: 42 | regex sul DOM: 0 | regex sull'html grezzo: 0
-ATTENZIONE: la regex non trova i titoli nell'html grezzo: il sito genera la lista con JavaScript e non e stata trovata nessuna API JSON. S4Me non vede la pagina come il browser.
+Card trovate nel DOM: 42 | regex sul DOM: 42 | regex sull'html grezzo: 42
 Modalita scelta: html
-ATTENZIONE: la regex trova 0 titoli su 42 card: controllare il patron.
-Pagina successiva: /upcoming
+Pagina successiva: non trovata
+Esempi di risultati della regex: [{"url": "/watch/i-m-dating-a-dark-summoner-hwERJ/ep-4", "thumb": "https://img.marscdn.org/static/images/locandine/bc0de078bd240761.jpg", "title": "I&#039;m Dating a Dark Summoner", "lang": null}, {"url": "/watch/bleach-thousand-year-blood-war-the-calamity-MRBR9/ep-10", "thumb": "https://img.marscdn.org/static/images/locandine/a4babd0a25f90c46.jpg", "title": "Bleach: Sennen Kessen-hen - Kashin-tan", "lang": null}, {"url": "/watch/psyren-Pv1Bm/ep-4", "thumb": "https://img.marscdn.org/static/images/locandine/11faf3e4df415c2b.jpg", "title": "Psyren", "lang": null}]
 Campo di ricerca: input[name="key"]
 Url di ricerca: /filter?key=%s
 Apro il primo titolo: https://www.animemars.org/watch/i-m-dating-a-dark-summoner-hwERJ/ep-4
 Iframe nella pagina: ['//acceptable.a-ads.com/2446152/?size=Adaptive']
-Provo a far partire il video...
-Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
-INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server)
+Catena: https://www.animemars.org/watch/i-m-dating-a-dark-summoner-hwERJ/ep-4 | episodi: 0 | iframe del player: 0
+Catena: https://www.animemars.org/stream/i-m-dating-a-dark-summoner-hwERJ/ep-4 | episodi: 3 | iframe del player: 1
+Lista episodi su https://www.animemars.org/stream/i-m-dating-a-dark-summoner-hwERJ/ep-4 | 3 episodi
+Le schede portano a /watch/i-m-dating-a-dark-summoner-hwERJ/ep-4 ma la lista episodi sta su /stream/i-m-dating-a-dark-summoner-hwERJ/ep-4 | regola: /watch/ -> /stream/
+La pagina del titolo https://www.animemars.org/stream/i-m-dating-a-dark-summoner-hwERJ ha la lista episodi (4): tolgo "ep-4" dall'indirizzo delle schede
+La scheda apre /watch/i-m-dating-a-dark-summoner-hwERJ/ep-4 ma il player sta su /stream/i-m-dating-a-dark-summoner-hwERJ/ep-4 (segmento "watch" diventa "stream")
+Player: iframe https://play.marscdn.org/embed/90565?token=fa0bc0b0033091b3c8b0aa8a276381fd&expires=1793101073
+Elenco dei file video CIFRATO (base64 e XOR con un parametro dell'iframe): https://play.marscdn.org/embed/90565/playlist?token=fa0bc0b0033091b3c8b0aa8a276381fd&expires=1793101073 | suffisso rispetto all'iframe: /playlist
+Video: https://srv30.sake.streampeaker.org/DDL/ANIME/DarkSummonerToDekiteiru/DarkSummonerToDekiteiru_Ep_04_SUB_ITA.mp4?token=dSLy1WlSVF8OC_tIr5nqrA
 
 File scritti in canali/animemars: animemars.py, animemars.json, riga_channels_json.txt
 Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), caricare l'icona animemars.png nella repo media.
