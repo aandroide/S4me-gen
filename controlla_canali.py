@@ -270,6 +270,10 @@ def prova_pagina(fn, html_norm):
 # Riparazione
 # ---------------------------------------------------------------------------
 
+# gruppi che S4Me legge davvero (support.scrape, known_keys) e che non si possono perdere senza cambiare il comportamento del canale
+GRUPPI_ESSENZIALI = {'url', 'title', 'title2', 'season', 'episode', 'episode2', 'thumb', 'year', 'type', 'size', 'seed'}
+
+
 def proponi_patron(html, html_norm, vecchi):
     """Regex nuova dal riconoscimento delle card. Ritorna (patron, n, perse, nota) oppure None."""
     soup = g.soup_di(html)
@@ -788,7 +792,7 @@ def controlla(nome, hosts, ripara=True):
                 for bl in fn['patronBlock']:
                     if bl['valore'] is not None:
                         sostituzioni.append((bl['ini'], bl['fin'], "''"))
-                ris['dettagli'].append('  patronBlock rimosso: senza blocco le regex dei titoli trovano %d risultati sull\'intera pagina' % n_pag)
+                ris['dettagli'].append('  patronBlock rimosso: senza blocco le regex dei titoli trovano %d risultati sull\'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)' % n_pag)
                 continue
         if not prop:
             ris['dettagli'].append('  nessuna regex sostitutiva trovata automaticamente in %s' % rel)
@@ -797,7 +801,9 @@ def controlla(nome, hosts, ripara=True):
             prop['n'], prop['card'], (' | gruppi persi: ' + ', '.join(prop['perse'])) if prop['perse'] else ''))
         ris.setdefault('proposte', []).append({'funzione': azione, 'pagina': rel, 'patron': prop['patron'],
                                                'esempi': prop['esempi'], 'perse': prop['perse']})
-        if ripara and len(fn['patron']) == 1 and fn['patron'][0]['valore'] is not None and not prop['perse']:
+        if ripara and len(fn['patron']) == 1 and fn['patron'][0]['valore'] is not None and not (set(prop['perse']) & GRUPPI_ESSENZIALI):
+            if prop['perse']:
+                ris['dettagli'].append('  gruppi non piu presenti nelle card e non essenziali per S4Me: ' + ', '.join(prop['perse']))
             sostituzioni.append((fn['patron'][0]['ini'], fn['patron'][0]['fin'], g.raw(prop['patron'])))
             if fn['patronBlock']:
                 # il blocco non serve piu se la nuova regex lavora sull'intera pagina
@@ -818,7 +824,7 @@ def controlla(nome, hosts, ripara=True):
         elif ripara:
             ris['dettagli'].append('  non applicata al file: %s' % (
                 'la funzione ha piu varianti di regex' if len(fn['patron']) != 1 else
-                'perderebbe i gruppi ' + ', '.join(prop['perse']) if prop['perse'] else 'regex dinamica'))
+                'perderebbe i gruppi ' + ', '.join(sorted(set(prop['perse']) & GRUPPI_ESSENZIALI)) if set(prop['perse']) & GRUPPI_ESSENZIALI else 'regex dinamica'))
 
     if problemi == 0 and ok:
         ris['stato'] = 'OK'
