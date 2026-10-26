@@ -16,12 +16,7 @@ Filtro gratuito ricavato dall API: JustWatch TV Free -> jwt
 Sonda API: variabile dei tipi = popularTitlesFilter.objectTypes | variabile dell'ordinamento = popularTitlesSortBy
 Sonda API: tipi riconosciuti = ['MOVIE', 'SHOW'] | ordinamenti riconosciuti = ['POPULAR', 'TRENDING', 'ALPHABETICAL']
 Sonda API, motivo dei rifiuti: richiesta fallita: fetch nella pagina (https://www.justwatch.com/it): Page.evaluate: TypeError: Failed to fetch (apis.justwatch.co | intestazioni della risposta: {} | risposta non JSON (stato 429, 142 byte): '<!doctype html><meta charset="utf-8"><meta name=viewport content="width=device-width, initial-scale=1"><title>
-Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free | operazioni GraphQL viste: nessuna | titoli nel DOM: 40
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/ted-lasso | operazioni GraphQL viste: nessuna | titoli nel DOM: 81
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/slow-horses | operazioni GraphQL viste: nessuna | titoli nel DOM: 84
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/doc-nelle-tue-mani | operazioni GraphQL viste: nessuna | titoli nel DOM: 79
-Pagina senza elenco API: https://www.justwatch.com/it/serie-tv/dark-matter-2024 | operazioni GraphQL viste: nessuna | titoli nel DOM: 83
-Pagina senza elenco API: https://www.justwatch.com/it/provider/justwatch-tv-free/novit%C3%A0 | operazioni GraphQL viste: nessuna | titoli nel DOM: 24
+Esplorazione delle sezioni interrotta dopo 4 minuti
 Filtro gratuito ricavato dalle sezioni: {"popularTitlesFilter.packages": ["jwt"], "popularTitlesFilter.monetizationTypes": ["FREE"]}
 Sezioni trovate: 1
 Apro un film di esempio: https://www.justwatch.com/it/film/spider-man-4
