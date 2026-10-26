@@ -29,7 +29,9 @@ import time
 from urllib.parse import urlparse, urljoin
 
 import requests
+import urllib3
 import warnings
+urllib3.disable_warnings()
 warnings.filterwarnings("ignore", category=SyntaxWarning)
 
 import s4me_gen as g
@@ -137,10 +139,10 @@ def scarica(url):
     ris = ('errore', '', url, 'non raggiungibile')
     for tentativo in range(2):
         try:
-            r = requests.get(url, headers={'User-Agent': UA, 'Accept-Language': 'it-IT,it;q=0.9'}, timeout=25)
+            r = requests.get(url, headers={'User-Agent': UA, 'Accept-Language': 'it-IT,it;q=0.9'}, timeout=(8, 15))
         except requests.exceptions.SSLError:
             try:
-                r = requests.get(url, headers={'User-Agent': UA}, timeout=25, verify=False)
+                r = requests.get(url, headers={'User-Agent': UA}, timeout=(8, 15), verify=False)
             except Exception as e:
                 ris = ('errore', '', url, 'SSL: ' + str(e)[:80])
                 continue
@@ -157,7 +159,7 @@ def scarica(url):
         if r.status_code >= 400 and len(t) < 500:
             ris = ('errore', '', r.url, 'HTTP %d' % r.status_code)
             break
-        ris = ('ok', t, r.url, 'HTTP %d' % r.status_code)
+        ris = ('ok', t[:1500000], r.url, 'HTTP %d' % r.status_code)
         break
     _cache[url] = ris
     return ris
@@ -404,7 +406,7 @@ def carica_hosts():
 
 def riepilogo(risultati):
     ordine = ['CORRETTO', 'ROTTO', 'DOMINIO PARCHEGGIATO', 'IRRAGGIUNGIBILE', 'CLOUDFLARE', 'NON VERIFICATO', 'OK',
-              'NON REGEX', 'SENZA INDIRIZZO', 'NON ANALIZZABILE']
+              'NON REGEX', 'SENZA INDIRIZZO', 'NON ANALIZZABILE', 'TEMPO SCADUTO', 'ERRORE']
     r = ['# Controllo dei canali', '']
     conta = {}
     for x in risultati:
@@ -428,18 +430,63 @@ def riepilogo(risultati):
     return '\n'.join(r) + '\n'
 
 
+def lavora(nome, hosts, ripara, coda):
+    try:
+        coda.put(controlla(nome, hosts, ripara))
+    except BaseException as e:
+        coda.put({'canale': nome, 'stato': 'ERRORE', 'dettagli': ['errore interno: %s' % str(e)[:200]], 'host': host_di(nome, hosts),
+                  'correzione': False})
+
+
+def esegui(nomi, hosts, ripara, processi, tempo):
+    """Un processo per canale: se un sito o un'analisi si blocca, il canale e segnato e si va avanti."""
+    import multiprocessing as mp
+    ctx = mp.get_context('fork')
+    attesa, attivi, risultati = list(nomi), {}, {}
+    while attesa or attivi:
+        while attesa and len(attivi) < processi:
+            n = attesa.pop(0)
+            q = ctx.Queue()
+            pr = ctx.Process(target=lavora, args=(n, hosts, ripara, q), daemon=True)
+            pr.start()
+            attivi[n] = (pr, q, time.time())
+        time.sleep(0.5)
+        for n in list(attivi):
+            pr, q, t0 = attivi[n]
+            try:
+                r = q.get_nowait()
+                risultati[n] = r
+            except Exception:
+                if time.time() - t0 > tempo:
+                    risultati[n] = {'canale': n, 'stato': 'TEMPO SCADUTO', 'host': host_di(n, hosts), 'correzione': False,
+                                    'dettagli': ['il controllo di questo canale ha superato %d secondi (sito lento o pagina enorme)' % tempo]}
+                elif not pr.is_alive():
+                    try:
+                        risultati[n] = q.get(timeout=2)
+                    except Exception:
+                        risultati[n] = {'canale': n, 'stato': 'ERRORE', 'host': host_di(n, hosts), 'correzione': False,
+                                        'dettagli': ['il processo si e fermato senza risultato']}
+                else:
+                    continue
+            if pr.is_alive():
+                pr.kill()
+            del attivi[n]
+            print('%s: %s' % (n, risultati[n]['stato']), flush=True)
+    return [risultati[n] for n in nomi]
+
+
 def main():
     ap = argparse.ArgumentParser(description='Controlla i canali S4Me sui siti veri e prepara le correzioni')
     ap.add_argument('canali', nargs='*', help='nomi dei canali (vuoto: tutti)')
     ap.add_argument('--senza-riparare', action='store_true')
     ap.add_argument('--processi', type=int, default=6)
+    ap.add_argument('--tempo', type=int, default=150, help='secondi massimi per canale')
     a = ap.parse_args()
     hosts = carica_hosts()
     nomi = a.canali or sorted(f[:-3] for f in os.listdir(BASE) if f.endswith('.py') and f[:-3] not in SALTA
                               and not f.startswith('0example'))
     os.makedirs(OUT, exist_ok=True)
-    with concurrent.futures.ThreadPoolExecutor(a.processi) as ex:
-        risultati = list(ex.map(lambda n: controlla(n, hosts, not a.senza_riparare), nomi))
+    risultati = esegui(nomi, hosts, not a.senza_riparare, a.processi, a.tempo)
     testo = riepilogo(risultati)
     open(os.path.join(OUT, 'RAPPORTO.md'), 'w', encoding='utf-8').write(testo)
     json.dump(risultati, open(os.path.join(OUT, 'stato.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
