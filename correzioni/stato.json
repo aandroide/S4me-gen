@@ -276,7 +276,7 @@
   "stato": "BLOCCO ANTI BOT",
   "dettagli": [
    "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5634 byte): non e un cambio di struttura",
-   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5646 byte): non e un cambio di struttura",
+   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5642 byte): non e un cambio di struttura",
    "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5662 byte): non e un cambio di struttura",
    "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5655 byte): non e un cambio di struttura"
   ],
@@ -289,7 +289,7 @@
   "dettagli": [
    "ROTTO: peliculas /video/alfabetico_completo | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/cinetecadibologna/pagina_peliculas_video_alfabetico_completo.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 10 risultati sull'intera pagina",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 10 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "ROTTO: menu /video/epoche | patron non trova titoli",
    "  campione della pagina salvato in correzioni/cinetecadibologna/pagina_menu_video_epoche.html",
    "  regex proposta: 10 titoli su 10 card",
@@ -612,16 +612,17 @@
  },
  {
   "canale": "guardaserieicu",
-  "stato": "ROTTO",
+  "stato": "CORRETTO",
   "dettagli": [
    "indirizzo scritto nel canale: https://guardaseriex.cyou",
    "il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://guardaseriex.cyou)",
    "ROTTO: peliculas /serietv-streaming/page/1/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/guardaserieicu/pagina_peliculas_serietv_streaming_page_1.html",
    "  regex proposta: 18 titoli su 18 card | gruppi persi: audio, category, duration, plot, rating, thumbnail",
-   "  non applicata al file: perderebbe i gruppi audio, category, duration, plot, rating, thumbnail"
+   "  gruppi non piu presenti nelle card e non essenziali per S4Me: audio, category, duration, plot, rating, thumbnail",
+   "file corretto scritto in correzioni/guardaserieicu: 1 pagine su 1 ora trovano titoli"
   ],
-  "correzione": false,
+  "correzione": true,
   "host": "https://guardaseriex.cyou",
   "nuovo_host": "https://guardaseriex.best",
   "proposte": [
@@ -665,7 +666,7 @@
   "stato": "OK",
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /index | 10183 risultati"
+   "OK: peliculas /index | 3449 risultati"
   ],
   "correzione": false,
   "host": "https://hd4me.net"
@@ -856,7 +857,7 @@
   "canale": "raiplay",
   "stato": "OK",
   "dettagli": [
-   "attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.parental_control_level",
+   "OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata",
    "OK: https://www.raiplay.it/dirette | html",
    "OK: https://www.raiplay.it/guidatv.json | json, struttura invariata",
    "OK: https://www.raiplay.it/guidatv | html",
@@ -874,7 +875,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27343 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27468 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -919,10 +920,10 @@
    "il sito reindirizza a un altro indirizzo: https://tanti-film.garden (in channels.json c'e https://tanti-film.fun)",
    "ROTTO: peliculas /film | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_serie_tv.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "file corretto scritto in correzioni/tantifilm: 2 pagine su 2 ora trovano titoli"
   ],
   "correzione": true,
@@ -933,7 +934,7 @@
   "canale": "thepiratebay",
   "stato": "OK",
   "dettagli": [
-   "OK: https://apibay.org/q.php?q=matrix | html (prima rilevazione, riferimento salvato)"
+   "OK: https://apibay.org/q.php?q=matrix | html"
   ],
   "correzione": false,
   "host": "https://apibay.org"
