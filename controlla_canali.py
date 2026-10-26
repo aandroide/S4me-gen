@@ -100,6 +100,10 @@ def leggi_canale(src):
                     if primo is None:
                         continue
                     sec = valore_stringa(n.elts[1]) if len(n.elts) > 1 else None
+                    for extra in n.elts[2:]:
+                        ev = valore_stringa(extra)
+                        if ev and ev.startswith('/') and not ev.startswith('//') and '{' not in ev and '%' not in ev:
+                            menu.append((ev, 'json'))
                     if sec and re.fullmatch(r'[A-Za-z_]\w*', sec):
                         menu.append((primo, sec))
                     elif primo.startswith('/') and not primo.startswith('//'):
@@ -411,15 +415,61 @@ def chiavi_usate(src):
     return usate
 
 
+def costanti(src):
+    """Stringhe assegnate a livello di modulo (host, api_url...), anche concatenate tra loro."""
+    env = {}
+    try:
+        tree = ast.parse(src)
+    except SyntaxError:
+        return env
+    for n in tree.body:
+        if isinstance(n, ast.Assign) and len(n.targets) == 1 and isinstance(n.targets[0], ast.Name):
+            v = valore_env(n.value, env)
+            if v is not None:
+                env[n.targets[0].id] = v
+    return env
+
+
+def valore_env(nodo, env):
+    if isinstance(nodo, ast.Constant) and isinstance(nodo.value, str):
+        return nodo.value
+    if isinstance(nodo, ast.Name):
+        return env.get(nodo.id)
+    if isinstance(nodo, ast.BinOp) and isinstance(nodo.op, ast.Add):
+        a, b = valore_env(nodo.left, env), valore_env(nodo.right, env)
+        if a is not None and b is not None:
+            return a + b
+    return None
+
+
+def url_da_espressioni(src, host):
+    """Indirizzi completi costruiti con costanti del modulo (per esempio api_url + '/getLivestream?id=7')."""
+    env = costanti(src)
+    if host:
+        env.setdefault('host', host)
+    out = []
+    try:
+        tree = ast.parse(src)
+    except SyntaxError:
+        return out
+    for n in ast.walk(tree):
+        if isinstance(n, ast.BinOp):
+            v = valore_env(n, env)
+            if v and re.match(r'https?://', v):
+                out.append(v)
+    return out
+
+
 def url_statici(src, host, menu):
     """Indirizzi del canale che si possono chiamare senza parametri: menu e indirizzi scritti per intero."""
     out = []
     for rel, azione in menu:
         if rel and rel.startswith('/') and '%' not in rel and '{' not in rel:
             out.append(urljoin(host + '/', rel))
+    out += url_da_espressioni(src, host)
     for m in re.finditer(r"['\"](https?://[A-Za-z0-9._~:/?#@!$&()*+,;=%-]+)['\"]", src):
         u = m.group(1)
-        if u.endswith(('=', '/')) and '?' in u or '%s' in u or '%' in u or RUMORE_URL.search(u):
+        if u.endswith('=') or '%' in u or '{' in u or RUMORE_URL.search(u):
             continue
         out.append(u)
     visti, ris = set(), []
@@ -427,7 +477,7 @@ def url_statici(src, host, menu):
         if u not in visti and len(u) < 300:
             visti.add(u)
             ris.append(u)
-    return ris[:8]
+    return ris[:10]
 
 
 def leggi_risposta(testo):
@@ -512,8 +562,18 @@ def verifica_profilo(nome, host, ris):
     return problemi
 
 
+# indirizzi di prova noti per canali a API senza indirizzo in channels.json
+EXTRA_API = {
+    'thepiratebay': ['https://apibay.org/q.php?q=matrix'],
+    'tunein': ['https://opml.radiotime.com/Tune.ashx?render=json&id=s24939'],
+}
+
+
 def controlla_api(nome, src, host, menu, ris):
     """Canale senza regex: raggiungibilita, struttura dei dati e confronto con la rilevazione precedente."""
+    if not host and nome in EXTRA_API:
+        host = 'https://' + urlparse(EXTRA_API[nome][0]).netloc
+        ris['host'] = host
     if not host:
         ris.update(stato='SENZA INDIRIZZO', dettagli=['canale non attivo: non e in channels.json e non ha un indirizzo fisso nel file'])
         return ris
@@ -535,7 +595,7 @@ def controlla_api(nome, src, host, menu, ris):
         vecchio = None
     nuovo = {}
     controllati = 0
-    for u in url_statici(src, host, menu):
+    for u in list(url_statici(src, host, menu)) + EXTRA_API.get(nome, []):
         if p is not None and u.startswith(host):
             continue  # gia coperto dai controlli del profilo
         st, testo, fin, mot = scarica(u)
