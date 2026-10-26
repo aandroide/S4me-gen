@@ -140,11 +140,9 @@
  },
  {
   "canale": "bt4g",
-  "stato": "ROTTO",
+  "stato": "OK",
   "dettagli": [
-   "ROTTO: peliculas / | patron non trova titoli",
-   "  campione della pagina salvato in correzioni/bt4g/pagina_peliculas_home.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /"
+   "OK: peliculas /search?q=matrix&category=movie&page=rss&orderby=seeders | 15 risultati"
   ],
   "correzione": false,
   "host": "https://bt4gprx.com"
@@ -374,6 +372,11 @@
     "patron": "<div[^>]*class=\"item\"(?:(?!<div[^>]*class=\"item\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<a[^>]*class=\"name\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
     "esempi": [
      {
+      "url": "/play/im-dating-a-dark-summoner.K9Q3D/h7ypKWx436",
+      "thumb": "https://img.animeworld.ac/locandine/K9Q3D.jpg",
+      "title": "I&#x27;m Dating a Dark Summoner"
+     },
+     {
       "url": "/play/bleach-sennen-kessen-hen-kashin-tan.X3ktM/KFu4gnrn7Y",
       "thumb": "https://img.animeworld.ac/locandine/X3ktM.jpg",
       "title": "Bleach: Sennen Kessen-hen - Kashin-tan"
@@ -382,11 +385,6 @@
       "url": "/play/psyren.3pGZY/6dLMQR8KqG",
       "thumb": "https://img.animeworld.ac/locandine/3pGZY.jpg",
       "title": "Psyren"
-     },
-     {
-      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/8kx8qH5W0P",
-      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
-      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?"
      }
     ],
     "perse": [
@@ -401,6 +399,11 @@
     "patron": "<div[^>]*class=\"item\"(?:(?!<div[^>]*class=\"item\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<a[^>]*class=\"name\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
     "esempi": [
      {
+      "url": "/play/im-dating-a-dark-summoner.K9Q3D/h7ypKWx436",
+      "thumb": "https://img.animeworld.ac/locandine/K9Q3D.jpg",
+      "title": "I&#x27;m Dating a Dark Summoner"
+     },
+     {
       "url": "/play/bleach-sennen-kessen-hen-kashin-tan.X3ktM/KFu4gnrn7Y",
       "thumb": "https://img.animeworld.ac/locandine/X3ktM.jpg",
       "title": "Bleach: Sennen Kessen-hen - Kashin-tan"
@@ -409,11 +412,6 @@
       "url": "/play/psyren.3pGZY/6dLMQR8KqG",
       "thumb": "https://img.animeworld.ac/locandine/3pGZY.jpg",
       "title": "Psyren"
-     },
-     {
-      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/8kx8qH5W0P",
-      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
-      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?"
      }
     ],
     "perse": [
@@ -428,6 +426,11 @@
     "patron": "<div[^>]*class=\"item\"(?:(?!<div[^>]*class=\"item\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<a[^>]*class=\"name\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
     "esempi": [
      {
+      "url": "/play/im-dating-a-dark-summoner.K9Q3D/h7ypKWx436",
+      "thumb": "https://img.animeworld.ac/locandine/K9Q3D.jpg",
+      "title": "I&#x27;m Dating a Dark Summoner"
+     },
+     {
       "url": "/play/bleach-sennen-kessen-hen-kashin-tan.X3ktM/KFu4gnrn7Y",
       "thumb": "https://img.animeworld.ac/locandine/X3ktM.jpg",
       "title": "Bleach: Sennen Kessen-hen - Kashin-tan"
@@ -436,11 +439,6 @@
       "url": "/play/psyren.3pGZY/6dLMQR8KqG",
       "thumb": "https://img.animeworld.ac/locandine/3pGZY.jpg",
       "title": "Psyren"
-     },
-     {
-      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/8kx8qH5W0P",
-      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
-      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?"
      }
     ],
     "perse": [
@@ -455,6 +453,11 @@
     "patron": "<div[^>]*class=\"item\"(?:(?!<div[^>]*class=\"item\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<a[^>]*class=\"name\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
     "esempi": [
      {
+      "url": "/play/im-dating-a-dark-summoner.K9Q3D/h7ypKWx436",
+      "thumb": "https://img.animeworld.ac/locandine/K9Q3D.jpg",
+      "title": "I&#x27;m Dating a Dark Summoner"
+     },
+     {
       "url": "/play/bleach-sennen-kessen-hen-kashin-tan.X3ktM/KFu4gnrn7Y",
       "thumb": "https://img.animeworld.ac/locandine/X3ktM.jpg",
       "title": "Bleach: Sennen Kessen-hen - Kashin-tan"
@@ -463,11 +466,6 @@
       "url": "/play/psyren.3pGZY/6dLMQR8KqG",
       "thumb": "https://img.animeworld.ac/locandine/3pGZY.jpg",
       "title": "Psyren"
-     },
-     {
-      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/8kx8qH5W0P",
-      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
-      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?"
      }
     ],
     "perse": [
@@ -480,12 +478,12 @@
  },
  {
   "canale": "eurostreaming",
-  "stato": "ROTTO",
+  "stato": "OK",
   "dettagli": [
    "OK: peliculas /category/anime-cartoni-animati/ | 18 risultati",
-   "ROTTO: peliculas /aggiornamento-episodi-nuovi/ | patron non trova titoli",
-   "  campione della pagina salvato in correzioni/eurostreaming/pagina_peliculas_aggiornamento_episodi_nuovi.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi-nuovi/",
+   "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.fun/?p=23012, controllo quella",
+   "OK: peliculas /aggiornamento-episodi-nuovi/ | 91 risultati",
+   "attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
    "OK: peliculas /category/serie-tv-archive/ | 18 risultati"
   ],
   "correzione": false,
@@ -666,7 +664,7 @@
   "stato": "OK",
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /index | 3449 risultati"
+   "OK: peliculas /index | 10135 risultati"
   ],
   "correzione": false,
   "host": "https://hd4me.net"
@@ -767,12 +765,11 @@
  },
  {
   "canale": "la7",
-  "stato": "ROTTO",
+  "stato": "OK",
   "dettagli": [
    "indirizzo scritto nel canale: https://www.la7.it",
-   "ROTTO: replay_menu / | patron non trova titoli",
-   "  campione della pagina salvato in correzioni/la7/pagina_replay_menu_home.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /"
+   "OK: replay_menu /rivedila7/0/la7 | 7 risultati",
+   "OK: replay_menu /rivedila7/0/la7cinema | 7 risultati"
   ],
   "correzione": false,
   "host": "https://www.la7.it"
@@ -875,7 +872,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27468 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27505 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"

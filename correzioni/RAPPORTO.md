@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 4, ROTTO 7, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 19, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 4, ROTTO 4, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 22, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (4)
 
@@ -49,13 +49,7 @@ Sito: https://tanti-film.fun
 - file corretto scritto in correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
 - riga per channels.json: "tantifilm": "https://tanti-film.garden",
 
-## ROTTO (7)
-
-### bt4g
-Sito: https://bt4gprx.com
-- ROTTO: peliculas / | patron non trova titoli
--   campione della pagina salvato in correzioni/bt4g/pagina_peliculas_home.html
--   nessuna regex sostitutiva trovata automaticamente in /
+## ROTTO (4)
 
 ### cineblog001
 Sito: https://cineblog001.loan
@@ -93,14 +87,6 @@ Sito: https://www.animeworld.ac
 -   regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year
 -   non applicata al file: la funzione ha piu varianti di regex
 
-### eurostreaming
-Sito: https://eurostream.fun
-- OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
-- ROTTO: peliculas /aggiornamento-episodi-nuovi/ | patron non trova titoli
--   campione della pagina salvato in correzioni/eurostreaming/pagina_peliculas_aggiornamento_episodi_nuovi.html
--   nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi-nuovi/
-- OK: peliculas /category/serie-tv-archive/ | 18 risultati
-
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
@@ -124,13 +110,6 @@ Sito: https://il-geniodellostreaming.garden
 -   non applicata al file: la funzione ha piu varianti di regex
 - riga per channels.json: "ilgeniodellostreaming_cam": "https://il-geniodellostreaming.ink",
 
-### la7
-Sito: https://www.la7.it
-- indirizzo scritto nel canale: https://www.la7.it
-- ROTTO: replay_menu / | patron non trova titoli
--   campione della pagina salvato in correzioni/la7/pagina_replay_menu_home.html
--   nessuna regex sostitutiva trovata automaticamente in /
-
 ## DOMINIO PARCHEGGIATO (3)
 
 ### animealtadefinizione
@@ -143,7 +122,7 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27468 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27505 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
@@ -226,7 +205,7 @@ Sito: https://www.mtv.com
 ### streamingita
 Sito: https://streamingita.homes
 
-## OK (19)
+## OK (22)
 
 ### 1337x
 Sito: https://1337x.to
@@ -268,6 +247,10 @@ Sito: https://www.animeworld.ac
 - OK: peliculas /updated | 78 risultati
 - OK: peliculas /newest | 40 risultati
 
+### bt4g
+Sito: https://bt4gprx.com
+- OK: peliculas /search?q=matrix&category=movie&page=rss&orderby=seeders | 15 risultati
+
 ### casacinema
 Sito: https://casa-cinema.boats
 - OK: peliculas /film | 16 risultati
@@ -278,15 +261,29 @@ Sito: https://casa-cinema.boats
 Sito: https://www.discoveryplus.com
 - OK: https://eu1-prod-direct.discoveryplus.com | html
 
+### eurostreaming
+Sito: https://eurostream.fun
+- OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
+- peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.fun/?p=23012, controllo quella
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 91 risultati
+- attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
+- OK: peliculas /category/serie-tv-archive/ | 18 risultati
+
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 3449 risultati
+- OK: peliculas /index | 10135 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
 - OK: https://www.justwatch.com/ | html
 - non controllabile senza parametri: https://apis.justwatch.com/graphql (HTTP 400)
+
+### la7
+Sito: https://www.la7.it
+- indirizzo scritto nel canale: https://www.la7.it
+- OK: replay_menu /rivedila7/0/la7 | 7 risultati
+- OK: replay_menu /rivedila7/0/la7cinema | 7 risultati
 
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it
