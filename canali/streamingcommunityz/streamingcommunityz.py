@@ -18,15 +18,15 @@ host = support.config.get_channel_url().rstrip('/')
 headers = [['Referer', host + '/']]
 
 SEZIONI = [{'nome': 'Titoli',
-  'tipo': 'tvshow',
+  'tipo': 'movie',
   'url': '/api/sliders/fetch',
   'params': {'lang': 'it'},
-  'body': {'sliders': [{'name': 'genre', 'genre': 'Korean drama'},
-                       {'name': 'genre', 'genre': 'Romance'},
-                       {'name': 'genre', 'genre': 'War & Politics'},
+  'body': {'sliders': [{'name': 'genre', 'genre': 'Avventura'},
+                       {'name': 'genre', 'genre': 'Thriller'},
+                       {'name': 'genre', 'genre': 'televisione film'},
                        {'name': 'genre', 'genre': 'Famiglia'},
-                       {'name': 'genre', 'genre': 'Musica'},
-                       {'name': 'genre', 'genre': 'Fantasy'}]},
+                       {'name': 'genre', 'genre': 'Storia'},
+                       {'name': 'genre', 'genre': 'Korean drama'}]},
   'lista': 'titles',
   'pag': None,
   'inertia': False},
@@ -35,8 +35,8 @@ SEZIONI = [{'nome': 'Titoli',
   'url': '/api/sliders/fetch',
   'params': {'lang': 'it'},
   'body': {'sliders': [{'name': 'new-episodes', 'title_type': 'tv', 'genre': None},
-                       {'name': 'genre', 'title_type': 'tv', 'genre': 'Animazione'},
-                       {'name': 'genre', 'title_type': 'tv', 'genre': 'Mistero'}]},
+                       {'name': 'genre', 'title_type': 'tv', 'genre': 'Action & Adventure'},
+                       {'name': 'genre', 'title_type': 'tv', 'genre': 'Animazione'}]},
   'lista': 'titles',
   'pag': None,
   'inertia': False},
@@ -45,34 +45,48 @@ SEZIONI = [{'nome': 'Titoli',
   'url': '/api/sliders/fetch',
   'params': {'lang': 'it'},
   'body': {'sliders': [{'name': 'genre', 'title_type': 'movie', 'genre': 'Fantascienza'},
-                       {'name': 'genre', 'title_type': 'movie', 'genre': 'Commedia'},
-                       {'name': 'genre', 'title_type': 'movie', 'genre': 'Thriller'}]},
+                       {'name': 'genre', 'title_type': 'movie', 'genre': 'Korean drama'},
+                       {'name': 'genre', 'title_type': 'movie', 'genre': 'Musica'}]},
   'lista': 'titles',
   'pag': None,
   'inertia': False},
  {'nome': 'Archivio',
-  'tipo': 'movie',
+  'tipo': 'tvshow',
   'url': '/it/archive',
   'params': {'lang': 'it', 'page': '2'},
   'body': None,
   'lista': 'data',
   'pag': {'dove': 'query', 'chiave': 'page', 'tipo': 'pagina', 'valore': '2'},
-  'inertia': False}]
+  'inertia': False},
+ {'nome': 'Premium',
+  'tipo': 'tvshow',
+  'url': '/it/premium',
+  'params': {},
+  'body': None,
+  'lista': 'props.copy.perks',
+  'pag': None,
+  'inertia': True}]
 CAMPI = {"title": "name", "type": "type", "year": "last_air_date"}
 IDS = ["slug", "id"]  # campi che identificano il titolo, in ordine di preferenza
 DETTAGLIO = '/it/titles/{id}-{slug}'  # pagina del titolo, {} al posto dell'id (oppure {nome} dei campi di DETT_CAMPI)
 DETT_CAMPI = {"id": "id", "slug": "slug"}  # nome usato nel modello -> campo del titolo
-EPISODI = None  # episodi non rilevati sul sito
+EPISODI = {'inertia': True,
+ 'stagioni': 'props.title.seasons',
+ 'num_stagione': 'number',
+ 'stagione_url': '/season-{S}',
+ 'lista': 'props.loadedSeason.episodes',
+ 'chiavi': {'title': 'name', 'ids': ['id'], 'plot': 'plot', 'year': 'updated_at', 'episode': 'number'}}
 
 
 @support.menu
 def mainlist(item):
-    tvshow = ['',
-           ('Titoli', ['', 'peliculas', '0', 'tvshow']),
-           ('Serie TV', ['', 'peliculas', '1', 'tvshow'])]
     film = ['',
-           ('Film', ['', 'peliculas', '2', 'movie']),
-           ('Archivio', ['', 'peliculas', '3', 'movie'])]
+           ('Titoli', ['', 'peliculas', '0', 'movie']),
+           ('Film', ['', 'peliculas', '2', 'movie'])]
+    tvshow = ['',
+           ('Serie TV', ['', 'peliculas', '1', 'tvshow']),
+           ('Archivio', ['', 'peliculas', '3', 'tvshow']),
+           ('Premium', ['', 'peliculas', '4', 'tvshow'])]
     search = ''
     return locals()
 
