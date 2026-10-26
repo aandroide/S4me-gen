@@ -1,0 +1,17 @@
+{
+  "chiavi": ["streamingcommunity"],
+  "categorie": ["movie", "tvshow"],
+  "controlli": [
+    {"nome": "Pagina film (sliders)", "url": "/it/movies", "percorso": "props.sliders.0.titles", "campi": ["name", "type", "id", "slug"]},
+    {"nome": "Pagina serie TV (sliders)", "url": "/it/tv-shows", "percorso": "props.sliders.0.titles", "campi": ["name", "type", "id", "slug", "seasons_count"]},
+    {"nome": "Archivio", "url": "/it/archive", "percorso": "props.titles", "campi": ["name", "type", "id", "slug"]},
+    {"nome": "Archivio film", "url": "/it/archive?type=movie", "percorso": "props.titles", "campi": ["name", "type", "id"]},
+    {"nome": "Archivio serie TV", "url": "/it/archive?type=tv", "percorso": "props.titles", "campi": ["name", "type", "id", "slug"]},
+    {"nome": "Archivio per nome", "url": "/it/archive?sort=name", "percorso": "props.titles", "campi": ["name"]},
+    {"nome": "Ricerca", "url": "/it/search?q=matrix", "percorso": "props.titles", "campi": ["name", "type", "id"]},
+    {"nome": "Generi", "url": "/it/movies", "percorso": "props.genres", "campi": ["name", "id"]}
+  ],
+  "serie": {"da": "/it/archive?type=tv", "percorso_stagioni": "props.title.seasons", "stagione_url": "/season-{S}",
+            "percorso_episodi": "props.loadedSeason.episodes", "campi_stagione": ["number", "title_id"],
+            "campi_episodio": ["id", "number", "name", "plot"]}
+}

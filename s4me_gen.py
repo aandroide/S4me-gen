@@ -2909,6 +2909,129 @@ def analizza(url, args):
     return id_, nome, ctx, cattura, rapporto, base
 
 
+PROFILI_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'profili')
+
+
+def trova_profilo(url, args):
+    """Canale gia verificato a mano per questo sito: cartella profili, un .py e un .json con le chiavi di riconoscimento."""
+    if getattr(args, 'senza_profilo', False) or not os.path.isdir(PROFILI_DIR):
+        return None
+    testo = (urlparse(url).netloc + ' ' + (args.nome or '')).lower()
+    for f in sorted(os.listdir(PROFILI_DIR)):
+        if not f.endswith('.json'):
+            continue
+        try:
+            d = json.load(open(os.path.join(PROFILI_DIR, f), encoding='utf-8'))
+        except Exception:
+            continue
+        if any(k in testo for k in d.get('chiavi', [])) and os.path.exists(os.path.join(PROFILI_DIR, f[:-5] + '.py')):
+            d['_nome'] = f[:-5]
+            return d
+    return None
+
+
+def usa_profilo(prof, url, args):
+    """Scrive il canale verificato com'e e controlla sul sito vero che i dati che usa ci siano ancora."""
+    rapporto = []
+
+    def rp(*a):
+        riga = ' '.join(str(x) for x in a)
+        rapporto.append(riga)
+        log(riga)
+
+    base = '{0.scheme}://{0.netloc}'.format(urlparse(url))
+    id_ = args.nome or id_da_url(url)
+    nome = args.titolo or id_.capitalize()
+    rp('Profilo verificato in uso:', prof['_nome'], '| il canale e identico a quello scritto a mano')
+    rp('Controllo che il sito abbia ancora la struttura che il canale si aspetta')
+    s = Sessione(headless=not (args.mostra or args.pausa), chromium=args.chromium, dns=DOH.get(args.dns),
+                 proxy=args.proxy or os.environ.get('PROXY_URL') or None)
+    cattura, problemi = {}, []
+
+    def pagina(rel):
+        st = s.vai(base + rel, attesa=min(args.attesa, 3))
+        dp = inertia_da_html(st['html'])
+        if dp is None:
+            for e in st['net']:
+                if e.get('tipo') == 'document' and e.get('body'):
+                    dp = inertia_da_html(e['body'])
+                    if dp is not None:
+                        break
+        return dp
+
+    try:
+        for c in prof.get('controlli', []):
+            try:
+                dp = pagina(c['url'])
+            except BaseException as ex:
+                problemi.append(c['nome'])
+                rp('PROBLEMA:', c['nome'], '| pagina non aperta:', c['url'], str(ex)[:80])
+                continue
+            lista = leggi(dp, c['percorso']) if dp else None
+            if not isinstance(lista, list) or not lista:
+                problemi.append(c['nome'])
+                rp('PROBLEMA:', c['nome'], '| in', c['url'], 'non trovo', c['percorso'], '(pagina Inertia:', 'si' if dp else 'no', ')')
+                continue
+            if lista and isinstance(lista[0], list):
+                lista = [x for sub in lista for x in sub]
+            el = lista[0] if isinstance(lista[0], dict) else {}
+            mancano = [k for k in c.get('campi', []) if k not in el]
+            if mancano:
+                problemi.append(c['nome'])
+                rp('PROBLEMA:', c['nome'], '| campi mancanti nei titoli:', mancano, '| campi presenti:', sorted(el.keys())[:25])
+            else:
+                rp('OK:', c['nome'], '|', len(lista), 'titoli in', c['percorso'])
+            cattura[c['nome']] = {'url': c['url'], 'percorso': c['percorso'], 'primo': el}
+        sr = prof.get('serie')
+        if sr:
+            dp = pagina(sr['da'])
+            tit = [x for x in (leggi(dp, 'props.titles') or []) if isinstance(x, dict) and x.get('slug') and x.get('id')] if dp else []
+            if tit:
+                u = '/it/titles/%s-%s' % (tit[0]['id'], tit[0]['slug'])
+                dp = pagina(u)
+                stg = leggi(dp, sr['percorso_stagioni']) if dp else None
+                if not isinstance(stg, list) or not stg:
+                    problemi.append('Stagioni')
+                    rp('PROBLEMA: stagioni non trovate in', u, sr['percorso_stagioni'])
+                else:
+                    mc = [k for k in sr['campi_stagione'] if k not in stg[0]]
+                    dp2 = pagina(u + sr['stagione_url'].format(S=stg[0].get('number', 1)))
+                    eps = leggi(dp2, sr['percorso_episodi']) if dp2 else None
+                    if not isinstance(eps, list) or not eps:
+                        problemi.append('Episodi')
+                        rp('PROBLEMA: episodi non trovati in', u + sr['stagione_url'].format(S=stg[0].get('number', 1)))
+                    else:
+                        me = [k for k in sr['campi_episodio'] if k not in eps[0]]
+                        if mc or me:
+                            problemi.append('Campi di stagioni o episodi')
+                            rp('PROBLEMA: campi mancanti | stagione:', mc, '| episodio:', me)
+                        else:
+                            rp('OK: serie di esempio', u, '|', len(stg), 'stagioni,', len(eps), 'episodi nella prima')
+            else:
+                problemi.append('Serie di esempio')
+                rp('PROBLEMA: nessuna serie trovata nell\'archivio per provare stagioni ed episodi')
+    finally:
+        s.chiudi()
+    if problemi:
+        rp('ATTENZIONE: il sito e cambiato o non risponde come previsto in:', ', '.join(problemi),
+           '| il canale scritto e comunque quello verificato: controllare prima di usarlo')
+    else:
+        rp('Tutti i controlli superati: la struttura del sito e quella che il canale si aspetta')
+    os.makedirs(args.out, exist_ok=True)
+    py = open(os.path.join(PROFILI_DIR, prof['_nome'] + '.py'), encoding='utf-8').read()
+    open(os.path.join(args.out, id_ + '.py'), 'w', encoding='utf-8').write(py)
+    open(os.path.join(args.out, id_ + '.json'), 'w', encoding='utf-8').write(
+        genera_json(id_, nome, 'movie', tipi={k: [] for k in prof.get('categorie', ['movie', 'tvshow'])}))
+    open(os.path.join(args.out, 'riga_channels_json.txt'), 'w', encoding='utf-8').write('        "%s": "%s",\n' % (id_, base))
+    rapporto += ['', 'File scritti in %s: %s.py, %s.json, riga_channels_json.txt' % (args.out, id_, id_),
+                 'Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), '
+                 'caricare l\'icona %s.png nella repo media.' % id_,
+                 'Il canale usa il resolver streamingcommunityws e le funzioni callAds e check_trakt dell\'addon: il tool non puo verificarli.']
+    open(os.path.join(args.out, id_ + '_rapporto.txt'), 'w', encoding='utf-8').write('\n'.join(rapporto) + '\n')
+    open(os.path.join(args.out, id_ + '_cattura.json'), 'w', encoding='utf-8').write(json.dumps(cattura, indent=1, ensure_ascii=False))
+    log('Fatto. File in', os.path.abspath(args.out))
+
+
 def main():
     ap = argparse.ArgumentParser(description='Genera un canale S4Me da un sito')
     ap.add_argument('url')
@@ -2928,6 +3051,7 @@ def main():
                     help='stampa true se il sito mostra la challenge di Cloudflare, false altrimenti, ed esce')
     ap.add_argument('--proxy', help='proxy del paese giusto (http://utente:password@host:porta), anche dalla variabile PROXY_URL')
     ap.add_argument('--chromium', help='percorso di un chromium gia installato')
+    ap.add_argument('--senza-profilo', action='store_true', help='ignora i profili verificati e genera il canale dal sito')
     args = ap.parse_args()
     if args.controlla_cf:
         print('true' if ha_challenge(args.url if '://' in args.url else 'https://' + args.url) else 'false')
@@ -2940,6 +3064,10 @@ def main():
     url = args.url if '://' in args.url else 'https://' + args.url
     if args.flaresolverr:
         flaresolverr(args.flaresolverr, url)
+    profilo = trova_profilo(url, args)
+    if profilo:
+        usa_profilo(profilo, url, args)
+        return
     id_, nome, ctx, cattura, rapporto, base = analizza(url, args)
 
     os.makedirs(args.out, exist_ok=True)
