@@ -156,7 +156,12 @@ def via_flaresolverr(url):
     with open('/tmp/controlla_canali_flaresolverr.lock', 'w') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         try:
-            r = requests.post(ep + '/v1', json={'cmd': 'request.get', 'url': url, 'maxTimeout': 60000}, timeout=90).json()
+            try:
+                requests.post(ep + '/v1', json={'cmd': 'sessions.create', 'session': 'controllo'}, timeout=60)
+            except Exception:
+                pass
+            r = requests.post(ep + '/v1', json={'cmd': 'request.get', 'url': url, 'maxTimeout': 60000, 'session': 'controllo'},
+                              timeout=90).json()
         except Exception as e:
             return ('errore', '', url, 'FlareSolverr non raggiungibile: ' + str(e)[:60])
     if r.get('status') != 'ok':
@@ -176,7 +181,11 @@ def scarica(url):
     for tentativo in range(2):
         try:
             r = requests.get(url, headers={'User-Agent': UA, 'Accept-Language': 'it-IT,it;q=0.9'}, timeout=(8, 15))
-        except requests.exceptions.SSLError:
+        except (requests.exceptions.SSLError, requests.exceptions.ConnectionError) as e0:
+            if 'SSL' not in str(e0) and 'certificate' not in str(e0):
+                ris = ('errore', '', url, descrivi_errore(e0))
+                time.sleep(2)
+                continue
             try:
                 r = requests.get(url, headers={'User-Agent': UA}, timeout=(8, 15), verify=False)
             except Exception as e:
@@ -316,8 +325,12 @@ class _Support:
     @staticmethod
     def match(url, **a):
         data = scarica(url)[1] if isinstance(url, str) and url.startswith('http') else str(url)
+        data = uniforma(data)  # support.match fa html_uniform sulla pagina
         patron = a.get('patron')
-        m = _Support.scrapertools.find_single_match(data, patron) if patron else ''
+        m = ''
+        if patron:
+            trovati = re.findall(patron, data, re.DOTALL)
+            m = trovati[0] if trovati else ''
         return _Match(data, m)
 
 
@@ -381,7 +394,7 @@ def controlla(nome, hosts, ripara=True):
             host = ris['host'] = letterale
             ris['dettagli'].append('indirizzo scritto nel canale: %s' % letterale)
     if not host:
-        ris.update(stato='SENZA INDIRIZZO', dettagli=['il canale non e in channels.json e non ha un indirizzo fisso nel file'])
+        ris.update(stato='SENZA INDIRIZZO', dettagli=['canale non attivo: non e in channels.json e non ha un indirizzo fisso nel file'])
         return ris
 
     # pagine da provare: indirizzi del menu per le funzioni con regex
@@ -398,6 +411,7 @@ def controlla(nome, hosts, ripara=True):
                 prove.append((azione, '/'))
                 break
     prove = prove[:4]
+    cartella_pagine = os.path.join(OUT, nome)
 
     # la home dice se il sito e raggiungibile, parcheggiato o spostato
     st, html, finale, motivo = scarica(host + '/')
@@ -415,6 +429,8 @@ def controlla(nome, hosts, ripara=True):
         return ris
     if 'FlareSolverr' in motivo:
         ris['dettagli'].append('sito protetto da Cloudflare: pagine scaricate con FlareSolverr')
+    if 'FlareSolverr' in motivo:
+        prove = prove[:3]
     nuovo = '{}://{}'.format(urlparse(finale).scheme, urlparse(finale).netloc)
     if urlparse(finale).netloc.replace('www.', '') != urlparse(host).netloc.replace('www.', ''):
         ris['dettagli'].append('il sito reindirizza a un altro indirizzo: %s (in channels.json c\'e %s)' % (nuovo, host))
@@ -455,6 +471,14 @@ def controlla(nome, hosts, ripara=True):
         except BaseException as ex:
             prop = None
             ris['dettagli'].append('  ricerca della regex sostitutiva interrotta dopo 45 secondi (pagina troppo grande)')
+        # campione della pagina, per capire a mano cosa e cambiato
+        try:
+            os.makedirs(cartella_pagine, exist_ok=True)
+            nf = 'pagina_%s_%s.html' % (azione, re.sub(r'\W+', '_', rel).strip('_')[:40] or 'home')
+            open(os.path.join(cartella_pagine, nf), 'w', encoding='utf-8').write(html[:250000])
+            ris['dettagli'].append('  campione della pagina salvato in correzioni/%s/%s' % (nome, nf))
+        except Exception:
+            pass
         if not prop:
             ris['dettagli'].append('  nessuna regex sostitutiva trovata automaticamente in %s' % rel)
             continue
