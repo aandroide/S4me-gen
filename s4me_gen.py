@@ -573,10 +573,10 @@ def costruisci_patron(el):
             p = pos_di(_apertura(tag))
             if tag is a or tag is el:
                 pezzi.append((p if p is not None else 3,
-                              r'>\s*(?P<title>[^<]+?)\s*<'))
+                              r'>\s*(?P<title>[^<]+?)(?:\s*\((?P<lang>ITA|SUB[\ \-]?ITA|Sub[\ \-]?Ita)\))?\s*<'))
             else:
                 pezzi.append((p if p is not None else 3,
-                              _tagre(tag) + r'[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)\s*<'))
+                              _tagre(tag) + r'[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)(?:\s*\((?P<lang>ITA|SUB[\ \-]?ITA|Sub[\ \-]?Ita)\))?\s*<'))
     if 'year' in campi:
         tag = campi['year'][1]
         p = pos_di(_apertura(tag))
