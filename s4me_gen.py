@@ -291,10 +291,17 @@ class Sessione:
         except BaseException:
             html = ''
         dp = inertia_da_html(html)
+        if dp is None:
+            # dopo l'avvio della pagina l'attributo puo sparire dal DOM: si legge dal documento scaricato
+            for e in net:
+                if e.get('tipo') == 'document' and 'html' in e.get('ct', '') and e.get('body'):
+                    dp = inertia_da_html(e['body'])
+                    if dp is not None:
+                        break
         if dp is not None and not any(e.get('inertia') and e['url'] == self.page.url for e in net):
             # siti Inertia.js: la pagina porta con se i dati (attributo data-page), come se fossero la risposta di una API
             net.append({'url': self.page.url, 'method': 'GET', 'status': 200, 'tipo': 'document',
-                        'ct': 'application/json', 'post': None, 'body': json.dumps(dp, ensure_ascii=False)[:400000],
+                        'ct': 'application/json', 'post': None, 'body': json.dumps(dp, ensure_ascii=False)[:3000000],
                         'inertia': True, 'versione': dp.get('version', '')})
         return {'url': self.page.url, 'html': html, 'net': net}
 
@@ -2550,6 +2557,16 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         det = s.vai(url, attesa=args.attesa)
         cattura['serie'] = {'url': det['url'], 'net': det['net']}
         ep = trova_episodi_api(det['net'])
+        dpi = next((e for e in det['net'] if e.get('inertia') and e.get('body')), None)
+        if dpi and not ep:
+            try:
+                pj = json.loads(dpi['body'])
+                rp('Pagina Inertia della serie: componente', pj.get('component'), '| dati:', json.dumps(
+                    {k: (list(v.keys())[:20] if isinstance(v, dict) else (type(v).__name__ + str(len(v) if hasattr(v, '__len__') else '')))
+                     for k, v in pj.get('props', {}).items()}, ensure_ascii=False)[:900])
+                cattura['serie_inertia'] = {k: v for k, v in pj.get('props', {}).items() if len(json.dumps(v)) < 30000}
+            except Exception:
+                pass
         if ep and ep['entry'].get('inertia'):
             ei = episodi_inertia(s, ep, det, base, rp)
             if not ei:
@@ -2806,6 +2823,25 @@ def analizza(url, args):
                     ctx['search_inertia'] = True
                     ctx['search_lista'] = a_s['path']
                     rp('Ricerca su pagina Inertia:', r['url'][:120], '| lista:', a_s['path'])
+
+        if modo == 'api' and not ctx.get('search_api') and not ctx.get('search_body'):
+            # nessun campo di ricerca utilizzabile: si prova la pagina di ricerca piu comune
+            m_l = re.match(r'^/[a-z]{2}(?=/|$)', urlparse(pagina_elenco).path)
+            for cand_r in ([m_l.group(0) + '/search?q=matrix'] if m_l else []) + ['/search?q=matrix']:
+                try:
+                    r2 = s.vai(base + cand_r, attesa=args.attesa)
+                except BaseException:
+                    continue
+                a_s = trova_elenco_api(r2['net'])
+                if a_s and any('matrix' in str(appiattisci(x).get(a_s['chiavi'].get('title', ''), '')).lower() for x in a_s['lista']):
+                    ctx['search_api'] = (a_s['entry']['url'] if not a_s['entry'].get('inertia') and 'matrix' in a_s['entry']['url'].lower()
+                                         else base + cand_r)
+                    ctx['search_inertia'] = bool(a_s['entry'].get('inertia'))
+                    ctx['search_lista'] = a_s['path']
+                    rp('Ricerca trovata provando', cand_r, '| lista:', a_s['path'], '| Inertia:', ctx['search_inertia'])
+                    break
+            else:
+                rp('Ricerca: nessun campo e nessuna pagina di ricerca riconosciuta.')
 
         if modo == 'api':
             esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo)
