@@ -1,0 +1,21 @@
+Nessun proxy: il sito vede l'IP del computer che esegue il tool.
+Apro https://streamingcommunityz.day
+Voci di menu trovate: 5
+Card trovate nel DOM: 198 | regex sul DOM: 198 | regex sull'html grezzo: 0
+Modalita scelta: api
+API elenco: POST https://streamingcommunityz.day/api/sliders/fetch?lang=it | lista: titles | elementi: 30
+Campi: {"title": "name", "ids": ["slug", "id"], "year": "last_air_date"}
+Paginazione: non trovata (TODO)
+Sezione: Titoli | tipo: tvshow | titoli: 30 | richiesta: https://streamingcommunityz.day/api/sliders/fetch?lang=it | cambia: niente
+Sezione: Serie TV | tipo: tvshow | titoli: 30 | richiesta: https://streamingcommunityz.day/api/sliders/fetch?lang=it | cambia: {"sliders": [{"name": "new-episodes", "title_type": "tv", "genre": null}, {"name": "genre", "title_type": "tv", "genre": "War & Politics"}, {"name": "genre", "title_type": "tv", "genre": "Dramma"}]}
+Sezione: Film | tipo: tvshow | titoli: 30 | richiesta: https://streamingcommunityz.day/api/sliders/fetch?lang=it | cambia: {"sliders": [{"name": "genre", "title_type": "movie", "genre": "Documentario"}, {"name": "genre", "title_type": "movie", "genre": "Famiglia"}, {"name": "genre", "title_type": "movie", "genre": "Musica
+Sezione: Archivio | tipo: tvshow | titoli: 60 | richiesta: https://streamingcommunityz.day/it/archive?lang=it&page=2 | cambia: niente
+Pagina senza elenco API: https://streamingcommunityz.day/it/premium | operazioni GraphQL viste: nessuna | titoli nel DOM: 0
+Pagina senza elenco API: https://streamingcommunityz.day/it/request-a-title | operazioni GraphQL viste: nessuna | titoli nel DOM: 0
+Sonda API: variabile dei tipi = nessuna | variabile dell'ordinamento = nessuna
+Sonda API: tipi riconosciuti = [] | ordinamenti riconosciuti = []
+Sezioni trovate: 4
+INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server); ricerca; episodi delle serie (nessuna richiesta di episodi rilevata)
+
+File scritti in canali/streamingcommunityz: streamingcommunityz.py, streamingcommunityz.json, riga_channels_json.txt
+Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), caricare l'icona streamingcommunityz.png nella repo media.
