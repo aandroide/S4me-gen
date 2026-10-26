@@ -1446,13 +1446,15 @@ def peliculas(item):
     cod = cod.replace('__PATRON__', raw(ctx['patron']))
     cod += '''    #debug = True  # apre regex101 con pagina e regex
 '''
-    if ctx.get('regola_serie') and ctx['episodi']:
+    if (ctx.get('regola_serie') or ctx.get('regola_serie2')) and ctx['episodi']:
         cod += '''
     def itemHook(item):
         # la scheda puo puntare a un episodio: la lista episodi sta nella pagina del titolo
-        item.url = re.sub(__RS0__, __RS1__, item.url)
-        return item
-'''.replace('__RS0__', raw(ctx['regola_serie'][0])).replace('__RS1__', raw(ctx['regola_serie'][1]))
+'''
+        for k in ('regola_serie', 'regola_serie2'):
+            if ctx.get(k):
+                cod += "        item.url = re.sub(%s, %s, item.url)\n" % (raw(ctx[k][0]), raw(ctx[k][1]))
+        cod += "        return item\n"
     cod += '''    return locals()
 
 '''
@@ -2904,9 +2906,14 @@ def esplora_catena(s, det, primo, base, args, rp, cattura, ctx):
         try:
             pm = s.vai(madre, attesa=args.attesa)
             epm = trova_episodi(soup_di(pm['html']))
-            if epm and patron_episodio(epm) != ctx['patron_ep']:
-                ctx['patron_ep_b'] = patron_episodio(epm)
-                rp('Anche la pagina del titolo', madre, 'ha la lista episodi, con un\'altra struttura (%d episodi)' % len(epm))
+            if epm:
+                # la pagina del titolo ha la lista episodi: le schede vanno portate li (si toglie l'ultimo segmento)
+                coda_ep = serie_url.rsplit('/', 1)[1].split('?')[0]
+                ctx['patron_ep'] = patron_episodio(epm)
+                ctx.pop('patron_ep_b', None)
+                ctx['episodi'] = epm
+                ctx['regola_serie2'] = (r'/%s/?$' % re.sub(r'\d+', lambda m: r'\d+', re.escape(coda_ep)), '')
+                rp('La pagina del titolo', madre, 'ha la lista episodi (%d): tolgo "%s" dall\'indirizzo delle schede' % (len(epm), coda_ep))
         except BaseException as ex:
             rp('Pagina del titolo non aperta:', madre, str(ex)[:80])
     # la scheda (spesso un episodio) puo non essere la pagina del player o quella con la lista episodi
