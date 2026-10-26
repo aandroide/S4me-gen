@@ -1,0 +1,29 @@
+name: Scarica file di un sito
+on:
+  workflow_dispatch:
+    inputs:
+      indirizzi:
+        description: "Indirizzi dei file (immagini, ecc.) separati da spazio"
+        required: true
+permissions:
+  contents: write
+jobs:
+  scarica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scarica
+        run: |
+          mkdir -p file_scaricati
+          for u in ${{ github.event.inputs.indirizzi }}; do
+            n=$(echo "$u" | sed 's#https\?://##; s#[?].*##; s#[^A-Za-z0-9._-]#_#g')
+            curl -sSL -m 60 -A "Mozilla/5.0" -e "$(echo $u | cut -d/ -f1-3)/" -o "file_scaricati/$n" "$u" || echo "errore $u"
+          done
+          ls -la file_scaricati
+      - name: Salva
+        run: |
+          git config user.name aandroide
+          git config user.email aandroide@users.noreply.github.com
+          git add file_scaricati
+          git commit -qm "File scaricati" || exit 0
+          for i in 1 2 3; do git fetch -q; git reset -q origin/master; git add file_scaricati; git commit -qm "File scaricati" ; git push -q origin HEAD:master && break; sleep 3; done
