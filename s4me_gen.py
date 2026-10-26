@@ -156,6 +156,19 @@ def flaresolverr(endpoint, url):
     return True
 
 
+def inertia_da_html(html):
+    """Dati di una pagina Inertia.js (attributo data-page), oppure None."""
+    from html import unescape
+    m = re.search(r'<[a-z]+[^>]*\sdata-page="([^"]+)"', html or '')
+    if not m:
+        return None
+    try:
+        d = json.loads(unescape(m.group(1)))
+    except Exception:
+        return None
+    return d if isinstance(d, dict) and 'props' in d else None
+
+
 class Scaduto(Exception):
     pass
 
@@ -220,6 +233,8 @@ class Sessione:
                 entry['hdr'] = {k: v for k, v in req.headers.items() if k.lower() not in (
                     'host', 'content-length', 'origin', 'referer', 'user-agent', 'cookie', 'accept-encoding',
                     'connection') and not k.lower().startswith(('sec-', ':'))}
+            if req.headers.get('x-inertia'):
+                entry['inertia'] = True
             if re.search(r'json|text|mpegurl|dash|xml|javascript', ct) and 'event-stream' not in ct and req.resource_type in (
                     'xhr', 'fetch', 'document', 'other'):
                 entry['_resp'] = r  # il corpo si legge dopo, fuori dal gestore dell'evento
@@ -275,6 +290,12 @@ class Sessione:
             html = con_timeout(20, self.page.content)
         except BaseException:
             html = ''
+        dp = inertia_da_html(html)
+        if dp is not None and not any(e.get('inertia') and e['url'] == self.page.url for e in net):
+            # siti Inertia.js: la pagina porta con se i dati (attributo data-page), come se fossero la risposta di una API
+            net.append({'url': self.page.url, 'method': 'GET', 'status': 200, 'tipo': 'document',
+                        'ct': 'application/json', 'post': None, 'body': json.dumps(dp, ensure_ascii=False)[:400000],
+                        'inertia': True, 'versione': dp.get('version', '')})
         return {'url': self.page.url, 'html': html, 'net': net}
 
     def varianti(self, attesa=3):
@@ -697,6 +718,9 @@ def liste_json(obj, path='', prof=0, out=None, minimo=4):
     return out
 
 
+TIPO_VALORE_RE = re.compile(r'^(movie|film|tv|tvshow|tv_show|series|serie|show|anime|episode)s?$', re.I)
+
+
 def scegli_chiavi(item):
     """Per un elemento dell'elenco decide quale campo e titolo, id, locandina, anno, trama."""
     piatto = appiattisci(item)
@@ -717,6 +741,12 @@ def scegli_chiavi(item):
         if ultima(k) == '__typename' and isinstance(piatto[k], str):
             ris['type'] = k
             break
+    if 'type' not in ris:
+        for k in sorted(chiavi, key=lambda x: x.count('.')):
+            if ultima(k).lower() in ('type', 'tipo', 'kind', 'content_type', 'contenttype', 'media_type') and \
+                    isinstance(piatto[k], str) and TIPO_VALORE_RE.match(piatto[k]):
+                ris['type'] = k
+                break
     for ik in ID_KEYS:
         for k in sorted(chiavi, key=lambda x: x.count('.')):
             if ultima(k) == ik:
@@ -832,13 +862,21 @@ def trova_episodi_api(net):
                     sk = k
                 if ek is None and EPISODE_RE.match(ult) and isinstance(piatto[k], (int, float, str)):
                     ek = k
-            if not sk or not ek:
+            padre = None
+            if not sk and ek and '.' in path:
+                # la stagione puo stare nell'oggetto che contiene l'elenco (per esempio loadedSeason.number)
+                pp = path.rsplit('.', 1)[0]
+                oggetto = leggi(j, pp)
+                if isinstance(oggetto, dict) and SEASON_RE.match(pp.split('.')[-1].replace('loaded', '').replace('current', '')):
+                    padre = pp
+            if (not sk and not padre) or not ek:
                 continue
             ris, _ = scegli_chiavi(dicts[0])
-            ris['season'] = sk
+            if sk:
+                ris['season'] = sk
             ris['episode'] = ek
             if not best or len(dicts) > len(best['lista']):
-                best = {'entry': e, 'path': path, 'lista': dicts, 'chiavi': ris, 'json': j}
+                best = {'entry': e, 'path': path, 'lista': dicts, 'chiavi': ris, 'json': j, 'stagione_padre': padre}
     return best
 
 
@@ -897,6 +935,8 @@ def leggi(d, path):
             d = d.get(p)
         elif isinstance(d, list) and p.isdigit() and int(p) < len(d):
             d = d[int(p)]
+        elif isinstance(d, list) and d and isinstance(d[0], dict) and not p.isdigit():
+            d = d[0].get(p)  # percorso senza indice: si legge il primo elemento della lista
         else:
             return None
     return d
@@ -1459,6 +1499,8 @@ def prendi(d, path, default=''):
             d = d.get(p)
         elif isinstance(d, list) and p.isdigit() and int(p) < len(d):
             d = d[int(p)]
+        elif isinstance(d, list) and d and isinstance(d[0], dict) and not p.isdigit():
+            d = d[0].get(p)  # percorso senza indice: si legge il primo elemento della lista
         else:
             return default
         if d is None:
@@ -1500,6 +1542,26 @@ def cerca_lista(d, chiave_titolo):
     return []
 
 
+_INERTIA = {}
+
+
+def intestazioni_inertia():
+    # siti Inertia.js: la versione dei file cambia a ogni aggiornamento del sito, si legge dalla home
+    if 'v' not in _INERTIA:
+        versione = ''
+        try:
+            pagina = httptools.downloadpage(host + '/', headers={'Referer': host + '/'}).data
+            m = re.search(r'data-page="([^"]+)"', pagina)
+            if m:
+                from html import unescape
+                versione = json.loads(unescape(m.group(1))).get('version', '')
+        except Exception:
+            logger.error('Versione Inertia non letta')
+        _INERTIA['v'] = versione
+    return {'X-Inertia': 'true', 'X-Inertia-Version': _INERTIA['v'], 'X-Requested-With': 'XMLHttpRequest',
+            'Accept': 'text/html, application/xhtml+xml'}
+
+
 def sezione(item):
     return SEZIONI[int(item.args)] if str(item.args).isdigit() and int(item.args) < len(SEZIONI) else SEZIONI[0]
 
@@ -1515,8 +1577,10 @@ def chiama(item):
         body = json.loads(RICERCA_BODY.replace('__TESTO__', json.dumps(item.search_text)[1:-1]))
         url = RICERCA_URL or url
     elif item.search_text and RICERCA:
-        return httptools.downloadpage(RICERCA % item.search_text.replace(' ', '+'),
-                                      headers={'Referer': host + '/'}).json
+        intest = {'Referer': host + '/'}
+        if RICERCA_INERTIA:
+            intest.update(intestazioni_inertia())
+        return httptools.downloadpage(RICERCA % item.search_text.replace(' ', '+'), headers=intest).json
     if PAGINAZIONE:
         ch = PAGINAZIONE['chiave']
         if PAGINAZIONE['dove'] == 'query':
@@ -1532,6 +1596,8 @@ def chiama(item):
             bersaglio[ch] = (pagina - 1) * int(PAGINAZIONE.get('passo', 20))
     url = url + ('?' + urlencode(params) if params else '')
     opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
+    if sez.get('inertia'):
+        opt['headers'].update(intestazioni_inertia())
     if body is not None:
         opt['post'] = json.dumps(body)
     return httptools.downloadpage(url, **opt).json
@@ -1592,7 +1658,7 @@ def peliculas(item):
     sez = sezione(item)
     PAGINAZIONE = sez['pag']
     risposta = chiama(item)
-    lista = prendi(risposta, sez['lista'], [])
+    lista = prendi(risposta, RICERCA_LISTA if (item.search_text and RICERCA_LISTA) else sez['lista'], [])
     if not lista:
         lista = cerca_lista(risposta, CAMPI.get('title', 'title'))
     for el in lista:
@@ -1609,7 +1675,11 @@ def peliculas(item):
         anno = m.group(0) if m else ''
         url = ''
         if DETTAGLIO:
-            url = host + DETTAGLIO.format(idv) if DETTAGLIO.startswith('/') else DETTAGLIO.format(idv)
+            if DETT_CAMPI:
+                dett = DETTAGLIO.format(**{n: str(prendi(el, k) or '') for n, k in DETT_CAMPI.items()})
+            else:
+                dett = DETTAGLIO.format(idv)
+            url = host + dett if dett.startswith('/') else dett
         thumb = prendi(el, CAMPI['thumb']) if 'thumb' in CAMPI else ''
         thumb = str(thumb).replace('{profile}', 's332').replace('{format}', 'jpg')
         if thumb.startswith('/'):
@@ -1654,22 +1724,41 @@ def episodios(item):
     if not EPISODI:
         platformtools.dialog_ok('__NOME__', 'Episodi non rilevati sul sito')
         return []
-    url = EPISODI['url'].replace('{ID}', item.idv)
-    if not url.startswith('http'):
-        url = host + url
-    opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
-    if EPISODI['body']:
-        opt['post'] = EPISODI['body'].replace('{ID}', item.idv)
-    risposta = httptools.downloadpage(url, **opt).json
     ch = EPISODI['chiavi']
-    lista = prendi(risposta, EPISODI['lista'], []) or cerca_lista(risposta, ch.get('title', 'title'))
+    if EPISODI.get('inertia'):
+        # la pagina del titolo elenca le stagioni, ogni stagione ha la sua pagina con gli episodi
+        intest = {'Referer': host + '/'}
+        intest.update(intestazioni_inertia())
+        pagina_titolo = item.url if item.url.startswith('http') else host + item.url
+        r0 = httptools.downloadpage(pagina_titolo, headers=intest).json
+        numeri = []
+        for st in prendi(r0, EPISODI['stagioni'], []):
+            try:
+                numeri.append(int(float(prendi(st, EPISODI['num_stagione']))))
+            except (ValueError, TypeError):
+                continue
+        elenco = []
+        for n in numeri or [1]:
+            r1 = httptools.downloadpage(pagina_titolo + EPISODI['stagione_url'].format(S=n), headers=intest).json
+            for ep in (prendi(r1, EPISODI['lista'], []) or cerca_lista(r1, ch.get('title', 'title'))):
+                elenco.append((n, ep))
+    else:
+        url = EPISODI['url'].replace('{ID}', item.idv)
+        if not url.startswith('http'):
+            url = host + url
+        opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
+        if EPISODI['body']:
+            opt['post'] = EPISODI['body'].replace('{ID}', item.idv)
+        risposta = httptools.downloadpage(url, **opt).json
+        lista = prendi(risposta, EPISODI['lista'], []) or cerca_lista(risposta, ch.get('title', 'title'))
+        elenco = [(None, ep) for ep in lista]
     titolo_serie = item.sito_title or item.contentSerieName or item.fulltitle
     anno = item.sito_year or item.infoLabels.get('year', '')
-    for ep in lista:
+    for stagione_nota, ep in elenco:
         try:
-            stagione = int(float(prendi(ep, ch['season'])))
+            stagione = stagione_nota if stagione_nota is not None else int(float(prendi(ep, ch['season'])))
             numero = int(float(prendi(ep, ch['episode'])))
-        except (ValueError, TypeError):
+        except (ValueError, TypeError, KeyError):
             continue
         nome = prendi(ep, ch['title']) if 'title' in ch else ''
         idv = ''
@@ -1690,7 +1779,7 @@ def episodios(item):
                                          'tvshowtitle': titolo_serie, 'year': anno},
                              thumbnail=item.thumbnail,
                              idv=str(idv),
-                             url=''))
+                             url=item.url if EPISODI.get('inertia') else ''))
     if itemlist and config.get_setting('episode_info'):
         try:
             tmdb.set_infoLabels_itemlist(itemlist, seekTmdb=True)
@@ -1732,11 +1821,12 @@ def genera_api(nome, ctx):
             urlunsplit((spz.scheme, spz.netloc, spz.path, '', ''))
         elenco.append({'nome': z['nome'], 'tipo': z['tipo'], 'url': rel,
                        'params': dict(parse_qsl(spz.query, keep_blank_values=True)), 'body': bz,
-                       'lista': z['lista'], 'pag': z.get('pag')})
+                       'lista': z['lista'], 'pag': z.get('pag'), 'inertia': bool(ez.get('inertia'))})
     cod += "SEZIONI = %s\n" % pprint.pformat(elenco, width=110, sort_dicts=False)
     cod += "CAMPI = %s\n" % json.dumps({k: v for k, v in chiavi.items() if k != 'ids'}, ensure_ascii=False)
     cod += "IDS = %s  # campi che identificano il titolo, in ordine di preferenza\n" % json.dumps(chiavi.get('ids', []))
-    cod += "DETTAGLIO = %s  # pagina del titolo, {} al posto dell'id\n" % py_str(dett)
+    cod += "DETTAGLIO = %s  # pagina del titolo, {} al posto dell'id (oppure {nome} dei campi di DETT_CAMPI)\n" % py_str(dett)
+    cod += "DETT_CAMPI = %s  # nome usato nel modello -> campo del titolo\n" % json.dumps(ctx.get('dettaglio_campi') or {})
     epi = ctx.get('episodi_api')
     if epi:
         cod += "EPISODI = %s\n" % pprint.pformat(epi, width=110, sort_dicts=False)
@@ -1757,6 +1847,8 @@ def genera_api(nome, ctx):
     cod += "RICERCA = %s\n" % (espr_url_ricerca(s, base) if s else 'None')
     cod += "RICERCA_BODY = %s\n" % (py_str(sb['post']) if sb else 'None')
     cod += "RICERCA_URL = %s\n" % (espr_url(sb['url'], base) if sb and sb['url'] != e['url'] else "''")
+    cod += "RICERCA_INERTIA = %s\n" % bool(ctx.get('search_inertia'))
+    cod += "RICERCA_LISTA = %s\n" % py_str(ctx.get('search_lista', ''))
     corpo = TEMPLATE_API.replace('__TIPO__', ctx['tipo']).replace('__NOME__', nome)
     cod += '\n' + corpo
 
@@ -2114,6 +2206,87 @@ def riproduci(s, args, rp, cattura, chiave):
     return info
 
 
+def modello_dettaglio(soups, elementi, chiavi, base):
+    """Dai link delle locandine ricava il modello dell'indirizzo del titolo, per esempio /it/titles/{id}-{slug}."""
+    ids = chiavi.get('ids', [])
+    if not ids:
+        return None
+    host = urlparse(base).netloc
+    percorsi = []
+    for sp in soups:
+        for a in sp.find_all('a', href=True):
+            u = urlsplit(urljoin(base, a['href']))
+            if u.netloc == host and u.path.strip('/'):
+                percorsi.append(u.path)
+    percorsi = list(dict.fromkeys(percorsi))
+    conta = {}
+    for i, el in enumerate(elementi[:60]):
+        piatto = appiattisci(el)
+        valori = {k: str(piatto[k]) for k in ids if k in piatto and str(piatto[k]) and not str(piatto[k]).startswith(('/', 'http'))}
+        if not valori:
+            continue
+        for pth in percorsi:
+            tpl, usati = pth, {}
+            for k, v in sorted(valori.items(), key=lambda kv: -len(kv[1])):
+                nome = re.sub(r'\W', '_', k)
+                nuovo = re.sub(r'(?<![A-Za-z0-9])' + re.escape(v) + r'(?![A-Za-z0-9])', '{' + nome + '}', tpl, count=1)
+                if nuovo != tpl:
+                    tpl = nuovo
+                    usati[nome] = k
+            if usati:
+                conta.setdefault((tpl, tuple(sorted(usati.items()))), set()).add(i)
+    if not conta:
+        return None
+    (tpl, usati), quanti = max(conta.items(), key=lambda kv: (len(kv[1]), len(kv[0][1])))
+    if len(quanti) < min(2, len(elementi)):
+        return None
+    return {'modello': tpl, 'campi': dict(usati), 'conferme': len(quanti)}
+
+
+INERTIA_PERCORSI_STAGIONE = ['/season-{S}', '/stagione-{S}', '/seasons/{S}', '/stagioni/{S}', '?season={S}', '?stagione={S}']
+
+
+def episodi_inertia(s, ep, det, base, rp):
+    """Serie su sito Inertia.js: elenco delle stagioni nella pagina del titolo, una pagina per ogni stagione."""
+    j = ep['json']
+    stagioni = None
+    for path, lst in liste_json(j, minimo=1):
+        if re.match(r'^(seasons?|stagion[ei])$', path.split('.')[-1], re.I):
+            dicts = [x for x in lst if isinstance(x, dict)]
+            for k in appiattisci(dicts[0]):
+                if re.match(r'^(number|numero|season_number|n)$', k.split('.')[-1], re.I):
+                    stagioni = {'percorso': path, 'chiave': k, 'numeri': [int(float(appiattisci(x)[k])) for x in dicts if k in appiattisci(x)]}
+                    break
+        if stagioni:
+            break
+    if not stagioni:
+        rp('Episodi Inertia: elenco delle stagioni non trovato nella pagina del titolo.')
+        return None
+    ver = ep['entry'].get('versione', '')
+    intest = {'X-Inertia': 'true', 'X-Inertia-Version': ver, 'X-Requested-With': 'XMLHttpRequest',
+              'Accept': 'text/html, application/xhtml+xml', 'Referer': base + '/'}
+    pagina = det['url'].split('#')[0].split('?')[0]
+    prova_n = stagioni['numeri'][-1] if stagioni['numeri'] else 1
+    for pat in INERTIA_PERCORSI_STAGIONE:
+        u = pagina + pat.format(S=prova_n)
+        try:
+            r = s.ctx.request.get(u, headers=intest, timeout=20000)
+            corpo = r.text()
+        except BaseException as ex:
+            rp('Episodi Inertia: richiesta non riuscita', u, str(ex)[:80])
+            continue
+        e2 = {'url': u, 'method': 'GET', 'ct': 'application/json', 'body': corpo}
+        ris = trova_episodi_api([e2])
+        rp('Episodi Inertia: provo', u, '| stato', r.status, '| episodi:', len(ris['lista']) if ris else 0)
+        if ris:
+            ch = dict(ris['chiavi'])
+            ch.pop('season', None)
+            return {'inertia': True, 'stagioni': stagioni['percorso'], 'num_stagione': stagioni['chiave'],
+                    'stagione_url': pat, 'lista': ris['path'], 'chiavi': ch, '_lista': ris['lista']}
+    rp('Episodi Inertia: nessun indirizzo di stagione ha risposto con gli episodi.')
+    return None
+
+
 def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo=''):
     """Per i siti con API: scopre sezioni e ordinamenti, poi apre un film e una serie per trovare episodi e riproduzione."""
     import posixpath
@@ -2220,6 +2393,7 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
 
     visti = {pagina_elenco.rstrip('/')}
     sez_debug = []
+    pagine_html = []
     n = 0
     for t, u in cand:
         u = u.split('#')[0]
@@ -2237,6 +2411,8 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         except Exception as ex:
             rp('Pagina non raggiungibile:', u)
             continue
+        if len(pagine_html) < 8:
+            pagine_html.append(e['html'])
         a2 = trova_elenco_api(e['net'])
         if a2:
             con_varianti(t, a2, fallback0)
@@ -2310,6 +2486,28 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         campioni[tp] = [(el, ch) for _, _, el, ch in sorted(campioni[tp], key=lambda x: (x[0], x[1]))[:3]]
     ctx['id_episodi'] = []
 
+    # indirizzo della pagina del titolo: se i dati non lo contengono si ricava dai link delle locandine
+    if not any(str(v).startswith(('/', 'http')) for el in api['lista'][:5] for v in
+               [appiattisci(el).get(k, '') for k in api['chiavi'].get('ids', [])]):
+        try:
+            pagine = [soup] + [soup_di(h) for h in pagine_html]
+            try:
+                pagine.append(soup_di(s.stato()['html']))
+            except BaseException:
+                pass
+            elementi = list(api['lista']) + [x for z in sezioni for x in z['api']['lista'][:15]]
+            md = modello_dettaglio(pagine, elementi, api['chiavi'], base)
+        except BaseException as ex:
+            md = None
+            rp('Modello dell\'indirizzo del titolo non ricavato:', str(ex)[:100])
+        if md:
+            ctx['dettaglio'] = md['modello']
+            ctx['dettaglio_campi'] = md['campi']
+            rp('Indirizzo della pagina del titolo ricavato dai link:', md['modello'], '| campi:', json.dumps(md['campi']),
+               '| titoli che lo confermano:', md['conferme'])
+        else:
+            rp('Indirizzo della pagina del titolo: non ricavabile dai link delle locandine.')
+
     def apri(el, chiavi):
         piatto = appiattisci(el)
         url, idv = '', ''
@@ -2319,6 +2517,11 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
                 url = urljoin(base, v)
             elif v and not v.startswith('/') and not idv:
                 idv = v
+        if not url and ctx.get('dettaglio_campi'):
+            try:
+                url = urljoin(base, ctx['dettaglio'].format(**{n: str(piatto.get(k, '')) for n, k in ctx['dettaglio_campi'].items()}))
+            except (KeyError, IndexError):
+                pass
         return url, idv, piatto
 
     for el, chiavi in campioni.get('movie', []):
@@ -2331,7 +2534,7 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         det = s.vai(url, attesa=args.attesa)
         cattura['dettaglio'] = {'url': det['url'], 'net': det['net']}
         ctx['primo_id'] = idv
-        if idv and idv in det['url']:
+        if idv and idv in det['url'] and not ctx.get('dettaglio_campi'):
             ctx['dettaglio'] = det['url'].replace(idv, '{}')
             if ctx['dettaglio'].startswith(base):
                 ctx['dettaglio'] = ctx['dettaglio'][len(base):]
@@ -2347,6 +2550,16 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         det = s.vai(url, attesa=args.attesa)
         cattura['serie'] = {'url': det['url'], 'net': det['net']}
         ep = trova_episodi_api(det['net'])
+        if ep and ep['entry'].get('inertia'):
+            ei = episodi_inertia(s, ep, det, base, rp)
+            if not ei:
+                continue
+            lp = ei.pop('_lista')
+            ctx['episodi_api'] = ei
+            ctx['id_episodi'] = [str(appiattisci(lp[0]).get(k, '')) for k in ei['chiavi'].get('ids', []) if appiattisci(lp[0]).get(k)]
+            rp('Episodi (Inertia): stagioni in', ei['stagioni'], '| pagina di stagione', ei['stagione_url'],
+               '| elenco', ei['lista'], '| titolo', ei['chiavi'].get('title'), '| episodio', ei['chiavi'].get('episode'))
+            break
         if not ep:
             try:
                 cache = s.page.evaluate(
@@ -2581,6 +2794,18 @@ def analizza(url, args):
                         rp('Ricerca via API (POST):', e['url'][:120])
                         break
             ctx['ricerca'] = ric
+            if modo == 'api' and not ctx.get('search_api') and not ctx.get('search_body'):
+                # ricerca che apre una pagina Inertia con i risultati nei dati della pagina, oppure una API GET
+                a_s = trova_elenco_api(r.get('net', []))
+                if a_s and 'matrix' in a_s['entry']['url'].lower() and not a_s['entry'].get('inertia'):
+                    ctx['search_api'] = a_s['entry']['url']
+                    ctx['search_lista'] = a_s['path']
+                    rp('Ricerca via API:', a_s['entry']['url'][:120])
+                elif a_s and a_s['entry'].get('inertia') and 'matrix' in r.get('url', '').lower():
+                    ctx['search_api'] = r['url']
+                    ctx['search_inertia'] = True
+                    ctx['search_lista'] = a_s['path']
+                    rp('Ricerca su pagina Inertia:', r['url'][:120], '| lista:', a_s['path'])
 
         if modo == 'api':
             esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo)
