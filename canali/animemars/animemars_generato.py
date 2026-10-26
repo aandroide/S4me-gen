@@ -22,15 +22,10 @@ headers = [['Referer', host + '/']]
 def mainlist(item):
     top = [('Archivio', ['/az-list', 'peliculas', '', 'tvshow']),
            ('In corso', ['/ongoing', 'peliculas', '', 'tvshow']),
-           ('Generi', ['/genres', 'peliculas', '', 'tvshow']),
            ('Filtro', ['/filter', 'peliculas', '', 'tvshow']),
-           ('Calendario', ['/calendar', 'peliculas', '', 'tvshow']),
-           ('Classifiche', ['/toplist', 'peliculas', '', 'tvshow']),
            ('Prossime uscite', ['/upcoming', 'peliculas', '', 'tvshow']),
            ('Nuove aggiunte', ['/newest', 'peliculas', '', 'tvshow']),
-           ('News', ['/news', 'peliculas', '', 'tvshow']),
-           ('Random', ['/random', 'peliculas', '', 'tvshow']),
-           ('Feed RSS', ['/rss', 'peliculas', '', 'tvshow'])]
+           ('Random', ['/random', 'peliculas', '', 'tvshow'])]
     search = ''
     return locals()
 
@@ -39,6 +34,7 @@ def mainlist(item):
 def peliculas(item):
     support.info(item)
     action = 'episodios'
+    anime = True
     patron = r'''<a(?=[^>]*class="(?:[^"]*\s)?group(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?block(?:\s[^"]*)?")[^>]*?href="(?P<url>[^"]+)"(?:(?!</a>).)*?<img [^>]*?src="(?P<thumb>[^"]+)"(?:(?!</a>).)*?<h3(?=[^>]*class="(?:[^"]*\s)?line\-clamp\-2(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?font\-semibold(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?group\-hover:text\-primary(?:\s[^"]*)?")[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)(?:\s*\((?P<lang>ITA|SUB[\ \-]?ITA|Sub[\ \-]?Ita)\))?\s*<'''
     # patronNext: pagina successiva non trovata
     #debug = True  # apre regex101 con pagina e regex
@@ -55,11 +51,19 @@ def peliculas(item):
 def episodios(item):
     support.info(item)
     action = 'findvideos'
+    anime = True
     # titolo e anno servono a TMDB: se la lista non ha l'anno lo cerco nella pagina della serie
     if not item.infoLabels.get('year'):
         anno = support.match(item.url, patron=r'(?:years=|[Aa]nno|[Uu]scita|[Yy]ear|[Rr]elease)[^<]{0,60}?((?:19|20)\d{2})').match
         if anno:
             item.infoLabels['year'] = anno
+    if item.infoLabels.get('year') and not item.infoLabels.get('tmdb_id'):
+        # titolo e anno a TMDB per riconoscere la serie, come fanno gli altri canali
+        item.infoLabels['tvshowtitle'] = item.contentSerieName or item.fulltitle
+        try:
+            tmdb.set_infoLabels_item(item, seekTmdb=True)
+        except Exception:
+            pass
     patron = r'''<a(?=[^>]*class="(?:[^"]*\s)?ep\-tile(?:\s[^"]*)?")[^>]*?href="(?P<url>[^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*(?P<episode>\d+)\s*<'''
     if '(?P<episode>' in patron and '(?P<season>' not in patron and not item.season:
         # nessuna stagione nel sito: una sola, cosi S4Me mostra 1x01 e cerca i titoli degli episodi su TMDB
