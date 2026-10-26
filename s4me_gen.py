@@ -2298,6 +2298,17 @@ def analizza(url, args):
                  proxy=args.proxy or os.environ.get('PROXY_URL') or None)
     cattura = {}
     try:
+        px = args.proxy or os.environ.get('PROXY_URL')
+        if px:
+            try:
+                s.page.goto('https://ipinfo.io/json', timeout=20000)
+                inf = json.loads(s.page.inner_text('body'))
+                rp('Proxy in uso: %s | IP visto dal sito: %s, paese %s, %s' % (
+                    urlsplit(px).netloc.split('@')[-1], inf.get('ip'), inf.get('country'), inf.get('org', '')))
+            except BaseException as ex:
+                rp('Proxy in uso: %s | controllo dell\'IP non riuscito (%s)' % (urlsplit(px).netloc.split('@')[-1], str(ex)[:80]))
+        else:
+            rp('Nessun proxy: il sito vede l\'IP del computer che esegue il tool.')
         rp('Apro', url)
         try:
             elenco = s.vai(url, attesa=args.attesa)
