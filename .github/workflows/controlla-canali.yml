@@ -63,7 +63,7 @@ jobs:
         run: |
           git config user.name aandroide
           git config user.email aandroide@users.noreply.github.com
-          git add correzioni
+          git add correzioni snapshot_api
           if ! git diff --cached --quiet; then
             git commit -m "Controllo dei canali"
             echo "CAMBIATO=1" >> "$GITHUB_ENV"

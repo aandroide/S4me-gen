@@ -38,6 +38,8 @@ import s4me_gen as g
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 BASE = os.environ.get('CANALI_BASE', os.path.join(QUI, 'canali_base'))
+SNAP = os.environ.get('SNAPSHOT_API', os.path.join(QUI, 'snapshot_api'))
+PROFILI = os.path.join(QUI, 'profili')
 OUT = os.environ.get('CANALI_OUT', os.path.join(QUI, 'correzioni'))
 UA = g.UA
 NOMI_REGEX = ('patron', 'patronBlock', 'patronNext', 'patronMenu')
@@ -367,6 +369,222 @@ def host_letterale(src):
     return m.group(1).rstrip('/') if m else ''
 
 
+# ---------------------------------------------------------------------------
+# Canali che usano API o pagine con dati (senza regex)
+# ---------------------------------------------------------------------------
+
+RUMORE_URL = re.compile(r'(images?\.|img\.|/static/|\.(png|jpe?g|gif|webp|svg|m3u8|mpd|ts)(\?|$)|ip-api\.com|thaudray|'
+                        r'googleapis\.com/youtube|gdata\.|theplatform\.com/data|license|/kenc|widevine)', re.I)
+
+
+def impronta(obj, prefisso='', prof=0, out=None):
+    """Insieme dei percorsi delle chiavi di una risposta JSON (le liste contano come un elemento)."""
+    out = set() if out is None else out
+    if len(out) > 600 or prof > 7:
+        return out
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            p = prefisso + '.' + str(k) if prefisso else str(k)
+            out.add(p)
+            impronta(v, p, prof + 1, out)
+    elif isinstance(obj, list):
+        for x in obj[:3]:
+            impronta(x, prefisso + '[]', prof + 1, out)
+    return out
+
+
+def chiavi_usate(src):
+    """Nomi di chiave che il canale legge: x['nome'] e x.get('nome')."""
+    usate = set()
+    try:
+        tree = ast.parse(src)
+    except SyntaxError:
+        return usate
+    for n in ast.walk(tree):
+        if isinstance(n, ast.Subscript):
+            sl = n.slice
+            if isinstance(sl, ast.Constant) and isinstance(sl.value, str):
+                usate.add(sl.value)
+        elif isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute) and n.func.attr == 'get' and n.args:
+            if isinstance(n.args[0], ast.Constant) and isinstance(n.args[0].value, str):
+                usate.add(n.args[0].value)
+    return usate
+
+
+def url_statici(src, host, menu):
+    """Indirizzi del canale che si possono chiamare senza parametri: menu e indirizzi scritti per intero."""
+    out = []
+    for rel, azione in menu:
+        if rel and rel.startswith('/') and '%' not in rel and '{' not in rel:
+            out.append(urljoin(host + '/', rel))
+    for m in re.finditer(r"['\"](https?://[A-Za-z0-9._~:/?#@!$&()*+,;=%-]+)['\"]", src):
+        u = m.group(1)
+        if u.endswith(('=', '/')) and '?' in u or '%s' in u or '%' in u or RUMORE_URL.search(u):
+            continue
+        out.append(u)
+    visti, ris = set(), []
+    for u in out:
+        if u not in visti and len(u) < 300:
+            visti.add(u)
+            ris.append(u)
+    return ris[:8]
+
+
+def leggi_risposta(testo):
+    """(tipo, struttura) di una risposta: json, pagina Inertia oppure html."""
+    t = (testo or '').lstrip()
+    if t[:1] in '{[':
+        try:
+            return 'json', json.loads(t)
+        except Exception:
+            pass
+    dp = g.inertia_da_html(testo)
+    if dp is not None:
+        props = {k: v for k, v in dp.get('props', {}).items() if k not in ('auth', 'flash', 'errors', 'ziggy', 'locale', 'locales')}
+        return 'inertia', props
+    return 'html', None
+
+
+def snapshot_path(nome):
+    return os.path.join(SNAP, nome + '.json')
+
+
+def verifica_profilo(nome, host, ris):
+    """Controlli scritti a mano (profili/<nome>.json) per i siti con pagine Inertia: percorsi e campi attesi."""
+    pf = os.path.join(PROFILI, nome + '.json')
+    if not os.path.exists(pf):
+        return None
+    prof = json.load(open(pf, encoding='utf-8'))
+    problemi = 0
+
+    def pagina(rel):
+        st, html, fin, mot = scarica(urljoin(host + '/', rel))
+        if st != 'ok':
+            return None, mot
+        dp = g.inertia_da_html(html)
+        return dp, ('' if dp else 'pagina senza dati Inertia')
+
+    for c in prof.get('controlli', []):
+        dp, err = pagina(c['url'])
+        lista = g.leggi(dp, c['percorso']) if dp else None
+        if not isinstance(lista, list) or not lista:
+            problemi += 1
+            ris['dettagli'].append('PROBLEMA: %s | %s non trova %s %s' % (c['nome'], c['url'], c['percorso'], err))
+            continue
+        if isinstance(lista[0], list):
+            lista = [x for sub in lista for x in sub]
+        el = lista[0] if isinstance(lista[0], dict) else {}
+        mancano = [k for k in c.get('campi', []) if k not in el]
+        if mancano:
+            problemi += 1
+            ris['dettagli'].append('PROBLEMA: %s | campi mancanti: %s | presenti: %s' % (c['nome'], mancano, sorted(el)[:20]))
+        else:
+            ris['dettagli'].append('OK: %s | %d titoli in %s' % (c['nome'], len(lista), c['percorso']))
+    sr = prof.get('serie')
+    if sr:
+        dp, err = pagina(sr['da'])
+        tit = [x for x in (g.leggi(dp, 'props.titles') or []) if isinstance(x, dict) and x.get('slug') and x.get('id')] if dp else []
+        if not tit:
+            problemi += 1
+            ris['dettagli'].append('PROBLEMA: nessuna serie trovata in %s per provare stagioni ed episodi' % sr['da'])
+        else:
+            u = '/it/titles/%s-%s' % (tit[0]['id'], tit[0]['slug'])
+            dp, err = pagina(u)
+            stg = g.leggi(dp, sr['percorso_stagioni']) if dp else None
+            if not isinstance(stg, list) or not stg:
+                problemi += 1
+                ris['dettagli'].append('PROBLEMA: stagioni non trovate in %s (%s)' % (u, sr['percorso_stagioni']))
+            else:
+                u2 = u + sr['stagione_url'].format(S=stg[0].get('number', 1))
+                dp2, err = pagina(u2)
+                eps = g.leggi(dp2, sr['percorso_episodi']) if dp2 else None
+                if not isinstance(eps, list) or not eps:
+                    problemi += 1
+                    ris['dettagli'].append('PROBLEMA: episodi non trovati in %s' % u2)
+                else:
+                    mc = [k for k in sr['campi_stagione'] if k not in stg[0]]
+                    me = [k for k in sr['campi_episodio'] if k not in eps[0]]
+                    if mc or me:
+                        problemi += 1
+                        ris['dettagli'].append('PROBLEMA: campi mancanti | stagione: %s | episodio: %s' % (mc, me))
+                    else:
+                        ris['dettagli'].append('OK: serie di esempio %s | %d stagioni, %d episodi nella prima' % (u, len(stg), len(eps)))
+    return problemi
+
+
+def controlla_api(nome, src, host, menu, ris):
+    """Canale senza regex: raggiungibilita, struttura dei dati e confronto con la rilevazione precedente."""
+    if not host:
+        ris.update(stato='SENZA INDIRIZZO', dettagli=['canale non attivo: non e in channels.json e non ha un indirizzo fisso nel file'])
+        return ris
+    st, html, finale, motivo = scarica(host + '/')
+    if st != 'ok':
+        # molte API rispondono solo agli indirizzi giusti: la home non basta per dire che e morto, se non e un errore di rete
+        if st == 'errore' and ('DNS' in motivo or 'rifiutata' in motivo):
+            ris.update(stato='IRRAGGIUNGIBILE', dettagli=['%s (%s)' % (motivo, host)])
+            return ris
+        ris['dettagli'].append('home %s: %s' % (host, motivo))
+    problemi = 0
+    p = verifica_profilo(nome, host, ris)
+    if p is not None:
+        problemi += p
+    usate = chiavi_usate(src)
+    try:
+        vecchio = json.load(open(snapshot_path(nome), encoding='utf-8'))
+    except Exception:
+        vecchio = None
+    nuovo = {}
+    controllati = 0
+    for u in url_statici(src, host, menu):
+        if p is not None and u.startswith(host):
+            continue  # gia coperto dai controlli del profilo
+        st, testo, fin, mot = scarica(u)
+        if st != 'ok':
+            nuovo[u] = {'stato': st, 'motivo': mot}
+            prima = (vecchio or {}).get(u)
+            if prima and prima.get('stato') == 'ok':
+                problemi += 1
+                ris['dettagli'].append('PROBLEMA: %s rispondeva e ora no (%s)' % (u[:90], mot))
+            else:
+                ris['dettagli'].append('non controllabile senza parametri: %s (%s)' % (u[:90], mot))
+            continue
+        tipo, dati = leggi_risposta(testo)
+        controllati += 1
+        voce = {'stato': 'ok', 'tipo': tipo}
+        if dati is not None:
+            voce['chiavi'] = sorted(impronta(dati))
+        else:
+            voce['dimensione'] = len(testo)
+        nuovo[u] = voce
+        prima = (vecchio or {}).get(u)
+        if prima and prima.get('chiavi') and voce.get('chiavi') is not None:
+            spariti = sorted(set(prima['chiavi']) - set(voce['chiavi']))
+            lette = [k for k in spariti if k.split('.')[-1].replace('[]', '') in usate]
+            if lette:
+                problemi += 1
+                ris['dettagli'].append('PROBLEMA: %s | chiavi sparite che il canale legge: %s' % (u[:90], ', '.join(lette[:8])))
+            elif spariti:
+                ris['dettagli'].append('attenzione: %s | chiavi sparite (non lette dal canale): %s' % (u[:90], ', '.join(spariti[:6])))
+            else:
+                ris['dettagli'].append('OK: %s | %s, struttura invariata' % (u[:90], tipo))
+        elif prima and prima.get('tipo') != tipo:
+            problemi += 1
+            ris['dettagli'].append('PROBLEMA: %s | il tipo di risposta e cambiato da %s a %s' % (u[:90], prima.get('tipo'), tipo))
+        else:
+            ris['dettagli'].append('OK: %s | %s%s' % (u[:90], tipo, ' (prima rilevazione, riferimento salvato)' if not vecchio else ''))
+    if nuovo and controllati:
+        os.makedirs(SNAP, exist_ok=True)
+        unito = dict(vecchio or {})
+        unito.update(nuovo)
+        json.dump(unito, open(snapshot_path(nome), 'w', encoding='utf-8'), indent=0, ensure_ascii=False, sort_keys=True)
+    if not controllati and p is None:
+        ris['stato'] = 'NON VERIFICATO'
+        ris['dettagli'].append('nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici')
+    else:
+        ris['stato'] = 'ROTTO' if problemi else 'OK'
+    return ris
+
+
 def controlla(nome, hosts, ripara=True):
     ris = {'canale': nome, 'stato': '', 'dettagli': [], 'correzione': False, 'host': host_di(nome, hosts)}
     percorso = os.path.join(BASE, nome + '.py')
@@ -375,9 +593,6 @@ def controlla(nome, hosts, ripara=True):
         funzioni, menu = leggi_canale(src)
     except SyntaxError as e:
         ris.update(stato='NON ANALIZZABILE', dettagli=['il file non e leggibile da Python 3: %s' % e])
-        return ris
-    if not funzioni:
-        ris.update(stato='NON REGEX', dettagli=['nessuna funzione con @support.scrape: canale a API o personalizzato, non controllato'])
         return ris
     host = ris['host']
     if nome in CERCA and 'def findhost' in src:
@@ -396,6 +611,8 @@ def controlla(nome, hosts, ripara=True):
     if not host:
         ris.update(stato='SENZA INDIRIZZO', dettagli=['canale non attivo: non e in channels.json e non ha un indirizzo fisso nel file'])
         return ris
+    if not funzioni:
+        return controlla_api(nome, src, host, menu, ris)
 
     # pagine da provare: indirizzi del menu per le funzioni con regex
     prove = []
