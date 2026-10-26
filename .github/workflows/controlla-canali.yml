@@ -88,7 +88,7 @@ jobs:
               d = json.load(open('correzioni/stato.json'))
           except Exception:
               d = []
-          bad = [x for x in d if x['stato'] in ('ROTTO', 'CORRETTO', 'DOMINIO PARCHEGGIATO')]
+          bad = [x for x in d if x['stato'] in ('ROTTO', 'CORRETTO', 'DOMINIO PARCHEGGIATO', 'BLOCCO ANTI BOT')]
           print(len(bad))
           PY
           )

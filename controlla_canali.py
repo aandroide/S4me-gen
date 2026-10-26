@@ -43,7 +43,7 @@ PROFILI = os.path.join(QUI, 'profili')
 OUT = os.environ.get('CANALI_OUT', os.path.join(QUI, 'correzioni'))
 UA = g.UA
 NOMI_REGEX = ('patron', 'patronBlock', 'patronNext', 'patronMenu')
-PARCHEGGIATO = re.compile(r'(domain (is )?for sale|domainname\.de/sale|sedo\.com|hugedomains|dominio in vendita|'
+PARCHEGGIATO = re.compile(r'(domain (is )?for sale|domainname\.de|abovedomains|forsale\.min|domain trading|sedo\.com|hugedomains|dominio in vendita|'
                           r'this domain (may be|is) for sale|parked (free|domain)|buy this domain|afternic)', re.I)
 SALTA = {'__init__'}
 
@@ -239,6 +239,7 @@ def prova_pagina(fn, html_norm):
     """Prova tutte le varianti di patronBlock e patron della funzione sulla pagina."""
     blocchi_testo = None
     risultati = {'blocchi': None, 'match': 0, 'varianti_ok': [], 'esempi': []}
+    fn = dict(fn, patronBlock=[b for b in fn['patronBlock'] if b['valore'] != ''])
     if fn['patronBlock']:
         blocchi_testo = []
         for b in fn['patronBlock']:
@@ -645,6 +646,20 @@ def controlla_api(nome, src, host, menu, ris):
     return ris
 
 
+def pagina_non_reale(html):
+    """Riconosce pagine che non sono il sito vero: dominio in vendita, sfida anti bot, redirect via script."""
+    mp = PARCHEGGIATO.search(html[:60000])
+    if mp:
+        return 'DOMINIO PARCHEGGIATO', 'la pagina sembra un dominio in vendita (frase "%s")' % mp.group(0)
+    n_link = len(re.findall(r'<a\s[^>]*href', html))
+    tit = re.search(r'<title[^>]*>(.*?)</title>', html, re.I | re.S)
+    t = (tit.group(1).strip().lower() if tit else '')
+    if len(html) < 20000 and n_link <= 3 and (t in ('redirecting...', 'just a moment...', 'attention required', '') or
+                                              re.search(r'atob\(|challenge|captcha|cf-chl|document\.write', html[:30000], re.I)):
+        return 'BLOCCO ANTI BOT', 'il sito risponde con una pagina di sfida o di redirect via script (titolo "%s", %d link, %d byte): non e un cambio di struttura' % (t[:30], n_link, len(html))
+    return None
+
+
 def controlla(nome, hosts, ripara=True):
     ris = {'canale': nome, 'stato': '', 'dettagli': [], 'correzione': False, 'host': host_di(nome, hosts)}
     percorso = os.path.join(BASE, nome + '.py')
@@ -668,7 +683,7 @@ def controlla(nome, hosts, ripara=True):
         if letterale:
             host = ris['host'] = letterale
             ris['dettagli'].append('indirizzo scritto nel canale: %s' % letterale)
-    if not host:
+    if not host and nome not in EXTRA_API:
         ris.update(stato='SENZA INDIRIZZO', dettagli=['canale non attivo: non e in channels.json e non ha un indirizzo fisso nel file'])
         return ris
     if not funzioni:
@@ -716,6 +731,7 @@ def controlla(nome, hosts, ripara=True):
     sostituzioni = []
     problemi = 0
     ok = 0
+    bloccate = []
     for azione, rel in prove:
         fn = funzioni[azione]
         url = urljoin(host + '/', rel)
@@ -725,6 +741,12 @@ def controlla(nome, hosts, ripara=True):
             continue
         norm = uniforma(html)
         r = prova_pagina(fn, norm)
+        if not r['match']:
+            falso = pagina_non_reale(html)
+            if falso:
+                bloccate.append(falso[0])
+                ris['dettagli'].append('%s %s: %s' % (azione, rel, falso[1]))
+                continue
         if r['match']:
             ok += 1
             ris['dettagli'].append('OK: %s %s | %d risultati' % (azione, rel, r['match']))
@@ -756,6 +778,18 @@ def controlla(nome, hosts, ripara=True):
             ris['dettagli'].append('  campione della pagina salvato in correzioni/%s/%s' % (nome, nf))
         except Exception:
             pass
+        if r['blocchi'] == 0 and fn['patronBlock'] and ripara and all(x['valore'] is not None for x in fn['patron']):
+            # il blocco non esiste piu ma le regex dei titoli potrebbero funzionare sull'intera pagina
+            try:
+                n_pag = max(len(re.findall(x['valore'], norm, re.I)) for x in fn['patron'])
+            except re.error:
+                n_pag = 0
+            if n_pag >= 3:
+                for bl in fn['patronBlock']:
+                    if bl['valore'] is not None:
+                        sostituzioni.append((bl['ini'], bl['fin'], "''"))
+                ris['dettagli'].append('  patronBlock rimosso: senza blocco le regex dei titoli trovano %d risultati sull\'intera pagina' % n_pag)
+                continue
         if not prop:
             ris['dettagli'].append('  nessuna regex sostitutiva trovata automaticamente in %s' % rel)
             continue
@@ -788,9 +822,12 @@ def controlla(nome, hosts, ripara=True):
 
     if problemi == 0 and ok:
         ris['stato'] = 'OK'
+    elif ok == 0 and problemi == 0 and bloccate:
+        ris['stato'] = bloccate[0]
     elif ok == 0 and problemi == 0:
         ris['stato'] = 'NON VERIFICATO'
     elif sostituzioni:
+        sostituzioni = list({(i, f): (i, f, t) for i, f, t in sostituzioni}.values())
         nuovo_src = applica(src, sostituzioni)
         try:
             ast.parse(nuovo_src)
@@ -833,7 +870,7 @@ def carica_hosts():
 
 
 def riepilogo(risultati):
-    ordine = ['CORRETTO', 'ROTTO', 'DOMINIO PARCHEGGIATO', 'IRRAGGIUNGIBILE', 'CLOUDFLARE', 'NON VERIFICATO', 'OK',
+    ordine = ['CORRETTO', 'ROTTO', 'DOMINIO PARCHEGGIATO', 'BLOCCO ANTI BOT', 'IRRAGGIUNGIBILE', 'CLOUDFLARE', 'NON VERIFICATO', 'OK',
               'NON REGEX', 'SENZA INDIRIZZO', 'NON ANALIZZABILE', 'TEMPO SCADUTO', 'ERRORE']
     r = ['# Controllo dei canali', '']
     conta = {}
