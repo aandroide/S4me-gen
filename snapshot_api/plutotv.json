@@ -1,0 +1,33 @@
+{
+"https://api.pluto.tv": {
+"motivo": "HTTP 404",
+"stato": "errore"
+},
+"https://boot.pluto.tv/v4/start": {
+"motivo": "HTTP 400",
+"stato": "errore"
+},
+"https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv": {
+"motivo": "HTTP 404",
+"stato": "errore"
+},
+"https://cfd-v4-service-stitcher-dash-use1-1.prd.pluto.tv": {
+"motivo": "HTTP 404",
+"stato": "errore"
+},
+"https://pluto.tv": {
+"dimensione": 559722,
+"stato": "ok",
+"tipo": "html"
+},
+"https://pluto.tv/": {
+"dimensione": 559758,
+"stato": "ok",
+"tipo": "html"
+},
+"https://pluto.tv/it/live-tv/": {
+"dimensione": 863938,
+"stato": "ok",
+"tipo": "html"
+}
+}
