@@ -132,6 +132,27 @@ def gruppi_di(patron):
 _cache = {}
 
 
+def via_flaresolverr(url):
+    """Pagina scaricata da FlareSolverr (un browser vero che supera la challenge di Cloudflare), una alla volta."""
+    import fcntl
+    ep = os.environ.get('FLARESOLVERR_URL', '').rstrip('/')
+    if not ep:
+        return None
+    with open('/tmp/controlla_canali_flaresolverr.lock', 'w') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        try:
+            r = requests.post(ep + '/v1', json={'cmd': 'request.get', 'url': url, 'maxTimeout': 60000}, timeout=90).json()
+        except Exception as e:
+            return ('errore', '', url, 'FlareSolverr non raggiungibile: ' + str(e)[:60])
+    if r.get('status') != 'ok':
+        return ('cloudflare', '', url, 'FlareSolverr non ha superato la challenge: ' + str(r.get('message'))[:80])
+    sol = r.get('solution', {})
+    html = sol.get('response', '')
+    if 'just a moment' in html[:5000].lower() or sol.get('status', 200) >= 400 and len(html) < 500:
+        return ('cloudflare', '', sol.get('url', url), 'FlareSolverr: la challenge resta (HTTP %s)' % sol.get('status'))
+    return ('ok', html[:1500000], sol.get('url', url), 'HTTP %s (FlareSolverr)' % sol.get('status'))
+
+
 def scarica(url):
     """(stato, html, url finale, motivo). Stato: ok, cloudflare, errore."""
     if url in _cache:
@@ -155,6 +176,9 @@ def scarica(url):
         if r.headers.get('cf-mitigated') == 'challenge' or 'just a moment' in bassa or \
                 (r.status_code in (403, 503) and 'cloudflare' in (r.headers.get('server', '') + bassa).lower()):
             ris = ('cloudflare', '', r.url, 'protetto da Cloudflare, richiede il browser')
+            fs = via_flaresolverr(url)
+            if fs:
+                ris = fs
             break
         if r.status_code >= 400 and len(t) < 500:
             ris = ('errore', '', r.url, 'HTTP %d' % r.status_code)
@@ -292,6 +316,8 @@ def controlla(nome, hosts, ripara=True):
     if PARCHEGGIATO.search(html[:60000]) or len(g.soup_di(html).find_all('a', href=True)) < 3:
         ris.update(stato='DOMINIO PARCHEGGIATO', dettagli=['la home di %s sembra un dominio in vendita o vuoto' % host])
         return ris
+    if 'FlareSolverr' in motivo:
+        ris['dettagli'].append('sito protetto da Cloudflare: pagine scaricate con FlareSolverr')
     nuovo = '{}://{}'.format(urlparse(finale).scheme, urlparse(finale).netloc)
     if urlparse(finale).netloc.replace('www.', '') != urlparse(host).netloc.replace('www.', ''):
         ris['dettagli'].append('il sito reindirizza a un altro indirizzo: %s (in channels.json c\'e %s)' % (nuovo, host))

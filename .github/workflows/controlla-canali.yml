@@ -21,7 +21,7 @@ permissions:
 jobs:
   controlla:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -42,15 +42,23 @@ jobs:
             git pull --rebase origin ${{ github.ref_name }} || true
             git push || true
           fi
+      - name: Avvia FlareSolverr
+        run: |
+          docker run -d --name flaresolverr -p 8191:8191 -e LANG=en-US ghcr.io/flaresolverr/flaresolverr:latest
+          for i in $(seq 1 30); do
+            curl -s http://localhost:8191 > /dev/null && break
+            sleep 2
+          done
       - name: Controllo
         env:
+          FLARESOLVERR_URL: http://localhost:8191
           CANALI: ${{ github.event.inputs.canali }}
           RIPARARE: ${{ github.event.inputs.riparare }}
         run: |
           OPZ=""
           if [ "$RIPARARE" = "false" ]; then OPZ="--senza-riparare"; fi
           rm -rf correzioni
-          python3 controlla_canali.py $OPZ $CANALI
+          python3 controlla_canali.py $OPZ --tempo 600 $CANALI
       - name: Salva il rapporto
         run: |
           git config user.name aandroide
