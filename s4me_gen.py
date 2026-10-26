@@ -1463,7 +1463,10 @@ def episodios(item):
     support.info(item)
     action = 'findvideos'
 __STAGIONE__    patron = __PATRONEP__
-__PATRONB__    #debug = True
+__PATRONB__    if '(?P<episode>' in patron and '(?P<season>' not in patron and not item.season:
+        # nessuna stagione nel sito: una sola, cosi S4Me mostra 1x01 e cerca i titoli degli episodi su TMDB
+        item.season = '1'
+    #debug = True
 
     def itemHook(it):
         # senza season sull'episodio S4Me salta la ricerca dei titoli su TMDB
@@ -1486,13 +1489,11 @@ __PATRONB__    #debug = True
     return locals()
 
 '''.replace('__STAGIONE__', (
-            "    # nessuna stagione nella lista: una sola, cosi S4Me mostra 1x01 e cerca i titoli degli episodi su TMDB\n"
-            "    if not item.season:\n        item.season = '1'\n"
             "    # titolo e anno servono a TMDB: se la lista non ha l'anno lo cerco nella pagina della serie\n"
             "    if not item.infoLabels.get('year'):\n"
             "        anno = support.match(item.url, patron=r'(?:years=|[Aa]nno|[Uu]scita|[Yy]ear|[Rr]elease)[^<]{0,60}?((?:19|20)\\d{2})').match\n"
             "        if anno:\n            item.infoLabels['year'] = anno\n"
-            if '(?P<episode>' in ctx['patron_ep'] and '(?P<season>' not in ctx['patron_ep'] else '')).replace('__PATRONEP__', raw(ctx['patron_ep'])).replace('__PATRONB__', (
+            if '(?P<episode>' in ctx['patron_ep'] + (ctx.get('patron_ep_b') or '') and '(?P<season>' not in ctx['patron_ep'] else '')).replace('__PATRONEP__', raw(ctx['patron_ep'])).replace('__PATRONB__', (
             "    if not re.search(r'/[^/]*\\d+/?$', item.url):\n        patron = " + raw(ctx['patron_ep_b']) + "\n") if ctx.get('patron_ep_b') else '')
     # ricerca
     r = ctx['ricerca']
