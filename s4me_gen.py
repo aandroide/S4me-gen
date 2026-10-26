@@ -1521,6 +1521,16 @@ def search(item, text):
         if pl.get('playlist'):
             play = ("    base_e, _, q = embed.partition('?')\n"
                     "    testi.append(httptools.downloadpage(base_e + '%s' + ('?' + q if q else ''), headers=ref).data)\n" % pl['playlist'])
+            if pl.get('cifrato'):
+                play += ("    try:\n"
+                         "        r = base64.b64decode(json.loads(str(testi[-1])).get('d'))\n"
+                         "        for chiave in re.findall(r'(?:^|[?&])[^=&]+=([^&]+)', q):\n"
+                         "            t = ''.join(chr(c ^ ord(chiave[n % len(chiave)])) for n, c in enumerate(r))\n"
+                         "            if t.startswith('http'):\n"
+                         "                testi.insert(0, t)\n"
+                         "                break\n"
+                         "    except Exception:\n"
+                         "        pass\n")
         cod += '''
 
 def findvideos(item):
@@ -2803,6 +2813,23 @@ def patron_episodio(eps):
     return pt
 
 
+def decodifica_playlist(body, embed):
+    """Playlist del tipo {"d": base64, ...}: l'indirizzo e cifrato con XOR ciclico usando un parametro (token) dell'iframe."""
+    import base64
+    try:
+        d = json.loads(body).get('d')
+        if not d:
+            return ''
+        raw_ = base64.b64decode(d)
+    except BaseException:
+        return ''
+    for chiave in re.findall(r'(?:^|[?&])[^=&]+=([^&]+)', embed):
+        t = ''.join(chr(c ^ ord(chiave[n % len(chiave)])) for n, c in enumerate(raw_))
+        if t.startswith('http'):
+            return t
+    return ''
+
+
 def esplora_catena(s, det, primo, base, args, rp, cattura, ctx):
     """Segue i link da una scheda fino alla lista episodi e al player, e capisce come ricavare il video."""
     visti = []
@@ -2901,13 +2928,21 @@ def esplora_catena(s, det, primo, base, args, rp, cattura, ctx):
         pu = urlparse(e['url'])
         if e['url'] == embed or PUBBLICITA.search(e['url']) or e.get('status') != 200 or not e.get('body'):
             continue
-        if e.get('tipo') in ('fetch', 'xhr') and pu.netloc == eu.netloc and pu.path.startswith(eu.path.rstrip('/') + '/') \
+        if e.get('tipo') in ('fetch', 'xhr') and pu.netloc.replace(':80', '').replace(':443', '') == eu.netloc.replace(':80', '').replace(':443', '') and pu.path.startswith(eu.path.rstrip('/') + '/') \
                 and pu.path != eu.path:
             m = re.search(r'https?:(?:\\?/){2}[^"\'\s<>\\]+?\.(?:mp4|m3u8)[^"\'\s<>]*', e['body'])
             if m:
                 player['playlist'] = pu.path[len(eu.path.rstrip('/')):]
                 video = m.group(0).replace('\\/', '/')
                 rp('Elenco dei file video:', e['url'][:120], '| suffisso rispetto all\'iframe:', player['playlist'])
+                break
+            dec = decodifica_playlist(e['body'], embed)
+            if dec:
+                player['playlist'] = pu.path[len(eu.path.rstrip('/')):]
+                player['cifrato'] = True
+                video = dec
+                rp('Elenco dei file video CIFRATO (base64 e XOR con un parametro dell\'iframe):', e['url'][:120],
+                   '| suffisso rispetto all\'iframe:', player['playlist'])
                 break
     if not video:
         for e in pl['net']:
