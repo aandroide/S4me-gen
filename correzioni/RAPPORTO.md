@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 1, ROTTO 8, DOMINIO PARCHEGGIATO 6, IRRAGGIUNGIBILE 8, CLOUDFLARE 4, NON VERIFICATO 1, OK 5, NON REGEX 13, SENZA INDIRIZZO 10, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 1, ROTTO 9, DOMINIO PARCHEGGIATO 7, IRRAGGIUNGIBILE 8, NON VERIFICATO 1, OK 7, NON REGEX 13, SENZA INDIRIZZO 10, TEMPO SCADUTO 1
 
 ## CORRETTO (1)
 
@@ -12,7 +12,7 @@ Sito: https://guardaseriex.icu
 - file corretto scritto in correzioni/guardaseriecam: 1 pagine su 1 ora trovano titoli
 - riga per channels.json: "guardaseriecam": "https://guardaseriex.best",
 
-## ROTTO (8)
+## ROTTO (9)
 
 ### animealtadefinizione
 Sito: https://www.domainname.de
@@ -71,6 +71,17 @@ Sito: https://eurostream.fun
 -   nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi-nuovi/
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
 
+### eurostreaming_actor
+Sito: https://eurostreaming.ooo
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://eurostreaming.ooo)
+- ROTTO: peliculas /animazione/ | patron non trova titoli
+-   regex proposta: 1040 titoli su 1037 card | gruppi persi: episode, lang, title2
+-   non applicata al file: la funzione ha piu varianti di regex
+- ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli
+-   nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi/
+- riga per channels.json: "eurostreaming_actor": "https://guardaseriex.best",
+
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.garden
 - il sito reindirizza a un altro indirizzo: https://il-geniodellostreaming.ink (in channels.json c'e https://il-geniodellostreaming.garden)
@@ -89,7 +100,7 @@ Sito: https://tanti-film.fun
 -   nessuna regex sostitutiva trovata automaticamente in /serie-tv/
 - riga per channels.json: "tantifilm": "https://tanti-film.garden",
 
-## DOMINIO PARCHEGGIATO (6)
+## DOMINIO PARCHEGGIATO (7)
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live
@@ -106,6 +117,10 @@ Sito: https://cinemalibero.cafe
 ### filmpertutti
 Sito: https://filmpertuttiiii.nuovo.live
 - la home di https://filmpertuttiiii.nuovo.live sembra un dominio in vendita o vuoto
+
+### lordchannel
+Sito: https://lordchannel.net
+- la home di https://lordchannel.net sembra un dominio in vendita o vuoto
 
 ### serietvu
 Sito: http://ww1.serietvu.live
@@ -149,30 +164,12 @@ Sito: http://ww25.mondoserietv.club
 Sito: https://piratestreaming.design
 - HTTPSConnectionPool(host='piratestreaming.design', port=443): Max retries exceeded with url: / (Caus (https://piratestreaming.design)
 
-## CLOUDFLARE (4)
-
-### eurostreaming_actor
-Sito: https://eurostreaming.ooo
-- protetto da Cloudflare, richiede il browser (https://eurostreaming.ooo)
-
-### hd4me
-Sito: https://hd4me.net
-- protetto da Cloudflare, richiede il browser (https://hd4me.net)
-
-### lordchannel
-Sito: https://lordchannel.net
-- protetto da Cloudflare, richiede il browser (https://lordchannel.net)
-
-### toonitalia
-Sito: https://toonitalia.xyz
-- protetto da Cloudflare, richiede il browser (https://toonitalia.xyz)
-
 ## NON VERIFICATO (1)
 
 ### paramount
 Sito: https://www.mtv.com
 
-## OK (5)
+## OK (7)
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.autos
@@ -207,6 +204,22 @@ Sito: https://casa-cinema.boats
 - OK: peliculas /film | 16 risultati
 - OK: peliculas /serie-tv | 16 risultati
 - OK: peliculas /miniserie-tv | 16 risultati
+
+### hd4me
+Sito: https://hd4me.net
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- OK: peliculas /index | 11139 risultati
+
+### toonitalia
+Sito: https://toonitalia.xyz
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- OK: peliculas /category/anime | 400 risultati
+- OK: peliculas /anime-ita | 2768 risultati
+- attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
+- OK: peliculas /contatti | 822 risultati
+- attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
+- OK: peliculas /film-animazione | 1626 risultati
+- attenzione: peliculas /film-animazione, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 
 ## NON REGEX (13)
 
@@ -308,5 +321,5 @@ Sito: n.d.
 
 ### cineblog01
 Sito: https://cb01official.uno
-- il controllo di questo canale ha superato 150 secondi (sito lento o pagina enorme)
+- il controllo di questo canale ha superato 600 secondi (sito lento o pagina enorme)
 

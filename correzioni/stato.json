@@ -255,7 +255,7 @@
   "host": "https://cb01official.uno",
   "correzione": false,
   "dettagli": [
-   "il controllo di questo canale ha superato 150 secondi (sito lento o pagina enorme)"
+   "il controllo di questo canale ha superato 600 secondi (sito lento o pagina enorme)"
   ]
  },
  {
@@ -493,12 +493,51 @@
  },
  {
   "canale": "eurostreaming_actor",
-  "stato": "CLOUDFLARE",
+  "stato": "ROTTO",
   "dettagli": [
-   "protetto da Cloudflare, richiede il browser (https://eurostreaming.ooo)"
+   "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
+   "il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://eurostreaming.ooo)",
+   "ROTTO: peliculas /animazione/ | patron non trova titoli",
+   "  regex proposta: 1040 titoli su 1037 card | gruppi persi: episode, lang, title2",
+   "  non applicata al file: la funzione ha piu varianti di regex",
+   "ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli",
+   "  nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi/"
   ],
   "correzione": false,
-  "host": "https://eurostreaming.ooo"
+  "host": "https://eurostreaming.ooo",
+  "nuovo_host": "https://guardaseriex.best",
+  "proposte": [
+   {
+    "funzione": "peliculas",
+    "pagina": "/animazione/",
+    "patron": "<div[^>]*class=\"movieItem\"(?:(?!<div[^>]*class=\"movieItem\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"movieItem\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"movieItem\").)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div[^>]*class=\"movieItem\").)*?<div[^>]*class=\"movieItem\\-title\\ text\\-truncate\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
+    "esempi": [
+     {
+      "url": "https://guardaseriex.best/animazione/3209-helluva-boss.html",
+      "thumb": "/uploads/immagini/tt10691770.webp",
+      "year": "2020",
+      "title": "Helluva Boss"
+     },
+     {
+      "url": "https://guardaseriex.best/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html",
+      "thumb": "/uploads/immagini/tt2580046.webp",
+      "year": "2015",
+      "title": "Miraculous - Le storie di Ladybug e Chat Noir"
+     },
+     {
+      "url": "https://guardaseriex.best/animazione/5811-get-jiro-streaming.html",
+      "thumb": "/uploads/immagini/tt33406999.webp",
+      "year": "2026",
+      "title": "GET JIRO"
+     }
+    ],
+    "perse": [
+     "episode",
+     "lang",
+     "title2"
+    ]
+   }
+  ]
  },
  {
   "canale": "filmpertutti",
@@ -579,9 +618,10 @@
  },
  {
   "canale": "hd4me",
-  "stato": "CLOUDFLARE",
+  "stato": "OK",
   "dettagli": [
-   "protetto da Cloudflare, richiede il browser (https://hd4me.net)"
+   "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
+   "OK: peliculas /index | 11139 risultati"
   ],
   "correzione": false,
   "host": "https://hd4me.net"
@@ -689,9 +729,9 @@
  },
  {
   "canale": "lordchannel",
-  "stato": "CLOUDFLARE",
+  "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "protetto da Cloudflare, richiede il browser (https://lordchannel.net)"
+   "la home di https://lordchannel.net sembra un dominio in vendita o vuoto"
   ],
   "correzione": false,
   "host": "https://lordchannel.net"
@@ -818,9 +858,16 @@
  },
  {
   "canale": "toonitalia",
-  "stato": "CLOUDFLARE",
+  "stato": "OK",
   "dettagli": [
-   "protetto da Cloudflare, richiede il browser (https://toonitalia.xyz)"
+   "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
+   "OK: peliculas /category/anime | 400 risultati",
+   "OK: peliculas /anime-ita | 2768 risultati",
+   "attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
+   "OK: peliculas /contatti | 822 risultati",
+   "attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
+   "OK: peliculas /film-animazione | 1626 risultati",
+   "attenzione: peliculas /film-animazione, patronNext non trova la pagina successiva (puo essere l'ultima pagina)"
   ],
   "correzione": false,
   "host": "https://toonitalia.xyz"
