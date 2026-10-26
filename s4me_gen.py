@@ -801,6 +801,8 @@ def trova_elenco_api(net):
             ris, _ = scegli_chiavi(dicts[0])
             if 'title' not in ris or not ris.get('ids'):
                 continue
+            if e.get('inertia') and not (ris.get('type') or ris.get('year') or ris.get('thumb')):
+                continue  # nei dati di pagina Inertia servono segni di un vero titolo (tipo, anno o locandina)
             titolati = sum(1 for x in dicts if scegli_chiavi(x)[0].get('title'))
             if titolati < 0.6 * len(dicts):
                 continue
@@ -2833,6 +2835,12 @@ def analizza(url, args):
                 except BaseException:
                     continue
                 a_s = trova_elenco_api(r2['net'])
+                rp('Ricerca provata:', base + cand_r, '| url finale:', r2['url'][:100], '| elenco:',
+                   a_s['path'] if a_s else 'nessuno', '| chiamate JSON:',
+                   [x['url'][:80] for x in r2['net'] if 'json' in x.get('ct', '') and not RUMORE.search(x['url'])][:6])
+                cattura.setdefault('ricerca_prove', []).append(
+                    {'url': r2['url'], 'net': [{k: (str(v)[:3000] if k == 'body' else v) for k, v in x.items() if k != '_resp'}
+                                               for x in r2['net'] if 'json' in x.get('ct', '') and not RUMORE.search(x['url'])]})
                 if a_s and any('matrix' in str(appiattisci(x).get(a_s['chiavi'].get('title', ''), '')).lower() for x in a_s['lista']):
                     ctx['search_api'] = (a_s['entry']['url'] if not a_s['entry'].get('inertia') and 'matrix' in a_s['entry']['url'].lower()
                                          else base + cand_r)
