@@ -523,7 +523,10 @@ def _tagre(tag, attrs_extra=''):
     cl = tag.get('class')
     parte = '<' + tag.name
     if cl:
-        parte += r'(?=[^>]*class="' + re.escape(' '.join(cl)) + '")'
+        # ogni classe e un elemento a parte: l'ordine e le classi in piu (is-current, active...) non devono contare
+        scelte = sorted(cl, key=lambda x: -len(x))[:3]
+        for t in sorted(scelte, key=cl.index):
+            parte += r'(?=[^>]*class="(?:[^"]*\s)?' + re.escape(t) + r'(?:\s[^"]*)?")'
     return parte + attrs_extra
 
 
@@ -617,7 +620,8 @@ def trova_next(soup):
         testo = a.get_text(' ', strip=True)
         cl = ' '.join(a.get('class', []))
         aria = a.get('aria-label', '') + ' ' + a.get('title', '')
-        if re.search(r'(next|success|avanti|prossim)', cl + ' ' + aria, re.I) or \
+        paginata = re.search(r'(page|pagina|paged|[?&]p=|[?&]pg=|/\d+/?$)', a['href'], re.I)
+        if (paginata and re.search(r'(next|success|avanti|prossim)', cl + ' ' + aria, re.I)) or \
                 re.fullmatch(r'(»|›|>|>>|Avanti|Successiv[ao]|Next|Pagina successiva)', testo or '', re.I):
             if a['href'] in ('#', '') or a['href'].startswith('javascript'):
                 continue
@@ -685,7 +689,7 @@ def trova_episodi(soup):
     """Sulla pagina di dettaglio cerca un gruppo di link che sembrano episodi."""
     cand = {}
     for a in soup.find_all('a', href=True):
-        t = a.get_text(' ', strip=True)
+        t = a.get_text(' ', strip=True) + ' ' + (a.get('title') or '')
         if re.search(r'(\d+\s*[x×]\s*\d+|episod|\bS\d+\s*E\d+|\bep\.?\s*\d+)', t, re.I):
             cand.setdefault(firma(a), []).append(a)
     best = max(cand.values(), key=len) if cand else None
@@ -1405,6 +1409,8 @@ def genera_menu(voci, tipo_default):
     film, serie, anime, top = [], [], [], []
     for nome, full in voci:
         t = tipo_da_testo(nome)
+        if t == 'movie' and not re.search(r'(film|movie|cinema)', nome, re.I):
+            t = tipo_default
         path = urlparse(full).path + (('?' + urlparse(full).query) if urlparse(full).query else '')
         riga = "('%s', ['%s', 'peliculas', '', '%s'])" % (nome.replace("'", ''), path, t)
         top.append(riga)
@@ -1439,7 +1445,15 @@ def peliculas(item):
         cod = cod.replace('__AZIONE__', 'episodios' if ctx['episodi'] and ctx['tipo'] == 'tvshow' else 'findvideos')
     cod = cod.replace('__PATRON__', raw(ctx['patron']))
     cod += '''    #debug = True  # apre regex101 con pagina e regex
-    return locals()
+'''
+    if ctx.get('regola_serie') and ctx['episodi']:
+        cod += '''
+    def itemHook(item):
+        # la scheda puo puntare a un episodio: la lista episodi sta nella pagina del titolo
+        item.url = re.sub(__RS0__, __RS1__, item.url)
+        return item
+'''.replace('__RS0__', raw(ctx['regola_serie'][0])).replace('__RS1__', raw(ctx['regola_serie'][1]))
+    cod += '''    return locals()
 
 '''
     if ctx['episodi']:
@@ -1449,10 +1463,11 @@ def episodios(item):
     support.info(item)
     action = 'findvideos'
     patron = __PATRONEP__
-    #debug = True
+__PATRONB__    #debug = True
     return locals()
 
-'''.replace('__PATRONEP__', raw(ctx['patron_ep']))
+'''.replace('__PATRONEP__', raw(ctx['patron_ep'])).replace('__PATRONB__', (
+            "    if not re.search(r'/[^/]*\\d+/?$', item.url):\n        patron = " + raw(ctx['patron_ep_b']) + "\n") if ctx.get('patron_ep_b') else '')
     # ricerca
     r = ctx['ricerca']
     if r and r.get('url_modello'):
@@ -1484,6 +1499,50 @@ def search(item, text):
         return []
 
 '''
+    if ctx.get('player'):
+        pl = ctx['player']
+        hop = ''
+        if ctx.get('hop'):
+            hop = "    url = url.replace('/%s/', '/%s/', 1)\n" % (ctx['hop'][0], ctx['hop'][1])
+        play = ''
+        if pl.get('playlist'):
+            play = ("    base_e, _, q = embed.partition('?')\n"
+                    "    testi.append(httptools.downloadpage(base_e + '%s' + ('?' + q if q else ''), headers=ref).data)\n" % pl['playlist'])
+        cod += '''
+
+def findvideos(item):
+    support.info(item)
+    itemlist = []
+    # la pagina dell'episodio contiene l'iframe del player; il video si legge dalle risposte del player
+    url = item.url
+__HOP__    data = httptools.downloadpage(url, headers=headers).data
+    embed = support.match(data, patron=__IFRAME__).match
+    if not embed:
+        return support.server(item, data=data, headers=headers)
+    embed = embed.replace('&amp;', '&')
+    if embed.startswith('//'):
+        embed = 'https:' + embed
+    origine = re.match(r'https?://[^/]+', embed).group(0)
+    ref = [['Referer', host + '/']]
+    testi = []
+__PLAY__    testi.append(httptools.downloadpage(embed, headers=ref).data)
+    visti = []
+    for t in testi:
+        t = str(t).replace('\\\\/', '/')
+        for u in re.findall(r'https?://[^"\\'\\s<>\\\\]+?\\.(?:mp4|m3u8)[^"\\'\\s<>\\\\]*', t):
+            u = u.replace('&amp;', '&')
+            if u not in visti:
+                visti.append(u)
+        if visti:
+            break
+    for u in visti:
+        itemlist.append(item.clone(action='play', title=support.config.get_localized_string(30137), server='directo',
+                                   url=u + '|Referer=' + origine + '/'))
+    if not itemlist:
+        return support.server(item, data=embed, headers=ref)
+    return support.server(item, itemlist=itemlist)
+'''.replace('__HOP__', hop).replace('__IFRAME__', raw(pl['iframe_re'])).replace('__PLAY__', play)
+        return cod
     cod += '''
 def findvideos(item):
     support.info(item)
@@ -2631,6 +2690,229 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
             rp('Riproduzione di un episodio rilevata (stessa sorgente del film).')
         break
 
+# ---------------------------------------------------------------------------
+# Catena scheda, dettaglio, episodio, player (siti HTML)
+# ---------------------------------------------------------------------------
+
+PUBBLICITA = re.compile(r'(a-ads|doubleclick|googlesyndication|adsystem|adnxs|popads|propeller|clickadu|exoclick|'
+                        r'google|facebook|twitter|disqus|recaptcha|cloudflare)', re.I)
+EP_TOKEN = re.compile(r'(?:^|[-_/])(?:ep(?:isod\w*)?[-_]?\d+|\d+x\d+|s\d+e\d+)$', re.I)
+
+
+def segmenti(url):
+    return [x for x in urlparse(url).path.split('/') if x]
+
+
+def e_episodio(url):
+    sg = segmenti(url)
+    return bool(sg and EP_TOKEN.search(sg[-1]))
+
+
+def iframe_player(soup):
+    """Iframe che sembrano il player (quelli pubblicitari sono esclusi), i piu probabili per primi."""
+    out = []
+    for i in soup.find_all('iframe'):
+        src = i.get('src') or i.get('data-src') or ''
+        if not src or src.startswith(('about:', 'javascript')) or PUBBLICITA.search(src):
+            continue
+        punti = 0
+        testo = ' '.join([src, i.get('id') or '', ' '.join(i.get('class') or [])])
+        if re.search(r'(embed|player|video|watch|stream)', testo, re.I):
+            punti += 2
+        if i.get('allowfullscreen') is not None:
+            punti += 1
+        out.append((punti, i))
+    out.sort(key=lambda x: -x[0])
+    return [i for _, i in out]
+
+
+def prossimi_link(soup, url_pagina, base, visti):
+    """Link della pagina che portano a un'altra pagina dello stesso titolo (dettaglio, episodio...)."""
+    slug = [x for x in segmenti(url_pagina) if len(x) >= 6]
+    cand = []
+    for a in soup.find_all('a', href=True):
+        h = urljoin(url_pagina, a['href']).split('#')[0]
+        pu = urlparse(h)
+        if pu.netloc.replace('www.', '') != urlparse(base).netloc.replace('www.', ''):
+            continue
+        if h in visti or h.rstrip('/') == url_pagina.rstrip('/'):
+            continue
+        sg = segmenti(h)
+        if not any(x in sg for x in slug):
+            continue
+        punti = 2 if e_episodio(h) == e_episodio(url_pagina) else 0
+        if e_episodio(h) and e_episodio(url_pagina) and sg[-1] == segmenti(url_pagina)[-1]:
+            punti += 2
+        cand.append((punti, h))
+    out = []
+    for _, h in sorted(cand, key=lambda x: -x[0]):
+        if h not in out:
+            out.append(h)
+    return out
+
+
+def regola_sostituzione(src, dst):
+    """Se dst e src differiscono per un solo segmento del percorso, ritorna (da, a)."""
+    s1, d1 = segmenti(src), segmenti(dst)
+    if len(s1) != len(d1):
+        return None
+    diff = [(x, y) for x, y in zip(s1, d1) if x != y]
+    return diff[0] if len(diff) == 1 else None
+
+
+def regola_serie(card_url, serie_url):
+    """Regex che porta l'url di una scheda (a volte un episodio) alla pagina con la lista episodi."""
+    s1, d1 = segmenti(card_url), segmenti(serie_url)
+    comuni = [x for x in d1 if x in s1 and len(x) >= 6]
+    if not comuni or s1 == d1:
+        return None
+    i_s, i_d = s1.index(comuni[0]), d1.index(comuni[0])
+    pre_s, pre_d = s1[:i_s], d1[:i_d]
+    if len(pre_s) != 1 or len(pre_d) != 1:
+        return None
+    coda = s1[i_s + 1:]
+    if len(coda) > 1:
+        return None
+    pre = '|'.join(re.escape(x) for x in dict.fromkeys([pre_s[0], pre_d[0]]))
+    cod = ''
+    if coda:
+        cod = '(?:/' + re.sub(r'\d+', lambda m: r'\d+', re.escape(coda[0])) + ')?'
+    return (r'/(?:%s)/([^/]+)%s/?$' % (pre, cod), r'/%s/\1' % pre_d[0])
+
+
+def patron_episodio(eps):
+    ep0 = eps[len(eps) // 2]
+    pt = (_tagre(ep0) + r'[^>]*?href="(?P<url>[^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)\s*<') \
+        if ep0.name == 'a' else r'<a [^>]*?href="(?P<url>[^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)\s*<'
+    pt = pt.replace('<a<', '<a')
+    if re.fullmatch(r'\d{1,4}', ep0.get_text(' ', strip=True)):
+        pt = pt.replace(r'(?P<title>[^<]+?)', r'(?P<episode>\d+)', 1)
+    return pt
+
+
+def esplora_catena(s, det, primo, base, args, rp, cattura, ctx):
+    """Segue i link da una scheda fino alla lista episodi e al player, e capisce come ricavare il video."""
+    visti = []
+    coda_pagine = [primo]
+    ep_url = None
+    serie_url = None
+    eps_serie = None
+    page = det
+    while coda_pagine and len(visti) < 5:
+        u = coda_pagine.pop(0)
+        if u in visti:
+            continue
+        if page is None or page['url'].rstrip('/') != u.rstrip('/'):
+            try:
+                page = s.vai(u, attesa=args.attesa)
+            except BaseException as ex:
+                rp('Catena: pagina non aperta', u, str(ex)[:80])
+                page = None
+                continue
+        visti.append(u)
+        if page['url'] not in visti:
+            visti.append(page['url'])
+        sp = soup_di(page['html'])
+        eps = trova_episodi(sp)
+        ifr = iframe_player(sp)
+        rp('Catena:', page['url'][:110], '| episodi:', len(eps) if eps else 0, '| iframe del player:', len(ifr))
+        if eps and not eps_serie:
+            eps_serie, serie_url = eps, page['url']
+        if ifr and not ep_url:
+            ep_url = page['url']
+        if eps_serie and ep_url:
+            break
+        for h in prossimi_link(sp, page['url'], base, visti)[:3]:
+            if h not in coda_pagine:
+                coda_pagine.append(h)
+        page = None
+    if eps_serie:
+        ctx['episodi'] = eps_serie
+        ctx['patron_ep'] = patron_episodio(eps_serie)
+        ctx['tipo'] = 'tvshow' if not args.tipo else args.tipo
+        rp('Lista episodi su', serie_url, '|', len(eps_serie), 'episodi')
+        if urlparse(primo).path != urlparse(serie_url).path:
+            sost = regola_sostituzione(primo, serie_url)
+            if sost:
+                r = (r'/%s/' % re.escape(sost[0]), '/%s/' % sost[1])
+            else:
+                r = regola_serie(primo, serie_url)
+            if r:
+                ctx['regola_serie'] = r
+                rp('Le schede portano a', urlparse(primo).path, 'ma la lista episodi sta su', urlparse(serie_url).path,
+                   '| regola:', r[0], '->', r[1])
+    if not ep_url:
+        rp('Catena: nessuna pagina con il player trovata.')
+        return
+    # se la lista episodi sta su una pagina di episodio, la pagina del titolo (senza l'ultimo segmento) puo avere un'altra struttura
+    if eps_serie and e_episodio(serie_url):
+        madre = serie_url.rsplit('/', 1)[0]
+        try:
+            pm = s.vai(madre, attesa=args.attesa)
+            epm = trova_episodi(soup_di(pm['html']))
+            if epm and patron_episodio(epm) != ctx['patron_ep']:
+                ctx['patron_ep_b'] = patron_episodio(epm)
+                rp('Anche la pagina del titolo', madre, 'ha la lista episodi, con un\'altra struttura (%d episodi)' % len(epm))
+        except BaseException as ex:
+            rp('Pagina del titolo non aperta:', madre, str(ex)[:80])
+    # la scheda (spesso un episodio) puo non essere la pagina del player o quella con la lista episodi
+    pp, pe = urlparse(primo).path, urlparse(ep_url).path
+    if pp != pe:
+        regola_hop = regola_sostituzione(primo, ep_url)
+        if regola_hop:
+            ctx['hop'] = regola_hop
+            rp('La scheda apre %s ma il player sta su %s (segmento "%s" diventa "%s")' % (pp, pe, regola_hop[0], regola_hop[1]))
+        else:
+            rp('ATTENZIONE: la scheda (%s) e la pagina del player (%s) hanno percorsi diversi e non riesco a derivare la regola.' % (pp, pe))
+    # pagina del player, con la rete dell'iframe
+    pl = s.vai(ep_url, attesa=args.attesa + 4)
+    cattura['player'] = {'url': pl['url'], 'net': [{k: (str(v)[:6000] if k == 'body' else v) for k, v in x.items() if k != '_resp'}
+                                                    for x in pl['net'] if not PUBBLICITA.search(x['url'])]}
+    psoup = soup_di(pl['html'])
+    ifr = iframe_player(psoup)
+    if not ifr:
+        return
+    el = ifr[0]
+    if el.get('id'):
+        iframe_re = r'<iframe(?=[^>]*id="%s")[^>]*?(?:data-)?src="([^"]+)"' % re.escape(el['id'])
+    elif el.get('class'):
+        iframe_re = r'<iframe(?=[^>]*class="%s")[^>]*?(?:data-)?src="([^"]+)"' % re.escape(' '.join(el['class']))
+    else:
+        iframe_re = r'<iframe[^>]*?src="((?:https?:)?//[^"]+)"'
+    embed = urljoin(pl['url'], el.get('src') or el.get('data-src'))
+    player = {'iframe_re': iframe_re, 'embed': embed, 'playlist': ''}
+    rp('Player: iframe', embed[:120])
+    eu = urlparse(embed)
+    video = ''
+    for e in pl['net']:
+        pu = urlparse(e['url'])
+        if e['url'] == embed or PUBBLICITA.search(e['url']) or e.get('status') != 200 or not e.get('body'):
+            continue
+        if e.get('tipo') in ('fetch', 'xhr') and pu.netloc == eu.netloc and pu.path.startswith(eu.path.rstrip('/') + '/') \
+                and pu.path != eu.path:
+            m = re.search(r'https?:(?:\\?/){2}[^"\'\s<>\\]+?\.(?:mp4|m3u8)[^"\'\s<>]*', e['body'])
+            if m:
+                player['playlist'] = pu.path[len(eu.path.rstrip('/')):]
+                video = m.group(0).replace('\\/', '/')
+                rp('Elenco dei file video:', e['url'][:120], '| suffisso rispetto all\'iframe:', player['playlist'])
+                break
+    if not video:
+        for e in pl['net']:
+            if e.get('body') and e['url'] != pl['url'] and not PUBBLICITA.search(e['url']):
+                m = re.search(r'https?:(?:\\?/){2}[^"\'\s<>\\]+?\.(?:mp4|m3u8)[^"\'\s<>]*', e['body'])
+                if m:
+                    video = m.group(0).replace('\\/', '/')
+                    rp('File video trovato in', e['url'][:120])
+                    break
+    if video:
+        rp('Video:', video[:140])
+    else:
+        rp('ATTENZIONE: nessun file video trovato nelle risposte dell\'iframe (il canale prova comunque a cercarlo a runtime).')
+    player['video'] = video
+    ctx['player'] = player
+
+
+
 def analizza(url, args):
     rapporto = []
 
@@ -2870,10 +3152,17 @@ def analizza(url, args):
                                     r'(?P<title>[^<]+?)\s*<') if ep0.name == 'a' else \
                     r'<a [^>]*?href="(?P<url>[^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)\s*<'
                 ctx['patron_ep'] = ctx['patron_ep'].replace('<a<', '<a')
+                if re.fullmatch(r'\d{1,4}', ep0.get_text(' ', strip=True)):
+                    ctx['patron_ep'] = ctx['patron_ep'].replace(r'(?P<title>[^<]+?)', r'(?P<episode>\d+)', 1)
                 rp('Episodi rilevati:', len(eps), '(titolo esempio:', ep0.get_text(' ', strip=True)[:40] + ')')
                 ctx['tipo'] = 'tvshow' if not args.tipo else args.tipo
             ifr = [i.get('src') for i in dsoup.find_all('iframe') if i.get('src')]
             rp('Iframe nella pagina:', ifr[:3] if ifr else 'nessuno')
+            if modo == 'html':
+                try:
+                    esplora_catena(s, det, primo, base, args, rp, cattura, ctx)
+                except BaseException as ex:
+                    rp('Catena scheda-episodio-player non completata:', str(ex)[:120])
             # url della pagina titolo con segnaposto
             if modo == 'api' and ctx.get('primo_id') and ctx['primo_id'] in det['url']:
                 ctx['dettaglio'] = det['url'].replace(ctx['primo_id'], '{}')
@@ -2882,6 +3171,8 @@ def analizza(url, args):
                     ctx['dettaglio'] = '{}' if False else ctx['dettaglio']
 
             # Riproduzione
+            if ctx.get('player'):
+                return id_, nome, ctx, cattura, rapporto, base
             rp('Provo a far partire il video...')
             pl = s.prova_play(attesa=args.attesa + 4)
             cattura['play'] = {'url': pl['url'], 'cliccato': pl.get('cliccato'), 'net': pl['net']}
@@ -3079,7 +3370,7 @@ def main():
             rapporto.append('TODO: regex patron non generata, scritta una regex di esempio da adattare.')
         py = genera_html(nome, ctx)
     mancano = []
-    if not ctx.get('manifest'):
+    if not ctx.get('manifest') and not (ctx.get('player') and ctx['player'].get('video')):
         mancano.append('riproduzione (nessun manifest rilevato: findvideos generico con support.server)')
     if not ctx.get('ricerca') and not ctx.get('search_api'):
         mancano.append('ricerca')

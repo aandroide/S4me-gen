@@ -1,0 +1,5 @@
+Prova di un canale con il vero support.py di S4Me, senza Kodi.
+1. Copiare il sorgente di S4Me in /tmp/kh/addon (git archive) e il canale in addon/channels/<nome>.py e .json
+2. Avviare un server finto (per esempio test/server_e.py 80)
+3. cd /tmp/kh/addon && PYTHONPATH=/tmp/kh:/tmp/kh/addon python3 -W ignore /tmp/kh/run_ch.py <nome> http://127.0.0.1
+Percorre mainlist, peliculas, apertura della scheda, episodi e findvideos.
