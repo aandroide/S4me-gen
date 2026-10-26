@@ -17,6 +17,58 @@ SORGENTI = [
     'https://raw.githubusercontent.com/stream4me/addon/main/channels.json',
 ]
 LOCALE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'canali_base', 'channels.json.txt')
+CARTELLA = os.path.dirname(LOCALE)
+ELENCO = 'https://api.github.com/repos/stream4me/addon/contents/channels?ref=%s'
+
+
+def aggiorna_canali(ramo):
+    """Scarica i file dei canali (.py e .json) che sono cambiati o nuovi nella repo ufficiale."""
+    h = {'Accept': 'application/vnd.github+json'}
+    if os.environ.get('GH_TOKEN'):
+        h['Authorization'] = 'Bearer ' + os.environ['GH_TOKEN']
+    try:
+        r = requests.get(ELENCO % ramo, headers=h, timeout=30)
+        elenco = r.json() if r.status_code == 200 else None
+    except Exception as e:
+        print('Elenco dei canali non scaricato:', str(e)[:100])
+        return
+    if not isinstance(elenco, list):
+        # senza l'elenco della API si aggiornano i file che ci sono gia
+        print('Elenco dei canali non disponibile: controllo solo i file gia presenti (i canali nuovi non si vedono)')
+        elenco = [{'name': n, 'type': 'file', 'download_url': 'https://raw.githubusercontent.com/stream4me/addon/%s/channels/%s' % (ramo, n)}
+                  for n in sorted(os.listdir(CARTELLA)) if n.endswith(('.py', '.json')) and n != 'channels.json.txt']
+    nuovi, cambiati, errori = [], [], 0
+    for f in elenco:
+        n = f.get('name', '')
+        if f.get('type') != 'file' or not n.endswith(('.py', '.json')) or n.startswith(('__init__', '0example')):
+            continue
+        try:
+            c = requests.get(f['download_url'], timeout=30)
+            if c.status_code != 200 or not c.content:
+                raise ValueError('HTTP %s' % c.status_code)
+        except Exception as e:
+            errori += 1
+            print('File non scaricato:', n, str(e)[:80])
+            continue
+        dest = os.path.join(CARTELLA, n)
+        if os.path.exists(dest):
+            if open(dest, 'rb').read() == c.content:
+                continue
+            cambiati.append(n)
+        else:
+            nuovi.append(n)
+        open(dest, 'wb').write(c.content)
+    online = {f['name'] for f in elenco if isinstance(f, dict)}
+    spariti = sorted(f for f in os.listdir(CARTELLA) if f.endswith(('.py', '.json')) and f not in online
+                     and not f.startswith(('0example', '__init__')))
+    for n in cambiati:
+        print('Canale modificato nella repo ufficiale:', n)
+    for n in nuovi:
+        print('Canale nuovo nella repo ufficiale:', n)
+    for n in spariti:
+        print('Canale non piu nella repo ufficiale (copia locale lasciata):', n)
+    if not cambiati and not nuovi:
+        print('Nessun file dei canali modificato')
 
 
 def piatto(d):
@@ -56,6 +108,7 @@ def main():
     if not cambi and not tolti:
         print('Nessun indirizzo cambiato')
     open(LOCALE, 'w', encoding='utf-8').write(nuovo[2] if nuovo[2].endswith('\n') else nuovo[2] + '\n')
+    aggiorna_canali('main' if '/main/' in nuovo[0] else 'master')
 
 
 if __name__ == '__main__':
