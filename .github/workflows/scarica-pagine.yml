@@ -1,0 +1,45 @@
+name: Scarica pagine di un sito
+
+# Salva in pagine/ l'html, i frame e le richieste di rete delle pagine indicate, per studiare un sito.
+
+on:
+  workflow_dispatch:
+    inputs:
+      indirizzi:
+        description: "Indirizzi completi separati da spazio"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  scarica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installa
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Scarica
+        env:
+          INDIRIZZI: ${{ github.event.inputs.indirizzi }}
+        run: |
+          rm -rf pagine
+          python3 scarica_pagine.py $INDIRIZZI
+      - name: Salva
+        run: |
+          git config user.name aandroide
+          git config user.email aandroide@users.noreply.github.com
+          for i in 1 2 3; do
+            git fetch -q origin master
+            git reset -q origin/master
+            git add pagine
+            git commit -qm "Pagine scaricate" || exit 0
+            git push -q origin HEAD:master && exit 0
+          done
+          exit 1
