@@ -949,7 +949,7 @@ def posta_json(s, url, corpo, hdr=None):
     h = dict(hdr or {})
     h.setdefault('content-type', 'application/json')
     errori = []
-    for tentativo in range(3):
+    for tentativo in range(2):
         stato, testo = None, None
         try:
             r = s.page.evaluate(
@@ -972,15 +972,15 @@ def posta_json(s, url, corpo, hdr=None):
         if testo is not None and testo.lstrip()[:1] in ('{', '['):
             return testo
         if testo is not None:
-            errori.append('risposta non JSON (stato %s, %d byte): %r' % (stato, len(testo), testo[:200]))
-        if tentativo == 2:
+            errori.append('risposta non JSON (stato %s, %d byte): %r' % (stato, len(testo), testo[:400]))
+        if tentativo == 1:
             via = posta_via_pagina(s, url, corpo)
             if via:
                 return via
             errori.append('anche la richiesta fatta partire dalla pagina non ha dato una risposta')
         else:
             # il sito limita le richieste al minuto: si aspetta che la finestra si svuoti
-            s.page.wait_for_timeout(65000 if stato == 429 else 5000)
+            s.page.wait_for_timeout(240000 if stato == 429 else 5000)
     raise RuntimeError(' | '.join(dict.fromkeys(errori)))
 
 
@@ -1057,21 +1057,28 @@ def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
         return [t] if isinstance(dict(percorsi_variabili(v0)).get(p_tipo), list) else t
 
     guasti = []
+    cache_r = {}
+    base_mod = list(filtro_free.items())
 
     def rigioca(modifiche):
         if len(guasti) >= 2:  # l'API non risponde in JSON: inutile insistere con le altre prove
             return None, None
         j, v = variabili_di(e['post'])
-        for pth, val in modifiche:
+        for pth, val in list(base_mod) + list(modifiche):  # il filtro gratuito vale per tutte le prove
             imposta(v, pth, val)
-        try:
-            corpo = posta_json(s, e['url'], json.dumps(j), e.get('hdr'))
-            s.page.wait_for_timeout(3000)  # richieste distanziate per non superare il limite del sito
-            risp = json.loads(corpo)
-        except BaseException as ex:
-            errori.append('richiesta fallita: %s' % str(ex)[:300])
-            guasti.append(1)
-            return None, None
+        chiave_c = json.dumps(j, sort_keys=True)
+        if chiave_c in cache_r:
+            risp, corpo = cache_r[chiave_c]
+        else:
+            try:
+                corpo = posta_json(s, e['url'], json.dumps(j), e.get('hdr'))
+                s.page.wait_for_timeout(3000)  # richieste distanziate per non superare il limite del sito
+                risp = json.loads(corpo)
+                cache_r[chiave_c] = (risp, corpo)
+            except BaseException as ex:
+                errori.append('richiesta fallita: %s' % str(ex)[:1500])
+                guasti.append(1)
+                return None, None
         lst = leggi(risp, api['path']) if isinstance(risp, dict) else None
         if isinstance(risp, dict) and risp.get('errors'):
             errori.append('errore API: %s' % json.dumps(risp['errors'], ensure_ascii=False)[:160])
