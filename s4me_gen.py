@@ -1931,13 +1931,24 @@ def episodi_da_cache(s, cache, entry_api, id_serie, filtro_free, rp):
             for pth, val in filtro_free.items():
                 if re.search(r'package', pth[-1], re.I):
                     f['packages'] = val
+                if re.search(r'monetiz', pth[-1], re.I):
+                    f['monetizationTypes'] = val
             args = dict(args)
             args['filter'] = f
             return args
         sel_o, _ = campo_con_argomenti(ok_off[0], aggiungi_pacchetto)
         if sel_o:
             sel.append('%s { id }' % sel_o)
-    cep, argep = campo_con_argomenti(ek)
+    def tutti_gli_episodi(args):
+        # la pagina chiede solo gli ultimi episodi (per esempio limit 3, ordine decrescente): il canale li vuole tutti, in ordine
+        args = dict(args)
+        for k in list(args):
+            if k.lower() == 'limit':
+                args[k] = 1000
+            if k.lower() in ('sortdirection', 'sortorder', 'order') and isinstance(args[k], str):
+                args[k] = 'ASC'
+        return args
+    cep, argep = campo_con_argomenti(ek, tutti_gli_episodi)
     usate = set()
     corpo_q = '%s { %s }' % (cep, ' '.join(sel))
     for v in ('country', 'language', 'platform'):
@@ -1984,19 +1995,60 @@ def episodi_da_cache(s, cache, entry_api, id_serie, filtro_free, rp):
             'chiavi': chiavi, 'lista_prova': lst}
 
 
+def manifest_da_richiesta(net, rp):
+    """Se il sito rifiuta la riproduzione (blocco per paese) ma la richiesta del player e stata catturata,
+    ricava dal testo della query dove si trovano manifest e licenza nella risposta (non verificato su una risposta vera)."""
+    for e in net:
+        po = e.get('post') or ''
+        if 'graphql' not in e['url'] or 'manifest' not in po:
+            continue
+        try:
+            j = json.loads(po)
+        except Exception:
+            continue
+        q = j.get('query') or ''
+        m_man = re.search(r'\b(manifestUrlDash|manifestUrl\w*|dashUrl|mpdUrl)\b', q)
+        if not m_man:
+            continue
+        man = m_man.group(1)
+        radice = re.search(r'\)\s*\{\s*(\w+)\s*[\(\{]', q) or re.search(r'\{\s*(\w+)\s*\(', q)
+        cont = re.search(r'(\w+)\s*\{[^{}]*\b%s\b' % man, q)
+        if not radice or not cont:
+            continue
+        percorso = 'data.%s.%s.0.%s' % (radice.group(1), cont.group(1), man)
+        lic = None
+        m_la = re.search(r'\b(laURL|licenseUrl|licenseURL|licenceUrl)\b', q)
+        if m_la:
+            cl = re.search(r'(\w+)\s*\{[^{}]*\b%s\b' % m_la.group(1), q)
+            if cl:
+                lic = 'data.%s.%s.0.%s.0.%s' % (radice.group(1), cont.group(1), cl.group(1), m_la.group(1))
+        ent = dict(e)
+        ent['post'] = re.sub(r'("deviceOs"\s*:\s*")[^"]*(")', r'\1android\2', po)
+        rp('Manifest ricostruito dalla richiesta del player (sito bloccato per paese): percorso', percorso,
+           '| licenza', lic or 'non indicata')
+        return {'url': 'manifestUrlDash.mpd', 'licenza': '', 'licenza_percorso': lic,
+                'sorgente': {'entry': ent, 'path': percorso, 'json': {}}, 'ricostruito': True}
+    return None
+
+
 def riproduci(s, args, rp, cattura, chiave):
     """Prova a far partire il video nella pagina aperta e ritorna le informazioni sul manifest."""
     rp('Provo a far partire il video...')
     pl = s.prova_play(attesa=args.attesa + 4)
     cattura[chiave] = {'url': pl['url'], 'cliccato': pl.get('cliccato'), 'net': pl['net']}
     man, lic = trova_manifest(pl['net'])
+    geo_bloccato = False
     for e_ in pl['net']:
         m_ = re.search(r'"errorCode"\s*:\s*"([A-Z_]*(?:GEO|REGION|COUNTRY|RESTRICT)[A-Z_]*)"', e_.get('body') or '')
         if m_:
+            geo_bloccato = True
             rp('ATTENZIONE: il sito rifiuta la riproduzione per il paese di questo computer (%s). '
                'Serve un indirizzo del paese giusto: usa il proxy (PROXY_URL / --proxy) o esegui il tool sul tuo computer.' % m_.group(1))
             break
     if not man:
+        da_richiesta = manifest_da_richiesta(pl['net'], rp) if geo_bloccato else None
+        if da_richiesta:
+            return da_richiesta
         rp('Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).')
         return None
     m = man[0]
