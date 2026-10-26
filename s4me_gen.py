@@ -902,6 +902,9 @@ def leggi(d, path):
     return d
 
 
+STATO_API = {'guasti': 0}
+
+
 def posta_via_pagina(s, url, corpo):
     """Fa partire la richiesta dal browser vero: sostituisce il corpo della prima richiesta GraphQL della pagina,
     cosi partono le stesse intestazioni, cookie e controlli del sito (una richiesta ricostruita puo essere respinta)."""
@@ -966,7 +969,7 @@ def posta_json(s, url, corpo, hdr=None):
                 r = s.ctx.request.post(url, data=corpo, headers=h2, timeout=20000)
                 stato, testo = r.status, r.text()
                 errori.append('intestazioni della risposta: %s' % json.dumps(
-                    {k: v for k, v in r.headers.items() if k.lower() in ('server', 'retry-after', 'via', 'x-cache', 'cf-ray')}))
+                    {k: v[:80] for k, v in r.headers.items() if k.lower() not in ('set-cookie', 'cookie')}))
             except BaseException as ex:
                 errori.append('richiesta del contesto: %s' % str(ex)[:60])
         if testo is not None and testo.lstrip()[:1] in ('{', '['):
@@ -980,7 +983,8 @@ def posta_json(s, url, corpo, hdr=None):
             errori.append('anche la richiesta fatta partire dalla pagina non ha dato una risposta')
         else:
             # il sito limita le richieste al minuto: si aspetta che la finestra si svuoti
-            s.page.wait_for_timeout(240000 if stato == 429 else 5000)
+            s.page.wait_for_timeout(20000 if stato == 429 else 5000)
+    STATO_API['guasti'] += 1
     raise RuntimeError(' | '.join(dict.fromkeys(errori)))
 
 
@@ -989,6 +993,50 @@ def operazione_di(post):
         return json.loads(post).get('operationName') or ''
     except Exception:
         return ''
+
+
+def filtro_da_cache(s, pagine_free, api, rp):
+    """La pagina dei contenuti gratuiti ha gia caricato l'elenco: la cache Apollo conserva il filtro usato
+    (per esempio packages e monetizationTypes) nel nome della richiesta. Si legge senza fare altre richieste."""
+    j0, v0 = variabili_di(api['entry'].get('post') or '')
+    if v0 is None:
+        return {}
+    p_pack = p_mon = None
+    for pth, val in percorsi_variabili(v0):
+        if p_pack is None and re.search(r'package', pth[-1], re.I) and isinstance(val, list):
+            p_pack = pth
+        if p_mon is None and re.search(r'monetiz', pth[-1], re.I) and isinstance(val, list):
+            p_mon = pth
+    if not p_pack:
+        return {}
+    for u in pagine_free[:2]:
+        try:
+            s.vai(u, attesa=3, timeout=25000)
+            chiavi = s.page.evaluate("() => { const c = window.__APOLLO_CLIENT__; if (!c) return []; "
+                                     "const r = c.cache.extract().ROOT_QUERY || {}; return Object.keys(r); }")
+        except BaseException as ex:
+            rp('Filtro gratuito dalla cache: pagina non letta:', str(ex)[:100])
+            continue
+        for k in chiavi or []:
+            m = re.search(r'"packages"\s*:\s*(\[[^\]]*\])', k)
+            if m:
+                try:
+                    pk = json.loads(m.group(1))
+                except Exception:
+                    continue
+                if not pk:
+                    continue
+                f = {p_pack: pk}
+                mm = re.search(r'"monetizationTypes"\s*:\s*(\[[^\]]*\])', k)
+                if p_mon and mm:
+                    try:
+                        f[p_mon] = json.loads(mm.group(1))
+                    except Exception:
+                        pass
+                rp('Filtro gratuito letto dalla cache della pagina', u, ':', json.dumps({'.'.join(a): b for a, b in f.items()}))
+                return f
+    rp('Filtro gratuito: nella cache delle pagine non c\'e un filtro sui pacchetti')
+    return {}
 
 
 def trova_filtro_free(s, api, pagine_free, rp):
@@ -1021,7 +1069,7 @@ def trova_filtro_free(s, api, pagine_free, rp):
         corpo = posta_json(s, e['url'], json.dumps({'query': q}), e.get('hdr'))
         pacchetti = (json.loads(corpo).get('data') or {}).get('packages') or []
     except BaseException as ex:
-        rp('Filtro gratuito: elenco pacchetti non letto:', str(ex)[:200])
+        rp('Filtro gratuito: elenco pacchetti non letto:', str(ex)[:1500])
         return {}
     rp('Filtro gratuito: pacchetti letti dall API:', len(pacchetti))
     for pk in pacchetti:
@@ -1977,7 +2025,7 @@ def episodi_da_cache(s, cache, entry_api, id_serie, filtro_free, rp):
         testo = posta_json(s, entry_api['url'], json.dumps(prova_), entry_api.get('hdr'))
         risp = json.loads(testo)
     except BaseException as ex:
-        rp('Episodi dalla cache: richiesta non riuscita:', str(ex)[:200])
+        rp('Episodi dalla cache: richiesta non riuscita:', str(ex)[:1500])
         return None
     if risp.get('errors'):
         rp('Episodi dalla cache: errore API:', json.dumps(risp['errors'], ensure_ascii=False)[:300], '| richiesta:', query[:300])
@@ -2158,6 +2206,12 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
     # prima le richieste che servono davvero (filtro gratuito, tipi, ordinamenti): il sito limita le richieste
     # per indirizzo, quindi si fanno subito, prima di aprire altre pagine
     pagine_free = [u for t_, u in cand if FREE_RE.search(t_ + ' ' + u)]
+    if not filtro_free and pagine_free:
+        filtro_free.update(filtro_da_cache(s, pagine_free, api, rp))
+        try:
+            s.vai(pagina_elenco, attesa=2, timeout=25000)
+        except Exception:
+            pass
     if not filtro_free:
         filtro_free.update(trova_filtro_free(s, api, pagine_free, rp))
     sonda_presto = bool(filtro_free)
@@ -2210,6 +2264,20 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
             s.vai(pagina_elenco, attesa=2, timeout=25000)
         except Exception:
             pass
+        sonda_e_unisci()
+    # il sito puo limitare le richieste per qualche minuto: si aspetta e si ripete, senza le sezioni non c'e canale
+    for giro in range(2):
+        if not (STATO_API['guasti'] > 0 and not any(z.get('gratis') for z in sezioni) and len(sezioni) <= 1):
+            break
+        rp('Il sito ha limitato le richieste: aspetto 5 minuti e riprovo (tentativo %d di 2)' % (giro + 1))
+        s.page.wait_for_timeout(300000)
+        STATO_API['guasti'] = 0
+        try:
+            s.vai(pagina_elenco, attesa=2, timeout=25000)
+        except Exception:
+            pass
+        if not filtro_free:
+            filtro_free.update(trova_filtro_free(s, api, pagine_free, rp))
         sonda_e_unisci()
     visti_titoli, unici = set(), []
     for z in sezioni:
