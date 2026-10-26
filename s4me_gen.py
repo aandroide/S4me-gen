@@ -1462,11 +1462,14 @@ def peliculas(item):
 def episodios(item):
     support.info(item)
     action = 'findvideos'
-    patron = __PATRONEP__
+__STAGIONE__    patron = __PATRONEP__
 __PATRONB__    #debug = True
     return locals()
 
-'''.replace('__PATRONEP__', raw(ctx['patron_ep'])).replace('__PATRONB__', (
+'''.replace('__STAGIONE__', (
+            "    # nessuna stagione nella lista: una sola, cosi S4Me mostra 1x01 e cerca i titoli degli episodi su TMDB\n"
+            "    if not item.season:\n        item.season = '1'\n"
+            if '(?P<episode>' in ctx['patron_ep'] and '(?P<season>' not in ctx['patron_ep'] else '')).replace('__PATRONEP__', raw(ctx['patron_ep'])).replace('__PATRONB__', (
             "    if not re.search(r'/[^/]*\\d+/?$', item.url):\n        patron = " + raw(ctx['patron_ep_b']) + "\n") if ctx.get('patron_ep_b') else '')
     # ricerca
     r = ctx['ricerca']

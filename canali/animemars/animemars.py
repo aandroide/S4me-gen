@@ -48,6 +48,9 @@ def episodios(item):
     support.info(item)
     anime = True
     action = 'findvideos'
+    # il sito ha una sola stagione per titolo: S4Me mostra 1x01 e cerca i titoli degli episodi su TMDB
+    if not item.season:
+        item.season = '1'
     patron = r'''<a href="(?P<url>/watch/[^"]+/ep-(?P<episode>\d+))"[^>]*class="ep-tile"'''
     return locals()
 
