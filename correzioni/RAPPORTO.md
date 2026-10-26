@@ -1,8 +1,21 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 1, ROTTO 13, DOMINIO PARCHEGGIATO 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 18, SENZA INDIRIZZO 7, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 3, ROTTO 8, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 19, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
-## CORRETTO (1)
+## CORRETTO (3)
+
+### cinetecadibologna
+Sito: http://cinestore.cinetecadibologna.it
+- ROTTO: peliculas /video/alfabetico_completo | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/cinetecadibologna/pagina_peliculas_video_alfabetico_completo.html
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 10 risultati sull'intera pagina
+- ROTTO: menu /video/epoche | patron non trova titoli
+-   campione della pagina salvato in correzioni/cinetecadibologna/pagina_menu_video_epoche.html
+-   regex proposta: 10 titoli su 10 card
+-   non applicata al file: la funzione ha piu varianti di regex
+- OK: menu /video/registi | 20 risultati
+- OK: menu /video/attori | 19 risultati
+- file corretto scritto in correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli
 
 ### guardaseriecam
 Sito: https://guardaseriex.icu
@@ -13,13 +26,19 @@ Sito: https://guardaseriex.icu
 - file corretto scritto in correzioni/guardaseriecam: 1 pagine su 1 ora trovano titoli
 - riga per channels.json: "guardaseriecam": "https://guardaseriex.best",
 
-## ROTTO (13)
+### tantifilm
+Sito: https://tanti-film.fun
+- il sito reindirizza a un altro indirizzo: https://tanti-film.garden (in channels.json c'e https://tanti-film.fun)
+- ROTTO: peliculas /film | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina
+- ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_serie_tv.html
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina
+- file corretto scritto in correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
+- riga per channels.json: "tantifilm": "https://tanti-film.garden",
 
-### animealtadefinizione
-Sito: https://www.domainname.de
-- ROTTO: peliculas /anime/ | patron non trova titoli
--   campione della pagina salvato in correzioni/animealtadefinizione/pagina_peliculas_anime.html
--   nessuna regex sostitutiva trovata automaticamente in /anime/
+## ROTTO (8)
 
 ### bt4g
 Sito: https://bt4gprx.com
@@ -43,34 +62,6 @@ Sito: https://cineblog001.loan
 -   regex proposta: 70 titoli su 51 card
 -   non applicata al file: regex dinamica
 - riga per channels.json: "cineblog001": "https://cineblog001.men",
-
-### cinemalibero
-Sito: https://cinemalibero.cafe
-- ROTTO: peliculas /category/film/ | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/cinemalibero/pagina_peliculas_category_film.html
--   nessuna regex sostitutiva trovata automaticamente in /category/film/
-- ROTTO: peliculas /category/serie-tv/ | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/cinemalibero/pagina_peliculas_category_serie_tv.html
--   nessuna regex sostitutiva trovata automaticamente in /category/serie-tv/
-- ROTTO: peliculas /category/anime-giapponesi/ | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/cinemalibero/pagina_peliculas_category_anime_giapponesi.html
--   nessuna regex sostitutiva trovata automaticamente in /category/anime-giapponesi/
-- ROTTO: peliculas /aggiornamenti-serie-tv/ | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/cinemalibero/pagina_peliculas_aggiornamenti_serie_tv.html
--   nessuna regex sostitutiva trovata automaticamente in /aggiornamenti-serie-tv/
-
-### cinetecadibologna
-Sito: http://cinestore.cinetecadibologna.it
-- ROTTO: peliculas /video/alfabetico_completo | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/cinetecadibologna/pagina_peliculas_video_alfabetico_completo.html
--   regex proposta: 10 titoli su 10 card
--   non applicata al file: la funzione ha piu varianti di regex
-- ROTTO: menu /video/epoche | patron non trova titoli
--   campione della pagina salvato in correzioni/cinetecadibologna/pagina_menu_video_epoche.html
--   regex proposta: 10 titoli su 10 card
--   non applicata al file: la funzione ha piu varianti di regex
-- OK: menu /video/registi | 20 risultati
-- OK: menu /video/attori | 19 risultati
 
 ### dreamsub
 Sito: https://www.animeworld.ac
@@ -139,31 +130,28 @@ Sito: https://www.la7.it
 -   campione della pagina salvato in correzioni/la7/pagina_replay_menu_home.html
 -   nessuna regex sostitutiva trovata automaticamente in /
 
-### serietvu
-Sito: http://ww1.serietvu.live
-- ROTTO: peliculas /category/serie-tv | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/serietvu/pagina_peliculas_category_serie_tv.html
--   nessuna regex sostitutiva trovata automaticamente in /category/serie-tv
-- ROTTO: peliculas /ultimi-episodi/ | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/serietvu/pagina_peliculas_ultimi_episodi.html
--   nessuna regex sostitutiva trovata automaticamente in /ultimi-episodi/
+## DOMINIO PARCHEGGIATO (3)
 
-### tantifilm
-Sito: https://tanti-film.fun
-- il sito reindirizza a un altro indirizzo: https://tanti-film.garden (in channels.json c'e https://tanti-film.fun)
-- ROTTO: peliculas /film | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html
--   nessuna regex sostitutiva trovata automaticamente in /film
-- ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_serie_tv.html
--   nessuna regex sostitutiva trovata automaticamente in /serie-tv/
-- riga per channels.json: "tantifilm": "https://tanti-film.garden",
-
-## DOMINIO PARCHEGGIATO (1)
+### animealtadefinizione
+Sito: https://www.domainname.de
+- la home di https://www.domainname.de sembra un dominio in vendita o vuoto | motivo: frase "Domainname.de" | link: 23 | dimensione: 25306 | titolo: Buy & sell domains safely | Domainname.de
 
 ### lordchannel
 Sito: https://lordchannel.net
 - la home di https://lordchannel.net sembra un dominio in vendita o vuoto | motivo: pagina quasi vuota | link: 0 | dimensione: 1938 | titolo: Manutenzione – LC3Remix
+
+### serietvu
+Sito: http://ww1.serietvu.live
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27343 | titolo: nessuno
+
+## BLOCCO ANTI BOT (1)
+
+### cinemalibero
+Sito: https://cinemalibero.cafe
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5646 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (12)
 
@@ -237,7 +225,7 @@ Sito: https://www.mtv.com
 ### streamingita
 Sito: https://streamingita.homes
 
-## OK (18)
+## OK (19)
 
 ### 1337x
 Sito: https://1337x.to
@@ -292,11 +280,11 @@ Sito: https://www.discoveryplus.com
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 3449 risultati
+- OK: peliculas /index | 10183 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
-- OK: https://www.justwatch.com/ | html (prima rilevazione, riferimento salvato)
+- OK: https://www.justwatch.com/ | html
 - non controllabile senza parametri: https://apis.justwatch.com/graphql (HTTP 400)
 
 ### mediasetplay
@@ -324,15 +312,15 @@ Sito: https://pluto.tv
 
 ### raiplay
 Sito: https://www.raiplay.it
-- OK: https://www.raiplay.it/palinsesto/onAir.json | json
+- attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.parental_control_level
 - OK: https://www.raiplay.it/dirette | html
-- OK: https://www.raiplay.it/guidatv.json | json
+- OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
 - OK: https://www.raiplay.it/guidatv | html
-- OK: https://www.raiplay.it/tipologia/film/index.json | json
+- OK: https://www.raiplay.it/tipologia/film/index.json | json, struttura invariata
 - OK: https://www.raiplay.it/film | html
-- OK: https://www.raiplay.it/tipologia/serieitaliane/index.json | json
+- OK: https://www.raiplay.it/tipologia/serieitaliane/index.json | json, struttura invariata
 - OK: https://www.raiplay.it/serieitaliane | html
-- OK: https://www.raiplay.it/tipologia/serieinternazionali/index.json | json
+- OK: https://www.raiplay.it/tipologia/serieinternazionali/index.json | json, struttura invariata
 - OK: https://www.raiplay.it/serieinternazionali | html
 
 ### streamingcommunity
@@ -347,6 +335,10 @@ Sito: https://streamingcommunityz.build
 - OK: Generi | 20 titoli in props.genres
 - OK: serie di esempio /it/titles/66423-minimum-wage | 1 stagioni, 14 episodi nella prima
 
+### thepiratebay
+Sito: https://apibay.org
+- OK: https://apibay.org/q.php?q=matrix | html (prima rilevazione, riferimento salvato)
+
 ### toonitalia
 Sito: https://toonitalia.xyz
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
@@ -360,14 +352,14 @@ Sito: https://toonitalia.xyz
 Sito: http://api.radiotime.com
 - indirizzo scritto nel canale: http://api.radiotime.com
 - OK: http://api.radiotime.com | html
-- OK: https://opml.radiotime.com/Tune.ashx?render=json&id=s24939 | json
+- OK: https://opml.radiotime.com/Tune.ashx?render=json&id=s24939 | json, struttura invariata
 
 ### videosky
 Sito: https://video.sky.it
 - indirizzo scritto nel canale: https://video.sky.it
-- OK: https://video.sky.it/api/v1/getLivestream?id=7 | json
-- OK: https://video.sky.it/api/v1/getLivestream?id=2 | json
-- OK: https://video.sky.it/api/v1/getLivestream?id=1 | json
+- OK: https://video.sky.it/api/v1/getLivestream?id=7 | json, struttura invariata
+- OK: https://video.sky.it/api/v1/getLivestream?id=2 | json, struttura invariata
+- OK: https://video.sky.it/api/v1/getLivestream?id=1 | json, struttura invariata
 - OK: https://video.sky.it | html
 - non controllabile senza parametri: https://video.sky.it/api/v1 (HTTP 404)
 
@@ -384,7 +376,7 @@ Sito: https://www.vvvvid.it
 - OK: https://www.vvvvid.it | html
 - non controllabile senza parametri: https://or01.top-ix.org/videomg/_definst_/mp4: (HTTP 404)
 
-## SENZA INDIRIZZO (7)
+## SENZA INDIRIZZO (6)
 
 ### animeuniverse
 Sito: n.d.
@@ -403,10 +395,6 @@ Sito: n.d.
 - canale non attivo: non e in channels.json e non ha un indirizzo fisso nel file
 
 ### streamtime
-Sito: n.d.
-- canale non attivo: non e in channels.json e non ha un indirizzo fisso nel file
-
-### thepiratebay
 Sito: n.d.
 - canale non attivo: non e in channels.json e non ha un indirizzo fisso nel file
 

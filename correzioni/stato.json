@@ -65,11 +65,9 @@
  },
  {
   "canale": "animealtadefinizione",
-  "stato": "ROTTO",
+  "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "ROTTO: peliculas /anime/ | patron non trova titoli",
-   "  campione della pagina salvato in correzioni/animealtadefinizione/pagina_peliculas_anime.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /anime/"
+   "la home di https://www.domainname.de sembra un dominio in vendita o vuoto | motivo: frase \"Domainname.de\" | link: 23 | dimensione: 25306 | titolo: Buy & sell domains safely | Domainname.de"
   ],
   "correzione": false,
   "host": "https://www.domainname.de"
@@ -275,65 +273,34 @@
  },
  {
   "canale": "cinemalibero",
-  "stato": "ROTTO",
+  "stato": "BLOCCO ANTI BOT",
   "dettagli": [
-   "ROTTO: peliculas /category/film/ | patronBlock non trova nessun blocco",
-   "  campione della pagina salvato in correzioni/cinemalibero/pagina_peliculas_category_film.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /category/film/",
-   "ROTTO: peliculas /category/serie-tv/ | patronBlock non trova nessun blocco",
-   "  campione della pagina salvato in correzioni/cinemalibero/pagina_peliculas_category_serie_tv.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /category/serie-tv/",
-   "ROTTO: peliculas /category/anime-giapponesi/ | patronBlock non trova nessun blocco",
-   "  campione della pagina salvato in correzioni/cinemalibero/pagina_peliculas_category_anime_giapponesi.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /category/anime-giapponesi/",
-   "ROTTO: peliculas /aggiornamenti-serie-tv/ | patronBlock non trova nessun blocco",
-   "  campione della pagina salvato in correzioni/cinemalibero/pagina_peliculas_aggiornamenti_serie_tv.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /aggiornamenti-serie-tv/"
+   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5634 byte): non e un cambio di struttura",
+   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5646 byte): non e un cambio di struttura",
+   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5662 byte): non e un cambio di struttura",
+   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5655 byte): non e un cambio di struttura"
   ],
   "correzione": false,
   "host": "https://cinemalibero.cafe"
  },
  {
   "canale": "cinetecadibologna",
-  "stato": "ROTTO",
+  "stato": "CORRETTO",
   "dettagli": [
    "ROTTO: peliculas /video/alfabetico_completo | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/cinetecadibologna/pagina_peliculas_video_alfabetico_completo.html",
-   "  regex proposta: 10 titoli su 10 card",
-   "  non applicata al file: la funzione ha piu varianti di regex",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 10 risultati sull'intera pagina",
    "ROTTO: menu /video/epoche | patron non trova titoli",
    "  campione della pagina salvato in correzioni/cinetecadibologna/pagina_menu_video_epoche.html",
    "  regex proposta: 10 titoli su 10 card",
    "  non applicata al file: la funzione ha piu varianti di regex",
    "OK: menu /video/registi | 20 risultati",
-   "OK: menu /video/attori | 19 risultati"
+   "OK: menu /video/attori | 19 risultati",
+   "file corretto scritto in correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli"
   ],
-  "correzione": false,
+  "correzione": true,
   "host": "http://cinestore.cinetecadibologna.it",
   "proposte": [
-   {
-    "funzione": "peliculas",
-    "pagina": "/video/alfabetico_completo",
-    "patron": "<li[^>]*class=\"itemList\"(?:(?!<li[^>]*class=\"itemList\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<li[^>]*class=\"itemList\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<li[^>]*class=\"itemList\").)*?<a[^>]*class=\"title\\ museo\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
-    "esempi": [
-     {
-      "url": "/video/dettaglio/3561",
-      "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/3/8/3/3833.jpg",
-      "title": "Exercícios de cavalaria em Torres Novas"
-     },
-     {
-      "url": "/video/dettaglio/5515",
-      "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/6/1/5/6154.jpg",
-      "title": "[Aus Moskaus Leben im Jahre 1918]"
-     },
-     {
-      "url": "/video/dettaglio/10141",
-      "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/1/1/7/11715.jpg",
-      "title": "[Residence royale à Sant'Anna di..."
-     }
-    ],
-    "perse": []
-   },
    {
     "funzione": "menu",
     "pagina": "/video/epoche",
@@ -698,7 +665,7 @@
   "stato": "OK",
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /index | 3449 risultati"
+   "OK: peliculas /index | 10183 risultati"
   ],
   "correzione": false,
   "host": "https://hd4me.net"
@@ -791,7 +758,7 @@
   "canale": "justwatch",
   "stato": "OK",
   "dettagli": [
-   "OK: https://www.justwatch.com/ | html (prima rilevazione, riferimento salvato)",
+   "OK: https://www.justwatch.com/ | html",
    "non controllabile senza parametri: https://apis.justwatch.com/graphql (HTTP 400)"
   ],
   "correzione": false,
@@ -889,15 +856,15 @@
   "canale": "raiplay",
   "stato": "OK",
   "dettagli": [
-   "OK: https://www.raiplay.it/palinsesto/onAir.json | json",
+   "attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.parental_control_level",
    "OK: https://www.raiplay.it/dirette | html",
-   "OK: https://www.raiplay.it/guidatv.json | json",
+   "OK: https://www.raiplay.it/guidatv.json | json, struttura invariata",
    "OK: https://www.raiplay.it/guidatv | html",
-   "OK: https://www.raiplay.it/tipologia/film/index.json | json",
+   "OK: https://www.raiplay.it/tipologia/film/index.json | json, struttura invariata",
    "OK: https://www.raiplay.it/film | html",
-   "OK: https://www.raiplay.it/tipologia/serieitaliane/index.json | json",
+   "OK: https://www.raiplay.it/tipologia/serieitaliane/index.json | json, struttura invariata",
    "OK: https://www.raiplay.it/serieitaliane | html",
-   "OK: https://www.raiplay.it/tipologia/serieinternazionali/index.json | json",
+   "OK: https://www.raiplay.it/tipologia/serieinternazionali/index.json | json, struttura invariata",
    "OK: https://www.raiplay.it/serieinternazionali | html"
   ],
   "correzione": false,
@@ -905,14 +872,9 @@
  },
  {
   "canale": "serietvu",
-  "stato": "ROTTO",
+  "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "ROTTO: peliculas /category/serie-tv | patronBlock non trova nessun blocco",
-   "  campione della pagina salvato in correzioni/serietvu/pagina_peliculas_category_serie_tv.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /category/serie-tv",
-   "ROTTO: peliculas /ultimi-episodi/ | patronBlock non trova nessun blocco",
-   "  campione della pagina salvato in correzioni/serietvu/pagina_peliculas_ultimi_episodi.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /ultimi-episodi/"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27343 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -952,28 +914,29 @@
  },
  {
   "canale": "tantifilm",
-  "stato": "ROTTO",
+  "stato": "CORRETTO",
   "dettagli": [
    "il sito reindirizza a un altro indirizzo: https://tanti-film.garden (in channels.json c'e https://tanti-film.fun)",
    "ROTTO: peliculas /film | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /film",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina",
    "ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_serie_tv.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /serie-tv/"
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina",
+   "file corretto scritto in correzioni/tantifilm: 2 pagine su 2 ora trovano titoli"
   ],
-  "correzione": false,
+  "correzione": true,
   "host": "https://tanti-film.fun",
   "nuovo_host": "https://tanti-film.garden"
  },
  {
   "canale": "thepiratebay",
-  "stato": "SENZA INDIRIZZO",
+  "stato": "OK",
   "dettagli": [
-   "canale non attivo: non e in channels.json e non ha un indirizzo fisso nel file"
+   "OK: https://apibay.org/q.php?q=matrix | html (prima rilevazione, riferimento salvato)"
   ],
   "correzione": false,
-  "host": ""
+  "host": "https://apibay.org"
  },
  {
   "canale": "toonitalia",
@@ -995,7 +958,7 @@
   "dettagli": [
    "indirizzo scritto nel canale: http://api.radiotime.com",
    "OK: http://api.radiotime.com | html",
-   "OK: https://opml.radiotime.com/Tune.ashx?render=json&id=s24939 | json"
+   "OK: https://opml.radiotime.com/Tune.ashx?render=json&id=s24939 | json, struttura invariata"
   ],
   "correzione": false,
   "host": "http://api.radiotime.com"
@@ -1005,9 +968,9 @@
   "stato": "OK",
   "dettagli": [
    "indirizzo scritto nel canale: https://video.sky.it",
-   "OK: https://video.sky.it/api/v1/getLivestream?id=7 | json",
-   "OK: https://video.sky.it/api/v1/getLivestream?id=2 | json",
-   "OK: https://video.sky.it/api/v1/getLivestream?id=1 | json",
+   "OK: https://video.sky.it/api/v1/getLivestream?id=7 | json, struttura invariata",
+   "OK: https://video.sky.it/api/v1/getLivestream?id=2 | json, struttura invariata",
+   "OK: https://video.sky.it/api/v1/getLivestream?id=1 | json, struttura invariata",
    "OK: https://video.sky.it | html",
    "non controllabile senza parametri: https://video.sky.it/api/v1 (HTTP 404)"
   ],
