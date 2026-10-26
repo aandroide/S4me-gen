@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 1, ROTTO 9, DOMINIO PARCHEGGIATO 7, IRRAGGIUNGIBILE 8, NON VERIFICATO 1, OK 7, NON REGEX 13, SENZA INDIRIZZO 10, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 1, ROTTO 13, DOMINIO PARCHEGGIATO 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 2, OK 9, NON REGEX 13, SENZA INDIRIZZO 5, TEMPO SCADUTO 1
 
 ## CORRETTO (1)
 
@@ -12,7 +12,7 @@ Sito: https://guardaseriex.icu
 - file corretto scritto in correzioni/guardaseriecam: 1 pagine su 1 ora trovano titoli
 - riga per channels.json: "guardaseriecam": "https://guardaseriex.best",
 
-## ROTTO (9)
+## ROTTO (13)
 
 ### animealtadefinizione
 Sito: https://www.domainname.de
@@ -38,6 +38,17 @@ Sito: https://cineblog001.loan
 -   non applicata al file: regex dinamica
 - riga per channels.json: "cineblog001": "https://cineblog001.men",
 
+### cinemalibero
+Sito: https://cinemalibero.cafe
+- ROTTO: peliculas /category/film/ | patronBlock non trova nessun blocco
+-   nessuna regex sostitutiva trovata automaticamente in /category/film/
+- ROTTO: peliculas /category/serie-tv/ | patronBlock non trova nessun blocco
+-   nessuna regex sostitutiva trovata automaticamente in /category/serie-tv/
+- ROTTO: peliculas /category/anime-giapponesi/ | patronBlock non trova nessun blocco
+-   nessuna regex sostitutiva trovata automaticamente in /category/anime-giapponesi/
+- ROTTO: peliculas /aggiornamenti-serie-tv/ | patronBlock non trova nessun blocco
+-   nessuna regex sostitutiva trovata automaticamente in /aggiornamenti-serie-tv/
+
 ### cinetecadibologna
 Sito: http://cinestore.cinetecadibologna.it
 - ROTTO: peliculas /video/alfabetico_completo | patronBlock non trova nessun blocco
@@ -52,16 +63,16 @@ Sito: http://cinestore.cinetecadibologna.it
 ### dreamsub
 Sito: https://www.animeworld.ac
 - ROTTO: peliculas /search?typeY=tv | patronBlock non trova nessun blocco
--   regex proposta: 237 titoli su 237 card | gruppi persi: episode, lang, year
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=movie | patronBlock non trova nessun blocco
--   regex proposta: 237 titoli su 237 card | gruppi persi: episode, lang, year
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=oav | patronBlock non trova nessun blocco
--   regex proposta: 237 titoli su 237 card | gruppi persi: episode, lang, year
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=spinoff | patronBlock non trova nessun blocco
--   regex proposta: 237 titoli su 237 card | gruppi persi: episode, lang, year
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year
 -   non applicata al file: la funzione ha piu varianti di regex
 
 ### eurostreaming
@@ -76,11 +87,20 @@ Sito: https://eurostreaming.ooo
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
 - il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://eurostreaming.ooo)
 - ROTTO: peliculas /animazione/ | patron non trova titoli
--   regex proposta: 1040 titoli su 1037 card | gruppi persi: episode, lang, title2
+-   regex proposta: 1040 titoli su 343 card | gruppi persi: episode, lang, title2
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli
 -   nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi/
 - riga per channels.json: "eurostreaming_actor": "https://guardaseriex.best",
+
+### guardaserieicu
+Sito: https://guardaseriex.cyou
+- indirizzo scritto nel canale: https://guardaseriex.cyou
+- il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://guardaseriex.cyou)
+- ROTTO: peliculas /serietv-streaming/page/1/ | patron non trova titoli
+-   regex proposta: 18 titoli su 18 card | gruppi persi: audio, category, duration, plot, rating, thumbnail
+-   non applicata al file: perderebbe i gruppi audio, category, duration, plot, rating, thumbnail
+- riga per channels.json: "guardaserieicu": "https://guardaseriex.best",
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.garden
@@ -91,6 +111,19 @@ Sito: https://il-geniodellostreaming.garden
 -   non applicata al file: la funzione ha piu varianti di regex
 - riga per channels.json: "ilgeniodellostreaming_cam": "https://il-geniodellostreaming.ink",
 
+### la7
+Sito: https://www.la7.it
+- indirizzo scritto nel canale: https://www.la7.it
+- ROTTO: replay_menu / | patron non trova titoli
+-   nessuna regex sostitutiva trovata automaticamente in /
+
+### serietvu
+Sito: http://ww1.serietvu.live
+- ROTTO: peliculas /category/serie-tv | patronBlock non trova nessun blocco
+-   nessuna regex sostitutiva trovata automaticamente in /category/serie-tv
+- ROTTO: peliculas /ultimi-episodi/ | patronBlock non trova nessun blocco
+-   nessuna regex sostitutiva trovata automaticamente in /ultimi-episodi/
+
 ### tantifilm
 Sito: https://tanti-film.fun
 - il sito reindirizza a un altro indirizzo: https://tanti-film.garden (in channels.json c'e https://tanti-film.fun)
@@ -100,76 +133,83 @@ Sito: https://tanti-film.fun
 -   nessuna regex sostitutiva trovata automaticamente in /serie-tv/
 - riga per channels.json: "tantifilm": "https://tanti-film.garden",
 
-## DOMINIO PARCHEGGIATO (7)
-
-### altadefinizione
-Sito: https://altadefinizione.nuovo.live
-- la home di https://altadefinizione.nuovo.live sembra un dominio in vendita o vuoto
-
-### altadefinizionecommunity
-Sito: https://altaregistrazione.net
-- la home di https://altaregistrazione.net sembra un dominio in vendita o vuoto
-
-### cinemalibero
-Sito: https://cinemalibero.cafe
-- la home di https://cinemalibero.cafe sembra un dominio in vendita o vuoto
-
-### filmpertutti
-Sito: https://filmpertuttiiii.nuovo.live
-- la home di https://filmpertuttiiii.nuovo.live sembra un dominio in vendita o vuoto
+## DOMINIO PARCHEGGIATO (1)
 
 ### lordchannel
 Sito: https://lordchannel.net
-- la home di https://lordchannel.net sembra un dominio in vendita o vuoto
+- la home di https://lordchannel.net sembra un dominio in vendita o vuoto | motivo: pagina quasi vuota | link: 0 | dimensione: 1938 | titolo: Manutenzione – LC3Remix
 
-### serietvu
-Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto
+## IRRAGGIUNGIBILE (12)
 
-### streamingita
-Sito: https://streamingita.homes
-- la home di https://streamingita.homes sembra un dominio in vendita o vuoto
+### altadefinizione
+Sito: https://altadefinizione.nuovo.live
+- findhost non ha dato un indirizzo partendo da https://altadefinizione.nuovo.live: Invalid URL '': No scheme supplied. Perhaps you meant https://?
 
-## IRRAGGIUNGIBILE (8)
+### altadefinizionecommunity
+Sito: https://altaregistrazione.net
+- findhost non ha dato un indirizzo partendo da https://altaregistrazione.net: findhost non restituisce un indirizzo (pagina cambiata?)
 
 ### animeforce
 Sito: https://www.animeforce.it
-- HTTPSConnectionPool(host='www.animeforce.it', port=443): Max retries exceeded with url: / (Caused by (https://www.animeforce.it)
+- il sito non risponde (tempo scaduto) (https://www.animeforce.it)
 
 ### cb01anime
 Sito: https://cb01new.one
-- HTTPSConnectionPool(host='cb01new.one', port=443): Max retries exceeded with url: / (Caused by NameR (https://cb01new.one)
+- il nome del sito non esiste piu (DNS) (https://cb01new.one)
 
 ### dinostreaming
 Sito: https://dinostreaming.it
-- HTTPSConnectionPool(host='dinostreaming.it', port=443): Max retries exceeded with url: / (Caused by  (https://dinostreaming.it)
+- il nome del sito non esiste piu (DNS) (https://dinostreaming.it)
+
+### filmpertutti
+Sito: https://filmpertuttiiii.nuovo.live
+- findhost non ha dato un indirizzo partendo da https://filmpertuttiiii.nuovo.live: findhost non restituisce un indirizzo (pagina cambiata?)
 
 ### filmstreaming
 Sito: https://film-streaming-ita.cam
-- HTTPSConnectionPool(host='film-streaming-ita.cam', port=443): Max retries exceeded with url: / (Caus (https://film-streaming-ita.cam)
+- il nome del sito non esiste piu (DNS) (https://film-streaming-ita.cam)
 
 ### ilcorsaronero
 Sito: https://ilcorsaronero.link
-- HTTPSConnectionPool(host='ilcorsaronero.link', port=443): Read timed out. (read timeout=15) (https://ilcorsaronero.link)
+- il sito non risponde (tempo scaduto) (https://ilcorsaronero.link)
 
 ### italiafilm
 Sito: https://italia-film.lifestyle
-- HTTPSConnectionPool(host='italia-film.lifestyle', port=443): Max retries exceeded with url: / (Cause (https://italia-film.lifestyle)
+- il nome del sito non esiste piu (DNS) (https://italia-film.lifestyle)
+
+### metalvideo
+Sito: https://metalvideo.com
+- errore del certificato HTTPS (https://metalvideo.com)
 
 ### mondoserietv
 Sito: http://ww25.mondoserietv.club
-- HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: / (Caused (http://ww25.mondoserietv.club)
+- il nome del sito non esiste piu (DNS) (http://ww25.mondoserietv.club)
 
 ### piratestreaming
 Sito: https://piratestreaming.design
-- HTTPSConnectionPool(host='piratestreaming.design', port=443): Max retries exceeded with url: / (Caus (https://piratestreaming.design)
+- il nome del sito non esiste piu (DNS) (https://piratestreaming.design)
 
-## NON VERIFICATO (1)
+## NON VERIFICATO (2)
 
 ### paramount
 Sito: https://www.mtv.com
 
-## OK (7)
+### streamingita
+Sito: https://streamingita.homes
+
+## OK (9)
+
+### 1337x
+Sito: https://1337x.to
+- indirizzo scritto nel canale: https://1337x.to
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- OK: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | 14 risultati
+- OK: peliculas /movie-library/1/ | 25 risultati
+
+### accuradio
+Sito: https://www.accuradio.com
+- indirizzo scritto nel canale: https://www.accuradio.com
+- OK: peliculas / | 48 risultati
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.autos
@@ -208,7 +248,7 @@ Sito: https://casa-cinema.boats
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 11139 risultati
+- OK: peliculas /index | 4585 risultati
 
 ### toonitalia
 Sito: https://toonitalia.xyz
@@ -275,47 +315,27 @@ Sito: n.d.
 Sito: n.d.
 - nessuna funzione con @support.scrape: canale a API o personalizzato, non controllato
 
-## SENZA INDIRIZZO (10)
-
-### 1337x
-Sito: n.d.
-- il canale non e in channels.json
-
-### accuradio
-Sito: n.d.
-- il canale non e in channels.json
+## SENZA INDIRIZZO (5)
 
 ### animeuniverse
 Sito: n.d.
-- il canale non e in channels.json
+- il canale non e in channels.json e non ha un indirizzo fisso nel file
 
 ### guardaserieclick
 Sito: n.d.
-- il canale non e in channels.json
-
-### guardaserieicu
-Sito: n.d.
-- il canale non e in channels.json
+- il canale non e in channels.json e non ha un indirizzo fisso nel file
 
 ### ilgeniodellostreaming
 Sito: n.d.
-- il canale non e in channels.json
+- il canale non e in channels.json e non ha un indirizzo fisso nel file
 
 ### italiaserie
 Sito: n.d.
-- il canale non e in channels.json
-
-### la7
-Sito: n.d.
-- il canale non e in channels.json
-
-### metalvideo
-Sito: n.d.
-- il canale non e in channels.json
+- il canale non e in channels.json e non ha un indirizzo fisso nel file
 
 ### streamtime
 Sito: n.d.
-- il canale non e in channels.json
+- il canale non e in channels.json e non ha un indirizzo fisso nel file
 
 ## TEMPO SCADUTO (1)
 
