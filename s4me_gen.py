@@ -949,7 +949,7 @@ def posta_json(s, url, corpo, hdr=None):
     h = dict(hdr or {})
     h.setdefault('content-type', 'application/json')
     errori = []
-    for tentativo in range(2):
+    for tentativo in range(3):
         stato, testo = None, None
         try:
             r = s.page.evaluate(
@@ -973,12 +973,14 @@ def posta_json(s, url, corpo, hdr=None):
             return testo
         if testo is not None:
             errori.append('risposta non JSON (stato %s, %d byte): %r' % (stato, len(testo), testo[:200]))
-        via = posta_via_pagina(s, url, corpo)
-        if via:
-            return via
-        errori.append('anche la richiesta fatta partire dalla pagina non ha dato una risposta')
-        if tentativo < 1:
-            s.page.wait_for_timeout(30000)
+        if tentativo == 2:
+            via = posta_via_pagina(s, url, corpo)
+            if via:
+                return via
+            errori.append('anche la richiesta fatta partire dalla pagina non ha dato una risposta')
+        else:
+            # il sito limita le richieste al minuto: si aspetta che la finestra si svuoti
+            s.page.wait_for_timeout(65000 if stato == 429 else 5000)
     raise RuntimeError(' | '.join(dict.fromkeys(errori)))
 
 
@@ -1064,7 +1066,7 @@ def sonda_api(s, ctx, api, rp, filtro_free, altre=()):
             imposta(v, pth, val)
         try:
             corpo = posta_json(s, e['url'], json.dumps(j), e.get('hdr'))
-            s.page.wait_for_timeout(1200)  # richieste distanziate per non superare il limite del sito
+            s.page.wait_for_timeout(3000)  # richieste distanziate per non superare il limite del sito
             risp = json.loads(corpo)
         except BaseException as ex:
             errori.append('richiesta fallita: %s' % str(ex)[:300])

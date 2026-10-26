@@ -28,7 +28,7 @@ permissions:
 jobs:
   genera:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     env:
       PROXY_SEGRETO: ${{ secrets.PROXY_URL }}
     steps:
