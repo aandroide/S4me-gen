@@ -1,0 +1,18 @@
+Nessun proxy: il sito vede l'IP del computer che esegue il tool.
+Apro https://www.animemars.org/
+Voci di menu trovate: 11
+Card trovate nel DOM: 42 | regex sul DOM: 0 | regex sull'html grezzo: 0
+ATTENZIONE: la regex non trova i titoli nell'html grezzo: il sito genera la lista con JavaScript e non e stata trovata nessuna API JSON. S4Me non vede la pagina come il browser.
+Modalita scelta: html
+ATTENZIONE: la regex trova 0 titoli su 42 card: controllare il patron.
+Pagina successiva: /upcoming
+Campo di ricerca: input[name="key"]
+Url di ricerca: /filter?key=%s
+Apro il primo titolo: https://www.animemars.org/watch/i-m-dating-a-dark-summoner-hwERJ/ep-4
+Iframe nella pagina: ['//acceptable.a-ads.com/2446152/?size=Adaptive']
+Provo a far partire il video...
+Nessun manifest rilevato (iframe e link ai server vanno gestiti da support.server).
+INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server)
+
+File scritti in canali/animemars: animemars.py, animemars.json, riga_channels_json.txt
+Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), caricare l'icona animemars.png nella repo media.
