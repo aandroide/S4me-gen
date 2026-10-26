@@ -33,3 +33,10 @@ La cartella `riferimento/` contiene il canale JustWatch TV scritto a mano e veri
 ## Cosa scopre da solo
 Per i siti con API il tool visita le sezioni del menu, i percorsi dei titoli e i link a contenuti gratuiti, prova i menu a tendina (ordinamenti e filtri), apre un film e una serie di esempio, cerca la richiesta degli episodi (stagione ed episodio) e prova a far partire un film e un episodio. Il canale generato ha una voce di menu per ogni sezione e ordinamento trovati.
 In `test/` ci sono un sito di prova (`server_c.py`) con sezioni, ordinamenti, serie, episodi e riproduzione, e lo script `run_c.py` che prova il canale generato.
+
+## Controllo dei canali esistenti
+
+`controlla_canali.py` legge i canali scritti a mano in `canali_base/` (con `channels.json.txt` per gli indirizzi),
+prova le loro regex sui siti veri come fa `support.scrape` e, se una regex non trova piu titoli, scrive il file
+corretto in `correzioni/<canale>/` insieme al diff. L'Action `Controlla canali` gira ogni giorno e apre una issue
+quando qualcosa cambia. Non scrive mai nella repo dell'addon.

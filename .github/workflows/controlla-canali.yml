@@ -1,0 +1,72 @@
+name: Controlla canali
+
+on:
+  schedule:
+    - cron: '23 5 * * *'
+  workflow_dispatch:
+    inputs:
+      canali:
+        description: 'Canali da controllare, separati da spazio (vuoto per tutti)'
+        required: false
+        default: ''
+      riparare:
+        description: 'Scrivere le correzioni quando una regex e rotta'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  controlla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dipendenze
+        run: pip install requests beautifulsoup4 lxml
+      - name: Controllo
+        env:
+          CANALI: ${{ github.event.inputs.canali }}
+          RIPARARE: ${{ github.event.inputs.riparare }}
+        run: |
+          OPZ=""
+          if [ "$RIPARARE" = "false" ]; then OPZ="--senza-riparare"; fi
+          rm -rf correzioni
+          python3 controlla_canali.py $OPZ $CANALI
+      - name: Salva il rapporto
+        run: |
+          git config user.name aandroide
+          git config user.email aandroide@users.noreply.github.com
+          git add correzioni
+          if ! git diff --cached --quiet; then
+            git commit -m "Controllo dei canali"
+            echo "CAMBIATO=1" >> "$GITHUB_ENV"
+          fi
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git push || true
+      - name: Avviso su GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RIEP=$(grep '^Riepilogo' correzioni/RAPPORTO.md || true)
+          PROBLEMI=$(python3 - <<'PY'
+          import json
+          d = json.load(open('correzioni/stato.json'))
+          bad = [x for x in d if x['stato'] in ('ROTTO', 'CORRETTO', 'DOMINIO PARCHEGGIATO')]
+          print(len(bad))
+          PY
+          )
+          if [ "$PROBLEMI" != "0" ] && [ "$CAMBIATO" = "1" ]; then
+            gh issue create --title "Controllo canali del $(date +%d/%m/%Y)" --body "$RIEP
+
+          Il rapporto completo e in correzioni/RAPPORTO.md, i file corretti in correzioni/<canale>/." || true
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: controllo-canali
+          path: correzioni
