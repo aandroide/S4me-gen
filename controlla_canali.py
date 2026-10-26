@@ -132,6 +132,21 @@ def gruppi_di(patron):
 _cache = {}
 
 
+def descrivi_errore(e):
+    t = str(e)
+    if 'NameResolution' in t or 'Name or service not known' in t or 'nodename nor servname' in t:
+        return 'il nome del sito non esiste piu (DNS)'
+    if 'Connection refused' in t:
+        return 'connessione rifiutata dal server'
+    if 'timed out' in t or 'Timeout' in type(e).__name__:
+        return 'il sito non risponde (tempo scaduto)'
+    if 'SSL' in t or 'certificate' in t:
+        return 'errore del certificato HTTPS'
+    if 'Connection reset' in t or 'RemoteDisconnected' in t or 'Connection aborted' in t:
+        return 'connessione interrotta dal server (possibile blocco dei server di GitHub)'
+    return t[:100]
+
+
 def via_flaresolverr(url):
     """Pagina scaricata da FlareSolverr (un browser vero che supera la challenge di Cloudflare), una alla volta."""
     import fcntl
@@ -165,10 +180,10 @@ def scarica(url):
             try:
                 r = requests.get(url, headers={'User-Agent': UA}, timeout=(8, 15), verify=False)
             except Exception as e:
-                ris = ('errore', '', url, 'SSL: ' + str(e)[:80])
+                ris = ('errore', '', url, descrivi_errore(e))
                 continue
         except Exception as e:
-            ris = ('errore', '', url, str(e)[:100])
+            ris = ('errore', '', url, descrivi_errore(e))
             time.sleep(2)
             continue
         t = r.text
@@ -268,12 +283,75 @@ def applica(src, sostituzioni):
 # Controllo di un canale
 # ---------------------------------------------------------------------------
 
+CERCA = {}  # canali con findhost: nome -> indirizzo di partenza (sezione findhost di channels.json)
+
+
 def host_di(nome, hosts):
     h = hosts.get(nome)
     if not h:
         return ''
     p = urlparse(h)
     return '{}://{}'.format(p.scheme or 'https', p.netloc)
+
+
+class _Risp:
+    def __init__(self, url, data, headers, code):
+        self.url, self.data, self.headers, self.code = url, data, headers, code
+
+
+class _Match:
+    def __init__(self, data, match):
+        self.data, self.match = data, match
+
+
+class _Support:
+    class scrapertools:
+        @staticmethod
+        def find_single_match(data, patron, index=0):
+            m = re.search(patron, data, flags=re.DOTALL)
+            if not m:
+                return ''
+            return m.group(1) if len(m.groups()) == 1 else (m.groups() if m.groups() else m.group())
+
+    @staticmethod
+    def match(url, **a):
+        data = scarica(url)[1] if isinstance(url, str) and url.startswith('http') else str(url)
+        patron = a.get('patron')
+        m = _Support.scrapertools.find_single_match(data, patron) if patron else ''
+        return _Match(data, m)
+
+
+class _Http:
+    @staticmethod
+    def downloadpage(url, **a):
+        seg = a.get('follow_redirects', a.get('follow_redirect', True))
+        r = requests.get(url, headers={'User-Agent': UA}, allow_redirects=bool(seg), timeout=(8, 15), verify=False)
+        return _Risp(r.url, r.text, {k.lower(): v for k, v in r.headers.items()}, r.status_code)
+
+
+def host_da_findhost(src, partenza):
+    """Esegue la funzione findhost del canale (con rete vera) e ritorna l'indirizzo del sito, oppure ''."""
+    tree = ast.parse(src)
+    for f in tree.body:
+        if isinstance(f, ast.FunctionDef) and f.name == 'findhost':
+            codice = ast.get_source_segment(src, f)
+            ns = {'re': re, 'support': _Support, 'httptools': _Http, 'scrapertools': _Support.scrapertools,
+                  'config': None, 'logger': None}
+            exec(codice, ns)
+            try:
+                r = ns['findhost'](partenza)
+            except Exception as e:
+                return '', descrivi_errore(e)
+            if isinstance(r, (tuple, list)):
+                r = r[0]
+            r = (r or '').strip()
+            return (r.rstrip('/'), '') if r.startswith('http') else ('', 'findhost non restituisce un indirizzo (pagina cambiata?)')
+    return '', ''
+
+
+def host_letterale(src):
+    m = re.search(r'^host\s*=\s*[\'"](https?://[^\'"]+)[\'"]', src, re.M)
+    return m.group(1).rstrip('/') if m else ''
 
 
 def controlla(nome, hosts, ripara=True):
@@ -289,8 +367,21 @@ def controlla(nome, hosts, ripara=True):
         ris.update(stato='NON REGEX', dettagli=['nessuna funzione con @support.scrape: canale a API o personalizzato, non controllato'])
         return ris
     host = ris['host']
+    if nome in CERCA and 'def findhost' in src:
+        partenza = CERCA[nome]
+        host, errore = host_da_findhost(src, partenza)
+        if not host:
+            ris.update(stato='IRRAGGIUNGIBILE', dettagli=['findhost non ha dato un indirizzo partendo da %s: %s' % (partenza, errore)])
+            return ris
+        ris['host'] = host
+        ris['dettagli'].append('indirizzo ricavato dalla funzione findhost del canale: %s (partenza %s)' % (host, partenza))
     if not host:
-        ris.update(stato='SENZA INDIRIZZO', dettagli=['il canale non e in channels.json'])
+        letterale = host_letterale(src)
+        if letterale:
+            host = ris['host'] = letterale
+            ris['dettagli'].append('indirizzo scritto nel canale: %s' % letterale)
+    if not host:
+        ris.update(stato='SENZA INDIRIZZO', dettagli=['il canale non e in channels.json e non ha un indirizzo fisso nel file'])
         return ris
 
     # pagine da provare: indirizzi del menu per le funzioni con regex
@@ -313,8 +404,14 @@ def controlla(nome, hosts, ripara=True):
     if st != 'ok':
         ris.update(stato='IRRAGGIUNGIBILE' if st == 'errore' else 'CLOUDFLARE', dettagli=['%s (%s)' % (motivo, host)])
         return ris
-    if PARCHEGGIATO.search(html[:60000]) or len(g.soup_di(html).find_all('a', href=True)) < 3:
-        ris.update(stato='DOMINIO PARCHEGGIATO', dettagli=['la home di %s sembra un dominio in vendita o vuoto' % host])
+    mp = PARCHEGGIATO.search(html[:60000])
+    n_link = len(g.soup_di(html).find_all('a', href=True))
+    if mp or (n_link < 3 and len(html) < 4000):
+        tit = re.search(r'<title[^>]*>(.*?)</title>', html, re.I | re.S)
+        ris.update(stato='DOMINIO PARCHEGGIATO', dettagli=[
+            'la home di %s sembra un dominio in vendita o vuoto | motivo: %s | link: %d | dimensione: %d | titolo: %s' % (
+                host, ('frase "%s"' % mp.group(0)) if mp else 'pagina quasi vuota', n_link, len(html),
+                (tit.group(1).strip()[:80] if tit else 'nessuno'))])
         return ris
     if 'FlareSolverr' in motivo:
         ris['dettagli'].append('sito protetto da Cloudflare: pagine scaricate con FlareSolverr')
@@ -353,7 +450,11 @@ def controlla(nome, hosts, ripara=True):
         else:
             causa = 'patron non trova titoli'
         ris['dettagli'].append('ROTTO: %s %s | %s' % (azione, rel, causa))
-        prop = proponi_patron(html, norm, fn['patron'])
+        try:
+            prop = g.con_timeout(45, proponi_patron, html[:500000], norm, fn['patron'])
+        except BaseException as ex:
+            prop = None
+            ris['dettagli'].append('  ricerca della regex sostitutiva interrotta dopo 45 secondi (pagina troppo grande)')
         if not prop:
             ris['dettagli'].append('  nessuna regex sostitutiva trovata automaticamente in %s' % rel)
             continue
@@ -421,12 +522,12 @@ def controlla(nome, hosts, ripara=True):
 
 def carica_hosts():
     d = json.load(open(os.path.join(BASE, 'channels.json.txt'), encoding='utf-8'))
+    CERCA.update({k: v for k, v in d.get('findhost', {}).items() if isinstance(v, str) and v.startswith('http')})
     out = {}
-    for sez in d.values():
-        if isinstance(sez, dict):
-            for k, v in sez.items():
-                if isinstance(v, str) and v.startswith('http'):
-                    out.setdefault(k, v)
+    for sez in ('direct', 'findhost'):
+        for k, v in (d.get(sez) or {}).items():
+            if isinstance(v, str) and v.startswith('http'):
+                out.setdefault(k, v)
     return out
 
 
