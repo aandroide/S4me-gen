@@ -932,7 +932,7 @@ def posta_json(s, url, corpo, hdr=None):
             errori.append('risposta non JSON (stato %s, %d byte): %r' % (stato, len(testo), testo[:100]))
         if tentativo < 2:
             # 429: il sito limita le richieste, si aspetta di piu prima di riprovare
-            s.page.wait_for_timeout((20000 if stato == 429 else 3000) * (tentativo + 1))
+            s.page.wait_for_timeout((30000 if stato == 429 else 3000) * (tentativo + 1))
     raise RuntimeError(' | '.join(dict.fromkeys(errori)))
 
 
@@ -2041,6 +2041,22 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
                 par = posixpath.dirname(v)
                 if par and par != '/':
                     cand.append((nome_da_url(par), urljoin(base, par)))
+    def sonda_e_unisci():
+        for z in sonda_api(s, ctx, api, rp, filtro_free, list(sezioni)):
+            f = firma_richiesta(z['entry'])
+            if f not in viste:
+                viste.add(f)
+                sezioni.append(z)
+
+    # prima le richieste che servono davvero (filtro gratuito, tipi, ordinamenti): il sito limita le richieste
+    # per indirizzo, quindi si fanno subito, prima di aprire altre pagine
+    pagine_free = [u for t_, u in cand if FREE_RE.search(t_ + ' ' + u)]
+    if not filtro_free:
+        filtro_free.update(trova_filtro_free(s, api, pagine_free, rp))
+    sonda_presto = bool(filtro_free)
+    if sonda_presto:
+        sonda_e_unisci()
+
     visti = {pagina_elenco.rstrip('/')}
     sez_debug = []
     n = 0
@@ -2049,7 +2065,7 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
         if u.rstrip('/') in visti or urlparse(u).netloc != urlparse(base).netloc:
             continue
         visti.add(u.rstrip('/'))
-        if n >= 14:
+        if n >= 6:
             break
         n += 1
         if time.time() - t0 > 240:
@@ -2081,19 +2097,13 @@ def esplora_api(s, ctx, base, args, rp, cattura, soup, pagina_elenco, api, primo
                               'html': html_pulito(e['html']) if len(sez_debug) < 3 else ''})
     if filtro_free:
         rp('Filtro gratuito ricavato dalle sezioni:', json.dumps({'.'.join(k): v for k, v in filtro_free.items()}, ensure_ascii=False))
-    # prova a rigiocare la richiesta cambiando tipo, ordinamento e filtro gratuito
-    try:
-        s.vai(pagina_elenco, attesa=2, timeout=25000)
-    except Exception:
-        pass
-    if not filtro_free:
-        pagine_free = [u for t_, u in cand if FREE_RE.search(t_ + ' ' + u)] + [d['url'] for d in sez_debug if FREE_RE.search(d['url'])]
-        filtro_free.update(trova_filtro_free(s, api, pagine_free, rp))
-    for z in sonda_api(s, ctx, api, rp, filtro_free, list(sezioni)):
-        f = firma_richiesta(z['entry'])
-        if f not in viste:
-            viste.add(f)
-            sezioni.append(z)
+    if not sonda_presto:
+        # la sonda usa tutte le sezioni scoperte e l'eventuale filtro gratuito ricavato dalle pagine
+        try:
+            s.vai(pagina_elenco, attesa=2, timeout=25000)
+        except Exception:
+            pass
+        sonda_e_unisci()
     visti_titoli, unici = set(), []
     for z in sezioni:
         k = z['api']['chiavi'].get('title', '')
