@@ -21,42 +21,47 @@ SEZIONI = [{'nome': 'Titoli',
   'tipo': 'tvshow',
   'url': '/api/sliders/fetch',
   'params': {'lang': 'it'},
-  'body': {'sliders': [{'name': 'genre', 'genre': 'Guerra'},
-                       {'name': 'genre', 'genre': 'Animazione'},
-                       {'name': 'genre', 'genre': 'Mistero'},
-                       {'name': 'genre', 'genre': 'Fantascienza'},
-                       {'name': 'genre', 'genre': 'Horror'},
-                       {'name': 'genre', 'genre': 'Korean drama'}]},
+  'body': {'sliders': [{'name': 'genre', 'genre': 'Korean drama'},
+                       {'name': 'genre', 'genre': 'Romance'},
+                       {'name': 'genre', 'genre': 'War & Politics'},
+                       {'name': 'genre', 'genre': 'Famiglia'},
+                       {'name': 'genre', 'genre': 'Musica'},
+                       {'name': 'genre', 'genre': 'Fantasy'}]},
   'lista': 'titles',
-  'pag': None},
+  'pag': None,
+  'inertia': False},
  {'nome': 'Serie TV',
   'tipo': 'tvshow',
   'url': '/api/sliders/fetch',
   'params': {'lang': 'it'},
   'body': {'sliders': [{'name': 'new-episodes', 'title_type': 'tv', 'genre': None},
-                       {'name': 'genre', 'title_type': 'tv', 'genre': 'War & Politics'},
-                       {'name': 'genre', 'title_type': 'tv', 'genre': 'Dramma'}]},
+                       {'name': 'genre', 'title_type': 'tv', 'genre': 'Animazione'},
+                       {'name': 'genre', 'title_type': 'tv', 'genre': 'Mistero'}]},
   'lista': 'titles',
-  'pag': None},
+  'pag': None,
+  'inertia': False},
  {'nome': 'Film',
-  'tipo': 'tvshow',
+  'tipo': 'movie',
   'url': '/api/sliders/fetch',
   'params': {'lang': 'it'},
-  'body': {'sliders': [{'name': 'genre', 'title_type': 'movie', 'genre': 'Documentario'},
-                       {'name': 'genre', 'title_type': 'movie', 'genre': 'Famiglia'},
-                       {'name': 'genre', 'title_type': 'movie', 'genre': 'Musica'}]},
+  'body': {'sliders': [{'name': 'genre', 'title_type': 'movie', 'genre': 'Fantascienza'},
+                       {'name': 'genre', 'title_type': 'movie', 'genre': 'Commedia'},
+                       {'name': 'genre', 'title_type': 'movie', 'genre': 'Thriller'}]},
   'lista': 'titles',
-  'pag': None},
+  'pag': None,
+  'inertia': False},
  {'nome': 'Archivio',
-  'tipo': 'tvshow',
+  'tipo': 'movie',
   'url': '/it/archive',
   'params': {'lang': 'it', 'page': '2'},
   'body': None,
   'lista': 'data',
-  'pag': {'dove': 'query', 'chiave': 'page', 'tipo': 'pagina', 'valore': '2'}}]
-CAMPI = {"title": "name", "year": "last_air_date"}
+  'pag': {'dove': 'query', 'chiave': 'page', 'tipo': 'pagina', 'valore': '2'},
+  'inertia': False}]
+CAMPI = {"title": "name", "type": "type", "year": "last_air_date"}
 IDS = ["slug", "id"]  # campi che identificano il titolo, in ordine di preferenza
-DETTAGLIO = ''  # pagina del titolo, {} al posto dell'id
+DETTAGLIO = '/it/titles/{id}-{slug}'  # pagina del titolo, {} al posto dell'id (oppure {nome} dei campi di DETT_CAMPI)
+DETT_CAMPI = {"id": "id", "slug": "slug"}  # nome usato nel modello -> campo del titolo
 EPISODI = None  # episodi non rilevati sul sito
 
 
@@ -64,9 +69,10 @@ EPISODI = None  # episodi non rilevati sul sito
 def mainlist(item):
     tvshow = ['',
            ('Titoli', ['', 'peliculas', '0', 'tvshow']),
-           ('Serie TV', ['', 'peliculas', '1', 'tvshow']),
-           ('Film', ['', 'peliculas', '2', 'tvshow']),
-           ('Archivio', ['', 'peliculas', '3', 'tvshow'])]
+           ('Serie TV', ['', 'peliculas', '1', 'tvshow'])]
+    film = ['',
+           ('Film', ['', 'peliculas', '2', 'movie']),
+           ('Archivio', ['', 'peliculas', '3', 'movie'])]
     search = ''
     return locals()
 
@@ -74,6 +80,8 @@ def mainlist(item):
 RICERCA = None
 RICERCA_BODY = None
 RICERCA_URL = ''
+RICERCA_INERTIA = False
+RICERCA_LISTA = ''
 
 
 def prendi(d, path, default=''):
@@ -82,6 +90,8 @@ def prendi(d, path, default=''):
             d = d.get(p)
         elif isinstance(d, list) and p.isdigit() and int(p) < len(d):
             d = d[int(p)]
+        elif isinstance(d, list) and d and isinstance(d[0], dict) and not p.isdigit():
+            d = d[0].get(p)  # percorso senza indice: si legge il primo elemento della lista
         else:
             return default
         if d is None:
@@ -123,6 +133,26 @@ def cerca_lista(d, chiave_titolo):
     return []
 
 
+_INERTIA = {}
+
+
+def intestazioni_inertia():
+    # siti Inertia.js: la versione dei file cambia a ogni aggiornamento del sito, si legge dalla home
+    if 'v' not in _INERTIA:
+        versione = ''
+        try:
+            pagina = httptools.downloadpage(host + '/', headers={'Referer': host + '/'}).data
+            m = re.search(r'data-page="([^"]+)"', pagina)
+            if m:
+                from html import unescape
+                versione = json.loads(unescape(m.group(1))).get('version', '')
+        except Exception:
+            logger.error('Versione Inertia non letta')
+        _INERTIA['v'] = versione
+    return {'X-Inertia': 'true', 'X-Inertia-Version': _INERTIA['v'], 'X-Requested-With': 'XMLHttpRequest',
+            'Accept': 'text/html, application/xhtml+xml'}
+
+
 def sezione(item):
     return SEZIONI[int(item.args)] if str(item.args).isdigit() and int(item.args) < len(SEZIONI) else SEZIONI[0]
 
@@ -138,8 +168,10 @@ def chiama(item):
         body = json.loads(RICERCA_BODY.replace('__TESTO__', json.dumps(item.search_text)[1:-1]))
         url = RICERCA_URL or url
     elif item.search_text and RICERCA:
-        return httptools.downloadpage(RICERCA % item.search_text.replace(' ', '+'),
-                                      headers={'Referer': host + '/'}).json
+        intest = {'Referer': host + '/'}
+        if RICERCA_INERTIA:
+            intest.update(intestazioni_inertia())
+        return httptools.downloadpage(RICERCA % item.search_text.replace(' ', '+'), headers=intest).json
     if PAGINAZIONE:
         ch = PAGINAZIONE['chiave']
         if PAGINAZIONE['dove'] == 'query':
@@ -155,6 +187,8 @@ def chiama(item):
             bersaglio[ch] = (pagina - 1) * int(PAGINAZIONE.get('passo', 20))
     url = url + ('?' + urlencode(params) if params else '')
     opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
+    if sez.get('inertia'):
+        opt['headers'].update(intestazioni_inertia())
     if body is not None:
         opt['post'] = json.dumps(body)
     return httptools.downloadpage(url, **opt).json
@@ -215,7 +249,7 @@ def peliculas(item):
     sez = sezione(item)
     PAGINAZIONE = sez['pag']
     risposta = chiama(item)
-    lista = prendi(risposta, sez['lista'], [])
+    lista = prendi(risposta, RICERCA_LISTA if (item.search_text and RICERCA_LISTA) else sez['lista'], [])
     if not lista:
         lista = cerca_lista(risposta, CAMPI.get('title', 'title'))
     for el in lista:
@@ -232,7 +266,11 @@ def peliculas(item):
         anno = m.group(0) if m else ''
         url = ''
         if DETTAGLIO:
-            url = host + DETTAGLIO.format(idv) if DETTAGLIO.startswith('/') else DETTAGLIO.format(idv)
+            if DETT_CAMPI:
+                dett = DETTAGLIO.format(**{n: str(prendi(el, k) or '') for n, k in DETT_CAMPI.items()})
+            else:
+                dett = DETTAGLIO.format(idv)
+            url = host + dett if dett.startswith('/') else dett
         thumb = prendi(el, CAMPI['thumb']) if 'thumb' in CAMPI else ''
         thumb = str(thumb).replace('{profile}', 's332').replace('{format}', 'jpg')
         if thumb.startswith('/'):
@@ -277,22 +315,41 @@ def episodios(item):
     if not EPISODI:
         platformtools.dialog_ok('Streamingcommunityz', 'Episodi non rilevati sul sito')
         return []
-    url = EPISODI['url'].replace('{ID}', item.idv)
-    if not url.startswith('http'):
-        url = host + url
-    opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
-    if EPISODI['body']:
-        opt['post'] = EPISODI['body'].replace('{ID}', item.idv)
-    risposta = httptools.downloadpage(url, **opt).json
     ch = EPISODI['chiavi']
-    lista = prendi(risposta, EPISODI['lista'], []) or cerca_lista(risposta, ch.get('title', 'title'))
+    if EPISODI.get('inertia'):
+        # la pagina del titolo elenca le stagioni, ogni stagione ha la sua pagina con gli episodi
+        intest = {'Referer': host + '/'}
+        intest.update(intestazioni_inertia())
+        pagina_titolo = item.url if item.url.startswith('http') else host + item.url
+        r0 = httptools.downloadpage(pagina_titolo, headers=intest).json
+        numeri = []
+        for st in prendi(r0, EPISODI['stagioni'], []):
+            try:
+                numeri.append(int(float(prendi(st, EPISODI['num_stagione']))))
+            except (ValueError, TypeError):
+                continue
+        elenco = []
+        for n in numeri or [1]:
+            r1 = httptools.downloadpage(pagina_titolo + EPISODI['stagione_url'].format(S=n), headers=intest).json
+            for ep in (prendi(r1, EPISODI['lista'], []) or cerca_lista(r1, ch.get('title', 'title'))):
+                elenco.append((n, ep))
+    else:
+        url = EPISODI['url'].replace('{ID}', item.idv)
+        if not url.startswith('http'):
+            url = host + url
+        opt = {'headers': {'Referer': host + '/', 'Content-Type': 'application/json'}}
+        if EPISODI['body']:
+            opt['post'] = EPISODI['body'].replace('{ID}', item.idv)
+        risposta = httptools.downloadpage(url, **opt).json
+        lista = prendi(risposta, EPISODI['lista'], []) or cerca_lista(risposta, ch.get('title', 'title'))
+        elenco = [(None, ep) for ep in lista]
     titolo_serie = item.sito_title or item.contentSerieName or item.fulltitle
     anno = item.sito_year or item.infoLabels.get('year', '')
-    for ep in lista:
+    for stagione_nota, ep in elenco:
         try:
-            stagione = int(float(prendi(ep, ch['season'])))
+            stagione = stagione_nota if stagione_nota is not None else int(float(prendi(ep, ch['season'])))
             numero = int(float(prendi(ep, ch['episode'])))
-        except (ValueError, TypeError):
+        except (ValueError, TypeError, KeyError):
             continue
         nome = prendi(ep, ch['title']) if 'title' in ch else ''
         idv = ''
@@ -313,7 +370,7 @@ def episodios(item):
                                          'tvshowtitle': titolo_serie, 'year': anno},
                              thumbnail=item.thumbnail,
                              idv=str(idv),
-                             url=''))
+                             url=item.url if EPISODI.get('inertia') else ''))
     if itemlist and config.get_setting('episode_info'):
         try:
             tmdb.set_infoLabels_itemlist(itemlist, seekTmdb=True)
