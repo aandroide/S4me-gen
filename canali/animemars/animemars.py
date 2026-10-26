@@ -20,17 +20,10 @@ headers = [['Referer', host + '/']]
 
 @support.menu
 def mainlist(item):
-    top = [('Archivio', ['/az-list', 'peliculas', '', 'movie']),
-           ('In corso', ['/ongoing', 'peliculas', '', 'movie']),
-           ('Generi', ['/genres', 'peliculas', '', 'movie']),
-           ('Filtro', ['/filter', 'peliculas', '', 'movie']),
-           ('Calendario', ['/calendar', 'peliculas', '', 'movie']),
-           ('Classifiche', ['/toplist', 'peliculas', '', 'movie']),
-           ('Prossime uscite', ['/upcoming', 'peliculas', '', 'movie']),
-           ('Nuove aggiunte', ['/newest', 'peliculas', '', 'movie']),
-           ('News', ['/news', 'peliculas', '', 'movie']),
-           ('Random', ['/random', 'peliculas', '', 'movie']),
-           ('Feed RSS', ['/rss', 'peliculas', '', 'movie'])]
+    top = [('Archivio', ['/az-list', 'peliculas', '', 'tvshow']),
+           ('In corso', ['/ongoing', 'peliculas', '', 'tvshow']),
+           ('Nuove aggiunte', ['/newest', 'peliculas', '', 'tvshow']),
+           ('Prossime uscite', ['/upcoming', 'peliculas', '', 'tvshow'])]
     search = ''
     return locals()
 
@@ -39,8 +32,7 @@ def mainlist(item):
 def peliculas(item):
     support.info(item)
     action = 'findvideos'
-    patron = r'''<a[^>]*class="group\ block"[^>]*?href="(?P<url>[^"]+)"(?:(?!</a>).)*?<img [^>]*?src="(?P<thumb>[^"]+)"(?:(?!</a>).)*?<h3[^>]*class="line\-clamp\-2\ text\-sm\ font\-semibold\ leading\-snug\ transition\ group\-hover:text\-primary"[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)\s*<'''
-    patronNext = r'''<a [^>]*?href="([^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*Prossime\ uscite'''
+    patron = r'''<a(?=[^>]*class="group\ block")[^>]*?href="(?P<url>[^"]+)"(?:(?!</a>).)*?<img [^>]*?src="(?P<thumb>[^"]+)"(?:(?!</a>).)*?<h3(?=[^>]*class="line\-clamp\-2\ text\-sm\ font\-semibold\ leading\-snug\ transition\ group\-hover:text\-primary")[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)\s*<'''
     #debug = True  # apre regex101 con pagina e regex
     return locals()
 

@@ -523,7 +523,7 @@ def _tagre(tag, attrs_extra=''):
     cl = tag.get('class')
     parte = '<' + tag.name
     if cl:
-        parte += r'[^>]*class="' + re.escape(' '.join(cl)) + '"'
+        parte += r'(?=[^>]*class="' + re.escape(' '.join(cl)) + '")'
     return parte + attrs_extra
 
 
