@@ -7,6 +7,7 @@ I proxy pubblici vanno offline in poche ore: ogni volta si provano tutti, in par
 Per i SOCKS5 serve il pacchetto PySocks (pip install requests[socks]).
 """
 import argparse
+import json
 import os
 import random
 import re
@@ -17,6 +18,7 @@ import requests
 
 # liste gia divise per paese: (indirizzo, protocollo predefinito se le righe non lo indicano)
 LISTE = [
+    ('https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&proxy_format=protocolipport&format=text&country={paese}&timeout=10000', 'http'),
     ('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&country={paese}&timeout=8000', 'socks5'),
     ('https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&country={paese}&timeout=8000&ssl=all&anonymity=all', 'http'),
     ('https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/countries/{paese}/data.txt', 'http'),
@@ -35,8 +37,33 @@ CONTROLLI_PAESE = ['https://ipinfo.io/country', 'https://ifconfig.co/country-iso
 RIGA_RE = re.compile(r'^\s*(?:(socks5|socks4|https?)://)?(\d{1,3}(?:\.\d{1,3}){3}):(\d{2,5})\b', re.I)
 
 
-def leggi_indirizzi(testo, predefinito='http'):
-    """Righe 'ip:porta' oppure 'protocollo://ip:porta' -> elenco di 'protocollo://ip:porta'."""
+def leggi_json(testo, paese):
+    """Elenco JSON di proxy5.net: ip_address, port, protocols, country_code, is_working."""
+    try:
+        d = json.loads(testo)
+    except Exception:
+        return None
+    if not isinstance(d, list):
+        return None
+    out = []
+    for x in d:
+        if not isinstance(x, dict) or 'ip_address' not in x or x.get('country_code', paese) != paese:
+            continue
+        if x.get('is_working') is False:
+            continue
+        pr = [p.upper() for p in x.get('protocols', [])]
+        sch = 'socks5' if 'SOCKS5' in pr else ('http' if ('HTTP' in pr or 'HTTPS' in pr) else None)
+        if sch:
+            out.append('%s://%s:%s' % (sch, x['ip_address'], x['port']))
+    return out
+
+
+def leggi_indirizzi(testo, predefinito='http', paese='IT'):
+    """Righe 'ip:porta' oppure 'protocollo://ip:porta' (o un JSON di proxy5) -> elenco di 'protocollo://ip:porta'."""
+    if testo.lstrip()[:1] in ('[', '{'):
+        j = leggi_json(testo, paese)
+        if j is not None:
+            return j
     out = []
     for riga in testo.splitlines():
         m = RIGA_RE.match(riga)
@@ -56,11 +83,21 @@ def scarica_liste(paese):
     for u, pred in extra + LISTE:
         try:
             r = requests.get(u.format(paese=paese), timeout=20)
-            nuovi = leggi_indirizzi(r.text, pred)
+            nuovi = leggi_indirizzi(r.text, pred, paese)
             trovati += nuovi
             print('Lista', u.split('?')[0].replace('https://', '')[:70], '->', len(nuovi), 'indirizzi', flush=True)
         except Exception as ex:
             print('Lista non raggiungibile', u.split('?')[0][:70], str(ex)[:60], flush=True)
+    # liste salvate nel repo (istantanee): servono se le liste online non rispondono
+    cartella = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'proxy_locali')
+    if os.path.isdir(cartella):
+        for nome in sorted(os.listdir(cartella)):
+            try:
+                nuovi = leggi_indirizzi(open(os.path.join(cartella, nome), encoding='utf-8').read(), 'http', paese)
+                trovati += nuovi
+                print('Lista salvata', nome, '->', len(nuovi), 'indirizzi', flush=True)
+            except Exception as ex:
+                print('Lista salvata non letta', nome, str(ex)[:60], flush=True)
     return list(dict.fromkeys(trovati))
 
 
