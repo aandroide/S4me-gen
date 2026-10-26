@@ -650,6 +650,22 @@ def controlla_api(nome, src, host, menu, ris):
     return ris
 
 
+# canali che si usano solo con la ricerca: pagina di prova da cui estrarre i titoli
+SONDE = {'bt4g': [('peliculas', '/search?q=matrix&category=movie&page=rss&orderby=seeders')]}
+
+
+def menu_da_clone(src):
+    """Indirizzi fissi scritti nelle chiamate item.clone(url=host + '/percorso', action='funzione')."""
+    out = []
+    for m in re.finditer(r"clone\((?P<c>[^()]*(?:\([^()]*\)[^()]*)*)\)", src):
+        c = m.group('c')
+        u = re.search(r"url\s*=\s*host\s*\+\s*['\"](/[^'\"{%]*)['\"]", c)
+        a = re.search(r"action\s*=\s*['\"](\w+)['\"]", c)
+        if u and a:
+            out.append((u.group(1), a.group(1)))
+    return out
+
+
 def pagina_non_reale(html):
     """Riconosce pagine che non sono il sito vero: dominio in vendita, sfida anti bot, redirect via script."""
     mp = PARCHEGGIATO.search(html[:60000])
@@ -696,6 +712,11 @@ def controlla(nome, hosts, ripara=True):
     # pagine da provare: indirizzi del menu per le funzioni con regex
     prove = []
     visti = set()
+    menu = list(menu) + menu_da_clone(src)
+    for azione, rel0 in SONDE.get(nome, []):
+        if azione in funzioni:
+            visti.add((azione, rel0))
+            prove.append((azione, rel0))
     for url, azione in menu:
         if azione in funzioni and funzioni[azione]['patron'] and url and (azione, url) not in visti:
             visti.add((azione, url))
@@ -745,6 +766,16 @@ def controlla(nome, hosts, ripara=True):
             continue
         norm = uniforma(html)
         r = prova_pagina(fn, norm)
+        if not r['match']:
+            rd = re.search(r'(?:top\.|window\.|document\.)?location(?:\.href)?\s*=\s*[\'"]([^\'"]+)[\'"]', html)
+            if rd and len(html) < 40000 and not rd.group(1).startswith(('javascript', '#')):
+                url2 = urljoin(finale or url, rd.group(1))
+                st2, html2, fin2, mot2 = scarica(url2)
+                if st2 == 'ok':
+                    ris['dettagli'].append('%s %s: la pagina rimanda via script a %s, controllo quella' % (azione, rel, url2))
+                    html, finale = html2, fin2
+                    norm = uniforma(html)
+                    r = prova_pagina(fn, norm)
         if not r['match']:
             falso = pagina_non_reale(html)
             if falso:
