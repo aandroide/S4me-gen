@@ -22,8 +22,10 @@ headers = [['Referer', host + '/']]
 def mainlist(item):
     top = [('Archivio', ['/az-list', 'peliculas', '', 'tvshow']),
            ('In corso', ['/ongoing', 'peliculas', '', 'tvshow']),
+           ('Filtro', ['/filter', 'peliculas', '', 'tvshow']),
+           ('Prossime uscite', ['/upcoming', 'peliculas', '', 'tvshow']),
            ('Nuove aggiunte', ['/newest', 'peliculas', '', 'tvshow']),
-           ('Prossime uscite', ['/upcoming', 'peliculas', '', 'tvshow'])]
+           ('Random', ['/random', 'peliculas', '', 'tvshow'])]
     search = ''
     return locals()
 
@@ -33,12 +35,14 @@ def peliculas(item):
     support.info(item)
     action = 'episodios'
     anime = True
-    patron = r'''<a(?=[^>]*class="group\ block")[^>]*?href="(?P<url>[^"]+)"(?:(?!</a>).)*?<img [^>]*?src="(?P<thumb>[^"]+)"(?:(?!</a>).)*?<h3(?=[^>]*class="line\-clamp\-2\ text\-sm\ font\-semibold\ leading\-snug\ transition\ group\-hover:text\-primary")[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)(?:\s*\((?P<lang>ITA|SUB[\ \-]?ITA|Sub[\ \-]?Ita|CR)\))?\s*<'''
+    patron = r'''<a(?=[^>]*class="(?:[^"]*\s)?group(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?block(?:\s[^"]*)?")[^>]*?href="(?P<url>[^"]+)"(?:(?!</a>).)*?<img [^>]*?src="(?P<thumb>[^"]+)"(?:(?!</a>).)*?<h3(?=[^>]*class="(?:[^"]*\s)?line\-clamp\-2(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?font\-semibold(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?group\-hover:text\-primary(?:\s[^"]*)?")[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)(?:\s*\((?P<lang>ITA|SUB[\ \-]?ITA|Sub[\ \-]?Ita)\))?\s*<'''
+    # patronNext: pagina successiva non trovata
     #debug = True  # apre regex101 con pagina e regex
 
     def itemHook(item):
-        # le schede delle novita puntano all'episodio: la lista episodi sta nella pagina /stream/<titolo>
-        item.url = re.sub(r'/(?:watch|stream)/([^/]+)(?:/ep-\d+)?/?$', r'/stream/\1', item.url)
+        # la scheda puo puntare a un episodio: la lista episodi sta nella pagina del titolo
+        item.url = re.sub(r'''/watch/''', r'''/stream/''', item.url)
+        item.url = re.sub(r'''/ep\-\d+/?$''', r'''''', item.url)
         return item
     return locals()
 
@@ -46,26 +50,30 @@ def peliculas(item):
 @support.scrape
 def episodios(item):
     support.info(item)
-    anime = True
     action = 'findvideos'
-    # il sito ha una sola stagione per titolo: S4Me mostra 1x01 e cerca i titoli degli episodi su TMDB
-    if not item.season:
-        item.season = '1'
-    data = httptools.downloadpage(item.url, headers=headers).data
-    # l'anno sta solo nella pagina della serie: titolo e anno servono a TMDB per trovare la serie giusta
-    anno = support.match(data, patron=r'years=(\d{4})').match or support.match(data, patron=r'Uscita</span>\s*<span[^>]*>[^<]*?(\d{4})').match
-    if anno and not item.infoLabels.get('tmdb_id'):
-        item.infoLabels['year'] = anno
+    anime = True
+    # titolo e anno servono a TMDB: se la lista non ha l'anno lo cerco nella pagina della serie
+    if not item.infoLabels.get('year'):
+        anno = support.match(item.url, patron=r'(?:years=|[Aa]nno|[Uu]scita|[Yy]ear|[Rr]elease)[^<]{0,60}?((?:19|20)\d{2})').match
+        if anno:
+            item.infoLabels['year'] = anno
+    if item.infoLabels.get('year') and not item.infoLabels.get('tmdb_id'):
+        # titolo e anno a TMDB per riconoscere la serie, come fanno gli altri canali
         item.infoLabels['tvshowtitle'] = item.contentSerieName or item.fulltitle
         try:
             tmdb.set_infoLabels_item(item, seekTmdb=True)
         except Exception:
             pass
-    patron = r'''<a href="(?P<url>/watch/[^"]+/ep-(?P<episode>\d+))"[^>]*class="ep-tile"'''
+    patron = r'''<a(?=[^>]*class="(?:[^"]*\s)?ep\-tile(?:\s[^"]*)?")[^>]*?href="(?P<url>[^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*(?P<episode>\d+)\s*<'''
+    if '(?P<episode>' in patron and '(?P<season>' not in patron and not item.season:
+        # nessuna stagione nel sito: una sola, cosi S4Me mostra 1x01 e cerca i titoli degli episodi su TMDB
+        item.season = '1'
+    #debug = True
 
     def itemHook(it):
         # senza season sull'episodio S4Me salta la ricerca dei titoli su TMDB
-        it.season = item.season
+        if item.season:
+            it.season = item.season
         return it
 
     def itemlistHook(itemlist):
@@ -95,44 +103,47 @@ def search(item, text):
         return []
 
 
-def decodifica(testo, chiave):
-    # il player nasconde gli indirizzi: base64 e XOR con il token dell'embed
-    try:
-        r = base64.b64decode(testo)
-        return ''.join(chr(c ^ ord(chiave[n % len(chiave)])) for n, c in enumerate(r))
-    except Exception:
-        return ''
-
 
 def findvideos(item):
     support.info(item)
     itemlist = []
-    # la pagina dell'episodio e /stream/<titolo>/ep-N: contiene l'iframe del player (play.marscdn.org)
-    url = item.url.replace('/watch/', '/stream/', 1)
+    # la pagina dell'episodio contiene l'iframe del player; il video si legge dalle risposte del player
+    url = item.url
+    url = url.replace('/watch/', '/stream/', 1)
     data = httptools.downloadpage(url, headers=headers).data
-    embed = support.match(data, patron=r'<iframe(?=[^>]*id="watch-iframe")[^>]*?src="([^"]+)"').match
+    embed = support.match(data, patron=r'''<iframe(?=[^>]*id="watch\-iframe")[^>]*?(?:data-)?src="([^"]+)"''').match
     if not embed:
         return support.server(item, data=data, headers=headers)
     embed = embed.replace('&amp;', '&')
     if embed.startswith('//'):
         embed = 'https:' + embed
     origine = re.match(r'https?://[^/]+', embed).group(0)
-    # il player chiede /embed/<id>/playlist?token=..&expires=.. e riceve {"d": indirizzo cifrato, ...}
+    ref = [['Referer', host + '/']]
+    testi = []
     base_e, _, q = embed.partition('?')
-    chiave = support.match(q, patron=r'token=([^&]+)').match
-    testo = str(httptools.downloadpage(base_e + '/playlist' + ('?' + q if q else ''), headers=[['Referer', embed]]).data)
-    video = ''
+    testi.append(httptools.downloadpage(base_e + '/playlist' + ('?' + q if q else ''), headers=ref).data)
     try:
-        d = json.loads(testo).get('d')
-        if d and chiave:
-            video = decodifica(d, chiave)
+        r = base64.b64decode(json.loads(str(testi[-1])).get('d'))
+        for chiave in re.findall(r'(?:^|[?&])[^=&]+=([^&]+)', q):
+            t = ''.join(chr(c ^ ord(chiave[n % len(chiave)])) for n, c in enumerate(r))
+            if t.startswith('http'):
+                testi.insert(0, t)
+                break
     except Exception:
         pass
-    if not video.startswith('http'):
-        m = re.search(r'https?://[^"\'\s<>\\]+?\.(?:mp4|m3u8)[^"\'\s<>\\]*', testo.replace('\\/', '/'))
-        video = m.group(0).replace('&amp;', '&') if m else ''
-    if video.startswith('http'):
+    testi.append(httptools.downloadpage(embed, headers=ref).data)
+    visti = []
+    for t in testi:
+        t = str(t).replace('\\/', '/')
+        for u in re.findall(r'https?://[^"\'\s<>\\]+?\.(?:mp4|m3u8)[^"\'\s<>\\]*', t):
+            u = u.replace('&amp;', '&')
+            if u not in visti:
+                visti.append(u)
+        if visti:
+            break
+    for u in visti:
         itemlist.append(item.clone(action='play', title=support.config.get_localized_string(30137), server='directo',
-                                   url=video + '|Referer=' + origine + '/'))
-        return support.server(item, itemlist=itemlist)
-    return support.server(item, data=embed, headers=[['Referer', host + '/']])
+                                   url=u + '|Referer=' + origine + '/'))
+    if not itemlist:
+        return support.server(item, data=embed, headers=ref)
+    return support.server(item, itemlist=itemlist)
