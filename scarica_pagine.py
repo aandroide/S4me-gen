@@ -21,8 +21,16 @@ def main(urls, attesa=6):
         for url in urls:
             pag = ctx.new_page()
             rete = []
-            pag.on('response', lambda r: rete.append({'url': r.url[:300], 'status': r.status, 'tipo': r.request.resource_type,
-                                                    'ct': r.headers.get('content-type', '')}))
+            def risposta(r):
+                voce = {'url': r.url[:300], 'status': r.status, 'tipo': r.request.resource_type, 'ct': r.headers.get('content-type', '')}
+                # corpo delle risposte dati (playlist, api) e delle pagine dei player in iframe
+                if r.request.resource_type in ('fetch', 'xhr', 'document') and r.status == 200 and not re.search(r'google|doubleclick|a-ads|connatix|jwpcdn|cloudflare|cdn-cgi', r.url):
+                    try:
+                        voce['corpo'] = r.text()[:200000]
+                    except Exception:
+                        pass
+                rete.append(voce)
+            pag.on('response', risposta)
             nome = nome_file(url)
             try:
                 pag.goto(url, wait_until='domcontentloaded', timeout=45000)
