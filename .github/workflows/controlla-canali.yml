@@ -68,8 +68,12 @@ jobs:
             git commit -m "Controllo dei canali"
             echo "CAMBIATO=1" >> "$GITHUB_ENV"
           fi
-          git pull --rebase origin ${{ github.ref_name }} || true
-          git push || true
+          # i file generati hanno sempre la precedenza su quelli di una run precedente
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin ${{ github.ref_name }} && git push && break
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
       - name: Avviso su GitHub
         env:
           GH_TOKEN: ${{ github.token }}
@@ -77,7 +81,10 @@ jobs:
           RIEP=$(grep '^Riepilogo' correzioni/RAPPORTO.md || true)
           PROBLEMI=$(python3 - <<'PY'
           import json
-          d = json.load(open('correzioni/stato.json'))
+          try:
+              d = json.load(open('correzioni/stato.json'))
+          except Exception:
+              d = []
           bad = [x for x in d if x['stato'] in ('ROTTO', 'CORRETTO', 'DOMINIO PARCHEGGIATO')]
           print(len(bad))
           PY
