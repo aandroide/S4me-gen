@@ -3,5 +3,25 @@
 "dimensione": 875,
 "stato": "ok",
 "tipo": "html"
+},
+"https://opml.radiotime.com/Tune.ashx?render=json&id=s24939": {
+"chiavi": [
+"body",
+"body[].bitrate",
+"body[].element",
+"body[].is_direct",
+"body[].is_hls_advanced",
+"body[].live_seek_stream",
+"body[].media_type",
+"body[].player_height",
+"body[].player_width",
+"body[].position",
+"body[].reliability",
+"body[].url",
+"head",
+"head.status"
+],
+"stato": "ok",
+"tipo": "json"
 }
 }

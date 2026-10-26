@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 1, ROTTO 13, DOMINIO PARCHEGGIATO 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 5, OK 17, SENZA INDIRIZZO 7, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 1, ROTTO 13, DOMINIO PARCHEGGIATO 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 18, SENZA INDIRIZZO 7, TEMPO SCADUTO 1
 
 ## CORRETTO (1)
 
@@ -215,22 +215,20 @@ Sito: http://ww25.mondoserietv.club
 Sito: https://piratestreaming.design
 - il nome del sito non esiste piu (DNS) (https://piratestreaming.design)
 
-## NON VERIFICATO (5)
+## NON VERIFICATO (4)
 
 ### animeunity
 Sito: https://www.animeunity.to
 - home https://www.animeunity.to: FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl
+- non controllabile senza parametri: https://www.animeunity.to/archivio (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
+- non controllabile senza parametri: https://www.animeunity.to/archivio/get-animes (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
 ### aniplay
 Sito: https://aniplay.co
 - home https://aniplay.co: il sito non risponde (tempo scaduto)
 - non controllabile senza parametri: https://aniplay.co/api/anime/advanced-search (il sito non risponde (tempo scaduto))
-- nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
-
-### justwatch
-Sito: https://www.justwatch.com
-- non controllabile senza parametri: https://apis.justwatch.com/graphql (HTTP 400)
+- non controllabile senza parametri: https://aniplay.co/api/anime/find-by-char (il sito non risponde (tempo scaduto))
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
 ### paramount
@@ -239,7 +237,7 @@ Sito: https://www.mtv.com
 ### streamingita
 Sito: https://streamingita.homes
 
-## OK (17)
+## OK (18)
 
 ### 1337x
 Sito: https://1337x.to
@@ -289,44 +287,53 @@ Sito: https://casa-cinema.boats
 
 ### discoveryplus
 Sito: https://www.discoveryplus.com
-- OK: https://eu1-prod-direct.discoveryplus.com | html (prima rilevazione, riferimento salvato)
+- OK: https://eu1-prod-direct.discoveryplus.com | html
 
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10220 risultati
+- OK: peliculas /index | 3449 risultati
+
+### justwatch
+Sito: https://www.justwatch.com
+- OK: https://www.justwatch.com/ | html (prima rilevazione, riferimento salvato)
+- non controllabile senza parametri: https://apis.justwatch.com/graphql (HTTP 400)
 
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it
-- OK: https://mediasetinfinity.mediaset.it/cinema | html (prima rilevazione, riferimento salvato)
-- OK: https://mediasetinfinity.mediaset.it/fiction | html (prima rilevazione, riferimento salvato)
-- OK: https://mediasetinfinity.mediaset.it/programmitv | html (prima rilevazione, riferimento salvato)
-- OK: https://mediasetinfinity.mediaset.it/talent | html (prima rilevazione, riferimento salvato)
-- OK: https://mediasetinfinity.mediaset.it/kids | html (prima rilevazione, riferimento salvato)
-- OK: https://mediasetinfinity.mediaset.it/documentari | html (prima rilevazione, riferimento salvato)
-- OK: https://mediasetinfinity.mediaset.it | html (prima rilevazione, riferimento salvato)
+- OK: https://mediasetinfinity.mediaset.it/cinema | html
+- OK: https://mediasetinfinity.mediaset.it/fiction | html
+- OK: https://mediasetinfinity.mediaset.it/programmitv | html
+- OK: https://mediasetinfinity.mediaset.it/talent | html
+- OK: https://mediasetinfinity.mediaset.it/kids | html
+- OK: https://mediasetinfinity.mediaset.it/documentari | html
+- non controllabile senza parametri: https://api-ott-prod-fe.mediaset.net/PROD/play/reco/anonymous/v2.0? (HTTP 401)
+- OK: https://mediasetinfinity.mediaset.it | html
 - non controllabile senza parametri: https://api-ott-prod-fe.mediaset.net/PROD/play/idm/anonymous/login/v2.0 (HTTP 403)
+- non controllabile senza parametri: https://api-ott-prod-fe.mediaset.net/PROD/play/reco/anonymous/v2.0 (HTTP 401)
 
 ### plutotv
 Sito: https://pluto.tv
-- OK: https://pluto.tv/it/live-tv/ | html (prima rilevazione, riferimento salvato)
+- OK: https://pluto.tv/it/live-tv/ | html
 - non controllabile senza parametri: https://api.pluto.tv (HTTP 404)
 - non controllabile senza parametri: https://boot.pluto.tv/v4/start (HTTP 400)
 - non controllabile senza parametri: https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv (HTTP 404)
 - non controllabile senza parametri: https://cfd-v4-service-stitcher-dash-use1-1.prd.pluto.tv (HTTP 404)
-- OK: https://pluto.tv | html (prima rilevazione, riferimento salvato)
-- OK: https://pluto.tv/ | html (prima rilevazione, riferimento salvato)
+- OK: https://pluto.tv | html
+- OK: https://pluto.tv/ | html
 
 ### raiplay
 Sito: https://www.raiplay.it
-- OK: https://www.raiplay.it/dirette | html (prima rilevazione, riferimento salvato)
-- OK: https://www.raiplay.it/guidatv | html (prima rilevazione, riferimento salvato)
-- OK: https://www.raiplay.it/film | html (prima rilevazione, riferimento salvato)
-- OK: https://www.raiplay.it/serieitaliane | html (prima rilevazione, riferimento salvato)
-- OK: https://www.raiplay.it/serieinternazionali | html (prima rilevazione, riferimento salvato)
-- OK: https://www.raiplay.it/programmi | html (prima rilevazione, riferimento salvato)
-- OK: https://www.raiplay.it/documentari | html (prima rilevazione, riferimento salvato)
-- OK: https://www.raiplay.it/bambini | html (prima rilevazione, riferimento salvato)
+- OK: https://www.raiplay.it/palinsesto/onAir.json | json
+- OK: https://www.raiplay.it/dirette | html
+- OK: https://www.raiplay.it/guidatv.json | json
+- OK: https://www.raiplay.it/guidatv | html
+- OK: https://www.raiplay.it/tipologia/film/index.json | json
+- OK: https://www.raiplay.it/film | html
+- OK: https://www.raiplay.it/tipologia/serieitaliane/index.json | json
+- OK: https://www.raiplay.it/serieitaliane | html
+- OK: https://www.raiplay.it/tipologia/serieinternazionali/index.json | json
+- OK: https://www.raiplay.it/serieinternazionali | html
 
 ### streamingcommunity
 Sito: https://streamingcommunityz.build
@@ -352,23 +359,29 @@ Sito: https://toonitalia.xyz
 ### tunein
 Sito: http://api.radiotime.com
 - indirizzo scritto nel canale: http://api.radiotime.com
-- OK: http://api.radiotime.com | html (prima rilevazione, riferimento salvato)
+- OK: http://api.radiotime.com | html
+- OK: https://opml.radiotime.com/Tune.ashx?render=json&id=s24939 | json
 
 ### videosky
 Sito: https://video.sky.it
 - indirizzo scritto nel canale: https://video.sky.it
-- OK: https://video.sky.it | html (prima rilevazione, riferimento salvato)
+- OK: https://video.sky.it/api/v1/getLivestream?id=7 | json
+- OK: https://video.sky.it/api/v1/getLivestream?id=2 | json
+- OK: https://video.sky.it/api/v1/getLivestream?id=1 | json
+- OK: https://video.sky.it | html
 - non controllabile senza parametri: https://video.sky.it/api/v1 (HTTP 404)
 
 ### vvvvid
 Sito: https://www.vvvvid.it
 - indirizzo scritto nel canale: https://www.vvvvid.it
-- OK: https://www.vvvvid.it/vvvvid/ondemand/anime/ | html (prima rilevazione, riferimento salvato)
-- OK: https://www.vvvvid.it/vvvvid/ondemand/film/ | html (prima rilevazione, riferimento salvato)
-- OK: https://www.vvvvid.it/vvvvid/ondemand/series/ | html (prima rilevazione, riferimento salvato)
-- OK: https://www.vvvvid.it/vvvvid/ondemand/show/ | html (prima rilevazione, riferimento salvato)
-- OK: https://www.vvvvid.it/vvvvid/ondemand/kids/ | html (prima rilevazione, riferimento salvato)
-- OK: https://www.vvvvid.it | html (prima rilevazione, riferimento salvato)
+- OK: https://www.vvvvid.it/vvvvid/ondemand/anime/ | html
+- OK: https://www.vvvvid.it/vvvvid/ondemand/film/ | html
+- OK: https://www.vvvvid.it/vvvvid/ondemand/series/ | html
+- OK: https://www.vvvvid.it/vvvvid/ondemand/show/ | html
+- OK: https://www.vvvvid.it/vvvvid/ondemand/kids/ | html
+- OK: https://www.vvvvid.it/user/login | html
+- OK: https://www.vvvvid.it/vvvvid/ondemand/ | html
+- OK: https://www.vvvvid.it | html
 - non controllabile senza parametri: https://or01.top-ix.org/videomg/_definst_/mp4: (HTTP 404)
 
 ## SENZA INDIRIZZO (7)

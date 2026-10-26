@@ -3,6 +3,14 @@
 "motivo": "HTTP 403",
 "stato": "errore"
 },
+"https://api-ott-prod-fe.mediaset.net/PROD/play/reco/anonymous/v2.0": {
+"motivo": "HTTP 401",
+"stato": "errore"
+},
+"https://api-ott-prod-fe.mediaset.net/PROD/play/reco/anonymous/v2.0?": {
+"motivo": "HTTP 401",
+"stato": "errore"
+},
 "https://mediasetinfinity.mediaset.it": {
 "dimensione": 1500000,
 "stato": "ok",
