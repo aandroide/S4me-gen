@@ -51,7 +51,22 @@ def episodios(item):
     # il sito ha una sola stagione per titolo: S4Me mostra 1x01 e cerca i titoli degli episodi su TMDB
     if not item.season:
         item.season = '1'
+    data = httptools.downloadpage(item.url, headers=headers).data
+    # l'anno sta solo nella pagina della serie: titolo e anno servono a TMDB per trovare la serie giusta
+    anno = support.match(data, patron=r'years=(\d{4})').match or support.match(data, patron=r'Uscita</span>\s*<span[^>]*>[^<]*?(\d{4})').match
+    if anno and not item.infoLabels.get('tmdb_id'):
+        item.infoLabels['year'] = anno
+        item.infoLabels['tvshowtitle'] = item.contentSerieName or item.fulltitle
+        try:
+            tmdb.set_infoLabels_item(item, seekTmdb=True)
+        except Exception:
+            pass
     patron = r'''<a href="(?P<url>/watch/[^"]+/ep-(?P<episode>\d+))"[^>]*class="ep-tile"'''
+
+    def itemHook(it):
+        # senza season sull'episodio S4Me salta la ricerca dei titoli su TMDB
+        it.season = item.season
+        return it
     return locals()
 
 
