@@ -46,8 +46,12 @@ class H(http.server.BaseHTTPRequestHandler):
                               'fetch(location.pathname + "/playlist" + location.search).then(r => r.json()).then(j => {'
                               'document.getElementById("v").src = j.playlist[0].sources[0].file;});</script></body></html>')
         if re.match(r'^/embed/\d+/playlist$', p):
-            return self.invia(json.dumps({'playlist': [{'sources': [{'file': host + '/media/ep.mp4?token=abc&expires=9', 'type': 'video/mp4'}]}]}),
-                              'application/json')
+            # come il sito vero: {"d": indirizzo in base64 con XOR del token, "p": "", "t": ""}
+            import base64
+            tok = (re.search(r'token=([^&]+)', self.path) or [None, ''])[1]
+            url = host + '/media/ep.mp4?token=abc&expires=9'
+            d = base64.b64encode(bytes(ord(c) ^ ord(tok[i % len(tok)]) for i, c in enumerate(url))).decode()
+            return self.invia(json.dumps({'d': d, 'p': '', 't': ''}), 'application/json')
         if p.startswith('/media/'):
             return self.invia(b'\x00' * 2048, 'video/mp4')
         if p in ('/search', '/filter', '/az-list', '/ongoing', '/newest', '/upcoming'):

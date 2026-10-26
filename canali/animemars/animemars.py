@@ -64,36 +64,44 @@ def search(item, text):
         return []
 
 
+def decodifica(testo, chiave):
+    # il player nasconde gli indirizzi: base64 e XOR con il token dell'embed
+    try:
+        r = base64.b64decode(testo)
+        return ''.join(chr(c ^ ord(chiave[n % len(chiave)])) for n, c in enumerate(r))
+    except Exception:
+        return ''
+
+
 def findvideos(item):
     support.info(item)
     itemlist = []
-    # la pagina dell'episodio e /stream/<titolo>/ep-N: il player e un iframe (play.marscdn.org) presente nell'html
-    url = item.url.replace('/watch/', '/stream/')
+    # la pagina dell'episodio e /stream/<titolo>/ep-N: contiene l'iframe del player (play.marscdn.org)
+    url = item.url.replace('/watch/', '/stream/', 1)
     data = httptools.downloadpage(url, headers=headers).data
-    embed = support.match(data, patron=r'<iframe[^>]*id="watch-iframe"[^>]*src="([^"]+)"').match
+    embed = support.match(data, patron=r'<iframe(?=[^>]*id="watch-iframe")[^>]*?src="([^"]+)"').match
     if not embed:
         return support.server(item, data=data, headers=headers)
     embed = embed.replace('&amp;', '&')
     if embed.startswith('//'):
         embed = 'https:' + embed
-    ref = [['Referer', host + '/']]
-    # il player legge l'elenco dei file da /embed/<id>/playlist?<stessi parametri>
-    playlist = re.sub(r'/embed/(\d+)\?', r'/embed/\1/playlist?', embed)
-    testi = [httptools.downloadpage(playlist, headers=ref).data,
-             httptools.downloadpage(embed, headers=ref).data]
-    visti = []
-    for t in testi:
-        t = str(t).replace('\\/', '/')
-        for u in re.findall(r'https?://[^"\'\s<>\\]+?\.(?:mp4|m3u8)[^"\'\s<>\\]*', t):
-            u = u.replace('&amp;', '&')
-            if u not in visti:
-                visti.append(u)
-        if visti:
-            break
-    for u in visti:
+    origine = re.match(r'https?://[^/]+', embed).group(0)
+    # il player chiede /embed/<id>/playlist?token=..&expires=.. e riceve {"d": indirizzo cifrato, ...}
+    base_e, _, q = embed.partition('?')
+    chiave = support.match(q, patron=r'token=([^&]+)').match
+    testo = str(httptools.downloadpage(base_e + '/playlist' + ('?' + q if q else ''), headers=[['Referer', embed]]).data)
+    video = ''
+    try:
+        d = json.loads(testo).get('d')
+        if d and chiave:
+            video = decodifica(d, chiave)
+    except Exception:
+        pass
+    if not video.startswith('http'):
+        m = re.search(r'https?://[^"\'\s<>\\]+?\.(?:mp4|m3u8)[^"\'\s<>\\]*', testo.replace('\\/', '/'))
+        video = m.group(0).replace('&amp;', '&') if m else ''
+    if video.startswith('http'):
         itemlist.append(item.clone(action='play', title=support.config.get_localized_string(30137), server='directo',
-                                   url=u + '|Referer=https://play.marscdn.org/'))
-    if not itemlist:
-        itemlist = support.server(item, data=embed, headers=ref)
-        return itemlist
-    return support.server(item, itemlist=itemlist)
+                                   url=video + '|Referer=' + origine + '/'))
+        return support.server(item, itemlist=itemlist)
+    return support.server(item, data=embed, headers=[['Referer', host + '/']])
