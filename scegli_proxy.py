@@ -123,26 +123,48 @@ def filtra_per_paese(indirizzi, paese, massimo=1500):
     return tenuti
 
 
+MOTIVI = {}
+
+
+def motivo(m):
+    MOTIVI[m] = MOTIVI.get(m, 0) + 1
+
+
 def prova(proxy, sito, paese):
-    sch = proxy.split('://')[0]
+    """Il proxy deve aprire il sito e rispondere in JSON alla sua API (le liste sono gia per paese, il paese si
+    controlla solo come informazione perche molti proxy bloccano i servizi di geolocalizzazione)."""
     url = proxy.replace('socks5://', 'socks5h://')
     p = {'http': url, 'https': url}
+    h = {'User-Agent': 'Mozilla/5.0'}
     try:
-        ok_paese = False
-        for c in CONTROLLI_PAESE:
-            try:
-                r = requests.get(c, proxies=p, timeout=8)
-                if r.status_code == 200 and r.text.strip().upper()[:2] == paese:
-                    ok_paese = True
-                    break
-            except Exception:
-                continue
-        if not ok_paese:
-            return None
-        r = requests.get(sito, proxies=p, timeout=12, headers={'User-Agent': 'Mozilla/5.0'})
-        return proxy if r.status_code == 200 else None
-    except Exception:
+        r = requests.get(sito, proxies=p, timeout=12, headers=h)
+    except requests.exceptions.ProxyError:
+        motivo('proxy rifiuta la connessione')
         return None
+    except requests.exceptions.ConnectTimeout:
+        motivo('timeout di connessione')
+        return None
+    except requests.exceptions.ReadTimeout:
+        motivo('timeout di lettura')
+        return None
+    except Exception as ex:
+        motivo('errore: ' + type(ex).__name__)
+        return None
+    if r.status_code != 200:
+        motivo('sito risponde %d' % r.status_code)
+        return None
+    try:
+        api = sito.split('/it')[0].replace('://www.', '://apis.') + '/graphql'
+        r2 = requests.post(api, json={'query': '{ __typename }'}, proxies=p, timeout=12,
+                           headers={'User-Agent': 'Mozilla/5.0', 'Content-Type': 'application/json',
+                                    'Origin': sito.split('/it')[0], 'Referer': sito})
+        if r2.status_code != 200 or '__typename' not in r2.text:
+            motivo('API risponde %d' % r2.status_code)
+            return None
+    except Exception as ex:
+        motivo('API: ' + type(ex).__name__)
+        return None
+    return proxy
 
 
 def main():
@@ -178,6 +200,7 @@ def main():
                 print('Funziona:', r, flush=True)
                 if len(buoni) >= a.max:
                     break
+    print('Esito delle prove:', json.dumps(MOTIVI, ensure_ascii=False), flush=True)
     if not buoni:
         print('Nessun proxy italiano funzionante adesso. Il run continua senza proxy: riprova piu tardi o usa un proxy tuo (segreto PROXY_URL).')
         return 0

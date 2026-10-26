@@ -2663,7 +2663,7 @@ def main():
     if args.controlla_cf:
         print('true' if ha_challenge(args.url if '://' in args.url else 'https://' + args.url) else 'false')
         return
-    faulthandler.dump_traceback_later(300, repeat=True)  # se si blocca, il log mostra dove
+    faulthandler.dump_traceback_later(2400, exit=False)  # solo se resta fermo oltre 40 minuti, il log mostra dove
     srv = attiva_dns(args.dns)
     if srv:
         log('DNS over HTTPS attivo:', args.dns, srv)
