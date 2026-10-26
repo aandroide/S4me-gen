@@ -2290,7 +2290,15 @@ def analizza(url, args):
     cattura = {}
     try:
         rp('Apro', url)
-        elenco = s.vai(url, attesa=args.attesa)
+        try:
+            elenco = s.vai(url, attesa=args.attesa)
+        except BaseException as ex:
+            if not (args.proxy or os.environ.get('PROXY_URL')):
+                raise
+            rp('Il proxy non ha aperto la pagina (%s): riprovo senza proxy.' % str(ex)[:100])
+            s.chiudi()
+            s = Sessione(headless=not (args.mostra or args.pausa), chromium=args.chromium, dns=DOH.get(args.dns))
+            elenco = s.vai(url, attesa=args.attesa)
         if args.pausa:
             input('Supera a mano eventuali controlli o banner nel browser, poi premi Invio qui... ')
             s.net = []

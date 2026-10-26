@@ -65,7 +65,9 @@ jobs:
         if: inputs.proxy_italiano && env.PROXY_SEGRETO == ''
         env:
           SITO: ${{ inputs.sito }}
-        run: python3 scegli_proxy.py "$SITO"
+        run: |
+          pip install "requests[socks]"
+          python3 scegli_proxy.py "$SITO"
 
       - name: Genera il canale
         env:
