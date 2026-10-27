@@ -205,6 +205,16 @@ if finale:
                                {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:155.0) Gecko/20100101 Firefox/155.0', 'Referer': host.rstrip('/') + '/', 'Origin': host.rstrip('/'), 'Accept': '*/*'}):
                         rr = _rq.get('https://v.vidxgo.co/t/' + tid, headers=hd, timeout=30)
                         info.setdefault('api_t', []).append({'referer': hd['Referer'], 'status': rr.status_code, 'inizio': rr.text[:300]})
+                        try:
+                            flusso = rr.json().get('url')
+                        except BaseException:
+                            flusso = ''
+                        if flusso and 'VIDEO OK' not in info.get('esito', ''):
+                            ok, det = video_ok(flusso + '|Referer=https://v.vidxgo.co/&Origin=https://v.vidxgo.co')
+                            info['finale'] = flusso[:200]
+                            info['dettaglio'] = det
+                            info['esito'] = 'VIDEO OK' if ok else 'VIDEO NON RAGGIUNGIBILE'
+                            info['via'] = 'API /t/ di vidxgo (stessa chiamata del modulo S4Me)'
                         rp('   api /t/', tid, 'referer', hd['Referer'], '->', rr.status_code, rr.text[:120].replace('\n', ' '))
                 except BaseException as ex:
                     rp('   api /t/ errore', str(ex)[:100])
@@ -212,6 +222,7 @@ if finale:
             u = finali[-1][1] if isinstance(finali[-1], (list, tuple)) else finali[-1]
             ok, det = video_ok(u)
             info.update({'finale': str(u)[:200], 'esito': 'VIDEO OK' if ok else 'VIDEO NON RAGGIUNGIBILE', 'dettaglio': det})
+        pass
         rp('   ->', info['esito'], info.get('dettaglio', ''), info.get('nota', ''))
         esito['video'].append(info)
 else:
