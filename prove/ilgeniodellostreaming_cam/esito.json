@@ -8,46 +8,92 @@
    "voci": 7
   },
   {
-   "passo": "lista \"Tutti \"",
+   "passo": "lista \"Serie Tv \"",
    "esito": "OK",
-   "voci": 19
+   "voci": 1
   },
   {
-   "passo": "check su \"Shaun, vita da pecora - Operazione Z.U.C\"",
+   "passo": "peliculas su \"txt30992 %s >\"",
+   "esito": "OK",
+   "voci": 1
+  },
+  {
+   "passo": "peliculas su \"txt30992 %s >\"",
+   "esito": "OK",
+   "voci": 1
+  },
+  {
+   "passo": "peliculas su \"txt30992 %s >\"",
+   "esito": "OK",
+   "voci": 1
+  },
+  {
+   "passo": "peliculas su \"txt30992 %s >\"",
+   "esito": "OK",
+   "voci": 1
+  },
+  {
+   "passo": "peliculas su \"txt30992 %s >\"",
+   "esito": "OK",
+   "voci": 1
+  },
+  {
+   "passo": "peliculas su \"txt30992 %s >\"",
    "esito": "OK",
    "voci": 1
   }
  ],
- "video": [
-  {
-   "server": "vidxgo",
-   "url": "https://v.vidxgo.co/36841161",
-   "modulo_server": true,
-   "esito": "SERVER NON RISOLVE"
-  }
- ],
+ "video": [],
  "rete": [
   {
-   "url": "https://il-geniodellostreaming.ink/catalog/all",
+   "url": "https://il-geniodellostreaming.ink/serie-tv/",
    "status": 200,
-   "byte": 37932,
-   "secondi": 0.5,
+   "byte": 86497,
+   "secondi": 0.3,
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/film/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html",
+   "url": "https://il-geniodellostreaming.ink/serie-tv/page/2/",
    "status": 200,
-   "byte": 30861,
+   "byte": 85575,
    "secondi": 0.2,
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/film/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html",
+   "url": "https://il-geniodellostreaming.ink/serie-tv/page/3/",
    "status": 200,
-   "byte": 30861,
-   "secondi": 0.3,
+   "byte": 85698,
+   "secondi": 0.2,
    "file": "pagine/03.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/serie-tv/page/4/",
+   "status": 200,
+   "byte": 86609,
+   "secondi": 0.3,
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/serie-tv/page/5/",
+   "status": 200,
+   "byte": 86479,
+   "secondi": 0.2,
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/serie-tv/page/6/",
+   "status": 200,
+   "byte": 85210,
+   "secondi": 0.2,
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/serie-tv/page/7/",
+   "status": 200,
+   "byte": 84133,
+   "secondi": 0.6,
+   "file": "pagine/07.html"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE"
+ "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
 }
