@@ -200,7 +200,7 @@ if finale:
                 # l'API del lettore: /t/<id> risponde con un JSON che contiene l'indirizzo del flusso
                 try:
                     import requests as _rq
-                    tid = pl.url.rstrip('/').split('/vidxgo.co/')[-1]
+                    tid = pl.url.partition('|')[0].split('vidxgo.co/')[-1].strip('/')
                     for hd in ({'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:155.0) Gecko/20100101 Firefox/155.0', 'Referer': pl.url, 'Accept': 'application/json, text/plain, */*'},
                                {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:155.0) Gecko/20100101 Firefox/155.0', 'Referer': host.rstrip('/') + '/', 'Origin': host.rstrip('/'), 'Accept': '*/*'}):
                         rr = _rq.get('https://v.vidxgo.co/t/' + tid, headers=hd, timeout=30)
