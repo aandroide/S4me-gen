@@ -261,7 +261,7 @@ def _prova_sezione(voce, livello=0):
     if not f:
         return {'voce': nome_v, 'azione': voce.action, 'esito': 'AZIONE NON TROVATA'}
     try:
-        r = f(voce)
+        r = f(voce, 'avatar') if voce.action == 'search' else f(voce)
     except BaseException as ex:
         rp('   SEZIONE', nome_v, '-> ERRORE', type(ex).__name__)
         return {'voce': nome_v, 'azione': voce.action, 'esito': 'ERRORE %s' % type(ex).__name__}
@@ -284,11 +284,37 @@ def _prova_sezione(voce, livello=0):
     return out
 
 
+def _menu_dichiarato():
+    """Legge il sorgente del canale: le voci scritte in mainlist (@support.menu) e le confronta con quelle generate."""
+    import ast
+    try:
+        src = open(ch.__file__, encoding='utf-8').read()
+        albero = ast.parse(src)
+        for n in albero.body:
+            if isinstance(n, ast.FunctionDef) and n.name == 'mainlist':
+                voci = []
+                for a in ast.walk(n):
+                    if isinstance(a, ast.Assign) and isinstance(a.value, (ast.List, ast.Tuple)) and a.targets and isinstance(a.targets[0], ast.Name):
+                        for e in a.value.elts:
+                            voci.append((a.targets[0].id, ast.unparse(e)[:110]))
+                return voci
+    except BaseException:
+        pass
+    return []
+
+
+dichiarate = _menu_dichiarato()
+if dichiarate:
+    rp('== voci dichiarate in mainlist (%d)' % len(dichiarate))
+    for cat, v in dichiarate:
+        rp('   ', cat, '|', v)
+esito['menu_dichiarato'] = ['%s | %s' % x for x in dichiarate]
+
 sezioni = []
 try:
     rp('== controllo di tutte le sezioni')
     for vm in (menu or []):
-        if vm.action in ('search', 'channel_config', 'setting_channel', 'save_search') or not getattr(ch, vm.action, None):
+        if vm.action in ('channel_config', 'setting_channel', 'save_search') or not getattr(ch, vm.action, None):
             continue
         if not _pulisci(vm.title):
             continue
