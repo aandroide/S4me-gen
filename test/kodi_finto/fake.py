@@ -36,7 +36,7 @@ xbmc.log = lambda *a,**k: None
 import sys; sys.path.append('/tmp/kh/addon/lib')
 from platformcode import config as _cfg
 _orig = _cfg.get_setting
-_DFL = {'view_mode_channel': '50,50', 'view_mode_tvshow': '50,50', 'info_language': 0, 'tmdb_threads': 4, 'episode_info': False, 'videolibrary_tmdb': False}
+_DFL = {'view_mode_channel': '50,50', 'view_mode_tvshow': '50,50', 'info_language': 0, 'tmdb_threads': 4, 'episode_info': False, 'videolibrary_tmdb': False, 'resolve_priority': 0, 'resolve_stop': False, 'resolver_dns': False, 'proxy_use': False}
 def _gs(name, channel='', server='', default=None):
     try:
         v = _orig(name, channel, server, default)

@@ -153,7 +153,9 @@ for vm in voci_menu:
         finale = r
         break
 if finale:
-    for pl in [x for x in finale if x.action == 'play'][:3]:
+    giocabili = [x for x in finale if x.action == 'play']
+    giocabili = [x for x in giocabili if 'youtube' not in (x.url or '') and x.server != 'youtube'] or giocabili
+    for pl in giocabili[:3]:
         rp('== risoluzione', pl.server, (pl.url or '')[:100])
         info = {'server': pl.server, 'url': (pl.url or '')[:200]}
         try:
@@ -161,19 +163,29 @@ if finale:
                 finali = [['directo', pl.url]]
             else:
                 from core import servertools
-                finali = servertools.resolve_video_urls_for_playing(pl.server, pl.url)[0]
+                import concurrent.futures as cf
+                ex_ = cf.ThreadPoolExecutor(max_workers=1)
+                fut = ex_.submit(servertools.resolve_video_urls_for_playing, pl.server, pl.url)
+                try:
+                    finali = fut.result(timeout=90)[0]
+                except cf.TimeoutError:
+                    info['nota'] = 'il server non risponde entro 90 secondi'
+                    finali = []
+                ex_.shutdown(wait=False, cancel_futures=True)
                 if isinstance(finali, str):
+                    info['nota'] = finali[:200]
                     finali = []
         except BaseException:
             rp(traceback.format_exc(limit=3))
             finali = []
         if not finali:
-            info['esito'] = 'SERVER NON RISOLVE'
+            info['modulo_server'] = os.path.exists(os.path.join(args.addon, 'servers', '%s.py' % pl.server)) or pl.server == 'directo'
+            info['esito'] = 'SERVER NON RISOLVE' if info['modulo_server'] else 'SERVER NON SUPPORTATO DA S4ME'
         else:
             u = finali[-1][1] if isinstance(finali[-1], (list, tuple)) else finali[-1]
             ok, det = video_ok(u)
             info.update({'finale': str(u)[:200], 'esito': 'VIDEO OK' if ok else 'VIDEO NON RAGGIUNGIBILE', 'dettaglio': det})
-        rp('   ->', info['esito'], info.get('dettaglio', ''))
+        rp('   ->', info['esito'], info.get('dettaglio', ''), info.get('nota', ''))
         esito['video'].append(info)
 else:
     rp('Nessuna voce da riprodurre trovata')
@@ -181,7 +193,7 @@ esito['rete'] = rete[:60]
 if any(v['esito'] == 'VIDEO OK' for v in esito['video']):
     esito['verdetto'] = 'ARRIVA AL VIDEO'
 elif esito['video']:
-    esito['verdetto'] = 'SI FERMA AL SERVER O AL VIDEO'
+    esito['verdetto'] = 'SI FERMA AL SERVER O AL VIDEO: ' + esito['video'][0]['esito']
 else:
     ult = [p for p in passi if p['esito'] != 'OK']
     esito['verdetto'] = 'SI FERMA A: ' + (ult[0]['passo'] if ult else 'ultimo passo, nessuna voce da riprodurre')
