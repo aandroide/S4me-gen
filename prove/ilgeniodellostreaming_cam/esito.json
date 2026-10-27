@@ -23,7 +23,7 @@
    "server": "vidxgo",
    "url": "https://v.vidxgo.co/36841161",
    "modulo_server": true,
-   "esito": "VIDEO NON RAGGIUNGIBILE",
+   "esito": "VIDEO OK",
    "pagina_server": {
     "status": 403,
     "inizio": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>403</title><link rel=\"icon\" type=\"image/png\" href=\"/fav.png\"><link rel=\"apple-touch-icon\" href=\"/fav.png\"><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><l"
@@ -32,16 +32,16 @@
     {
      "referer": "https://v.vidxgo.co/36841161",
      "status": 200,
-     "inizio": "{\"url\":\"https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=c8281f7bcd5cf919&e=1793125978326&b=2819\",\"expire\":1793125978326}\n"
+     "inizio": "{\"url\":\"https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=94248c0f2c253063&e=1793126060139&b=2819\",\"expire\":1793126060139}\n"
     },
     {
      "referer": "https://il-geniodellostreaming.ink/",
      "status": 200,
-     "inizio": "{\"url\":\"https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=8853efc86490bc28&e=1793125979133&b=2819\",\"expire\":1793125979133}\n"
+     "inizio": "{\"url\":\"https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=f3f5d5adfe185470&e=1793126060851&b=2819\",\"expire\":1793126060851}\n"
     }
    ],
-   "finale": "https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=8853efc86490bc28&e=1793125979133&b=2819",
-   "dettaglio": "HTTP 403",
+   "finale": "https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=94248c0f2c253063&e=1793126060139&b=2819",
+   "dettaglio": "m3u8 200",
    "via": "API /t/ di vidxgo (stessa chiamata del modulo S4Me)"
   }
  ],
@@ -50,7 +50,7 @@
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
    "byte": 38042,
-   "secondi": 0.5,
+   "secondi": 0.7,
    "file": "pagine/01.html"
   },
   {
@@ -68,5 +68,5 @@
    "file": "pagine/03.html"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
+ "verdetto": "ARRIVA AL VIDEO"
 }
