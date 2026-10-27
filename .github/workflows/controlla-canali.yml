@@ -109,7 +109,7 @@ jobs:
   video:
     needs: controlla
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 170
     if: ${{ github.event.inputs.video != 'false' }}
     steps:
       - uses: actions/checkout@v4
@@ -134,7 +134,7 @@ jobs:
             [ -f correzioni/$c/$c.py ] && cp correzioni/$c/$c.py $f
             if [ -f riparazioni/$c.py ]; then cp riparazioni/$c.py $f; [ -f riparazioni/$c.json ] && cp riparazioni/$c.json /tmp/kh/addon/channels/; fi
           done
-          echo $CANALI | tr ' ' '\n' | xargs -P 4 -I{} sh -c 'PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 300 python3 -W ignore prova_video.py {} --out prove > /dev/null 2>&1 || echo "tempo scaduto o errore: {}"'
+          echo $CANALI | tr ' ' '\n' | xargs -P 6 -I{} sh -c 'PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 200 python3 -W ignore prova_video.py {} --out prove > /dev/null 2>&1 || echo "tempo scaduto o errore: {}"'
           python3 riepilogo_video.py
       - name: Salva
         run: |
