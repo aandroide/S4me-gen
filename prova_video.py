@@ -268,7 +268,7 @@ def _prova_sezione(voce, livello=0):
         rp('   SEZIONE', nome_v, '-> ERRORE', type(ex).__name__)
         return {'voce': nome_v, 'azione': voce.action, 'esito': 'ERRORE %s' % type(ex).__name__,
                 'pagine': [{k: z.get(k) for k in ('url', 'status', 'byte', 'titolo_pagina')} for z in rete[_n0:][:3]]}
-    r = [x for x in (r or []) if not _pulisci(x.title).endswith('>') and x.action not in ('addToLibrary', 'add_pelicula_to_library', 'add_serie_to_library', 'channel_config', 'search')]
+    r = [x for x in (r or []) if not re.search(r'\s>$', _pulisci(x.title)) and x.action not in ('addToLibrary', 'add_pelicula_to_library', 'add_serie_to_library', 'channel_config', 'search')]
     titoli = [x for x in r if x.action in _AZ_TITOLI]
     figli = [x for x in r if x.action not in _AZ_TITOLI]  # qualsiasi altra azione e una sottovoce (es. peliculas_genere, programmi, rubrica)
     out = {'voce': nome_v, 'azione': voce.action}

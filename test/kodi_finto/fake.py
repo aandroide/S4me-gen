@@ -55,6 +55,7 @@ class _Player:
     def isPlayingVideo(self):
         return False
 xbmc.Monitor = _Monitor
+xbmc.getLocalizedString = lambda i: 'str%d' % i
 xbmc.Player = _Player
 import sys; sys.path.append(os.path.join(KH,'addon','lib'))
 from platformcode import config as _cfg
