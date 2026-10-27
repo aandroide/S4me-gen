@@ -8,12 +8,12 @@
    "voci": 7
   },
   {
-   "passo": "lista \"Serie Tv \"",
+   "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 21
+   "voci": 19
   },
   {
-   "passo": "check su \"Minimum Wage \"",
+   "passo": "check su \"Shaun, vita da pecora - Operazione Z.U.C\"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,31 +21,35 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/42220724",
+   "url": "https://v.vidxgo.co/36841161",
    "modulo_server": true,
-   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
+   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
+   "pagina_server": {
+    "status": 403,
+    "inizio": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>403</title><link rel=\"icon\" type=\"image/png\" href=\"/fav.png\"><link rel=\"apple-touch-icon\" href=\"/fav.png\"><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><l"
+   }
   }
  ],
  "rete": [
   {
-   "url": "https://il-geniodellostreaming.ink/serie-tv/",
+   "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
-   "byte": 86497,
-   "secondi": 0.7,
+   "byte": 38042,
+   "secondi": 0.4,
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/film/35329-minimum-wage-streaming.html",
+   "url": "https://il-geniodellostreaming.ink/film/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html",
    "status": 200,
-   "byte": 30635,
+   "byte": 30861,
    "secondi": 0.5,
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/film/35329-minimum-wage-streaming.html",
+   "url": "https://il-geniodellostreaming.ink/film/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html",
    "status": 200,
-   "byte": 30635,
-   "secondi": 0.5,
+   "byte": 30861,
+   "secondi": 0.2,
    "file": "pagine/03.html"
   }
  ],
