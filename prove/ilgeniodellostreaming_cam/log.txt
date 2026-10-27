@@ -1,0 +1,28 @@
+Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.ink
+== mainlist
+   -> 7 voci
+      peliculas | Tutti  | https://il-geniodellostreaming.ink/catalog/all
+      genres | •• Generi | https://il-geniodellostreaming.ink
+      genres | •• Per Lettera | https://il-geniodellostreaming.ink/catalog/all
+      genres | •• Anni | https://il-geniodellostreaming.ink
+== lista "Tutti "
+   -> 19 voci
+      check | Shaun, vita da pecora - Operazione Z.U.C.C.A. | https://il-geniodellostreaming.ink/film/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.ht
+      check | Minimum Wage | https://il-geniodellostreaming.ink/film/35329-minimum-wage-streaming.html
+      check | Ip Man: Oltre la leggenda | https://il-geniodellostreaming.ink/film/35327-ip-man-oltre-la-leggenda-streaming.html
+      check | Organize Isler: Money Trap | https://il-geniodellostreaming.ink/film/35321-organize-isler-money-trap-streaming.html
+== check su "Shaun, vita da pecora - Operazione Z.U.C"
+   -> 1 voci
+      play | Shaun, vita da pecora - Operazione Z.U.C.C.A. | http://www.youtube.com/watch?v=coBQwR5_rLU
+== risoluzione youtube http://www.youtube.com/watch?v=coBQwR5_rLU
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <module>
+    finali = servertools.resolve_video_urls_for_playing(pl.server, pl.url)[0]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/servertools.py", line 284, in resolve_video_urls_for_playing
+    priority = int(config.get_setting("resolve_priority"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+
+   -> SERVER NON RISOLVE 
+VERDETTO: SI FERMA AL SERVER O AL VIDEO
