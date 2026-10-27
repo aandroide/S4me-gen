@@ -190,7 +190,8 @@ if finale:
             info['esito'] = 'SERVER NON RISOLVE' if info['modulo_server'] else 'SERVER NON SUPPORTATO DA S4ME'
             try:
                 import requests as _rq
-                rr = _rq.get(pl.url.partition('|')[0], timeout=30, headers={'User-Agent': 'Mozilla/5.0'})
+                rr = _rq.get(pl.url.partition('|')[0], timeout=30, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', 'Referer': host.rstrip('/') + '/', 'Accept-Language': 'it-IT,it;q=0.9'})
+                info['pagina_server'] = {'status': rr.status_code, 'inizio': rr.text[:300]}
                 if rr.status_code in (403, 429, 503) or 'you have been blocked' in rr.text or 'Just a moment' in rr.text:
                     info['esito'] = 'NON VERIFICABILE DA GITHUB (il server del video blocca l\'IP: HTTP %s)' % rr.status_code
             except BaseException:
