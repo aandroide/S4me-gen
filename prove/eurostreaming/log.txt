@@ -3,16 +3,39 @@ Canale eurostreaming | indirizzo https://eurostream.fun
    -> 6 voci
       peliculas | • Serie TV | https://eurostream.fun
       peliculas | • Anime | https://eurostream.fun/category/anime-cartoni-animati/
-      peliculas | • Aggiornamenti | https://eurostream.fun/aggiornamento-episodi-nuovi/
+      peliculas | • Aggiornamenti | https://eurostream.fun/nuovi-ep-aggiornamento/
       peliculas | • Archivio | https://eurostream.fun/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
+      episodios | All Creatures Great and Small | https://eurostream.fun/all-creatures-great-and-small/
       episodios | Phony | https://eurostream.fun/phony/
       episodios | Tommy & Tuppence | https://eurostream.fun/tommy-tuppence/
       episodios | Amore sotto copertura | https://eurostream.fun/amore-sotto-copertura/
-      episodios | Lo strano e meraviglioso mondo di Gumball | https://eurostream.fun/lo-strano-e-meraviglioso-mondo-di-gumball/
-== episodios su "Phony"
-   -> 0 voci
+== episodios su "All Creatures Great and Small"
+   -> 66 voci
+      findvideos | 1x01 - Devi avere un sogno  | https://eurostream.fun/all-creatures-great-and-small/
+      findvideos | 1x02 - Un altro Farnon?  | https://eurostream.fun/all-creatures-great-and-small/
+      findvideos | 1x03 - Ce ne vogliono di tutti i colori  | https://eurostream.fun/all-creatures-great-and-small/
+      findvideos | 1x04 - L’amore per i vitelli  | https://eurostream.fun/all-creatures-great-and-small/
+== findvideos su "1x01 - Devi avere un sogno "
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
+    itemlist = support.server(item, item.other)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 1287, in server
+    itemList = servertools.find_video_items(data=str(data))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
+    data = unshortenit.findlinks(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5
+
 == lista "• Anime"
    -> 19 voci
       episodios | Adventure Time: Side Quests | https://eurostream.fun/adventure-time-side-quests/
@@ -20,8 +43,60 @@ Canale eurostreaming | indirizzo https://eurostream.fun
       episodios | Willy il Coyote e Beep Beep | https://eurostream.fun/willy-il-coyote-e-beep-beep/
       episodios | The Doomies | https://eurostream.fun/the-doomies/
 == episodios su "Adventure Time: Side Quests"
-   -> 0 voci
+   -> 41 voci
+      findvideos | 1x01 - Bros & Arrows  | https://eurostream.fun/adventure-time-side-quests/
+      findvideos | 1x02 - Dandy Bug  | https://eurostream.fun/adventure-time-side-quests/
+      findvideos | 1x03 - Cursed Words  | https://eurostream.fun/adventure-time-side-quests/
+      findvideos | 1x04 - Rescue Princess  | https://eurostream.fun/adventure-time-side-quests/
+== findvideos su "1x01 - Bros & Arrows "
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
+    itemlist = support.server(item, item.other)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 1287, in server
+    itemList = servertools.find_video_items(data=str(data))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
+    data = unshortenit.findlinks(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Not un-shortened link: https://clicka.cc/tv/c4q9u136
+
 == lista "• Aggiornamenti"
-   -> 0 voci
+   -> 21 voci
+      episodios | 7x06 - All Creatures Great and Small - Give Us This Day  | https://eurostream.fun/all-creatures-great-and-small/
+      episodios | 1x03 - Phony - Reverse Cuckoo Situation  | https://eurostream.fun/phony/
+      episodios | 1x02 - Tommy & Tuppence - Episode 2  | https://eurostream.fun/tommy-tuppence/
+      episodios | 1x04 - Amore sotto copertura - Episodio 4 | https://eurostream.fun/amore-sotto-copertura/
+== episodios su "7x06 - All Creatures Great and Small - G"
+   -> 66 voci
+      findvideos | 1x01 - Devi avere un sogno  | https://eurostream.fun/all-creatures-great-and-small/
+      findvideos | 1x02 - Un altro Farnon?  | https://eurostream.fun/all-creatures-great-and-small/
+      findvideos | 1x03 - Ce ne vogliono di tutti i colori  | https://eurostream.fun/all-creatures-great-and-small/
+      findvideos | 1x04 - L’amore per i vitelli  | https://eurostream.fun/all-creatures-great-and-small/
+== findvideos su "1x01 - Devi avere un sogno "
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
+    itemlist = support.server(item, item.other)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 1287, in server
+    itemList = servertools.find_video_items(data=str(data))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
+    data = unshortenit.findlinks(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5
+
 Nessuna voce da riprodurre trovata
-VERDETTO: SI FERMA A: episodios su "Phony"
+VERDETTO: SI FERMA A: findvideos su "1x01 - Devi avere un sogno "

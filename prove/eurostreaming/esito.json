@@ -13,9 +13,14 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"Phony\"",
-   "esito": "VUOTO",
-   "voci": 0
+   "passo": "episodios su \"All Creatures Great and Small\"",
+   "esito": "OK",
+   "voci": 66
+  },
+  {
+   "passo": "findvideos su \"1x01 - Devi avere un sogno \"",
+   "esito": "ERRORE",
+   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5\n"
   },
   {
    "passo": "lista \"• Anime\"",
@@ -24,13 +29,28 @@
   },
   {
    "passo": "episodios su \"Adventure Time: Side Quests\"",
-   "esito": "VUOTO",
-   "voci": 0
+   "esito": "OK",
+   "voci": 41
+  },
+  {
+   "passo": "findvideos su \"1x01 - Bros & Arrows \"",
+   "esito": "ERRORE",
+   "errore": ".sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/tv/c4q9u136\n"
   },
   {
    "passo": "lista \"• Aggiornamenti\"",
-   "esito": "VUOTO",
-   "voci": 0
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "episodios su \"7x06 - All Creatures Great and Small - G\"",
+   "esito": "OK",
+   "voci": 66
+  },
+  {
+   "passo": "findvideos su \"1x01 - Devi avere un sogno \"",
+   "esito": "ERRORE",
+   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5\n"
   }
  ],
  "video": [],
@@ -38,38 +58,114 @@
   {
    "url": "https://eurostream.fun",
    "status": 200,
-   "byte": 42981,
-   "secondi": 1.1,
+   "byte": 42951,
+   "secondi": 0.9,
    "file": "pagine/01.html"
   },
   {
-   "url": "https://eurostream.fun/phony/",
+   "url": "https://eurostream.fun/all-creatures-great-and-small/",
    "status": 200,
-   "byte": 33032,
-   "secondi": 0.4,
+   "byte": 53985,
+   "secondi": 0.5,
    "file": "pagine/02.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/7iekfeazam61",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.7,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://uprot.net/msf/7iekfeazam61",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.9,
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/delta/qt6wmwfobtn5",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.7,
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://clicka.cc/delta/qt6wmwfobtn5",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.9,
+   "file": "pagine/06.html"
   },
   {
    "url": "https://eurostream.fun/category/anime-cartoni-animati/",
    "status": 200,
    "byte": 43973,
-   "secondi": 1.0,
-   "file": "pagine/03.html"
+   "secondi": 0.7,
+   "file": "pagine/07.html"
   },
   {
    "url": "https://eurostream.fun/adventure-time-side-quests/",
    "status": 200,
    "byte": 37324,
    "secondi": 0.5,
-   "file": "pagine/04.html"
+   "file": "pagine/08.html"
   },
   {
-   "url": "https://eurostream.fun/aggiornamento-episodi-nuovi/",
-   "status": 200,
-   "byte": 26792,
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/tv/c4q9u136",
+   "status": 403,
+   "byte": 5856,
+   "secondi": 0.5,
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://clicka.cc/tv/c4q9u136",
+   "status": 403,
+   "byte": 5856,
    "secondi": 0.6,
-   "file": "pagine/05.html"
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://eurostream.fun/nuovi-ep-aggiornamento/",
+   "status": 200,
+   "byte": 46009,
+   "secondi": 0.7,
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://eurostream.fun/all-creatures-great-and-small/",
+   "status": 200,
+   "byte": 53985,
+   "secondi": 0.5,
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/delta/qt6wmwfobtn5",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.5,
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://clicka.cc/delta/qt6wmwfobtn5",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.6,
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/7iekfeazam61",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.5,
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://uprot.net/msf/7iekfeazam61",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.6
   }
  ],
- "verdetto": "SI FERMA A: episodios su \"Phony\""
+ "verdetto": "SI FERMA A: findvideos su \"1x01 - Devi avere un sogno \""
 }

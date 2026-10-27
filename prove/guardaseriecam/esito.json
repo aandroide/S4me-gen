@@ -9,11 +9,6 @@
   },
   {
    "passo": "lista \"• Serie TV\"",
-   "esito": "OK",
-   "voci": 18
-  },
-  {
-   "passo": "episodios su \"Grande de España\"",
    "esito": "VUOTO",
    "voci": 0
   }
@@ -23,17 +18,10 @@
   {
    "url": "https://guardaseriex.best/serietv-streaming",
    "status": 200,
-   "byte": 100233,
-   "secondi": 1.1,
+   "byte": 100741,
+   "secondi": 1.0,
    "file": "pagine/01.html"
-  },
-  {
-   "url": "https://guardaseriex.best/commedia/5855-grande-de-espana-streaming.html",
-   "status": 200,
-   "byte": 63712,
-   "secondi": 0.3,
-   "file": "pagine/02.html"
   }
  ],
- "verdetto": "SI FERMA A: episodios su \"Grande de España\""
+ "verdetto": "SI FERMA A: lista \"• Serie TV\""
 }
