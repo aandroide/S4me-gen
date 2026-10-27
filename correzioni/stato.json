@@ -46,13 +46,11 @@
   "canale": "altadefinizioneclick",
   "stato": "OK",
   "dettagli": [
-   "il sito reindirizza a un altro indirizzo: https://altadefinizionex.vip (in channels.json c'e https://altadefinizionex.forum)",
    "OK: peliculas /film/ | 30 risultati",
    "OK: peliculas /serie-tv/ | 30 risultati"
   ],
   "correzione": false,
-  "host": "https://altadefinizionex.forum",
-  "nuovo_host": "https://altadefinizionex.vip"
+  "host": "https://altadefinizionex.vip"
  },
  {
   "canale": "altadefinizionecommunity",
@@ -120,7 +118,7 @@
   "dettagli": [
    "OK: peliculas /filter?sort= | 40 risultati",
    "OK: peliculas /ongoing | 40 risultati",
-   "OK: peliculas /updated | 78 risultati",
+   "OK: peliculas /updated | 79 risultati",
    "OK: peliculas /newest | 40 risultati"
   ],
   "correzione": false,
@@ -171,7 +169,6 @@
   "canale": "cineblog001",
   "stato": "ROTTO",
   "dettagli": [
-   "il sito reindirizza a un altro indirizzo: https://cineblog001.men (in channels.json c'e https://cineblog001.loan)",
    "ROTTO: peliculas /film/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_film.html",
    "  regex proposta: 70 titoli su 51 card",
@@ -186,8 +183,7 @@
    "  non applicata al file: regex dinamica"
   ],
   "correzione": false,
-  "host": "https://cineblog001.loan",
-  "nuovo_host": "https://cineblog001.men",
+  "host": "https://cineblog001.men",
   "proposte": [
    {
     "funzione": "peliculas",
@@ -195,19 +191,19 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
+      "title": "Crystal Lake",
+      "url": "https://cineblog001.men/cb01-streaming/35185-crystal-lake-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23148340.jpg"
+     },
+     {
+      "title": "Helluva Boss",
+      "url": "https://cineblog001.men/cb01-streaming/27904-helluva-boss-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg"
+     },
+     {
       "title": "VisionQuest",
-      "url": "https://cineblog001.delivery/cb01-streaming/35174-visionquest-streaming-cb01.html",
+      "url": "https://cineblog001.men/cb01-streaming/35174-visionquest-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23112594.jpg"
-     },
-     {
-      "title": "Avatar: I sette rifugi",
-      "url": "https://cineblog001.delivery/cb01-streaming/35139-avatar-i-sette-rifugi-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt35854736.jpg"
-     },
-     {
-      "title": "The Terminal List (2022)",
-      "url": "https://cineblog001.delivery/cb01-streaming/27037-the-terminal-list-2022-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-11/the-terminal-list-2022_1732014451.jpg"
      }
     ],
     "perse": []
@@ -218,19 +214,19 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
+      "title": "Crystal Lake",
+      "url": "https://cineblog001.men/cb01-streaming/35185-crystal-lake-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23148340.jpg"
+     },
+     {
+      "title": "Helluva Boss",
+      "url": "https://cineblog001.men/cb01-streaming/27904-helluva-boss-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg"
+     },
+     {
       "title": "VisionQuest",
-      "url": "https://cineblog001.delivery/cb01-streaming/35174-visionquest-streaming-cb01.html",
+      "url": "https://cineblog001.men/cb01-streaming/35174-visionquest-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23112594.jpg"
-     },
-     {
-      "title": "Avatar: I sette rifugi",
-      "url": "https://cineblog001.delivery/cb01-streaming/35139-avatar-i-sette-rifugi-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt35854736.jpg"
-     },
-     {
-      "title": "The Terminal List (2022)",
-      "url": "https://cineblog001.delivery/cb01-streaming/27037-the-terminal-list-2022-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-11/the-terminal-list-2022_1732014451.jpg"
      }
     ],
     "perse": []
@@ -241,19 +237,19 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
+      "title": "Crystal Lake",
+      "url": "https://cineblog001.men/cb01-streaming/35185-crystal-lake-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23148340.jpg"
+     },
+     {
+      "title": "Helluva Boss",
+      "url": "https://cineblog001.men/cb01-streaming/27904-helluva-boss-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg"
+     },
+     {
       "title": "VisionQuest",
-      "url": "https://cineblog001.delivery/cb01-streaming/35174-visionquest-streaming-cb01.html",
+      "url": "https://cineblog001.men/cb01-streaming/35174-visionquest-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23112594.jpg"
-     },
-     {
-      "title": "Avatar: I sette rifugi",
-      "url": "https://cineblog001.delivery/cb01-streaming/35139-avatar-i-sette-rifugi-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt35854736.jpg"
-     },
-     {
-      "title": "The Terminal List (2022)",
-      "url": "https://cineblog001.delivery/cb01-streaming/27037-the-terminal-list-2022-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-11/the-terminal-list-2022_1732014451.jpg"
      }
     ],
     "perse": []
@@ -276,7 +272,7 @@
    "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5634 byte): non e un cambio di struttura",
    "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5642 byte): non e un cambio di struttura",
    "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5662 byte): non e un cambio di struttura",
-   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5655 byte): non e un cambio di struttura"
+   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5651 byte): non e un cambio di struttura"
   ],
   "correzione": false,
   "host": "https://cinemalibero.cafe"
@@ -302,22 +298,25 @@
    {
     "funzione": "menu",
     "pagina": "/video/epoche",
-    "patron": "<li[^>]*class=\"itemList\"(?:(?!<li[^>]*class=\"itemList\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<li[^>]*class=\"itemList\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<li[^>]*class=\"itemList\").)*?<a[^>]*class=\"title\\ museo\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
+    "patron": "<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")(?:(?!<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?museo(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
       "url": "/video/dettaglio/35551",
       "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/3/9/7/39742.jpg",
-      "title": "[A. Drankoff St. Petersburg]"
+      "title": "[A. Drankoff St. Petersburg]",
+      "lang": null
      },
      {
       "url": "/video/dettaglio/8574",
       "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/9/9/5/9956.jpg",
-      "title": "Ben Hur"
+      "title": "Ben Hur",
+      "lang": null
      },
      {
       "url": "/video/dettaglio/10139",
       "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/1/1/7/11713.jpg",
-      "title": "Bersaglieri, i"
+      "title": "Bersaglieri, i",
+      "lang": null
      }
     ],
     "perse": []
@@ -348,19 +347,19 @@
   "dettagli": [
    "ROTTO: peliculas /search?typeY=tv | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_tv.html",
-   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year",
+   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
    "  non applicata al file: la funzione ha piu varianti di regex",
    "ROTTO: peliculas /search?typeY=movie | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_movie.html",
-   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year",
+   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
    "  non applicata al file: la funzione ha piu varianti di regex",
    "ROTTO: peliculas /search?typeY=oav | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_oav.html",
-   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year",
+   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
    "  non applicata al file: la funzione ha piu varianti di regex",
    "ROTTO: peliculas /search?typeY=spinoff | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_spinoff.html",
-   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year",
+   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
    "  non applicata al file: la funzione ha piu varianti di regex"
   ],
   "correzione": false,
@@ -369,108 +368,116 @@
    {
     "funzione": "peliculas",
     "pagina": "/search?typeY=tv",
-    "patron": "<div[^>]*class=\"item\"(?:(?!<div[^>]*class=\"item\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<a[^>]*class=\"name\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
+    "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
       "url": "/play/im-dating-a-dark-summoner.K9Q3D/h7ypKWx436",
       "thumb": "https://img.animeworld.ac/locandine/K9Q3D.jpg",
-      "title": "I&#x27;m Dating a Dark Summoner"
+      "title": "I&#x27;m Dating a Dark Summoner",
+      "lang": null
      },
      {
       "url": "/play/bleach-sennen-kessen-hen-kashin-tan.X3ktM/KFu4gnrn7Y",
       "thumb": "https://img.animeworld.ac/locandine/X3ktM.jpg",
-      "title": "Bleach: Sennen Kessen-hen - Kashin-tan"
+      "title": "Bleach: Sennen Kessen-hen - Kashin-tan",
+      "lang": null
      },
      {
       "url": "/play/psyren.3pGZY/6dLMQR8KqG",
       "thumb": "https://img.animeworld.ac/locandine/3pGZY.jpg",
-      "title": "Psyren"
+      "title": "Psyren",
+      "lang": null
      }
     ],
     "perse": [
      "episode",
-     "lang",
      "year"
     ]
    },
    {
     "funzione": "peliculas",
     "pagina": "/search?typeY=movie",
-    "patron": "<div[^>]*class=\"item\"(?:(?!<div[^>]*class=\"item\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<a[^>]*class=\"name\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
+    "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
       "url": "/play/im-dating-a-dark-summoner.K9Q3D/h7ypKWx436",
       "thumb": "https://img.animeworld.ac/locandine/K9Q3D.jpg",
-      "title": "I&#x27;m Dating a Dark Summoner"
+      "title": "I&#x27;m Dating a Dark Summoner",
+      "lang": null
      },
      {
       "url": "/play/bleach-sennen-kessen-hen-kashin-tan.X3ktM/KFu4gnrn7Y",
       "thumb": "https://img.animeworld.ac/locandine/X3ktM.jpg",
-      "title": "Bleach: Sennen Kessen-hen - Kashin-tan"
+      "title": "Bleach: Sennen Kessen-hen - Kashin-tan",
+      "lang": null
      },
      {
       "url": "/play/psyren.3pGZY/6dLMQR8KqG",
       "thumb": "https://img.animeworld.ac/locandine/3pGZY.jpg",
-      "title": "Psyren"
+      "title": "Psyren",
+      "lang": null
      }
     ],
     "perse": [
      "episode",
-     "lang",
      "year"
     ]
    },
    {
     "funzione": "peliculas",
     "pagina": "/search?typeY=oav",
-    "patron": "<div[^>]*class=\"item\"(?:(?!<div[^>]*class=\"item\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<a[^>]*class=\"name\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
+    "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
       "url": "/play/im-dating-a-dark-summoner.K9Q3D/h7ypKWx436",
       "thumb": "https://img.animeworld.ac/locandine/K9Q3D.jpg",
-      "title": "I&#x27;m Dating a Dark Summoner"
+      "title": "I&#x27;m Dating a Dark Summoner",
+      "lang": null
      },
      {
       "url": "/play/bleach-sennen-kessen-hen-kashin-tan.X3ktM/KFu4gnrn7Y",
       "thumb": "https://img.animeworld.ac/locandine/X3ktM.jpg",
-      "title": "Bleach: Sennen Kessen-hen - Kashin-tan"
+      "title": "Bleach: Sennen Kessen-hen - Kashin-tan",
+      "lang": null
      },
      {
       "url": "/play/psyren.3pGZY/6dLMQR8KqG",
       "thumb": "https://img.animeworld.ac/locandine/3pGZY.jpg",
-      "title": "Psyren"
+      "title": "Psyren",
+      "lang": null
      }
     ],
     "perse": [
      "episode",
-     "lang",
      "year"
     ]
    },
    {
     "funzione": "peliculas",
     "pagina": "/search?typeY=spinoff",
-    "patron": "<div[^>]*class=\"item\"(?:(?!<div[^>]*class=\"item\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"item\").)*?<a[^>]*class=\"name\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
+    "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
       "url": "/play/im-dating-a-dark-summoner.K9Q3D/h7ypKWx436",
       "thumb": "https://img.animeworld.ac/locandine/K9Q3D.jpg",
-      "title": "I&#x27;m Dating a Dark Summoner"
+      "title": "I&#x27;m Dating a Dark Summoner",
+      "lang": null
      },
      {
       "url": "/play/bleach-sennen-kessen-hen-kashin-tan.X3ktM/KFu4gnrn7Y",
       "thumb": "https://img.animeworld.ac/locandine/X3ktM.jpg",
-      "title": "Bleach: Sennen Kessen-hen - Kashin-tan"
+      "title": "Bleach: Sennen Kessen-hen - Kashin-tan",
+      "lang": null
      },
      {
       "url": "/play/psyren.3pGZY/6dLMQR8KqG",
       "thumb": "https://img.animeworld.ac/locandine/3pGZY.jpg",
-      "title": "Psyren"
+      "title": "Psyren",
+      "lang": null
      }
     ],
     "perse": [
      "episode",
-     "lang",
      "year"
     ]
    }
@@ -497,7 +504,7 @@
    "il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://eurostreaming.ooo)",
    "ROTTO: peliculas /animazione/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_animazione.html",
-   "  regex proposta: 1040 titoli su 343 card | gruppi persi: episode, lang, title2",
+   "  regex proposta: 1040 titoli su 343 card | gruppi persi: episode, title2",
    "  non applicata al file: la funzione ha piu varianti di regex",
    "ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_aggiornamento_episodi.html",
@@ -510,30 +517,32 @@
    {
     "funzione": "peliculas",
     "pagina": "/animazione/",
-    "patron": "<div[^>]*class=\"movieItem\"(?:(?!<div[^>]*class=\"movieItem\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"movieItem\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"movieItem\").)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div[^>]*class=\"movieItem\").)*?<div[^>]*class=\"movieItem\\-title\\ text\\-truncate\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
+    "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
       "url": "https://guardaseriex.best/animazione/3209-helluva-boss.html",
       "thumb": "/uploads/immagini/tt10691770.webp",
       "year": "2020",
-      "title": "Helluva Boss"
+      "title": "Helluva Boss",
+      "lang": null
      },
      {
       "url": "https://guardaseriex.best/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html",
       "thumb": "/uploads/immagini/tt2580046.webp",
       "year": "2015",
-      "title": "Miraculous - Le storie di Ladybug e Chat Noir"
+      "title": "Miraculous - Le storie di Ladybug e Chat Noir",
+      "lang": null
      },
      {
       "url": "https://guardaseriex.best/animazione/5811-get-jiro-streaming.html",
       "thumb": "/uploads/immagini/tt33406999.webp",
       "year": "2026",
-      "title": "GET JIRO"
+      "title": "GET JIRO",
+      "lang": null
      }
     ],
     "perse": [
      "episode",
-     "lang",
      "title2"
     ]
    }
@@ -561,38 +570,39 @@
   "canale": "guardaseriecam",
   "stato": "CORRETTO",
   "dettagli": [
-   "il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://guardaseriex.icu)",
    "ROTTO: peliculas /serietv-streaming | patron non trova titoli",
    "  campione della pagina salvato in correzioni/guardaseriecam/pagina_peliculas_serietv_streaming.html",
    "  regex proposta: 18 titoli su 18 card",
    "file corretto scritto in correzioni/guardaseriecam: 1 pagine su 1 ora trovano titoli"
   ],
   "correzione": true,
-  "host": "https://guardaseriex.icu",
-  "nuovo_host": "https://guardaseriex.best",
+  "host": "https://guardaseriex.best",
   "proposte": [
    {
     "funzione": "peliculas",
     "pagina": "/serietv-streaming",
-    "patron": "<div[^>]*class=\"movieItem\"(?:(?!<div[^>]*class=\"movieItem\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"movieItem\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"movieItem\").)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div[^>]*class=\"movieItem\").)*?<div[^>]*class=\"movieItem\\-title\\ text\\-truncate\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
+    "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
       "url": "https://guardaseriex.best/avventura/5848-amore-sotto-copertura-streaming.html",
       "thumb": "/uploads/immagini/tt45246384.webp",
       "year": "2026",
-      "title": "Amore sotto copertura"
+      "title": "Amore sotto copertura",
+      "lang": null
      },
      {
       "url": "https://guardaseriex.best/commedia/5818-small-prophets-streaming.html",
       "thumb": "/uploads/immagini/tt38504111.webp",
       "year": "2026",
-      "title": "Small Prophets"
+      "title": "Small Prophets",
+      "lang": null
      },
      {
       "url": "https://guardaseriex.best/dramma/5817-tutto-l-amore-che-resta-streaming.html",
       "thumb": "/uploads/immagini/tt43566250.webp",
       "year": "2026",
-      "title": "Tutto l&#039;amore che resta"
+      "title": "Tutto l&#039;amore che resta",
+      "lang": null
      }
     ],
     "perse": []
@@ -627,25 +637,28 @@
    {
     "funzione": "peliculas",
     "pagina": "/serietv-streaming/page/1/",
-    "patron": "<div[^>]*class=\"movieItem\"(?:(?!<div[^>]*class=\"movieItem\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div[^>]*class=\"movieItem\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div[^>]*class=\"movieItem\").)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div[^>]*class=\"movieItem\").)*?<div[^>]*class=\"movieItem\\-title\\ text\\-truncate\"[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<",
+    "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
       "url": "https://guardaseriex.best/avventura/5848-amore-sotto-copertura-streaming.html",
       "thumb": "/uploads/immagini/tt45246384.webp",
       "year": "2026",
-      "title": "Amore sotto copertura"
+      "title": "Amore sotto copertura",
+      "lang": null
      },
      {
       "url": "https://guardaseriex.best/commedia/5818-small-prophets-streaming.html",
       "thumb": "/uploads/immagini/tt38504111.webp",
       "year": "2026",
-      "title": "Small Prophets"
+      "title": "Small Prophets",
+      "lang": null
      },
      {
       "url": "https://guardaseriex.best/dramma/5817-tutto-l-amore-che-resta-streaming.html",
       "thumb": "/uploads/immagini/tt43566250.webp",
       "year": "2026",
-      "title": "Tutto l&#039;amore che resta"
+      "title": "Tutto l&#039;amore che resta",
+      "lang": null
      }
     ],
     "perse": [
@@ -664,7 +677,7 @@
   "stato": "OK",
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /index | 10135 risultati"
+   "OK: peliculas /index | 3449 risultati"
   ],
   "correzione": false,
   "host": "https://hd4me.net"
@@ -691,7 +704,6 @@
   "canale": "ilgeniodellostreaming_cam",
   "stato": "ROTTO",
   "dettagli": [
-   "il sito reindirizza a un altro indirizzo: https://il-geniodellostreaming.ink (in channels.json c'e https://il-geniodellostreaming.garden)",
    "OK: peliculas /catalog/all | 15 risultati",
    "ROTTO: peliculas /serie-tv/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html",
@@ -699,30 +711,32 @@
    "  non applicata al file: la funzione ha piu varianti di regex"
   ],
   "correzione": false,
-  "host": "https://il-geniodellostreaming.garden",
-  "nuovo_host": "https://il-geniodellostreaming.ink",
+  "host": "https://il-geniodellostreaming.ink",
   "proposte": [
    {
     "funzione": "peliculas",
     "pagina": "/serie-tv/",
-    "patron": "<article[^>]*class=\"item\\ movies\"(?:(?!<article[^>]*class=\"item\\ movies\").)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<article[^>]*class=\"item\\ movies\").)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<article[^>]*class=\"item\\ movies\").)*?<h3[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)\\s*<(?:(?!<article[^>]*class=\"item\\ movies\").)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?",
+    "patron": "<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<h3[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?",
     "esempi": [
      {
       "url": "https://il-geniodellostreaming.ink/film/35329-minimum-wage-streaming.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt42220724.jpg",
       "title": "Minimum Wage",
+      "lang": null,
       "year": "2026"
      },
      {
       "url": "https://il-geniodellostreaming.ink/film/35321-organize-isler-money-trap-streaming.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt38732131.jpg",
       "title": "Organize Isler: Money Trap",
+      "lang": null,
       "year": "2026"
      },
      {
       "url": "https://il-geniodellostreaming.ink/film/35290-yaga-una-caccia-alle-streghe-streaming.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt39980704.jpg",
       "title": "YAGA",
+      "lang": null,
       "year": "2026"
      }
     ],
@@ -872,7 +886,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27505 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27583 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -892,7 +906,7 @@
    "OK: serie di esempio /it/titles/66423-minimum-wage | 1 stagioni, 14 episodi nella prima"
   ],
   "correzione": false,
-  "host": "https://streamingcommunityz.build"
+  "host": "https://streamingcommunityz.day"
  },
  {
   "canale": "streamingita",
@@ -914,7 +928,6 @@
   "canale": "tantifilm",
   "stato": "CORRETTO",
   "dettagli": [
-   "il sito reindirizza a un altro indirizzo: https://tanti-film.garden (in channels.json c'e https://tanti-film.fun)",
    "ROTTO: peliculas /film | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html",
    "  patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
@@ -924,8 +937,7 @@
    "file corretto scritto in correzioni/tantifilm: 2 pagine su 2 ora trovano titoli"
   ],
   "correzione": true,
-  "host": "https://tanti-film.fun",
-  "nuovo_host": "https://tanti-film.garden"
+  "host": "https://tanti-film.garden"
  },
  {
   "canale": "thepiratebay",

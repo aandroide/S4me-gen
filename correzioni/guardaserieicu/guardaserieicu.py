@@ -52,7 +52,7 @@ def genres(item):
 @support.scrape
 def peliculas(item):
     patron = (
-        r'''<div[^>]*class="movieItem"(?:(?!<div[^>]*class="movieItem").)*?<a [^>]*?href="(?P<url>[^"]+)"(?:(?!<div[^>]*class="movieItem").)*?<img [^>]*?src="(?P<thumb>[^"]+)"(?:(?!<div[^>]*class="movieItem").)*?<span[^>]*>\s*\(?(?P<year>[0-9]{4})\)?(?:(?!<div[^>]*class="movieItem").)*?<div[^>]*class="movieItem\-title\ text\-truncate"[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)\s*<'''
+        r'''<div(?=[^>]*class="(?:[^"]*\s)?movieItem(?:\s[^"]*)?")(?:(?!<div(?=[^>]*class="(?:[^"]*\s)?movieItem(?:\s[^"]*)?")).)*?<a [^>]*?href="(?P<url>[^"]+)"(?:(?!<div(?=[^>]*class="(?:[^"]*\s)?movieItem(?:\s[^"]*)?")).)*?<img [^>]*?src="(?P<thumb>[^"]+)"(?:(?!<div(?=[^>]*class="(?:[^"]*\s)?movieItem(?:\s[^"]*)?")).)*?<span[^>]*>\s*\(?(?P<year>[0-9]{4})\)?(?:(?!<div(?=[^>]*class="(?:[^"]*\s)?movieItem(?:\s[^"]*)?")).)*?<div(?=[^>]*class="(?:[^"]*\s)?movieItem\-title(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?text\-truncate(?:\s[^"]*)?")[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)(?:\s*\((?P<lang>ITA|SUB[\ \-]?ITA|Sub[\ \-]?Ita)\))?\s*<'''
     )
     patronNext = r'<div id="nav-load"><a href="([^"]+)"'
 

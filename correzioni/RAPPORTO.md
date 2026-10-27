@@ -18,13 +18,11 @@ Sito: http://cinestore.cinetecadibologna.it
 - file corretto scritto in correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli
 
 ### guardaseriecam
-Sito: https://guardaseriex.icu
-- il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://guardaseriex.icu)
+Sito: https://guardaseriex.best
 - ROTTO: peliculas /serietv-streaming | patron non trova titoli
 -   campione della pagina salvato in correzioni/guardaseriecam/pagina_peliculas_serietv_streaming.html
 -   regex proposta: 18 titoli su 18 card
 - file corretto scritto in correzioni/guardaseriecam: 1 pagine su 1 ora trovano titoli
-- riga per channels.json: "guardaseriecam": "https://guardaseriex.best",
 
 ### guardaserieicu
 Sito: https://guardaseriex.cyou
@@ -38,8 +36,7 @@ Sito: https://guardaseriex.cyou
 - riga per channels.json: "guardaserieicu": "https://guardaseriex.best",
 
 ### tantifilm
-Sito: https://tanti-film.fun
-- il sito reindirizza a un altro indirizzo: https://tanti-film.garden (in channels.json c'e https://tanti-film.fun)
+Sito: https://tanti-film.garden
 - ROTTO: peliculas /film | patronBlock non trova nessun blocco
 -   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html
 -   patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
@@ -47,13 +44,11 @@ Sito: https://tanti-film.fun
 -   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_serie_tv.html
 -   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - file corretto scritto in correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
-- riga per channels.json: "tantifilm": "https://tanti-film.garden",
 
 ## ROTTO (4)
 
 ### cineblog001
-Sito: https://cineblog001.loan
-- il sito reindirizza a un altro indirizzo: https://cineblog001.men (in channels.json c'e https://cineblog001.loan)
+Sito: https://cineblog001.men
 - ROTTO: peliculas /film/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_film.html
 -   regex proposta: 70 titoli su 51 card
@@ -66,25 +61,24 @@ Sito: https://cineblog001.loan
 -   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_sub_ita.html
 -   regex proposta: 70 titoli su 51 card
 -   non applicata al file: regex dinamica
-- riga per channels.json: "cineblog001": "https://cineblog001.men",
 
 ### dreamsub
 Sito: https://www.animeworld.ac
 - ROTTO: peliculas /search?typeY=tv | patronBlock non trova nessun blocco
 -   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_tv.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=movie | patronBlock non trova nessun blocco
 -   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_movie.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=oav | patronBlock non trova nessun blocco
 -   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_oav.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=spinoff | patronBlock non trova nessun blocco
 -   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_spinoff.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, lang, year
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 
 ### eurostreaming_actor
@@ -93,7 +87,7 @@ Sito: https://eurostreaming.ooo
 - il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://eurostreaming.ooo)
 - ROTTO: peliculas /animazione/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_animazione.html
--   regex proposta: 1040 titoli su 343 card | gruppi persi: episode, lang, title2
+-   regex proposta: 1040 titoli su 343 card | gruppi persi: episode, title2
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_aggiornamento_episodi.html
@@ -101,14 +95,12 @@ Sito: https://eurostreaming.ooo
 - riga per channels.json: "eurostreaming_actor": "https://guardaseriex.best",
 
 ### ilgeniodellostreaming_cam
-Sito: https://il-geniodellostreaming.garden
-- il sito reindirizza a un altro indirizzo: https://il-geniodellostreaming.ink (in channels.json c'e https://il-geniodellostreaming.garden)
+Sito: https://il-geniodellostreaming.ink
 - OK: peliculas /catalog/all | 15 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
 -   non applicata al file: la funzione ha piu varianti di regex
-- riga per channels.json: "ilgeniodellostreaming_cam": "https://il-geniodellostreaming.ink",
 
 ## DOMINIO PARCHEGGIATO (3)
 
@@ -122,7 +114,7 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27505 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27583 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
@@ -131,7 +123,7 @@ Sito: https://cinemalibero.cafe
 - peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
 - peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
 - peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5651 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (12)
 
@@ -227,11 +219,9 @@ Sito: https://altadefinizione-01.autos
 - OK: peliculas /serie-tv/ | 94 risultati
 
 ### altadefinizioneclick
-Sito: https://altadefinizionex.forum
-- il sito reindirizza a un altro indirizzo: https://altadefinizionex.vip (in channels.json c'e https://altadefinizionex.forum)
+Sito: https://altadefinizionex.vip
 - OK: peliculas /film/ | 30 risultati
 - OK: peliculas /serie-tv/ | 30 risultati
-- riga per channels.json: "altadefinizioneclick": "https://altadefinizionex.vip",
 
 ### animesaturn
 Sito: https://www.animesaturn.net
@@ -244,7 +234,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 78 risultati
+- OK: peliculas /updated | 79 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -272,7 +262,7 @@ Sito: https://eurostream.fun
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10135 risultati
+- OK: peliculas /index | 3449 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -322,7 +312,7 @@ Sito: https://www.raiplay.it
 - OK: https://www.raiplay.it/serieinternazionali | html
 
 ### streamingcommunity
-Sito: https://streamingcommunityz.build
+Sito: https://streamingcommunityz.day
 - OK: Pagina film (sliders) | 30 titoli in props.sliders.0.titles
 - OK: Pagina serie TV (sliders) | 30 titoli in props.sliders.0.titles
 - OK: Archivio | 60 titoli in props.titles
