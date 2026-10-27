@@ -16,7 +16,8 @@ Canale animesaturn | indirizzo https://www.animesaturn.net
       findvideos | 1 | https://www.animesaturn.net/episode/hack-g-u-returner-8PrAP/ep-1
 == findvideos su "1"
    -> 1 voci
-      play | Server principale | https://play.saturncdn.net/embed/45138?token=f4902dfb39406a3dada7976aa4e881ae&expires=1793171484
-== risoluzione directo https://play.saturncdn.net/embed/45138?token=f4902dfb39406a3dada7976aa4e881ae&expires=1793171484
-   -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
+      play | Server principale | https://play.saturncdn.net/embed/45138?token=6390dfc6ebb31e878171b861a57e8102&expires=1793171591
+   play del canale -> directo https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token
+== risoluzione directo https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token
+   -> VIDEO OK 206 video/mp4 
+VERDETTO: ARRIVA AL VIDEO
