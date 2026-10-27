@@ -106,7 +106,7 @@ jobs:
         env:
           SITO: ${{ inputs.sito }}
         run: |
-          pip install requests beautifulsoup4 lxml cryptography
+          pip install requests beautifulsoup4 lxml cryptography "urllib3<2"
           git clone -q --depth 1 https://github.com/stream4me/addon /tmp/kh/addon
           cp test/kodi_finto/fake.py /tmp/kh/fake.py
           mkdir -p /tmp/kh/prof
