@@ -1,0 +1,58 @@
+{
+ "canale": "accuradio",
+ "host": "",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 72
+  },
+  {
+   "passo": "lista \"Most Popular \"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"\"Twelve Landmark Albums of the '60s\" — 1\"",
+   "esito": "OK",
+   "voci": 48
+  },
+  {
+   "passo": "lista \"Today's Rocktober Featured Channel: \"199\"",
+   "esito": "OK",
+   "voci": 48
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://www.accuradio.com/c/m/json/brands/",
+   "status": 200,
+   "byte": 9445,
+   "secondi": 0.2,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://www.accuradio.com/",
+   "status": 200,
+   "byte": 166642,
+   "secondi": 0.2,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://www.accuradio.com/",
+   "status": 200,
+   "byte": 283605,
+   "secondi": 0.2,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://www.accuradio.com/",
+   "status": 200,
+   "byte": 283605,
+   "secondi": 0.2,
+   "file": "pagine/04.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"Most Popular \""
+}

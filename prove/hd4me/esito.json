@@ -1,0 +1,34 @@
+{
+ "canale": "hd4me",
+ "host": "https://hd4me.net",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 4
+  },
+  {
+   "passo": "lista \"• Film\"",
+   "esito": "ERRORE",
+   "errore": "lista = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 522, in wrapper\n    args = func(*args)\n           ^^^^^^^^^^^\nValueError: invalid literal for int() with base 10: '2005-2012'\n"
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/nav.json",
+   "status": 200,
+   "byte": 18517,
+   "secondi": 0.2,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/index/page-1.json?v=1792831735",
+   "status": 200,
+   "byte": 10438,
+   "secondi": 0.2,
+   "file": "pagine/02.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Film\""
+}

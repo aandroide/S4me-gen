@@ -1,0 +1,108 @@
+Canale casacinema | indirizzo https://casa-cinema.boats
+== mainlist
+   -> 6 voci
+      genres | Generi | https://casa-cinema.boats
+      peliculas | • Film | https://casa-cinema.boats/film
+      peliculas | • Serie TV | https://casa-cinema.boats/serie-tv
+      peliculas | •• Miniserie | https://casa-cinema.boats/miniserie-tv
+== lista "Generi"
+   -> 40 voci
+      peliculas | Animazione | https://casa-cinema.boats/animazione/
+      peliculas | Avventura | https://casa-cinema.boats/avventura/
+      peliculas | Biografico | https://casa-cinema.boats/biografico/
+      peliculas | Commedia | https://casa-cinema.boats/commedia/
+== peliculas su "Prossimamente"
+   -> 17 voci
+      findvideos | La fine di Oak Street  | https://casa-cinema.boats/gratis/34552-guarda-la-fine-di-oak-street-streaming-online-ita.html
+      findvideos | Masters of the Universe | https://casa-cinema.boats/gratis/33777-guarda-masters-of-the-universe-streaming-community-online-ita
+      findvideos | The Rapture  | https://casa-cinema.boats/gratis/23739-guarda-the-rapture-streaming-online-ita.html
+      findvideos | La donna più ricca del mondo  | https://casa-cinema.boats/gratis/33182-guarda-la-donna-piu-ricca-del-mondo-streaming-online-ita.html
+== findvideos su "La fine di Oak Street "
+Traceback (most recent call last):
+  File "/tmp/kh/addon/lib/requests_toolbelt/_compat.py", line 48, in <module>
+    from requests.packages.urllib3.contrib import appengine as gaecontrib
+ImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/casacinema.py", line 508, in findvideos
+    data = support.httptools.downloadpage(item.url, cloudscraper=True).data or ''
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 65, in _dl
+    r = _orig(url, *a, **k)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/httptools.py", line 278, in downloadpage
+    from lib import cloudscraper
+ImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
+
+== lista "• Film"
+   -> 17 voci
+      findvideos | Shaun, vita da pecora - Operazione Z.U.C.C.A.  | https://casa-cinema.boats/gratis/35330-guarda-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-on
+      findvideos | Ip Man: Oltre la leggenda  | https://casa-cinema.boats/gratis/35327-guarda-ip-man-oltre-la-leggenda-streaming-online-ita.html
+      findvideos | Ohh My Dog  | https://casa-cinema.boats/gratis/35304-guarda-ohh-my-dog-streaming-online-ita.html
+      findvideos | Baby Do Die Do  | https://casa-cinema.boats/gratis/35305-guarda-baby-do-die-do-streaming-online-ita.html
+== findvideos su "Shaun, vita da pecora - Operazione Z.U.C"
+Traceback (most recent call last):
+  File "/tmp/kh/addon/lib/requests_toolbelt/_compat.py", line 48, in <module>
+    from requests.packages.urllib3.contrib import appengine as gaecontrib
+ImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/casacinema.py", line 508, in findvideos
+    data = support.httptools.downloadpage(item.url, cloudscraper=True).data or ''
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 65, in _dl
+    r = _orig(url, *a, **k)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/httptools.py", line 278, in downloadpage
+    from lib import cloudscraper
+ImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
+
+== lista "• Serie TV"
+   -> 17 voci
+      episodios | Minimum Wage  | https://casa-cinema.boats/gratis/35329-guarda-minimum-wage-streaming-online-ita.html
+      episodios | Organize Isler: Money Trap  | https://casa-cinema.boats/gratis/35321-guarda-organize-isler-money-trap-streaming-online-ita.html
+      episodios | YAGA  | https://casa-cinema.boats/gratis/35290-guarda-yaga-una-caccia-alle-streghe-streaming-online-ita.html
+      episodios | LOL: Chi ride è fuori - Halloween Special  | https://casa-cinema.boats/gratis/35291-guarda-lol-chi-ride-e-fuori-halloween-special-streaming-onlin
+== episodios su "Minimum Wage "
+Traceback (most recent call last):
+  File "/tmp/kh/addon/lib/requests_toolbelt/_compat.py", line 48, in <module>
+    from requests.packages.urllib3.contrib import appengine as gaecontrib
+ImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/casacinema.py", line 469, in episodios
+    data = httptools.downloadpage(item.url, cloudscraper=True).data or ''
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 65, in _dl
+    r = _orig(url, *a, **k)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/httptools.py", line 278, in downloadpage
+    from lib import cloudscraper
+ImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
+
+Nessuna voce da riprodurre trovata
+VERDETTO: SI FERMA A: findvideos su "La fine di Oak Street "

@@ -1,0 +1,79 @@
+{
+ "canale": "altadefinizionecommunity",
+ "host": "https://altaregistrazione.net",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 9
+  },
+  {
+   "passo": "lista \"• Film\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Generi\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Anni\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://altaregistrazione.net/load-more-film?type=movie&anno=&quality=&cat=&order=&page=1",
+   "status": 200,
+   "byte": 23382,
+   "secondi": 0.5,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://altaregistrazione.net/type/movie",
+   "status": 200,
+   "byte": 23382,
+   "secondi": 0.4,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://altaregistrazione.net/type/movie",
+   "status": 200,
+   "byte": 23382,
+   "secondi": 0.4,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://altaregistrazione.net/cerca",
+   "status": 200,
+   "byte": 23382,
+   "secondi": 0.3,
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://altaregistrazione.net/type/movie",
+   "status": 200,
+   "byte": 23382,
+   "secondi": 0.3,
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://altaregistrazione.net/type/movie",
+   "status": 200,
+   "byte": 23382,
+   "secondi": 0.3,
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://altaregistrazione.net/type/movie",
+   "status": 200,
+   "byte": 23382,
+   "secondi": 0.3,
+   "file": "pagine/07.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Film\""
+}

@@ -1,0 +1,55 @@
+{
+ "canale": "raiplay",
+ "host": "https://www.raiplay.it",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 15
+  },
+  {
+   "passo": "lista \"Film\"",
+   "esito": "OK",
+   "voci": 15
+  },
+  {
+   "passo": "menu su \"Generi\"",
+   "esito": "OK",
+   "voci": 10
+  },
+  {
+   "passo": "genres su \"Film sottotitolati\"",
+   "esito": "OK",
+   "voci": 22
+  },
+  {
+   "passo": "peliculas su \"A\"",
+   "esito": "OK",
+   "voci": 14
+  },
+  {
+   "passo": "findvideos su \"A caccia del vedovo d'oro\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "directo",
+   "url": "https://download-rai-it.akamaized.net/video_no_available.mp4",
+   "finale": "https://download-rai-it.akamaized.net/video_no_available.mp4",
+   "esito": "VIDEO OK",
+   "dettaglio": "206 video/mp4"
+  }
+ ],
+ "rete": [
+  {
+   "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
+   "status": 200,
+   "byte": 597,
+   "secondi": 1.4,
+   "file": "pagine/01.html"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

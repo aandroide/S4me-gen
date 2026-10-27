@@ -1,0 +1,43 @@
+{
+ "canale": "streamingcommunity",
+ "host": "https://streamingcommunityz.day",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 17
+  },
+  {
+   "passo": "lista \"• Film\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "findvideos su \"Animals \"",
+   "esito": "OK",
+   "voci": 2
+  }
+ ],
+ "video": [
+  {
+   "server": "streamingcommunityws",
+   "url": "https://streamingcommunityz.day/it/iframe/66299",
+   "modulo_server": true,
+   "esito": "SERVER NON RISOLVE",
+   "pagina_server": {
+    "status": 200,
+    "inizio": "<!DOCTYPE html>\n<html lang=\"it\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <style>\n            html, body {\n                overflow: hidden;\n                height: 100vh;\n                margin: 0;\n               "
+   }
+  }
+ ],
+ "rete": [
+  {
+   "url": "https://streamingcommunityz.day/it/movies",
+   "status": 200,
+   "byte": 300417,
+   "secondi": 0.6,
+   "file": "pagine/01.html"
+  }
+ ],
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE"
+}

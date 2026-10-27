@@ -1,0 +1,51 @@
+{
+ "canale": "ilcorsaronero",
+ "host": "https://ilcorsaronero.link",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 9
+  },
+  {
+   "passo": "lista \"Film\"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  },
+  {
+   "passo": "lista \"Serie TV \"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  },
+  {
+   "passo": "lista \"Animazione \"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://ilcorsaronero.link/cat/film",
+   "status": "HTTPSConnectionPool(host='ilcorsaronero.link', port=443): Read timed out. (read timeout=5)",
+   "byte": 0,
+   "secondi": 5.1,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://ilcorsaronero.link/cat/serie-tv",
+   "status": "HTTPSConnectionPool(host='ilcorsaronero.link', port=443): Read timed out. (read timeout=5)",
+   "byte": 0,
+   "secondi": 5.1,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://ilcorsaronero.link/cat/animazione",
+   "status": "HTTPSConnectionPool(host='ilcorsaronero.link', port=443): Read timed out. (read timeout=5)",
+   "byte": 0,
+   "secondi": 5.1,
+   "file": "pagine/03.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"Film\""
+}

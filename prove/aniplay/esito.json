@@ -1,0 +1,27 @@
+{
+ "canale": "aniplay",
+ "host": "https://aniplay.co",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "lista \"• Anime\"",
+   "esito": "ERRORE",
+   "errore": "h/addon/channels/aniplay.py\", line 165, in peliculas\n    js = httptools.downloadpage('{}?page={}&size={}{}&sort={},{}&sort=id'.format(item.url, page, perpage, item.variable, sort, order)).json\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: type object 'HTTPResponse' has no attribute 'json'\n"
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://aniplay.co/api/anime/advanced-search?page=0&size=20&sort=views,desc&sort=id",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.1,
+   "file": "pagine/01.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Anime\""
+}

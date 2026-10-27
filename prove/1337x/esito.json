@@ -1,0 +1,53 @@
+{
+ "canale": "1337x",
+ "host": "",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 5
+  },
+  {
+   "passo": "lista \"• Film ITA\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Film\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/movie-lib-sort/all/it/popularity/desc/all/1/",
+   "status": 403,
+   "byte": 5997,
+   "secondi": 0.7,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://1337x.to/movie-lib-sort/all/it/popularity/desc/all/1/",
+   "status": 403,
+   "byte": 5997,
+   "secondi": 0.9,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/movie-lib-sort/all/all/score/desc/all/1/",
+   "status": 403,
+   "byte": 5964,
+   "secondi": 0.6,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://1337x.to/movie-lib-sort/all/all/score/desc/all/1/",
+   "status": 403,
+   "byte": 5964,
+   "secondi": 0.7,
+   "file": "pagine/04.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Film ITA\""
+}

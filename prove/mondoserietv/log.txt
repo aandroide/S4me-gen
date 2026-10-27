@@ -1,0 +1,45 @@
+Canale mondoserietv | indirizzo http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9
+== mainlist
+   -> 10 voci
+      peliculas | • Film | http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-film
+      peliculas | •• Ultimi Film Aggiunti | http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/ultimi-film-aggiunti
+      peliculas | • Serie TV | http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv
+      peliculas | HD | http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-in-altadef
+== lista "• Film"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
+
+== lista "•• Ultimi Film Aggiunti"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
+
+== lista "• Serie TV"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
+
+Nessuna voce da riprodurre trovata
+VERDETTO: SI FERMA A: lista "• Film"

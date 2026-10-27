@@ -1,0 +1,44 @@
+{
+ "canale": "justwatch",
+ "host": "https://www.justwatch.com",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 18
+  },
+  {
+   "passo": "lista \"• Film\"",
+   "esito": "OK",
+   "voci": 41
+  },
+  {
+   "passo": "findvideos su \"Fight Club\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Popolari\"",
+   "esito": "OK",
+   "voci": 41
+  },
+  {
+   "passo": "findvideos su \"Fight Club\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Di tendenza\"",
+   "esito": "OK",
+   "voci": 41
+  },
+  {
+   "passo": "findvideos su \"Fight Club\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "rete": [],
+ "verdetto": "SI FERMA A: findvideos su \"Fight Club\""
+}

@@ -1,0 +1,51 @@
+{
+ "canale": "dreamsub",
+ "host": "https://www.animeworld.ac",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 10
+  },
+  {
+   "passo": "lista \"• Anime\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Movie\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• OAV\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://www.animeworld.ac/search?typeY=tv",
+   "status": 200,
+   "byte": 725766,
+   "secondi": 0.7,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/search?typeY=movie",
+   "status": 200,
+   "byte": 725766,
+   "secondi": 0.7,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/search?typeY=oav",
+   "status": 200,
+   "byte": 725766,
+   "secondi": 0.7,
+   "file": "pagine/03.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Anime\""
+}

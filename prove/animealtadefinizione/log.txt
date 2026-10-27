@@ -1,0 +1,45 @@
+Canale animealtadefinizione | indirizzo https://www.animealtadefinizione.it
+== mainlist
+   -> 7 voci
+      peliculas | • Anime | https://www.animealtadefinizione.it/anime/
+      menu | •• Tipo | https://www.animealtadefinizione.it
+      menu | •• Anno | https://www.animealtadefinizione.it
+      menu | •• Genere | https://www.animealtadefinizione.it
+== lista "• Anime"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
+
+== lista "•• Tipo"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
+
+== lista "•• Anno"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
+
+Nessuna voce da riprodurre trovata
+VERDETTO: SI FERMA A: lista "• Anime"

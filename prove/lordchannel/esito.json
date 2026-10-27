@@ -1,0 +1,72 @@
+{
+ "canale": "lordchannel",
+ "host": "https://lordchannel.net",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 9
+  },
+  {
+   "passo": "lista \"• Film\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Generi\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/film/",
+   "status": 503,
+   "byte": 1534,
+   "secondi": 1.4,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://lordchannel.net/film/",
+   "status": 503,
+   "byte": 1534,
+   "secondi": 2.0,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/film/",
+   "status": 503,
+   "byte": 1534,
+   "secondi": 1.1,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://lordchannel.net/film/",
+   "status": 503,
+   "byte": 1534,
+   "secondi": 1.6,
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
+   "status": 503,
+   "byte": 1534,
+   "secondi": 0.8,
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://lordchannel.net/serietv/",
+   "status": 503,
+   "byte": 1534,
+   "secondi": 1.1,
+   "file": "pagine/06.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Film\""
+}

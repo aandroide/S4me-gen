@@ -1,0 +1,108 @@
+{
+ "canale": "animeworld",
+ "host": "https://www.animeworld.ac",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 9
+  },
+  {
+   "passo": "lista \"• Anime\"",
+   "esito": "OK",
+   "voci": 41
+  },
+  {
+   "passo": "check su \"MaR - Märchen Awakens Romance \"",
+   "esito": "OK",
+   "voci": 52
+  },
+  {
+   "passo": "findvideos su \"1 - MaR - Märchen Awakens Romance\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "directo",
+   "url": "https://srv30-arinza.sweetpixel.org/DDL/ANIME/MARITA/MAR_Ep_001_ITA.mp4",
+   "finale": "https://srv30-arinza.sweetpixel.org/DDL/ANIME/MARITA/MAR_Ep_001_ITA.mp4",
+   "esito": "VIDEO OK",
+   "dettaglio": "206 video/mp4"
+  }
+ ],
+ "rete": [
+  {
+   "url": "https://www.animeworld.ac/filter?sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.4,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?sort=",
+   "status": 200,
+   "byte": 372295,
+   "secondi": 0.6,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?sort=0",
+   "status": 200,
+   "byte": 372305,
+   "secondi": 0.5,
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/play/mar-marchen-awakens-romance-ita.BNESr",
+   "status": 200,
+   "byte": 170213,
+   "secondi": 0.6,
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/play/mar-marchen-awakens-romance-ita.BNESr",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.5,
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/play/mar-marchen-awakens-romance-ita.BNESr/vodn-Y",
+   "status": 200,
+   "byte": 170213,
+   "secondi": 0.5,
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/play/mar-marchen-awakens-romance-ita.BNESr/vodn-Y",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/play/mar-marchen-awakens-romance-ita.BNESr/vodn-Y",
+   "status": 200,
+   "byte": 170213,
+   "secondi": 0.5,
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/api/episode/serverPlayerAnimeWorld?id=vodn-Y",
+   "status": 200,
+   "byte": 4747,
+   "secondi": 0.3,
+   "file": "pagine/10.html"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

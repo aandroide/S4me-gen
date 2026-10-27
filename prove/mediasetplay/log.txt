@@ -1,0 +1,66 @@
+Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
+== mainlist
+   -> 25 voci
+      live | Dirette | https://mediasetinfinity.mediaset.it
+      restart | Replay | https://mediasetinfinity.mediaset.it
+      peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
+      peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
+== lista "•• Tutti i Film"
+   -> 141 voci
+      findvideos | Transformers - La vendetta del caduto | https://mediasetinfinity.mediaset.it/movie/transformerslavendettadelcaduto/transformers-la-vendetta-
+      findvideos | Shazam! | https://mediasetinfinity.mediaset.it/movie/shazam/shazam_F309243001000102
+      findvideos | Divergent | https://mediasetinfinity.mediaset.it/movie/divergent/divergent_F305721401000102
+      findvideos | Survivor | https://mediasetinfinity.mediaset.it/movie/survivor/survivor_F306762501000102
+== findvideos su "Transformers - La vendetta del caduto"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
+    res = session.post(
+          ^^^^^^^^^^^^^
+KeyError: 'response'
+
+== lista "•• Film ultimi arrivi"
+   -> 19 voci
+      findvideos | Inga Lindstrom - Il matrimonio dimenticato | https://mediasetinfinity.mediaset.it/movie/ingalindstromilmatrimoniodimenticato/inga-lindstrom-il-ma
+      findvideos | Wedding every weekend | https://mediasetinfinity.mediaset.it/movie/weddingeveryweekend/wedding-every-weekend_F31136270100010
+      findvideos | Quella casa nel bosco | https://mediasetinfinity.mediaset.it/movie/quellacasanelbosco/quella-casa-nel-bosco_F303296801000102
+      findvideos | The Lodgers - Non infrangere le regole | https://mediasetinfinity.mediaset.it/movie/thelodgersnoninfrangereleregole/the-lodgers-non-infranger
+== findvideos su "Inga Lindstrom - Il matrimonio dimentica"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
+    res = session.post(
+          ^^^^^^^^^^^^^
+KeyError: 'response'
+
+== lista "•• Film più visti del giorno"
+   -> 21 voci
+      findvideos | Spy Game | https://mediasetinfinity.mediaset.it/movie/spygame/spy-game_F011035001000102
+      findvideos | Maigret e il falso amico | https://mediasetinfinity.mediaset.it/movie/maigreteilfalsoamico/maigret-e-il-falso-amico_F0114501010
+      findvideos | Anima gemella cercasi | https://mediasetinfinity.mediaset.it/movie/animagemellacercasi/anima-gemella-cercasi_F31124070100010
+      findvideos | Survivor | https://mediasetinfinity.mediaset.it/movie/survivor/survivor_F306762501000102
+== findvideos su "Spy Game"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
+    res = session.post(
+          ^^^^^^^^^^^^^
+KeyError: 'response'
+
+Nessuna voce da riprodurre trovata
+VERDETTO: SI FERMA A: findvideos su "Transformers - La vendetta del caduto"

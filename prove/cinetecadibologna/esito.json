@@ -1,0 +1,47 @@
+{
+ "canale": "cinetecadibologna",
+ "host": "http://cinestore.cinetecadibologna.it",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "lista \"• Film\"",
+   "esito": "OK",
+   "voci": 11
+  },
+  {
+   "passo": "findvideos su \"Exercícios de cavalaria em Torres Novas\"",
+   "esito": "OK",
+   "voci": 2
+  }
+ ],
+ "video": [
+  {
+   "server": "directo",
+   "url": "http://cinestore.cinetecadibologna.it/files/targetvideo/3/8/3/3833.flv",
+   "finale": "http://cinestore.cinetecadibologna.it/files/targetvideo/3/8/3/3833.flv",
+   "esito": "VIDEO OK",
+   "dettaglio": "206 video/x-flv"
+  }
+ ],
+ "rete": [
+  {
+   "url": "http://cinestore.cinetecadibologna.it/video/alfabetico_completo",
+   "status": 200,
+   "byte": 24978,
+   "secondi": 0.7,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "http://cinestore.cinetecadibologna.it/video/dettaglio/3561",
+   "status": 200,
+   "byte": 21434,
+   "secondi": 0.5,
+   "file": "pagine/02.html"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

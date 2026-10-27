@@ -1,0 +1,23 @@
+Canale vvvvid | indirizzo 
+== mainlist
+   -> 2 voci
+      peliculas | Visibile solo dall'Italia | 
+      channel_config | txt60587 %s | 
+== lista "Visibile solo dall'Italia"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/channels/vvvvid.py", line 116, in peliculas
+    json_file =loadjs(item.url + 'channel/10005/last/')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/channels/vvvvid.py", line 302, in loadjs
+    json = current_session.get(url, headers=headers, params=payload).json()
+                                                            ^^^^^^^
+NameError: name 'payload' is not defined
+
+Nessuna voce da riprodurre trovata
+VERDETTO: SI FERMA A: lista "Visibile solo dall'Italia"

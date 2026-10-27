@@ -1,0 +1,44 @@
+{
+ "canale": "mediasetplay",
+ "host": "https://mediasetinfinity.mediaset.it",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 25
+  },
+  {
+   "passo": "lista \"•• Tutti i Film\"",
+   "esito": "OK",
+   "voci": 141
+  },
+  {
+   "passo": "findvideos su \"Transformers - La vendetta del caduto\"",
+   "esito": "ERRORE",
+   "errore": "/S4me-gen/prova_video.py\", line 146, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+  },
+  {
+   "passo": "lista \"•• Film ultimi arrivi\"",
+   "esito": "OK",
+   "voci": 19
+  },
+  {
+   "passo": "findvideos su \"Inga Lindstrom - Il matrimonio dimentica\"",
+   "esito": "ERRORE",
+   "errore": "/S4me-gen/prova_video.py\", line 146, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+  },
+  {
+   "passo": "lista \"•• Film più visti del giorno\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "findvideos su \"Spy Game\"",
+   "esito": "ERRORE",
+   "errore": "/S4me-gen/prova_video.py\", line 146, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+  }
+ ],
+ "video": [],
+ "rete": [],
+ "verdetto": "SI FERMA A: findvideos su \"Transformers - La vendetta del caduto\""
+}

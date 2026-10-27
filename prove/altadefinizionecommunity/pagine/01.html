@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- background inline su html: il foglio di stile arriva dopo, senza questo il
+     browser dipinge bianco per ~100ms prima del primo fotogramma scuro. -->
+<html lang="it" style="background:#00050D">
+  <head>
+    <script id="session-bootstrap">(function(){const sessionMePath=function sessionMePath(access) {
+  try {
+    if (location.pathname !== "/") return "/auth/me";
+    const claims = JSON.parse(atob(access.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")));
+    const id = JSON.parse(localStorage.getItem("altatv_lastActiveProfileId:" + claims.sub) || "null");
+    if (Number.isSafeInteger(id) && id > 0) return "/auth/me?homeProfile=" + id;
+  } catch (_) {
+  }
+  return "/auth/me";
+};(function startSessionBootstrap() {
+  try {
+    if (location.pathname !== "/" || !/^https?:$/.test(location.protocol) || /altaregistrazione/.test(location.hostname) || new URLSearchParams(location.search).has("mailLogin") || window.Capacitor || !window.fetch) return;
+    var access = JSON.parse(localStorage.getItem("altatv_lastAccessToken") || "null");
+    var refresh = JSON.parse(localStorage.getItem("altatv_refreshToken") || "null");
+    if (typeof access !== "string" || !access || typeof refresh !== "string" || !refresh) return;
+    if (access.split(".").length === 3) {
+      var expiry = JSON.parse(atob(access.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"))).exp;
+      if (typeof expiry === "number" && expiry * 1e3 <= Date.now() + 6e4) return;
+    }
+    window.__altaSessionBootstrap = {
+      access,
+      refresh,
+      response: fetch("/api" + sessionMePath(access), {
+        headers: { Authorization: "Bearer " + access },
+        cache: "no-store",
+        credentials: "same-origin",
+        priority: "high"
+      }).then(function(response) {
+        if (!response.ok) return null;
+        return response.json();
+      }).then(function(data) {
+        try {
+          let unchanged = function() {
+            return JSON.parse(localStorage.getItem("altatv_lastAccessToken") || "null") === access && JSON.parse(localStorage.getItem("altatv_refreshToken") || "null") === refresh && JSON.parse(localStorage.getItem(profileKey) || "null") === profileId;
+          };
+          if (!data || !data.user || !Array.isArray(data.profiles)) return data;
+          var profileKey = "altatv_lastActiveProfileId:" + data.user.id;
+          var profileId = JSON.parse(localStorage.getItem(profileKey) || "null");
+          var profile = data.profiles.find(function(p) {
+            return String(p.id) === String(profileId);
+          });
+          if (!profile || !unchanged()) return data;
+          var payload = JSON.parse(atob(access.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")));
+          if (!(payload.exp * 1e3 > Date.now() + 6e4)) return data;
+          var kids = profile.for_children === true || profile.is_kids === true;
+          var included = data.homeHero;
+          var includedMatches = included && String(included.profileId) === String(profile.id) && included.forChildren === kids && Array.isArray(included.data && included.data.hero);
+          var heroResponse = includedMatches ? Promise.resolve(included.data) : fetch("/api/catalog/home?view=hero", {
+            headers: { Authorization: "Bearer " + access, "X-Profile": String(profile.id), "X-Audience": kids ? "kids" : "adult" },
+            cache: "no-store",
+            credentials: "same-origin",
+            priority: "high"
+          }).then(function(response) {
+            return response.ok ? response.json() : null;
+          });
+          window.__altaProfileHero = {
+            audience: "u" + data.user.id + ":p" + profile.id + ":" + (kids ? "kids" : "adult"),
+            response: heroResponse.then(function(hero) {
+              if (!unchanged() || !Array.isArray(hero && hero.hero)) return null;
+              var first = hero.hero[0];
+              var source = first && (first.backdrop_url_hd || first.backdrop_url || first.backdrop);
+              if (source) {
+                var url = new URL(source);
+                if (/^images\.hdmario\.(dev|space)$/.test(url.hostname) && /^https?:$/.test(url.protocol) && !url.username && !url.password && !url.searchParams.has("token") && !url.searchParams.has("signature")) {
+                  url.searchParams.set("quality", "65");
+                  url.searchParams.set("format", "webp");
+                  var link = document.createElement("link");
+                  link.rel = "preload";
+                  link.as = "image";
+                  link.setAttribute("fetchpriority", "high");
+                  link.setAttribute("imagesizes", "100vw");
+                  link.setAttribute("imagesrcset", [400, 800, 1200, 1600, 1920, 2560].map(function(width) {
+                    url.searchParams.set("width", String(width));
+                    return url.href + " " + width + "w";
+                  }).join(", "));
+                  url.searchParams.set("width", "1200");
+                  link.href = url.href;
+                  document.head.appendChild(link);
+                  setTimeout(function() {
+                    link.remove();
+                  }, 15e3);
+                }
+              }
+              return hero;
+            }).catch(function() {
+              return null;
+            })
+          };
+        } catch (_) {
+        }
+        return data;
+      }).catch(function() {
+        return null;
+      })
+    };
+  } catch (_) {
+  }
+})();})();</script>
+
+    <meta charset="UTF-8" />
+    <!-- Il sito ha già un tema scuro: evita una seconda conversione automatica. -->
+    <meta name="color-scheme" content="dark" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="description" content="Guarda film e serie TV in streaming su Altadefinizione. Catalogo aggiornato, qualità HD e 4K." />
+    <title>Altadefinizione — Film e Serie TV in streaming</title>
+    <!-- Grello 4876: icone quadrate vere per schede, preferiti e schermata Home.
+         Senza questi file /favicon.ico e /apple-touch-icon.png tornavano l'HTML
+         della SPA e Safari/Chrome mostravano solo una lettera.
+         Grello 6030: la cache del CDN di altapremium.tv tiene dal 16/10 un 301
+         di /favicon.ico verso se stesso (ciclo): l'icona 48x48 ha un percorso
+         suo, /favicon.ico resta per chi lo chiede senza link. -->
+    <link rel="icon" href="/icona-48.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="Altadefinizione" />
+    <link rel="preload" href="/fonts/NetflixSans-Regular-latin.woff2?v=2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/NetflixSans-Medium-latin.woff2?v=2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/NetflixSans-Bold-latin.woff2?v=2" as="font" type="font/woff2" crossorigin />
+    <!-- Host immagini catalogo (HDMario) — è la sorgente del backdrop hero (LCP)
+         e di tutte le locandine. preconnect anticipa DNS+TCP+TLS sul critical path. -->
+    <link rel="preconnect" href="https://images.hdmario.dev" />
+    <link rel="dns-prefetch" href="https://images.hdmario.dev" />
+    <link rel="dns-prefetch" href="https://image.tmdb.org" />
+    <script id="public-hero-bootstrap">
+      // Public home only: start its tiny critical response during HTML parsing,
+      // not after downloading/evaluating the application. Never reuse it for
+      // an authenticated account or a Kids profile.
+      (function () {
+        try {
+          if (location.pathname !== '/' || /altaregistrazione/.test(location.hostname)
+            || /[?&]mailLogin=/.test(location.search)
+            || !/^https?:$/.test(location.protocol) || !window.fetch
+            || localStorage.getItem('altatv_refreshToken')
+            || localStorage.getItem('altatv_lastAccessToken')
+            || localStorage.getItem('altatv_isAuthenticated') === 'true') return;
+          window.__altaPublicHero = fetch('/api/catalog/home?view=hero', {
+            credentials: 'omit', priority: 'high', cache: 'no-store'
+          }).then(function (response) {
+            if (!response.ok) return null;
+            return response.json();
+          }).then(function (data) {
+            if (!Array.isArray(data && data.hero)) return null;
+            var first = data.hero[0];
+            var source = first && (first.backdrop_url_hd || first.backdrop_url || first.backdrop);
+            if (source) {
+              var url = new URL(source);
+              if (/^images\.hdmario\.(dev|space)$/.test(url.hostname) && /^https?:$/.test(url.protocol)
+                && !url.username && !url.password && !url.searchParams.has('token') && !url.searchParams.has('signature')) {
+                url.searchParams.set('quality', '65');
+                url.searchParams.set('format', 'webp');
+                var link = document.createElement('link');
+                link.rel = 'preload'; link.as = 'image';
+                link.setAttribute('fetchpriority', 'high');
+                link.setAttribute('imagesizes', '100vw');
+                link.setAttribute('imagesrcset', [400,800,1200,1600,1920,2560].map(function (width) {
+                  url.searchParams.set('width', String(width)); return url.href + ' ' + width + 'w';
+                }).join(', '));
+                url.searchParams.set('width', '1200'); link.href = url.href;
+                document.head.appendChild(link);
+              }
+            }
+            return data;
+          }).catch(function () { return null; });
+        } catch (_) { /* Disabled storage/old browser: use normal authenticated loader. */ }
+      })();
+    </script>
+    <!-- Google Analytics 4 — usato anche per i segnali di trending/genre-chips
+         lato backend (job notturno che aggrega GA4 → /api/catalog/home). -->
+    
+          <script id="analytics-bootstrap">
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.partytown = {lib:'/~partytown/',forward:['gtag']};
+            (function () {
+              var started = false;
+              var timer;
+              function start() {
+                if (started) return;
+                started = true;
+                clearTimeout(timer);
+                window.removeEventListener('alta:content-ready', ready);
+                document.removeEventListener('visibilitychange', hidden);
+                var queued = window.dataLayer.slice();
+                (function (navigator) {
+                  !(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=w[p]||{};c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.14.4 - MIT QwikDev */
+!function(){const t=(t,e,r)=>{var n;if(void 0===(r=globalThis)._pttt){r._pttt=null;try{r._pttt=(null===(n=r.trustedTypes)||void 0===n?void 0:n.createPolicy("partytown",{createHTML:t=>t,createScript:t=>t,createScriptURL:t=>t}))||null}catch(t){}}return r._pttt?r._pttt[t](e):e},e={preserveBehavior:!1},r=t=>{if("string"==typeof t)return[t,e];const[r,n=e]=t;return[r,{...e,...n}]},n=Object.freeze((t=>{const e=new Set;let r=[];do{Object.getOwnPropertyNames(r).forEach((t=>{"function"==typeof r[t]&&e.add(t)}))}while((r=Object.getPrototypeOf(r))!==Object.prototype);return Array.from(e)})());!function(e,o,i,a,c,l,s,p,d,u,y=e,f){function h(){f||(f=1,"/"==(s=(l.lib||"/~partytown/")+(l.debug?"debug/":""))[0]&&(d=o.querySelectorAll('script[type="text/partytown"]'),a!=e&&function(){try{return!!a.dispatchEvent}catch(t){return!1}}()?a.dispatchEvent(new CustomEvent("pt1",{detail:e})):(0!=(null==l?void 0:l.fallbackTimeout)&&(p=setTimeout(w,(null==l?void 0:l.fallbackTimeout)||1e4),o.addEventListener("pt0",m)),c?v(1):i.serviceWorker?i.serviceWorker.register(t("createScriptURL",s+(l.swPath||"partytown-sw.js")),{scope:s}).then((function(t){t.active?v():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&v()}))}),(function(t){console.error(t),w()})):w())))}function v(r){u=o.createElement(r?"script":"iframe"),e._pttab=Date.now(),r||(u.style.display="block",u.style.width="0",u.style.height="0",u.style.border="0",u.style.visibility="hidden",u.setAttribute("aria-hidden",!0)),u.src=r?t("createScriptURL",s+"partytown-atomics.js?v=0.14.4"):s+"partytown-sandbox-sw.html?"+e._pttab,o.querySelector(l.sandboxParent||"body").appendChild(u)}function w(t,n){for(m(),a==e&&(l.forward||[]).map((function(t){const[n]=r(t);delete e[n.split(".")[0]]})),d=o.querySelectorAll('script[type="text/partytown"]'),t=0;t<d.length;t++)b(d[t]);"undefined"!=typeof MutationObserver&&new MutationObserver((function(t){t.map((function(t){for(var e=0;e<t.addedNodes.length;e++){var r=t.addedNodes[e];1==r.nodeType&&("SCRIPT"==r.nodeName&&"text/partytown"==r.type?b(r):r.querySelectorAll&&r.querySelectorAll('script[type="text/partytown"]').forEach(b))}}))})).observe(o.documentElement,{childList:!0,subtree:!0}),u&&u.parentNode.removeChild(u)}function b(e,r){r=o.createElement("script"),e.src?r.src=t("createScriptURL",e.src):r.innerHTML=t("createHTML",e.innerHTML),r.nonce=l.nonce,e.type+="-x",o.head.appendChild(r)}function m(){clearTimeout(p)}l=e.partytown||{},a==e&&(l.forward||[]).map((function(t){const[o,{preserveBehavior:i}]=r(t);y=e,o.split(".").map((function(t,r,o){var a;y=y[o[r]]=r+1<o.length?y[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let t=null;if(i){const{methodOrProperty:r,thisObject:n}=((t,e)=>{let r=t;for(let t=0;t<e.length-1;t+=1)r=r[e[t]];return{thisObject:r,methodOrProperty:e.length>0?r[e[e.length-1]]:void 0}})(e,o);"function"==typeof r&&(t=(...t)=>r.apply(n,...t))}return"push"==o[r]&&Array.isArray(y)&&y.map((function(t){(e._ptf=e._ptf||[]).push(o,[t])})),function(){let r;return t&&(r=t(arguments)),(e._ptf=e._ptf||[]).push(o,arguments),r}})()}))})),"complete"==o.readyState?h():(e.addEventListener("DOMContentLoaded",h),e.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated)}();
+                })((function navigatorAnalytics(nav) {
+  var sw;
+  try {
+    sw = nav.serviceWorker;
+  } catch {
+  }
+  if (!sw || typeof sw.register !== "function") return {};
+  return {
+    serviceWorker: {
+      register: function(url, options) {
+        return Promise.resolve().then(function() {
+          return sw.register(url, options);
+        }).then(function(registration) {
+          if (registration && (registration.active || registration.installing && typeof registration.installing.addEventListener === "function")) {
+            return registration;
+          }
+          throw new Error("Service worker non disponibile");
+        });
+      }
+    }
+  };
+})(navigator));
+                queued.forEach(function (args) { window.gtag.apply(window, args); });
+              }
+              function ready() {
+                requestAnimationFrame(function () { requestAnimationFrame(function () {
+                  if (window.requestIdleCallback) window.requestIdleCallback(start, { timeout: 1000 });
+                  else setTimeout(start, 0);
+                }); });
+              }
+              function hidden() { if (document.visibilityState === 'hidden') start(); }
+              window.addEventListener('alta:content-ready', ready);
+              document.addEventListener('visibilitychange', hidden);
+              timer = setTimeout(start, 3000);
+            })();
+          </script>
+          <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-CVXD7Q9X8E"></script>
+          <script type="text/partytown">
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function(){dataLayer.push(arguments);};
+            window.gtag('js', new Date());
+            window.gtag('config', 'G-CVXD7Q9X8E', { page_location: location.href, page_title: document.title });
+          </script>
+        
+    <!-- WebSite + SearchAction (Google sitelinks searchbox). Domain è propagato
+         a runtime: il template è generico, Google legge sia con o senza host. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Altadefinizione",
+      "url": "https://altapremium.tv",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://altapremium.tv/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script>
+      // Early device + TV detection — add classes BEFORE first paint to avoid FOUC
+      (function() {
+        var el = document.documentElement;
+
+        // --- TV auto-detection ---
+        var ua = navigator.userAgent || '';
+        var tvRx = /SmartTV|Tizen|WebOS|web0s|VIDAA|Hisense|HbbTV|FireTV|AFT[TMB]|PlayStation|Xbox|Roku|Viera|NetCast|BRAVIA/i;
+        var forceTv = /[?&]tv=1/.test(location.search);
+        var forceNo = /[?&]tv=0/.test(location.search);
+        var ck = '; ' + document.cookie + ';';
+        var hasCookie = ck.indexOf('; tf_tv=1;') !== -1;
+        var noCookie = ck.indexOf('; tf_tv=0;') !== -1;
+
+        var isTV = !forceNo && !noCookie && (
+          forceTv || hasCookie || tvRx.test(ua) ||
+          typeof window.tizen !== 'undefined' ||
+          typeof window.webOS !== 'undefined' ||
+          (/Linux armv7l/i.test(ua) && !/Mobile/i.test(ua))
+        );
+
+        if (forceNo) {
+          document.cookie = 'tf_tv=0;max-age=2592000;path=/;SameSite=Lax';
+        } else if (forceTv) {
+          document.cookie = 'tf_tv=1;max-age=2592000;path=/;SameSite=Lax';
+        }
+
+        if (isTV) {
+          el.classList.add('tv-mode', 'device-smarttv', 'input-dpad');
+          var s = document.createElement('style');
+          s.textContent = '* { cursor: none !important }';
+          document.head.appendChild(s);
+          // Redirect se non già su /tv
+          var p = location.pathname;
+          if (p.indexOf('/tv') !== 0 && p.indexOf('/play/') !== 0 && p.indexOf('/admin') !== 0) {
+            var tp = '/tv';
+            if (p.indexOf('/p/') === 0) tp = '/tv' + p;
+            location.replace(tp + location.search);
+          }
+        }
+
+        // --- Device classification ---
+        var hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        var w = screen.width || window.innerWidth || 1920;
+        if (isTV) {
+          // TV classes already set above
+        } else if (hasTouch && w < 768) {
+          el.classList.add('device-mobile');
+          el.classList.add('input-touch');
+        } else if (hasTouch && w < 1280) {
+          el.classList.add('device-tablet');
+          el.classList.add('input-touch');
+        } else if (w < 1536) {
+          el.classList.add('device-laptop');
+          el.classList.add('input-mouse');
+        } else {
+          el.classList.add('device-desktop');
+          el.classList.add('input-mouse');
+        }
+        // Screen size class
+        var sw = window.innerWidth || screen.width || 1920;
+        var bp = sw >= 1536 ? '2xl' : sw >= 1280 ? 'xl' : sw >= 1024 ? 'lg' : sw >= 768 ? 'md' : sw >= 640 ? 'sm' : 'xs';
+        el.classList.add('screen-' + bp);
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-jWj4t-0V.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-preact-C4sQgyYV.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-icons-Bx80AG5L.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-BC4BM0ka.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+    <script id="home-module-preload">
+          (function () {
+            if (location.pathname !== '/' || /altaregistrazione/.test(location.hostname)) return;
+            var probe = document.createElement('link');
+            if (!probe.relList || !probe.relList.supports('modulepreload')) return;
+            ["assets/Home-dd0Mn_95.js","assets/vendor-preact-C4sQgyYV.js","assets/PersonalSections-eL4UPWvv.js","assets/index-jWj4t-0V.js","assets/vendor-icons-Bx80AG5L.js","assets/Badge-BCBFq4xR.js","assets/Carousel-Ci5ZKTgJ.js","assets/prefetchPreview-BIVNxUtT.js","assets/clicLink-CEjDQp2W.js","assets/cardLayout--__g5bEW.js","assets/playbackAction-ClvaVmCy.js","assets/facets-B1vqWV05.js","assets/responsiveImages-Cd29yJtR.js","assets/ContentCard-TZHc3gsN.js","assets/CardBadge-DiVpHHqs.js","assets/cwRemoval-CuK_RYvX.js","assets/SkeletonLoader-DnZbb-o5.js","assets/useWatchtimesRevalidate-Dy-ypB-h.js","assets/useRotellaOrizzontale-CE39I_iU.js"].forEach(function (file) {
+              var href = '/' + file;
+              if (document.querySelector('link[rel="modulepreload"][href="' + href + '"]')) return;
+              var link = document.createElement('link');
+              link.rel = 'modulepreload'; link.crossOrigin = ''; link.href = href;
+              document.head.appendChild(link);
+            });
+          })();</script>
+  </head>
+  <body class="bg-bg text-text-main font-sans">
+    <div
+      id="tf-boot"
+      data-loading-scope="global"
+      data-loading-reason="bootstrap"
+      data-loading-visible="true"
+      style="position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;background:#00050D;"
+    >
+      <div style="width:36px;height:36px;border:3px solid rgba(0,142,205,0.25);border-top-color:#008ECD;border-radius:50%;animation:tfboot 0.9s linear infinite;"></div>
+    </div>
+    <div id="app"></div>
+    <style>@keyframes tfboot{to{transform:rotate(360deg)}}</style>
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="/assets/polyfills-legacy-CKSpZkv2.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="/assets/index-legacy-lZoravji.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"387fd2a3371e4afa8ec2d4722c8d6360","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

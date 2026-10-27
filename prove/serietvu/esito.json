@@ -1,0 +1,51 @@
+{
+ "canale": "serietvu",
+ "host": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 5
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Ultimi episodi\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Generi\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1/category/serie-tv",
+   "status": 200,
+   "byte": 27752,
+   "secondi": 0.6,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1/ultimi-episodi/",
+   "status": 200,
+   "byte": 27742,
+   "secondi": 0.4,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1",
+   "status": 200,
+   "byte": 27714,
+   "secondi": 0.5,
+   "file": "pagine/03.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Serie TV\""
+}

@@ -1,0 +1,75 @@
+{
+ "canale": "eurostreaming",
+ "host": "https://eurostream.fun",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 6
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
+   "esito": "OK",
+   "voci": 19
+  },
+  {
+   "passo": "episodios su \"Phony\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"• Anime\"",
+   "esito": "OK",
+   "voci": 19
+  },
+  {
+   "passo": "episodios su \"Adventure Time: Side Quests\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"• Aggiornamenti\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://eurostream.fun",
+   "status": 200,
+   "byte": 42981,
+   "secondi": 0.9,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://eurostream.fun/phony/",
+   "status": 200,
+   "byte": 33032,
+   "secondi": 0.6,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://eurostream.fun/category/anime-cartoni-animati/",
+   "status": 200,
+   "byte": 43973,
+   "secondi": 0.5,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://eurostream.fun/adventure-time-side-quests/",
+   "status": 200,
+   "byte": 37324,
+   "secondi": 0.5,
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://eurostream.fun/aggiornamento-episodi-nuovi/",
+   "status": 200,
+   "byte": 26792,
+   "secondi": 0.5,
+   "file": "pagine/05.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: episodios su \"Phony\""
+}

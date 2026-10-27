@@ -1,0 +1,418 @@
+{
+ "canale": "la7",
+ "host": "",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "lista \"• Programmi TV\"",
+   "esito": "OK",
+   "voci": 203
+  },
+  {
+   "passo": "episodios su \"100 minuti\"",
+   "esito": "OK",
+   "voci": 3
+  },
+  {
+   "passo": "episodios su \"Inchieste \"",
+   "esito": "OK",
+   "voci": 18
+  },
+  {
+   "passo": "findvideos su \"100 Minuti - Senza tetto né legge\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "directo",
+   "url": "https://awsvodpkg.iltrovatore.it/local/hls/,/content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/content/entry/data/0/679/0_f0rztze5_0_g8ywvqlq_1,.mp4.urlset/master.m3u8",
+   "finale": "https://awsvodpkg.iltrovatore.it/local/hls/,/content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/content/entry/data/0/679/0_f0rztze5_0_g8ywvqlq_1,.mp4.urlset/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 206"
+  }
+ ],
+ "rete": [
+  {
+   "url": "https://www.la7.it/tutti-i-programmi",
+   "status": 200,
+   "byte": 547276,
+   "secondi": 0.7,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=115239",
+   "status": 200,
+   "byte": 595,
+   "secondi": 0.8,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=104964",
+   "status": 200,
+   "byte": 588,
+   "secondi": 0.8,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=112885",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.9,
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=115013",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.9,
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=79999",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.9,
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=84090",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.9,
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=114921",
+   "status": 200,
+   "byte": 1267,
+   "secondi": 0.9,
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=115737",
+   "status": 200,
+   "byte": 860,
+   "secondi": 1.0,
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=102099",
+   "status": 200,
+   "byte": 1184,
+   "secondi": 0.2,
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=87126",
+   "status": 200,
+   "byte": 427,
+   "secondi": 0.6,
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=27381",
+   "status": 200,
+   "byte": 443,
+   "secondi": 0.7,
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=118666",
+   "status": 200,
+   "byte": 517,
+   "secondi": 0.6,
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=82353",
+   "status": 200,
+   "byte": 648,
+   "secondi": 0.7,
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=119675",
+   "status": 200,
+   "byte": 1012,
+   "secondi": 0.7,
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=115680",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.9
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=45819",
+   "status": 200,
+   "byte": 417,
+   "secondi": 1.0
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=111648",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.8
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=111932",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=81722",
+   "status": 200,
+   "byte": 540,
+   "secondi": 0.8
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=75628",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.9
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=82794",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.8
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=27592",
+   "status": 200,
+   "byte": 540,
+   "secondi": 0.8
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=27533",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.8
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=25457",
+   "status": 200,
+   "byte": 338,
+   "secondi": 0.8
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=33163",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.8
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=59403",
+   "status": 200,
+   "byte": 555,
+   "secondi": 0.4
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=114836",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=59402",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=101035",
+   "status": 200,
+   "byte": 536,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=33198",
+   "status": 200,
+   "byte": 402,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=86027",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=106972",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=74976",
+   "status": 200,
+   "byte": 361,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=69716",
+   "status": 200,
+   "byte": 178,
+   "secondi": 0.8
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=96013",
+   "status": 200,
+   "byte": 434,
+   "secondi": 0.9
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=72974",
+   "status": 200,
+   "byte": 186,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=33311",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=114491",
+   "status": 200,
+   "byte": 168,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=32577",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=106765",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=117571",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=104639",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=94442",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=65426",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=109941",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.9
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=95091",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=53050",
+   "status": 200,
+   "byte": 465,
+   "secondi": 0.2
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=114288",
+   "status": 200,
+   "byte": 2,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=116094",
+   "status": 200,
+   "byte": 299,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=117427",
+   "status": 200,
+   "byte": 740,
+   "secondi": 0.9
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=119993",
+   "status": 200,
+   "byte": 671,
+   "secondi": 0.9
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=119401",
+   "status": 200,
+   "byte": 456,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=73973",
+   "status": 200,
+   "byte": 231,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=118714",
+   "status": 200,
+   "byte": 1438,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=34470",
+   "status": 200,
+   "byte": 441,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=34408",
+   "status": 200,
+   "byte": 175,
+   "secondi": 0.5
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=58781",
+   "status": 200,
+   "byte": 166,
+   "secondi": 0.7
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=118659",
+   "status": 200,
+   "byte": 1112,
+   "secondi": 0.6
+  },
+  {
+   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=69092",
+   "status": 200,
+   "byte": 158,
+   "secondi": 0.7
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

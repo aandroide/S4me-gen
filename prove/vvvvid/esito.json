@@ -1,0 +1,19 @@
+{
+ "canale": "vvvvid",
+ "host": "",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 2
+  },
+  {
+   "passo": "lista \"Visibile solo dall'Italia\"",
+   "esito": "ERRORE",
+   "errore": "', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/channels/vvvvid.py\", line 116, in peliculas\n    json_file =loadjs(item.url + 'channel/10005/last/')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'payload' is not defined\n"
+  }
+ ],
+ "video": [],
+ "rete": [],
+ "verdetto": "SI FERMA A: lista \"Visibile solo dall'Italia\""
+}

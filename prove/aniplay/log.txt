@@ -1,0 +1,22 @@
+Canale aniplay | indirizzo https://aniplay.co
+== mainlist
+   -> 7 voci
+      peliculas | • Anime | https://aniplay.co/api/anime/advanced-search
+      submenu_az | •• A-Z | https://aniplay.co/api/anime/advanced-search
+      submenu_year | •• Anno | https://aniplay.co
+      submenu_top | •• Top | https://aniplay.co
+== lista "• Anime"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/channels/aniplay.py", line 165, in peliculas
+    js = httptools.downloadpage('{}?page={}&size={}{}&sort={},{}&sort=id'.format(item.url, page, perpage, item.variable, sort, order)).json
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'HTTPResponse' has no attribute 'json'
+
+Nessuna voce da riprodurre trovata
+VERDETTO: SI FERMA A: lista "• Anime"

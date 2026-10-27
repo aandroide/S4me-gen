@@ -1,0 +1,61 @@
+{
+ "canale": "altadefinizione01",
+ "host": "https://altadefinizione-01.autos",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 10
+  },
+  {
+   "passo": "lista \"Tutti \"",
+   "esito": "OK",
+   "voci": 23
+  },
+  {
+   "passo": "check su \"Shaun, vita da pecora - Operazione Z.U.C\"",
+   "esito": "OK",
+   "voci": 2
+  }
+ ],
+ "video": [
+  {
+   "server": "vixsrc",
+   "url": "https://vixsrc.to/movie/tt36841161",
+   "finale": "https://vixsrc.to/playlist/797069.m3u8?ub=1&token=5c20893a56de59ddf37a5f70a09ba47b&expires=1798313101&h=1&lang=it",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
+ "rete": [
+  {
+   "url": "https://altadefinizione-01.autos/lastnews/",
+   "status": 200,
+   "byte": 131998,
+   "secondi": 1.0,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html",
+   "status": 200,
+   "byte": 92932,
+   "secondi": 0.4,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://vixsrc.to/api/movie/tt36841161",
+   "status": 200,
+   "byte": 175,
+   "secondi": 0.3,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://vixsrc.to/embed/797069?token=ea9b19d50affe13cd9fa8a9361706823&t=U2hhdW4gdGhlIFNoZWVwOiBUaGUgQmVhc3Qgb2YgTW9zc3kgQm90dG9t&expires=1793129111&lang=en&skin=vixsrc&canPlayFHD=1",
+   "status": 200,
+   "byte": 6592,
+   "secondi": 0.3,
+   "file": "pagine/04.html"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

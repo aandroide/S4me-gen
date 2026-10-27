@@ -1,0 +1,29 @@
+{
+ "canale": "altadefinizioneclick",
+ "host": "https://altadefinizionex.vip",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 6
+  },
+  {
+   "passo": "lista \"• Film\"",
+   "esito": "ERRORE",
+   "errore": "tion)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 522, in wrapper\n    args = func(*args)\n           ^^^^^^^^^^^\nImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)\n"
+  },
+  {
+   "passo": "lista \"•• Generi\"",
+   "esito": "ERRORE",
+   "errore": "^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/channels/altadefinizioneclick.py\", line 51, in genres\n    data = support.httptools.downloadpage(host, cloudscraper=True).data\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)\n"
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
+   "esito": "ERRORE",
+   "errore": "tion)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 522, in wrapper\n    args = func(*args)\n           ^^^^^^^^^^^\nImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)\n"
+  }
+ ],
+ "video": [],
+ "rete": [],
+ "verdetto": "SI FERMA A: lista \"• Film\""
+}

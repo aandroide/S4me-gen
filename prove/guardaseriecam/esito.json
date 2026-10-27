@@ -1,0 +1,27 @@
+{
+ "canale": "guardaseriecam",
+ "host": "https://guardaseriex.best",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 4
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://guardaseriex.best/serietv-streaming",
+   "status": 200,
+   "byte": 100233,
+   "secondi": 0.8,
+   "file": "pagine/01.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Serie TV\""
+}

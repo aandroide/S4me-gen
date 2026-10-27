@@ -1,0 +1,130 @@
+{
+ "canale": "toonitalia",
+ "host": "https://toonitalia.xyz",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "lista \"Anime \"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "check su \"The Apothecary Diaries \"",
+   "esito": "OK",
+   "voci": 50
+  },
+  {
+   "passo": "findvideos su \"1x01 - Maomao\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Anime ITA\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "check su \".hack//Sign \"",
+   "esito": "OK",
+   "voci": 29
+  },
+  {
+   "passo": "findvideos su \"01 - Gioco di Ruolo\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "voe",
+   "url": "https://voe.sx/e/hig6dbajibee",
+   "finale": "https://ugc-cdn-caching-n3fzsi5gnge0gpz5cp.cloudwindow-route.com/engine/hls2/01/10578/hig6dbajibee_,l,.urlset/master.m3u8?t=-NEiGafe0fx6k3tA-Lt2UxqL0kbUAKSGowdk_G-W4zo&s=1793129141&e=14400&f=52891900&",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
+ "rete": [
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/anime",
+   "status": 200,
+   "byte": 331270,
+   "secondi": 3.8,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/category/anime",
+   "status": 200,
+   "byte": 331270,
+   "secondi": 4.0,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/the-apothecary-diaries/",
+   "status": 200,
+   "byte": 102685,
+   "secondi": 2.3,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/the-apothecary-diaries/",
+   "status": 200,
+   "byte": 102685,
+   "secondi": 2.5,
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/anime-ita",
+   "status": 200,
+   "byte": 219499,
+   "secondi": 3.9,
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/anime-ita",
+   "status": 200,
+   "byte": 219499,
+   "secondi": 4.1,
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/hack-sign/",
+   "status": 200,
+   "byte": 104288,
+   "secondi": 2.4,
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/hack-sign/",
+   "status": 200,
+   "byte": 104288,
+   "secondi": 2.6,
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://voe.sx/e/hig6dbajibee",
+   "status": 200,
+   "byte": 743,
+   "secondi": 0.6,
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://ashleyhardat.com/e/hig6dbajibee",
+   "status": 200,
+   "byte": 126599,
+   "secondi": 0.7,
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://voe.sx/js/loader.a40897e.js",
+   "status": 200,
+   "byte": 86050,
+   "secondi": 0.6,
+   "file": "pagine/11.html"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

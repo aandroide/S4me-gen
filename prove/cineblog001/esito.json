@@ -1,0 +1,66 @@
+{
+ "canale": "cineblog001",
+ "host": "https://cineblog001.men",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 6
+  },
+  {
+   "passo": "lista \"Film\"",
+   "esito": "OK",
+   "voci": 19
+  },
+  {
+   "passo": "findvideos su \"Shaun, vita da pecora - Operazione Z.U.C\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"Serie TV\"",
+   "esito": "OK",
+   "voci": 19
+  },
+  {
+   "passo": "findvideos su \"Minimum Wage\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"Sub-ITA\"",
+   "esito": "OK",
+   "voci": 19
+  },
+  {
+   "passo": "findvideos su \"Truth & Treason\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "https://cineblog001.center/film/",
+   "status": 200,
+   "byte": 76550,
+   "secondi": 2.7,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://cineblog001.center/serie-tv/",
+   "status": 200,
+   "byte": 99348,
+   "secondi": 1.3,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://cineblog001.center/sub-ita/",
+   "status": 200,
+   "byte": 97044,
+   "secondi": 1.5,
+   "file": "pagine/03.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: findvideos su \"Shaun, vita da pecora - Operazione Z.U.C\""
+}
