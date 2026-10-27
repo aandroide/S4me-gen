@@ -7,19 +7,19 @@ Canale guardaseriecam | indirizzo https://guardaseriex.best
       channel_config | txt60587 %s | 
 == lista "• Serie TV"
    -> 19 voci
+      episodios | American Horror Story | https://guardaseriex.best/dramma/407-american-horror-story-1.html
       episodios | Grande de España | https://guardaseriex.best/commedia/5855-grande-de-espana-streaming.html
       episodios | Crystal Lake | https://guardaseriex.best/dramma/5837-crystal-lake-streaming.html
-      episodios | American Horror Story | https://guardaseriex.best/dramma/407-american-horror-story-1.html
-      episodios | YAGA | https://guardaseriex.best/dramma/5856-yaga-streaming.html
-== episodios su "Grande de España"
-   -> 6 voci
-      findvideos | 1x01 - Il marchese | https://v.vidxgo.co/39387986/1/1
-      findvideos | 1x02 - Conchi | https://v.vidxgo.co/39387986/1/2
-      findvideos | 1x03 - Derive del Mediterraneo | https://v.vidxgo.co/39387986/1/3
-      findvideos | 1x04 - Periferia | https://v.vidxgo.co/39387986/1/4
-== findvideos su "1x01 - Il marchese"
+      episodios | Paolo | https://guardaseriex.best/dramma/5789-paolo-streaming.html
+== episodios su "American Horror Story"
+   -> 145 voci
+      findvideos | 1x01 - La nuova casa | https://v.vidxgo.co/1844624/1/1
+      findvideos | 1x02 - Il passato ritorna | https://v.vidxgo.co/1844624/1/2
+      findvideos | 1x03 - Vecchi rancori | https://v.vidxgo.co/1844624/1/3
+      findvideos | 1x04 - Halloween (1ª parte) | https://v.vidxgo.co/1844624/1/4
+== findvideos su "1x01 - La nuova casa"
    -> 1 voci
-      play | 1x01 - Il marchese | https://v.vidxgo.co/39387986/1/1
-== risoluzione vidxgo https://v.vidxgo.co/39387986/1/1
-   -> VIDEO NON RAGGIUNGIBILE errore ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) 
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
+      play | 1x01 - La nuova casa | https://v.vidxgo.co/1844624/1/1
+== risoluzione vidxgo https://v.vidxgo.co/1844624/1/1
+   -> VIDEO OK m3u8 200 
+VERDETTO: ARRIVA AL VIDEO

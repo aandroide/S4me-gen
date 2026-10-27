@@ -13,12 +13,12 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"Grande de España\"",
+   "passo": "episodios su \"American Horror Story\"",
    "esito": "OK",
-   "voci": 6
+   "voci": 145
   },
   {
-   "passo": "findvideos su \"1x01 - Il marchese\"",
+   "passo": "findvideos su \"1x01 - La nuova casa\"",
    "esito": "OK",
    "voci": 1
   }
@@ -26,48 +26,130 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/39387986/1/1",
-   "finale": "http://127.0.0.1:35201/hls/tv/39387986/1/1/master.m3u8",
-   "esito": "VIDEO NON RAGGIUNGIBILE",
-   "dettaglio": "errore ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+   "url": "https://v.vidxgo.co/1844624/1/1",
+   "finale": "http://127.0.0.1:42973/hls/tv/1844624/1/1/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
   }
  ],
  "rete": [
   {
    "url": "https://guardaseriex.best/serietv-streaming",
    "status": 200,
-   "byte": 100741,
-   "secondi": 0.9,
+   "byte": 100724,
+   "secondi": 0.4,
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.best/commedia/5855-grande-de-espana-streaming.html",
+   "url": "https://guardaseriex.best/dramma/407-american-horror-story-1.html",
    "status": 200,
-   "byte": 63695,
-   "secondi": 0.2,
+   "byte": 64907,
+   "secondi": 0.3,
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt39387986?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt1844624?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
    "status": 200,
-   "byte": 671,
-   "secondi": 0.3,
+   "byte": 1207,
+   "secondi": 0.1,
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/335535?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/1413?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 2456,
+   "byte": 12698,
    "secondi": 0.1,
    "file": "pagine/04.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/335535/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/1413/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 3225,
-   "secondi": 0.2,
+   "byte": 79080,
+   "secondi": 0.1,
    "file": "pagine/05.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/2?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 60001,
+   "secondi": 0.1,
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/3?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 52272,
+   "secondi": 0.1,
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/4?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 73309,
+   "secondi": 0.1,
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/5?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 83525,
+   "secondi": 0.1,
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/6?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 68124,
+   "secondi": 0.1,
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/7?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 75240,
+   "secondi": 0.1,
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/8?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 40100,
+   "secondi": 0.1,
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/9?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 52340,
+   "secondi": 0.2,
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/10?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 67795,
+   "secondi": 0.1,
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/11?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 59692,
+   "secondi": 0.1,
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/12?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 38224,
+   "secondi": 0.1
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/1413/season/13?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 47169,
+   "secondi": 0.1
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
+ "verdetto": "ARRIVA AL VIDEO"
 }

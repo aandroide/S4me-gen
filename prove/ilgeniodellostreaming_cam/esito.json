@@ -13,7 +13,22 @@
    "voci": 19
   },
   {
-   "passo": "check su \"Shaun, vita da pecora - Operazione Z.U.C\"",
+   "passo": "check su \"Solo Noi. Una stagione da Double\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Generi\"",
+   "esito": "OK",
+   "voci": 41
+  },
+  {
+   "passo": "peliculas su \"Prossimamente\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "check su \"La fine di Oak Street \"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,51 +36,61 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/36841161",
-   "modulo_server": true,
+   "url": "https://v.vidxgo.co/27165187",
+   "finale": "http://127.0.0.1:37161/hls/27165187/master.m3u8",
    "esito": "VIDEO OK",
-   "pagina_server": {
-    "status": 403,
-    "inizio": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>403</title><link rel=\"icon\" type=\"image/png\" href=\"/fav.png\"><link rel=\"apple-touch-icon\" href=\"/fav.png\"><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><l"
-   },
-   "api_t": [
-    {
-     "referer": "https://v.vidxgo.co/36841161",
-     "status": 200,
-     "inizio": "{\"url\":\"https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=a688fb56756acf33&e=1793131013375&b=2819\",\"expire\":1793131013375}\n"
-    },
-    {
-     "referer": "https://il-geniodellostreaming.ink/",
-     "status": 200,
-     "inizio": "{\"url\":\"https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=f706602ee21adc5f&e=1793131014645&b=2819\",\"expire\":1793131014645}\n"
-    }
-   ],
-   "finale": "https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=a688fb56756acf33&e=1793131013375&b=2819",
-   "dettaglio": "m3u8 200",
-   "via": "API /t/ di vidxgo (stessa chiamata del modulo S4Me)"
+   "dettaglio": "m3u8 200"
   }
  ],
  "rete": [
   {
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
-   "byte": 38042,
-   "secondi": 1.1,
+   "byte": 38025,
+   "secondi": 0.6,
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/film/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html",
+   "url": "https://il-geniodellostreaming.ink/film/35339-solo-noi-una-stagione-da-double-streaming.html",
    "status": 200,
-   "byte": 30861,
+   "byte": 29603,
    "secondi": 0.2,
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/film/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html",
+   "url": "https://il-geniodellostreaming.ink/film/35339-solo-noi-una-stagione-da-double-streaming.html",
    "status": 200,
-   "byte": 30861,
-   "secondi": 0.2,
+   "byte": 29603,
+   "secondi": 0.4,
    "file": "pagine/03.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink",
+   "status": 200,
+   "byte": 93216,
+   "secondi": 0.2,
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/prossimamente/",
+   "status": 200,
+   "byte": 85558,
+   "secondi": 0.5,
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/film/34552-la-fine-di-oak-street-streaming.html",
+   "status": 200,
+   "byte": 30320,
+   "secondi": 0.2,
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/film/34552-la-fine-di-oak-street-streaming.html",
+   "status": 200,
+   "byte": 30320,
+   "secondi": 0.2,
+   "file": "pagine/07.html"
   }
  ],
  "verdetto": "ARRIVA AL VIDEO"

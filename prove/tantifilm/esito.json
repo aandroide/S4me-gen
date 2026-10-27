@@ -27,9 +27,9 @@
   {
    "server": "vidxgo",
    "url": "https://v.vidxgo.co/36841161",
-   "finale": "http://127.0.0.1:34883/hls/36841161/master.m3u8",
-   "esito": "VIDEO NON RAGGIUNGIBILE",
-   "dettaglio": "errore ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+   "finale": "http://127.0.0.1:35929/hls/36841161/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
   }
  ],
  "rete": [
@@ -37,30 +37,30 @@
    "url": "https://tanti-film.garden",
    "status": 200,
    "byte": 16470,
-   "secondi": 0.8,
+   "secondi": 0.4,
    "file": "pagine/01.html"
   },
   {
    "url": "https://tanti-film.garden/prossimamente/",
    "status": 200,
    "byte": 71494,
-   "secondi": 0.8,
+   "secondi": 0.2,
    "file": "pagine/02.html"
   },
   {
    "url": "https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming-hd.html",
    "status": 200,
    "byte": 29413,
-   "secondi": 0.5,
+   "secondi": 0.2,
    "file": "pagine/03.html"
   },
   {
    "url": "https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming-hd.html",
    "status": 200,
    "byte": 29413,
-   "secondi": 0.6,
+   "secondi": 0.2,
    "file": "pagine/04.html"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
+ "verdetto": "ARRIVA AL VIDEO"
 }

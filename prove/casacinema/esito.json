@@ -27,9 +27,9 @@
   {
    "server": "vidxgo",
    "url": "https://v.vidxgo.co/27165187",
-   "finale": "http://127.0.0.1:46715/hls/27165187/master.m3u8",
-   "esito": "VIDEO NON RAGGIUNGIBILE",
-   "dettaglio": "errore ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+   "finale": "http://127.0.0.1:39837/hls/27165187/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
   }
  ],
  "rete": [
@@ -37,7 +37,7 @@
    "url": "https://casa-cinema.boats",
    "status": 200,
    "byte": 39590,
-   "secondi": 0.7,
+   "secondi": 0.5,
    "file": "pagine/01.html"
   },
   {
@@ -51,9 +51,9 @@
    "url": "https://casa-cinema.boats/gratis/34552-guarda-la-fine-di-oak-street-streaming-online-ita.html",
    "status": 200,
    "byte": 25519,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "file": "pagine/03.html"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
+ "verdetto": "ARRIVA AL VIDEO"
 }

@@ -6,81 +6,15 @@ Canale altadefinizioneclick | indirizzo https://altadefinizionex.vip
       peliculas | • Serie TV | https://altadefinizionex.vip/serie-tv/
       genres | •• Generi | https://altadefinizionex.vip/serie-tv/
 == lista "• Film"
-Traceback (most recent call last):
-  File "/tmp/kh/addon/lib/requests_toolbelt/_compat.py", line 48, in <module>
-    from requests.packages.urllib3.contrib import appengine as gaecontrib
-ImportError: cannot import name 'appengine' from 'requests.packages.urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
-    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
-                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/support.py", line 522, in wrapper
-    args = func(*args)
-           ^^^^^^^^^^^
-  File "/tmp/kh/addon/channels/altadefinizioneclick.py", line 97, in peliculas
-    data = support.httptools.downloadpage(url, cloudscraper=True).data
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 65, in _dl
-    r = _orig(url, *a, **k)
-        ^^^^^^^^^^^^^^^^^^^
-ImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
-
-== lista "•• Generi"
-Traceback (most recent call last):
-  File "/tmp/kh/addon/lib/requests_toolbelt/_compat.py", line 48, in <module>
-    from requests.packages.urllib3.contrib import appengine as gaecontrib
-ImportError: cannot import name 'appengine' from 'requests.packages.urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
-    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
-                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/channels/altadefinizioneclick.py", line 51, in genres
-    data = support.httptools.downloadpage(host, cloudscraper=True).data
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 65, in _dl
-    r = _orig(url, *a, **k)
-        ^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/httptools.py", line 278, in downloadpage
-    from lib import cloudscraper
-ImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
-
-== lista "• Serie TV"
-Traceback (most recent call last):
-  File "/tmp/kh/addon/lib/requests_toolbelt/_compat.py", line 48, in <module>
-    from requests.packages.urllib3.contrib import appengine as gaecontrib
-ImportError: cannot import name 'appengine' from 'requests.packages.urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
-    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
-                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/support.py", line 522, in wrapper
-    args = func(*args)
-           ^^^^^^^^^^^
-  File "/tmp/kh/addon/channels/altadefinizioneclick.py", line 97, in peliculas
-    data = support.httptools.downloadpage(url, cloudscraper=True).data
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 65, in _dl
-    r = _orig(url, *a, **k)
-        ^^^^^^^^^^^^^^^^^^^
-ImportError: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py)
-
-Nessuna voce da riprodurre trovata
-VERDETTO: SI FERMA A: lista "• Film"
+   -> 13 voci
+      findvideos | Jump Out | https://altadefinizionex.vip/documentario/45370-jump-out-streaming.html
+      findvideos | Lost Angel | https://altadefinizionex.vip/thriller/45369-lost-angel-streaming.html
+      findvideos | Dadapolis - Caleidoscopio napoletano | https://altadefinizionex.vip/documentary/28211-dadapolis-caleidoscopio-napoletano-streaming.html
+      findvideos | Il prigioniero del Caucaso | https://altadefinizionex.vip/drammatico/45368-il-prigioniero-del-caucaso-streaming.html
+== findvideos su "Jump Out"
+   -> 2 voci
+      play | Jump Out | https://v.vidxgo.co/27154364
+      add_pelicula_to_library | txt30161 %s | https://altadefinizionex.vip/documentario/45370-jump-out-streaming.html
+== risoluzione vidxgo https://v.vidxgo.co/27154364
+   -> VIDEO OK m3u8 200 
+VERDETTO: ARRIVA AL VIDEO
