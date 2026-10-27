@@ -95,7 +95,9 @@ def findvideos(item):
     data = support.match(item.url).data
     itemlist = []
     # il lettore del sito e vidxgo: l'indirizzo si costruisce con l'id IMDb (o TMDB) scritto nello script
-    imdb = support.match(data, patron=r"var imdb = 'tt(\d+)'").match
+    imdb = support.match(data, patron=r"""var\s+imdb\s*=\s*['"]tt(\d+)""").match
+    if not imdb:
+        imdb = support.match(data, patron=r"/uploads/[^\"' ]*?/tt(\d{6,9})\.").match
     if imdb:
         chiave = imdb
     else:

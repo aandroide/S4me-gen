@@ -116,7 +116,9 @@ def findvideos(item):
     # con l'id IMDb (o TMDB) scritto nello script della pagina
     data = support.match(item).data
     itemlist = []
-    imdb = support.match(data, patron=r"var imdb = 'tt(\d+)'").match
+    imdb = support.match(data, patron=r"""var\s+imdb\s*=\s*['"]tt(\d+)""").match
+    if not imdb:
+        imdb = support.match(data, patron=r"/uploads/[^\"' ]*?/tt(\d{6,9})\.").match
     if imdb:
         chiave = imdb
     else:
@@ -126,7 +128,8 @@ def findvideos(item):
         itemlist.append(item.clone(action='play', title='vidxgo', url='https://v.vidxgo.co/' + chiave, server='vidxgo'))
 
     # altri lettori presenti nella pagina (esclusi trailer e lettore finto "HD/4K")
-    urls = support.match(data, patron=r'id="urlEmbed" value="([^"]+)').matches
+    urls = [u for u in support.match(data, patron=r'id="urlEmbed" value="([^"]+)').matches if 'youtube' not in u and 'youtu.be' not in u]
+    logger.info('vidxgo chiave: %s' % chiave)
     for m in support.match(data, patron=r'<iframe[^>]*?src="([^"]+)').matches:
         if m and 'youtube' not in m and not m.endswith('.js'):
             urls += [u for u in support.match(m, patron=r'data-link="([^"]+)').matches if '/4k/' not in u]
