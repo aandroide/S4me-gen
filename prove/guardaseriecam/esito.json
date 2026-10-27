@@ -9,19 +9,65 @@
   },
   {
    "passo": "lista \"• Serie TV\"",
-   "esito": "VUOTO",
-   "voci": 0
+   "esito": "OK",
+   "voci": 19
+  },
+  {
+   "passo": "episodios su \"Grande de España\"",
+   "esito": "OK",
+   "voci": 6
+  },
+  {
+   "passo": "findvideos su \"1x01 - Il marchese\"",
+   "esito": "OK",
+   "voci": 1
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/39387986/1/1",
+   "finale": "http://127.0.0.1:35201/hls/tv/39387986/1/1/master.m3u8",
+   "esito": "VIDEO NON RAGGIUNGIBILE",
+   "dettaglio": "errore ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+  }
+ ],
  "rete": [
   {
    "url": "https://guardaseriex.best/serietv-streaming",
    "status": 200,
    "byte": 100741,
-   "secondi": 1.0,
+   "secondi": 0.9,
    "file": "pagine/01.html"
+  },
+  {
+   "url": "https://guardaseriex.best/commedia/5855-grande-de-espana-streaming.html",
+   "status": 200,
+   "byte": 63695,
+   "secondi": 0.2,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/find/tt39387986?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
+   "status": 200,
+   "byte": 671,
+   "secondi": 0.3,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/335535?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 2456,
+   "secondi": 0.1,
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/335535/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 3225,
+   "secondi": 0.2,
+   "file": "pagine/05.html"
   }
  ],
- "verdetto": "SI FERMA A: lista \"• Serie TV\""
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
 }

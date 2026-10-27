@@ -15,49 +15,52 @@
   {
    "passo": "peliculas su \"Prossimamente\"",
    "esito": "OK",
-   "voci": 1
+   "voci": 26
   },
   {
-   "passo": "lista \"• Film\"",
+   "passo": "check su \"Shaun, vita da pecora - Operazione Z.U.C\"",
    "esito": "OK",
-   "voci": 1
-  },
-  {
-   "passo": "lista \"• Serie TV\"",
-   "esito": "OK",
-   "voci": 1
+   "voci": 2
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/36841161",
+   "finale": "http://127.0.0.1:34883/hls/36841161/master.m3u8",
+   "esito": "VIDEO NON RAGGIUNGIBILE",
+   "dettaglio": "errore ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+  }
+ ],
  "rete": [
   {
    "url": "https://tanti-film.garden",
    "status": 200,
    "byte": 16470,
-   "secondi": 0.7,
+   "secondi": 0.8,
    "file": "pagine/01.html"
   },
   {
    "url": "https://tanti-film.garden/prossimamente/",
    "status": 200,
    "byte": 71494,
-   "secondi": 0.2,
+   "secondi": 0.8,
    "file": "pagine/02.html"
   },
   {
-   "url": "https://tanti-film.garden/film",
+   "url": "https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 89529,
-   "secondi": 0.4,
+   "byte": 29413,
+   "secondi": 0.5,
    "file": "pagine/03.html"
   },
   {
-   "url": "https://tanti-film.garden/serie-tv/",
+   "url": "https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 72716,
-   "secondi": 0.2,
+   "byte": 29413,
+   "secondi": 0.6,
    "file": "pagine/04.html"
   }
  ],
- "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
 }
