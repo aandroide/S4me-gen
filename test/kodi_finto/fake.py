@@ -28,7 +28,7 @@ xbmcaddon.Addon = A
 import xbmc, xbmcvfs
 xbmc.translatePath = lambda p: p
 xbmcvfs.translatePath = lambda p: p
-xbmc.getInfoLabel = lambda k: ''
+xbmc.getInfoLabel = lambda k: '21.0.0 (21.0.0) Git:fake' if k == 'System.BuildVersion' else ''
 xbmc.getCondVisibility = lambda k: False
 xbmc.executebuiltin = lambda *a,**k: None
 xbmc.LOGINFO=1;xbmc.LOGDEBUG=0;xbmc.LOGERROR=2;xbmc.LOGWARNING=3;xbmc.LOGNONE=4
