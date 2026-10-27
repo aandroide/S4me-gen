@@ -58,8 +58,8 @@ def _dl(url, *a, **k):
         corpo = r.data if isinstance(r.data, str) else str(r.data)
         rete.append({'url': url if isinstance(url, str) else str(url), 'status': getattr(r, 'code', None), 'byte': len(corpo),
                      'secondi': round(time.time() - t, 1)})
-        if len(rete) <= 40:
-            open(os.path.join(PAG, '%02d.html' % len(rete)), 'w', encoding='utf-8').write(corpo[:300000])
+        if len(rete) <= 15:
+            open(os.path.join(PAG, '%02d.html' % len(rete)), 'w', encoding='utf-8').write(corpo[:150000])
             rete[-1]['file'] = 'pagine/%02d.html' % len(rete)
     except Exception:
         pass
@@ -236,5 +236,8 @@ else:
     ult = [p for p in passi if p['esito'] != 'OK']
     esito['verdetto'] = 'SI FERMA A: ' + (ult[0]['passo'] if ult else 'ultimo passo, nessuna voce da riprodurre')
 rp('VERDETTO:', esito['verdetto'])
+if esito['verdetto'].startswith('ARRIVA'):
+    import shutil
+    shutil.rmtree(PAG, ignore_errors=True)  # le pagine servono solo quando qualcosa non va
 json.dump(esito, open(os.path.join(args.out, nome, 'esito.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 open(os.path.join(args.out, nome, 'log.txt'), 'w', encoding='utf-8').write('\n'.join(log))

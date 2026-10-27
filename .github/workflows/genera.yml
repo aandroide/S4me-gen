@@ -101,6 +101,18 @@ jobs:
           if [ "$CLOUDFLARE" = "true" ]; then export FLARESOLVERR_URL=http://localhost:8191; fi
           python3 s4me_gen.py "$SITO" --nome "$NOME" --out "canali/$NOME" --attesa "$ATTESA" $ARGS
 
+      - name: Prova il canale generato fino al video
+        continue-on-error: true
+        env:
+          SITO: ${{ inputs.sito }}
+        run: |
+          pip install requests beautifulsoup4 lxml cryptography
+          git clone -q --depth 1 https://github.com/stream4me/addon /tmp/kh/addon
+          cp test/kodi_finto/fake.py /tmp/kh/fake.py
+          mkdir -p /tmp/kh/prof
+          cp "canali/$NOME/$NOME.py" "canali/$NOME/$NOME.json" /tmp/kh/addon/channels/
+          PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 600 python3 -W ignore prova_video.py "$NOME" --host "$SITO" --out "canali/$NOME/prova" || true
+
       - name: Salva i file nella repo
         run: |
           git config user.name "aandroide"

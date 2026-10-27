@@ -13,6 +13,10 @@ on:
         description: 'Scrivere le correzioni quando una regex e rotta'
         type: boolean
         default: true
+      video:
+        description: 'Dopo il controllo delle regex, provare ogni canale fino al video'
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -101,3 +105,50 @@ jobs:
         with:
           name: controllo-canali
           path: correzioni
+
+  video:
+    needs: controlla
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    if: ${{ github.event.inputs.video != 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dipendenze
+        run: pip install requests beautifulsoup4 lxml cryptography
+      - name: Scarica S4Me (sola lettura)
+        run: |
+          git clone -q --depth 1 https://github.com/stream4me/addon /tmp/kh/addon
+          cp test/kodi_finto/fake.py /tmp/kh/fake.py
+          mkdir -p /tmp/kh/prof
+      - name: Prova ogni canale fino al video
+        run: |
+          rm -rf prove
+          mkdir -p prove
+          CANALI="${{ github.event.inputs.canali }}"
+          if [ -z "$CANALI" ]; then CANALI=$(ls canali_base/*.py | xargs -n1 basename | sed 's/\.py$//'); fi
+          for c in $CANALI; do
+            f=/tmp/kh/addon/channels/$c.py
+            [ -f correzioni/$c/$c.py ] && cp correzioni/$c/$c.py $f
+            if [ -f riparazioni/$c.py ]; then cp riparazioni/$c.py $f; [ -f riparazioni/$c.json ] && cp riparazioni/$c.json /tmp/kh/addon/channels/; fi
+          done
+          echo $CANALI | tr ' ' '\n' | xargs -P 4 -I{} sh -c 'PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 300 python3 -W ignore prova_video.py {} --out prove > /dev/null 2>&1 || echo "tempo scaduto o errore: {}"'
+          python3 riepilogo_video.py
+      - name: Salva
+        run: |
+          git config user.name aandroide
+          git config user.email aandroide@users.noreply.github.com
+          for i in 1 2 3; do
+            git fetch -q origin ${{ github.ref_name }}
+            git reset -q origin/${{ github.ref_name }}
+            git add prove
+            git commit -q -m "Controllo dei canali fino al video" || break
+            git push -q origin HEAD:${{ github.ref_name }} && break
+            sleep 5
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: controllo-video
+          path: prove/RAPPORTO_VIDEO.md

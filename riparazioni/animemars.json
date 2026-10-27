@@ -1,0 +1,26 @@
+{
+    "id": "animemars",
+    "name": "Animemars",
+    "language": [
+        "ita"
+    ],
+    "active": true,
+    "thumbnail": "animemars.png",
+    "banner": "animemars.png",
+    "categories": [
+        "tvshow"
+    ],
+    "not_active": [
+        "include_in_newest"
+    ],
+    "settings": [
+        {
+            "id": "include_in_global_search",
+            "type": "bool",
+            "label": "Includi in Ricerca Globale",
+            "default": true,
+            "enabled": true,
+            "visible": true
+        }
+    ]
+}
