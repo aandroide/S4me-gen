@@ -1,0 +1,11 @@
+--- canali_base/guardaseriecam.py
++++ correzioni/guardaseriecam/guardaseriecam.py
+@@ -36,7 +36,7 @@
+ @support.scrape
+ def peliculas(item):
+     # debug = True
+-    patron = r'<div class="mlnh-thumb"><a href="(?P<url>[^"]+)[^>]+title="(?P<title>[^"]+).*?<img src="(?P<thumb>[^"]+).*?hdn">[^<]*(?P<year>[0-9]{4})'
++    patron = r'''<div(?=[^>]*class="(?:[^"]*\s)?movieItem(?:\s[^"]*)?")(?:(?!<div(?=[^>]*class="(?:[^"]*\s)?movieItem(?:\s[^"]*)?")).)*?<a [^>]*?href="(?P<url>[^"]+)"(?:(?!<div(?=[^>]*class="(?:[^"]*\s)?movieItem(?:\s[^"]*)?")).)*?<img [^>]*?src="(?P<thumb>[^"]+)"(?:(?!<div(?=[^>]*class="(?:[^"]*\s)?movieItem(?:\s[^"]*)?")).)*?<span[^>]*>\s*\(?(?P<year>[0-9]{4})\)?(?:(?!<div(?=[^>]*class="(?:[^"]*\s)?movieItem(?:\s[^"]*)?")).)*?<div(?=[^>]*class="(?:[^"]*\s)?movieItem\-title(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?text\-truncate(?:\s[^"]*)?")[^>]*>\s*(?:<[^>]+>\s*)*(?P<title>[^<]+?)(?:\s*\((?P<lang>ITA|SUB[\ \-]?ITA|Sub[\ \-]?Ita)\))?\s*<'''
+     patronNext = 'pagenavi.*?<a href="([^"]+)">\d+'
+     action = 'episodios'
+     return locals()
