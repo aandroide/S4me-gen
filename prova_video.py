@@ -66,8 +66,9 @@ def _dl(url, *a, **k):
     r = _orig(url, *a, **k)
     try:
         corpo = r.data if isinstance(r.data, str) else str(r.data)
+        _t = re.search(r'<title[^>]*>(.*?)</title>', corpo[:20000], re.S | re.I)
         rete.append({'url': url if isinstance(url, str) else str(url), 'status': getattr(r, 'code', None), 'byte': len(corpo),
-                     'secondi': round(time.time() - t, 1)})
+                     'secondi': round(time.time() - t, 1), 'titolo_pagina': re.sub(r'\s+', ' ', _t.group(1))[:80] if _t else ''})
         if len(rete) <= 15:
             open(os.path.join(PAG, '%02d.html' % len(rete)), 'w', encoding='utf-8').write(corpo[:150000])
             rete[-1]['file'] = 'pagine/%02d.html' % len(rete)
@@ -257,6 +258,7 @@ _AZ_MENU = ('peliculas', 'list', 'genres', 'menu', 'submenu', 'newest', 'search_
 
 def _prova_sezione(voce, livello=0):
     nome_v = _pulisci(voce.title)
+    _n0 = len(rete)
     f = getattr(ch, voce.action, None)
     if not f:
         return {'voce': nome_v, 'azione': voce.action, 'esito': 'AZIONE NON TROVATA'}
@@ -264,7 +266,8 @@ def _prova_sezione(voce, livello=0):
         r = f(voce, 'avatar') if voce.action == 'search' else f(voce)
     except BaseException as ex:
         rp('   SEZIONE', nome_v, '-> ERRORE', type(ex).__name__)
-        return {'voce': nome_v, 'azione': voce.action, 'esito': 'ERRORE %s' % type(ex).__name__}
+        return {'voce': nome_v, 'azione': voce.action, 'esito': 'ERRORE %s' % type(ex).__name__,
+                'pagine': [{k: z.get(k) for k in ('url', 'status', 'byte', 'titolo_pagina')} for z in rete[_n0:][:3]]}
     r = [x for x in (r or []) if not _pulisci(x.title).endswith('>') and x.action not in ('addToLibrary', 'add_pelicula_to_library', 'add_serie_to_library', 'channel_config', 'search')]
     titoli = [x for x in r if x.action in _AZ_TITOLI]
     figli = [x for x in r if x.action in _AZ_MENU]
@@ -280,7 +283,9 @@ def _prova_sezione(voce, livello=0):
             out['esito'] = 'SOTTOMENU SENZA TITOLI'
     else:
         out['esito'] = 'VUOTA'
-    rp('   SEZIONE', nome_v, '->', out['esito'], out.get('titoli', ''))
+    if out['esito'] in ('VUOTA', 'SOTTOMENU SENZA TITOLI') or out['esito'].startswith('ERRORE'):
+        out['pagine'] = [{k: z.get(k) for k in ('url', 'status', 'byte', 'titolo_pagina')} for z in rete[_n0:][:3]]
+    rp('   SEZIONE', nome_v, '->', out['esito'], out.get('titoli', ''), (' | ultima pagina: %s' % out['pagine'][-1]) if out.get('pagine') else '')
     return out
 
 
