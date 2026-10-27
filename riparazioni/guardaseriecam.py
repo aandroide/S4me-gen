@@ -20,16 +20,20 @@ headers = [['Referer', host]]
 
 @support.menu
 def mainlist(item):
+    # la voce "Per Lettera" non esiste piu sul sito (risponde 404): al suo posto popolari e generi
     tvshow = ['/serietv-streaming',
-              ('Per Lettera', ['/serietv-streaming/A', 'list', 'Serie-Tv per Lettera'])
+              ('Popolari', ['/serietv-popolari/', 'peliculas', '']),
+              ('Generi', ['/serietv-streaming', 'genres', 'genres'])
               ]
     return locals()
 
 
 @support.scrape
-def list(item):
-    patronMenu = r'<a title="(?P<title>[^"]+)" href="(?P<url>[^"]+)'
+def genres(item):
     action = 'peliculas'
+    blacklist = ['Netflix', 'In Arrivo']
+    patronBlock = r'>Genere</span>(?P<block>.*?)</ul>'
+    patronMenu = r'<a class="dropdown-item" href="(?P<url>[^"]+)"[^>]*>(?P<title>[^<]+)</a>'
     return locals()
 
 
