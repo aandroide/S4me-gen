@@ -196,6 +196,18 @@ if finale:
                     info['esito'] = 'NON VERIFICABILE DA GITHUB (il server del video blocca l\'IP: HTTP %s)' % rr.status_code
             except BaseException:
                 pass
+            if pl.server == 'vidxgo':
+                # l'API del lettore: /t/<id> risponde con un JSON che contiene l'indirizzo del flusso
+                try:
+                    import requests as _rq
+                    tid = pl.url.rstrip('/').split('/vidxgo.co/')[-1]
+                    for hd in ({'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:155.0) Gecko/20100101 Firefox/155.0', 'Referer': pl.url, 'Accept': 'application/json, text/plain, */*'},
+                               {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:155.0) Gecko/20100101 Firefox/155.0', 'Referer': host.rstrip('/') + '/', 'Origin': host.rstrip('/'), 'Accept': '*/*'}):
+                        rr = _rq.get('https://v.vidxgo.co/t/' + tid, headers=hd, timeout=30)
+                        info.setdefault('api_t', []).append({'referer': hd['Referer'], 'status': rr.status_code, 'inizio': rr.text[:300]})
+                        rp('   api /t/', tid, 'referer', hd['Referer'], '->', rr.status_code, rr.text[:120].replace('\n', ' '))
+                except BaseException as ex:
+                    rp('   api /t/ errore', str(ex)[:100])
         else:
             u = finali[-1][1] if isinstance(finali[-1], (list, tuple)) else finali[-1]
             ok, det = video_ok(u)
