@@ -10,14 +10,23 @@ Alla fine crea prove_locali/RISULTATI.txt: e quel file che mi mandi.
 """
 import io, json, os, shutil, subprocess, sys, urllib.request, zipfile
 
+# una variabile di Windows (SSLKEYLOGFILE) puntava a un file non scrivibile e rompeva ogni connessione https
+os.environ.pop('SSLKEYLOGFILE', None)
 QUI = os.path.dirname(os.path.abspath(__file__))
 KH = os.path.join(QUI, 'kh')
 USCITA = os.path.join(QUI, 'prove_locali')
 ZIP_S4ME = 'https://github.com/stream4me/addon/archive/refs/heads/master.zip'
 
 
-def pip(*pacchetti):
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q'] + list(pacchetti))
+def prepara_venv():
+    """Ambiente separato: i pacchetti di prova non toccano quelli gia installati sul computer."""
+    venv = os.path.join(KH, 'venv')
+    py = os.path.join(venv, 'Scripts' if os.name == 'nt' else 'bin', 'python.exe' if os.name == 'nt' else 'python')
+    if not os.path.exists(py):
+        print('Creo un ambiente separato per i pacchetti...')
+        subprocess.check_call([sys.executable, '-m', 'venv', venv])
+    subprocess.check_call([py, '-m', 'pip', 'install', '-q', 'requests', 'beautifulsoup4', 'lxml', 'cryptography', 'urllib3<2'])
+    return py
 
 
 def scarica_s4me():
@@ -46,7 +55,8 @@ def main():
         print('Scrivi i nomi dei canali, per esempio: python prova_locale.py eurostreaming tantifilm')
         return 1
     print('Controllo i pacchetti...')
-    pip('requests', 'beautifulsoup4', 'lxml', 'cryptography', 'urllib3<2')
+    os.makedirs(KH, exist_ok=True)
+    py = prepara_venv()
     scarica_s4me()
     if canali == ['tutti']:
         cart = os.path.join(KH, 'addon', 'channels')
@@ -66,7 +76,7 @@ def main():
 
     def prova(c):
         try:
-            subprocess.run([sys.executable, '-W', 'ignore', os.path.join(QUI, 'prova_video.py'), c, '--out', USCITA],
+            subprocess.run([py, '-W', 'ignore', os.path.join(QUI, 'prova_video.py'), c, '--out', USCITA],
                            env=env, cwd=QUI, timeout=600, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except subprocess.TimeoutExpired:
             return '%s: tempo scaduto' % c
