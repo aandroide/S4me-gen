@@ -5,17 +5,18 @@ Passi: mainlist, lista titoli, scheda, episodi, findvideos, risoluzione del serv
 Uso: python3 prova_video.py <canale> [--addon /tmp/kh/addon] [--out prove] [--host https://sito]
 """
 import argparse, importlib, json, os, re, sys, time, traceback
+KH = os.environ.get('KH', '/tmp/kh')
 
 ap = argparse.ArgumentParser()
 ap.add_argument('canale')
-ap.add_argument('--addon', default='/tmp/kh/addon')
+ap.add_argument('--addon', default=os.path.join(KH, 'addon'))
 ap.add_argument('--out', default='prove')
 ap.add_argument('--host', default='')
 ap.add_argument('--max-voci', type=int, default=3)
 ap.add_argument('--voce', default='', help='prova solo le voci di menu il cui titolo contiene questo testo')
 args = ap.parse_args()
 
-sys.path.insert(0, '/tmp/kh'); sys.path.insert(0, args.addon)
+sys.path.insert(0, KH); sys.path.insert(0, args.addon)
 import fake  # noqa: simula i moduli di Kodi
 from platformcode import config
 from core import httptools

@@ -1,4 +1,5 @@
-import sys, types
+import sys, types, os
+KH = os.environ.get('KH', '/tmp/kh')
 from unittest.mock import MagicMock
 class Fake(types.ModuleType):
     def __getattr__(self, n):
@@ -11,7 +12,7 @@ import xbmcaddon
 import re as _re
 DEF={}
 try:
-    _x=open('/tmp/kh/addon/resources/settings.xml',encoding='utf-8').read()
+    _x=open(os.path.join(KH,'addon','resources','settings.xml'),encoding='utf-8').read()
     for _m in _re.finditer(r'<setting[^>]*id="([^"]+)"[^>]*>(.*?)</setting>|<setting[^>]*id="([^"]+)"[^>]*/>',_x,_re.S):
         _id=_m.group(1) or _m.group(3); _b=_m.group(2) or ''
         _d=_re.search(r'<default>(.*?)</default>',_b)
@@ -20,7 +21,7 @@ except Exception as e: print('settings',e)
 DEF['chrome_ua_version']='124.0.0.0'
 class A:
     def __init__(s,*a,**k): pass
-    def getAddonInfo(s,k): return {'path':'/tmp/kh/addon','profile':'/tmp/kh/prof','id':'plugin.video.s4me','version':'1.7.8','name':'s4me'}.get(k.lower(),'') or '/tmp/kh/x'
+    def getAddonInfo(s,k): return {'path':os.path.join(KH,'addon'),'profile':os.path.join(KH,'prof'),'id':'plugin.video.s4me','version':'1.7.8','name':'s4me'}.get(k.lower(),'') or os.path.join(KH,'x')
     def getSetting(s,k): return DEF.get(k,'')
     def setSetting(s,*a): pass
     def getLocalizedString(s,i): return 'str%d'%i
@@ -33,7 +34,7 @@ xbmc.getCondVisibility = lambda k: False
 xbmc.executebuiltin = lambda *a,**k: None
 xbmc.LOGINFO=1;xbmc.LOGDEBUG=0;xbmc.LOGERROR=2;xbmc.LOGWARNING=3;xbmc.LOGNONE=4
 xbmc.log = lambda *a,**k: None
-import sys; sys.path.append('/tmp/kh/addon/lib')
+import sys; sys.path.append(os.path.join(KH,'addon','lib'))
 from platformcode import config as _cfg
 _orig = _cfg.get_setting
 _DFL = {'view_mode_channel': '50,50', 'view_mode_tvshow': '50,50', 'info_language': 0, 'tmdb_threads': 4, 'episode_info': False, 'videolibrary_tmdb': False, 'resolve_priority': 0, 'resolve_stop': False, 'resolver_dns': False, 'proxy_use': False}
