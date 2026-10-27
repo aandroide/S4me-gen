@@ -1,85 +1,46 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 4, ROTTO 4, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 22, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: ROTTO 8, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 22, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
-## CORRETTO (4)
-
-### cinetecadibologna
-Sito: http://cinestore.cinetecadibologna.it
-- ROTTO: peliculas /video/alfabetico_completo | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/cinetecadibologna/pagina_peliculas_video_alfabetico_completo.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 10 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
-- ROTTO: menu /video/epoche | patron non trova titoli
--   campione della pagina salvato in correzioni/cinetecadibologna/pagina_menu_video_epoche.html
--   regex proposta: 10 titoli su 10 card
--   non applicata al file: la funzione ha piu varianti di regex
-- OK: menu /video/registi | 20 risultati
-- OK: menu /video/attori | 19 risultati
-- file corretto scritto in correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli
-
-### guardaseriecam
-Sito: https://guardaseriex.best
-- ROTTO: peliculas /serietv-streaming | patron non trova titoli
--   campione della pagina salvato in correzioni/guardaseriecam/pagina_peliculas_serietv_streaming.html
--   regex proposta: 18 titoli su 18 card
-- file corretto scritto in correzioni/guardaseriecam: 1 pagine su 1 ora trovano titoli
-
-### guardaserieicu
-Sito: https://guardaseriex.cyou
-- indirizzo scritto nel canale: https://guardaseriex.cyou
-- il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://guardaseriex.cyou)
-- ROTTO: peliculas /serietv-streaming/page/1/ | patron non trova titoli
--   campione della pagina salvato in correzioni/guardaserieicu/pagina_peliculas_serietv_streaming_page_1.html
--   regex proposta: 18 titoli su 18 card | gruppi persi: audio, category, duration, plot, rating, thumbnail
--   gruppi non piu presenti nelle card e non essenziali per S4Me: audio, category, duration, plot, rating, thumbnail
-- file corretto scritto in correzioni/guardaserieicu: 1 pagine su 1 ora trovano titoli
-- riga per channels.json: "guardaserieicu": "https://guardaseriex.best",
-
-### tantifilm
-Sito: https://tanti-film.garden
-- ROTTO: peliculas /film | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
-- ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_serie_tv.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
-- file corretto scritto in correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
-
-## ROTTO (4)
+## ROTTO (8)
 
 ### cineblog001
 Sito: https://cineblog001.men
 - ROTTO: peliculas /film/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_film.html
 -   regex proposta: 70 titoli su 51 card
--   non applicata al file: regex dinamica
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_serie_tv.html
 -   regex proposta: 70 titoli su 51 card
--   non applicata al file: regex dinamica
 - ROTTO: peliculas /sub-ita/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_sub_ita.html
 -   regex proposta: 70 titoli su 51 card
--   non applicata al file: regex dinamica
+
+### cinetecadibologna
+Sito: http://cinestore.cinetecadibologna.it
+- ROTTO: peliculas /video/alfabetico_completo | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/cinetecadibologna/pagina_peliculas_video_alfabetico_completo.html
+-   regex proposta: 10 titoli su 10 card
+- ROTTO: menu /video/epoche | patron non trova titoli
+-   campione della pagina salvato in correzioni/cinetecadibologna/pagina_menu_video_epoche.html
+-   regex proposta: 10 titoli su 10 card
+- OK: menu /video/registi | 20 risultati
+- OK: menu /video/attori | 19 risultati
 
 ### dreamsub
 Sito: https://www.animeworld.ac
 - ROTTO: peliculas /search?typeY=tv | patronBlock non trova nessun blocco
 -   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_tv.html
 -   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
--   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=movie | patronBlock non trova nessun blocco
 -   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_movie.html
 -   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
--   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=oav | patronBlock non trova nessun blocco
 -   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_oav.html
 -   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
--   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=spinoff | patronBlock non trova nessun blocco
 -   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_spinoff.html
 -   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
--   non applicata al file: la funzione ha piu varianti di regex
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo
@@ -88,11 +49,25 @@ Sito: https://eurostreaming.ooo
 - ROTTO: peliculas /animazione/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_animazione.html
 -   regex proposta: 1040 titoli su 343 card | gruppi persi: episode, title2
--   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_aggiornamento_episodi.html
 -   nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi/
 - riga per channels.json: "eurostreaming_actor": "https://guardaseriex.best",
+
+### guardaseriecam
+Sito: https://guardaseriex.best
+- ROTTO: peliculas /serietv-streaming | patron non trova titoli
+-   campione della pagina salvato in correzioni/guardaseriecam/pagina_peliculas_serietv_streaming.html
+-   regex proposta: 18 titoli su 18 card
+
+### guardaserieicu
+Sito: https://guardaseriex.cyou
+- indirizzo scritto nel canale: https://guardaseriex.cyou
+- il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://guardaseriex.cyou)
+- ROTTO: peliculas /serietv-streaming/page/1/ | patron non trova titoli
+-   campione della pagina salvato in correzioni/guardaserieicu/pagina_peliculas_serietv_streaming_page_1.html
+-   regex proposta: 18 titoli su 18 card | gruppi persi: audio, category, duration, plot, rating, thumbnail
+- riga per channels.json: "guardaserieicu": "https://guardaseriex.best",
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.ink
@@ -100,7 +75,15 @@ Sito: https://il-geniodellostreaming.ink
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
--   non applicata al file: la funzione ha piu varianti di regex
+
+### tantifilm
+Sito: https://tanti-film.garden
+- ROTTO: peliculas /film | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html
+-   nessuna regex sostitutiva trovata automaticamente in /film
+- ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_serie_tv.html
+-   nessuna regex sostitutiva trovata automaticamente in /serie-tv/
 
 ## DOMINIO PARCHEGGIATO (3)
 
@@ -114,7 +97,7 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27403 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27355 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
@@ -255,14 +238,14 @@ Sito: https://www.discoveryplus.com
 Sito: https://eurostream.fun
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.fun/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 91 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 92 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
 
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10133 risultati
+- OK: peliculas /index | 10143 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
