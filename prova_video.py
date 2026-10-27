@@ -210,7 +210,7 @@ if finale:
                         except BaseException:
                             flusso = ''
                         if flusso and 'VIDEO OK' not in info.get('esito', ''):
-                            ok, det = video_ok(flusso + '|Referer=https://v.vidxgo.co/&Origin=https://v.vidxgo.co')
+                            ok, det = video_ok(flusso + '|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://v.vidxgo.co/&Origin=https://v.vidxgo.co&Sec-Fetch-Dest=empty&Sec-Fetch-Mode=cors&Sec-Fetch-Site=cross-site')
                             info['finale'] = flusso[:200]
                             info['dettaglio'] = det
                             info['esito'] = 'VIDEO OK' if ok else 'VIDEO NON RAGGIUNGIBILE'
