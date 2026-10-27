@@ -27,7 +27,19 @@
    "pagina_server": {
     "status": 403,
     "inizio": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>403</title><link rel=\"icon\" type=\"image/png\" href=\"/fav.png\"><link rel=\"apple-touch-icon\" href=\"/fav.png\"><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><l"
-   }
+   },
+   "api_t": [
+    {
+     "referer": "https://v.vidxgo.co/36841161",
+     "status": 404,
+     "inizio": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>404</title><link rel=\"icon\" type=\"image/png\" href=\"/fav.png\"><link rel=\"apple-touch-icon\" href=\"/fav.png\"><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><l"
+    },
+    {
+     "referer": "https://il-geniodellostreaming.ink/",
+     "status": 404,
+     "inizio": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>404</title><link rel=\"icon\" type=\"image/png\" href=\"/fav.png\"><link rel=\"apple-touch-icon\" href=\"/fav.png\"><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><l"
+    }
+   ]
   }
  ],
  "rete": [
@@ -35,14 +47,14 @@
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
    "byte": 38042,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "file": "pagine/01.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/film/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html",
    "status": 200,
    "byte": 30861,
-   "secondi": 0.5,
+   "secondi": 0.2,
    "file": "pagine/02.html"
   },
   {
