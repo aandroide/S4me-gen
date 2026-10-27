@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 19 voci
+   -> 21 voci
+      findvideos | Buongiorno papà | https://mediasetinfinity.mediaset.it/movie/buongiornopapa/buongiorno-papa_F304256401000101
       findvideos | Inga Lindstrom - Il matrimonio dimenticato | https://mediasetinfinity.mediaset.it/movie/ingalindstromilmatrimoniodimenticato/inga-lindstrom-il-ma
+      findvideos | Michael Clayton | https://mediasetinfinity.mediaset.it/movie/michaelclayton/michael-clayton_F012167701000102
       findvideos | Wedding every weekend | https://mediasetinfinity.mediaset.it/movie/weddingeveryweekend/wedding-every-weekend_F31136270100010
-      findvideos | Quella casa nel bosco | https://mediasetinfinity.mediaset.it/movie/quellacasanelbosco/quella-casa-nel-bosco_F303296801000102
-      findvideos | The Lodgers - Non infrangere le regole | https://mediasetinfinity.mediaset.it/movie/thelodgersnoninfrangereleregole/the-lodgers-non-infranger
-== findvideos su "Inga Lindstrom - Il matrimonio dimentica"
+== findvideos su "Buongiorno papà"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
     r = f()

@@ -10,7 +10,12 @@
   {
    "passo": "lista \"• Serie TV\"",
    "esito": "OK",
-   "voci": 1
+   "voci": 19
+  },
+  {
+   "passo": "episodios su \"Grande de España\"",
+   "esito": "VUOTO",
+   "voci": 0
   },
   {
    "passo": "lista \"•• Generi\"",
@@ -20,7 +25,12 @@
   {
    "passo": "peliculas su \"Popolari\"",
    "esito": "OK",
-   "voci": 1
+   "voci": 259
+  },
+  {
+   "passo": "episodios su \"House of the Dragon (Game of Thrones)\"",
+   "esito": "VUOTO",
+   "voci": 0
   }
  ],
  "video": [],
@@ -29,23 +39,23 @@
    "url": "https://guardaseriex.cyou/serietv-streaming/page/1/",
    "status": 200,
    "byte": 100711,
-   "secondi": 2.0,
+   "secondi": 1.7,
    "file": "pagine/01.html"
   },
   {
    "url": "https://guardaseriex.cyou/serietv-streaming/page/1/",
    "status": 200,
    "byte": 100711,
-   "secondi": 1.3,
+   "secondi": 1.2,
    "file": "pagine/02.html"
   },
   {
    "url": "https://guardaseriex.best/serietv-popolari/",
    "status": 200,
    "byte": 405702,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "file": "pagine/03.html"
   }
  ],
- "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
+ "verdetto": "SI FERMA A: episodios su \"Grande de España\""
 }

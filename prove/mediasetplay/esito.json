@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 19
+   "voci": 21
   },
   {
-   "passo": "findvideos su \"Inga Lindstrom - Il matrimonio dimentica\"",
+   "passo": "findvideos su \"Buongiorno papà\"",
    "esito": "ERRORE",
    "errore": "/S4me-gen/prova_video.py\", line 146, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },

@@ -1,8 +1,8 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 8, SI FERMA AL SERVER O AL VIDEO 2, SI FERMA PRIMA DEL VIDEO 44, SENZA ESITO 3
+Riepilogo: ARRIVA AL VIDEO 9, SI FERMA AL SERVER O AL VIDEO 1, SI FERMA PRIMA DEL VIDEO 44, SENZA ESITO 3
 
-## ARRIVA AL VIDEO (8)
+## ARRIVA AL VIDEO (9)
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.autos | verdetto: ARRIVA AL VIDEO
@@ -32,21 +32,21 @@ Sito:  | verdetto: ARRIVA AL VIDEO
 Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
 
+### streamingcommunity
+Sito: https://streamingcommunityz.day | verdetto: ARRIVA AL VIDEO
+- server streamingcommunityws: VIDEO OK m3u8 200
+
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
 - passo "findvideos su "1x01 - Maomao"": VUOTO 
 - server voe: VIDEO OK m3u8 200
 
-## SI FERMA AL SERVER O AL VIDEO (2)
+## SI FERMA AL SERVER O AL VIDEO (1)
 
 ### cineblog01
 Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
 - server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
 - server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
-
-### streamingcommunity
-Sito: https://streamingcommunityz.day | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE
-- server streamingcommunityws: SERVER NON RISOLVE 
 
 ## SI FERMA PRIMA DEL VIDEO (44)
 
@@ -56,8 +56,7 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista "Most Popular "
-- passo "lista "Most Popular "": VUOTO 
+Sito:  | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -163,8 +162,8 @@ Sito: https://film-streaming-ita.cam | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "•• Ultimi Inseriti"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### guardaseriecam
-Sito: https://guardaseriex.best | verdetto: SI FERMA A: lista "• Serie TV"
-- passo "lista "• Serie TV"": VUOTO 
+Sito: https://guardaseriex.best | verdetto: SI FERMA A: episodios su "Grande de España"
+- passo "episodios su "Grande de España"": VUOTO 
 
 ### guardaserieclick
 Sito:  | verdetto: SI FERMA A: lista "• Serie TV"
@@ -173,7 +172,9 @@ Sito:  | verdetto: SI FERMA A: lista "• Serie TV"
 - passo "lista "•• Generi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### guardaserieicu
-Sito:  | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
+Sito:  | verdetto: SI FERMA A: episodios su "Grande de España"
+- passo "episodios su "Grande de España"": VUOTO 
+- passo "episodios su "House of the Dragon (Game of Thrones)"": VUOTO 
 
 ### hd4me
 Sito: https://hd4me.net | verdetto: SI FERMA A: lista "• Film"
@@ -215,7 +216,7 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Transformers - La vendetta del caduto"
 - passo "findvideos su "Transformers - La vendetta del caduto"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Inga Lindstrom - Il matrimonio dimentica"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Buongiorno papà"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "Spy Game"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
@@ -257,7 +258,9 @@ Sito:  | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Serie TV"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### tantifilm
-Sito: https://tanti-film.garden | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
+Sito: https://tanti-film.garden | verdetto: SI FERMA A: check su "Shaun, vita da pecora - Operazione Z.U.C"
+- passo "check su "Shaun, vita da pecora - Operazione Z.U.C"": VUOTO 
+- passo "check su "Shaun, vita da pecora - Operazione Z.U.C"": VUOTO 
 
 ### thepiratebay
 Sito:  | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre

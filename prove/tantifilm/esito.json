@@ -15,12 +15,22 @@
   {
    "passo": "peliculas su \"Prossimamente\"",
    "esito": "OK",
-   "voci": 1
+   "voci": 26
+  },
+  {
+   "passo": "check su \"Shaun, vita da pecora - Operazione Z.U.C\"",
+   "esito": "VUOTO",
+   "voci": 0
   },
   {
    "passo": "lista \"• Film\"",
    "esito": "OK",
-   "voci": 1
+   "voci": 34
+  },
+  {
+   "passo": "check su \"Shaun, vita da pecora - Operazione Z.U.C\"",
+   "esito": "VUOTO",
+   "voci": 0
   },
   {
    "passo": "lista \"• Serie TV\"",
@@ -34,30 +44,58 @@
    "url": "https://tanti-film.garden",
    "status": 200,
    "byte": 16470,
-   "secondi": 0.5,
+   "secondi": 0.8,
    "file": "pagine/01.html"
   },
   {
    "url": "https://tanti-film.garden/prossimamente/",
    "status": 200,
    "byte": 71490,
-   "secondi": 0.3,
+   "secondi": 0.7,
    "file": "pagine/02.html"
+  },
+  {
+   "url": "https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming-hd.html",
+   "status": 200,
+   "byte": 29413,
+   "secondi": 0.2,
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming-hd.html",
+   "status": 200,
+   "byte": 29413,
+   "secondi": 0.5,
+   "file": "pagine/04.html"
   },
   {
    "url": "https://tanti-film.garden/film",
    "status": 200,
-   "byte": 89792,
-   "secondi": 0.4,
-   "file": "pagine/03.html"
+   "byte": 90222,
+   "secondi": 0.7,
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming-hd.html",
+   "status": 200,
+   "byte": 29413,
+   "secondi": 0.3,
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming-hd.html",
+   "status": 200,
+   "byte": 29413,
+   "secondi": 0.5,
+   "file": "pagine/07.html"
   },
   {
    "url": "https://tanti-film.garden/serie-tv/",
    "status": 200,
    "byte": 72428,
-   "secondi": 0.5,
-   "file": "pagine/04.html"
+   "secondi": 0.7,
+   "file": "pagine/08.html"
   }
  ],
- "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
+ "verdetto": "SI FERMA A: check su \"Shaun, vita da pecora - Operazione Z.U.C\""
 }
