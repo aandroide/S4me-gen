@@ -1,0 +1,54 @@
+name: Prova canale fino al video
+
+on:
+  workflow_dispatch:
+    inputs:
+      canali:
+        description: "Canali da provare, separati da spazio"
+        required: true
+        default: ilgeniodellostreaming_cam
+      usa_correzione:
+        description: "Usa il file corretto in correzioni/ se esiste"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dipendenze
+        run: pip install requests beautifulsoup4 lxml cryptography
+      - name: Scarica S4Me (sola lettura)
+        run: |
+          git clone -q --depth 1 https://github.com/stream4me/addon /tmp/kh/addon
+          cp test/kodi_finto/fake.py /tmp/kh/fake.py
+          mkdir -p /tmp/kh/prof
+      - name: Prova
+        run: |
+          mkdir -p prove
+          for c in ${{ github.event.inputs.canali }}; do
+            f=/tmp/kh/addon/channels/$c.py
+            if [ "${{ github.event.inputs.usa_correzione }}" = "true" ] && [ -f correzioni/$c/$c.py ]; then cp correzioni/$c/$c.py $f; fi
+            if [ -f canali/$c/$c.py ] && [ ! -f $f ]; then cp canali/$c/$c.py $f; cp canali/$c/$c.json /tmp/kh/addon/channels/; fi
+            PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 600 python3 -W ignore prova_video.py $c --out prove || echo "errore nello script per $c"
+          done
+      - name: Salva
+        run: |
+          git config user.name aandroide
+          git config user.email aandroide@users.noreply.github.com
+          for i in 1 2 3; do
+            git fetch -q origin ${{ github.ref_name }}
+            git reset -q origin/${{ github.ref_name }}
+            git add prove
+            git commit -q -m "Prova dei canali fino al video" || break
+            git push -q origin HEAD:${{ github.ref_name }} && break
+            sleep 5
+          done
