@@ -48,9 +48,12 @@ def main():
     print('Controllo i pacchetti...')
     pip('requests', 'beautifulsoup4', 'lxml', 'cryptography', 'urllib3<2')
     scarica_s4me()
+    if canali == ['tutti']:
+        cart = os.path.join(KH, 'addon', 'channels')
+        canali = sorted(f[:-5] for f in os.listdir(cart) if f.endswith('.json') and os.path.exists(os.path.join(cart, f[:-5] + '.py')))
+        print('Provo tutti i %d canali' % len(canali))
     os.makedirs(USCITA, exist_ok=True)
     env = dict(os.environ, KH=KH, PYTHONPATH=os.pathsep.join([KH, os.path.join(KH, 'addon')]), PYTHONIOENCODING='utf-8')
-    righe = []
     for c in canali:
         dest = os.path.join(KH, 'addon', 'channels', c + '.py')
         rip = os.path.join(QUI, 'riparazioni', c + '.py')
@@ -60,23 +63,30 @@ def main():
             if os.path.exists(j):
                 shutil.copy(j, os.path.join(KH, 'addon', 'channels', c + '.json'))
             print('%s: uso la correzione di riparazioni/' % c)
-        print('Provo %s ...' % c)
+
+    def prova(c):
         try:
             subprocess.run([sys.executable, '-W', 'ignore', os.path.join(QUI, 'prova_video.py'), c, '--out', USCITA],
-                           env=env, cwd=QUI, timeout=600)
+                           env=env, cwd=QUI, timeout=600, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except subprocess.TimeoutExpired:
-            print('%s: tempo scaduto' % c)
+            return '%s: tempo scaduto' % c
         log = os.path.join(USCITA, c, 'log.txt')
         verdetto = 'nessun risultato'
         if os.path.exists(log):
             ultime = [r for r in open(log, encoding='utf-8', errors='replace').read().splitlines() if 'VERDETTO' in r]
             if ultime:
                 verdetto = ultime[-1]
-        righe.append('%s: %s' % (c, verdetto))
-        print(righe[-1])
+        r = '%s: %s' % (c, verdetto)
+        print(r, flush=True)
+        return r
+
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        righe = list(ex.map(prova, canali))
     with open(os.path.join(USCITA, 'RISULTATI.txt'), 'w', encoding='utf-8') as f:
         f.write('\n'.join(righe) + '\n')
-    print('\nFatto. Mandami il file prove_locali/RISULTATI.txt e, se vuoi, la cartella prove_locali compressa.')
+    shutil.make_archive(os.path.join(QUI, 'prove_locali'), 'zip', USCITA)
+    print('\nFatto. Mandami il file prove_locali.zip che trovi in %s' % QUI)
     return 0
 
 
