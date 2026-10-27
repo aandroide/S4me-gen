@@ -59,7 +59,7 @@ def peliculas(item):
     else:
         patronNext = r'<b class="nextpostslink">.*?<a href="([^"]+)">'
         if 'serie-tv' in item.url:
-            patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \((?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?class="se_num">(?P<quality>.*?)</span>'
+            patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \((?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate">\s*<p>\s*)(?P<quality>.*?)(?:</span>|\s*</p>)'
         else:
             patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \((?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate"> <p> )(?P<quality>.*?)(?:</span>| </p>)'
         patronBlock = r'<div id="main_col">(?P<block>.*?)<!-- main_col -->'

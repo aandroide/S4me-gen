@@ -17,7 +17,6 @@ def mainlist(item):
     menu = [('Tutti',['/catalog/all', 'peliculas', 'template-az', 'undefined']),
             ('Generi {submenu}',['', 'genres', 'genres', 'undefined']),
             ('Per Lettera {submenu}',['/catalog/all', 'genres', 'template-az', 'undefined']),
-            ('Anni {submenu}',['', 'genres', 'year', 'undefined']),
             ('Serie Tv',['/serie-tv/', 'peliculas', '', 'tvshow']),
     ]
 

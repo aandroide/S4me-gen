@@ -16,7 +16,7 @@ def mainlist(item):
             ('Anni',['/video/epoche', 'menu']),
             ('Registi',['/video/registi', 'menu']),
             ('Attori',['/video/attori', 'menu']),
-            ('Percorsi Tematici',['/video/percorsi','menu'])]
+            ('Percorsi Tematici',['/percorsi/','menu'])]
     return locals()
 
 
@@ -28,7 +28,7 @@ def menu(item):
     elif 'percorsi' in item.url:
         patron = r'<div class="cover_percorso">\s*<a href="(?P<url>[^"]+)">\s*<img src="(?P<thumb>[^"]+)"[^>]+>\s*[^>]+>(?P<title>.*?)<'
     else:
-        patron = r'<h2>\s*<a href="(?P<url>[^,"]+),[^"]+"\s*>(?P<title>[^<]+)<'
+        patron = r'<h2>\s*<a href="(?P<url>[^"]+)"\s*>(?P<title>[^<]+)<'
         patronNext = r'<div class="dx">\s*<a href="(.*?)">pagina suc'
     return locals()
 
