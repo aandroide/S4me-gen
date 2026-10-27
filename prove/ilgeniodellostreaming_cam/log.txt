@@ -15,7 +15,7 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.ink
    -> 1 voci
       play | Shaun, vita da pecora - Operazione Z.U.C.C.A. | https://v.vidxgo.co/36841161
 == risoluzione vidxgo https://v.vidxgo.co/36841161
-   api /t/ 36841161 referer https://v.vidxgo.co/36841161 -> 200 {"url":"https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=82ae4c3fc2214a63&e=1793125915819&b=2819","expire":17
-   api /t/ 36841161 referer https://il-geniodellostreaming.ink/ -> 200 {"url":"https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=e0d6bc9e4f349e31&e=1793125916255&b=2819","expire":17
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+   api /t/ 36841161 referer https://v.vidxgo.co/36841161 -> 200 {"url":"https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=c8281f7bcd5cf919&e=1793125978326&b=2819","expire":17
+   api /t/ 36841161 referer https://il-geniodellostreaming.ink/ -> 200 {"url":"https://cdn.v1.media-250.d2b.you/hls/36841161/master.m3u8?t=8853efc86490bc28&e=1793125979133&b=2819","expire":17
+   -> VIDEO NON RAGGIUNGIBILE HTTP 403 
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
