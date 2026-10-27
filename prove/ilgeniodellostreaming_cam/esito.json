@@ -10,90 +10,44 @@
   {
    "passo": "lista \"Serie Tv \"",
    "esito": "OK",
-   "voci": 1
+   "voci": 21
   },
   {
-   "passo": "peliculas su \"txt30992 %s >\"",
-   "esito": "OK",
-   "voci": 1
-  },
-  {
-   "passo": "peliculas su \"txt30992 %s >\"",
-   "esito": "OK",
-   "voci": 1
-  },
-  {
-   "passo": "peliculas su \"txt30992 %s >\"",
-   "esito": "OK",
-   "voci": 1
-  },
-  {
-   "passo": "peliculas su \"txt30992 %s >\"",
-   "esito": "OK",
-   "voci": 1
-  },
-  {
-   "passo": "peliculas su \"txt30992 %s >\"",
-   "esito": "OK",
-   "voci": 1
-  },
-  {
-   "passo": "peliculas su \"txt30992 %s >\"",
+   "passo": "check su \"Minimum Wage \"",
    "esito": "OK",
    "voci": 1
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/42220724",
+   "modulo_server": true,
+   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
+  }
+ ],
  "rete": [
   {
    "url": "https://il-geniodellostreaming.ink/serie-tv/",
    "status": 200,
    "byte": 86497,
-   "secondi": 0.3,
+   "secondi": 0.7,
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/serie-tv/page/2/",
+   "url": "https://il-geniodellostreaming.ink/film/35329-minimum-wage-streaming.html",
    "status": 200,
-   "byte": 85575,
-   "secondi": 0.2,
+   "byte": 30635,
+   "secondi": 0.5,
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/serie-tv/page/3/",
+   "url": "https://il-geniodellostreaming.ink/film/35329-minimum-wage-streaming.html",
    "status": 200,
-   "byte": 85698,
-   "secondi": 0.2,
+   "byte": 30635,
+   "secondi": 0.5,
    "file": "pagine/03.html"
-  },
-  {
-   "url": "https://il-geniodellostreaming.ink/serie-tv/page/4/",
-   "status": 200,
-   "byte": 86609,
-   "secondi": 0.3,
-   "file": "pagine/04.html"
-  },
-  {
-   "url": "https://il-geniodellostreaming.ink/serie-tv/page/5/",
-   "status": 200,
-   "byte": 86479,
-   "secondi": 0.2,
-   "file": "pagine/05.html"
-  },
-  {
-   "url": "https://il-geniodellostreaming.ink/serie-tv/page/6/",
-   "status": 200,
-   "byte": 85210,
-   "secondi": 0.2,
-   "file": "pagine/06.html"
-  },
-  {
-   "url": "https://il-geniodellostreaming.ink/serie-tv/page/7/",
-   "status": 200,
-   "byte": 84133,
-   "secondi": 0.6,
-   "file": "pagine/07.html"
   }
  ],
- "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
 }
