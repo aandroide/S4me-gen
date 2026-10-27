@@ -22,12 +22,9 @@
   {
    "server": "streamingcommunityws",
    "url": "https://streamingcommunityz.day/it/iframe/66299",
-   "modulo_server": true,
-   "esito": "SERVER NON RISOLVE",
-   "pagina_server": {
-    "status": 200,
-    "inizio": "<!DOCTYPE html>\n<html lang=\"it\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <style>\n            html, body {\n                overflow: hidden;\n                height: 100vh;\n                margin: 0;\n               "
-   }
+   "finale": "https://vixcloud.cc/playlist/793457?token=09e372cc00a6e246f0996f7d7a0345aa&expires=1798313970&asn=",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
   }
  ],
  "rete": [
@@ -35,9 +32,23 @@
    "url": "https://streamingcommunityz.day/it/movies",
    "status": 200,
    "byte": 300417,
-   "secondi": 0.7,
+   "secondi": 0.5,
    "file": "pagine/01.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/iframe/66299",
+   "status": 200,
+   "byte": 1774,
+   "secondi": 0.2,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://vixcloud.cc/embed/793457?token=5f838038aae688abdcb19226d0d007c1&t=QW5pbWFscw%3D%3D&referer=1&expires=1793129980&lang=it&scz=1",
+   "status": 200,
+   "byte": 6632,
+   "secondi": 0.2,
+   "file": "pagine/03.html"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE"
+ "verdetto": "ARRIVA AL VIDEO"
 }
