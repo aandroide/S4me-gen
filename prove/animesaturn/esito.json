@@ -1,0 +1,59 @@
+{
+ "canale": "animesaturn",
+ "host": "https://www.animesaturn.net",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 8
+  },
+  {
+   "passo": "lista \"Anime \"",
+   "esito": "OK",
+   "voci": 31
+  },
+  {
+   "passo": "check su \".hack//G.U. Returner\"",
+   "esito": "OK",
+   "voci": 1
+  },
+  {
+   "passo": "findvideos su \"1\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "directo",
+   "url": "https://play.saturncdn.net/embed/45138?token=f4902dfb39406a3dada7976aa4e881ae&expires=1793171484",
+   "finale": "https://play.saturncdn.net/embed/45138?token=f4902dfb39406a3dada7976aa4e881ae&expires=1793171484",
+   "esito": "VIDEO NON RAGGIUNGIBILE",
+   "dettaglio": "200 text/html; charset=utf-8 non sembra un video"
+  }
+ ],
+ "rete": [
+  {
+   "url": "https://www.animesaturn.net/az-list",
+   "status": 200,
+   "byte": 103023,
+   "secondi": 0.7,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/anime/hack-g-u-returner-8PrAP",
+   "status": 200,
+   "byte": 88295,
+   "secondi": 0.5,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/anime/hack-g-u-returner-8PrAP/ep-1",
+   "status": 200,
+   "byte": 71925,
+   "secondi": 0.5,
+   "file": "pagine/03.html"
+  }
+ ],
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
+}

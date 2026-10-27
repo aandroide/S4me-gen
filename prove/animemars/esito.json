@@ -1,0 +1,51 @@
+{
+ "canale": "animemars",
+ "host": "",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 6
+  },
+  {
+   "passo": "lista \"Archivio\"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  },
+  {
+   "passo": "lista \"In corso\"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  },
+  {
+   "passo": "lista \"Nuove aggiunte\"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  }
+ ],
+ "video": [],
+ "rete": [
+  {
+   "url": "/az-list",
+   "status": "Invalid URL '/az-list': No scheme supplied. Perhaps you meant http:///az-list?",
+   "byte": 0,
+   "secondi": 0.1,
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "/ongoing",
+   "status": "Invalid URL '/ongoing': No scheme supplied. Perhaps you meant http:///ongoing?",
+   "byte": 0,
+   "secondi": 0.0,
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "/newest",
+   "status": "Invalid URL '/newest': No scheme supplied. Perhaps you meant http:///newest?",
+   "byte": 0,
+   "secondi": 0.0,
+   "file": "pagine/03.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"Archivio\""
+}
