@@ -63,7 +63,7 @@ def main():
         canali = sorted(f[:-5] for f in os.listdir(cart) if f.endswith('.json') and os.path.exists(os.path.join(cart, f[:-5] + '.py')))
         print('Provo tutti i %d canali' % len(canali))
     os.makedirs(USCITA, exist_ok=True)
-    env = dict(os.environ, KH=KH, PYTHONPATH=os.pathsep.join([KH, os.path.join(KH, 'addon')]), PYTHONIOENCODING='utf-8')
+    env = dict(os.environ, KH=KH, PYTHONPATH=os.pathsep.join([KH, os.path.join(KH, 'addon')]), PYTHONIOENCODING='utf-8', RESOLVER_DNS='1')
     for c in canali:
         dest = os.path.join(KH, 'addon', 'channels', c + '.py')
         rip = os.path.join(QUI, 'riparazioni', c + '.py')
@@ -75,9 +75,11 @@ def main():
             print('%s: uso la correzione di riparazioni/' % c)
 
     def prova(c):
+        os.makedirs(os.path.join(USCITA, c), exist_ok=True)
+        env_c = dict(env, LOG_S4ME=os.path.join(USCITA, c, 's4me.log'))
         try:
             subprocess.run([py, '-W', 'ignore', os.path.join(QUI, 'prova_video.py'), c, '--out', USCITA],
-                           env=env, cwd=QUI, timeout=600, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                           env=env_c, cwd=QUI, timeout=600, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except subprocess.TimeoutExpired:
             return '%s: tempo scaduto' % c
         log = os.path.join(USCITA, c, 'log.txt')

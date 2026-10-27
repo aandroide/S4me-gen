@@ -33,11 +33,19 @@ xbmc.getInfoLabel = lambda k: '21.0.0 (21.0.0) Git:fake' if k == 'System.BuildVe
 xbmc.getCondVisibility = lambda k: False
 xbmc.executebuiltin = lambda *a,**k: None
 xbmc.LOGINFO=1;xbmc.LOGDEBUG=0;xbmc.LOGERROR=2;xbmc.LOGWARNING=3;xbmc.LOGNONE=4
-xbmc.log = lambda *a,**k: None
+def _scrivi_log(msg='', *a, **k):
+    p = os.environ.get('LOG_S4ME')
+    if p:
+        try:
+            with open(p, 'a', encoding='utf-8') as f:
+                f.write(str(msg) + '\n')
+        except Exception:
+            pass
+xbmc.log = _scrivi_log
 import sys; sys.path.append(os.path.join(KH,'addon','lib'))
 from platformcode import config as _cfg
 _orig = _cfg.get_setting
-_DFL = {'view_mode_channel': '50,50', 'view_mode_tvshow': '50,50', 'info_language': 0, 'tmdb_threads': 4, 'episode_info': False, 'videolibrary_tmdb': False, 'resolve_priority': 0, 'resolve_stop': False, 'resolver_dns': False, 'proxy_use': False}
+_DFL = {'view_mode_channel': '50,50', 'view_mode_tvshow': '50,50', 'info_language': 0, 'tmdb_threads': 4, 'episode_info': False, 'videolibrary_tmdb': False, 'resolve_priority': 0, 'resolve_stop': False, 'resolver_dns': os.environ.get('RESOLVER_DNS') == '1', 'proxy_use': False}
 def _gs(name, channel='', server='', default=None):
     try:
         v = _orig(name, channel, server, default)
