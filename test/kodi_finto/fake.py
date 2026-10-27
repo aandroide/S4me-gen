@@ -42,10 +42,24 @@ def _scrivi_log(msg='', *a, **k):
         except Exception:
             pass
 xbmc.log = _scrivi_log
+import time as _time
+class _Monitor:
+    def waitForAbort(self, t=0):
+        _time.sleep(min(float(t or 0), 1.0))
+        return False
+    def abortRequested(self):
+        return False
+class _Player:
+    def isPlaying(self):
+        return False
+    def isPlayingVideo(self):
+        return False
+xbmc.Monitor = _Monitor
+xbmc.Player = _Player
 import sys; sys.path.append(os.path.join(KH,'addon','lib'))
 from platformcode import config as _cfg
 _orig = _cfg.get_setting
-_DFL = {'view_mode_channel': '50,50', 'view_mode_tvshow': '50,50', 'info_language': 0, 'tmdb_threads': 4, 'episode_info': False, 'videolibrary_tmdb': False, 'resolve_priority': 0, 'resolve_stop': False, 'resolver_dns': os.environ.get('RESOLVER_DNS') == '1', 'proxy_use': False}
+_DFL = {'view_mode_channel': '50,50', 'view_mode_tvshow': '50,50', 'info_language': 0, 'tmdb_threads': 4, 'episode_info': False, 'videolibrary_tmdb': False, 'resolve_priority': 0, 'resolve_stop': False, 'resolver_dns': os.environ.get('RESOLVER_DNS') == '1', 'proxy_use': False, 'resolver_dns_provider': 'Cloudflare'}
 def _gs(name, channel='', server='', default=None):
     try:
         v = _orig(name, channel, server, default)
