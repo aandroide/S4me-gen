@@ -246,6 +246,63 @@ if finale:
         esito['video'].append(info)
 else:
     rp('Nessuna voce da riprodurre trovata')
+# ---- controllo di TUTTE le sezioni del menu (non solo la prima): ognuna deve mostrare dei titoli ----
+def _pulisci(t):
+    return re.sub(r'\[[^\]]*\]', '', t or '').strip()
+
+
+_AZ_TITOLI = ('findvideos', 'episodios', 'check', 'play', 'season', 'seasons', 'episode', 'get_video_url', 'live')
+_AZ_MENU = ('peliculas', 'list', 'genres', 'menu', 'submenu', 'newest', 'search_menu', 'categorias', 'category', 'az', 'lista')
+
+
+def _prova_sezione(voce, livello=0):
+    nome_v = _pulisci(voce.title)
+    f = getattr(ch, voce.action, None)
+    if not f:
+        return {'voce': nome_v, 'azione': voce.action, 'esito': 'AZIONE NON TROVATA'}
+    try:
+        r = f(voce)
+    except BaseException as ex:
+        rp('   SEZIONE', nome_v, '-> ERRORE', type(ex).__name__)
+        return {'voce': nome_v, 'azione': voce.action, 'esito': 'ERRORE %s' % type(ex).__name__}
+    r = [x for x in (r or []) if not _pulisci(x.title).endswith('>') and x.action not in ('addToLibrary', 'add_pelicula_to_library', 'add_serie_to_library', 'channel_config', 'search')]
+    titoli = [x for x in r if x.action in _AZ_TITOLI]
+    figli = [x for x in r if x.action in _AZ_MENU]
+    out = {'voce': nome_v, 'azione': voce.action}
+    if titoli:
+        out['esito'] = 'OK'
+        out['titoli'] = len(titoli)
+    elif figli and livello < 2:
+        out['esito'] = 'SOTTOMENU'
+        out['sottovoci'] = len(figli)
+        out['figli'] = [_prova_sezione(x, livello + 1) for x in figli[:3]]
+        if all(c['esito'] != 'OK' and c['esito'] != 'SOTTOMENU' for c in out['figli']):
+            out['esito'] = 'SOTTOMENU SENZA TITOLI'
+    else:
+        out['esito'] = 'VUOTA'
+    rp('   SEZIONE', nome_v, '->', out['esito'], out.get('titoli', ''))
+    return out
+
+
+sezioni = []
+try:
+    rp('== controllo di tutte le sezioni')
+    for vm in (menu or []):
+        if vm.action in ('search', 'channel_config', 'setting_channel', 'save_search') or not getattr(ch, vm.action, None):
+            continue
+        if not _pulisci(vm.title):
+            continue
+        sezioni.append(_prova_sezione(vm))
+except BaseException:
+    rp(traceback.format_exc(limit=3))
+esito['sezioni'] = sezioni
+if sezioni:
+    esito['sezioni_riepilogo'] = '%d ok su %d' % (sum(1 for z in sezioni if z['esito'] in ('OK', 'SOTTOMENU')), len(sezioni))
+    rp('SEZIONI:', esito['sezioni_riepilogo'])
+    for z in sezioni:
+        if z['esito'] not in ('OK', 'SOTTOMENU'):
+            rp('   SEZIONE SENZA TITOLI:', z['voce'], '|', z['esito'])
+
 esito['rete'] = rete[:60]
 if any(v['esito'] == 'VIDEO OK' for v in esito['video']):
     esito['verdetto'] = 'ARRIVA AL VIDEO'

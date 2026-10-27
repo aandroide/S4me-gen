@@ -79,7 +79,7 @@ def main():
         env_c = dict(env, LOG_S4ME=os.path.join(USCITA, c, 's4me.log'))
         try:
             subprocess.run([py, '-W', 'ignore', os.path.join(QUI, 'prova_video.py'), c, '--out', USCITA],
-                           env=env_c, cwd=QUI, timeout=600, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                           env=env_c, cwd=QUI, timeout=1500, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except subprocess.TimeoutExpired:
             return '%s: tempo scaduto' % c
         log = os.path.join(USCITA, c, 'log.txt')
@@ -88,7 +88,15 @@ def main():
             ultime = [r for r in open(log, encoding='utf-8', errors='replace').read().splitlines() if 'VERDETTO' in r]
             if ultime:
                 verdetto = ultime[-1]
-        r = '%s: %s' % (c, verdetto)
+        sez = ''
+        try:
+            import json as _j
+            e = _j.load(open(os.path.join(USCITA, c, 'esito.json'), encoding='utf-8'))
+            vuote = [z['voce'] for z in e.get('sezioni', []) if z['esito'] not in ('OK', 'SOTTOMENU')]
+            sez = ' | sezioni %s' % e.get('sezioni_riepilogo', '?') + (' | SENZA TITOLI: ' + ', '.join(vuote) if vuote else '')
+        except Exception:
+            pass
+        r = '%s: %s%s' % (c, verdetto, sez)
         print(r, flush=True)
         return r
 
