@@ -20,8 +20,9 @@
  ],
  "video": [
   {
-   "server": "youtube",
-   "url": "http://www.youtube.com/watch?v=coBQwR5_rLU",
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/36841161",
+   "modulo_server": true,
    "esito": "SERVER NON RISOLVE"
   }
  ],
@@ -30,7 +31,7 @@
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
    "byte": 37932,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "file": "pagine/01.html"
   },
   {
@@ -44,16 +45,9 @@
    "url": "https://il-geniodellostreaming.ink/film/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html",
    "status": 200,
    "byte": 30861,
-   "secondi": 0.2,
-   "file": "pagine/03.html"
-  },
-  {
-   "url": "https://il-geniodellostreaming.ink/film/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html",
-   "status": 200,
-   "byte": 30861,
    "secondi": 0.3,
-   "file": "pagine/04.html"
+   "file": "pagine/03.html"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO"
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE"
 }
