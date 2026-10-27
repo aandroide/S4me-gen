@@ -33,7 +33,7 @@ def peliculas(item):
         if item.args == 'template-az':
             patron = r'<img src="(?P<thumb>[^"]+)[^>]+>[^>]+>[^>]+>[^>]+><a href="(?P<url>[^"]+)[^>]+>(?P<title>[^<]+)<[^>]+>[^>]+>[^>]+>(?P<year>[0-9]{4}).*?<[^>]+>[^>]+>(?P<categories>.*?)</td>.*?<span class="labelimdb">(?P<rating>[^>]+)<'
         else:
-            patron = r'<img src="(?P<thumb>[^"]+)[^>]+>[^>]+>[^>]+>[^>]+>[^>]+>\s*(?P<rating>[^<]+)[^>]+>[^>]+>(?P<quality>[^<]+)[^>]+>[^>]+>[^>]+>[^>]+><a href="(?P<url>[^"]+)">(?P<title>[^<]+)[^>]+>[^>]+>[^>]+>(?P<year>\d{4})[^>]+>[^>]+>[^>]+>[^>]+>[^>]+>[^>]+>[^>]+>[^>]+>\s*(?P<plot>[^<]+)<[^>]+>'
+            patron = r'''<article[^>]*class="item (?:movies|tvshows)[^"]*"> <div class="poster"> <a href="(?P<url>[^"]+)"><img src="(?P<thumb>[^"]+)" alt="(?P<title>[^"]+)"></a> <div class="item-rating"><span[^>]*></span> (?P<rating>[^<]*)</div>(?: <span class="quality">(?P<quality>[^<]*)</span>)?.*?<span>(?P<year>\d{4})</span>.*?<div class="texto"> (?P<plot>[^<]*)'''
 
         patronNext = 'href="([^>]+)">»'
 

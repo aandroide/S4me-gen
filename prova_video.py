@@ -119,6 +119,9 @@ def scendi(voci, profondita=0):
         return voci
     it = None
     for x in voci:
+        if re.sub(r'\[[^\]]*\]', '', x.title or '').strip().endswith('>') and len(voci) == 1:
+            rp('   la lista non ha titoli: c e solo la pagina successiva')
+            return None
         if x.action in ('findvideos', 'episodios', 'check', 'peliculas', 'genres', 'menu', 'submenu', 'season', 'seasons', 'play'):
             it = x
             if x.action != 'peliculas' or profondita > 0:
