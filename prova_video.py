@@ -35,6 +35,15 @@ if not host:
                 host = sez[nome]
     except Exception:
         pass
+if not host:
+    # canale appena generato o scritto a mano: l'indirizzo sta nella riga per channels.json
+    for rf in (os.path.join(os.path.dirname(os.path.abspath(__file__)), 'canali', nome, 'riga_channels_json.txt'),):
+        try:
+            m = re.search(r'"%s"\s*:\s*"([^"]+)"' % re.escape(nome), open(rf, encoding='utf-8').read())
+            if m:
+                host = m.group(1)
+        except Exception:
+            pass
 config.get_channel_url = lambda *a, **k: host
 log = []
 passi = []
@@ -163,6 +172,15 @@ if finale:
     giocabili = [x for x in finale if x.action == 'play']
     giocabili = [x for x in giocabili if 'youtube' not in (x.url or '') and x.server != 'youtube'] or giocabili
     for pl in giocabili[:3]:
+        if hasattr(ch, 'play') and pl.action == 'play':
+            # alcuni canali risolvono l'indirizzo nel loro metodo play
+            try:
+                rr_ = ch.play(pl)
+                if rr_:
+                    pl = rr_[0] if isinstance(rr_, list) else rr_
+                    rp('   play del canale ->', pl.server, (pl.url or '')[:100])
+            except BaseException:
+                rp('   play del canale in errore:', traceback.format_exc(limit=2)[-200:])
         rp('== risoluzione', pl.server, (pl.url or '')[:100])
         info = {'server': pl.server, 'url': (pl.url or '')[:200]}
         try:
