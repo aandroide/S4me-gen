@@ -35,10 +35,17 @@ def list(item):
 
 @support.scrape
 def peliculas(item):
-    # debug = True
-    patron = r'<div class="mlnh-thumb"><a href="(?P<url>[^"]+)[^>]+title="(?P<title>[^"]+).*?<img src="(?P<thumb>[^"]+).*?hdn">[^<]*(?P<year>[0-9]{4})'
-    patronNext = 'pagenavi.*?<a href="([^"]+)">\d+'
+    # il sito ora usa il tema con i blocchi movieItem (titolo, anno, trama negli attributi data-)
+    patron = (r'<div class="movieItem"[^>]*?data-title="(?P<title>[^"]*)"[^>]*?data-year="(?P<year>\d+)"'
+              r'[^>]*?data-text="(?P<plot>[^"]*)"[^>]*>.*?<a href="(?P<url>[^"]+)"[^>]*>.*?<img\s+src="\s*(?P<thumb>[^"]+?)\s*"')
+    patronNext = r'<div id="nav-load"><a href="([^"]+)"'
     action = 'episodios'
+
+    def itemHook(i):
+        if i.thumbnail and i.thumbnail.startswith('/'):
+            i.thumbnail = host + i.thumbnail
+        return i
+
     return locals()
 
 

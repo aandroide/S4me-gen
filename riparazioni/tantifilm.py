@@ -62,7 +62,7 @@ def peliculas(item):
             patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \((?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?class="se_num">(?P<quality>.*?)</span>'
         else:
             patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \((?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate"> <p> )(?P<quality>.*?)(?:</span>| </p>)'
-        patronBlock = r'<div id="dle-content">(?P<block>.*?)<!-- main_col -->'
+        patronBlock = r'<div id="main_col">(?P<block>.*?)<!-- main_col -->'
 
     return locals()
 
