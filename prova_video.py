@@ -12,6 +12,7 @@ ap.add_argument('--addon', default='/tmp/kh/addon')
 ap.add_argument('--out', default='prove')
 ap.add_argument('--host', default='')
 ap.add_argument('--max-voci', type=int, default=3)
+ap.add_argument('--voce', default='', help='prova solo le voci di menu il cui titolo contiene questo testo')
 args = ap.parse_args()
 
 sys.path.insert(0, '/tmp/kh'); sys.path.insert(0, args.addon)
@@ -142,7 +143,10 @@ rp('Canale', nome, '| indirizzo', host)
 ch = importlib.import_module('channels.' + nome)
 esito = {'canale': nome, 'host': host, 'passi': passi, 'video': []}
 menu = passo('mainlist', lambda: ch.mainlist(Item(channel=nome, action='mainlist')))
-voci_menu = [i for i in (menu or []) if i.action in ('peliculas', 'genres', 'menu', 'submenu', 'newest')][:args.max_voci]
+voci_menu = [i for i in (menu or []) if i.action in ('peliculas', 'genres', 'menu', 'submenu', 'newest')][:50]
+if args.voce:
+    voci_menu = [v for v in voci_menu if args.voce.lower() in re.sub(r'\[[^\]]*\]', '', v.title or '').lower()]
+voci_menu = voci_menu[:args.max_voci]
 finale = None
 for vm in voci_menu:
     lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
@@ -181,6 +185,13 @@ if finale:
         if not finali:
             info['modulo_server'] = os.path.exists(os.path.join(args.addon, 'servers', '%s.py' % pl.server)) or pl.server == 'directo'
             info['esito'] = 'SERVER NON RISOLVE' if info['modulo_server'] else 'SERVER NON SUPPORTATO DA S4ME'
+            try:
+                import requests as _rq
+                rr = _rq.get(pl.url.partition('|')[0], timeout=30, headers={'User-Agent': 'Mozilla/5.0'})
+                if rr.status_code in (403, 429, 503) or 'you have been blocked' in rr.text or 'Just a moment' in rr.text:
+                    info['esito'] = 'NON VERIFICABILE DA GITHUB (il server del video blocca l\'IP: HTTP %s)' % rr.status_code
+            except BaseException:
+                pass
         else:
             u = finali[-1][1] if isinstance(finali[-1], (list, tuple)) else finali[-1]
             ok, det = video_ok(u)

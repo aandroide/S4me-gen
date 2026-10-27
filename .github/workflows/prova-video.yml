@@ -7,6 +7,10 @@ on:
         description: "Canali da provare, separati da spazio"
         required: true
         default: ilgeniodellostreaming_cam
+      voce:
+        description: "Facoltativo: prova solo le voci di menu che contengono questo testo (per esempio Serie)"
+        required: false
+        default: ''
       usa_correzione:
         description: "Usa il file corretto in correzioni/ se esiste"
         type: boolean
@@ -38,7 +42,7 @@ jobs:
             f=/tmp/kh/addon/channels/$c.py
             if [ "${{ github.event.inputs.usa_correzione }}" = "true" ] && [ -f correzioni/$c/$c.py ]; then cp correzioni/$c/$c.py $f; fi
             if [ -f canali/$c/$c.py ] && [ ! -f $f ]; then cp canali/$c/$c.py $f; cp canali/$c/$c.json /tmp/kh/addon/channels/; fi
-            PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 600 python3 -W ignore prova_video.py $c --out prove || echo "errore nello script per $c"
+            PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 600 python3 -W ignore prova_video.py $c --out prove ${{ github.event.inputs.voce != '' && format('--voce "{0}"', github.event.inputs.voce) || '' }} || echo "errore nello script per $c"
           done
       - name: Salva
         run: |
