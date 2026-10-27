@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 4, ROTTO 4, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 22, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 4, ROTTO 4, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 3, OK 23, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (4)
 
@@ -96,7 +96,7 @@ Sito: https://eurostreaming.ooo
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.ink
-- OK: peliculas /catalog/all | 15 risultati
+- OK: peliculas /catalog/all | 17 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
@@ -114,16 +114,16 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27583 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27287 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
 - peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5646 byte): non e un cambio di struttura
 - peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5651 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (12)
 
@@ -175,14 +175,7 @@ Sito: http://ww25.mondoserietv.club
 Sito: https://piratestreaming.design
 - il nome del sito non esiste piu (DNS) (https://piratestreaming.design)
 
-## NON VERIFICATO (4)
-
-### animeunity
-Sito: https://www.animeunity.to
-- home https://www.animeunity.to: FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl
-- non controllabile senza parametri: https://www.animeunity.to/archivio (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
-- non controllabile senza parametri: https://www.animeunity.to/archivio/get-animes (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
-- nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
+## NON VERIFICATO (3)
 
 ### aniplay
 Sito: https://aniplay.co
@@ -197,7 +190,7 @@ Sito: https://www.mtv.com
 ### streamingita
 Sito: https://streamingita.homes
 
-## OK (22)
+## OK (23)
 
 ### 1337x
 Sito: https://1337x.to
@@ -229,6 +222,11 @@ Sito: https://www.animesaturn.net
 - OK: peliculas /filter?languages=it | 30 risultati
 - OK: peliculas /filter?languages=jp | 30 risultati
 - OK: peliculas /filter?sort=best_rated | 30 risultati
+
+### animeunity
+Sito: https://www.animeunity.to
+- OK: https://www.animeunity.to/archivio | html (prima rilevazione, riferimento salvato)
+- OK: https://www.animeunity.to/archivio/get-animes | html (prima rilevazione, riferimento salvato)
 
 ### animeworld
 Sito: https://www.animeworld.ac
@@ -262,7 +260,7 @@ Sito: https://eurostream.fun
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 3449 risultati
+- OK: peliculas /index | 10122 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -300,7 +298,7 @@ Sito: https://pluto.tv
 
 ### raiplay
 Sito: https://www.raiplay.it
-- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
+- attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].currentItem.parental_control_level
 - OK: https://www.raiplay.it/dirette | html
 - OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
 - OK: https://www.raiplay.it/guidatv | html

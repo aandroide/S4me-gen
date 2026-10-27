@@ -93,12 +93,10 @@
  },
  {
   "canale": "animeunity",
-  "stato": "NON VERIFICATO",
+  "stato": "OK",
   "dettagli": [
-   "home https://www.animeunity.to: FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl",
-   "non controllabile senza parametri: https://www.animeunity.to/archivio (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)",
-   "non controllabile senza parametri: https://www.animeunity.to/archivio/get-animes (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)",
-   "nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici"
+   "OK: https://www.animeunity.to/archivio | html (prima rilevazione, riferimento salvato)",
+   "OK: https://www.animeunity.to/archivio/get-animes | html (prima rilevazione, riferimento salvato)"
   ],
   "correzione": false,
   "host": "https://www.animeunity.to"
@@ -270,9 +268,9 @@
   "stato": "BLOCCO ANTI BOT",
   "dettagli": [
    "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5634 byte): non e un cambio di struttura",
-   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5642 byte): non e un cambio di struttura",
+   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5646 byte): non e un cambio di struttura",
    "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5662 byte): non e un cambio di struttura",
-   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5651 byte): non e un cambio di struttura"
+   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5655 byte): non e un cambio di struttura"
   ],
   "correzione": false,
   "host": "https://cinemalibero.cafe"
@@ -677,7 +675,7 @@
   "stato": "OK",
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /index | 3449 risultati"
+   "OK: peliculas /index | 10122 risultati"
   ],
   "correzione": false,
   "host": "https://hd4me.net"
@@ -704,7 +702,7 @@
   "canale": "ilgeniodellostreaming_cam",
   "stato": "ROTTO",
   "dettagli": [
-   "OK: peliculas /catalog/all | 15 risultati",
+   "OK: peliculas /catalog/all | 17 risultati",
    "ROTTO: peliculas /serie-tv/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html",
    "  regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating",
@@ -868,7 +866,7 @@
   "canale": "raiplay",
   "stato": "OK",
   "dettagli": [
-   "OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata",
+   "attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].currentItem.parental_control_level",
    "OK: https://www.raiplay.it/dirette | html",
    "OK: https://www.raiplay.it/guidatv.json | json, struttura invariata",
    "OK: https://www.raiplay.it/guidatv | html",
@@ -886,7 +884,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27583 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27287 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
