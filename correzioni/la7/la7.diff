@@ -1,0 +1,11 @@
+--- canali_base/la7.py
++++ correzioni/la7/la7.py
+@@ -81,7 +81,7 @@
+ @support.scrape
+ def replay_menu(item):
+     action = 'replay'
+-    patron = r'href="(?P<url>[^"]+)">\s*<div class="giorno-text">\s*(?P<day>[^<]+)</div>\s*<div class="giorno-numero">\s*(?P<num>[^<]+)</div>\s*<div class="giorno-mese">\s*(?P<month>[^<]+)</div>'
++    patron = r'''<div.*?<img (?=[^>]*?alt="(?P<title>[^"]+)")[^>]*?src="(?P<thumb>[^"]+)".*?<p(?=[^>]*class="(?:[^"]*\s)?text\-fg\-default(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?font\-manrope(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?lg:line\-clamp\-5(?:\s[^"]*)?")[^>]*>\s*(?P<plot>[^<]+).*?<a [^>]*?href="(?P<url>[^"]+)"'''
+     def itemHook(item):
+         item.title = support.typo(item.day + ' ' + item.num + ' ' + item.month,'bold')
+         return item

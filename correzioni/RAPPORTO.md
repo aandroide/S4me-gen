@@ -1,64 +1,28 @@
 # Controllo dei canali
 
-Riepilogo: ROTTO 8, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 22, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 5, ROTTO 4, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, CLOUDFLARE 2, NON VERIFICATO 4, OK 19, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
-## ROTTO (8)
-
-### cineblog001
-Sito: https://cineblog001.men
-- ROTTO: peliculas /film/ | patron non trova titoli
--   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_film.html
--   regex proposta: 70 titoli su 51 card
-- ROTTO: peliculas /serie-tv/ | patron non trova titoli
--   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_serie_tv.html
--   regex proposta: 70 titoli su 51 card
-- ROTTO: peliculas /sub-ita/ | patron non trova titoli
--   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_sub_ita.html
--   regex proposta: 70 titoli su 51 card
+## CORRETTO (5)
 
 ### cinetecadibologna
 Sito: http://cinestore.cinetecadibologna.it
 - ROTTO: peliculas /video/alfabetico_completo | patronBlock non trova nessun blocco
 -   campione della pagina salvato in correzioni/cinetecadibologna/pagina_peliculas_video_alfabetico_completo.html
--   regex proposta: 10 titoli su 10 card
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 10 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - ROTTO: menu /video/epoche | patron non trova titoli
 -   campione della pagina salvato in correzioni/cinetecadibologna/pagina_menu_video_epoche.html
 -   regex proposta: 10 titoli su 10 card
+-   non applicata al file: la funzione ha piu varianti di regex
 - OK: menu /video/registi | 20 risultati
 - OK: menu /video/attori | 19 risultati
-
-### dreamsub
-Sito: https://www.animeworld.ac
-- ROTTO: peliculas /search?typeY=tv | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_tv.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
-- ROTTO: peliculas /search?typeY=movie | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_movie.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
-- ROTTO: peliculas /search?typeY=oav | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_oav.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
-- ROTTO: peliculas /search?typeY=spinoff | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_spinoff.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
-
-### eurostreaming_actor
-Sito: https://eurostreaming.ooo
-- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://eurostreaming.ooo)
-- ROTTO: peliculas /animazione/ | patron non trova titoli
--   campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_animazione.html
--   regex proposta: 1040 titoli su 343 card | gruppi persi: episode, title2
-- ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli
--   campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_aggiornamento_episodi.html
--   nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi/
-- riga per channels.json: "eurostreaming_actor": "https://guardaseriex.best",
+- file corretto scritto in correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli
 
 ### guardaseriecam
 Sito: https://guardaseriex.best
 - ROTTO: peliculas /serietv-streaming | patron non trova titoli
 -   campione della pagina salvato in correzioni/guardaseriecam/pagina_peliculas_serietv_streaming.html
 -   regex proposta: 18 titoli su 18 card
+- file corretto scritto in correzioni/guardaseriecam: 1 pagine su 1 ora trovano titoli
 
 ### guardaserieicu
 Sito: https://guardaseriex.cyou
@@ -67,7 +31,76 @@ Sito: https://guardaseriex.cyou
 - ROTTO: peliculas /serietv-streaming/page/1/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/guardaserieicu/pagina_peliculas_serietv_streaming_page_1.html
 -   regex proposta: 18 titoli su 18 card | gruppi persi: audio, category, duration, plot, rating, thumbnail
+-   gruppi non piu presenti nelle card e non essenziali per S4Me: audio, category, duration, plot, rating, thumbnail
+- file corretto scritto in correzioni/guardaserieicu: 1 pagine su 1 ora trovano titoli
 - riga per channels.json: "guardaserieicu": "https://guardaseriex.best",
+
+### la7
+Sito: https://www.la7.it
+- indirizzo scritto nel canale: https://www.la7.it
+- il sito reindirizza a un altro indirizzo: https://www.la7play.it (in channels.json c'e https://www.la7.it)
+- ROTTO: replay_menu /rivedila7/0/la7 | patron non trova titoli
+-   campione della pagina salvato in correzioni/la7/pagina_replay_menu_rivedila7_0_la7.html
+-   nessuna regex sostitutiva trovata automaticamente in /rivedila7/0/la7
+- ROTTO: replay_menu /rivedila7/0/la7cinema | patron non trova titoli
+-   campione della pagina salvato in correzioni/la7/pagina_replay_menu_rivedila7_0_la7cinema.html
+-   regex proposta: 5 titoli su 4 card | gruppi persi: day, month, num
+-   gruppi non piu presenti nelle card e non essenziali per S4Me: day, month, num
+- file corretto scritto in correzioni/la7: 1 pagine su 2 ora trovano titoli
+- riga per channels.json: "la7": "https://www.la7play.it",
+
+### tantifilm
+Sito: https://tanti-film.garden
+- ROTTO: peliculas /film | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+- ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_serie_tv.html
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+- file corretto scritto in correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
+
+## ROTTO (4)
+
+### accuradio
+Sito: https://www.accuradio.com
+- indirizzo scritto nel canale: https://www.accuradio.com
+- ROTTO: peliculas / | patron non trova titoli
+-   campione della pagina salvato in correzioni/accuradio/pagina_peliculas_home.html
+-   nessuna regex sostitutiva trovata automaticamente in /
+
+### cineblog001
+Sito: https://cineblog001.men
+- ROTTO: peliculas /film/ | patron non trova titoli
+-   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_film.html
+-   regex proposta: 70 titoli su 51 card
+-   non applicata al file: regex dinamica
+- ROTTO: peliculas /serie-tv/ | patron non trova titoli
+-   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_serie_tv.html
+-   regex proposta: 70 titoli su 51 card
+-   non applicata al file: regex dinamica
+- ROTTO: peliculas /sub-ita/ | patron non trova titoli
+-   campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_sub_ita.html
+-   regex proposta: 70 titoli su 51 card
+-   non applicata al file: regex dinamica
+
+### dreamsub
+Sito: https://www.animeworld.ac
+- ROTTO: peliculas /search?typeY=tv | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_tv.html
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
+-   non applicata al file: la funzione ha piu varianti di regex
+- ROTTO: peliculas /search?typeY=movie | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_movie.html
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
+-   non applicata al file: la funzione ha piu varianti di regex
+- ROTTO: peliculas /search?typeY=oav | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_oav.html
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
+-   non applicata al file: la funzione ha piu varianti di regex
+- ROTTO: peliculas /search?typeY=spinoff | patronBlock non trova nessun blocco
+-   campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_spinoff.html
+-   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
+-   non applicata al file: la funzione ha piu varianti di regex
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.ink
@@ -75,15 +108,7 @@ Sito: https://il-geniodellostreaming.ink
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
-
-### tantifilm
-Sito: https://tanti-film.garden
-- ROTTO: peliculas /film | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html
--   nessuna regex sostitutiva trovata automaticamente in /film
-- ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
--   campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_serie_tv.html
--   nessuna regex sostitutiva trovata automaticamente in /serie-tv/
+-   non applicata al file: la funzione ha piu varianti di regex
 
 ## DOMINIO PARCHEGGIATO (3)
 
@@ -97,16 +122,16 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27355 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27442 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5646 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5650 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5670 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5659 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (12)
 
@@ -158,6 +183,16 @@ Sito: http://ww25.mondoserietv.club
 Sito: https://piratestreaming.design
 - il nome del sito non esiste piu (DNS) (https://piratestreaming.design)
 
+## CLOUDFLARE (2)
+
+### eurostreaming_actor
+Sito: https://eurostreaming.ooo
+- FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://eurostreaming.ooo)
+
+### toonitalia
+Sito: https://toonitalia.xyz
+- FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://toonitalia.xyz)
+
 ## NON VERIFICATO (4)
 
 ### animeunity
@@ -180,7 +215,7 @@ Sito: https://www.mtv.com
 ### streamingita
 Sito: https://streamingita.homes
 
-## OK (22)
+## OK (19)
 
 ### 1337x
 Sito: https://1337x.to
@@ -188,11 +223,6 @@ Sito: https://1337x.to
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
 - OK: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | 14 risultati
 - OK: peliculas /movie-library/1/ | 25 risultati
-
-### accuradio
-Sito: https://www.accuradio.com
-- indirizzo scritto nel canale: https://www.accuradio.com
-- OK: peliculas / | 48 risultati
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.autos
@@ -236,27 +266,23 @@ Sito: https://www.discoveryplus.com
 
 ### eurostreaming
 Sito: https://eurostream.fun
+- il sito reindirizza a un altro indirizzo: https://eurostream.fit (in channels.json c'e https://eurostream.fun)
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
-- peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.fun/?p=23012, controllo quella
+- peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.fit/?p=23012, controllo quella
 - OK: peliculas /aggiornamento-episodi-nuovi/ | 92 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
+- riga per channels.json: "eurostreaming": "https://eurostream.fit",
 
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10143 risultati
+- OK: peliculas /index | 10183 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
 - OK: https://www.justwatch.com/ | html
 - non controllabile senza parametri: https://apis.justwatch.com/graphql (HTTP 400)
-
-### la7
-Sito: https://www.la7.it
-- indirizzo scritto nel canale: https://www.la7.it
-- OK: replay_menu /rivedila7/0/la7 | 7 risultati
-- OK: replay_menu /rivedila7/0/la7cinema | 7 risultati
 
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it
@@ -283,7 +309,7 @@ Sito: https://pluto.tv
 
 ### raiplay
 Sito: https://www.raiplay.it
-- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
+- attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.parental_control_level
 - OK: https://www.raiplay.it/dirette | html
 - OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
 - OK: https://www.raiplay.it/guidatv | html
@@ -309,15 +335,6 @@ Sito: https://streamingcommunityz.day
 ### thepiratebay
 Sito: https://apibay.org
 - OK: https://apibay.org/q.php?q=matrix | html
-
-### toonitalia
-Sito: https://toonitalia.xyz
-- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /category/anime | 400 risultati
-- OK: peliculas /anime-ita | 2768 risultati
-- attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
-- OK: peliculas /contatti | 822 risultati
-- attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 
 ### tunein
 Sito: http://api.radiotime.com

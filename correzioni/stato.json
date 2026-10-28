@@ -13,10 +13,12 @@
  },
  {
   "canale": "accuradio",
-  "stato": "OK",
+  "stato": "ROTTO",
   "dettagli": [
    "indirizzo scritto nel canale: https://www.accuradio.com",
-   "OK: peliculas / | 48 risultati"
+   "ROTTO: peliculas / | patron non trova titoli",
+   "  campione della pagina salvato in correzioni/accuradio/pagina_peliculas_home.html",
+   "  nessuna regex sostitutiva trovata automaticamente in /"
   ],
   "correzione": false,
   "host": "https://www.accuradio.com"
@@ -172,12 +174,15 @@
    "ROTTO: peliculas /film/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_film.html",
    "  regex proposta: 70 titoli su 51 card",
+   "  non applicata al file: regex dinamica",
    "ROTTO: peliculas /serie-tv/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_serie_tv.html",
    "  regex proposta: 70 titoli su 51 card",
+   "  non applicata al file: regex dinamica",
    "ROTTO: peliculas /sub-ita/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/cineblog001/pagina_peliculas_sub_ita.html",
-   "  regex proposta: 70 titoli su 51 card"
+   "  regex proposta: 70 titoli su 51 card",
+   "  non applicata al file: regex dinamica"
   ],
   "correzione": false,
   "host": "https://cineblog001.men",
@@ -188,19 +193,19 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
-      "title": "Crystal Lake",
-      "url": "https://cineblog001.men/cb01-streaming/35185-crystal-lake-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23148340.jpg"
-     },
-     {
-      "title": "Helluva Boss",
-      "url": "https://cineblog001.men/cb01-streaming/27904-helluva-boss-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg"
-     },
-     {
       "title": "VisionQuest",
       "url": "https://cineblog001.men/cb01-streaming/35174-visionquest-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23112594.jpg"
+     },
+     {
+      "title": "The Terminal List (2022)",
+      "url": "https://cineblog001.men/cb01-streaming/27037-the-terminal-list-2022-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-11/the-terminal-list-2022_1732014451.jpg"
+     },
+     {
+      "title": "Insidious - Fuori dall’Altrove",
+      "url": "https://cineblog001.men/cb01-streaming/33473-insidious-fuori-dall-altrove-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-08/tt32393988.jpg"
      }
     ],
     "perse": []
@@ -211,19 +216,19 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
-      "title": "Crystal Lake",
-      "url": "https://cineblog001.men/cb01-streaming/35185-crystal-lake-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23148340.jpg"
-     },
-     {
-      "title": "Helluva Boss",
-      "url": "https://cineblog001.men/cb01-streaming/27904-helluva-boss-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg"
-     },
-     {
       "title": "VisionQuest",
       "url": "https://cineblog001.men/cb01-streaming/35174-visionquest-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23112594.jpg"
+     },
+     {
+      "title": "The Terminal List (2022)",
+      "url": "https://cineblog001.men/cb01-streaming/27037-the-terminal-list-2022-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-11/the-terminal-list-2022_1732014451.jpg"
+     },
+     {
+      "title": "Insidious - Fuori dall’Altrove",
+      "url": "https://cineblog001.men/cb01-streaming/33473-insidious-fuori-dall-altrove-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-08/tt32393988.jpg"
      }
     ],
     "perse": []
@@ -234,19 +239,19 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
-      "title": "Crystal Lake",
-      "url": "https://cineblog001.men/cb01-streaming/35185-crystal-lake-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23148340.jpg"
-     },
-     {
-      "title": "Helluva Boss",
-      "url": "https://cineblog001.men/cb01-streaming/27904-helluva-boss-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg"
-     },
-     {
       "title": "VisionQuest",
       "url": "https://cineblog001.men/cb01-streaming/35174-visionquest-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt23112594.jpg"
+     },
+     {
+      "title": "The Terminal List (2022)",
+      "url": "https://cineblog001.men/cb01-streaming/27037-the-terminal-list-2022-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-11/the-terminal-list-2022_1732014451.jpg"
+     },
+     {
+      "title": "Insidious - Fuori dall’Altrove",
+      "url": "https://cineblog001.men/cb01-streaming/33473-insidious-fuori-dall-altrove-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-08/tt32393988.jpg"
      }
     ],
     "perse": []
@@ -266,56 +271,32 @@
   "canale": "cinemalibero",
   "stato": "BLOCCO ANTI BOT",
   "dettagli": [
-   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5634 byte): non e un cambio di struttura",
-   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5646 byte): non e un cambio di struttura",
-   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5662 byte): non e un cambio di struttura",
-   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5655 byte): non e un cambio di struttura"
+   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5642 byte): non e un cambio di struttura",
+   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5650 byte): non e un cambio di struttura",
+   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5670 byte): non e un cambio di struttura",
+   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5659 byte): non e un cambio di struttura"
   ],
   "correzione": false,
   "host": "https://cinemalibero.cafe"
  },
  {
   "canale": "cinetecadibologna",
-  "stato": "ROTTO",
+  "stato": "CORRETTO",
   "dettagli": [
    "ROTTO: peliculas /video/alfabetico_completo | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/cinetecadibologna/pagina_peliculas_video_alfabetico_completo.html",
-   "  regex proposta: 10 titoli su 10 card",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 10 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "ROTTO: menu /video/epoche | patron non trova titoli",
    "  campione della pagina salvato in correzioni/cinetecadibologna/pagina_menu_video_epoche.html",
    "  regex proposta: 10 titoli su 10 card",
+   "  non applicata al file: la funzione ha piu varianti di regex",
    "OK: menu /video/registi | 20 risultati",
-   "OK: menu /video/attori | 19 risultati"
+   "OK: menu /video/attori | 19 risultati",
+   "file corretto scritto in correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli"
   ],
-  "correzione": false,
+  "correzione": true,
   "host": "http://cinestore.cinetecadibologna.it",
   "proposte": [
-   {
-    "funzione": "peliculas",
-    "pagina": "/video/alfabetico_completo",
-    "patron": "<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")(?:(?!<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?museo(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
-    "esempi": [
-     {
-      "url": "/video/dettaglio/3561",
-      "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/3/8/3/3833.jpg",
-      "title": "Exercícios de cavalaria em Torres Novas",
-      "lang": null
-     },
-     {
-      "url": "/video/dettaglio/5515",
-      "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/6/1/5/6154.jpg",
-      "title": "[Aus Moskaus Leben im Jahre 1918]",
-      "lang": null
-     },
-     {
-      "url": "/video/dettaglio/10141",
-      "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/1/1/7/11715.jpg",
-      "title": "[Residence royale à Sant'Anna di...",
-      "lang": null
-     }
-    ],
-    "perse": []
-   },
    {
     "funzione": "menu",
     "pagina": "/video/epoche",
@@ -369,15 +350,19 @@
    "ROTTO: peliculas /search?typeY=tv | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_tv.html",
    "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
+   "  non applicata al file: la funzione ha piu varianti di regex",
    "ROTTO: peliculas /search?typeY=movie | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_movie.html",
    "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
+   "  non applicata al file: la funzione ha piu varianti di regex",
    "ROTTO: peliculas /search?typeY=oav | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_oav.html",
    "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
+   "  non applicata al file: la funzione ha piu varianti di regex",
    "ROTTO: peliculas /search?typeY=spinoff | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/dreamsub/pagina_peliculas_search_typeY_spinoff.html",
-   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year"
+   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
+   "  non applicata al file: la funzione ha piu varianti di regex"
   ],
   "correzione": false,
   "host": "https://www.animeworld.ac",
@@ -388,21 +373,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/dark-machine-the-animation.-LU-T/hKcWIt1tXP",
-      "thumb": "https://img.animeworld.ac/locandine/-LU-T.jpg",
-      "title": "Dark Machine The Animation",
+      "url": "/play/super-cube-ita.keAcA/d35WpE",
+      "thumb": "https://img.animeworld.ac/locandine/39S0Y.jpg",
+      "title": "Super Cube",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/blades-of-the-guardians-2.ERlqG/uIsp2xbylx",
+      "thumb": "https://img.animeworld.ac/locandine/ERlqG.jpg",
+      "title": "Blades of the Guardians 2",
       "lang": null
      },
      {
-      "url": "/play/anatolia-story.aLRxA/2fIUUytCzP",
-      "thumb": "https://img.animeworld.ac/locandine/aLRxA.jpg",
-      "title": "Red River",
-      "lang": null
-     },
-     {
-      "url": "/play/the-lonely-snow-widow-and-the-cursed-ring.AXDAP/2EC2hgjljv",
-      "thumb": "https://img.animeworld.ac/locandine/AXDAP.jpg",
-      "title": "The Lonely Snow Widow and the Cursed Ring",
+      "url": "/play/battle-spirits-re-zekkai-no-kuu.G1u8d/uDnbIzh75D",
+      "thumb": "https://img.animeworld.ac/locandine/G1u8d.png",
+      "title": "Battle Spirits [Re] Zekkai No Ku",
       "lang": null
      }
     ],
@@ -417,21 +402,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/dark-machine-the-animation.-LU-T/hKcWIt1tXP",
-      "thumb": "https://img.animeworld.ac/locandine/-LU-T.jpg",
-      "title": "Dark Machine The Animation",
+      "url": "/play/super-cube-ita.keAcA/d35WpE",
+      "thumb": "https://img.animeworld.ac/locandine/39S0Y.jpg",
+      "title": "Super Cube",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/blades-of-the-guardians-2.ERlqG/uIsp2xbylx",
+      "thumb": "https://img.animeworld.ac/locandine/ERlqG.jpg",
+      "title": "Blades of the Guardians 2",
       "lang": null
      },
      {
-      "url": "/play/anatolia-story.aLRxA/2fIUUytCzP",
-      "thumb": "https://img.animeworld.ac/locandine/aLRxA.jpg",
-      "title": "Red River",
-      "lang": null
-     },
-     {
-      "url": "/play/the-lonely-snow-widow-and-the-cursed-ring.AXDAP/2EC2hgjljv",
-      "thumb": "https://img.animeworld.ac/locandine/AXDAP.jpg",
-      "title": "The Lonely Snow Widow and the Cursed Ring",
+      "url": "/play/battle-spirits-re-zekkai-no-kuu.G1u8d/uDnbIzh75D",
+      "thumb": "https://img.animeworld.ac/locandine/G1u8d.png",
+      "title": "Battle Spirits [Re] Zekkai No Ku",
       "lang": null
      }
     ],
@@ -446,21 +431,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/dark-machine-the-animation.-LU-T/hKcWIt1tXP",
-      "thumb": "https://img.animeworld.ac/locandine/-LU-T.jpg",
-      "title": "Dark Machine The Animation",
+      "url": "/play/super-cube-ita.keAcA/d35WpE",
+      "thumb": "https://img.animeworld.ac/locandine/39S0Y.jpg",
+      "title": "Super Cube",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/blades-of-the-guardians-2.ERlqG/uIsp2xbylx",
+      "thumb": "https://img.animeworld.ac/locandine/ERlqG.jpg",
+      "title": "Blades of the Guardians 2",
       "lang": null
      },
      {
-      "url": "/play/anatolia-story.aLRxA/2fIUUytCzP",
-      "thumb": "https://img.animeworld.ac/locandine/aLRxA.jpg",
-      "title": "Red River",
-      "lang": null
-     },
-     {
-      "url": "/play/the-lonely-snow-widow-and-the-cursed-ring.AXDAP/2EC2hgjljv",
-      "thumb": "https://img.animeworld.ac/locandine/AXDAP.jpg",
-      "title": "The Lonely Snow Widow and the Cursed Ring",
+      "url": "/play/battle-spirits-re-zekkai-no-kuu.G1u8d/uDnbIzh75D",
+      "thumb": "https://img.animeworld.ac/locandine/G1u8d.png",
+      "title": "Battle Spirits [Re] Zekkai No Ku",
       "lang": null
      }
     ],
@@ -475,21 +460,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/dark-machine-the-animation.-LU-T/hKcWIt1tXP",
-      "thumb": "https://img.animeworld.ac/locandine/-LU-T.jpg",
-      "title": "Dark Machine The Animation",
+      "url": "/play/super-cube-ita.keAcA/d35WpE",
+      "thumb": "https://img.animeworld.ac/locandine/39S0Y.jpg",
+      "title": "Super Cube",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/blades-of-the-guardians-2.ERlqG/uIsp2xbylx",
+      "thumb": "https://img.animeworld.ac/locandine/ERlqG.jpg",
+      "title": "Blades of the Guardians 2",
       "lang": null
      },
      {
-      "url": "/play/anatolia-story.aLRxA/2fIUUytCzP",
-      "thumb": "https://img.animeworld.ac/locandine/aLRxA.jpg",
-      "title": "Red River",
-      "lang": null
-     },
-     {
-      "url": "/play/the-lonely-snow-widow-and-the-cursed-ring.AXDAP/2EC2hgjljv",
-      "thumb": "https://img.animeworld.ac/locandine/AXDAP.jpg",
-      "title": "The Lonely Snow Widow and the Cursed Ring",
+      "url": "/play/battle-spirits-re-zekkai-no-kuu.G1u8d/uDnbIzh75D",
+      "thumb": "https://img.animeworld.ac/locandine/G1u8d.png",
+      "title": "Battle Spirits [Re] Zekkai No Ku",
       "lang": null
      }
     ],
@@ -504,65 +489,25 @@
   "canale": "eurostreaming",
   "stato": "OK",
   "dettagli": [
+   "il sito reindirizza a un altro indirizzo: https://eurostream.fit (in channels.json c'e https://eurostream.fun)",
    "OK: peliculas /category/anime-cartoni-animati/ | 18 risultati",
-   "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.fun/?p=23012, controllo quella",
+   "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.fit/?p=23012, controllo quella",
    "OK: peliculas /aggiornamento-episodi-nuovi/ | 92 risultati",
    "attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
    "OK: peliculas /category/serie-tv-archive/ | 18 risultati"
   ],
   "correzione": false,
-  "host": "https://eurostream.fun"
+  "host": "https://eurostream.fun",
+  "nuovo_host": "https://eurostream.fit"
  },
  {
   "canale": "eurostreaming_actor",
-  "stato": "ROTTO",
+  "stato": "CLOUDFLARE",
   "dettagli": [
-   "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://eurostreaming.ooo)",
-   "ROTTO: peliculas /animazione/ | patron non trova titoli",
-   "  campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_animazione.html",
-   "  regex proposta: 1040 titoli su 343 card | gruppi persi: episode, title2",
-   "ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli",
-   "  campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_aggiornamento_episodi.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi/"
+   "FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://eurostreaming.ooo)"
   ],
   "correzione": false,
-  "host": "https://eurostreaming.ooo",
-  "nuovo_host": "https://guardaseriex.best",
-  "proposte": [
-   {
-    "funzione": "peliculas",
-    "pagina": "/animazione/",
-    "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
-    "esempi": [
-     {
-      "url": "https://guardaseriex.best/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html",
-      "thumb": "/uploads/immagini/tt2580046.webp",
-      "year": "2015",
-      "title": "Miraculous - Le storie di Ladybug e Chat Noir",
-      "lang": null
-     },
-     {
-      "url": "https://guardaseriex.best/animazione/5794-lego-one-piece-streaming.html",
-      "thumb": "/uploads/immagini/tt41538904.webp",
-      "year": "2026",
-      "title": "LEGO ONE PIECE",
-      "lang": null
-     },
-     {
-      "url": "https://guardaseriex.best/animazione/5811-get-jiro-streaming.html",
-      "thumb": "/uploads/immagini/tt33406999.webp",
-      "year": "2026",
-      "title": "GET JIRO",
-      "lang": null
-     }
-    ],
-    "perse": [
-     "episode",
-     "title2"
-    ]
-   }
-  ]
+  "host": "https://eurostreaming.ooo"
  },
  {
   "canale": "filmpertutti",
@@ -584,13 +529,14 @@
  },
  {
   "canale": "guardaseriecam",
-  "stato": "ROTTO",
+  "stato": "CORRETTO",
   "dettagli": [
    "ROTTO: peliculas /serietv-streaming | patron non trova titoli",
    "  campione della pagina salvato in correzioni/guardaseriecam/pagina_peliculas_serietv_streaming.html",
-   "  regex proposta: 18 titoli su 18 card"
+   "  regex proposta: 18 titoli su 18 card",
+   "file corretto scritto in correzioni/guardaseriecam: 1 pagine su 1 ora trovano titoli"
   ],
-  "correzione": false,
+  "correzione": true,
   "host": "https://guardaseriex.best",
   "proposte": [
    {
@@ -613,10 +559,10 @@
       "lang": null
      },
      {
-      "url": "https://guardaseriex.best/dramma/407-american-horror-story-1.html",
-      "thumb": "/uploads/immagini/tt1844624.webp",
-      "year": "2011",
-      "title": "American Horror Story",
+      "url": "https://guardaseriex.best/crime/2016-ultima-traccia-berlino.html",
+      "thumb": "/uploads/immagini/tt2359935.webp",
+      "year": "2012",
+      "title": "Ultima traccia Berlino",
       "lang": null
      }
     ],
@@ -635,15 +581,17 @@
  },
  {
   "canale": "guardaserieicu",
-  "stato": "ROTTO",
+  "stato": "CORRETTO",
   "dettagli": [
    "indirizzo scritto nel canale: https://guardaseriex.cyou",
    "il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://guardaseriex.cyou)",
    "ROTTO: peliculas /serietv-streaming/page/1/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/guardaserieicu/pagina_peliculas_serietv_streaming_page_1.html",
-   "  regex proposta: 18 titoli su 18 card | gruppi persi: audio, category, duration, plot, rating, thumbnail"
+   "  regex proposta: 18 titoli su 18 card | gruppi persi: audio, category, duration, plot, rating, thumbnail",
+   "  gruppi non piu presenti nelle card e non essenziali per S4Me: audio, category, duration, plot, rating, thumbnail",
+   "file corretto scritto in correzioni/guardaserieicu: 1 pagine su 1 ora trovano titoli"
   ],
-  "correzione": false,
+  "correzione": true,
   "host": "https://guardaseriex.cyou",
   "nuovo_host": "https://guardaseriex.best",
   "proposte": [
@@ -667,10 +615,10 @@
       "lang": null
      },
      {
-      "url": "https://guardaseriex.best/dramma/407-american-horror-story-1.html",
-      "thumb": "/uploads/immagini/tt1844624.webp",
-      "year": "2011",
-      "title": "American Horror Story",
+      "url": "https://guardaseriex.best/crime/2016-ultima-traccia-berlino.html",
+      "thumb": "/uploads/immagini/tt2359935.webp",
+      "year": "2012",
+      "title": "Ultima traccia Berlino",
       "lang": null
      }
     ],
@@ -690,7 +638,7 @@
   "stato": "OK",
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /index | 10143 risultati"
+   "OK: peliculas /index | 10183 risultati"
   ],
   "correzione": false,
   "host": "https://hd4me.net"
@@ -720,7 +668,8 @@
    "OK: peliculas /catalog/all | 18 risultati",
    "ROTTO: peliculas /serie-tv/ | patron non trova titoli",
    "  campione della pagina salvato in correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html",
-   "  regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating"
+   "  regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating",
+   "  non applicata al file: la funzione ha piu varianti di regex"
   ],
   "correzione": false,
   "host": "https://il-geniodellostreaming.ink",
@@ -730,6 +679,13 @@
     "pagina": "/serie-tv/",
     "patron": "<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<h3[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?",
     "esempi": [
+     {
+      "url": "https://il-geniodellostreaming.ink/film/35340-the-one-about-matthew-perry-streaming.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt44941753.jpg",
+      "title": "The One About Matthew Perry",
+      "lang": null,
+      "year": "2026"
+     },
      {
       "url": "https://il-geniodellostreaming.ink/film/35329-minimum-wage-streaming.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt42220724.jpg",
@@ -741,13 +697,6 @@
       "url": "https://il-geniodellostreaming.ink/film/35321-organize-isler-money-trap-streaming.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt38732131.jpg",
       "title": "Organize Isler: Money Trap",
-      "lang": null,
-      "year": "2026"
-     },
-     {
-      "url": "https://il-geniodellostreaming.ink/film/35290-yaga-una-caccia-alle-streghe-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt39980704.jpg",
-      "title": "YAGA",
       "lang": null,
       "year": "2026"
      }
@@ -791,14 +740,54 @@
  },
  {
   "canale": "la7",
-  "stato": "OK",
+  "stato": "CORRETTO",
   "dettagli": [
    "indirizzo scritto nel canale: https://www.la7.it",
-   "OK: replay_menu /rivedila7/0/la7 | 7 risultati",
-   "OK: replay_menu /rivedila7/0/la7cinema | 7 risultati"
+   "il sito reindirizza a un altro indirizzo: https://www.la7play.it (in channels.json c'e https://www.la7.it)",
+   "ROTTO: replay_menu /rivedila7/0/la7 | patron non trova titoli",
+   "  campione della pagina salvato in correzioni/la7/pagina_replay_menu_rivedila7_0_la7.html",
+   "  nessuna regex sostitutiva trovata automaticamente in /rivedila7/0/la7",
+   "ROTTO: replay_menu /rivedila7/0/la7cinema | patron non trova titoli",
+   "  campione della pagina salvato in correzioni/la7/pagina_replay_menu_rivedila7_0_la7cinema.html",
+   "  regex proposta: 5 titoli su 4 card | gruppi persi: day, month, num",
+   "  gruppi non piu presenti nelle card e non essenziali per S4Me: day, month, num",
+   "file corretto scritto in correzioni/la7: 1 pagine su 2 ora trovano titoli"
   ],
-  "correzione": false,
-  "host": "https://www.la7.it"
+  "correzione": true,
+  "host": "https://www.la7.it",
+  "nuovo_host": "https://www.la7play.it",
+  "proposte": [
+   {
+    "funzione": "replay_menu",
+    "pagina": "/rivedila7/0/la7cinema",
+    "patron": "<div.*?<img (?=[^>]*?alt=\"(?P<title>[^\"]+)\")[^>]*?src=\"(?P<thumb>[^\"]+)\".*?<p(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-fg\\-default(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?font\\-manrope(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?lg:line\\-clamp\\-5(?:\\s[^\"]*)?\")[^>]*>\\s*(?P<plot>[^<]+).*?<a [^>]*?href=\"(?P<url>[^\"]+)\"",
+    "esempi": [
+     {
+      "title": "La7 Play Logo",
+      "thumb": "/_next/static/media/La7Play_logo.1wfjue8qdd8e-.png",
+      "plot": "TG La7 Edizione Notte - Direttore Enrico Mentana.",
+      "url": "/tgla7/puntate/puntata-del-28-10-2026-398087"
+     },
+     {
+      "title": "Josephine Ange Gardien ST.8",
+      "thumb": "https://images.la7play.it/media/c/hf4294911/guidatv/LA7CINEMA/josephine-ange-gardien-st-8-programma-87e4f2d1.jpg/josephine-ange-gardien-st-8/640x360.webp",
+      "plot": "Josephine è un angelo custode che sulla terra risolve problemi di persone in difficoltà, rendendole felici.",
+      "url": "/josephineangegardien/puntate/josephine-ange-gardien-398093"
+     },
+     {
+      "title": "Josephine Ange Gardien ST.8",
+      "thumb": "https://images.la7play.it/media/c/hf4294911/guidatv/LA7CINEMA/josephine-ange-gardien-st-8-programma-87e4f2d1.jpg/josephine-ange-gardien-st-8/640x360.webp",
+      "plot": "Josephine è un angelo custode che sulla terra risolve problemi di persone in difficoltà, rendendole felici.",
+      "url": "/josephineangegardien/puntate/josephine-ange-gardien-398102"
+     }
+    ],
+    "perse": [
+     "day",
+     "month",
+     "num"
+    ]
+   }
+  ]
  },
  {
   "canale": "lordchannel",
@@ -880,7 +869,7 @@
   "canale": "raiplay",
   "stato": "OK",
   "dettagli": [
-   "OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata",
+   "attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.parental_control_level",
    "OK: https://www.raiplay.it/dirette | html",
    "OK: https://www.raiplay.it/guidatv.json | json, struttura invariata",
    "OK: https://www.raiplay.it/guidatv | html",
@@ -898,7 +887,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27355 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27442 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -938,16 +927,17 @@
  },
  {
   "canale": "tantifilm",
-  "stato": "ROTTO",
+  "stato": "CORRETTO",
   "dettagli": [
    "ROTTO: peliculas /film | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_film.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /film",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in correzioni/tantifilm/pagina_peliculas_serie_tv.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /serie-tv/"
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
+   "file corretto scritto in correzioni/tantifilm: 2 pagine su 2 ora trovano titoli"
   ],
-  "correzione": false,
+  "correzione": true,
   "host": "https://tanti-film.garden"
  },
  {
@@ -961,14 +951,9 @@
  },
  {
   "canale": "toonitalia",
-  "stato": "OK",
+  "stato": "CLOUDFLARE",
   "dettagli": [
-   "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /category/anime | 400 risultati",
-   "OK: peliculas /anime-ita | 2768 risultati",
-   "attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
-   "OK: peliculas /contatti | 822 risultati",
-   "attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)"
+   "FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://toonitalia.xyz)"
   ],
   "correzione": false,
   "host": "https://toonitalia.xyz"
