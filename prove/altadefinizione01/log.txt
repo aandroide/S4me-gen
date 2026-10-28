@@ -1,20 +1,57 @@
 Canale altadefinizione01 | indirizzo https://altadefinizione-01.autos
 == mainlist
-   -> 10 voci
+   -> 9 voci
       peliculas | Tutti  | https://altadefinizione-01.autos/lastnews/
       peliculas | •• Al Cinema | https://altadefinizione-01.autos/cinema/
       peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.autos
       genres | •• Generi | https://altadefinizione-01.autos
 == lista "Tutti "
    -> 23 voci
+      check | Solo Noi. Una stagione da Double  | https://altadefinizione-01.autos/35339-solo-noi-una-stagione-da-double-streaming.html
       check | Shaun, vita da pecora - Operazione Z.U.C.C.A.  | https://altadefinizione-01.autos/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html
       check | Ip Man: Oltre la leggenda  | https://altadefinizione-01.autos/35327-ip-man-oltre-la-leggenda-streaming.html
       check | Ohh My Dog  | https://altadefinizione-01.autos/35304-ohh-my-dog-streaming.html
-      check | Tamerlano - L'ultimo conquistatore  | https://altadefinizione-01.autos/35298-tamerlano-l-ultimo-conquistatore-streaming.html
-== check su "Shaun, vita da pecora - Operazione Z.U.C"
-   -> 2 voci
-      play | Shaun, vita da pecora - Operazione Z.U.C.C.A.  | https://vixsrc.to/movie/tt36841161
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.autos/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming.html
-== risoluzione vixsrc https://vixsrc.to/movie/tt36841161
+== check su "Solo Noi. Una stagione da Double "
+   -> 0 voci
+== lista "•• Al Cinema"
+   -> 31 voci
+      check | Crystal Lake  | https://altadefinizione-01.autos/35185-crystal-lake-streaming.html
+      check | Helluva Boss  | https://altadefinizione-01.autos/27904-helluva-boss-streaming.html
+      check | VisionQuest  | https://altadefinizione-01.autos/35174-visionquest-streaming.html
+      check | The Terminal List (2022) | https://altadefinizione-01.autos/27037-the-terminal-list-2022.html
+== check su "Crystal Lake "
+   -> 289 voci
+      findvideos | 1x01 | https://vixsrc.to/tv/tt23148340/1/1?lang=it
+      findvideos | 1x02 | https://vixsrc.to/tv/tt23148340/1/2?lang=it
+      findvideos | 1x03 | https://vixsrc.to/tv/tt23148340/1/3?lang=it
+      findvideos | 1x04 | https://vixsrc.to/tv/tt23148340/1/4?lang=it
+== findvideos su "1x01"
+   -> 1 voci
+      play | 1x01 | https://vixsrc.to/tv/tt23148340/1/1
+== risoluzione vixsrc https://vixsrc.to/tv/tt23148340/1/1
    -> VIDEO OK m3u8 200 
+== voci dichiarate in mainlist (7)
+    menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
+    menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])
+    menu | ('Ultimi Aggiornati-Aggiunti {submenu}', ['', 'peliculas', 'update'])
+    menu | ('Generi {submenu}', ['', 'genres', 'genres', 'undefined'])
+    menu | ('Lettera {submenu}', ['/catalog/a', 'genres', 'orderalf', 'undefined'])
+    menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
+    menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
+== controllo di tutte le sezioni
+   SEZIONE Tutti -> OK 22 
+   SEZIONE •• Al Cinema -> OK 30 
+   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 34 
+   SEZIONE Azione -> OK 29 
+   SEZIONE Animazione -> OK 28 
+   SEZIONE Avventura -> OK 30 
+   SEZIONE •• Generi -> SOTTOMENU  
+   SEZIONE 0-9 -> OK 30 
+   SEZIONE A -> OK 30 
+   SEZIONE B -> OK 30 
+   SEZIONE •• Lettera -> SOTTOMENU  
+   SEZIONE •• Sub-ITA -> OK 30 
+   SEZIONE Serie TV -> OK 30 
+   SEZIONE txt70741 … -> OK 6 
+SEZIONI: 8 ok su 8
 VERDETTO: ARRIVA AL VIDEO

@@ -13,14 +13,27 @@ Canale tantifilm | indirizzo https://tanti-film.garden
       peliculas | Commedia | https://tanti-film.garden/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
+      check | Solo Noi. Una stagione da Double  | https://tanti-film.garden/guarda/35339-solo-noi-una-stagione-da-double-streaming-streaming-hd.html
       check | Shaun, vita da pecora - Operazione Z.U.C.C.A.  | https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming
       check | Ip Man: Oltre la leggenda  | https://tanti-film.garden/guarda/35327-ip-man-oltre-la-leggenda-streaming-streaming-hd.html
       check | Ohh My Dog  | https://tanti-film.garden/guarda/35304-ohh-my-dog-streaming-streaming-hd.html
-      check | Baby Do Die Do  | https://tanti-film.garden/guarda/35305-baby-do-die-do-streaming-streaming-hd.html
-== check su "Shaun, vita da pecora - Operazione Z.U.C"
+== check su "Solo Noi. Una stagione da Double "
    -> 2 voci
-      play | Shaun, vita da pecora - Operazione Z.U.C.C.A.  | https://v.vidxgo.co/36841161
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming
-== risoluzione vidxgo https://v.vidxgo.co/36841161
+      play | Solo Noi. Una stagione da Double  | https://v.vidxgo.co/tm1785148
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.garden/guarda/35339-solo-noi-una-stagione-da-double-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/tm1785148
    -> VIDEO OK m3u8 200 
+== voci dichiarate in mainlist (3)
+    top | ('Generi', ['', 'genres'])
+    film | '/film'
+    tvshow | '/serie-tv/'
+== controllo di tutte le sezioni
+   SEZIONE Animazione -> OK 25 
+   SEZIONE Avventura -> OK 25 
+   SEZIONE Biografico -> OK 20 
+   SEZIONE Generi -> SOTTOMENU  
+   SEZIONE • Film -> OK 33 
+   SEZIONE • Serie TV -> OK 25 
+   SEZIONE txt70741 … -> OK 11 
+SEZIONI: 4 ok su 4
 VERDETTO: ARRIVA AL VIDEO

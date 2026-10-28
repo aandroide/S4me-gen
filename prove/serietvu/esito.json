@@ -24,27 +24,122 @@
   }
  ],
  "video": [],
+ "menu_dichiarato": [
+  "tvshow | '/category/serie-tv'",
+  "tvshow | ('Ultimi episodi', ['/ultimi-episodi/', 'peliculas', 'update'])",
+  "tvshow | ('Generi', ['', 'genres', 'genres'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1/category/serie-tv",
+     "status": 200,
+     "byte": 27855,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Ultimi episodi",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1/ultimi-episodi/",
+     "status": 200,
+     "byte": 27645,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "genres",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1",
+     "status": 200,
+     "byte": 27605,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• txt70741 Serie TV…",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1/?s=avatar",
+     "status": 200,
+     "byte": 27973,
+     "titolo_pagina": ""
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 4",
  "rete": [
   {
    "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1/category/serie-tv",
    "status": 200,
-   "byte": 27769,
+   "byte": 27763,
    "secondi": 0.3,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
    "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1/ultimi-episodi/",
    "status": 200,
-   "byte": 27669,
+   "byte": 27783,
    "secondi": 0.4,
+   "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1",
    "status": 200,
-   "byte": 27677,
-   "secondi": 0.4,
+   "byte": 27799,
+   "secondi": 0.3,
+   "titolo_pagina": "",
    "file": "pagine/03.html"
+  },
+  {
+   "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1/category/serie-tv",
+   "status": 200,
+   "byte": 27855,
+   "secondi": 0.4,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1/ultimi-episodi/",
+   "status": 200,
+   "byte": 27645,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1",
+   "status": 200,
+   "byte": 27605,
+   "secondi": 0.8,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1/?s=avatar",
+   "status": 200,
+   "byte": 27973,
+   "secondi": 0.4,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
   }
  ],
  "verdetto": "SI FERMA A: lista \"• Serie TV\""

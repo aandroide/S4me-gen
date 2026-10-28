@@ -7,10 +7,10 @@ Canale metalvideo | indirizzo
       search | Cerca...  | https://metalvideo.com
 == lista "Generi "
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 166, in <lambda>
     lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/tmp/kh/addon/core/support.py", line 614, in wrapper
@@ -19,10 +19,10 @@ platformcode.logger.WebErrorException
 
 == lista "Ultimi Video "
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 166, in <lambda>
     lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/tmp/kh/addon/core/support.py", line 614, in wrapper
@@ -31,10 +31,10 @@ platformcode.logger.WebErrorException
 
 == lista "Top Video "
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 166, in <lambda>
     lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/tmp/kh/addon/core/support.py", line 614, in wrapper
@@ -42,4 +42,19 @@ Traceback (most recent call last):
 platformcode.logger.WebErrorException
 
 Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (4)
+    menu | ('Generi', ['', 'genres'])
+    menu | ('Ultimi Video', ['/videos/latest', 'peliculas'])
+    menu | ('Top Video', ['/videos/top', 'peliculas'])
+    menu | ('Cerca...', ['', 'search'])
+== controllo di tutte le sezioni
+   SEZIONE Generi -> ERRORE WebErrorException
+   SEZIONE Ultimi Video -> ERRORE WebErrorException
+   SEZIONE Top Video -> ERRORE WebErrorException
+   SEZIONE Cerca... -> VUOTA   | ultima pagina: {'url': 'https://metalvideo.com/search?keyword=avatar', 'status': "'NoneType' object has no attribute 'elapsed'", 'byte': 0, 'titolo_pagina': ''}
+SEZIONI: 0 ok su 4
+   SEZIONE SENZA TITOLI: Generi | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: Ultimi Video | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: Top Video | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: Cerca... | VUOTA
 VERDETTO: SI FERMA A: lista "Generi "

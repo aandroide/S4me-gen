@@ -24,27 +24,122 @@
   }
  ],
  "video": [],
+ "menu_dichiarato": [
+  "film | '/category/films'",
+  "tvshow | '/category/serie'",
+  "anime | '/category/anime-cartoni-animati'"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://piratestreaming.design/category/films",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://piratestreaming.design/category/serie",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Anime",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://piratestreaming.design/category/anime-cartoni-animati",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://piratestreaming.design/?s=avatar",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 4",
  "rete": [
   {
    "url": "https://piratestreaming.design/category/films",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.7,
+   "secondi": 0.1,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
    "url": "https://piratestreaming.design/category/serie",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.8,
+   "secondi": 0.0,
+   "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://piratestreaming.design/category/anime-cartoni-animati",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.2,
+   "secondi": 0.0,
+   "titolo_pagina": "",
    "file": "pagine/03.html"
+  },
+  {
+   "url": "https://piratestreaming.design/category/films",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://piratestreaming.design/category/serie",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://piratestreaming.design/category/anime-cartoni-animati",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://piratestreaming.design/?s=avatar",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
   }
  ],
  "verdetto": "SI FERMA A: lista \"• Film\""

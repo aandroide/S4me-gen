@@ -9,26 +9,153 @@
   },
   {
    "passo": "lista \"• Film\"",
-   "esito": "ERRORE",
-   "errore": "lista = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 522, in wrapper\n    args = func(*args)\n           ^^^^^^^^^^^\nValueError: invalid literal for int() with base 10: '2005-2012'\n"
+   "esito": "OK",
+   "voci": 11
+  },
+  {
+   "passo": "findvideos su \"La gabbianella e il gatto REMASTERED\"",
+   "esito": "OK",
+   "voci": 2
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "mega",
+   "url": "https://mega.nz/#!GzQxxDYD!sMdE9kpw-sYgAXzjyGjwMXgxemMdchv6alBJgn9iKlQ",
+   "modulo_server": true,
+   "esito": "SERVER NON RISOLVE",
+   "pagina_server": {
+    "status": 200,
+    "inizio": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>MEGA</title>\n<meta name=\"description\" content=\"MEGA provides free cloud storage with convenient and powerful always-on privacy. Claim your free 20GB now\" />\n<meta property=\"og:title\" content=\"MEGA\" />\n<meta property=\"og:descri"
+   }
+  }
+ ],
+ "menu_dichiarato": [
+  "film | '/index'",
+  "film | ('Genere', ['', 'genre', 'genre'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 10
+  },
+  {
+   "voce": "•• Genere",
+   "azione": "genre",
+   "esito": "SOTTOMENU",
+   "sottovoci": 23,
+   "figli": [
+    {
+     "voce": "Animazione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 10
+    },
+    {
+     "voce": "Classici Disney",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 54
+    },
+    {
+     "voce": "Pixar",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 10
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 1
+  }
+ ],
+ "sezioni_riepilogo": "3 ok su 3",
  "rete": [
   {
    "url": "https://hd4me.net/wp-content/themes/mytheme/cache/nav.json",
    "status": 200,
-   "byte": 18517,
-   "secondi": 0.1,
+   "byte": 18590,
+   "secondi": 0.6,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/index/page-1.json?v=1792831735",
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/index/page-1.json?v=1793180390",
    "status": 200,
-   "byte": 10438,
+   "byte": 10317,
    "secondi": 0.1,
+   "titolo_pagina": "",
    "file": "pagine/02.html"
+  },
+  {
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/posts/55228.json?v=1793180390",
+   "status": 200,
+   "byte": 2601,
+   "secondi": 0.5,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://g.api.mega.co.nz/cs?id=1331979099",
+   "status": 200,
+   "byte": 592,
+   "secondi": 0.7,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://g.api.mega.co.nz/cs?id=2929372576",
+   "status": 200,
+   "byte": 592,
+   "secondi": 0.5,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/index/page-1.json?v=1793180390",
+   "status": 200,
+   "byte": 10317,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/genere/animazione/page-1.json?v=1793180390",
+   "status": 200,
+   "byte": 10593,
+   "secondi": 0.5,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/disney.json?v=1793180390",
+   "status": 200,
+   "byte": 63809,
+   "secondi": 0.7,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/categoria/pixar/page-1.json?v=1793180390",
+   "status": 200,
+   "byte": 11328,
+   "secondi": 0.5,
+   "titolo_pagina": "",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/posts_data.json?v=1793180390",
+   "status": 200,
+   "byte": 1445598,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/10.html"
   }
  ],
- "verdetto": "SI FERMA A: lista \"• Film\""
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE"
 }

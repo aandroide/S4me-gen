@@ -24,27 +24,232 @@
   }
  ],
  "video": [],
+ "menu_dichiarato": [
+  "anime | '/search?typeY=tv'",
+  "anime | ('Movie', ['/search?typeY=movie', 'peliculas', '', 'movie'])",
+  "anime | ('OAV', ['/search?typeY=oav', 'peliculas', '', 'tvshow'])",
+  "anime | ('Spinoff', ['/search?typeY=spinoff', 'peliculas', '', 'tvshow'])",
+  "anime | ('Generi', ['', 'menu', 'Generi'])",
+  "anime | ('Stato', ['', 'menu', 'Stato'])",
+  "anime | ('Ultimi Episodi', ['', 'peliculas', ['last', 'episodiRecenti']])",
+  "anime | ('Ultimi Aggiornamenti', ['', 'peliculas', ['last', 'episodiNuovi']])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Anime",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.animeworld.ac/search?typeY=tv",
+     "status": 200,
+     "byte": 728475,
+     "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA"
+    }
+   ]
+  },
+  {
+   "voce": "•• Movie",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.animeworld.ac/search?typeY=movie",
+     "status": 200,
+     "byte": 728475,
+     "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA"
+    }
+   ]
+  },
+  {
+   "voce": "•• OAV",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.animeworld.ac/search?typeY=oav",
+     "status": 200,
+     "byte": 728475,
+     "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA"
+    }
+   ]
+  },
+  {
+   "voce": "•• Spinoff",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.animeworld.ac/search?typeY=spinoff",
+     "status": 200,
+     "byte": 728475,
+     "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA"
+    }
+   ]
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "menu",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.animeworld.ac",
+     "status": 200,
+     "byte": 728475,
+     "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA"
+    }
+   ]
+  },
+  {
+   "voce": "•• Stato",
+   "azione": "menu",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.animeworld.ac",
+     "status": 200,
+     "byte": 728475,
+     "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA"
+    }
+   ]
+  },
+  {
+   "voce": "•• Ultimi Episodi",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.animeworld.ac",
+     "status": 200,
+     "byte": 728475,
+     "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA"
+    }
+   ]
+  },
+  {
+   "voce": "•• Ultimi Aggiornamenti",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.animeworld.ac",
+     "status": 200,
+     "byte": 728475,
+     "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA"
+    }
+   ]
+  },
+  {
+   "voce": "•• txt70741 Anime…",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.animeworld.ac/search/avatar",
+     "status": 200,
+     "byte": 65138,
+     "titolo_pagina": "AnimeWorld - Pagina non trovata"
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 9",
  "rete": [
   {
    "url": "https://www.animeworld.ac/search?typeY=tv",
    "status": 200,
-   "byte": 726855,
-   "secondi": 1.1,
+   "byte": 728475,
+   "secondi": 1.2,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
    "file": "pagine/01.html"
   },
   {
    "url": "https://www.animeworld.ac/search?typeY=movie",
    "status": 200,
-   "byte": 726855,
+   "byte": 728475,
    "secondi": 0.9,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
    "file": "pagine/02.html"
   },
   {
    "url": "https://www.animeworld.ac/search?typeY=oav",
    "status": 200,
-   "byte": 726855,
-   "secondi": 0.9,
+   "byte": 728475,
+   "secondi": 1.0,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
    "file": "pagine/03.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/search?typeY=tv",
+   "status": 200,
+   "byte": 728475,
+   "secondi": 0.9,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/search?typeY=movie",
+   "status": 200,
+   "byte": 728475,
+   "secondi": 0.9,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/search?typeY=oav",
+   "status": 200,
+   "byte": 728475,
+   "secondi": 0.9,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/search?typeY=spinoff",
+   "status": 200,
+   "byte": 728475,
+   "secondi": 0.7,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://www.animeworld.ac",
+   "status": 200,
+   "byte": 728475,
+   "secondi": 0.7,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://www.animeworld.ac",
+   "status": 200,
+   "byte": 728475,
+   "secondi": 0.7,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://www.animeworld.ac",
+   "status": 200,
+   "byte": 728475,
+   "secondi": 0.7,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://www.animeworld.ac",
+   "status": 200,
+   "byte": 728475,
+   "secondi": 0.7,
+   "titolo_pagina": "AnimeWorld - Download e Streaming Anime Sub ITA e ITA",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/search/avatar",
+   "status": 200,
+   "byte": 65138,
+   "secondi": 0.4,
+   "titolo_pagina": "AnimeWorld - Pagina non trovata",
+   "file": "pagine/12.html"
   }
  ],
  "verdetto": "SI FERMA A: lista \"• Anime\""

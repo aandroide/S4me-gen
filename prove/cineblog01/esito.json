@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"Sacrifice \"",
+   "passo": "findvideos su \"Drive - Cuori in pista \"",
    "esito": "OK",
    "voci": 3
   }
@@ -21,53 +21,319 @@
  "video": [
   {
    "server": "mixdrop",
-   "url": "https://m1xdrop.net/e/8ll7lxj1twwojr",
-   "finale": "http://sotlpy6yh.mxcontent.net/v2/8ll7lxj1twwojr.mp4?s=tUrIcB7F02CauGmbvi0UPA&e=1793152422&_t=1793137775",
+   "url": "https://m1xdrop.net/e/dkke69pxf6lxrl",
+   "finale": "http://usx2f826m.mxcontent.net/v2/dkke69pxf6lxrl.mp4?s=5G6IFQ2nPMwBiFCAAxo9-g&e=1793208967&_t=1793194809",
    "esito": "VIDEO NON RAGGIUNGIBILE",
    "dettaglio": "HTTP 403"
   },
   {
    "server": "mixdrop",
-   "url": "https://m1xdrop.net/e/jdd3d796h6pjox",
-   "finale": "http://ebij8ni1d.mxcontent.net/v2/jdd3d796h6pjox.mp4?s=QU4HmvZ0s7EKYiIstVGBrA&e=1793152426&_t=1793134838",
+   "url": "https://m1xdrop.net/e/elledmwocne0zv",
+   "finale": "http://92xseh0ry.mxcontent.net/v2/elledmwocne0zv.mp4?s=oNN8qfOlCTXqq2-aHANhGA&e=1793208970&_t=1793191189",
    "esito": "VIDEO NON RAGGIUNGIBILE",
    "dettaglio": "HTTP 403"
   }
  ],
+ "menu_dichiarato": [
+  "film | ('HD', ['', 'menu', 'Film HD Streaming'])",
+  "film | ('Genere', ['', 'menu', 'Film per Genere'])",
+  "film | ('Anni', ['', 'menu', 'Film per Anno'])",
+  "film | ('Popolari per Genere', ['', 'menu', 'Film Popolari'])",
+  "film | ('Ultimi Aggiunti', ['/ultimi-100-film-aggiunti/', 'peliculas', 'newest'])",
+  "film | ('Popolari', ['/category/film-popolari/'])",
+  "film | ('Italiani', ['/category/nazione/italia/'])",
+  "tvshow | '/serietv/'",
+  "tvshow | ('Per Lettera', ['/serietv/', 'menu', 'Serie-TV x Lettera'])",
+  "tvshow | ('Per Genere', ['/serietv/', 'menu', 'Serie-TV x Genere'])",
+  "tvshow | ('Per anno', ['/serietv/', 'menu', 'Serie-TV x Anno'])",
+  "tvshow | ('Ultime Aggiunte', ['/serietv/ultime-100-serie-tv-aggiunte/', 'peliculas', 'newest'])",
+  "docu | ('Documentari {bullet bold}', ['/category/documentario/', 'peliculas'])",
+  "docu | ('HD {submenu} {documentari}', ['/category/hd-alta-definizione/documentario-hd/', 'peliculas'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 12
+  },
+  {
+   "voce": "•• HD",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 36,
+   "figli": [
+    {
+     "voce": "ANIMAZIONE HD",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "AVVENTURA HD",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "AZIONE HD",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    }
+   ]
+  },
+  {
+   "voce": "•• Genere",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 24,
+   "figli": [
+    {
+     "voce": "ANIMAZIONE",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "AVVENTURA",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "AZIONE",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    }
+   ]
+  },
+  {
+   "voce": "•• Anni",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 126,
+   "figli": [
+    {
+     "voce": "2026",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "2025",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "2024",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    }
+   ]
+  },
+  {
+   "voce": "•• Popolari per Genere",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 23,
+   "figli": [
+    {
+     "voce": "ANIMAZIONE",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "AVVENTURA",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "AZIONE",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    }
+   ]
+  },
+  {
+   "voce": "•• Ultimi Aggiunti",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Popolari",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 12
+  },
+  {
+   "voce": "•• Italiani",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 12
+  },
+  {
+   "voce": "•• txt70741 Film…",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 4
+  },
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 12
+  },
+  {
+   "voce": "•• Per Lettera",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 27,
+   "figli": [
+    {
+     "voce": "(#)",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "(A)",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "(B)",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    }
+   ]
+  },
+  {
+   "voce": "•• Per Genere",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 27,
+   "figli": [
+    {
+     "voce": "ANIMAZIONE",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "AVVENTURA",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "AZIONE",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    }
+   ]
+  },
+  {
+   "voce": "•• Per anno",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 25,
+   "figli": [
+    {
+     "voce": "2026",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "2025",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "2024",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
+    }
+   ]
+  },
+  {
+   "voce": "•• Ultime Aggiunte",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• txt70741 Serie TV…",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 2
+  },
+  {
+   "voce": "• Documentari",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 12
+  },
+  {
+   "voce": "•• HD",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 12
+  }
+ ],
+ "sezioni_riepilogo": "17 ok su 17",
  "rete": [
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 530010,
-   "secondi": 1.5,
+   "byte": 530350,
+   "secondi": 1.3,
+   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://cb01one.stream/sacrifice-hd-2025/",
+   "url": "https://cb01one.stream/drive-cuori-in-pista-hd-2026/",
    "status": 200,
-   "byte": 288529,
-   "secondi": 1.0,
+   "byte": 279363,
+   "secondi": 0.4,
+   "titolo_pagina": "Drive – Cuori in pista [HD] (2026) Streaming - FILM GRATIS by CB01 OFFICIAL",
    "file": "pagine/02.html"
   },
   {
    "url": "https://stayonline.pro/ajax/linkView.php",
    "status": 200,
    "byte": 108,
-   "secondi": 1.0,
+   "secondi": 0.9,
+   "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://m1xdrop.net/f/8ll7lxj1twwojr",
+   "url": "https://m1xdrop.net/f/dkke69pxf6lxrl",
    "status": 302,
    "byte": 510,
-   "secondi": 0.2,
+   "secondi": 0.1,
+   "titolo_pagina": "302 Found",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://m1xdrop.net/e/8ll7lxj1twwojr",
+   "url": "https://m1xdrop.net/e/dkke69pxf6lxrl",
    "status": 200,
-   "byte": 78432,
-   "secondi": 0.6,
+   "byte": 78437,
+   "secondi": 0.5,
+   "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
@@ -75,21 +341,297 @@
    "status": 200,
    "byte": 108,
    "secondi": 0.9,
+   "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://m1xdrop.net/f/jdd3d796h6pjox",
+   "url": "https://m1xdrop.net/f/elledmwocne0zv",
    "status": 302,
    "byte": 510,
    "secondi": 0.1,
+   "titolo_pagina": "302 Found",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://m1xdrop.net/e/jdd3d796h6pjox",
+   "url": "https://m1xdrop.net/e/elledmwocne0zv",
    "status": 200,
-   "byte": 78431,
+   "byte": 78438,
    "secondi": 0.5,
+   "titolo_pagina": "",
    "file": "pagine/08.html"
+  },
+  {
+   "url": "https://cb01official.uno",
+   "status": 200,
+   "byte": 530350,
+   "secondi": 0.7,
+   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://cb01official.uno",
+   "status": 200,
+   "byte": 530350,
+   "secondi": 1.2,
+   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://cb01official.uno/category/film-hd-streaming/animazione-hd/",
+   "status": 200,
+   "byte": 283924,
+   "secondi": 0.5,
+   "titolo_pagina": "Animazione HD - CB01 OFFICIAL - FILM GRATIS by cb01",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://cb01official.uno/category/film-hd-streaming/avventura-hd/",
+   "status": 200,
+   "byte": 276304,
+   "secondi": 0.9,
+   "titolo_pagina": "Avventura HD - CB01 OFFICIAL - FILM GRATIS by cb01",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://cb01official.uno/category/film-hd-streaming/azione-hd/",
+   "status": 200,
+   "byte": 283688,
+   "secondi": 0.3,
+   "titolo_pagina": "Azione HD - CB01 OFFICIAL - FILM GRATIS by cb01",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://cb01official.uno",
+   "status": 200,
+   "byte": 530350,
+   "secondi": 0.7,
+   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://cb01official.uno/category/animazione/",
+   "status": 200,
+   "byte": 285328,
+   "secondi": 0.3,
+   "titolo_pagina": "Animazione - CB01 OFFICIAL - FILM GRATIS by cb01",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://cb01official.uno/category/avventura/",
+   "status": 200,
+   "byte": 279104,
+   "secondi": 0.9,
+   "titolo_pagina": "Avventura - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno/category/azione/",
+   "status": 200,
+   "byte": 284846,
+   "secondi": 0.3,
+   "titolo_pagina": "Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno",
+   "status": 200,
+   "byte": 530350,
+   "secondi": 0.7,
+   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
+  },
+  {
+   "url": "https://cb01official.uno/category/anno-2026/",
+   "status": 200,
+   "byte": 272664,
+   "secondi": 0.5,
+   "titolo_pagina": "2026 - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno/category/anno-2025/",
+   "status": 200,
+   "byte": 273842,
+   "secondi": 0.9,
+   "titolo_pagina": "2025 - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno/category/anno-2024/",
+   "status": 200,
+   "byte": 274839,
+   "secondi": 0.5,
+   "titolo_pagina": "2024 - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno",
+   "status": 200,
+   "byte": 530350,
+   "secondi": 0.7,
+   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
+  },
+  {
+   "url": "https://cb01official.uno/category/film-popolari/fp-animazione/",
+   "status": 200,
+   "byte": 274518,
+   "secondi": 0.3,
+   "titolo_pagina": "FP-Animazione - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno/category/film-popolari/fp-avventura/",
+   "status": 200,
+   "byte": 271376,
+   "secondi": 0.5,
+   "titolo_pagina": "FP-Avventura - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno/category/film-popolari/fp-azione/",
+   "status": 200,
+   "byte": 272853,
+   "secondi": 0.5,
+   "titolo_pagina": "FP-Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno/ultimi-100-film-aggiunti/",
+   "status": 200,
+   "byte": 307022,
+   "secondi": 0.7,
+   "titolo_pagina": "Ultimi 100 film aggiunti - FILM GRATIS by CB01 OFFICIAL"
+  },
+  {
+   "url": "https://cb01official.uno/category/film-popolari/",
+   "status": 200,
+   "byte": 297667,
+   "secondi": 0.5,
+   "titolo_pagina": "Film Popolari - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno/category/nazione/italia/",
+   "status": 200,
+   "byte": 324759,
+   "secondi": 0.5,
+   "titolo_pagina": "Italia - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno/search/avatar",
+   "status": 200,
+   "byte": 247482,
+   "secondi": 1.2,
+   "titolo_pagina": "Hai cercato avatar - CB01 OFFICIAL - FILM"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/",
+   "status": 200,
+   "byte": 341349,
+   "secondi": 0.3,
+   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/",
+   "status": 200,
+   "byte": 341349,
+   "secondi": 0.7,
+   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/category/numero/",
+   "status": 200,
+   "byte": 244470,
+   "secondi": 0.5,
+   "titolo_pagina": "# - CB01 OFFICIAL - SERIE-TV"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/category/a/",
+   "status": 200,
+   "byte": 247215,
+   "secondi": 0.5,
+   "titolo_pagina": "A - CB01 OFFICIAL - SERIE-TV"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/category/b/",
+   "status": 200,
+   "byte": 246162,
+   "secondi": 0.5,
+   "titolo_pagina": "B - CB01 OFFICIAL - SERIE-TV"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/",
+   "status": 200,
+   "byte": 341349,
+   "secondi": 0.7,
+   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/category/animazione/",
+   "status": 200,
+   "byte": 254254,
+   "secondi": 0.5,
+   "titolo_pagina": "Animazione - CB01 OFFICIAL - SERIE-TV"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/category/avventura/",
+   "status": 200,
+   "byte": 248014,
+   "secondi": 0.5,
+   "titolo_pagina": "Avventura - CB01 OFFICIAL - SERIE-TV"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/category/azione/",
+   "status": 200,
+   "byte": 248664,
+   "secondi": 0.8,
+   "titolo_pagina": "Azione - CB01 OFFICIAL - SERIE-TV"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/",
+   "status": 200,
+   "byte": 341349,
+   "secondi": 0.7,
+   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/category/2026/",
+   "status": 200,
+   "byte": 247246,
+   "secondi": 0.5,
+   "titolo_pagina": "2026 - CB01 OFFICIAL - SERIE-TV"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/category/2025/",
+   "status": 200,
+   "byte": 247274,
+   "secondi": 0.5,
+   "titolo_pagina": "2025 - CB01 OFFICIAL - SERIE-TV"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/category/2024/",
+   "status": 200,
+   "byte": 247370,
+   "secondi": 0.5,
+   "titolo_pagina": "2024 - CB01 OFFICIAL - SERIE-TV"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/ultime-100-serie-tv-aggiunte/",
+   "status": 200,
+   "byte": 296155,
+   "secondi": 0.7,
+   "titolo_pagina": "ULTIME 100 SERIE-TV AGGIUNTE - SERIE TV GRATIS by CB01 OFFICIAL"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/search/avatar",
+   "status": 200,
+   "byte": 217899,
+   "secondi": 1.0,
+   "titolo_pagina": "Hai cercato avatar - CB01 OFFICIAL - SERIE-TV"
+  },
+  {
+   "url": "https://cb01official.uno/category/documentario/",
+   "status": 200,
+   "byte": 275173,
+   "secondi": 0.3,
+   "titolo_pagina": "Documentario - CB01 OFFICIAL - FILM GRATIS by cb01"
+  },
+  {
+   "url": "https://cb01official.uno/category/hd-alta-definizione/documentario-hd/",
+   "status": 200,
+   "byte": 273861,
+   "secondi": 0.5,
+   "titolo_pagina": "Documentario HD - CB01 OFFICIAL - FILM GRATIS by cb01"
   }
  ],
  "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"

@@ -7,10 +7,10 @@ Canale aniplay | indirizzo https://aniplay.co
       submenu_top | •• Top | https://aniplay.co
 == lista "• Anime"
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 166, in <lambda>
     lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/tmp/kh/addon/channels/aniplay.py", line 165, in peliculas
@@ -19,4 +19,30 @@ Traceback (most recent call last):
 AttributeError: type object 'HTTPResponse' has no attribute 'json'
 
 Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (5)
+    anime | '/api/anime/advanced-search'
+    anime | ('A-Z', ['/api/anime/advanced-search', 'submenu_az', ''])
+    anime | ('Anno', ['', 'submenu_year', ''])
+    anime | ('Top', ['', 'submenu_top', ''])
+    anime | ('Ultimi aggiunti', ['', 'latest_added', ''])
+== controllo di tutte le sezioni
+   SEZIONE • Anime -> ERRORE AttributeError
+   SEZIONE 0-9 -> ERRORE AttributeError
+   SEZIONE A -> ERRORE AttributeError
+   SEZIONE B -> ERRORE AttributeError
+   SEZIONE •• A-Z -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://aniplay.co/api/anime/find-by-char?page=0&size=20&character=B&sort=views,desc&sort=id', 'status': 'Traceback (most recent call last):\n  File "/tmp/kh/addon/core/httptools.py", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get(\'follow_redirects\', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 542, in get\n    return self.request(\'GET\', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: \'NoneType\' object has no attribute \'elapsed\'\n', 'byte': 0, 'titolo_pagina': ''}
+   SEZIONE •• Anno -> ERRORE AttributeError
+   SEZIONE Top del giorno -> ERRORE AttributeError
+   SEZIONE Top della settimana -> ERRORE AttributeError
+   SEZIONE Top del mese -> ERRORE AttributeError
+   SEZIONE •• Top -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://aniplay.co/api/home/monthly-top', 'status': 'Traceback (most recent call last):\n  File "/tmp/kh/addon/core/httptools.py", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get(\'follow_redirects\', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 542, in get\n    return self.request(\'GET\', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: \'NoneType\' object has no attribute \'elapsed\'\n', 'byte': 0, 'titolo_pagina': ''}
+   SEZIONE •• Ultimi aggiunti -> ERRORE AttributeError
+   SEZIONE •• txt70741 Anime… -> VUOTA   | ultima pagina: {'url': 'https://aniplay.co/api/anime/advanced-search?page=0&size=20&query=avatar&sort=views,desc&sort=id', 'status': 'Traceback (most recent call last):\n  File "/tmp/kh/addon/core/httptools.py", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get(\'follow_redirects\', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 542, in get\n    return self.request(\'GET\', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: \'NoneType\' object has no attribute \'elapsed\'\n', 'byte': 0, 'titolo_pagina': ''}
+SEZIONI: 0 ok su 6
+   SEZIONE SENZA TITOLI: • Anime | ERRORE AttributeError
+   SEZIONE SENZA TITOLI: •• A-Z | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: •• Anno | ERRORE AttributeError
+   SEZIONE SENZA TITOLI: •• Top | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: •• Ultimi aggiunti | ERRORE AttributeError
+   SEZIONE SENZA TITOLI: •• txt70741 Anime… | VUOTA
 VERDETTO: SI FERMA A: lista "• Anime"

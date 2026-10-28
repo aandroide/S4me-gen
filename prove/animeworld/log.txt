@@ -22,4 +22,43 @@ Canale animeworld | indirizzo https://www.animeworld.ac
       play | 1 - MaR - Märchen Awakens Romance | https://srv30-arinza.sweetpixel.org/DDL/ANIME/MARITA/MAR_Ep_001_ITA.mp4
 == risoluzione directo https://srv30-arinza.sweetpixel.org/DDL/ANIME/MARITA/MAR_Ep_001_ITA.mp4
    -> VIDEO OK 206 video/mp4 
+== voci dichiarate in mainlist (7)
+    anime | '/filter?sort='
+    anime | ('ITA', ['/filter?dub=1&sort=', 'menu', 'dub=1'])
+    anime | ('SUB-ITA', ['/filter?dub=0&sort=', 'menu', 'dub=0'])
+    anime | ('In Corso', ['/ongoing', 'peliculas', 'noorder'])
+    anime | ('Ultimi Episodi', ['/updated', 'peliculas', 'updated'])
+    anime | ('Nuove Aggiunte', ['/newest', 'peliculas', 'noorder'])
+    anime | ('Generi', ['/?d=1', 'genres'])
+== controllo di tutte le sezioni
+   SEZIONE • Anime -> OK 40 
+   SEZIONE Tutti -> OK 40 
+   SEZIONE Arti Marziali -> OK 40 
+   SEZIONE Avanguardia -> OK 11 
+   SEZIONE Avventura -> OK 40 
+   SEZIONE Generi -> SOTTOMENU  
+   SEZIONE Inverno -> OK 40 
+   SEZIONE Primavera -> OK 40 
+   SEZIONE Estate -> OK 40 
+   SEZIONE Stagioni -> SOTTOMENU  
+   SEZIONE •• ITA -> SOTTOMENU  
+   SEZIONE Tutti -> OK 40 
+   SEZIONE Arti Marziali -> OK 40 
+   SEZIONE Avanguardia -> OK 40 
+   SEZIONE Avventura -> OK 40 
+   SEZIONE Generi -> SOTTOMENU  
+   SEZIONE Inverno -> OK 40 
+   SEZIONE Primavera -> OK 40 
+   SEZIONE Estate -> OK 40 
+   SEZIONE Stagioni -> SOTTOMENU  
+   SEZIONE •• SUB-ITA -> SOTTOMENU  
+   SEZIONE •• In Corso -> OK 40 
+   SEZIONE •• Ultimi Episodi -> OK 40 
+   SEZIONE •• Nuove Aggiunte -> OK 40 
+   SEZIONE Arti Marziali -> OK 40 
+   SEZIONE Avanguardia -> OK 40 
+   SEZIONE Avventura -> OK 40 
+   SEZIONE •• Generi -> SOTTOMENU  
+   SEZIONE •• txt70741 Anime… -> OK 7 
+SEZIONI: 8 ok su 8
 VERDETTO: ARRIVA AL VIDEO

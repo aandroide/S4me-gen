@@ -34,4 +34,78 @@ Canale raiplay | indirizzo https://www.raiplay.it
       play | A caccia del vedovo d'oro | https://download-rai-it.akamaized.net/video_no_available.mp4
 == risoluzione directo https://download-rai-it.akamaized.net/video_no_available.mp4
    -> VIDEO OK 206 video/mp4 
+== voci dichiarate in mainlist (13)
+    top | ('Dirette {bold}', ['/dirette', 'live', '/palinsesto/onAir.json'])
+    top | ('Replay {bold}', ['/guidatv', 'replayMenu', '/guidatv.json'])
+    menu | ('Film {bold}', ['/film', 'menu', '/tipologia/film/index.json'])
+    menu | ('Serie italiane {bold}', ['/serieitaliane', 'menu', '/tipologia/serieitaliane/index.json'])
+    menu | ('Serie Internazionali {bold}', ['/serieinternazionali', 'menu', '/tipologia/serieinternazionali/index.json'])
+    menu | ('Programmi TV{bold}', ['/programmi', 'menu', '/tipologia/programmi/index.json'])
+    menu | ('Documentari {bold}', ['/documentari', 'menu', '/tipologia/documentari/index.json'])
+    menu | ('Bambini {bold}', ['/bambini', 'menu', '/tipologia/bambini/index.json'])
+    menu | ('Teen {bold}', ['/teen', 'menu', '/tipologia/teen/index.json'])
+    menu | ('Musica e Teatro {bold}', ['/musica-e-teatro', 'menu', '/tipologia/musica-e-teatro/index.json'])
+    menu | ('Teche Rai {bold storia}', ['/techerai', 'menu', '/tipologia/techerai/index.json'])
+    menu | ('Learning {bold}', ['/learning', 'menu', '/tipologia/learning/index.json'])
+    menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
+== controllo di tutte le sezioni
+   SEZIONE Dirette -> OK 15 
+   SEZIONE Rai 1 -> OK 20 
+   SEZIONE Rai 2 -> OK 17 
+   SEZIONE Rai 3 -> OK 11 
+   SEZIONE str13 28 str30 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 32 
+   SEZIONE Rai 2 -> OK 33 
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE str12 27 str30 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 31 
+   SEZIONE Rai 2 -> OK 30 
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE str11 26 str30 -> SOTTOMENU  
+   SEZIONE Replay -> SOTTOMENU  
+   SEZIONE Novità -> OK 24 
+   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Stregati da Halloween -> OK 18 
+   SEZIONE Film -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 25 
+   SEZIONE Serie Original RaiPlay -> OK 24 
+   SEZIONE Serie tratte da libri -> OK 25 
+   SEZIONE Serie italiane -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Drama -> OK 14 
+   SEZIONE Serie Original RaiPlay -> OK 24 
+   SEZIONE Serie Internazionali -> SOTTOMENU  
+   SEZIONE Intrattenimento -> OK 26 
+   SEZIONE Territori e itinerari -> OK 32 
+   SEZIONE Approfondimento -> OK 25 
+   SEZIONE Programmi TV -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 28 
+   SEZIONE Docu-serie Original -> OK 28 
+   SEZIONE Documentari Original -> OK 25 
+   SEZIONE Documentari -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 27 
+   SEZIONE Halloween night: arrivano le tenebre! -> OK 17 
+   SEZIONE Cinema bambini -> OK 24 
+   SEZIONE Bambini -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 36 
+   SEZIONE Next Star -> OK 21 
+   SEZIONE Un mondo di fumetti -> OK 15 
+   SEZIONE Teen -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 23 
+   SEZIONE Il teatro di Eduardo -> OK 25 
+   SEZIONE Musica classica -> OK 24 
+   SEZIONE Musica e Teatro -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 24 
+   SEZIONE BiblioTeche -> OK 24 
+   SEZIONE Sceneggiati -> VUOTA  
+   SEZIONE Programmi -> VUOTA  
+   SEZIONE Varietà -> VUOTA  
+   SEZIONE Generi -> SOTTOMENU SENZA TITOLI  
+   SEZIONE Teche Rai -> SOTTOMENU  
+   SEZIONE Learning -> ERRORE JSONDecodeError
+   SEZIONE L'offerta -> OK 55 
+   SEZIONE Rai Italy -> SOTTOMENU  
+   SEZIONE txt70741 … -> OK 8 
+SEZIONI: 13 ok su 14
+   SEZIONE SENZA TITOLI: Learning | ERRORE JSONDecodeError
 VERDETTO: ARRIVA AL VIDEO

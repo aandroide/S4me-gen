@@ -7,22 +7,22 @@ Canale eurostreaming | indirizzo https://eurostream.fun
       peliculas | • Archivio | https://eurostream.fun/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | All Creatures Great and Small | https://eurostream.fun/all-creatures-great-and-small/
-      episodios | Phony | https://eurostream.fun/phony/
-      episodios | Tommy & Tuppence | https://eurostream.fun/tommy-tuppence/
-      episodios | Amore sotto copertura | https://eurostream.fun/amore-sotto-copertura/
+      episodios | All Creatures Great and Small | https://eurostream.fit/all-creatures-great-and-small/
+      episodios | Phony | https://eurostream.fit/phony/
+      episodios | Tommy & Tuppence | https://eurostream.fit/tommy-tuppence/
+      episodios | Amore sotto copertura | https://eurostream.fit/amore-sotto-copertura/
 == episodios su "All Creatures Great and Small"
    -> 66 voci
-      findvideos | 1x01 - Devi avere un sogno  | https://eurostream.fun/all-creatures-great-and-small/
-      findvideos | 1x02 - Un altro Farnon?  | https://eurostream.fun/all-creatures-great-and-small/
-      findvideos | 1x03 - Ce ne vogliono di tutti i colori  | https://eurostream.fun/all-creatures-great-and-small/
-      findvideos | 1x04 - L’amore per i vitelli  | https://eurostream.fun/all-creatures-great-and-small/
+      findvideos | 1x01 - Devi avere un sogno  | https://eurostream.fit/all-creatures-great-and-small/
+      findvideos | 1x02 - Un altro Farnon?  | https://eurostream.fit/all-creatures-great-and-small/
+      findvideos | 1x03 - Ce ne vogliono di tutti i colori  | https://eurostream.fit/all-creatures-great-and-small/
+      findvideos | 1x04 - L’amore per i vitelli  | https://eurostream.fit/all-creatures-great-and-small/
 == findvideos su "1x01 - Devi avere un sogno "
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
   File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
@@ -38,22 +38,22 @@ Exception: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5
 
 == lista "• Anime"
    -> 19 voci
-      episodios | Adventure Time: Side Quests | https://eurostream.fun/adventure-time-side-quests/
-      episodios | Avatar: I Sette Rifugi | https://eurostream.fun/avatar-sette-rifugi/
-      episodios | Willy il Coyote e Beep Beep | https://eurostream.fun/willy-il-coyote-e-beep-beep/
-      episodios | The Doomies | https://eurostream.fun/the-doomies/
+      episodios | Adventure Time: Side Quests | https://eurostream.fit/adventure-time-side-quests/
+      episodios | Avatar: I Sette Rifugi | https://eurostream.fit/avatar-sette-rifugi/
+      episodios | Willy il Coyote e Beep Beep | https://eurostream.fit/willy-il-coyote-e-beep-beep/
+      episodios | The Doomies | https://eurostream.fit/the-doomies/
 == episodios su "Adventure Time: Side Quests"
    -> 41 voci
-      findvideos | 1x01 - Bros & Arrows  | https://eurostream.fun/adventure-time-side-quests/
-      findvideos | 1x02 - Dandy Bug  | https://eurostream.fun/adventure-time-side-quests/
-      findvideos | 1x03 - Cursed Words  | https://eurostream.fun/adventure-time-side-quests/
-      findvideos | 1x04 - Rescue Princess  | https://eurostream.fun/adventure-time-side-quests/
+      findvideos | 1x01 - Bros & Arrows  | https://eurostream.fit/adventure-time-side-quests/
+      findvideos | 1x02 - Dandy Bug  | https://eurostream.fit/adventure-time-side-quests/
+      findvideos | 1x03 - Cursed Words  | https://eurostream.fit/adventure-time-side-quests/
+      findvideos | 1x04 - Rescue Princess  | https://eurostream.fit/adventure-time-side-quests/
 == findvideos su "1x01 - Bros & Arrows "
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
   File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
@@ -69,22 +69,22 @@ Exception: Not un-shortened link: https://clicka.cc/tv/c4q9u136
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 7x06 - All Creatures Great and Small - Give Us This Day  | https://eurostream.fun/all-creatures-great-and-small/
-      episodios | 1x03 - Phony - Reverse Cuckoo Situation  | https://eurostream.fun/phony/
-      episodios | 1x02 - Tommy & Tuppence - Episode 2  | https://eurostream.fun/tommy-tuppence/
-      episodios | 1x04 - Amore sotto copertura - Episodio 4 | https://eurostream.fun/amore-sotto-copertura/
+      episodios | 7x06 - All Creatures Great and Small - Give Us This Day  | https://eurostream.fit/all-creatures-great-and-small/
+      episodios | 1x03 - Phony - Reverse Cuckoo Situation  | https://eurostream.fit/phony/
+      episodios | 1x02 - Tommy & Tuppence - Episode 2  | https://eurostream.fit/tommy-tuppence/
+      episodios | 1x04 - Amore sotto copertura - Episodio 4 | https://eurostream.fit/amore-sotto-copertura/
 == episodios su "7x06 - All Creatures Great and Small - G"
    -> 66 voci
-      findvideos | 1x01 - Devi avere un sogno  | https://eurostream.fun/all-creatures-great-and-small/
-      findvideos | 1x02 - Un altro Farnon?  | https://eurostream.fun/all-creatures-great-and-small/
-      findvideos | 1x03 - Ce ne vogliono di tutti i colori  | https://eurostream.fun/all-creatures-great-and-small/
-      findvideos | 1x04 - L’amore per i vitelli  | https://eurostream.fun/all-creatures-great-and-small/
+      findvideos | 1x01 - Devi avere un sogno  | https://eurostream.fit/all-creatures-great-and-small/
+      findvideos | 1x02 - Un altro Farnon?  | https://eurostream.fit/all-creatures-great-and-small/
+      findvideos | 1x03 - Ce ne vogliono di tutti i colori  | https://eurostream.fit/all-creatures-great-and-small/
+      findvideos | 1x04 - L’amore per i vitelli  | https://eurostream.fit/all-creatures-great-and-small/
 == findvideos su "1x01 - Devi avere un sogno "
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
   File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
@@ -99,4 +99,15 @@ Traceback (most recent call last):
 Exception: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5
 
 Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (3)
+    anime | '/category/anime-cartoni-animati/'
+    mix | ('Aggiornamenti {bullet bold} {TV}', ['/nuovi-ep-aggiornamento/', 'peliculas', 'newest'])
+    mix | ('Archivio {bullet bold} {TV}', ['/category/serie-tv-archive/', 'peliculas'])
+== controllo di tutte le sezioni
+   SEZIONE • Serie TV -> OK 18 
+   SEZIONE • Anime -> OK 18 
+   SEZIONE • Aggiornamenti -> OK 20 
+   SEZIONE • Archivio -> OK 18 
+   SEZIONE txt70741 … -> OK 11 
+SEZIONI: 5 ok su 5
 VERDETTO: SI FERMA A: findvideos su "1x01 - Devi avere un sogno "

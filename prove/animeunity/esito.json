@@ -1,0 +1,690 @@
+{
+ "canale": "animeunity",
+ "host": "https://www.animeunity.to",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 9
+  },
+  {
+   "passo": "lista \"• Anime\"",
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "genres su \"Genere\"",
+   "esito": "OK",
+   "voci": 46
+  },
+  {
+   "passo": "peliculas su \"Action\"",
+   "esito": "ERRORE",
+   "errore": "                                                                          ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 165, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
+  },
+  {
+   "passo": "lista \"•• Film\"",
+   "esito": "OK",
+   "voci": 5
+  },
+  {
+   "passo": "genres su \"Genere\"",
+   "esito": "OK",
+   "voci": 46
+  },
+  {
+   "passo": "peliculas su \"Action\"",
+   "esito": "ERRORE",
+   "errore": "                                                                          ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 165, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
+  },
+  {
+   "passo": "lista \"•• TV\"",
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "genres su \"Genere\"",
+   "esito": "OK",
+   "voci": 46
+  },
+  {
+   "passo": "peliculas su \"Action\"",
+   "esito": "ERRORE",
+   "errore": "                                                                          ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 165, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [
+  "top | ('Ultimi Episodi', ['', 'news'])",
+  "menu | ('Anime {bullet bold}', ['', 'menu', {}, 'tvshow'])",
+  "menu | ('Film {submenu}', ['', 'menu', {'type': 'Movie'}])",
+  "menu | ('TV {submenu}', ['', 'menu', {'type': 'TV'}, 'tvshow'])",
+  "menu | ('OVA {submenu} {tv}', ['', 'menu', {'type': 'OVA'}, 'tvshow'])",
+  "menu | ('ONA {submenu} {tv}', ['', 'menu', {'type': 'ONA'}, 'tvshow'])",
+  "menu | ('Special {submenu} {tv}', ['', 'menu', {'type': 'Special'}, 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Ultimi Episodi",
+   "azione": "news",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "• Anime",
+   "azione": "peliculas",
+   "esito": "ERRORE KeyError",
+   "pagine": [
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    }
+   ]
+  },
+  {
+   "voce": "•• Film",
+   "azione": "peliculas",
+   "esito": "ERRORE KeyError",
+   "pagine": [
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    }
+   ]
+  },
+  {
+   "voce": "•• TV",
+   "azione": "peliculas",
+   "esito": "ERRORE KeyError",
+   "pagine": [
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    }
+   ]
+  },
+  {
+   "voce": "•• OVA",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 6,
+   "figli": [
+    {
+     "voce": "Tutti",
+     "azione": "peliculas",
+     "esito": "ERRORE KeyError",
+     "pagine": [
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      }
+     ]
+    },
+    {
+     "voce": "ITA",
+     "azione": "peliculas",
+     "esito": "ERRORE KeyError",
+     "pagine": [
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      }
+     ]
+    },
+    {
+     "voce": "Genere",
+     "azione": "genres",
+     "esito": "SOTTOMENU SENZA TITOLI",
+     "sottovoci": 46,
+     "figli": [
+      {
+       "voce": "Action",
+       "azione": "peliculas",
+       "esito": "ERRORE KeyError",
+       "pagine": [
+        {
+         "url": "https://www.animeunity.to/archivio/get-animes",
+         "status": 302,
+         "byte": 521,
+         "titolo_pagina": "302 Found"
+        }
+       ]
+      },
+      {
+       "voce": "Adventure",
+       "azione": "peliculas",
+       "esito": "ERRORE KeyError",
+       "pagine": [
+        {
+         "url": "https://www.animeunity.to/archivio/get-animes",
+         "status": 302,
+         "byte": 521,
+         "titolo_pagina": "302 Found"
+        }
+       ]
+      },
+      {
+       "voce": "Avant Garde",
+       "azione": "peliculas",
+       "esito": "ERRORE KeyError",
+       "pagine": [
+        {
+         "url": "https://www.animeunity.to/archivio/get-animes",
+         "status": 302,
+         "byte": 521,
+         "titolo_pagina": "302 Found"
+        }
+       ]
+      }
+     ],
+     "pagine": [
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      },
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      },
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      }
+     ]
+    }
+   ],
+   "pagine": [
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    },
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    },
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    }
+   ]
+  },
+  {
+   "voce": "•• ONA",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 6,
+   "figli": [
+    {
+     "voce": "Tutti",
+     "azione": "peliculas",
+     "esito": "ERRORE KeyError",
+     "pagine": [
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      }
+     ]
+    },
+    {
+     "voce": "ITA",
+     "azione": "peliculas",
+     "esito": "ERRORE KeyError",
+     "pagine": [
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      }
+     ]
+    },
+    {
+     "voce": "Genere",
+     "azione": "genres",
+     "esito": "SOTTOMENU SENZA TITOLI",
+     "sottovoci": 46,
+     "figli": [
+      {
+       "voce": "Action",
+       "azione": "peliculas",
+       "esito": "ERRORE KeyError",
+       "pagine": [
+        {
+         "url": "https://www.animeunity.to/archivio/get-animes",
+         "status": 302,
+         "byte": 521,
+         "titolo_pagina": "302 Found"
+        }
+       ]
+      },
+      {
+       "voce": "Adventure",
+       "azione": "peliculas",
+       "esito": "ERRORE KeyError",
+       "pagine": [
+        {
+         "url": "https://www.animeunity.to/archivio/get-animes",
+         "status": 302,
+         "byte": 521,
+         "titolo_pagina": "302 Found"
+        }
+       ]
+      },
+      {
+       "voce": "Avant Garde",
+       "azione": "peliculas",
+       "esito": "ERRORE KeyError",
+       "pagine": [
+        {
+         "url": "https://www.animeunity.to/archivio/get-animes",
+         "status": 302,
+         "byte": 521,
+         "titolo_pagina": "302 Found"
+        }
+       ]
+      }
+     ],
+     "pagine": [
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      },
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      },
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      }
+     ]
+    }
+   ],
+   "pagine": [
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    },
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    },
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    }
+   ]
+  },
+  {
+   "voce": "•• Special",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 6,
+   "figli": [
+    {
+     "voce": "Tutti",
+     "azione": "peliculas",
+     "esito": "ERRORE KeyError",
+     "pagine": [
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      }
+     ]
+    },
+    {
+     "voce": "ITA",
+     "azione": "peliculas",
+     "esito": "ERRORE KeyError",
+     "pagine": [
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      }
+     ]
+    },
+    {
+     "voce": "Genere",
+     "azione": "genres",
+     "esito": "SOTTOMENU SENZA TITOLI",
+     "sottovoci": 46,
+     "figli": [
+      {
+       "voce": "Action",
+       "azione": "peliculas",
+       "esito": "ERRORE KeyError",
+       "pagine": [
+        {
+         "url": "https://www.animeunity.to/archivio/get-animes",
+         "status": 302,
+         "byte": 521,
+         "titolo_pagina": "302 Found"
+        }
+       ]
+      },
+      {
+       "voce": "Adventure",
+       "azione": "peliculas",
+       "esito": "ERRORE KeyError",
+       "pagine": [
+        {
+         "url": "https://www.animeunity.to/archivio/get-animes",
+         "status": 302,
+         "byte": 521,
+         "titolo_pagina": "302 Found"
+        }
+       ]
+      },
+      {
+       "voce": "Avant Garde",
+       "azione": "peliculas",
+       "esito": "ERRORE KeyError",
+       "pagine": [
+        {
+         "url": "https://www.animeunity.to/archivio/get-animes",
+         "status": 302,
+         "byte": 521,
+         "titolo_pagina": "302 Found"
+        }
+       ]
+      }
+     ],
+     "pagine": [
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      },
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      },
+      {
+       "url": "https://www.animeunity.to/archivio/get-animes",
+       "status": 302,
+       "byte": 521,
+       "titolo_pagina": "302 Found"
+      }
+     ]
+    }
+   ],
+   "pagine": [
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    },
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    },
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.animeunity.to/archivio/get-animes",
+     "status": 302,
+     "byte": 521,
+     "titolo_pagina": "302 Found"
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "1 ok su 8",
+ "rete": [
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/archivio",
+   "status": 200,
+   "byte": 151193,
+   "secondi": 1.2,
+   "titolo_pagina": "AnimeUnity ~ Archivio",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio",
+   "status": 200,
+   "byte": 151193,
+   "secondi": 1.7,
+   "titolo_pagina": "AnimeUnity ~ Archivio",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.4,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.4,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+   "status": 200,
+   "byte": 253565,
+   "secondi": 1.3,
+   "titolo_pagina": "AnimeUnity ~ Streaming &amp; Download di Anime in SUB ITA/ITA",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://www.animeunity.to",
+   "status": 200,
+   "byte": 253565,
+   "secondi": 1.6,
+   "titolo_pagina": "AnimeUnity ~ Streaming &amp; Download di Anime in SUB ITA/ITA",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.4,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.4,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.4,
+   "titolo_pagina": "302 Found",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.2,
+   "titolo_pagina": "302 Found"
+  },
+  {
+   "url": "https://www.animeunity.to/archivio/get-animes",
+   "status": 302,
+   "byte": 521,
+   "secondi": 0.4,
+   "titolo_pagina": "302 Found"
+  }
+ ],
+ "verdetto": "SI FERMA A: peliculas su \"Action\""
+}

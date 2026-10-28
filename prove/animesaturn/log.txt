@@ -16,8 +16,24 @@ Canale animesaturn | indirizzo https://www.animesaturn.net
       findvideos | 1 | https://www.animesaturn.net/episode/hack-g-u-returner-8PrAP/ep-1
 == findvideos su "1"
    -> 1 voci
-      play | Server principale | https://play.saturncdn.net/embed/45138?token=158a2a3ae9ac2ee22bacd62ad1cd3d1d&expires=1793174015
+      play | Server principale | https://play.saturncdn.net/embed/45138?token=1c9b873ae083ea93d04ef00f961a5c44&expires=1793230535
    play del canale -> directo https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token
 == risoluzione directo https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token
    -> VIDEO OK 206 video/mp4 
+== voci dichiarate in mainlist (6)
+    menu | ('Anime', ['/az-list', 'peliculas', 'az'])
+    menu | ('ITA', ['/filter?languages=it', 'peliculas', 'filter'])
+    menu | ('SUB-ITA', ['/filter?languages=jp', 'peliculas', 'filter'])
+    menu | ('Più Votati', ['/filter?sort=best_rated', 'peliculas', 'filter'])
+    menu | ('In Corso', ['/ongoing', 'peliculas', 'ongoing'])
+    menu | ('Ultimi Episodi', ['/newest', 'peliculas', 'updated'])
+== controllo di tutte le sezioni
+   SEZIONE Anime -> OK 30 
+   SEZIONE ITA -> OK 30 
+   SEZIONE SUB-ITA -> OK 30 
+   SEZIONE Più Votati -> OK 30 
+   SEZIONE In Corso -> OK 30 
+   SEZIONE Ultimi Episodi -> OK 30 
+   SEZIONE txt70741 … -> OK 7 
+SEZIONI: 7 ok su 7
 VERDETTO: ARRIVA AL VIDEO

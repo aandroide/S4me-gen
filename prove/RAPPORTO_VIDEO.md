@@ -1,12 +1,17 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 9, SI FERMA AL SERVER O AL VIDEO 1, SI FERMA PRIMA DEL VIDEO 44, SENZA ESITO 3
+Riepilogo: ARRIVA AL VIDEO 14, SI FERMA AL SERVER O AL VIDEO 2, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
 
-## ARRIVA AL VIDEO (9)
+## ARRIVA AL VIDEO (14)
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.autos | verdetto: ARRIVA AL VIDEO
+- passo "check su "Solo Noi. Una stagione da Double "": VUOTO 
 - server vixsrc: VIDEO OK m3u8 200
+
+### altadefinizioneclick
+Sito: https://altadefinizionex.vip | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
 
 ### animesaturn
 Sito: https://www.animesaturn.net | verdetto: ARRIVA AL VIDEO
@@ -16,17 +21,30 @@ Sito: https://www.animesaturn.net | verdetto: ARRIVA AL VIDEO
 Sito: https://www.animeworld.ac | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
 
+### casacinema
+Sito: https://casa-cinema.boats | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
+
+### cineblog001
+Sito: https://cineblog001.men | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
+
 ### cinetecadibologna
 Sito: http://cinestore.cinetecadibologna.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/x-flv
 
-### ilgeniodellostreaming_cam
-Sito: https://il-geniodellostreaming.ink | verdetto: ARRIVA AL VIDEO
+### guardaseriecam
+Sito: https://guardaseriex.best | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
-### la7
+### guardaserieicu
 Sito:  | verdetto: ARRIVA AL VIDEO
-- server directo: VIDEO OK m3u8 206
+- server vidxgo: VIDEO OK m3u8 200
+
+### ilgeniodellostreaming_cam
+Sito: https://il-geniodellostreaming.ink | verdetto: ARRIVA AL VIDEO
+- passo "check su "Solo Noi. Una stagione da Double"": VUOTO 
+- server vidxgo: VIDEO OK m3u8 200
 
 ### raiplay
 Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
@@ -36,19 +54,27 @@ Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
 Sito: https://streamingcommunityz.day | verdetto: ARRIVA AL VIDEO
 - server streamingcommunityws: VIDEO OK m3u8 200
 
+### tantifilm
+Sito: https://tanti-film.garden | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
+
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
 - passo "findvideos su "1x01 - Maomao"": VUOTO 
 - server voe: VIDEO OK m3u8 200
 
-## SI FERMA AL SERVER O AL VIDEO (1)
+## SI FERMA AL SERVER O AL VIDEO (2)
 
 ### cineblog01
 Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
 - server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
 - server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
 
-## SI FERMA PRIMA DEL VIDEO (44)
+### hd4me
+Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE
+- server mega: SERVER NON RISOLVE 
+
+## SI FERMA PRIMA DEL VIDEO (39)
 
 ### 1337x
 Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
@@ -56,19 +82,14 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
+Sito:  | verdetto: SI FERMA A: lista ""Best Indie of 2026" — Featuring Metric,"
+- passo "lista ""Best Indie of 2026" — Featuring Metric,"": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
 - passo "lista "Film "": ERRORE kh/addon/core/support.py", line 522, in wrapper     args = func(*args)            ^^^^^^^^^^^ TypeError: '>' not supported between instances of 'str' and 'int' 
 - passo "lista "•• Film al cinema"": ERRORE kh/addon/core/support.py", line 522, in wrapper     args = func(*args)            ^^^^^^^^^^^ TypeError: '>' not supported between instances of 'str' and 'int' 
 - passo "lista "Generi "": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
-
-### altadefinizioneclick
-Sito: https://altadefinizionex.vip | verdetto: SI FERMA A: lista "• Film"
-- passo "lista "• Film"": ERRORE Error: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py) 
-- passo "lista "•• Generi"": ERRORE Error: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py) 
-- passo "lista "• Serie TV"": ERRORE Error: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py) 
 
 ### altadefinizionecommunity
 Sito: https://altaregistrazione.net | verdetto: SI FERMA A: lista "• Film"
@@ -88,6 +109,12 @@ Sito: https://www.animeforce.it | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• In Corso"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• Completi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
+### animeunity
+Sito: https://www.animeunity.to | verdetto: SI FERMA A: peliculas su "Action"
+- passo "peliculas su "Action"": ERRORE payload).json['records']               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^ KeyError: 'records' 
+- passo "peliculas su "Action"": ERRORE payload).json['records']               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^ KeyError: 'records' 
+- passo "peliculas su "Action"": ERRORE payload).json['records']               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^ KeyError: 'records' 
+
 ### animeuniverse
 Sito:  | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "• Anime"": VUOTO 
@@ -101,23 +128,11 @@ Sito: https://aniplay.co | verdetto: SI FERMA A: lista "• Anime"
 ### bt4g
 Sito: https://bt4gprx.com | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
 
-### casacinema
-Sito: https://casa-cinema.boats | verdetto: SI FERMA A: findvideos su "La fine di Oak Street "
-- passo "findvideos su "La fine di Oak Street "": ERRORE Error: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py) 
-- passo "findvideos su "Shaun, vita da pecora - Operazione Z.U.C"": ERRORE Error: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py) 
-- passo "episodios su "Minimum Wage "": ERRORE Error: cannot import name 'appengine' from 'urllib3.contrib' (/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/contrib/__init__.py) 
-
 ### cb01anime
 Sito: https://cb01new.one | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "• Anime"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• Genere"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• Per Lettera"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
-
-### cineblog001
-Sito: https://cineblog001.men | verdetto: SI FERMA A: findvideos su "Shaun, vita da pecora - Operazione Z.U.C"
-- passo "findvideos su "Shaun, vita da pecora - Operazione Z.U.C"": VUOTO 
-- passo "findvideos su "Minimum Wage"": VUOTO 
-- passo "findvideos su "Truth & Treason"": VUOTO 
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe | verdetto: SI FERMA A: lista "• Film"
@@ -138,10 +153,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.fun | verdetto: SI FERMA A: episodios su "Phony"
-- passo "episodios su "Phony"": VUOTO 
-- passo "episodios su "Adventure Time: Side Quests"": VUOTO 
-- passo "lista "• Aggiornamenti"": VUOTO 
+Sito: https://eurostream.fun | verdetto: SI FERMA A: findvideos su "1x01 - Devi avere un sogno "
+- passo "findvideos su "1x01 - Devi avere un sogno "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5 
+- passo "findvideos su "1x01 - Bros & Arrows "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/c4q9u136 
+- passo "findvideos su "1x01 - Devi avere un sogno "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -161,24 +176,11 @@ Sito: https://film-streaming-ita.cam | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "•• Al Cinema"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• Ultimi Inseriti"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
-### guardaseriecam
-Sito: https://guardaseriex.best | verdetto: SI FERMA A: episodios su "Grande de España"
-- passo "episodios su "Grande de España"": VUOTO 
-
 ### guardaserieclick
 Sito:  | verdetto: SI FERMA A: lista "• Serie TV"
 - passo "lista "• Serie TV"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• Aggiornamenti"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• Generi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
-
-### guardaserieicu
-Sito:  | verdetto: SI FERMA A: episodios su "Grande de España"
-- passo "episodios su "Grande de España"": VUOTO 
-- passo "episodios su "House of the Dragon (Game of Thrones)"": VUOTO 
-
-### hd4me
-Sito: https://hd4me.net | verdetto: SI FERMA A: lista "• Film"
-- passo "lista "• Film"": ERRORE p/kh/addon/core/support.py", line 522, in wrapper     args = func(*args)            ^^^^^^^^^^^ ValueError: invalid literal for int() with base 10: '2005-2012' 
 
 ### ilcorsaronero
 Sito: https://ilcorsaronero.link | verdetto: SI FERMA A: lista "Film"
@@ -207,6 +209,11 @@ Sito: https://www.justwatch.com | verdetto: SI FERMA A: findvideos su "Fight Clu
 - passo "findvideos su "Fight Club"": VUOTO 
 - passo "findvideos su "Fight Club"": VUOTO 
 
+### la7
+Sito:  | verdetto: SI FERMA A: lista "• Programmi TV"
+- passo "lista "• Programmi TV"": VUOTO 
+- passo "lista "• Teche La7"": VUOTO 
+
 ### lordchannel
 Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Film"": VUOTO 
@@ -214,9 +221,9 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Serie TV"": VUOTO 
 
 ### mediasetplay
-Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Transformers - La vendetta del caduto"
-- passo "findvideos su "Transformers - La vendetta del caduto"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Buongiorno papà"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Bullet train"
+- passo "findvideos su "Bullet train"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Bullet train"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "Spy Game"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
@@ -257,11 +264,6 @@ Sito:  | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Film"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "• Serie TV"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
-### tantifilm
-Sito: https://tanti-film.garden | verdetto: SI FERMA A: check su "Shaun, vita da pecora - Operazione Z.U.C"
-- passo "check su "Shaun, vita da pecora - Operazione Z.U.C"": VUOTO 
-- passo "check su "Shaun, vita da pecora - Operazione Z.U.C"": VUOTO 
-
 ### thepiratebay
 Sito:  | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
 
@@ -279,6 +281,6 @@ Sito:  | verdetto: SI FERMA A: lista "Visibile solo dall'Italia"
 Sito:  | verdetto: SI FERMA A: mainlist
 - passo "mainlist": ERRORE annel=nome, action='mainlist')))                                      ^^^^^^^^^^^ AttributeError: module 'channels.youtube_channel' has no attribute 'mainlist' 
 
-## SENZA ESITO (3)
+## SENZA ESITO (2)
 
-Il tempo e finito prima di concludere: animeunity discoveryplus paramount
+Il tempo e finito prima di concludere: discoveryplus paramount

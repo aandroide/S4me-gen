@@ -6,4 +6,24 @@ Canale italiafilm | indirizzo https://italia-film.lifestyle
       list | Al Cinema  | https://italia-film.lifestyle/cinema/
       list | Sub-ITA  | https://italia-film.lifestyle/sub-ita/
 Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (5)
+    menu | ('Film', ['/film/', 'list', 'film'])
+    menu | ('Per Genere', ['', 'list', 'genere'])
+    menu | ('Al Cinema', ['/cinema/', 'list', 'film'])
+    menu | ('Sub-ITA', ['/sub-ita/', 'list', 'film'])
+    menu | ('Top del Mese', ['/top-del-mese.html', 'list', 'film'])
+== controllo di tutte le sezioni
+   SEZIONE Film -> ERRORE WebErrorException
+   SEZIONE Per Genere -> ERRORE WebErrorException
+   SEZIONE Al Cinema -> ERRORE WebErrorException
+   SEZIONE Sub-ITA -> ERRORE WebErrorException
+   SEZIONE Top del Mese -> ERRORE WebErrorException
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://italia-film.lifestyle/?story=avatar&do=search&subaction=search&search_start=', 'status': 'Traceback (most recent call last):\n  File "/tmp/kh/addon/core/httptools.py", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get(\'follow_redirects\', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 542, in get\n    return self.request(\'GET\', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/kh/addon/lib/requests/sessions.py", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: \'NoneType\' object has no attribute \'elapsed\'\n', 'byte': 0, 'titolo_pagina': ''}
+SEZIONI: 0 ok su 6
+   SEZIONE SENZA TITOLI: Film | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: Per Genere | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: Al Cinema | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: Sub-ITA | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: Top del Mese | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
 VERDETTO: SI FERMA A: ultimo passo, nessuna voce da riprodurre

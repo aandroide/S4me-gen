@@ -18,7 +18,7 @@
    "voci": 26
   },
   {
-   "passo": "check su \"Shaun, vita da pecora - Operazione Z.U.C\"",
+   "passo": "check su \"Solo Noi. Una stagione da Double \"",
    "esito": "OK",
    "voci": 2
   }
@@ -26,40 +26,152 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/36841161",
-   "finale": "http://127.0.0.1:35929/hls/36841161/master.m3u8",
+   "url": "https://v.vidxgo.co/tm1785148",
+   "finale": "http://127.0.0.1:36249/hls/tm1785148/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
  ],
+ "menu_dichiarato": [
+  "top | ('Generi', ['', 'genres'])",
+  "film | '/film'",
+  "tvshow | '/serie-tv/'"
+ ],
+ "sezioni": [
+  {
+   "voce": "Generi",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 40,
+   "figli": [
+    {
+     "voce": "Animazione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 25
+    },
+    {
+     "voce": "Avventura",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 25
+    },
+    {
+     "voce": "Biografico",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    }
+   ]
+  },
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 33
+  },
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 25
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 11
+  }
+ ],
+ "sezioni_riepilogo": "4 ok su 4",
  "rete": [
   {
    "url": "https://tanti-film.garden",
    "status": 200,
    "byte": 16470,
-   "secondi": 0.4,
+   "secondi": 0.8,
+   "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/01.html"
   },
   {
    "url": "https://tanti-film.garden/prossimamente/",
    "status": 200,
-   "byte": 71494,
-   "secondi": 0.2,
+   "byte": 71356,
+   "secondi": 0.7,
+   "titolo_pagina": "Prossimamente al Cinema",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming-hd.html",
+   "url": "https://tanti-film.garden/guarda/35339-solo-noi-una-stagione-da-double-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 29413,
-   "secondi": 0.2,
+   "byte": 28382,
+   "secondi": 0.5,
+   "titolo_pagina": "Solo Noi. Una stagione da Double (2026) streaming | TantiFILM",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://tanti-film.garden/guarda/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-streaming-hd.html",
+   "url": "https://tanti-film.garden/guarda/35339-solo-noi-una-stagione-da-double-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 29413,
-   "secondi": 0.2,
+   "byte": 28382,
+   "secondi": 0.5,
+   "titolo_pagina": "Solo Noi. Una stagione da Double (2026) streaming | TantiFILM",
    "file": "pagine/04.html"
+  },
+  {
+   "url": "https://tanti-film.garden",
+   "status": 200,
+   "byte": 16470,
+   "secondi": 0.5,
+   "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://tanti-film.garden/animazione/",
+   "status": 200,
+   "byte": 72415,
+   "secondi": 0.7,
+   "titolo_pagina": "Animazione guarda Gratis | TantiFILM",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://tanti-film.garden/avventura/",
+   "status": 200,
+   "byte": 72207,
+   "secondi": 0.2,
+   "titolo_pagina": "Avventura guarda Gratis | TantiFILM",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://tanti-film.garden/biografico/",
+   "status": 200,
+   "byte": 69662,
+   "secondi": 0.2,
+   "titolo_pagina": "Biografico guarda Gratis | TantiFILM",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://tanti-film.garden/film",
+   "status": 200,
+   "byte": 89816,
+   "secondi": 0.4,
+   "titolo_pagina": "Guarda Tanti Film Streaming in Italiano | TantiFILM Gratis",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://tanti-film.garden/serie-tv/",
+   "status": 200,
+   "byte": 72855,
+   "secondi": 0.2,
+   "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://tanti-film.garden/?story=avatar&do=search&subaction=search",
+   "status": 200,
+   "byte": 57323,
+   "secondi": 0.3,
+   "titolo_pagina": "Site search &raquo; TantiFilm (2026) - Guarda Film Streaming con Tanti film",
+   "file": "pagine/11.html"
   }
  ],
  "verdetto": "ARRIVA AL VIDEO"

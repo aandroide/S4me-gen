@@ -5,10 +5,10 @@ Canale vvvvid | indirizzo
       channel_config | txt60587 %s | 
 == lista "Visibile solo dall'Italia"
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 164, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 166, in <lambda>
     lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/tmp/kh/addon/channels/vvvvid.py", line 116, in peliculas
@@ -20,4 +20,37 @@ Traceback (most recent call last):
 NameError: name 'payload' is not defined
 
 Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (28)
+    anime | '/vvvvid/ondemand/anime/'
+    anime | ('Popolari', ['/vvvvid/ondemand/anime/', 'peliculas', 'channel/10002/last/'])
+    anime | ('Nuove Uscite', ['/vvvvid/ondemand/anime/', 'peliculas', 'channel/10007/last/'])
+    anime | ('Generi', ['/vvvvid/ondemand/anime/', 'peliculas', 'channel/10004/last/?category='])
+    anime | ('A-Z', ['/vvvvid/ondemand/anime/', 'peliculas', 'channel/10003/last/?filter='])
+    film | '/vvvvid/ondemand/film/'
+    film | ('Popolari', ['/vvvvid/ondemand/film/', 'peliculas', 'channel/10002/last/'])
+    film | ('Nuove Uscite', ['/vvvvid/ondemand/film/', 'peliculas', 'channel/10007/last/'])
+    film | ('Generi', ['/vvvvid/ondemand/film/', 'peliculas', 'channel/10004/last/?category='])
+    film | ('A-Z', ['/vvvvid/ondemand/film/', 'peliculas', 'channel/10003/last/?filter='])
+    tvshow | '/vvvvid/ondemand/series/'
+    tvshow | ('Popolari', ['/vvvvid/ondemand/series/', 'peliculas', 'channel/10002/last/'])
+    tvshow | ('Nuove Uscite', ['/vvvvid/ondemand/series/', 'peliculas', 'channel/10007/last/'])
+    tvshow | ('Generi', ['/vvvvid/ondemand/series/', 'peliculas', 'channel/10004/last/?category='])
+    tvshow | ('A-Z', ['/vvvvid/ondemand/series/', 'peliculas', 'channel/10003/last/?filter='])
+    show | ('Show {bold} {tv}', ['/vvvvid/ondemand/show/', 'peliculas', '', 'tvshow'])
+    show | ('Popolari {submenu} {tv}', ['/vvvvid/ondemand/show/', 'peliculas', 'channel/10002/last/', 'tvshow'])
+    show | ('Nuove Uscite {submenu} {tv}', ['/vvvvid/ondemand/show/', 'peliculas', 'channel/10007/last/', 'tvshow'])
+    show | ('Generi {submenu} {tv}', ['/vvvvid/ondemand/show/', 'peliculas', 'channel/10004/last/?category=', 'tvshow'])
+    show | ('A-Z {submenu} {tv}', ['/vvvvid/ondemand/show/', 'peliculas', 'channel/10003/last/?filter=', 'tvshow'])
+    show | ('Cerca Show... {bold submenu} {tv}', ['/vvvvid/ondemand/show/', 'search', '', 'tvshow'])
+    kids | ('Kids {bold}', ['/vvvvid/ondemand/kids/', 'peliculas', '', 'tvshow'])
+    kids | ('Popolari {submenu} {kids}', ['/vvvvid/ondemand/kids/', 'peliculas', 'channel/10002/last/', 'tvshow'])
+    kids | ('Nuove Uscite {submenu} {kids}', ['/vvvvid/ondemand/kids/', 'peliculas', 'channel/10007/last/', 'tvshow'])
+    kids | ('Generi {submenu} {kids}', ['/vvvvid/ondemand/kids/', 'peliculas', 'channel/10004/last/?category=', 'tvshow']
+    kids | ('A-Z {submenu} {kids}', ['/vvvvid/ondemand/kids/', 'peliculas', 'channel/10003/last/?filter=', 'tvshow'])
+    kids | ('Cerca Kids... {bold submenu} {kids}', ['/vvvvid/ondemand/kids/', 'search', '', 'tvshow'])
+    Top | ("Visibile solo dall'Italia {bold}", [])
+== controllo di tutte le sezioni
+   SEZIONE Visibile solo dall'Italia -> ERRORE NameError
+SEZIONI: 0 ok su 1
+   SEZIONE SENZA TITOLI: Visibile solo dall'Italia | ERRORE NameError
 VERDETTO: SI FERMA A: lista "Visibile solo dall'Italia"

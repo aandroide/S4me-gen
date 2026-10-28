@@ -7,16 +7,16 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
    -> 141 voci
+      findvideos | Bullet train | https://mediasetinfinity.mediaset.it/movie/bullettrain/bullet-train_F311877201000103
       findvideos | Transformers - La vendetta del caduto | https://mediasetinfinity.mediaset.it/movie/transformerslavendettadelcaduto/transformers-la-vendetta-
       findvideos | Shazam! | https://mediasetinfinity.mediaset.it/movie/shazam/shazam_F309243001000102
       findvideos | Divergent | https://mediasetinfinity.mediaset.it/movie/divergent/divergent_F305721401000102
-      findvideos | Survivor | https://mediasetinfinity.mediaset.it/movie/survivor/survivor_F306762501000102
-== findvideos su "Transformers - La vendetta del caduto"
+== findvideos su "Bullet train"
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
@@ -26,16 +26,16 @@ KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
    -> 21 voci
+      findvideos | Bullet train | https://mediasetinfinity.mediaset.it/movie/bullettrain/bullet-train_F311877201000103
+      findvideos | Simulant - Il futuro è per sempre | https://mediasetinfinity.mediaset.it/movie/simulantilfuturoepersempre/simulant-il-futuro-e-per-sempr
+      findvideos | Bridget Jones's baby | https://mediasetinfinity.mediaset.it/movie/bridgetjonessbaby/bridget-joness-baby_F307645501000102
       findvideos | Buongiorno papà | https://mediasetinfinity.mediaset.it/movie/buongiornopapa/buongiorno-papa_F304256401000101
-      findvideos | Inga Lindstrom - Il matrimonio dimenticato | https://mediasetinfinity.mediaset.it/movie/ingalindstromilmatrimoniodimenticato/inga-lindstrom-il-ma
-      findvideos | Michael Clayton | https://mediasetinfinity.mediaset.it/movie/michaelclayton/michael-clayton_F012167701000102
-      findvideos | Wedding every weekend | https://mediasetinfinity.mediaset.it/movie/weddingeveryweekend/wedding-every-weekend_F31136270100010
-== findvideos su "Buongiorno papà"
+== findvideos su "Bullet train"
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
@@ -51,10 +51,10 @@ KeyError: 'response'
       findvideos | Survivor | https://mediasetinfinity.mediaset.it/movie/survivor/survivor_F306762501000102
 == findvideos su "Spy Game"
 Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 84, in passo
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 146, in <lambda>
+  File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
@@ -63,4 +63,93 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 Nessuna voce da riprodurre trovata
-VERDETTO: SI FERMA A: findvideos su "Transformers - La vendetta del caduto"
+== voci dichiarate in mainlist (23)
+    top | ('Dirette {bold}', ['', 'live'])
+    top | ('Replay {bold}', ['', 'restart'])
+    menu | ('Tutti i Film {submenu}', ['/cinema', 'peliculas', {'uxReference': 'multipleBlockFilm'}, 'movie'])
+    menu | ('Film ultimi arrivi {submenu}', ['/cinema', 'peliculas', {'uxReference': 'filmUltimiArrivi'}, 'movie'])
+    menu | ('Film più visti del giorno {submenu}', ['/cinema', 'peliculas', {'uxReference': 'filmPiuVisti24H'}, 'movie'])
+    menu | ('Film da non perdere {submenu}', ['/cinema', 'peliculas', {'uxReference': 'filmClustering'}, 'movie'])
+    menu | ('Tutte le Serie TV {submenu}', ['/fiction', 'peliculas', {'uxReference': 'fictionSerieTvLibrary'}, 'tvshow'])
+    menu | ('Fiction e Serie Tv del momento {submenu}', ['/fiction', 'peliculas', {'uxReference': 'fictionSerieTvDelMomen
+    menu | ('Le serie di Mediaset Infinity {submenu}', ['/fiction', 'peliculas', {'uxReference': 'fictionOriginals'}, 'tv
+    menu | ('Soap del momento {submenu}', ['/cinema', 'peliculas', {'uxReference': 'fictionSerieTvParamsGenre', 'params':
+    menu | ('TV Movie italiani {submenu}', ['/fiction', 'peliculas', {'uxReference': 'tvMovieFiction'}, 'tvshow'])
+    menu | ('Animazione Made in Japan {submenu}', ['/fiction', 'peliculas', {'uxReference': 'kidsSerieAnimate'}, 'tvshow'
+    menu | ('Serie TV Piu Viste {submenu}', ['/fiction', 'peliculas', {'uxReference': 'serieTvPiuViste24H'}, 'tvshow'])
+    menu | ('Serie Turche {submenu}', ['/fiction', 'peliculas', {'uxReference': 'currentSeasonTurchia'}, 'tvshow'])
+    menu | ('Programmi TV Prima serata{ submenu}', ['/programmitv', 'peliculas', {'uxReference': 'stagioniPrimaSerata'}, 
+    menu | ('Programmi TV Daytime{ submenu}', ['/programmitv', 'peliculas', {'uxReference': 'stagioniDaytime'}, 'tvshow']
+    menu | ('Talent e reality {submenu}', ['/talent', 'peliculas', {'uxReference': 'multipleBlockProgrammiTv', 'userConte
+    menu | ('Kids Boing {submenu}', ['/kids', 'peliculas', {'uxReference': 'kidsBoing'}, 'undefined'])
+    menu | ('Kids Cartoonito {submenu}', ['/kids', 'peliculas', {'uxReference': 'kidsCartoonito'}, 'undefined'])
+    menu | ('Kids Evergreen {submenu}', ['/kids', 'peliculas', {'uxReference': 'kidsMediaset'}, 'undefined'])
+    menu | ('Tutti i Documentari {submenu}', ['/documentari', 'peliculas', {'uxReference': 'multipleBlockDocumentari'}, '
+    menu | ('Documentari più visti {submenu}', ['/documentari', 'peliculas', {'uxReference': 'documentariPiuVisti24H'}, '
+    menu | ('Film Documentari di Focus {submenu}', ['/documentari', 'peliculas', {'uxReference': 'filmDocumentari'}, 'und
+== controllo di tutte le sezioni
+   SEZIONE Dirette -> OK 46 
+   SEZIONE Replay -> OK 23 
+   SEZIONE •• Tutti i Film -> OK 90 
+   SEZIONE •• Film ultimi arrivi -> OK 10 
+   SEZIONE •• Film più visti del giorno -> OK 10 
+   SEZIONE •• Film da non perdere -> OK 20 
+   SEZIONE •• Tutte le Serie TV -> OK 5 
+   SEZIONE The Last Ship 3 -> OK 5 
+   SEZIONE I Simpson -> OK 3 
+   SEZIONE NCIS - Unità anticrimine 13 -> OK 6 
+   SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
+   SEZIONE My Sweet Lie -> OK 5 
+   SEZIONE Innocence -> OK 5 
+   SEZIONE Bitter Sweet - Ingredienti d'amore -> OK 5 
+   SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
+   SEZIONE My Sweet Lie -> OK 5 
+   SEZIONE La promessa -> OK 7 
+   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
+   SEZIONE •• Soap del momento -> SOTTOMENU  
+   SEZIONE •• TV Movie italiani -> OK 20 
+   SEZIONE Dragon Ball Daima -> OK 10 
+   SEZIONE Dragon Ball Super -> OK 30 
+   SEZIONE Captain Tsubasa 2 -> OK 35 
+   SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
+   SEZIONE I Simpson -> OK 3 
+   SEZIONE C.S.I. Scena del crimine 10 -> OK 5 
+   SEZIONE NCIS - Unità anticrimine 13 -> OK 6 
+   SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
+   SEZIONE Racconto di una notte -> OK 4 
+   SEZIONE My Sweet Lie -> OK 5 
+   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
+   SEZIONE •• Serie Turche -> SOTTOMENU  
+   SEZIONE Zelig 30 - Autunno 2026 -> OK 4 
+   SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
+   SEZIONE Tu Si Que Vales 2026 -> OK 6 
+   SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
+   SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
+   SEZIONE Caduta libera 2026/2027 -> OK 4 
+   SEZIONE Amici EDIZIONE 26 -> OK 9 
+   SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
+   SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
+   SEZIONE Amici EDIZIONE 26 -> OK 9 
+   SEZIONE Uomini e Donne 2026/2027 -> OK 10 
+   SEZIONE •• Talent e reality -> SOTTOMENU  
+   SEZIONE Lo straordinario mondo di Gumball -> OK 10 
+   SEZIONE Teen Titans Go! -> OK 8 
+   SEZIONE Lo strano e meraviglioso mondo di Gumball -> OK 3 
+   SEZIONE •• Kids Boing -> SOTTOMENU  
+   SEZIONE Paw Patrol -> OK 5 
+   SEZIONE La casa delle bambole di Gabby -> OK 5 
+   SEZIONE Chi ha sfidato Ninna e Matti? -> OK 15 
+   SEZIONE •• Kids Cartoonito -> SOTTOMENU  
+   SEZIONE C'era una volta... Pollon -> OK 51 
+   SEZIONE Holly e Benji Forever -> OK 52 
+   SEZIONE Marco - Dagli Appennini alle Ande -> OK 32 
+   SEZIONE •• Kids Evergreen -> SOTTOMENU  
+   SEZIONE •• Tutti i Documentari -> OK 15 
+   SEZIONE Segnali dall'universo 2026 -> OK 6 
+   SEZIONE Vietato entrare! - I luoghi più segreti del mondo -> OK 4 
+   SEZIONE Lo sapevi che? 2024 -> OK 25 
+   SEZIONE •• Documentari più visti -> SOTTOMENU  
+   SEZIONE •• Film Documentari di Focus -> OK 20 
+   SEZIONE txt70741 … -> OK 20 
+SEZIONI: 24 ok su 24
+VERDETTO: SI FERMA A: findvideos su "Bullet train"

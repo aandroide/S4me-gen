@@ -6,25 +6,27 @@ Canale la7 | indirizzo
       peliculas | • Programmi TV | https://www.la7.it/tutti-i-programmi
       peliculas | • Teche La7 | https://www.la7.it/la7teche
 == lista "• Programmi TV"
-   -> 203 voci
-      episodios | 100 minuti | https://www.la7.it/100minuti
-      episodios | AI - Il futuro dell'intelligenza artificiale  | https://www.la7.it/ai-il-futuro
-      episodios | Amabili Creature | https://www.la7.it/amabili-creature
-      episodios | Amarsi un po' - Istruzioni per l'uso | https://www.la7.it/amarsi-un-po
-== episodios su "100 minuti"
-   -> 3 voci
-      episodios | Inchieste  | https://www.la7.it/100minuti/rivedila7
-      episodios | Interviste  | https://www.la7.it/100minuti/video/interviste-6
-      episodios | Video  | https://www.la7.it/100minuti/video
-== episodios su "Inchieste "
-   -> 18 voci
-      findvideos | 100 Minuti - Senza tetto né legge | https://www.la7.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465
-      findvideos | 100 minuti - IMMORTALITÀ. Cosa rende immortale il potere cri | https://www.la7.it/100minuti/rivedila7/100-minuti-immortalita-cosa-rende-immortale-il-potere-crimina
-      findvideos | 100 minuti - IMMORTALITÀ. Cosa rende immortale il potere cri | https://www.la7.it/100minuti/rivedila7/100-minuti-immortalita-cosa-rende-immortale-il-potere-crimina
-      findvideos | 100 minuti - AVIDITÀ I soldi, le lobby e la politica  | https://www.la7.it/100minuti/rivedila7/100-minuti-avidita-i-soldi-le-lobby-e-la-politica-24-06-2025-
-== findvideos su "100 Minuti - Senza tetto né legge"
-   -> 1 voci
-      play | Direct | https://awsvodpkg.iltrovatore.it/local/hls/,/content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/conte
-== risoluzione directo https://awsvodpkg.iltrovatore.it/local/hls/,/content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/conte
-   -> VIDEO OK m3u8 206 
-VERDETTO: ARRIVA AL VIDEO
+   -> 0 voci
+== lista "• Teche La7"
+   -> 0 voci
+Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (5)
+    top | ('Dirette {bold}', ['', 'live'])
+    top | ('Replay {bold}', ['', 'replay_channels'])
+    menu | ('Programmi TV {bullet bold}', ['/tutti-i-programmi', 'peliculas', '', 'tvshow'])
+    menu | ('Teche La7 {bullet bold}', ['/la7teche', 'peliculas', '', 'tvshow'])
+    menu | ('Film La7Cinema {bullet bold}', ['/la7-cinema-tutti-i-film/rivedila7', 'episodios', '', 'peliculas'])
+== controllo di tutte le sezioni
+   SEZIONE Dirette -> ERRORE JSONDecodeError
+   SEZIONE Replay -> OK 1 
+   SEZIONE • Programmi TV -> VUOTA   | ultima pagina: {'url': 'https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=84090', 'status': 200, 'byte': 2, 'titolo_pagina': ''}
+   SEZIONE • Teche La7 -> VUOTA   | ultima pagina: {'url': 'https://www.la7.it/la7teche', 'status': 200, 'byte': 104635, 'titolo_pagina': 'Programmi | La7'}
+   SEZIONE • Film La7Cinema -> VUOTA   | ultima pagina: {'url': 'https://www.la7.it/la7-cinema-tutti-i-film/rivedila7', 'status': 200, 'byte': 146915, 'titolo_pagina': 'Film | La7'}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://www.la7.it/ricerca?query=avatar&page=0', 'status': 200, 'byte': 47137, 'titolo_pagina': 'Ricerca | LA7 | La7'}
+SEZIONI: 1 ok su 6
+   SEZIONE SENZA TITOLI: Dirette | ERRORE JSONDecodeError
+   SEZIONE SENZA TITOLI: • Programmi TV | VUOTA
+   SEZIONE SENZA TITOLI: • Teche La7 | VUOTA
+   SEZIONE SENZA TITOLI: • Film La7Cinema | VUOTA
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
+VERDETTO: SI FERMA A: lista "• Programmi TV"

@@ -24,12 +24,87 @@
   }
  ],
  "video": [],
+ "menu_dichiarato": [
+  "tvshow | ''",
+  "tvshow | ('Aggiornamenti', ['/aggiornamento-episodi/', 'peliculas', 'update'])",
+  "tvshow | ('Top 10', ['/top-10', 'peliculas', 'top'])",
+  "tvshow | ('Netflix {tv submenu}', ['/genere/netflix', 'peliculas'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Aggiornamenti",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/aggiornamento-episodi/",
+     "status": "Invalid URL '/aggiornamento-episodi/': No scheme supplied. Perhaps you meant http:///aggiornamento-episodi/?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Top 10",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/top-10",
+     "status": "Invalid URL '/top-10': No scheme supplied. Perhaps you meant http:///top-10?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Netflix",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/genere/netflix",
+     "status": "Invalid URL '/genere/netflix': No scheme supplied. Perhaps you meant http:///genere/netflix?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• txt70741 Serie TV…",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "/?s=avatar",
+     "status": "Invalid URL '/?s=avatar': No scheme supplied. Perhaps you meant http:///?s=avatar?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 5",
  "rete": [
   {
    "url": "",
    "status": "",
    "byte": 0,
    "secondi": 0.0,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
@@ -37,6 +112,7 @@
    "status": "Invalid URL '/aggiornamento-episodi/': No scheme supplied. Perhaps you meant http:///aggiornamento-episodi/?",
    "byte": 0,
    "secondi": 0.0,
+   "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
@@ -44,7 +120,48 @@
    "status": "Invalid URL '/top-10': No scheme supplied. Perhaps you meant http:///top-10?",
    "byte": 0,
    "secondi": 0.0,
+   "titolo_pagina": "",
    "file": "pagine/03.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "/aggiornamento-episodi/",
+   "status": "Invalid URL '/aggiornamento-episodi/': No scheme supplied. Perhaps you meant http:///aggiornamento-episodi/?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "/top-10",
+   "status": "Invalid URL '/top-10': No scheme supplied. Perhaps you meant http:///top-10?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "/genere/netflix",
+   "status": "Invalid URL '/genere/netflix': No scheme supplied. Perhaps you meant http:///genere/netflix?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "/?s=avatar",
+   "status": "Invalid URL '/?s=avatar': No scheme supplied. Perhaps you meant http:///?s=avatar?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
   }
  ],
  "verdetto": "SI FERMA A: lista \"• Serie TV\""

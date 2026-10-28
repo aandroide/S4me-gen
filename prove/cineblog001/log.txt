@@ -7,27 +7,29 @@ Canale cineblog001 | indirizzo https://cineblog001.men
       genres | Generi | https://cineblog001.center
 == lista "Film"
    -> 19 voci
+      findvideos | Solo Noi. Una stagione da Double | https://cineblog001.men/cb01-streaming/35339-solo-noi-una-stagione-da-double-streaming-cb01.html
       findvideos | Shaun, vita da pecora - Operazione Z.U.C.C.A. | https://cineblog001.men/cb01-streaming/35330-shaun-vita-da-pecora-operazione-z-u-c-c-a-streaming-cb0
       findvideos | Ip Man: Oltre la leggenda | https://cineblog001.men/cb01-streaming/35327-ip-man-oltre-la-leggenda-streaming-cb01.html
       findvideos | Ohh My Dog | https://cineblog001.men/cb01-streaming/35304-ohh-my-dog-streaming-cb01.html
-      findvideos | Baby Do Die Do | https://cineblog001.men/cb01-streaming/35305-baby-do-die-do-streaming-cb01.html
-== findvideos su "Shaun, vita da pecora - Operazione Z.U.C"
-   -> 0 voci
-== lista "Serie TV"
-   -> 19 voci
-      findvideos | Minimum Wage | https://cineblog001.men/cb01-streaming/35329-minimum-wage-streaming-cb01.html
-      findvideos | Organize Isler: Money Trap | https://cineblog001.men/cb01-streaming/35321-organize-isler-money-trap-streaming-cb01.html
-      findvideos | YAGA | https://cineblog001.men/cb01-streaming/35290-yaga-una-caccia-alle-streghe-streaming-cb01.html
-      findvideos | LOL: Chi ride è fuori - Halloween Special | https://cineblog001.men/cb01-streaming/35291-lol-chi-ride-e-fuori-halloween-special-streaming-cb01.h
-== findvideos su "Minimum Wage"
-   -> 0 voci
-== lista "Sub-ITA"
-   -> 19 voci
-      findvideos | Truth & Treason | https://cineblog001.men/cb01-streaming/34737-truth-treason-streaming-cb01.html
-      findvideos | Hungry | https://cineblog001.men/cb01-streaming/34735-hungry-streaming-cb01.html
-      findvideos | Loner | https://cineblog001.men/cb01-streaming/34659-loner-streaming-cb01.html
-      findvideos | Carolina Caroline | https://cineblog001.men/cb01-streaming/34618-carolina-caroline-streaming-cb01.html
-== findvideos su "Truth & Treason"
-   -> 0 voci
-Nessuna voce da riprodurre trovata
-VERDETTO: SI FERMA A: findvideos su "Shaun, vita da pecora - Operazione Z.U.C"
+== findvideos su "Solo Noi. Una stagione da Double"
+   -> 2 voci
+      play | Solo Noi. Una stagione da Double | https://v.vidxgo.co/tm1785148
+      add_pelicula_to_library | txt30161 %s | https://cineblog001.men/cb01-streaming/35339-solo-noi-una-stagione-da-double-streaming-cb01.html
+== risoluzione vidxgo https://v.vidxgo.co/tm1785148
+   -> VIDEO OK m3u8 200 
+== voci dichiarate in mainlist (4)
+    top | ('Film', ['/film/', 'peliculas', ''])
+    top | ('Serie TV', ['/serie-tv/', 'peliculas', ''])
+    top | ('Sub-ITA', ['/sub-ita/', 'peliculas', ''])
+    top | ('Generi', ['', 'genres', ''])
+== controllo di tutte le sezioni
+   SEZIONE Film -> OK 18 
+   SEZIONE Serie TV -> OK 18 
+   SEZIONE Sub-ITA -> OK 18 
+   SEZIONE Azione -> OK 16 
+   SEZIONE Animazione -> OK 18 
+   SEZIONE Avventura -> OK 20 
+   SEZIONE Generi -> SOTTOMENU  
+   SEZIONE txt70741 … -> OK 10 
+SEZIONI: 5 ok su 5
+VERDETTO: ARRIVA AL VIDEO

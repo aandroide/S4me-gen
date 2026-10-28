@@ -6,18 +6,29 @@ Canale guardaserieicu | indirizzo
       search | •• txt70741 Serie TV… | https://guardaseriex.cyou/serietv-streaming/page/1/
       channel_config | txt60587 %s | 
 == lista "• Serie TV"
+   -> 19 voci
+      episodios | Grande de España | https://guardaseriex.best/commedia/5855-grande-de-espana-streaming.html
+      episodios | Crystal Lake | https://guardaseriex.best/dramma/5837-crystal-lake-streaming.html
+      episodios | Ultima traccia Berlino | https://guardaseriex.best/crime/2016-ultima-traccia-berlino.html
+      episodios | American Horror Story | https://guardaseriex.best/dramma/407-american-horror-story-1.html
+== episodios su "Grande de España"
+   -> 2 voci
+      findvideos | 1x01 - Il marchese | https://guardaseriex.best/commedia/5855-grande-de-espana-streaming.html
+      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.best/commedia/5855-grande-de-espana-streaming.html
+== findvideos su "1x01 - Il marchese"
    -> 1 voci
-      peliculas | txt30992 %s > | https://guardaseriex.best/serietv-streaming/page/2/
-   la lista non ha titoli: c e solo la pagina successiva
-== lista "•• Generi"
-   -> 33 voci
-      peliculas | Biografico | https://guardaseriex.best/biografico/
-      peliculas | Commedia | https://guardaseriex.best/commedia/
-      peliculas | Crime | https://guardaseriex.best/crime/
-      peliculas | Documentario | https://guardaseriex.best/documentario/
-== peliculas su "Popolari"
-   -> 1 voci
-      peliculas | txt30992 %s > | https://guardaseriex.best/serietv-popolari/page/2/
-   la lista non ha titoli: c e solo la pagina successiva
-Nessuna voce da riprodurre trovata
-VERDETTO: SI FERMA A: ultimo passo, nessuna voce da riprodurre
+      play | 1x01 - Il marchese | https://v.vidxgo.co/39387986/1/1
+== risoluzione vidxgo https://v.vidxgo.co/39387986/1/1
+   -> VIDEO OK m3u8 200 
+== voci dichiarate in mainlist (2)
+    tvshow | '/serietv-streaming/page/1/'
+    tvshow | ('Generi', ['/serietv-streaming/page/1/', 'genres', 'genres'])
+== controllo di tutte le sezioni
+   SEZIONE • Serie TV -> OK 18 
+   SEZIONE Biografico -> OK 126 
+   SEZIONE Commedia -> OK 1514 
+   SEZIONE Crime -> OK 843 
+   SEZIONE •• Generi -> SOTTOMENU  
+   SEZIONE •• txt70741 Serie TV… -> OK 4 
+SEZIONI: 3 ok su 3
+VERDETTO: ARRIVA AL VIDEO

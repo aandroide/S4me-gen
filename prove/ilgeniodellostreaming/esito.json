@@ -24,12 +24,199 @@
   }
  ],
  "video": [],
+ "menu_dichiarato": [
+  "film | '/film/'",
+  "film | ('Generi', ['', 'genres', 'genres'])",
+  "film | ('Per Lettera', ['/film-a-z/', 'genres', 'letter'])",
+  "film | ('Anni', ['', 'genres', 'year'])",
+  "film | ('Popolari', ['/trending/?get=movies', 'peliculas', 'populared'])",
+  "film | ('Più Votati', ['/ratings/?get=movies', 'peliculas', 'populared'])",
+  "tvshow | '/serie/'",
+  "tvshow | ('Aggiornamenti', ['/aggiornamenti-serie/', 'peliculas', 'update'])",
+  "tvshow | ('Popolari', ['/trending/?get=tv', 'peliculas', 'populared'])",
+  "tvshow | ('Più Votati', ['/ratings/?get=tv', 'peliculas', 'populared'])",
+  "anime | '/anime/'",
+  "Tvshow | ('Show TV {bullet bold}', ['/tv-show/', 'peliculas', '', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/film/",
+     "status": "Invalid URL '/film/': No scheme supplied. Perhaps you meant http:///film/?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "genres",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Per Lettera",
+   "azione": "genres",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/film-a-z/",
+     "status": "Invalid URL '/film-a-z/': No scheme supplied. Perhaps you meant http:///film-a-z/?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Anni",
+   "azione": "genres",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Popolari",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/trending/?get=movies",
+     "status": "Invalid URL '/trending/?get=movies': No scheme supplied. Perhaps you meant http:///trending/?get=movies?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Più Votati",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/ratings/?get=movies",
+     "status": "Invalid URL '/ratings/?get=movies': No scheme supplied. Perhaps you meant http:///ratings/?get=movies?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/serie/",
+     "status": "Invalid URL '/serie/': No scheme supplied. Perhaps you meant http:///serie/?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Aggiornamenti",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/aggiornamenti-serie/",
+     "status": "Invalid URL '/aggiornamenti-serie/': No scheme supplied. Perhaps you meant http:///aggiornamenti-serie/?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Popolari",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/trending/?get=tv",
+     "status": "Invalid URL '/trending/?get=tv': No scheme supplied. Perhaps you meant http:///trending/?get=tv?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Più Votati",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/ratings/?get=tv",
+     "status": "Invalid URL '/ratings/?get=tv': No scheme supplied. Perhaps you meant http:///ratings/?get=tv?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Anime",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/anime/",
+     "status": "Invalid URL '/anime/': No scheme supplied. Perhaps you meant http:///anime/?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Show TV",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/tv-show/",
+     "status": "Invalid URL '/tv-show/': No scheme supplied. Perhaps you meant http:///tv-show/?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "/?0b71d33c161b480aa43273d474556a51=6a43ae44fc5545c684ee4020a1177faf&s=avatar",
+     "status": "Invalid URL '/?0b71d33c161b480aa43273d474556a51=6a43ae44fc5545c684ee4020a1177faf&s=avatar': No scheme supplied. Perhaps you meant http:///?0b71d33c161b480aa43273d474556a51=6a43ae44fc5545c684ee4020a1177faf&s=avatar?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 13",
  "rete": [
   {
    "url": "/film/",
    "status": "Invalid URL '/film/': No scheme supplied. Perhaps you meant http:///film/?",
    "byte": 0,
    "secondi": 0.0,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
@@ -37,6 +224,7 @@
    "status": "",
    "byte": 0,
    "secondi": 0.0,
+   "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
@@ -44,7 +232,111 @@
    "status": "Invalid URL '/film-a-z/': No scheme supplied. Perhaps you meant http:///film-a-z/?",
    "byte": 0,
    "secondi": 0.0,
+   "titolo_pagina": "",
    "file": "pagine/03.html"
+  },
+  {
+   "url": "/film/",
+   "status": "Invalid URL '/film/': No scheme supplied. Perhaps you meant http:///film/?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "/film-a-z/",
+   "status": "Invalid URL '/film-a-z/': No scheme supplied. Perhaps you meant http:///film-a-z/?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "/trending/?get=movies",
+   "status": "Invalid URL '/trending/?get=movies': No scheme supplied. Perhaps you meant http:///trending/?get=movies?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "/ratings/?get=movies",
+   "status": "Invalid URL '/ratings/?get=movies': No scheme supplied. Perhaps you meant http:///ratings/?get=movies?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "/serie/",
+   "status": "Invalid URL '/serie/': No scheme supplied. Perhaps you meant http:///serie/?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "/aggiornamenti-serie/",
+   "status": "Invalid URL '/aggiornamenti-serie/': No scheme supplied. Perhaps you meant http:///aggiornamenti-serie/?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "/trending/?get=tv",
+   "status": "Invalid URL '/trending/?get=tv': No scheme supplied. Perhaps you meant http:///trending/?get=tv?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "/ratings/?get=tv",
+   "status": "Invalid URL '/ratings/?get=tv': No scheme supplied. Perhaps you meant http:///ratings/?get=tv?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "/anime/",
+   "status": "Invalid URL '/anime/': No scheme supplied. Perhaps you meant http:///anime/?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "/tv-show/",
+   "status": "Invalid URL '/tv-show/': No scheme supplied. Perhaps you meant http:///tv-show/?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "/?0b71d33c161b480aa43273d474556a51=6a43ae44fc5545c684ee4020a1177faf&s=avatar",
+   "status": "Invalid URL '/?0b71d33c161b480aa43273d474556a51=6a43ae44fc5545c684ee4020a1177faf&s=avatar': No scheme supplied. Perhaps you meant http:///?0b71d33c161b480aa43273d474556a51=6a43ae44fc5545c684ee4020a1177faf&s=avatar?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": ""
   }
  ],
  "verdetto": "SI FERMA A: lista \"• Film\""

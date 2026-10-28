@@ -5,7 +5,7 @@
   {
    "passo": "mainlist",
    "esito": "OK",
-   "voci": 4
+   "voci": 5
   },
   {
    "passo": "lista \"• Serie TV\"",
@@ -13,12 +13,12 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"American Horror Story\"",
+   "passo": "episodios su \"Grande de España\"",
    "esito": "OK",
-   "voci": 145
+   "voci": 6
   },
   {
-   "passo": "findvideos su \"1x01 - La nuova casa\"",
+   "passo": "findvideos su \"1x01 - Il marchese\"",
    "esito": "OK",
    "voci": 1
   }
@@ -26,129 +26,160 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/1844624/1/1",
-   "finale": "http://127.0.0.1:42973/hls/tv/1844624/1/1/master.m3u8",
+   "url": "https://v.vidxgo.co/39387986/1/1",
+   "finale": "http://127.0.0.1:38625/hls/tv/39387986/1/1/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
  ],
+ "menu_dichiarato": [
+  "tvshow | '/serietv-streaming'",
+  "tvshow | ('Popolari', ['/serietv-popolari/', 'peliculas', ''])",
+  "tvshow | ('Generi', ['/serietv-streaming', 'genres', 'genres'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 18
+  },
+  {
+   "voce": "•• Popolari",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 258
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 33,
+   "figli": [
+    {
+     "voce": "Biografico",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 134
+    },
+    {
+     "voce": "Commedia",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 1583
+    },
+    {
+     "voce": "Crime",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 876
+    }
+   ]
+  },
+  {
+   "voce": "•• txt70741 Serie TV…",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 4
+  }
+ ],
+ "sezioni_riepilogo": "4 ok su 4",
  "rete": [
   {
    "url": "https://guardaseriex.best/serietv-streaming",
    "status": 200,
-   "byte": 100724,
-   "secondi": 0.4,
+   "byte": 100741,
+   "secondi": 1.1,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.best/dramma/407-american-horror-story-1.html",
+   "url": "https://guardaseriex.best/commedia/5855-grande-de-espana-streaming.html",
    "status": 200,
-   "byte": 64907,
-   "secondi": 0.3,
+   "byte": 63695,
+   "secondi": 0.7,
+   "titolo_pagina": "Grande de España streaming - Guardaserie",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt1844624?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt39387986?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
    "status": 200,
-   "byte": 1207,
+   "byte": 670,
    "secondi": 0.1,
+   "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/335535?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 12698,
+   "byte": 2455,
    "secondi": 0.1,
+   "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/335535/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 79080,
+   "byte": 3225,
    "secondi": 0.1,
+   "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/2?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.best/serietv-streaming",
    "status": 200,
-   "byte": 60001,
-   "secondi": 0.1,
+   "byte": 100741,
+   "secondi": 1.1,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/3?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.best/serietv-popolari/",
    "status": 200,
-   "byte": 52272,
-   "secondi": 0.1,
+   "byte": 405702,
+   "secondi": 1.3,
+   "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/4?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.best/serietv-streaming",
    "status": 200,
-   "byte": 73309,
-   "secondi": 0.1,
+   "byte": 100741,
+   "secondi": 0.5,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/5?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.best/biografico/",
    "status": 200,
-   "byte": 83525,
-   "secondi": 0.1,
+   "byte": 221748,
+   "secondi": 0.4,
+   "titolo_pagina": "Biografico streaming | Guardaserie",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/6?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.best/commedia/",
    "status": 200,
-   "byte": 68124,
-   "secondi": 0.1,
+   "byte": 2271299,
+   "secondi": 3.5,
+   "titolo_pagina": "Commedia streaming | Guardaserie",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/7?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.best/crime/",
    "status": 200,
-   "byte": 75240,
-   "secondi": 0.1,
+   "byte": 1265208,
+   "secondi": 0.8,
+   "titolo_pagina": "Crime streaming | Guardaserie",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/8?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.best/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 40100,
-   "secondi": 0.1,
+   "byte": 38254,
+   "secondi": 0.6,
+   "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS",
    "file": "pagine/12.html"
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/9?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 52340,
-   "secondi": 0.2,
-   "file": "pagine/13.html"
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/10?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 67795,
-   "secondi": 0.1,
-   "file": "pagine/14.html"
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/11?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 59692,
-   "secondi": 0.1,
-   "file": "pagine/15.html"
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/12?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 38224,
-   "secondi": 0.1
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/13?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 47169,
-   "secondi": 0.1
   }
  ],
  "verdetto": "ARRIVA AL VIDEO"

@@ -5,7 +5,7 @@
   {
    "passo": "mainlist",
    "esito": "OK",
-   "voci": 7
+   "voci": 6
   },
   {
    "passo": "lista \"Tutti \"",
@@ -37,52 +37,144 @@
   {
    "server": "vidxgo",
    "url": "https://v.vidxgo.co/27165187",
-   "finale": "http://127.0.0.1:37161/hls/27165187/master.m3u8",
+   "finale": "http://127.0.0.1:44791/hls/27165187/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
  ],
+ "menu_dichiarato": [
+  "menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])",
+  "menu | ('Generi {submenu}', ['', 'genres', 'genres', 'undefined'])",
+  "menu | ('Per Lettera {submenu}', ['/catalog/all', 'genres', 'template-az', 'undefined'])",
+  "menu | ('Serie Tv', ['/serie-tv/', 'peliculas', '', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Tutti",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 18
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 41,
+   "figli": [
+    {
+     "voce": "Serie TV",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    },
+    {
+     "voce": "Animazione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    },
+    {
+     "voce": "Avventura",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    }
+   ]
+  },
+  {
+   "voce": "•• Per Lettera",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 27,
+   "figli": [
+    {
+     "voce": "0-9",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 18
+    },
+    {
+     "voce": "A",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 18
+    },
+    {
+     "voce": "B",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 18
+    }
+   ]
+  },
+  {
+   "voce": "Serie Tv",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://il-geniodellostreaming.ink/?s=avatar",
+     "status": 200,
+     "byte": 34835,
+     "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis"
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "4 ok su 5",
  "rete": [
   {
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
    "byte": 38025,
-   "secondi": 0.6,
+   "secondi": 1.0,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/film/35339-solo-noi-una-stagione-da-double-streaming.html",
    "status": 200,
-   "byte": 29603,
-   "secondi": 0.2,
+   "byte": 29605,
+   "secondi": 0.5,
+   "titolo_pagina": "Solo Noi. Una stagione da Double Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/film/35339-solo-noi-una-stagione-da-double-streaming.html",
    "status": 200,
-   "byte": 29603,
-   "secondi": 0.4,
+   "byte": 29605,
+   "secondi": 0.5,
+   "titolo_pagina": "Solo Noi. Una stagione da Double Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/03.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink",
    "status": 200,
-   "byte": 93216,
-   "secondi": 0.2,
+   "byte": 77300,
+   "secondi": 0.7,
+   "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/04.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/prossimamente/",
    "status": 200,
    "byte": 85558,
-   "secondi": 0.5,
+   "secondi": 0.7,
+   "titolo_pagina": "Prossimamente al Cinema",
    "file": "pagine/05.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/film/34552-la-fine-di-oak-street-streaming.html",
    "status": 200,
    "byte": 30320,
-   "secondi": 0.2,
+   "secondi": 0.3,
+   "titolo_pagina": "La fine di Oak Street Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
   },
   {
@@ -90,7 +182,93 @@
    "status": 200,
    "byte": 30320,
    "secondi": 0.2,
+   "titolo_pagina": "La fine di Oak Street Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/07.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/catalog/all",
+   "status": 200,
+   "byte": 38025,
+   "secondi": 0.4,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink",
+   "status": 200,
+   "byte": 77300,
+   "secondi": 0.7,
+   "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/serie-tv/",
+   "status": 200,
+   "byte": 86654,
+   "secondi": 0.7,
+   "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/animazione/",
+   "status": 200,
+   "byte": 85535,
+   "secondi": 0.2,
+   "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/avventura/",
+   "status": 200,
+   "byte": 86324,
+   "secondi": 0.2,
+   "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/catalog/all",
+   "status": 200,
+   "byte": 38025,
+   "secondi": 0.4,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/catalog/0",
+   "status": 200,
+   "byte": 38462,
+   "secondi": 0.5,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/catalog/a",
+   "status": 200,
+   "byte": 38015,
+   "secondi": 0.4,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/catalog/b",
+   "status": 200,
+   "byte": 38498,
+   "secondi": 0.4,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/serie-tv/",
+   "status": 200,
+   "byte": 86654,
+   "secondi": 0.7,
+   "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming"
+  },
+  {
+   "url": "https://il-geniodellostreaming.ink/?s=avatar",
+   "status": 200,
+   "byte": 34835,
+   "secondi": 2.2,
+   "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis"
   }
  ],
  "verdetto": "ARRIVA AL VIDEO"

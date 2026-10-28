@@ -39,6 +39,129 @@
   }
  ],
  "video": [],
+ "menu_dichiarato": [
+  "film | ''",
+  "film | ('Popolari', ['', 'peliculas', 'POPULAR', 'movie'])",
+  "film | ('Di tendenza', ['', 'peliculas', 'TRENDING', 'movie'])",
+  "film | ('Casuale', ['', 'peliculas', 'RANDOM', 'movie'])",
+  "film | ('Ordine alfabetico', ['', 'peliculas', 'ALPHABETICAL', 'movie'])",
+  "film | ('Anno di uscita', ['', 'peliculas', 'RELEASE_YEAR', 'movie'])",
+  "film | ('Popolarità TMDB', ['', 'peliculas', 'TMDB_POPULARITY', 'movie'])",
+  "film | ('Punteggio IMDb', ['', 'peliculas', 'IMDB_SCORE', 'movie'])",
+  "tvshow | ''",
+  "tvshow | ('Popolari', ['', 'peliculas', 'POPULAR', 'tvshow'])",
+  "tvshow | ('Di tendenza', ['', 'peliculas', 'TRENDING', 'tvshow'])",
+  "tvshow | ('Casuale', ['', 'peliculas', 'RANDOM', 'tvshow'])",
+  "tvshow | ('Ordine alfabetico', ['', 'peliculas', 'ALPHABETICAL', 'tvshow'])",
+  "tvshow | ('Anno di uscita', ['', 'peliculas', 'RELEASE_YEAR', 'tvshow'])",
+  "tvshow | ('Popolarità TMDB', ['', 'peliculas', 'TMDB_POPULARITY', 'tvshow'])",
+  "tvshow | ('Punteggio IMDb', ['', 'peliculas', 'IMDB_SCORE', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "•• Popolari",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "•• Di tendenza",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "•• Casuale",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "•• Ordine alfabetico",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "•• Anno di uscita",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "•• Popolarità TMDB",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "•• Punteggio IMDb",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 13
+  },
+  {
+   "voce": "•• Popolari",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 13
+  },
+  {
+   "voce": "•• Di tendenza",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 13
+  },
+  {
+   "voce": "•• Casuale",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 13
+  },
+  {
+   "voce": "•• Ordine alfabetico",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 13
+  },
+  {
+   "voce": "•• Anno di uscita",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 13
+  },
+  {
+   "voce": "•• Popolarità TMDB",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 13
+  },
+  {
+   "voce": "•• Punteggio IMDb",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 13
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": []
+  }
+ ],
+ "sezioni_riepilogo": "16 ok su 17",
  "rete": [],
  "verdetto": "SI FERMA A: findvideos su \"Fight Club\""
 }

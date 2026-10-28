@@ -1,25 +1,38 @@
 Canale guardaseriecam | indirizzo https://guardaseriex.best
 == mainlist
-   -> 4 voci
+   -> 5 voci
       peliculas | • Serie TV | https://guardaseriex.best/serietv-streaming
-      list | •• Per Lettera | https://guardaseriex.best/serietv-streaming/A
+      peliculas | •• Popolari | https://guardaseriex.best/serietv-popolari/
+      genres | •• Generi | https://guardaseriex.best/serietv-streaming
       search | •• txt70741 Serie TV… | https://guardaseriex.best/serietv-streaming
-      channel_config | txt60587 %s | 
 == lista "• Serie TV"
    -> 19 voci
-      episodios | American Horror Story | https://guardaseriex.best/dramma/407-american-horror-story-1.html
       episodios | Grande de España | https://guardaseriex.best/commedia/5855-grande-de-espana-streaming.html
       episodios | Crystal Lake | https://guardaseriex.best/dramma/5837-crystal-lake-streaming.html
-      episodios | Paolo | https://guardaseriex.best/dramma/5789-paolo-streaming.html
-== episodios su "American Horror Story"
-   -> 145 voci
-      findvideos | 1x01 - La nuova casa | https://v.vidxgo.co/1844624/1/1
-      findvideos | 1x02 - Il passato ritorna | https://v.vidxgo.co/1844624/1/2
-      findvideos | 1x03 - Vecchi rancori | https://v.vidxgo.co/1844624/1/3
-      findvideos | 1x04 - Halloween (1ª parte) | https://v.vidxgo.co/1844624/1/4
-== findvideos su "1x01 - La nuova casa"
+      episodios | Ultima traccia Berlino | https://guardaseriex.best/crime/2016-ultima-traccia-berlino.html
+      episodios | American Horror Story | https://guardaseriex.best/dramma/407-american-horror-story-1.html
+== episodios su "Grande de España"
+   -> 6 voci
+      findvideos | 1x01 - Il marchese | https://v.vidxgo.co/39387986/1/1
+      findvideos | 1x02 - Conchi | https://v.vidxgo.co/39387986/1/2
+      findvideos | 1x03 - Derive del Mediterraneo | https://v.vidxgo.co/39387986/1/3
+      findvideos | 1x04 - Periferia | https://v.vidxgo.co/39387986/1/4
+== findvideos su "1x01 - Il marchese"
    -> 1 voci
-      play | 1x01 - La nuova casa | https://v.vidxgo.co/1844624/1/1
-== risoluzione vidxgo https://v.vidxgo.co/1844624/1/1
+      play | 1x01 - Il marchese | https://v.vidxgo.co/39387986/1/1
+== risoluzione vidxgo https://v.vidxgo.co/39387986/1/1
    -> VIDEO OK m3u8 200 
+== voci dichiarate in mainlist (3)
+    tvshow | '/serietv-streaming'
+    tvshow | ('Popolari', ['/serietv-popolari/', 'peliculas', ''])
+    tvshow | ('Generi', ['/serietv-streaming', 'genres', 'genres'])
+== controllo di tutte le sezioni
+   SEZIONE • Serie TV -> OK 18 
+   SEZIONE •• Popolari -> OK 258 
+   SEZIONE Biografico -> OK 134 
+   SEZIONE Commedia -> OK 1583 
+   SEZIONE Crime -> OK 876 
+   SEZIONE •• Generi -> SOTTOMENU  
+   SEZIONE •• txt70741 Serie TV… -> OK 4 
+SEZIONI: 4 ok su 4
 VERDETTO: ARRIVA AL VIDEO

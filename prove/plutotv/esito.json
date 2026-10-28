@@ -9,6 +9,99 @@
   }
  ],
  "video": [],
- "rete": [],
+ "menu_dichiarato": [
+  "top | ('Dirette {bold}', ['/it/live-tv/', 'live'])",
+  "menu | ('Categorie', ['', 'category'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Dirette",
+   "azione": "live",
+   "esito": "OK",
+   "titoli": 441
+  },
+  {
+   "voce": "Categorie",
+   "azione": "category",
+   "esito": "SOTTOMENU",
+   "sottovoci": 99,
+   "figli": [
+    {
+     "voce": "'00s Movies",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    },
+    {
+     "voce": "'70s Movies",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    },
+    {
+     "voce": "'80s Movies",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://service-media-search.clusters.pluto.tv/v1/search?q=avatar&limit=100",
+     "status": 500,
+     "byte": 50,
+     "titolo_pagina": ""
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "2 ok su 3",
+ "rete": [
+  {
+   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=430c60e2-c841-4b07-87a3-916693ea478b&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
+   "status": 200,
+   "byte": 18475,
+   "secondi": 0.2,
+   "titolo_pagina": "",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://api.pluto.tv/v2/channels?start=2026-10-28T11:00:00Z&stop=2026-10-28T15:00:00Z&sid=f535e010-d2c3-11f1-9a2a-6045bd86d4d5&deviceId=430c60e2-c841-4b07-87a3-916693ea478b",
+   "status": 200,
+   "byte": 7531971,
+   "secondi": 0.7,
+   "titolo_pagina": "",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://api.pluto.tv/v2/channels.json?sid=f535e010-d2c3-11f1-9a2a-6045bd86d4d5&deviceId=430c60e2-c841-4b07-87a3-916693ea478b",
+   "status": 200,
+   "byte": 1092372,
+   "secondi": 0.4,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=f535e010-d2c3-11f1-9a2a-6045bd86d4d5&deviceId=430c60e2-c841-4b07-87a3-916693ea478b",
+   "status": 200,
+   "byte": 13772759,
+   "secondi": 1.1,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://service-media-search.clusters.pluto.tv/v1/search?q=avatar&limit=100",
+   "status": 500,
+   "byte": 50,
+   "secondi": 0.2,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  }
+ ],
  "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
 }

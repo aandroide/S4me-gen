@@ -12,4 +12,33 @@ Canale dreamsub | indirizzo https://www.animeworld.ac
 == lista "•• OAV"
    -> 0 voci
 Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (8)
+    anime | '/search?typeY=tv'
+    anime | ('Movie', ['/search?typeY=movie', 'peliculas', '', 'movie'])
+    anime | ('OAV', ['/search?typeY=oav', 'peliculas', '', 'tvshow'])
+    anime | ('Spinoff', ['/search?typeY=spinoff', 'peliculas', '', 'tvshow'])
+    anime | ('Generi', ['', 'menu', 'Generi'])
+    anime | ('Stato', ['', 'menu', 'Stato'])
+    anime | ('Ultimi Episodi', ['', 'peliculas', ['last', 'episodiRecenti']])
+    anime | ('Ultimi Aggiornamenti', ['', 'peliculas', ['last', 'episodiNuovi']])
+== controllo di tutte le sezioni
+   SEZIONE • Anime -> VUOTA   | ultima pagina: {'url': 'https://www.animeworld.ac/search?typeY=tv', 'status': 200, 'byte': 728475, 'titolo_pagina': 'AnimeWorld - Download e Streaming Anime Sub ITA e ITA'}
+   SEZIONE •• Movie -> VUOTA   | ultima pagina: {'url': 'https://www.animeworld.ac/search?typeY=movie', 'status': 200, 'byte': 728475, 'titolo_pagina': 'AnimeWorld - Download e Streaming Anime Sub ITA e ITA'}
+   SEZIONE •• OAV -> VUOTA   | ultima pagina: {'url': 'https://www.animeworld.ac/search?typeY=oav', 'status': 200, 'byte': 728475, 'titolo_pagina': 'AnimeWorld - Download e Streaming Anime Sub ITA e ITA'}
+   SEZIONE •• Spinoff -> VUOTA   | ultima pagina: {'url': 'https://www.animeworld.ac/search?typeY=spinoff', 'status': 200, 'byte': 728475, 'titolo_pagina': 'AnimeWorld - Download e Streaming Anime Sub ITA e ITA'}
+   SEZIONE •• Generi -> VUOTA   | ultima pagina: {'url': 'https://www.animeworld.ac', 'status': 200, 'byte': 728475, 'titolo_pagina': 'AnimeWorld - Download e Streaming Anime Sub ITA e ITA'}
+   SEZIONE •• Stato -> VUOTA   | ultima pagina: {'url': 'https://www.animeworld.ac', 'status': 200, 'byte': 728475, 'titolo_pagina': 'AnimeWorld - Download e Streaming Anime Sub ITA e ITA'}
+   SEZIONE •• Ultimi Episodi -> VUOTA   | ultima pagina: {'url': 'https://www.animeworld.ac', 'status': 200, 'byte': 728475, 'titolo_pagina': 'AnimeWorld - Download e Streaming Anime Sub ITA e ITA'}
+   SEZIONE •• Ultimi Aggiornamenti -> VUOTA   | ultima pagina: {'url': 'https://www.animeworld.ac', 'status': 200, 'byte': 728475, 'titolo_pagina': 'AnimeWorld - Download e Streaming Anime Sub ITA e ITA'}
+   SEZIONE •• txt70741 Anime… -> VUOTA   | ultima pagina: {'url': 'https://www.animeworld.ac/search/avatar', 'status': 200, 'byte': 65138, 'titolo_pagina': 'AnimeWorld - Pagina non trovata'}
+SEZIONI: 0 ok su 9
+   SEZIONE SENZA TITOLI: • Anime | VUOTA
+   SEZIONE SENZA TITOLI: •• Movie | VUOTA
+   SEZIONE SENZA TITOLI: •• OAV | VUOTA
+   SEZIONE SENZA TITOLI: •• Spinoff | VUOTA
+   SEZIONE SENZA TITOLI: •• Generi | VUOTA
+   SEZIONE SENZA TITOLI: •• Stato | VUOTA
+   SEZIONE SENZA TITOLI: •• Ultimi Episodi | VUOTA
+   SEZIONE SENZA TITOLI: •• Ultimi Aggiornamenti | VUOTA
+   SEZIONE SENZA TITOLI: •• txt70741 Anime… | VUOTA
 VERDETTO: SI FERMA A: lista "• Anime"

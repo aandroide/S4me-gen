@@ -9,6 +9,883 @@
   }
  ],
  "video": [],
- "rete": [],
+ "menu_dichiarato": [
+  "menu | ('Musica {bullet music}', ['/categories/music?{}'.format(args), 'radio', '', 'music'])",
+  "menu | ('Sport {bullet music}', ['/categories/sports?{}'.format(args), 'radio', '', 'music'])",
+  "menu | ('Notizie e Dibattiti {bullet music}', ['/categories/c57922?{}'.format(args), 'radio', 'music'])",
+  "menu | ('Podcast {bullet music}', ['/categories/c100000088?{}'.format(args), 'radio', '', 'music'])",
+  "menu | ('Audiolibri {bullet music}', ['/categories/c100006408?{}'.format(args), 'radio', '', 'music'])",
+  "menu | ('Luogo {bullet music}', ['/categories/regions?{}'.format(args), 'radio', '', 'music'])",
+  "menu | ('Lingua {bullet music}', ['/categories/languages?{}'.format(args), 'radio', '', 'music'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Musica",
+   "azione": "radio",
+   "esito": "SOTTOMENU",
+   "sottovoci": 16,
+   "figli": [
+    {
+     "voce": "Music Banners",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 1
+    },
+    {
+     "voce": "TuneIn Exclusive Music Stations",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 37
+    },
+    {
+     "voce": "Apple Music Radio Stations",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 6
+    }
+   ]
+  },
+  {
+   "voce": "• Sport",
+   "azione": "radio",
+   "esito": "SOTTOMENU",
+   "sottovoci": 15,
+   "figli": [
+    {
+     "voce": "Recommender Test Row 3",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
+     "voce": "Critica sportiva non-stop",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 18
+    },
+    {
+     "voce": "Esplora per Sport",
+     "azione": "radio",
+     "esito": "SOTTOMENU SENZA TITOLI",
+     "sottovoci": 7,
+     "figli": [
+      {
+       "voce": "Football Pro",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/c1736013?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BU7XAQAAAAAA",
+         "status": 200,
+         "byte": 68818,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "Football Americano Collegiale",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/c403161?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgADAAMAW1sMFnsGAAEHDJTh9QUMlOH1Ba78AQAAAAAA",
+         "status": 200,
+         "byte": 26199,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "Lega maggiore di baseball",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/c16230079?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BVDXAQAAAAAA",
+         "status": 200,
+         "byte": 41861,
+         "titolo_pagina": ""
+        }
+       ]
+      }
+     ],
+     "pagine": [
+      {
+       "url": "https://api.radiotime.com/categories/c1736013?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BU7XAQAAAAAA",
+       "status": 200,
+       "byte": 68818,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "https://api.radiotime.com/categories/c403161?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgADAAMAW1sMFnsGAAEHDJTh9QUMlOH1Ba78AQAAAAAA",
+       "status": 200,
+       "byte": 26199,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "https://api.radiotime.com/categories/c16230079?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BVDXAQAAAAAA",
+       "status": 200,
+       "byte": 41861,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "voce": "• Notizie e Dibattiti",
+   "azione": "radio",
+   "esito": "SOTTOMENU",
+   "sottovoci": 4,
+   "figli": [
+    {
+     "voce": "Ascolta in diretta",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 13
+    },
+    {
+     "voce": "Esplora più stazioni di cronache in diretta",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 22
+    },
+    {
+     "voce": "Esplora per categoria",
+     "azione": "radio",
+     "esito": "SOTTOMENU",
+     "sottovoci": 9,
+     "figli": [
+      {
+       "voce": "Affari e finanza",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/c100001521?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQAEAAQAW1sMQuIAAAEHDKHx9QUMofH1BScRAgAAAAAA",
+         "status": 200,
+         "byte": 149508,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "Notizie dal Mondo",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/c100002931?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgAEAAQAW1sMQuIAAAEHDKHx9QUMofH1BT0RAgAAAAAA",
+         "status": 200,
+         "byte": 49314,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "Dibattito Conservatore",
+       "azione": "radio",
+       "esito": "OK",
+       "titoli": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "voce": "• Podcast",
+   "azione": "radio",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 10,
+   "figli": [
+    {
+     "voce": "Podcast Banners",
+     "azione": "radio",
+     "esito": "SOTTOMENU SENZA TITOLI",
+     "sottovoci": 2,
+     "figli": [
+      {
+       "voce": "Autio",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/c100035580?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BaR_AgAAAAAA",
+         "status": 200,
+         "byte": 113637,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "iHeart Podcasts",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
+         "status": 200,
+         "byte": 1743788,
+         "titolo_pagina": ""
+        }
+       ]
+      }
+     ],
+     "pagine": [
+      {
+       "url": "https://api.radiotime.com/categories/c100035580?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BaR_AgAAAAAA",
+       "status": 200,
+       "byte": 113637,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
+       "status": 200,
+       "byte": 1743788,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "HeartPodcast in evidenza",
+     "azione": "radio",
+     "esito": "SOTTOMENU SENZA TITOLI",
+     "sottovoci": 14,
+     "figli": [
+      {
+       "voce": "Dear Chelsea",
+       "azione": "radio",
+       "esito": "ERRORE AttributeError",
+       "pagine": [
+        {
+         "url": "",
+         "status": "",
+         "byte": 0,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "All The Smoke",
+       "azione": "radio",
+       "esito": "ERRORE AttributeError",
+       "pagine": [
+        {
+         "url": "",
+         "status": "",
+         "byte": 0,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "Bridgerton: The Official Podcast",
+       "azione": "radio",
+       "esito": "ERRORE AttributeError",
+       "pagine": [
+        {
+         "url": "",
+         "status": "",
+         "byte": 0,
+         "titolo_pagina": ""
+        }
+       ]
+      }
+     ],
+     "pagine": [
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "iHeartPodcast popolari",
+     "azione": "radio",
+     "esito": "SOTTOMENU SENZA TITOLI",
+     "sottovoci": 29,
+     "figli": [
+      {
+       "voce": "Stuff You Should Know",
+       "azione": "radio",
+       "esito": "ERRORE AttributeError",
+       "pagine": [
+        {
+         "url": "",
+         "status": "",
+         "byte": 0,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "On Purpose with Jay Shetty",
+       "azione": "radio",
+       "esito": "ERRORE AttributeError",
+       "pagine": [
+        {
+         "url": "",
+         "status": "",
+         "byte": 0,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "The Breakfast Club",
+       "azione": "radio",
+       "esito": "ERRORE AttributeError",
+       "pagine": [
+        {
+         "url": "",
+         "status": "",
+         "byte": 0,
+         "titolo_pagina": ""
+        }
+       ]
+      }
+     ],
+     "pagine": [
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
+   "pagine": [
+    {
+     "url": "http://api.radiotime.com/categories/c100000088?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
+     "status": 200,
+     "byte": 273497,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://api.radiotime.com/categories/c100035580?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BaR_AgAAAAAA",
+     "status": 200,
+     "byte": 113637,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
+     "status": 200,
+     "byte": 1743788,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Audiolibri",
+   "azione": "radio",
+   "esito": "SOTTOMENU",
+   "sottovoci": 2,
+   "figli": [
+    {
+     "voce": "Generi preferiti",
+     "azione": "radio",
+     "esito": "SOTTOMENU",
+     "sottovoci": 24,
+     "figli": [
+      {
+       "voce": "Narrativa - Fantascienza",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/g4535?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQABAAEAW1sMCPr1BQEHDCT69QUMJPr1BXhQAgAAAAAA",
+         "status": 200,
+         "byte": 58,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "Narrativa - Romanzo d'amore",
+       "azione": "radio",
+       "esito": "OK",
+       "titoli": 1
+      },
+      {
+       "voce": "Narrativa - Azione e avventura",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/g4505?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwABAAEAW1sMCPr1BQEHDCT69QUMJPr1BXpQAgAAAAAA",
+         "status": 200,
+         "byte": 64,
+         "titolo_pagina": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "voce": "Classici",
+     "azione": "radio",
+     "esito": "SOTTOMENU SENZA TITOLI",
+     "sottovoci": 9,
+     "figli": [
+      {
+       "voce": "Moby Dick by Herman Melville",
+       "azione": "radio",
+       "esito": "ERRORE AttributeError",
+       "pagine": [
+        {
+         "url": "",
+         "status": "",
+         "byte": 0,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "Pride and Prejudice by Jane Austen",
+       "azione": "radio",
+       "esito": "ERRORE AttributeError",
+       "pagine": [
+        {
+         "url": "",
+         "status": "",
+         "byte": 0,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "Romeo and Juliet by William Shakespeare",
+       "azione": "radio",
+       "esito": "ERRORE AttributeError",
+       "pagine": [
+        {
+         "url": "",
+         "status": "",
+         "byte": 0,
+         "titolo_pagina": ""
+        }
+       ]
+      }
+     ],
+     "pagine": [
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "voce": "• Luogo",
+   "azione": "radio",
+   "esito": "SOTTOMENU",
+   "sottovoci": 2,
+   "figli": [
+    {
+     "voce": "Regioni",
+     "azione": "radio",
+     "esito": "SOTTOMENU SENZA TITOLI",
+     "sottovoci": 7,
+     "figli": [
+      {
+       "voce": "Africa",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/r101215?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAEAAQABAAEAEhIAAQcAAA",
+         "status": 200,
+         "byte": 107741,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "Asia",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/r101216?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAIAAgABAAEAEhIAAQcAAA",
+         "status": 200,
+         "byte": 93787,
+         "titolo_pagina": ""
+        }
+       ]
+      },
+      {
+       "voce": "Oceania",
+       "azione": "radio",
+       "esito": "VUOTA",
+       "pagine": [
+        {
+         "url": "https://api.radiotime.com/categories/r100297?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAMAAwABAAEAEhIAAQcAAA",
+         "status": 200,
+         "byte": 65489,
+         "titolo_pagina": ""
+        }
+       ]
+      }
+     ],
+     "pagine": [
+      {
+       "url": "https://api.radiotime.com/categories/r101215?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAEAAQABAAEAEhIAAQcAAA",
+       "status": 200,
+       "byte": 107741,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "https://api.radiotime.com/categories/r101216?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAIAAgABAAEAEhIAAQcAAA",
+       "status": 200,
+       "byte": 93787,
+       "titolo_pagina": ""
+      },
+      {
+       "url": "https://api.radiotime.com/categories/r100297?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAMAAwABAAEAEhIAAQcAAA",
+       "status": 200,
+       "byte": 65489,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Stazioni",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 20
+    }
+   ]
+  },
+  {
+   "voce": "• Lingua",
+   "azione": "radio",
+   "esito": "SOTTOMENU",
+   "sottovoci": 100,
+   "figli": [
+    {
+     "voce": "Aborigeno",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 20
+    },
+    {
+     "voce": "Afrikaans",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 20
+    },
+    {
+     "voce": "Akan",
+     "azione": "radio",
+     "esito": "OK",
+     "titoli": 20
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "radio",
+   "esito": "OK",
+   "titoli": 1
+  }
+ ],
+ "sezioni_riepilogo": "7 ok su 8",
+ "rete": [
+  {
+   "url": "http://api.radiotime.com/categories/music?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
+   "status": 200,
+   "byte": 341273,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "http://api.radiotime.com/categories/sports?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
+   "status": 200,
+   "byte": 295968,
+   "secondi": 0.2,
+   "titolo_pagina": "",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://api.radiotime.com/categories/c1736013?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BU7XAQAAAAAA",
+   "status": 200,
+   "byte": 68818,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://api.radiotime.com/categories/c403161?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgADAAMAW1sMFnsGAAEHDJTh9QUMlOH1Ba78AQAAAAAA",
+   "status": 200,
+   "byte": 26199,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://api.radiotime.com/categories/c16230079?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BVDXAQAAAAAA",
+   "status": 200,
+   "byte": 41861,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "http://api.radiotime.com/categories/c57922?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
+   "status": 200,
+   "byte": 136934,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://api.radiotime.com/categories/c100001521?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQAEAAQAW1sMQuIAAAEHDKHx9QUMofH1BScRAgAAAAAA",
+   "status": 200,
+   "byte": 149508,
+   "secondi": 0.2,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://api.radiotime.com/categories/c100002931?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgAEAAQAW1sMQuIAAAEHDKHx9QUMofH1BT0RAgAAAAAA",
+   "status": 200,
+   "byte": 49314,
+   "secondi": 0.2,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://api.radiotime.com/categories/g237?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwAEAAQAW1sMQuIAAAEHDKHx9QUMofH1BSURAgAAAAAA",
+   "status": 200,
+   "byte": 2527,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "http://api.radiotime.com/categories/c100000088?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
+   "status": 200,
+   "byte": 273497,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://api.radiotime.com/categories/c100035580?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BaR_AgAAAAAA",
+   "status": 200,
+   "byte": 113637,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
+   "status": 200,
+   "byte": 1743788,
+   "secondi": 1.9,
+   "titolo_pagina": "",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "http://api.radiotime.com/categories/c100006408?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
+   "status": 200,
+   "byte": 64189,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.radiotime.com/categories/g4535?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQABAAEAW1sMCPr1BQEHDCT69QUMJPr1BXhQAgAAAAAA",
+   "status": 200,
+   "byte": 58,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.radiotime.com/categories/g4532?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMCPr1BQEHDCT69QUMJPr1BYhRAgAAAAAA",
+   "status": 200,
+   "byte": 2169,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.radiotime.com/categories/g4505?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwABAAEAW1sMCPr1BQEHDCT69QUMJPr1BXpQAgAAAAAA",
+   "status": 200,
+   "byte": 64,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "http://api.radiotime.com/categories/regions?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
+   "status": 200,
+   "byte": 42768,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.radiotime.com/categories/r101215?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAEAAQABAAEAEhIAAQcAAA",
+   "status": 200,
+   "byte": 107741,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.radiotime.com/categories/r101216?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAIAAgABAAEAEhIAAQcAAA",
+   "status": 200,
+   "byte": 93787,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.radiotime.com/categories/r100297?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAMAAwABAAEAEhIAAQcAAA",
+   "status": 200,
+   "byte": 65489,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "http://api.radiotime.com/categories/languages?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
+   "status": 200,
+   "byte": 67129,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.radiotime.com/categories/languages?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&filter=l169&viewModel=False&itemToken=BgcHAAEAAQABAAEAExMAAQcTUgAAABNSAAAA",
+   "status": 200,
+   "byte": 34353,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.radiotime.com/categories/languages?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&filter=l191&viewModel=False&itemToken=BgcHAAIAAgABAAEAExMAAQcTUgAAABNSAAAA",
+   "status": 200,
+   "byte": 33505,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.radiotime.com/categories/languages?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&filter=l226&viewModel=False&itemToken=BgcHAAMAAwABAAEAExMAAQcTUgAAABNSAAAA",
+   "status": 200,
+   "byte": 34428,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "http://api.radiotime.com/profiles?fullTextSearch=true&query=avatar&formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
+   "status": 200,
+   "byte": 40763,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  }
+ ],
  "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
 }

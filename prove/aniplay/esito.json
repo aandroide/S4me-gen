@@ -14,13 +14,290 @@
   }
  ],
  "video": [],
+ "menu_dichiarato": [
+  "anime | '/api/anime/advanced-search'",
+  "anime | ('A-Z', ['/api/anime/advanced-search', 'submenu_az', ''])",
+  "anime | ('Anno', ['', 'submenu_year', ''])",
+  "anime | ('Top', ['', 'submenu_top', ''])",
+  "anime | ('Ultimi aggiunti', ['', 'latest_added', ''])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Anime",
+   "azione": "peliculas",
+   "esito": "ERRORE AttributeError",
+   "pagine": [
+    {
+     "url": "https://aniplay.co/api/anime/advanced-search?page=0&size=20&sort=views,desc&sort=id",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• A-Z",
+   "azione": "submenu_az",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 27,
+   "figli": [
+    {
+     "voce": "0-9",
+     "azione": "peliculas",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://aniplay.co/api/anime/find-by-char?page=0&size=20&character=0-9&sort=views,desc&sort=id",
+       "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "A",
+     "azione": "peliculas",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://aniplay.co/api/anime/find-by-char?page=0&size=20&character=A&sort=views,desc&sort=id",
+       "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "B",
+     "azione": "peliculas",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://aniplay.co/api/anime/find-by-char?page=0&size=20&character=B&sort=views,desc&sort=id",
+       "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
+   "pagine": [
+    {
+     "url": "https://aniplay.co/api/anime/find-by-char?page=0&size=20&character=0-9&sort=views,desc&sort=id",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://aniplay.co/api/anime/find-by-char?page=0&size=20&character=A&sort=views,desc&sort=id",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://aniplay.co/api/anime/find-by-char?page=0&size=20&character=B&sort=views,desc&sort=id",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Anno",
+   "azione": "submenu_year",
+   "esito": "ERRORE AttributeError",
+   "pagine": [
+    {
+     "url": "https://aniplay.co/api/anime/advanced-search?page=0&size=1&sort=startDate,asc&sort=id",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Top",
+   "azione": "submenu_top",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 3,
+   "figli": [
+    {
+     "voce": "Top del giorno",
+     "azione": "submenu_top_of",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://aniplay.co/api/home/daily-top",
+       "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Top della settimana",
+     "azione": "submenu_top_of",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://aniplay.co/api/home/weekly-top",
+       "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Top del mese",
+     "azione": "submenu_top_of",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://aniplay.co/api/home/monthly-top",
+       "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
+   "pagine": [
+    {
+     "url": "https://aniplay.co/api/home/daily-top",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://aniplay.co/api/home/weekly-top",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://aniplay.co/api/home/monthly-top",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Ultimi aggiunti",
+   "azione": "latest_added",
+   "esito": "ERRORE AttributeError",
+   "pagine": [
+    {
+     "url": "https://aniplay.co/api/home/latest-episodes?page=0",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• txt70741 Anime…",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://aniplay.co/api/anime/advanced-search?page=0&size=20&query=avatar&sort=views,desc&sort=id",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 6",
  "rete": [
   {
    "url": "https://aniplay.co/api/anime/advanced-search?page=0&size=20&sort=views,desc&sort=id",
    "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
    "byte": 0,
    "secondi": 10.1,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
+  },
+  {
+   "url": "https://aniplay.co/api/anime/advanced-search?page=0&size=20&sort=views,desc&sort=id",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.1,
+   "titolo_pagina": "",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://aniplay.co/api/anime/find-by-char?page=0&size=20&character=0-9&sort=views,desc&sort=id",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.0,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://aniplay.co/api/anime/find-by-char?page=0&size=20&character=A&sort=views,desc&sort=id",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.0,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://aniplay.co/api/anime/find-by-char?page=0&size=20&character=B&sort=views,desc&sort=id",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.1,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://aniplay.co/api/anime/advanced-search?page=0&size=1&sort=startDate,asc&sort=id",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.0,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://aniplay.co/api/home/daily-top",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.0,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://aniplay.co/api/home/weekly-top",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.0,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://aniplay.co/api/home/monthly-top",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.0,
+   "titolo_pagina": "",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://aniplay.co/api/home/latest-episodes?page=0",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.0,
+   "titolo_pagina": "",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://aniplay.co/api/anime/advanced-search?page=0&size=20&query=avatar&sort=views,desc&sort=id",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 10.1,
+   "titolo_pagina": "",
+   "file": "pagine/11.html"
   }
  ],
  "verdetto": "SI FERMA A: lista \"• Anime\""

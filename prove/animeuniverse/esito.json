@@ -24,12 +24,87 @@
   }
  ],
  "video": [],
+ "menu_dichiarato": [
+  "anime | '/anime/'",
+  "anime | ('Tipo', ['', 'menu', 'Anime'])",
+  "anime | ('Anno', ['', 'menu', 'Anno'])",
+  "anime | ('Genere', ['', 'menu', 'Genere'])",
+  "anime | ('Ultimi Episodi', ['/2/', 'peliculas', 'last'])",
+  "anime | ('Hentai', ['/hentai/', 'peliculas'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Anime",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": []
+  },
+  {
+   "voce": "•• Tipo",
+   "azione": "menu",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Anno",
+   "azione": "menu",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Genere",
+   "azione": "menu",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Ultimi Episodi",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": []
+  },
+  {
+   "voce": "•• Hentai",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": []
+  },
+  {
+   "voce": "•• txt70741 Anime…",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": []
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 7",
  "rete": [
   {
    "url": "",
    "status": "",
    "byte": 0,
    "secondi": 0.0,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
@@ -37,7 +112,32 @@
    "status": "",
    "byte": 0,
    "secondi": 0.0,
+   "titolo_pagina": "",
    "file": "pagine/02.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
   }
  ],
  "verdetto": "SI FERMA A: lista \"• Anime\""

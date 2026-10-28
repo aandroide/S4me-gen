@@ -2,8 +2,8 @@ Canale accuradio | indirizzo
 == mainlist
    -> 72 voci
       peliculas | Most Popular  | https://www.accuradio.com/
-      peliculas | "Twelve Landmark Albums of the '60s" — 12 legendary artists  | https://www.accuradio.com/
-      peliculas | Today's Rocktober Featured Channel: "1990s Alternative"  | https://www.accuradio.com/
+      peliculas | "Best Indie of 2026" — Featuring Metric, beabadoobee, the St | https://www.accuradio.com/
+      peliculas | Today's Rocktober Featured Channel: "Classic Rock Dreams"  | https://www.accuradio.com/
       peliculas | Halloween channels  | https://www.accuradio.com/
 == lista "Most Popular "
    -> 48 voci
@@ -11,17 +11,345 @@ Canale accuradio | indirizzo
       playradio | Today's New Country | https://www.accuradio.com/
       playradio | Classical Concentration | https://www.accuradio.com/
       playradio | Magic Sunny Lite Mix | https://www.accuradio.com/
-== lista ""Twelve Landmark Albums of the '60s" — 1"
-   -> 48 voci
-      playradio | Classic Rocktopia | https://www.accuradio.com/
-      playradio | Today's New Country | https://www.accuradio.com/
-      playradio | Classical Concentration | https://www.accuradio.com/
-      playradio | Magic Sunny Lite Mix | https://www.accuradio.com/
-== lista "Today's Rocktober Featured Channel: "199"
+== lista ""Best Indie of 2026" — Featuring Metric,"
+   -> 0 voci
+== lista "Today's Rocktober Featured Channel: "Cla"
    -> 48 voci
       playradio | Classic Rocktopia | https://www.accuradio.com/
       playradio | Today's New Country | https://www.accuradio.com/
       playradio | Classical Concentration | https://www.accuradio.com/
       playradio | Magic Sunny Lite Mix | https://www.accuradio.com/
 Nessuna voce da riprodurre trovata
-VERDETTO: SI FERMA A: ultimo passo, nessuna voce da riprodurre
+== controllo di tutte le sezioni
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE Most Popular -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.2698330565296547', 'status': 200, 'byte': 55807, 'titolo_pagina': ''}
+   SEZIONE "Best Indie of 2026" — Featuring Metric, beabadoobee, the Strokes, Fontaines D.C. and more of the year's best Indie -> VUOTA   | ultima pagina: {'url': 'https://www.accuradio.com/', 'status': 200, 'byte': 166769, 'titolo_pagina': 'Free Internet Radio | AccuRadio Online'}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE Today's Rocktober Featured Channel: "Classic Rock Dreams" -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.9672543008780089', 'status': 200, 'byte': 56985, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE Halloween channels -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.6782377306972038', 'status': 200, 'byte': 56128, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE Signature Channels -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.2632551586965427', 'status': 200, 'byte': 56196, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE Today's Commercial-Free Genre: Yoga & Meditation -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.7577743931116476', 'status': 200, 'byte': 56241, 'titolo_pagina': ''}
+   SEZIONE 1960s & '70s Lite Hits -> ERRORE AttributeError
+   SEZIONE 1970s & '80s Lite Hits -> ERRORE AttributeError
+   SEZIONE 1980s & '90s Lite Hits -> ERRORE AttributeError
+   SEZIONE • Adult Contemporary -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.6391830054900023', 'status': 200, 'byte': 43308, 'titolo_pagina': ''}
+   SEZIONE 2010s Adult Rock -> ERRORE AttributeError
+   SEZIONE 2020s Adult Rock -> ERRORE AttributeError
+   SEZIONE Adult Alternative -> ERRORE AttributeError
+   SEZIONE • Adult Rock -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/67913f75ab53e34644bec250/?ando=3979&rand=0.4887799395759347', 'status': 200, 'byte': 51991, 'titolo_pagina': ''}
+   SEZIONE Insurgent Country -> ERRORE AttributeError
+   SEZIONE The Fast Train -> ERRORE AttributeError
+   SEZIONE The Train -> ERRORE AttributeError
+   SEZIONE • Alt-Country -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4f846a740d11401270000001/?ando=1099&rand=0.6592318970884192', 'status': 200, 'byte': 42892, 'titolo_pagina': ''}
+   SEZIONE '90s Pop Alternative -> ERRORE AttributeError
+   SEZIONE 1980s Alternative -> ERRORE AttributeError
+   SEZIONE 1990s Alternative -> ERRORE AttributeError
+   SEZIONE • Alternative Rock -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.02673387430044416', 'status': 200, 'byte': 42877, 'titolo_pagina': ''}
+   SEZIONE '90s Pop Alternative -> ERRORE AttributeError
+   SEZIONE 1980s Alternative -> ERRORE AttributeError
+   SEZIONE 1990s Alternative -> ERRORE AttributeError
+   SEZIONE • Alternative Rock Classics -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.3069662569523144', 'status': 200, 'byte': 43095, 'titolo_pagina': ''}
+   SEZIONE • Americana -> VUOTA   | ultima pagina: {'url': 'https://www.accuradio.com/', 'status': 200, 'byte': 166769, 'titolo_pagina': 'Free Internet Radio | AccuRadio Online'}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Artist Features -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.9981025743835222', 'status': 200, 'byte': 56665, 'titolo_pagina': ''}
+   SEZIONE Classical Relaxation -> ERRORE AttributeError
+   SEZIONE Lounge/Exotica -> ERRORE AttributeError
+   SEZIONE Romantic Piano -> ERRORE AttributeError
+   SEZIONE • Beautiful Music -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/556e1979ab53e370ee604e5b/?ando=4281&rand=0.9656803418107786', 'status': 200, 'byte': 38067, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Blends -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.8562084497331056', 'status': 200, 'byte': 56173, 'titolo_pagina': ''}
+   SEZIONE • Bluegrass -> VUOTA   | ultima pagina: {'url': 'https://www.accuradio.com/', 'status': 200, 'byte': 166769, 'titolo_pagina': 'Free Internet Radio | AccuRadio Online'}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Blues -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.9329519401018436', 'status': 200, 'byte': 56555, 'titolo_pagina': ''}
+   SEZIONE All Jobim -> ERRORE AttributeError
+   SEZIONE Bossa Nova Love Affair -> ERRORE AttributeError
+   SEZIONE Brazilian Jazz -> ERRORE AttributeError
+   SEZIONE • Brazilian -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/59c59dd6ab53e35581c8f107/?ando=2998&rand=0.8163543231311186', 'status': 200, 'byte': 50870, 'titolo_pagina': ''}
+   SEZIONE All I Want to Do Is BritRock! -> ERRORE AttributeError
+   SEZIONE BritKast -> ERRORE AttributeError
+   SEZIONE BritRock: Sour Times -> ERRORE AttributeError
+   SEZIONE • Brit Rock -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/61e8983eab53e344fc6d3e24/?ando=3523&rand=0.34800232238633744', 'status': 200, 'byte': 49777, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Broadway -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.3974658000260819', 'status': 200, 'byte': 56543, 'titolo_pagina': ''}
+   SEZIONE • Cabaret -> VUOTA   | ultima pagina: {'url': 'https://www.accuradio.com/', 'status': 200, 'byte': 166769, 'titolo_pagina': 'Free Internet Radio | AccuRadio Online'}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Canadian -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.9918721115272966', 'status': 200, 'byte': 57120, 'titolo_pagina': ''}
+   SEZIONE Calling All Pipers -> ERRORE AttributeError
+   SEZIONE Celtic Calm -> ERRORE AttributeError
+   SEZIONE Celtic Focus -> ERRORE AttributeError
+   SEZIONE • Celtic -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/6050b9b3ab53e35eef51ae75/?ando=1826&rand=0.5943113888830346', 'status': 200, 'byte': 42818, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Chill -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.18576413566279504', 'status': 200, 'byte': 56799, 'titolo_pagina': ''}
+   SEZIONE • Christian & Gospel -> VUOTA   | ultima pagina: {'url': 'https://www.accuradio.com/', 'status': 200, 'byte': 166769, 'titolo_pagina': 'Free Internet Radio | AccuRadio Online'}
+   SEZIONE 889 Desert Island 'Must Haves' -> ERRORE AttributeError
+   SEZIONE Barry Gibb Radio -> ERRORE AttributeError
+   SEZIONE Barry Manilow Radio -> ERRORE AttributeError
+   SEZIONE • Classic Hits -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/6a7b62f9ab53e36f13ab89e5/?ando=4164&rand=0.31262574201891535', 'status': 200, 'byte': 41963, 'titolo_pagina': ''}
+   SEZIONE '70s Glam Rock -> ERRORE AttributeError
+   SEZIONE '90s Classic Rock -> ERRORE AttributeError
+   SEZIONE 100 Greatest Rock Guitar Songs -> ERRORE AttributeError
+   SEZIONE • Classic Rock -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/561d8893ab53e32b06edfeec/?ando=3467&rand=0.34041477335726433', 'status': 200, 'byte': 43554, 'titolo_pagina': ''}
+   SEZIONE AccuClassical -> ERRORE AttributeError
+   SEZIONE All-American Classical -> ERRORE AttributeError
+   SEZIONE Avant Garde Classical -> ERRORE AttributeError
+   SEZIONE • Classical -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/58641912ab53e3439df32625/?ando=1980&rand=0.809609792765975', 'status': 200, 'byte': 39595, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Comedy -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.378807779981313', 'status': 200, 'byte': 56335, 'titolo_pagina': ''}
+   SEZIONE 1960s Country -> ERRORE AttributeError
+   SEZIONE 1970s Country -> ERRORE AttributeError
+   SEZIONE 1980s Country -> ERRORE AttributeError
+   SEZIONE • Country -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562077d9e7463600006f/?ando=688&rand=0.20806957791724767', 'status': 200, 'byte': 41633, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Crowdsourced channels -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.5987554869156428', 'status': 200, 'byte': 56730, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Dance -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.09976222076360564', 'status': 200, 'byte': 56601, 'titolo_pagina': ''}
+   SEZIONE 1950s Broadway -> ERRORE AttributeError
+   SEZIONE 1950s Jazz -> ERRORE AttributeError
+   SEZIONE At the Hop: '50s Dance Classics -> ERRORE AttributeError
+   SEZIONE • Decade: 1950s -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562c77d9e74636000235/?ando=641&rand=0.8216808622671997', 'status': 200, 'byte': 43492, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Decade: 1960s -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.3772357659534864', 'status': 200, 'byte': 57191, 'titolo_pagina': ''}
+   SEZIONE '70s Glam Rock -> ERRORE AttributeError
+   SEZIONE '70s One-Hit Wonders -> ERRORE AttributeError
+   SEZIONE 1970s Broadway -> ERRORE AttributeError
+   SEZIONE • Decade: 1970s -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/6406332cab53e31465eb505a/?ando=3654&rand=0.7557881104020203', 'status': 200, 'byte': 42049, 'titolo_pagina': ''}
+   SEZIONE • Decade: 1980s -> VUOTA   | ultima pagina: {'url': 'https://www.accuradio.com/', 'status': 200, 'byte': 166769, 'titolo_pagina': 'Free Internet Radio | AccuRadio Online'}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Decade: 1990s -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.10373329860532954', 'status': 200, 'byte': 57101, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Decade: 2000s -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.4530944706678318', 'status': 200, 'byte': 56002, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Decade: 2010s -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.6802355349922661', 'status': 200, 'byte': 56996, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Decade: 2020s -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.04322101157861902', 'status': 200, 'byte': 56125, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Disco -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.49882876652959496', 'status': 200, 'byte': 56394, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Electronic -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.5022504957597752', 'status': 200, 'byte': 56673, 'titolo_pagina': ''}
+   SEZIONE • Folk -> VUOTA   | ultima pagina: {'url': 'https://www.accuradio.com/', 'status': 200, 'byte': 166769, 'titolo_pagina': 'Free Internet Radio | AccuRadio Online'}
+   SEZIONE Classic French Pop -> ERRORE AttributeError
+   SEZIONE French Pop: '60s & Beyond -> ERRORE AttributeError
+   SEZIONE Les femmes françaises -> ERRORE AttributeError
+   SEZIONE • French Pop Classics -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38561e77d9e7463600003c/?ando=593&rand=0.46452339752437644', 'status': 200, 'byte': 42805, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Halloween -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.5846611115089196', 'status': 200, 'byte': 56327, 'titolo_pagina': ''}
+   SEZIONE 2020s Hip Hop and R&B -> ERRORE AttributeError
+   SEZIONE Back in the Day '93-'95 -> ERRORE AttributeError
+   SEZIONE Back in the Day '96-'99 -> ERRORE AttributeError
+   SEZIONE • Hip Hop -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562077d9e7463600008c/?ando=284&rand=0.3913462047465254', 'status': 200, 'byte': 42569, 'titolo_pagina': ''}
+   SEZIONE Ariana Grande Radio -> ERRORE AttributeError
+   SEZIONE Avant Pop -> ERRORE AttributeError
+   SEZIONE Beyoncé Radio -> ERRORE AttributeError
+   SEZIONE • Hits (Top 40) -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/5e823cb0ab53e37e7b623fe0/?ando=1684&rand=0.4962394046034745', 'status': 200, 'byte': 53383, 'titolo_pagina': ''}
+   SEZIONE Holidays Radio -> ERRORE AttributeError
+   SEZIONE Old-Fashioned Christmas -> ERRORE AttributeError
+   SEZIONE Christmas Country -> ERRORE AttributeError
+   SEZIONE • Holiday Music -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562a77d9e746360001ed/?ando=357&rand=0.04452519942646327', 'status': 200, 'byte': 46764, 'titolo_pagina': ''}
+   SEZIONE 2000s Indie -> ERRORE AttributeError
+   SEZIONE 2010s Indie -> ERRORE AttributeError
+   SEZIONE 2020s Indie -> ERRORE AttributeError
+   SEZIONE • Indie -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/5db755b9ab53e39820c9befd/?ando=4608&rand=0.9923505864610654', 'status': 200, 'byte': 44557, 'titolo_pagina': ''}
+   SEZIONE • Jazz -> VUOTA   | ultima pagina: {'url': 'https://www.accuradio.com/', 'status': 200, 'byte': 166769, 'titolo_pagina': 'Free Internet Radio | AccuRadio Online'}
+   SEZIONE K-pop: Second Generation -> ERRORE AttributeError
+   SEZIONE K-pop: Third Generation -> ERRORE AttributeError
+   SEZIONE • K-pop (Korean) -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/651b1999ab53e353176dc748/?ando=2111&rand=0.9253645236273478', 'status': 200, 'byte': 51181, 'titolo_pagina': ''}
+   SEZIONE ¡Zumba! -> ERRORE AttributeError
+   SEZIONE Baila Tropical -> ERRORE AttributeError
+   SEZIONE Barrio Dominicano -> ERRORE AttributeError
+   SEZIONE • Latino -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/5f77592bab53e338838b2bcd/?ando=3386&rand=0.9785661455878624', 'status': 200, 'byte': 53617, 'titolo_pagina': ''}
+   SEZIONE 1960s & '70s Lite Hits -> ERRORE AttributeError
+   SEZIONE 1970s & '80s Lite Hits -> ERRORE AttributeError
+   SEZIONE 1990s & '00s Lite Hits -> ERRORE AttributeError
+   SEZIONE • Lite Hits -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.24200728536236782', 'status': 200, 'byte': 42581, 'titolo_pagina': ''}
+   SEZIONE A Classical Valentine -> ERRORE AttributeError
+   SEZIONE Beautiful Music -> ERRORE AttributeError
+   SEZIONE Bossa Nova Love Affair -> ERRORE AttributeError
+   SEZIONE • Love Songs -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.7828769879251902', 'status': 200, 'byte': 42754, 'titolo_pagina': ''}
+   SEZIONE '80s Aggression -> ERRORE AttributeError
+   SEZIONE '80s Hair Metal -> ERRORE AttributeError
+   SEZIONE 100 Greatest Hard Rock Songs -> ERRORE AttributeError
+   SEZIONE • Metal -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38561f77d9e74636000061/?ando=500&rand=0.9074033518159533', 'status': 200, 'byte': 45417, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Movie & TV music -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.9216704028755235', 'status': 200, 'byte': 56473, 'titolo_pagina': ''}
+   SEZIONE Ambient Electronic -> ERRORE AttributeError
+   SEZIONE Chill -> ERRORE AttributeError
+   SEZIONE Fingerstyle Guitar -> ERRORE AttributeError
+   SEZIONE • New Age (Relaxing) -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562477d9e74636000105/?ando=490&rand=0.119007230723433', 'status': 200, 'byte': 50336, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Nordic Folk Songs -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.5406316332504845', 'status': 200, 'byte': 56237, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Oldies -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.5761625560872753', 'status': 200, 'byte': 56656, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Opera -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.4522095034969713', 'status': 200, 'byte': 56958, 'titolo_pagina': ''}
+   SEZIONE Big Band Delights -> ERRORE AttributeError
+   SEZIONE Billie Holiday Centennial -> ERRORE AttributeError
+   SEZIONE Easy Listening Standards -> ERRORE AttributeError
+   SEZIONE • Pop Standards -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/551c0e3eab53e32d3edaf854/?ando=35&rand=0.8069044957879201', 'status': 200, 'byte': 42284, 'titolo_pagina': ''}
+   SEZIONE Fuzz Factory -> ERRORE AttributeError
+   SEZIONE Pop-punk -> ERRORE AttributeError
+   SEZIONE Post Punk/No Wave -> ERRORE AttributeError
+   SEZIONE • Punk & Underground -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/5a1de781ab53e339b155e799/?ando=2412&rand=0.1276430864197139', 'status': 200, 'byte': 43229, 'titolo_pagina': ''}
+   SEZIONE 1980s R&B -> ERRORE AttributeError
+   SEZIONE 1990s R&B -> ERRORE AttributeError
+   SEZIONE 2000s R&B -> ERRORE AttributeError
+   SEZIONE • R&B -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562177d9e74636000098/?ando=497&rand=0.7190455266408141', 'status': 200, 'byte': 41885, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Reggae -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.7819069050244823', 'status': 200, 'byte': 56965, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Rock -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.7457496762703609', 'status': 200, 'byte': 56498, 'titolo_pagina': ''}
+   SEZIONE Instrument: Smooth Jazz Brass -> ERRORE AttributeError
+   SEZIONE Instrument: Smooth Jazz Guitar -> ERRORE AttributeError
+   SEZIONE Instrument: Smooth Jazz Piano -> ERRORE AttributeError
+   SEZIONE • Smooth Jazz -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562677d9e7463600015e/?ando=559&rand=0.00788813382815945', 'status': 200, 'byte': 43975, 'titolo_pagina': ''}
+   SEZIONE Big Easy R&B and Funk -> ERRORE AttributeError
+   SEZIONE Black Music's Legendary Labels -> ERRORE AttributeError
+   SEZIONE Carolina Beach Music -> ERRORE AttributeError
+   SEZIONE • Soul -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/54cbe2f10d11403bbc57baa6/?ando=3101&rand=0.6625512020041465', 'status': 200, 'byte': 42672, 'titolo_pagina': ''}
+   SEZIONE Classic Rocktopia -> ERRORE AttributeError
+   SEZIONE Today's New Country -> ERRORE AttributeError
+   SEZIONE Classical Concentration -> ERRORE AttributeError
+   SEZIONE • Specialty channels -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.7245207412937321', 'status': 200, 'byte': 56715, 'titolo_pagina': ''}
+   SEZIONE Listeners' Top 100: '70s Hits -> ERRORE AttributeError
+   SEZIONE Listeners' Top 100: '80s Hits -> ERRORE AttributeError
+   SEZIONE Listeners' Top 100: 2000s R&B -> ERRORE AttributeError
+   SEZIONE • Top 100 Songs -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/513110ef0d114006b3c28fb0/?ando=4135&rand=0.502094770341112', 'status': 200, 'byte': 43952, 'titolo_pagina': ''}
+   SEZIONE Africa Calls -> ERRORE AttributeError
+   SEZIONE Afrobeat -> ERRORE AttributeError
+   SEZIONE Balkan Brass -> ERRORE AttributeError
+   SEZIONE • World Music -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/53eb8f9f0d11402c84f0088c/?ando=826&rand=0.891409107962436', 'status': 200, 'byte': 41076, 'titolo_pagina': ''}
+   SEZIONE Chill -> ERRORE AttributeError
+   SEZIONE Alternative Rock: New Releases -> ERRORE AttributeError
+   SEZIONE The Best Rock of the '20s -> ERRORE AttributeError
+   SEZIONE Cerca... -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.accuradio.com/playlist/json/4e38562477d9e74636000105/?ando=490&rand=0.5193889210846134', 'status': 200, 'byte': 50437, 'titolo_pagina': ''}
+SEZIONI: 0 ok su 71
+   SEZIONE SENZA TITOLI: Most Popular | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: "Best Indie of 2026" — Featuring Metric, beabadoobee, the Strokes, Fontaines D.C. and more of the year's best Indie | VUOTA
+   SEZIONE SENZA TITOLI: Today's Rocktober Featured Channel: "Classic Rock Dreams" | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: Halloween channels | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: Signature Channels | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: Today's Commercial-Free Genre: Yoga & Meditation | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Adult Contemporary | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Adult Rock | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Alt-Country | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Alternative Rock | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Alternative Rock Classics | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Americana | VUOTA
+   SEZIONE SENZA TITOLI: • Artist Features | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Beautiful Music | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Blends | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Bluegrass | VUOTA
+   SEZIONE SENZA TITOLI: • Blues | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Brazilian | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Brit Rock | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Broadway | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Cabaret | VUOTA
+   SEZIONE SENZA TITOLI: • Canadian | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Celtic | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Chill | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Christian & Gospel | VUOTA
+   SEZIONE SENZA TITOLI: • Classic Hits | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Classic Rock | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Classical | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Comedy | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Country | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Crowdsourced channels | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Dance | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Decade: 1950s | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Decade: 1960s | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Decade: 1970s | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Decade: 1980s | VUOTA
+   SEZIONE SENZA TITOLI: • Decade: 1990s | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Decade: 2000s | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Decade: 2010s | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Decade: 2020s | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Disco | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Electronic | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Folk | VUOTA
+   SEZIONE SENZA TITOLI: • French Pop Classics | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Halloween | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Hip Hop | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Hits (Top 40) | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Holiday Music | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Indie | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Jazz | VUOTA
+   SEZIONE SENZA TITOLI: • K-pop (Korean) | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Latino | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Lite Hits | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Love Songs | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Metal | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Movie & TV music | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • New Age (Relaxing) | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Nordic Folk Songs | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Oldies | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Opera | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Pop Standards | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Punk & Underground | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • R&B | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Reggae | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Rock | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Smooth Jazz | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Soul | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Specialty channels | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • Top 100 Songs | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: • World Music | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: Cerca... | SOTTOMENU SENZA TITOLI
+VERDETTO: SI FERMA A: lista ""Best Indie of 2026" — Featuring Metric,"

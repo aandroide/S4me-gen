@@ -24,27 +24,144 @@
   }
  ],
  "video": [],
+ "menu_dichiarato": [
+  "film | '/film'",
+  "top | ('Generi', ['/film', 'menu', 'genres'])",
+  "top | ('Anno', ['/film', 'menu', 'releases'])",
+  "tvshow | '/tv'"
+ ],
+ "sezioni": [
+  {
+   "voce": "Generi",
+   "azione": "menu",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://streamingita.homes/film",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "Anno",
+   "azione": "menu",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://streamingita.homes/film",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://streamingita.homes/film",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://streamingita.homes/tv",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://streamingita.homes/?s=avatar",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 5",
  "rete": [
   {
    "url": "https://streamingita.homes/film",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
    "secondi": 0.9,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
    "url": "https://streamingita.homes/film",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 1.1,
+   "secondi": 0.7,
+   "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://streamingita.homes/film",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.8,
+   "secondi": 0.7,
+   "titolo_pagina": "",
    "file": "pagine/03.html"
+  },
+  {
+   "url": "https://streamingita.homes/film",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://streamingita.homes/film",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.5,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://streamingita.homes/film",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.5,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://streamingita.homes/tv",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.6,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://streamingita.homes/?s=avatar",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
   }
  ],
  "verdetto": "SI FERMA A: lista \"Generi\""

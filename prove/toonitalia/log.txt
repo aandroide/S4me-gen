@@ -36,4 +36,18 @@ Canale toonitalia | indirizzo https://toonitalia.xyz
       play | 01 - Gioco di Ruolo | https://voe.sx/e/hig6dbajibee
 == risoluzione voe https://voe.sx/e/hig6dbajibee
    -> VIDEO OK m3u8 200 
+== voci dichiarate in mainlist (5)
+    menu | ('Anime', ['/category/anime', 'peliculas', '', 'undefined'])
+    menu | ('Anime ITA {submenu}', ['/anime-ita', 'peliculas', 'list', 'undefined'])
+    menu | ('Anime Sub-ITA {submenu}', ['/contatti', 'peliculas', 'list', 'undefined'])
+    menu | ('Film Animazione', ['/film-animazione', 'peliculas', 'list', 'undefined'])
+    menu | ('Serie TV', ['/serie-tv/', 'peliculas', 'list', 'tvshow'])
+== controllo di tutte le sezioni
+   SEZIONE Anime -> OK 20 
+   SEZIONE •• Anime ITA -> OK 20 
+   SEZIONE •• Anime Sub-ITA -> OK 20 
+   SEZIONE Film Animazione -> OK 20 
+   SEZIONE Serie TV -> OK 20 
+   SEZIONE txt70741 … -> OK 11 
+SEZIONI: 6 ok su 6
 VERDETTO: ARRIVA AL VIDEO

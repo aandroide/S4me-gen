@@ -42,80 +42,136 @@
   {
    "server": "voe",
    "url": "https://voe.sx/e/hig6dbajibee",
-   "finale": "https://ugc-cdn-caching-n3fzsi5gnge0gpz5cp.cloudwindow-route.com/engine/hls2/01/10578/hig6dbajibee_,l,.urlset/master.m3u8?t=KewKKFyhMYf-b8cpAThodSPuvvs6FKVBKESmMCM95Dk&s=1793130862&e=14400&f=52891900&",
+   "finale": "https://ugc-cdn-caching-n3fzsi5gnge0gpz5cp.cloudwindow-route.com/engine/hls2/01/10578/hig6dbajibee_,l,.urlset/master.m3u8?t=FcO67xrKSd5I1vWp_-HzsVus9sj4EEl9tr1C6mSKwj8&s=1793187475&e=14400&f=52891900&",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
  ],
+ "menu_dichiarato": [
+  "menu | ('Anime', ['/category/anime', 'peliculas', '', 'undefined'])",
+  "menu | ('Anime ITA {submenu}', ['/anime-ita', 'peliculas', 'list', 'undefined'])",
+  "menu | ('Anime Sub-ITA {submenu}', ['/contatti', 'peliculas', 'list', 'undefined'])",
+  "menu | ('Film Animazione', ['/film-animazione', 'peliculas', 'list', 'undefined'])",
+  "menu | ('Serie TV', ['/serie-tv/', 'peliculas', 'list', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Anime",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Anime ITA",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Anime Sub-ITA",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "Film Animazione",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 11
+  }
+ ],
+ "sezioni_riepilogo": "6 ok su 6",
  "rete": [
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anime",
    "status": 200,
-   "byte": 331484,
-   "secondi": 5.5,
+   "byte": 332083,
+   "secondi": 5.1,
+   "titolo_pagina": "Anime Archivi - TOONITALIA",
    "file": "pagine/01.html"
   },
   {
    "url": "https://toonitalia.xyz/category/anime",
    "status": 200,
-   "byte": 331484,
-   "secondi": 5.6,
+   "byte": 332083,
+   "secondi": 5.2,
+   "titolo_pagina": "Anime Archivi - TOONITALIA",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/the-apothecary-diaries/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/the-apothecary-diaries/",
    "status": 200,
-   "byte": 103706,
-   "secondi": 2.9,
+   "byte": 103370,
+   "secondi": 3.0,
+   "titolo_pagina": "The Apothecary Diaries streaming e download episodi Ita Toonitalia",
    "file": "pagine/03.html"
   },
   {
    "url": "https://toonitalia.xyz/the-apothecary-diaries/",
    "status": 200,
-   "byte": 103706,
-   "secondi": 3.0,
+   "byte": 103370,
+   "secondi": 3.1,
+   "titolo_pagina": "The Apothecary Diaries streaming e download episodi Ita Toonitalia",
    "file": "pagine/04.html"
   },
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/anime-ita",
    "status": 200,
-   "byte": 219927,
-   "secondi": 4.7,
+   "byte": 219362,
+   "secondi": 3.9,
+   "titolo_pagina": "Anime Ita",
    "file": "pagine/05.html"
   },
   {
    "url": "https://toonitalia.xyz/anime-ita",
    "status": 200,
-   "byte": 219927,
-   "secondi": 4.8,
+   "byte": 219362,
+   "secondi": 4.0,
+   "titolo_pagina": "Anime Ita",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/hack-sign/",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/hack-sign/",
    "status": 200,
-   "byte": 104099,
-   "secondi": 2.7,
+   "byte": 104301,
+   "secondi": 2.5,
+   "titolo_pagina": ".hack//Sign streaming e download episodi Ita Toonitalia anime",
    "file": "pagine/07.html"
   },
   {
    "url": "https://toonitalia.xyz/hack-sign/",
    "status": 200,
-   "byte": 104099,
-   "secondi": 2.8,
+   "byte": 104301,
+   "secondi": 2.6,
+   "titolo_pagina": ".hack//Sign streaming e download episodi Ita Toonitalia anime",
    "file": "pagine/08.html"
   },
   {
    "url": "https://voe.sx/e/hig6dbajibee",
    "status": 200,
    "byte": 743,
-   "secondi": 0.8,
+   "secondi": 0.6,
+   "titolo_pagina": "Redirecting...",
    "file": "pagine/09.html"
   },
   {
    "url": "https://ashleyhardat.com/e/hig6dbajibee",
    "status": 200,
-   "byte": 126598,
+   "byte": 126605,
    "secondi": 0.8,
+   "titolo_pagina": "Guardi HackSign_Ep_01_ITA.mp4 - VOE | Content Delivery Network (CDN) & Video Clo",
    "file": "pagine/10.html"
   },
   {
@@ -123,7 +179,96 @@
    "status": 200,
    "byte": 86050,
    "secondi": 0.8,
+   "titolo_pagina": "",
    "file": "pagine/11.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anime",
+   "status": 200,
+   "byte": 330788,
+   "secondi": 4.6,
+   "titolo_pagina": "Anime Archivi - TOONITALIA",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/category/anime",
+   "status": 200,
+   "byte": 330788,
+   "secondi": 4.7,
+   "titolo_pagina": "Anime Archivi - TOONITALIA",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/anime-ita",
+   "status": 200,
+   "byte": 220041,
+   "secondi": 4.4,
+   "titolo_pagina": "Anime Ita",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/anime-ita",
+   "status": 200,
+   "byte": 220041,
+   "secondi": 4.4,
+   "titolo_pagina": "Anime Ita",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/contatti",
+   "status": 200,
+   "byte": 130128,
+   "secondi": 4.0,
+   "titolo_pagina": "Anime Sub-Ita"
+  },
+  {
+   "url": "https://toonitalia.xyz/contatti",
+   "status": 200,
+   "byte": 130128,
+   "secondi": 4.0,
+   "titolo_pagina": "Anime Sub-Ita"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/film-animazione",
+   "status": 200,
+   "byte": 173392,
+   "secondi": 3.4,
+   "titolo_pagina": "Film Animazione"
+  },
+  {
+   "url": "https://toonitalia.xyz/film-animazione",
+   "status": 200,
+   "byte": 173392,
+   "secondi": 3.4,
+   "titolo_pagina": "Film Animazione"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serie-tv/",
+   "status": 200,
+   "byte": 125840,
+   "secondi": 2.9,
+   "titolo_pagina": "Serie Tv"
+  },
+  {
+   "url": "https://toonitalia.xyz/serie-tv/",
+   "status": 200,
+   "byte": 125840,
+   "secondi": 2.9,
+   "titolo_pagina": "Serie Tv"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/?s=avatar",
+   "status": 200,
+   "byte": 112724,
+   "secondi": 2.5,
+   "titolo_pagina": "Hai cercato avatar - TOONITALIA"
+  },
+  {
+   "url": "https://toonitalia.xyz/?s=avatar",
+   "status": 200,
+   "byte": 112724,
+   "secondi": 2.6,
+   "titolo_pagina": "Hai cercato avatar - TOONITALIA"
   }
  ],
  "verdetto": "ARRIVA AL VIDEO"
