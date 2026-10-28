@@ -30,6 +30,7 @@ def mainlist(item):
 
     menu = [('Programmi TV {bullet bold}', ['/programmi', 'peliculas', '', 'tvshow']),
             ('Film La7 {bullet bold}', ['/film', 'film', '', 'movie']),
+            ('Documentari {bullet bold}', ['/documentari', 'documentari', '', 'movie']),
             ('TG La7 {bullet bold}', ['/tgla7/puntate', 'episodios', '', 'tvshow'])]
 
     search = ''
@@ -125,22 +126,62 @@ def replay_channels(item):
     itemlist = []
     for nome, percorso in RIVEDI:
         itemlist.append(item.clone(title=support.typo(nome, 'bold'), fulltitle=nome, url=host + percorso,
-                                   action='replay', forcethumb=True))
+                                   action='replay_giorni', forcethumb=True))
     return support.thumb(itemlist, live=True)
+
+
+GIORNI = ['lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato', 'domenica']
+MESI = ['', 'gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre',
+        'ottobre', 'novembre', 'dicembre']
+
+
+def _guida(h):
+    """Giorni della guida con le puntate rivedibili, letti dai dati incorporati nella pagina."""
+    h = _pulisci(h)
+    marcatori = list(re.finditer(r'"data":"(\d{2}-\d{2}-\d{4})"\},"programma":\[', h))
+    giorni = []
+    for n, m in enumerate(marcatori):
+        fine = marcatori[n + 1].start() if n + 1 < len(marcatori) else len(h)
+        programmi = []
+        for blocco in h[m.end():fine].split('{"ora":"')[1:]:
+            pth = re.search(r'"pathname":"(/[^"]+)"', blocco)
+            if not pth:
+                continue
+            def f(rx):
+                r = re.search(rx, blocco)
+                return r.group(1) if r else ''
+            programmi.append({'ora': blocco[:5], 'titolo': _html.unescape(f(r'"titolo":"([^"]*)"')),
+                              'plot': _html.unescape(f(r'"sinossi":"([^"]*)"')),
+                              'thumb': f(r'"immagine_scena":"([^"]+)"'), 'url': host + pth.group(1)})
+        giorni.append((m.group(1), programmi))
+    return giorni
+
+
+def replay_giorni(item):
+    itemlist = []
+    for data, programmi in reversed(_guida(_scarica(item.url))):
+        if not programmi:
+            continue
+        g, me, an = data.split('-')
+        try:
+            nome = GIORNI[datetime(int(an), int(me), int(g)).weekday()].capitalize()
+        except Exception:
+            nome = ''
+        itemlist.append(item.clone(title=support.typo('%s %d %s' % (nome, int(g), MESI[int(me)]), 'bold'),
+                                   day=data, action='replay', thumbnail=support.thumb()))
+    return itemlist
 
 
 def replay(item):
     itemlist = []
-    for ev in _elementi(_scarica(item.url), ('BroadcastEvent',)):
-        lavoro = ev.get('workFeatured') or {}
-        url = lavoro.get('url')
-        if not url:
+    for data, programmi in _guida(_scarica(item.url)):
+        if data != item.day:
             continue
-        titolo = _html.unescape(ev.get('name', ''))
-        itemlist.append(item.clone(title=support.typo('%s - %s' % (_roma(ev.get('startDate', '')), titolo), 'bold'),
-                                   contentTitle=titolo, fulltitle=titolo, show=titolo, url=url,
-                                   plot=_html.unescape(ev.get('description', '')),
-                                   thumbnail=_img(lavoro), fanart=_img(lavoro), action='findvideos', forcethumb=True))
+        for pr in programmi:
+            itemlist.append(item.clone(title=support.typo('%s - %s' % (pr['ora'], pr['titolo']), 'bold'),
+                                       contentTitle=pr['titolo'], fulltitle=pr['titolo'], show=pr['titolo'],
+                                       url=pr['url'], plot=pr['plot'], thumbnail=pr['thumb'], fanart=pr['thumb'],
+                                       action='findvideos', forcethumb=True))
     return itemlist
 
 
@@ -196,6 +237,18 @@ def film(item):
             continue
         itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=titolo, contentTitle=titolo,
                                    url=f['url'], thumbnail=_img(f), fanart=_img(f), contentType='movie',
+                                   action='findvideos', forcethumb=True))
+    return itemlist
+
+
+def documentari(item):
+    itemlist = []
+    for d in _elementi(_scarica(host + '/documentari'), ('Movie', 'TVEpisode')):
+        titolo = _html.unescape(d.get('name', '')).strip()
+        if not d.get('url'):
+            continue
+        itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=titolo, contentTitle=titolo,
+                                   url=d['url'], thumbnail=_img(d), fanart=_img(d), contentType='movie',
                                    action='findvideos', forcethumb=True))
     return itemlist
 
