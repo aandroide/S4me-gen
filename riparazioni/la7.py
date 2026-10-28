@@ -3,6 +3,7 @@
 # Canale per La7 (nuovo sito la7play.it, riscritto)
 # ------------------------------------------------------------
 
+import base64
 import html as _html
 import json
 import re
@@ -17,6 +18,7 @@ UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 headers = {'User-Agent': UA, 'Referer': host + '/', 'Origin': host}
 # identificativi delle query interne del sito (/api/gql/<id>)
 GQL_PROGRAMMI = ['75b0227f0361abcf', 'f7034d55158fc906']
+GQL_RICERCA = '4da1e384f8a63808'
 LIVE = [('La7', '/dirette/la7'), ('La7Cinema', '/dirette/la7-cinema')]
 RIVEDI = [('La7', '/guida-tv-rivedi/la7'), ('La7Cinema', '/guida-tv-rivedi/la7-cinema')]
 
@@ -198,13 +200,53 @@ def film(item):
     return itemlist
 
 
+def _codifica(variabili):
+    """Variabili della query come le codifica il sito: JSON con chiavi ordinate, base64 url senza padding."""
+    t = json.dumps(variabili, separators=(',', ':'), sort_keys=True, ensure_ascii=False)
+    return base64.urlsafe_b64encode(t.encode('utf-8')).decode('ascii').rstrip('=')
+
+
 def search(item, text):
-    q = str(text).strip().lower()
+    q = str(getattr(item, 'search', '') or text).strip()
     if not q:
         return []
-    itemlist = [i for i in peliculas(item) if q in i.fulltitle.lower()]
-    itemlist.extend(i for i in film(item) if q in i.fulltitle.lower())
+    pagina = int(getattr(item, 'page', 0) or 1)
+    var = {'q': q}
+    if pagina > 1:
+        var['page'] = pagina
+    try:
+        j = json.loads(_scarica('%s/api/gql/%s/%s' % (host, GQL_RICERCA, _codifica(var))))
+        dati = j['data']['siteSearch']
+    except Exception as e:
+        logger.error('la7: ricerca fallita %s' % e)
+        return []
+    itemlist = []
+    for gruppo in dati.get('groups', []):
+        if gruppo.get('contentType') == 'article':
+            continue
+        for h in gruppo.get('hits', []):
+            url = h.get('url')
+            if not url:
+                continue
+            titolo = _html.unescape(h.get('title', '')).strip()
+            programma = h.get('propertyName') or ''
+            thumb = h.get('imageUrl') or ''
+            video = bool(re.search(r'-\d{5,}$', url))
+            plot = _html.unescape(h.get('excerpt') or '')
+            itemlist.append(item.clone(
+                title=support.typo(titolo + (' (%s)' % programma if programma and video else ''), 'bold'),
+                fulltitle=titolo, contentTitle=titolo, show=programma or titolo, url=host + url,
+                thumbnail=thumb, fanart=thumb, plot=plot, forcethumb=True,
+                action='findvideos' if video else 'episodios'))
+    if pagina < int(dati.get('totalPages') or 1):
+        itemlist.append(item.clone(title=support.typo(support.config.get_localized_string(30992), 'color std bold'),
+                                   search=q, page=pagina + 1, action='search_page', nextPage=True,
+                                   thumbnail=support.thumb()))
     return itemlist
+
+
+def search_page(item):
+    return search(item, item.search)
 
 
 # ---------------------------------------------------------------- video
