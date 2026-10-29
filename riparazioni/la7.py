@@ -116,11 +116,43 @@ def _programmi():
 
 # ---------------------------------------------------------------- dirette e rivedi
 
+def _in_onda(url):
+    # palinsesto di oggi dalla pagina della diretta: "In onda" con orario di fine e i programmi successivi
+    h = _pulisci(_scarica(url))
+    prog = []
+    for blocco in h.split('{"ora":"')[1:]:
+        m = re.match(r'(\d{2}):(\d{2})","titolo":"([^"]*)","durata":(\d+)', blocco)
+        if not m:
+            continue
+        ora = '%s:%s' % (m.group(1), m.group(2))
+        fine = (int(m.group(1)) * 60 + int(m.group(2)) + int(m.group(4)) // 60) % 1440
+        prog.append((ora, _html.unescape(m.group(3)).strip(), '%02d:%02d' % (fine // 60, fine % 60),
+                     '"isOnAir":true' in blocco))
+    for n, p in enumerate(prog):
+        if p[3]:
+            righe = ['In onda: %s %s (fino alle %s)' % (p[0], p[1], p[2])]
+            dopo = ['%s %s' % (q[0], q[1]) for q in prog[n + 1:n + 4]]
+            if dopo:
+                righe.append('Poi: ' + ', '.join(dopo))
+            return '\n'.join(righe)
+    return ''
+
+
 def live(item):
+    from concurrent.futures import ThreadPoolExecutor
     itemlist = []
     for nome, percorso in LIVE:
         itemlist.append(item.clone(title=support.typo(nome, 'bold'), fulltitle=nome, url=host + percorso,
                                    action='findvideos', forcethumb=True, no_return=True))
+    try:
+        with ThreadPoolExecutor(max_workers=2) as ex:
+            trame = list(ex.map(lambda it: _in_onda(it.url), itemlist))
+        for it, t in zip(itemlist, trame):
+            if t:
+                it.plot = t
+                it.infoLabels['plot'] = t
+    except Exception as e:
+        logger.error('la7: palinsesto delle dirette non letto %s' % e)
     return support.thumb(itemlist, live=True)
 
 
