@@ -242,6 +242,9 @@ def testi_js(html, base, massimo=60):
 # Campioni con il browser
 # ---------------------------------------------------------------------------
 
+CARTELLA = 'rapporti/riproduzione'  # dove salvare le immagini della pagina durante la prova
+
+
 def _manifest(net):
     for e in net:
         if re.search(r'\.(mpd|m3u8)(\?|$)', e['url']) and e.get('status') == 200:
@@ -301,7 +304,9 @@ def campione(s, url, grezzo_fn, attesa=8, rp=print):
             if man:
                 break
     try:
-        s.page.screenshot(path='rapporti/riproduzione/%s.png' % re.sub(r'\W+', '_', url)[-60:])
+        import os
+        os.makedirs(CARTELLA, exist_ok=True)
+        s.page.screenshot(path=os.path.join(CARTELLA, '%s.png' % re.sub(r'\W+', '_', url)[-60:]))
     except Exception:
         pass
     # valori: quelli della pagina e, per le chiavi che mancano, quelli delle risposte JSON viste mentre il video partiva

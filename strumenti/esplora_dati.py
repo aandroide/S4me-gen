@@ -121,6 +121,8 @@ def trova_ricerca_ops(base, ops, rp=print):
 
 def esplora(s, ctx, base, args, rp, cattura, grezzo_fn, pagina_elenco):
     """Riempie ctx con: menu (solo le voci utili), azioni_menu, canali_azione, elenchi_api, ricette_video."""
+    import os
+    rip.CARTELLA = os.path.join(getattr(args, 'out', 'canali_generati'), 'riproduzione')
     voci_ok, azioni, canali_azione = [], {}, {}
     liste_pagina, pagine_video, giocabili = {}, [], []
 
