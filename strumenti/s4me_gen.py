@@ -399,7 +399,9 @@ class Sessione:
             return None
         box = visibile()
         if not box:
-            for sel in ('[aria-label*="erca" i]', '[aria-label*="earch" i]', '[title*="erca" i]', '[title*="earch" i]',
+            for sel in ('button:has(img[alt*="erca" i])', 'button:has(img[alt*="earch" i])', 'button:has(img[src*="search" i])',
+                        'button:has(svg[class*="search" i])', 'a:has(img[alt*="erca" i])', 'a:has(img[alt*="earch" i])',
+                        'button:has-text("Cerca")', '[aria-label*="erca" i]', '[aria-label*="earch" i]', '[title*="erca" i]', '[title*="earch" i]',
                         'a[href*="cerca"]', 'a[href*="search"]', 'button[class*="search" i]', '[data-testid*="search" i]',
                         '[class*="search" i]'):
                 try:
