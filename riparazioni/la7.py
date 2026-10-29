@@ -158,7 +158,7 @@ def _guida(h):
 
 
 def replay_giorni(item):
-    itemlist = [item.clone(title=support.typo('Oggi', 'bold'), day='oggi', action='replay', thumbnail=support.thumb())]
+    itemlist = []
     for data, programmi in reversed(_guida(_scarica(item.url))):
         if not programmi:
             continue
@@ -174,18 +174,6 @@ def replay_giorni(item):
 
 def replay(item):
     itemlist = []
-    if item.day == 'oggi':
-        for ev in _elementi(_scarica(item.url), ('BroadcastEvent',)):
-            lavoro = ev.get('workFeatured') or {}
-            if not lavoro.get('url'):
-                continue
-            titolo = _html.unescape(ev.get('name', ''))
-            itemlist.append(item.clone(title=support.typo('%s - %s' % (_roma(ev.get('startDate', '')), titolo), 'bold'),
-                                       contentTitle=titolo, fulltitle=titolo, show=titolo, url=lavoro['url'],
-                                       plot=_html.unescape(ev.get('description', '')),
-                                       thumbnail=_img(lavoro), fanart=_img(lavoro), action='findvideos',
-                                       forcethumb=True))
-        return itemlist
     for data, programmi in _guida(_scarica(item.url)):
         if data != item.day:
             continue
