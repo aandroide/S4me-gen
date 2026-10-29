@@ -417,7 +417,8 @@ def _data_it(etichetta):
         d = datetime(a, me, g)
     except ValueError:
         return None
-    return d, '%s %d %s' % (GIORNI_IT[d.weekday()].capitalize(), g, MESI_IT[me])
+    nome = 'Oggi' if d.date() == datetime.now().date() else GIORNI_IT[d.weekday()].capitalize()
+    return d, '%s %d %s' % (nome, g, MESI_IT[me])
 
 
 def _da_api(codici):

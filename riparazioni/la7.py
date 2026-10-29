@@ -29,8 +29,8 @@ def mainlist(item):
            ('Rivedi oggi {bold}', ['', 'replay_channels'])]
 
     menu = [('Programmi TV {bullet bold}', ['/programmi', 'peliculas', '', 'tvshow']),
-            ('Film La7 {bullet bold}', ['/film', 'film', '', 'movie']),
-            ('Documentari {bullet bold}', ['/documentari', 'documentari', '', 'movie']),
+            ('Film La7 {bullet bold}', ['/film', 'peliculas', '', 'movie']),
+            ('Documentari {bullet bold}', ['/documentari', 'peliculas', '', 'movie']),
             ('TG La7 {bullet bold}', ['/tgla7/puntate', 'episodios', '', 'tvshow'])]
 
     search = ''
@@ -167,6 +167,11 @@ def replay_giorni(item):
             nome = GIORNI[datetime(int(an), int(me), int(g)).weekday()].capitalize()
         except Exception:
             nome = ''
+        try:
+            if datetime(int(an), int(me), int(g)).date() == datetime.now().date():
+                nome = 'Oggi'
+        except Exception:
+            pass
         itemlist.append(item.clone(title=support.typo('%s %d %s' % (nome, int(g), MESI[int(me)]), 'bold'),
                                    day=data, action='replay', thumbnail=support.thumb()))
     return itemlist
@@ -188,6 +193,11 @@ def replay(item):
 # ---------------------------------------------------------------- programmi, puntate, film
 
 def peliculas(item):
+    # Film e Documentari passano da qui perche S4Me mostra la vista Film solo per le liste aperte da 'peliculas'
+    if item.url.rstrip('/').endswith('/film'):
+        return film(item)
+    if item.url.rstrip('/').endswith('/documentari'):
+        return documentari(item)
     itemlist = []
     for r in _programmi():
         titolo = _html.unescape(r.get('titolo', '')).strip()
