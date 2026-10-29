@@ -1,0 +1,125 @@
+== https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-28-10-2026-398171
+   manifest: https://awsvodpkg.iltrovatore.it/local/dash/,/nk/content/entry/data/0/406/0_7dr3gqdd_0_mholhfyz_2,/nk/content/entry/data/0/406/0_7dr3gqdd_0_8gpvmwam_2,.mp4.urls
+   token:  | cliccato: button[aria-label*="lay" i]
+   drm = false
+   drmContentId = 667
+   drmTokenEndpoint = https://svc-01.la7play.it/DRM/tk.php
+   cf_remote_url = /nk/content/entry/data/0/406/0_7dr3gqdd_0_mholhfyz_2.mp4,/nk/content/entry/data/0/406/0_7dr3gqdd_0_8gpvmwam_2.mp4
+   hostnameCdn = https://awsvodpkg.iltrovatore.it
+   hostnameCdnDrm = https://d3iki3eydrtvsa.cloudfront.net
+== https://www.la7play.it/film/passenger-397232
+   manifest: 
+   token:  | cliccato: button[aria-label*="lay" i]
+   drm = true
+   drmContentId = 667
+   drmTokenEndpoint = https://svc-01.la7play.it/DRM/tk.php
+   cf_remote_url = /F100623_20261020100231
+   cf_old_entry_id = 
+   hostnameCdn = https://awsvodpkg.iltrovatore.it
+   hostnameCdnDrm = https://d3iki3eydrtvsa.cloudfront.net
+== https://www.la7play.it/m-il-figlio-del-secolo/puntate/st-1-episodio-3-397859
+   manifest: 
+   token:  | cliccato: button[aria-label*="lay" i]
+   drm = true
+   drmContentId = 667
+   drmTokenEndpoint = https://svc-01.la7play.it/DRM/tk.php
+   cf_remote_url = /T100271_20261026215103
+   hostnameCdn = https://awsvodpkg.iltrovatore.it
+   hostnameCdnDrm = https://d3iki3eydrtvsa.cloudfront.net
+== https://www.la7play.it/dirette/la7
+   manifest: https://d15umi5iaezxgx.cloudfront.net/LA7/DRM/DASH/Live.mpd
+   token: https://svc-01.la7play.it/DRM/tk.php?id=1&contentType=LIVE&v=1793299053978 | cliccato: button[aria-label*="lay" i]
+   drmContentId = 1
+   drmTokenEndpoint = https://svc-01.la7play.it/DRM/tk.php
+   mainLiveUrl = https://d15umi5iaezxgx.cloudfront.net/LA7/DRM/DASH/Live.mpd|https://d15umi5iaezxgx.cloudfront.net/LA7/DRM/HLS/Live.m3u8
+== https://www.la7play.it/dirette/la7-cinema
+   manifest: 
+   token:  | cliccato: button[aria-label*="lay" i]
+   drmContentId = 2
+   drmTokenEndpoint = https://svc-01.la7play.it/DRM/tk.php
+   mainLiveUrl = https://d15umi5iaezxgx.cloudfront.net/LA7D/DRM/DASH/Live.mpd|https://d15umi5iaezxgx.cloudfront.net/LA7D/DRM/HLS/Live.m3u
+  campione senza manifest: https://www.la7play.it/film/passenger-397232
+  campione senza manifest: https://www.la7play.it/m-il-figlio-del-secolo/puntate/st-1-episodio-3-397859
+  campione senza manifest: https://www.la7play.it/dirette/la7-cinema
+[
+ {
+  "token": null,
+  "licenza": null,
+  "manifest": [
+   [
+    "chiave",
+    "hostnameCdn",
+    "id"
+   ],
+   [
+    "lett",
+    "/local/dash/,/nk/content/entry/data/0/406/"
+   ],
+   [
+    "chiave",
+    "cf_entry_id",
+    "id"
+   ],
+   [
+    "lett",
+    "_0_mholhfyz_2,/nk/content/entry/data/0/406/"
+   ],
+   [
+    "chiave",
+    "cf_entry_id",
+    "id"
+   ],
+   [
+    "lett",
+    "_0_8gpvmwam_2,.mp4.urlset/manifest.mpd"
+   ]
+  ],
+  "campioni": 1,
+  "riprodotti": 1,
+  "esempio": "https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-28-10-2026-398171",
+  "condizione": [
+   "autoplay",
+   "true"
+  ]
+ },
+ {
+  "token": {
+   "base": [
+    "chiave",
+    "drmTokenEndpoint"
+   ],
+   "param": [
+    [
+     "id",
+     [
+      "chiave",
+      "position"
+     ]
+    ],
+    [
+     "contentType",
+     [
+      "lett",
+      "LIVE"
+     ]
+    ]
+   ],
+   "campo": "preAuthToken"
+  },
+  "licenza": "drmLicenseServer",
+  "manifest": [
+   [
+    "chiave",
+    "mainLiveUrl",
+    "prima"
+   ]
+  ],
+  "campioni": 1,
+  "riprodotti": 1,
+  "esempio": "https://www.la7play.it/dirette/la7",
+  "condizione": [
+   "autoplay",
+   "false"
+  ]
+ }
+]
