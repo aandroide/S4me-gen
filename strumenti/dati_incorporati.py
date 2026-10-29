@@ -374,9 +374,9 @@ def _e_serie(url):
     return not re.search(r'-\d{4,}/?$', url.split('?')[0])
 
 
-def _dettagli(item, itemlist):
-    """Nelle liste di film: trama, anno, durata, generi e regista dalla pagina di ogni film (richieste in parallelo)."""
-    if item.contentType != 'movie' or not itemlist:
+def _dettagli(item, itemlist, forza=False):
+    """Nelle liste di film: trama, anno, durata, generi e regista dalla pagina di ogni film o puntata (richieste in parallelo)."""
+    if (item.contentType != 'movie' and not forza) or not itemlist:
         return itemlist
     from concurrent.futures import ThreadPoolExecutor
 
@@ -406,6 +406,9 @@ def _dettagli(item, itemlist):
     for it, n in zip(itemlist, nodi):
         trama = _html.unescape(re.sub(r'<[^>]+>', ' ', n.get('description', ''))).replace('\xa0', ' ').strip()
         if trama:
+            m = re.match(r'(\d{4})-(\d{2})-(\d{2})$', it.plot or '')
+            if m:  # puntate: la data resta in testa alla trama
+                trama = '%s/%s/%s\n\n%s' % (m.group(3), m.group(2), m.group(1), trama)
             it.plot = trama
             it.infoLabels['plot'] = trama
         if re.match(r'\d{4}$', str(n.get('dateCreated', ''))):
@@ -556,7 +559,7 @@ def episodios(item):
         if it.action == 'episodios' and not getattr(it, 'nextPage', False):
             it.action = 'findvideos'
             it.contentType = 'episode'
-    return itemlist
+    return _dettagli(item, itemlist, True)
 '''
 
 

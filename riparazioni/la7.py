@@ -233,6 +233,7 @@ def episodios(item):
         itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=titolo, show=item.fulltitle or titolo,
                                    contentTitle=titolo, url=ep['url'], thumbnail=_img(ep), fanart=_img(ep),
                                    plot=data, action='findvideos', forcethumb=True))
+    _dettagli(itemlist)
     if len(elementi) >= 20:
         itemlist.append(item.clone(title=support.typo(support.config.get_localized_string(30992), 'color std bold'),
                                    url=base, page=pagina + 1, action='episodios', nextPage=True, thumbnail=support.thumb()))
@@ -240,10 +241,12 @@ def episodios(item):
 
 
 def _dettagli(itemlist):
-    """Trama, anno, durata, generi e regista dalla pagina di ogni film (richieste in parallelo)."""
+    """Trama, anno, durata, generi e regista dalla pagina di ogni film o puntata (richieste in parallelo)."""
     from concurrent.futures import ThreadPoolExecutor
 
     def leggi(it):
+        if it.action != 'findvideos':
+            return {}
         for nodo in _ld(_scarica(it.url)):
             if nodo.get('@type') in ('Movie', 'TVEpisode', 'VideoObject') and nodo.get('description'):
                 return nodo
@@ -258,6 +261,9 @@ def _dettagli(itemlist):
     for it, n in zip(itemlist, nodi):
         trama = _html.unescape(re.sub(r'<[^>]+>', ' ', n.get('description', ''))).replace('\xa0', ' ').strip()
         if trama:
+            m = re.match(r'(\d{4})-(\d{2})-(\d{2})$', it.plot or '')
+            if m:  # puntate: la data resta in testa alla trama
+                trama = '%s/%s/%s\n\n%s' % (m.group(3), m.group(2), m.group(1), trama)
             it.plot = trama
             it.infoLabels['plot'] = trama
         if re.match(r'\d{4}$', str(n.get('dateCreated', ''))):
