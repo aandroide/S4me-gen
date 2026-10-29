@@ -2,26 +2,9 @@ Nessun proxy: il sito vede l'IP del computer che esegue il tool.
 Apro https://www.la7play.it
 Voci di menu trovate: 6
 Card trovate nel DOM: 86 | regex sul DOM: 98 | regex sull'html grezzo: 0
-ATTENZIONE: la regex non trova i titoli nell'html grezzo: il sito genera la lista con JavaScript e non e stata trovata nessuna API JSON. S4Me non vede la pagina come il browser.
-Modalita scelta: html
-Pagina successiva: non trovata
-Apro il primo titolo: https://www.la7play.it/otto-e-mezzo
-Iframe nella pagina: ['https://cdn-gl.imrworldwide.com/novms/html/ls.html', 'https://zd.rqtrk.eu/?zdid=2170&env=mWeb&eventType=pageview&gdpr=1&gdpr_consent=CQs2X0AQs2X0ADaEsBENC2FsAP_gAAAAABCYM_NT_G__bXlr-bb36btkeYxf9_hr7sQxBgbIkm4FzLvW7JwG32EaJAyatiIKmRIAu3DBIQNlHBDURUCgKIAVrzDMaE2U4TtKJ6BkiEMZYytQCExvm4tjeQCZ4ur_9kd0mR-s6dr-2dzy26hnH3K9fuS1UJSdIYesDfv-ZhOS-9IE9-x8v4v4_MbpEm0eSVn9tEsp4zc6Yvv6dBmxs-Tyff6Pn_f71fS7X__e_n3z_8oXn7r76-__f3-7t__-bf-_______7Z__u__7_v___b___wAAADDoT4AC4AKAAqABwAEAAJIAXABfADIANQAeABMACmAFUALoAYgA3gB-gEMARIAjgBNACjAFaAMAAYYA0QBsgDnAHcAPaAfYB-wEUARiAjgCRAEmAJTAT8BQYCogKuAWIAucBeQF6AMUAbQA3ABxADzAHtAPsAhABDoCJwEXwI9AkUBMgCaQE7AKHgUeBSACkwFNgKsAWKAtgBboC5IF2AXaAvMBfQDDQGPQMjAyQBk4DKoGWAZcAzMBnIDPgGmwNXA1gBtADbwG6gOLAcmA5cB44D0QHxgPmAfWA-4B_wEAQICAQYAhaBD0CJgEZgI4AR2AkUBJkCVcEswS0Al8BMACZYEzgJqgTcAnMBOmCdoJ3ATwAnmBQYChAFCwKJAUVApKBS4CngFPwKjAVOAq6BWQCtgFb4LBAsGBYkCx4FkwLKwWsBa0C3IFuwLigXLAvUBfcDA4GCgMJAYYAw4Bh4DEUGKwYsAxfBjIGMwMewZABkEDJoGWQMwAZjAzOBnADPAGeyEDkABYAFAAXAA1ACqAGIAN4AfgBgADnAHcARQAjgBIgCUgFBgKiAq4BcwDFAG0AQ6AicBHoCaQFJgKbAVYAsUBaIC5AF2AMjAZOAzkB44D4wICAQYAhaBD0CRQEzgJzATuAngBPMCgwFFQKSgUuAp-BYICxIFrQLcgYvAzGSgtAALAAoABwAEgAPAAhgBMACqAGKAQwBEgCOAFGAK0AYAA2QB-AEcgKiAq4BcwDFAHEAQgAh0BF8CPQJFAUeApOBTQFNgLFAWoAtgBcgC7AF5wMjAyQBk4DLAGcgM-AawA28B8YEAQICAQPAgwBCECHoEigJKgSrAl8BM4CaoE3AJzQTtBO4CeAE8wKKgUlApcBTwCowFTgK2AVvgsECwYFiwLHgWVgtYC1oFuQLkAXLAvUBfcDBQGEgMMAYiAxeBjMDHoGQAMsgZgAzOBngDPZSEAAAuACgAKgAcABAACSAGQAaAA8ACGAEwAKoAYgA_QCGAIkARwAowBWgDAAGiANkAc4A74B9gH6ARYAjEBHAEiAJSAUGAqICrgFzALyAYoA2gBuADiAHtAPsAhABDoCJwEXwI9AkUBNICdgFDgKQAUnApoCmwFWALFAWwAuSBdgF2gLzAX0Aw2BkYGSAMngZYBlwDOYGsAayA2UBt4DcwG6gOTAeKA8cB8YD5gH_AQEAgmBBgCEIELQIZgQ5Ah2BEwCMwEdgJFQSYBJkCVYEswJfATAAmWBM4CaoE5oJ2gncBPACeYFCwKKgUlApcBTwCn4FRgKnAVsAreBYICwoFiQLFgWPAsmBZWC1gLWgW5AuKBcgC9QGBwMFQYbBhwDEQGMwMewZABkEDJoGWQMugZgAzgEhEQAUABUAC4AHAAPAAgABfADIANQAeABDACKAEwAKoAbwA_ACEgEMARIAjgBNACtAGAAMMAZYA2QBzgDuAHtAPsA_QCAAEUgIuAjEBGgEcAJEASYAlMBPwFBgKiAq4BcwC9AGKANEAbQA3ABxAD2gIdgR6BIoCaQE7AKHAUeApEBTYC2AFyALsAXmAw2BkYGSAMnAZcAzMBnIDPoGrgayA2MBtADbwG6gOTAcuA8eB8YHyAP-AgIBAgCCYEGAIQwQtBC-CHoIfgRMAjMBHACRUEmASZAlmBLcCXwEwAJlgTOAmqBNwCcwE6QJ3ATwgoOChAFCwKKgUlApcBTICnkFPwVAAqMBU4CroFbAK3gWFAsSBY4CyoFpoLWAtaBbkC4oF6gL7gX7Av-BgcDBQGIgMUwYrBiwDGYGPYMgAyCBlkDLoGYAM4AZ4Az2WgNgA1ACGAMAAdwBHAC9AH2AUPApoCmwFWALsAZmA8cCAgEPQJuATmAncBPACkgFLgLCgWJAtaBbkC3YGGAA.IM_NT_G__bXlv-bb36btkeYxf9_hr7sQxBgbIsm4FzLvW7JwG32EaJEyatiIKmRIAu3DBIQNtHBjURUChKIAVrzDsaE2U4TtKJ-BkiHMZYytQCExvm4tjeQCZ4ur_90d0mR-s6dr-2dzy27hnH3K9fuS1UJydKYetHfv-ZhOS-_IU9_x-_4v4_MbpEm0eSVv9tUst4zc64vv6dpuxs-Tyff6f__f73fS7X__e__33_8qX3_r76-___3__t___ff_________9__-____________wAAA.YAAAAAAAAAAA&eid=aafaae64-e196-48c2-a5bb-f35172a80a7e&tncid=d92f401c-3b82-4d7e-9159-c33259b6f4bd&p=d29c2605-2cfa-43b3-a237-5dfdaf10a077&pu=1cf274ee-ba43-4a1a-adfe-706d4943a049']
-Catena: https://www.la7play.it/otto-e-mezzo | episodi: 0 | iframe del player: 2
-Catena: https://www.la7play.it/otto-e-mezzo/puntate | episodi: 0 | iframe del player: 0
-Catena: https://www.la7play.it/otto-e-mezzo/video/il-punto-di-pagliaro | episodi: 0 | iframe del player: 0
-Catena: https://www.la7play.it/otto-e-mezzo/video | episodi: 0 | iframe del player: 0
-Catena: https://www.la7play.it/otto-e-mezzo/podcast | episodi: 0 | iframe del player: 1
-Player: iframe https://zd.rqtrk.eu/?zdid=2170&env=mWeb&eventType=pageview&gdpr=1&gdpr_consent=CQs2X0AQs2X0ADaEsBENC2FsAP_gAAAAABCYM_NT_
-File video trovato in https://awsvodpkg.iltrovatore.it/local/dash/,/nk/content/entry/data/0/406/0_7dr3gqdd_0_mholhfyz_2,/nk/content/entry/data
-Video: https://awsvodpkg.iltrovatore.it/local/dash/,/nk/content/entry/data/0/406/0_7dr3gqdd_0_mholhfyz_2,/nk/content/entry/data/0/406/0_7dr3gqdd_0_
-Voce di menu Dirette https://www.la7play.it/dirette/la7 | titoli trovati: 16
-Voce di menu Guida Tv e Rivedi https://www.la7play.it/guida-tv-rivedi/la7 | titoli trovati: 0
-Voce di menu Programmi https://www.la7play.it/programmi | titoli trovati: 62
-Voce di menu Film https://www.la7play.it/film | titoli trovati: 11
-Voce di menu Documentari https://www.la7play.it/documentari | titoli trovati: 16
-Voce di menu Podcast https://www.la7play.it/podcast | titoli trovati: 0
-INCOMPLETO, da completare a mano: ricerca
+La regex non trova i titoli nell'html grezzo, ma la pagina contiene i dati dei titoli (Next.js o JSON-LD): campi {"titolo": "name", "link": "url", "trama": "description"}. Il canale li leggera da li.
+Modalita scelta: dati
+INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server); ricerca
 
 File scritti in archivio/canali/la7play: la7play.py, la7play.json, riga_channels_json.txt
 Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), caricare l'icona la7play.png nella repo media.
