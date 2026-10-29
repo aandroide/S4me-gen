@@ -3181,6 +3181,12 @@ def analizza(url, args):
             s._assesta(args.attesa)
             elenco = s.stato()
         cattura['elenco'] = elenco
+        finale = '{0.scheme}://{0.netloc}'.format(urlparse(elenco['url']))
+        if finale != base and elenco.get('url'):
+            rp('Il sito ha reindirizzato a', finale, '(uso questo indirizzo per le pagine interne)')
+            base = finale
+            ctx['base'] = base
+            SITO_BASE[0] = dominio_base(finale)
         soup = soup_di(elenco['html'])
         ctx['menu'] = trova_menu(soup, base)
         rp('Voci di menu trovate:', len(ctx['menu']))

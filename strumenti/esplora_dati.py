@@ -53,8 +53,12 @@ def codifica(variabili, separatori=(',', ':'), ordinate=True):
     return base64.urlsafe_b64encode(t.encode('utf-8')).decode('ascii').rstrip('=')
 
 
+def solo_percorso(u):
+    return urlsplit(u).path.rstrip('/') or '/'
+
+
 def _percorsi(rec):
-    return {di._unisci('x://h', x['url']).split('://h')[-1].split('?')[0].rstrip('/') for x in rec}
+    return {solo_percorso(x['url']) for x in rec}
 
 
 def completa_liste(base, ops, liste_pagina, rp=print):
@@ -78,12 +82,11 @@ def completa_liste(base, ops, liste_pagina, rp=print):
     rp('  operazioni provate: %d | con un elenco: %d' % (len(ops), len(risposte)))
     out = {}
     for pagina, rec in liste_pagina.items():
-        mie = {x['url'].split('?')[0].rstrip('/') for x in rec}
-        mie |= {u.replace(base, '') for u in mie}
+        mie = _percorsi(rec)
         migliori = []
         for c, r in risposte:
             elenco = [x for _, g in r['gruppi'] for x in g]
-            comuni = len(_percorsi(elenco) & {di._unisci('x://h', u).split('://h')[-1].rstrip('/') for u in mie})
+            comuni = len(_percorsi(elenco) & mie)
             if comuni >= 0.5 * len(rec) and len(elenco) > 1.15 * len(rec):
                 migliori.append((len(elenco), c, ops[c]))
         migliori.sort(reverse=True)
@@ -300,7 +303,7 @@ def trova_extra(ctx, base, grezzo_fn, pagine_viste, rp):
         st, t = richiedi('%s/api/gql/%s' % (base, codici[0]), base)
         r = di.rileva_json(json.loads(t))
         principale = [x for _, g in r['gruppi'] for x in g]
-        chiavi = {x['url'].split('?')[0].rstrip('/') for x in principale}
+        chiavi = _percorsi(principale)
         forma = {_forma(di._unisci(base, x['url'])) for x in principale}
         for pagina in pagine_viste:
             h = grezzo_fn(pagina)
@@ -308,11 +311,11 @@ def trova_extra(ctx, base, grezzo_fn, pagine_viste, rp):
                 rec = lista['record']
                 if not lista['firma'].get('immagine'):
                     continue
-                mie = {x['url'].split('?')[0].rstrip('/') for x in rec}
+                mie = _percorsi(rec)
                 if len(mie & chiavi) < 0.3 * len(mie) or {_forma(di._unisci(base, x['url'])) for x in rec} - forma:
                     continue
                 for x in rec:
-                    k = x['url'].split('?')[0].rstrip('/')
+                    k = solo_percorso(x['url'])
                     if k not in chiavi:
                         chiavi.add(k)
                         extra.append(x)
