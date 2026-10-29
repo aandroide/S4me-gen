@@ -106,6 +106,45 @@ jobs:
           name: controllo-canali
           path: rapporti/correzioni
 
+  rigenera:
+    needs: controlla
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    continue-on-error: true
+    if: ${{ github.event.inputs.riparare != 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dipendenze
+        run: |
+          pip install -r requirements.txt cryptography "urllib3<2"
+          playwright install --with-deps chromium
+      - name: Scarica S4Me (sola lettura)
+        run: |
+          git clone -q --depth 1 https://github.com/stream4me/addon /tmp/kh/addon
+          cp strumenti/test/kodi_finto/fake.py /tmp/kh/fake.py
+          mkdir -p /tmp/kh/prof
+      - name: Riscrivi i canali rotti che leggono i dati della pagina
+        env:
+          CANALI: ${{ github.event.inputs.canali }}
+        run: |
+          git pull -q --rebase origin ${{ github.ref_name }} || true
+          python3 strumenti/rigenera_rotti.py $CANALI
+      - name: Salva
+        run: |
+          git config user.name aandroide
+          git config user.email aandroide@users.noreply.github.com
+          for i in 1 2 3; do
+            git fetch -q origin ${{ github.ref_name }}
+            git reset -q origin/${{ github.ref_name }}
+            git add rapporti/correzioni
+            git commit -q -m "Canali riscritti dal generatore" || break
+            git push -q origin HEAD:${{ github.ref_name }} && break
+            sleep 5
+          done
+
   video:
     needs: controlla
     runs-on: ubuntu-latest

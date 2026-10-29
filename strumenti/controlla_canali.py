@@ -917,6 +917,7 @@ def controlla(nome, hosts, ripara=True):
     elif ok == 0 and problemi == 0:
         ris['stato'] = 'NON VERIFICATO'
     elif sostituzioni or generate:
+        ris['rigenerabile'] = bool(generate)  # i titoli stanno nei dati della pagina: il generatore sa riscrivere tutto il canale
         sostituzioni = list({(i, f): (i, f, t) for i, f, t in sostituzioni}.values())
         sostituzioni = sostituzioni_dati(src, funzioni, generate, sostituzioni, ris)
         nuovo_src = applica(src, sostituzioni)
