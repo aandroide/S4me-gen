@@ -87,7 +87,8 @@ def _liste(ob, uscita, profondita=0):
         return
     if isinstance(ob, list):
         dizionari = [x for x in ob if isinstance(x, dict)]
-        if len(dizionari) >= 3:
+        navigazione = sum(1 for x in dizionari if str(x.get('@type', '')) in ('SiteNavigationElement', 'WPHeader', 'WPFooter'))
+        if len(dizionari) >= 3 and navigazione < 0.5 * len(dizionari):
             uscita.append(dizionari)
         for x in ob:
             _liste(x, uscita, profondita + 1)
@@ -149,6 +150,8 @@ def _trova(h, firma):
                         migliore = gruppi
                 else:
                     rec = [x for x in (_record(d, firma) for d in lista) if x]
+                    if firma.get('immagine') and sum(1 for x in rec if x['immagine']) < 0.5 * len(rec):
+                        continue  # stessi nomi dei campi ma senza immagini: menu, piede della pagina, link
                     if len(rec) > sum(len(r) for _, r in migliore):
                         migliore = [('', rec)]
     return migliore
@@ -227,7 +230,7 @@ def rileva(h):
                             firma2 = dict(firma, gruppo=g, figli=k)
                             gruppi = _trova(h, firma2)
                             n = sum(len(r) for _, r in gruppi)
-                            if n >= 3 and len(gruppi) >= 2 and (not migliore or (n, len(firma2)) > (migliore['n'], len(migliore['firma']))):
+                            if n >= 3 and len(gruppi) >= 2 and (not migliore or (bool(firma2.get('immagine')), n, len(firma2)) > (bool(migliore['firma'].get('immagine')), migliore['n'], len(migliore['firma']))):
                                 migliore = {'firma': firma2, 'gruppi': gruppi, 'n': n}
                             break
                 firma = _riconosci(lista)
@@ -235,7 +238,7 @@ def rileva(h):
                     gruppi = _trova(h, firma)
                     n = sum(len(r) for _, r in gruppi)
                     # a parita di elementi, una lista con gruppi vale di piu: gia gestita sopra
-                    if n >= 3 and (not migliore or (not migliore['firma'].get('gruppo') and (n, len(firma)) > (migliore['n'], len(migliore['firma'])))):
+                    if n >= 3 and (not migliore or (not migliore['firma'].get('gruppo') and (bool(firma.get('immagine')), n, len(firma)) > (bool(migliore['firma'].get('immagine')), migliore['n'], len(migliore['firma'])))):
                         migliore = {'firma': firma, 'gruppi': gruppi, 'n': n}
     return migliore
 
