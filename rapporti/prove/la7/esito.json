@@ -63,13 +63,13 @@
        "voce": "Oggi",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 5
+       "titoli": 7
       },
       {
        "voce": "Giovedi 29 ottobre",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 5
+       "titoli": 7
       },
       {
        "voce": "Mercoledi 28 ottobre",
@@ -89,13 +89,13 @@
        "voce": "Oggi",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 3
+       "titoli": 5
       },
       {
        "voce": "Giovedi 29 ottobre",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 3
+       "titoli": 5
       },
       {
        "voce": "Mercoledi 28 ottobre",
@@ -117,7 +117,7 @@
    "voce": "• Film La7",
    "azione": "film",
    "esito": "OK",
-   "titoli": 34
+   "titoli": 35
   },
   {
    "voce": "• Documentari",
@@ -143,16 +143,16 @@
   {
    "url": "https://www.la7play.it/api/gql/75b0227f0361abcf",
    "status": 200,
-   "byte": 48357,
-   "secondi": 1.4,
+   "byte": 47524,
+   "secondi": 1.5,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
    "url": "https://www.la7play.it/100minuti/puntate",
    "status": 200,
-   "byte": 187071,
-   "secondi": 0.3,
+   "byte": 188990,
+   "secondi": 0.4,
    "titolo_pagina": "Puntate di 100 minuti | La7",
    "file": "pagine/02.html"
   },
@@ -160,87 +160,87 @@
    "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465",
    "status": 200,
    "byte": 90078,
-   "secondi": 1.3,
+   "secondi": 1.1,
    "titolo_pagina": "100 Minuti - Senza tetto né legge | La7",
    "file": "pagine/03.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 828450,
-   "secondi": 0.4,
+   "byte": 860080,
+   "secondi": 0.5,
    "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/04.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 828450,
-   "secondi": 0.1,
+   "byte": 860080,
+   "secondi": 0.0,
    "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/05.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 828450,
-   "secondi": 0.1,
+   "byte": 860080,
+   "secondi": 0.0,
    "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/06.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 828450,
-   "secondi": 0.1,
+   "byte": 860080,
+   "secondi": 0.0,
    "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/07.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 533497,
-   "secondi": 0.2,
+   "byte": 537532,
+   "secondi": 0.5,
    "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/08.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 533497,
-   "secondi": 0.1,
+   "byte": 537532,
+   "secondi": 0.0,
    "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/09.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 533497,
-   "secondi": 0.1,
+   "byte": 537532,
+   "secondi": 0.0,
    "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/10.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 533497,
-   "secondi": 0.1,
+   "byte": 537532,
+   "secondi": 0.0,
    "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/11.html"
   },
   {
    "url": "https://www.la7play.it/api/gql/75b0227f0361abcf",
    "status": 200,
-   "byte": 48357,
-   "secondi": 0.1,
+   "byte": 47524,
+   "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/12.html"
   },
   {
    "url": "https://www.la7play.it/film",
    "status": 200,
-   "byte": 152929,
-   "secondi": 0.3,
+   "byte": 155103,
+   "secondi": 0.4,
    "titolo_pagina": "Film | La7",
    "file": "pagine/13.html"
   },
@@ -264,7 +264,7 @@
    "url": "https://www.la7play.it/api/gql/4da1e384f8a63808/eyJxIjoiYXZhdGFyIn0",
    "status": 200,
    "byte": 2930,
-   "secondi": 1.1,
+   "secondi": 0.7,
    "titolo_pagina": ""
   }
  ],
