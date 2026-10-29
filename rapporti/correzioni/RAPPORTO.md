@@ -14,7 +14,7 @@ Sito: https://www.la7.it
 - ROTTO: replay_menu /rivedila7/0/la7cinema | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/la7/pagina_replay_menu_rivedila7_0_la7cinema.html
 -   dati incorporati nella pagina: 48 elementi in 8 gruppi (campi: titolo, link, immagine, trama, orario)
--   la regex sul codice html (5 card) e peggiore: scelgo i dati incorporati
+-   la regex sul codice html (6 card) e peggiore: scelgo i dati incorporati
 -   replay_menu: menu dei gruppi, replay: elenco del gruppo scelto (riscritte dai dati incorporati)
 - file corretto scritto in rapporti/correzioni/la7: 1 pagine su 2 ora trovano titoli
 - attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano
