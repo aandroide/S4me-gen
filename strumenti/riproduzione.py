@@ -162,6 +162,26 @@ def intestazione_licenza(testi_js):
     return ''
 
 
+def testi_js(html, base, massimo=60):
+    """Scarica i file JavaScript collegati alla pagina (per cercare il nome dell'intestazione della licenza)."""
+    import requests
+    from urllib.parse import urljoin
+    urls = []
+    for u in re.findall(r'(?:src|href)="([^"]+\.js[^"]*)"', html) + re.findall(r'"(/_next/static/[^"]+\.js)"', html):
+        u = urljoin(base, u)
+        if u not in urls and urlsplit(u).netloc == urlsplit(base).netloc:
+            urls.append(u)
+    testi = []
+    for u in urls[:massimo]:
+        try:
+            r = requests.get(u, timeout=15)
+            if r.status_code == 200:
+                testi.append(r.text)
+        except Exception:
+            pass
+    return testi
+
+
 # ---------------------------------------------------------------------------
 # Campioni con il browser
 # ---------------------------------------------------------------------------
@@ -200,7 +220,7 @@ def campione(s, url, grezzo_fn, attesa=8, rp=print):
     tentativi = []
     if not man:
         from s4me_gen import PLAY_SELETTORI
-        for sel in PLAY_SELETTORI + ['video']:
+        for sel in (PLAY_SELETTORI + ['video'])[:3]:
             try:
                 loc = s.page.locator(sel)
                 n = loc.count()
@@ -230,12 +250,15 @@ def campione(s, url, grezzo_fn, attesa=8, rp=print):
     except Exception:
         pass
     altri = [e['url'][:110] for e in net_tot if e.get('tipo') in ('fetch', 'xhr', 'other') and not re.search(r'google|doubleclick|permutive|tncid|adsrvr|pubmatic|adform|onetag|demdex|ipify|iab|rcsmetrics|/api/gql/', e['url'])]
+    intest = ''
+    if tok:
+        intest = intestazione_licenza(testi_js(h, url))
     lic = None
     for e in net_tot:
         if e.get('method') == 'POST' and re.search(r'licen[cs]e|widevine|drm', e['url'], re.I) and not re.search(r'permutive|google', e['url']):
             lic = {'url': e['url'], 'hdr': e.get('hdr') or {}, 'stato': e.get('status')}
             break
-    return {'url': url, 'valori': valori, 'manifest': man, 'licenza': lic,
+    return {'url': url, 'valori': valori, 'manifest': man, 'licenza': lic, 'intestazione': intest,
             'token': ({'url': tok['url'], 'corpo': tok.get('body') or ''} if tok else None),
             'cliccato': cliccato, 'tentativi': tentativi, 'altre_richieste': altri[:25], 'html_grezzo': h}
 
@@ -267,6 +290,12 @@ def ricetta_da_campioni(campioni, rp=print):
             c0 = lista[0]
             ric['token'] = impara_token(c0['token']['url'], c0['valori'], c0['token']['corpo'])
             ric['licenza'] = trova_licenza(c0['valori'])
+            ric['intestazione'] = c0.get('intestazione') or ''
+            if c0.get('licenza') and c0['licenza'].get('hdr'):
+                # licenza vista dal browser: l'intestazione che contiene il token
+                for hk, hv in c0['licenza']['hdr'].items():
+                    if hv and hv in json.dumps(c0['token']['corpo']):
+                        ric['intestazione'] = hk
         # condizione: chiave booleana della pagina che separa questo gruppo dall'altro
         ric['condizione'] = None
         ricette.append((con_token, ric, lista))
