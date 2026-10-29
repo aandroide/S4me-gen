@@ -191,10 +191,12 @@ def con_timeout(sec, fn, *a, **k):
 
 
 class Sessione:
-    def __init__(self, headless=True, chromium=None, dns=None, proxy=None):
+    def __init__(self, headless=True, chromium=None, dns=None, proxy=None, chrome=False):
         from playwright.sync_api import sync_playwright
         self._pw = sync_playwright().start()
         kw = {'headless': headless}
+        if chrome:
+            kw['channel'] = 'chrome'  # Google Chrome ha il Widevine: serve ai siti che non avviano il player senza DRM
         if chromium:
             kw['executable_path'] = chromium
         if dns:

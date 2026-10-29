@@ -230,7 +230,12 @@ def campione(s, url, grezzo_fn, attesa=8, rp=print):
     except Exception:
         pass
     altri = [e['url'][:110] for e in net_tot if e.get('tipo') in ('fetch', 'xhr', 'other') and not re.search(r'google|doubleclick|permutive|tncid|adsrvr|pubmatic|adform|onetag|demdex|ipify|iab|rcsmetrics|/api/gql/', e['url'])]
-    return {'url': url, 'valori': valori, 'manifest': man,
+    lic = None
+    for e in net_tot:
+        if e.get('method') == 'POST' and re.search(r'licen[cs]e|widevine|drm', e['url'], re.I) and not re.search(r'permutive|google', e['url']):
+            lic = {'url': e['url'], 'hdr': e.get('hdr') or {}, 'stato': e.get('status')}
+            break
+    return {'url': url, 'valori': valori, 'manifest': man, 'licenza': lic,
             'token': ({'url': tok['url'], 'corpo': tok.get('body') or ''} if tok else None),
             'cliccato': cliccato, 'tentativi': tentativi, 'altre_richieste': altri[:25], 'html_grezzo': h}
 

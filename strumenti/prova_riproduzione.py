@@ -15,7 +15,7 @@ OUT = 'rapporti/riproduzione'
 
 def main(urls):
     os.makedirs(OUT, exist_ok=True)
-    s = g.Sessione(headless=True)
+    s = g.Sessione(headless=True, chrome=bool(os.environ.get('USA_CHROME')))
     campioni, dettagli = [], []
     try:
         for u in urls:
@@ -26,6 +26,7 @@ def main(urls):
                 continue
             print('==', u)
             print('   manifest:', c['manifest'][:160])
+            print('   licenza:', json.dumps(c.get('licenza'), ensure_ascii=False)[:600])
             print('   token:', (c['token'] or {}).get('url', '')[:160], '| cliccato:', c['cliccato'])
             for t in c['tentativi']:
                 print('   tentativo:', t)
