@@ -211,6 +211,70 @@ def esplora(s, ctx, base, args, rp, cattura, grezzo_fn, pagina_elenco):
                 [bool(rip.applica(ric['manifest'], c['valori'])) for c in sel]))
         ctx['ricette_video'] = ricette
         rp('Ricette di riproduzione:', len(ricette))
+        try:
+            verifica_ricette(ctx, base, grezzo_fn, giocabili, rp)
+        except BaseException as ex:
+            rp('Verifica delle ricette non completata: %s' % str(ex)[:100])
+
+
+def _risposta_video(url, base):
+    """(ok, dettaglio): il manifest risponde e sembra un manifest."""
+    import requests
+    try:
+        r = requests.get(url, headers={'User-Agent': UA, 'Referer': base + '/', 'Origin': base}, timeout=20, stream=True)
+        inizio = next(r.iter_content(512), b'').decode('utf-8', 'ignore')
+        return r.status_code in (200, 206) and ('#EXTM3U' in inizio or '<MPD' in inizio or '<?xml' in inizio), '%s %s' % (r.status_code, inizio[:30].replace('\n', ' '))
+    except Exception as e:
+        return False, str(e)[:60]
+
+
+def verifica_ricette(ctx, base, grezzo_fn, giocabili, rp, massimo=24):
+    """Applica le ricette a molte pagine (anche vecchie) e controlla che i manifest rispondano."""
+    pagine = list(giocabili)
+    # puntate di alcuni programmi dell'elenco completo
+    elenco = []
+    for perc, codici in (ctx.get('elenchi_api') or {}).items():
+        for c in codici[:1]:
+            st, t = richiedi('%s/api/gql/%s' % (base, c), base)
+            try:
+                r = di.rileva_json(json.loads(t))
+                elenco = [x for _, g in r['gruppi'] for x in g]
+            except Exception:
+                pass
+    for x in elenco[:8]:
+        u = di._unisci(base, x['url']).rstrip('/')
+        h = grezzo_fn(u + '/puntate') or grezzo_fn(u)
+        r = di.rileva(h) if h else None
+        if r:
+            for _, g in r['gruppi']:
+                pagine += [di._unisci(base, y['url']) for y in g if not _e_serie(y['url'])][-3:]
+    visti, scelte = set(), []
+    for u in pagine:
+        if u not in visti:
+            visti.add(u)
+            scelte.append(u)
+    passo = max(1, len(scelte) // massimo)
+    scelte = scelte[::passo][:massimo]
+    esito = {}
+    for u in scelte:
+        valori = rip.valori_pagina(grezzo_fn(u))
+        for i, ric in enumerate(ctx['ricette_video']):
+            if rip.condizione_ok(ric['condizione'], u, valori):
+                url = rip.applica(ric['manifest'], valori)
+                if not url:
+                    esito.setdefault(i, []).append((u, False, 'manifest non ricostruito'))
+                    break
+                ok, det = _risposta_video(url, base)
+                esito.setdefault(i, []).append((u, ok, det + ' | ' + url[:140]))
+                break
+        else:
+            esito.setdefault(-1, []).append((u, False, 'nessuna ricetta per questa pagina'))
+    for i, lst in sorted(esito.items()):
+        rp('  verifica ricetta %s: %d pagine, %d ok' % (i, len(lst), sum(1 for x in lst if x[1])))
+        for u, ok, det in lst:
+            if not ok:
+                rp('    NON RIESCE: %s | %s' % (u, det))
+    ctx['verifica_video'] = {str(i): [sum(1 for x in l if x[1]), len(l)] for i, l in esito.items()}
 
 
 def _e_serie(url):
