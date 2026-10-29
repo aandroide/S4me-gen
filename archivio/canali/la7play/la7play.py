@@ -25,9 +25,9 @@ import re
 
 TITOLO = ('titolo', 'title', 'name', 'nome', 'headline', 'label')
 LINK = ('pathname', 'url', 'href', 'link', 'permalink', 'path')
-IMMAGINE = ('immagine_scena', 'immagine', 'image', 'img', 'thumbnail', 'thumb', 'poster', 'cover', 'immagine_programma',
+IMMAGINE = ('imageUrl', 'image_url', 'thumbnailUrl', 'immagine_scena', 'immagine', 'image', 'img', 'thumbnail', 'thumb', 'poster', 'cover', 'immagine_programma',
             'immagine_cover', 'picture')
-TRAMA = ('sinossi', 'plot', 'description', 'descrizione', 'abstract', 'occhiello', 'synopsis', 'summary')
+TRAMA = ('excerpt', 'teaser', 'sinossi', 'plot', 'description', 'descrizione', 'abstract', 'occhiello', 'synopsis', 'summary')
 ORARIO = ('ora', 'orario', 'time', 'start')
 GRUPPO = ('data', 'date', 'day', 'giorno', 'stagione', 'season', 'nome', 'title', 'titolo', 'label')
 
@@ -238,6 +238,11 @@ def rileva(h):
                     if n >= 3 and (not migliore or (not migliore['firma'].get('gruppo') and (n, len(firma)) > (migliore['n'], len(migliore['firma'])))):
                         migliore = {'firma': firma, 'gruppi': gruppi, 'n': n}
     return migliore
+
+
+def rileva_json(ob):
+    """Come rileva, ma su una risposta JSON gia letta (per esempio la ricerca del sito)."""
+    return rileva('<script type="application/json">' + json.dumps(ob) + '</script>')
 
 
 def _pagina(url):

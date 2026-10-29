@@ -4,6 +4,7 @@ Voci di menu trovate: 6
 Card trovate nel DOM: 86 | regex sul DOM: 98 | regex sull'html grezzo: 0
 La regex non trova i titoli nell'html grezzo, ma la pagina contiene i dati dei titoli (Next.js o JSON-LD): campi {"titolo": "name", "link": "url", "trama": "description"}. Il canale li leggera da li.
 Modalita scelta: dati
+Ricerca senza modulo: campo di ricerca non trovato
 INCOMPLETO, da completare a mano: riproduzione (nessun manifest rilevato: findvideos generico con support.server); ricerca
 
 File scritti in archivio/canali/la7play: la7play.py, la7play.json, riga_channels_json.txt
