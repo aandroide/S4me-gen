@@ -10,7 +10,7 @@ KH = os.environ.get('KH', '/tmp/kh')
 ap = argparse.ArgumentParser()
 ap.add_argument('canale')
 ap.add_argument('--addon', default=os.path.join(KH, 'addon'))
-ap.add_argument('--out', default='prove')
+ap.add_argument('--out', default='rapporti/prove')
 ap.add_argument('--host', default='')
 ap.add_argument('--max-voci', type=int, default=3)
 ap.add_argument('--voce', default='', help='prova solo le voci di menu il cui titolo contiene questo testo')
@@ -38,7 +38,7 @@ if not host:
         pass
 if not host:
     # canale appena generato o scritto a mano: l'indirizzo sta nella riga per channels.json
-    for rf in (os.path.join(os.path.dirname(os.path.abspath(__file__)), 'canali', nome, 'riga_channels_json.txt'),):
+    for rf in (os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'archivio', 'canali', nome, 'riga_channels_json.txt'),):
         try:
             m = re.search(r'"%s"\s*:\s*"([^"]+)"' % re.escape(nome), open(rf, encoding='utf-8').read())
             if m:

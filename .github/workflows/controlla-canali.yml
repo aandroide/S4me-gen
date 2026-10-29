@@ -37,7 +37,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python3 aggiorna_domini.py
+          python3 strumenti/aggiorna_domini.py
           git config user.name aandroide
           git config user.email aandroide@users.noreply.github.com
           for i in 1 2 3; do
@@ -64,8 +64,8 @@ jobs:
         run: |
           OPZ=""
           if [ "$RIPARARE" = "false" ]; then OPZ="--senza-riparare"; fi
-          rm -rf correzioni
-          python3 controlla_canali.py $OPZ --tempo 600 $CANALI
+          rm -rf rapporti/correzioni
+          python3 strumenti/controlla_canali.py $OPZ --tempo 600 $CANALI
       - name: Salva il rapporto
         run: |
           git config user.name aandroide
@@ -74,7 +74,7 @@ jobs:
           for i in 1 2 3; do
             git fetch -q origin ${{ github.ref_name }}
             git reset -q origin/${{ github.ref_name }}
-            git add correzioni snapshot_api
+            git add rapporti/correzioni rapporti/snapshot_api
             if git diff --cached --quiet; then break; fi
             git commit -q -m "Controllo dei canali"
             echo "CAMBIATO=1" >> "$GITHUB_ENV"
@@ -85,11 +85,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          RIEP=$(grep '^Riepilogo' correzioni/RAPPORTO.md || true)
+          RIEP=$(grep '^Riepilogo' rapporti/correzioni/RAPPORTO.md || true)
           PROBLEMI=$(python3 - <<'PY'
           import json
           try:
-              d = json.load(open('correzioni/stato.json'))
+              d = json.load(open('rapporti/correzioni/stato.json'))
           except Exception:
               d = []
           bad = [x for x in d if x['stato'] in ('ROTTO', 'CORRETTO', 'DOMINIO PARCHEGGIATO', 'BLOCCO ANTI BOT')]
@@ -99,12 +99,12 @@ jobs:
           if [ "$PROBLEMI" != "0" ] && [ "$CAMBIATO" = "1" ]; then
             gh issue create --title "Controllo canali del $(date +%d/%m/%Y)" --body "$RIEP
 
-          Il rapporto completo e in correzioni/RAPPORTO.md, i file corretti in correzioni/<canale>/." || true
+          Il rapporto completo e in rapporti/correzioni/RAPPORTO.md, i file corretti in rapporti/correzioni/<canale>/." || true
           fi
       - uses: actions/upload-artifact@v4
         with:
           name: controllo-canali
-          path: correzioni
+          path: rapporti/correzioni
 
   video:
     needs: controlla
@@ -121,21 +121,21 @@ jobs:
       - name: Scarica S4Me (sola lettura)
         run: |
           git clone -q --depth 1 https://github.com/stream4me/addon /tmp/kh/addon
-          cp test/kodi_finto/fake.py /tmp/kh/fake.py
+          cp strumenti/test/kodi_finto/fake.py /tmp/kh/fake.py
           mkdir -p /tmp/kh/prof
       - name: Prova ogni canale fino al video
         run: |
-          rm -rf prove
-          mkdir -p prove
+          rm -rf rapporti/prove
+          mkdir -p rapporti/prove
           CANALI="${{ github.event.inputs.canali }}"
           if [ -z "$CANALI" ]; then CANALI=$(ls canali_base/*.py | xargs -n1 basename | sed 's/\.py$//'); fi
           for c in $CANALI; do
             f=/tmp/kh/addon/channels/$c.py
-            [ -f correzioni/$c/$c.py ] && cp correzioni/$c/$c.py $f
+            [ -f rapporti/correzioni/$c/$c.py ] && cp rapporti/correzioni/$c/$c.py $f
             if [ -f riparazioni/$c.py ]; then cp riparazioni/$c.py $f; [ -f riparazioni/$c.json ] && cp riparazioni/$c.json /tmp/kh/addon/channels/; fi
           done
-          echo $CANALI | tr ' ' '\n' | xargs -P 6 -I{} sh -c 'PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 200 python3 -W ignore prova_video.py {} --out prove > /dev/null 2>&1 || echo "tempo scaduto o errore: {}"'
-          python3 riepilogo_video.py
+          echo $CANALI | tr ' ' '\n' | xargs -P 6 -I{} sh -c 'PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 200 python3 -W ignore strumenti/prova_video.py {} --out rapporti/prove > /dev/null 2>&1 || echo "tempo scaduto o errore: {}"'
+          python3 strumenti/riepilogo_video.py
       - name: Salva
         run: |
           git config user.name aandroide
@@ -143,7 +143,7 @@ jobs:
           for i in 1 2 3; do
             git fetch -q origin ${{ github.ref_name }}
             git reset -q origin/${{ github.ref_name }}
-            git add prove
+            git add rapporti/prove
             git commit -q -m "Controllo dei canali fino al video" || break
             git push -q origin HEAD:${{ github.ref_name }} && break
             sleep 5
@@ -151,4 +151,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: controllo-video
-          path: prove/RAPPORTO_VIDEO.md
+          path: rapporti/prove/RAPPORTO_VIDEO.md

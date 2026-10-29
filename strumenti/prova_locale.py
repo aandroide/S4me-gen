@@ -12,7 +12,7 @@ import io, json, os, shutil, subprocess, sys, urllib.request, zipfile
 
 # una variabile di Windows (SSLKEYLOGFILE) puntava a un file non scrivibile e rompeva ogni connessione https
 os.environ.pop('SSLKEYLOGFILE', None)
-QUI = os.path.dirname(os.path.abspath(__file__))
+QUI = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KH = os.path.join(QUI, 'kh')
 USCITA = os.path.join(QUI, 'prove_locali')
 ZIP_S4ME = 'https://github.com/stream4me/addon/archive/refs/heads/master.zip'
@@ -46,7 +46,7 @@ def scarica_s4me():
             raise
         print('Download non riuscito (%s): uso la copia gia presente in kh/addon' % e)
     os.makedirs(os.path.join(KH, 'prof'), exist_ok=True)
-    shutil.copy(os.path.join(QUI, 'test', 'kodi_finto', 'fake.py'), os.path.join(KH, 'fake.py'))
+    shutil.copy(os.path.join(QUI, 'strumenti', 'test', 'kodi_finto', 'fake.py'), os.path.join(KH, 'fake.py'))
 
 
 def main():

@@ -4,7 +4,7 @@ Serve per studiare un sito dal runner GitHub quando il mio ambiente non lo raggi
 import json, os, re, sys, time
 from urllib.parse import urlparse
 
-OUT = os.environ.get('PAGINE_OUT', 'pagine')
+OUT = os.environ.get('PAGINE_OUT', 'rapporti/pagine')
 DOMINI = os.environ.get('PAGINE_DOMINI', r'marscdn|streampeaker')  # domini di cui salvare sempre i corpi (anche gli script)
 
 

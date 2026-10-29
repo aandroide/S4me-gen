@@ -16,7 +16,7 @@ SORGENTI = [
     'https://raw.githubusercontent.com/stream4me/addon/master/channels.json',
     'https://raw.githubusercontent.com/stream4me/addon/main/channels.json',
 ]
-LOCALE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'canali_base', 'channels.json.txt')
+LOCALE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'canali_base', 'channels.json.txt')
 CARTELLA = os.path.dirname(LOCALE)
 ELENCO = 'https://api.github.com/repos/stream4me/addon/contents/channels?ref=%s'
 

@@ -12,7 +12,7 @@ on:
         required: false
         default: ''
       usa_correzione:
-        description: "Usa il file corretto in correzioni/ se esiste"
+        description: "Usa il file corretto in rapporti/correzioni/ se esiste"
         type: boolean
         default: true
 
@@ -33,17 +33,17 @@ jobs:
       - name: Scarica S4Me (sola lettura)
         run: |
           git clone -q --depth 1 https://github.com/stream4me/addon /tmp/kh/addon
-          cp test/kodi_finto/fake.py /tmp/kh/fake.py
+          cp strumenti/test/kodi_finto/fake.py /tmp/kh/fake.py
           mkdir -p /tmp/kh/prof
       - name: Prova
         run: |
-          mkdir -p prove
+          mkdir -p rapporti/prove
           for c in ${{ github.event.inputs.canali }}; do
             f=/tmp/kh/addon/channels/$c.py
-            if [ "${{ github.event.inputs.usa_correzione }}" = "true" ] && [ -f correzioni/$c/$c.py ]; then cp correzioni/$c/$c.py $f; fi
+            if [ "${{ github.event.inputs.usa_correzione }}" = "true" ] && [ -f rapporti/correzioni/$c/$c.py ]; then cp rapporti/correzioni/$c/$c.py $f; fi
             if [ -f riparazioni/$c.py ]; then cp riparazioni/$c.py $f; [ -f riparazioni/$c.json ] && cp riparazioni/$c.json /tmp/kh/addon/channels/; fi
-            if [ -f canali/$c/$c.py ] && [ ! -f $f ]; then cp canali/$c/$c.py $f; cp canali/$c/$c.json /tmp/kh/addon/channels/; fi
-            PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 600 python3 -W ignore prova_video.py $c --out prove ${{ github.event.inputs.voce != '' && format('--voce "{0}"', github.event.inputs.voce) || '' }} || echo "errore nello script per $c"
+            if [ -f archivio/canali/$c/$c.py ] && [ ! -f $f ]; then cp archivio/canali/$c/$c.py $f; cp archivio/canali/$c/$c.json /tmp/kh/addon/channels/; fi
+            PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 600 python3 -W ignore strumenti/prova_video.py $c --out rapporti/prove ${{ github.event.inputs.voce != '' && format('--voce "{0}"', github.event.inputs.voce) || '' }} || echo "errore nello script per $c"
           done
       - name: Salva
         run: |
@@ -52,7 +52,7 @@ jobs:
           for i in 1 2 3; do
             git fetch -q origin ${{ github.ref_name }}
             git reset -q origin/${{ github.ref_name }}
-            git add prove
+            git add rapporti/prove
             git commit -q -m "Prova dei canali fino al video" || break
             git push -q origin HEAD:${{ github.ref_name }} && break
             sleep 5

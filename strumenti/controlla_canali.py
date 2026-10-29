@@ -7,7 +7,7 @@ Per ogni canale con regex (@support.scrape):
   1. legge dal file i patron, patronBlock, patronNext e gli indirizzi del menu
   2. scarica le pagine del menu e applica le regex come fa support.scrape (stessa pulizia, stessi flag)
   3. se una regex non trova piu nulla, cerca i titoli con il riconoscimento delle card di s4me_gen.py,
-     propone una regex nuova che mantiene i nomi dei gruppi e scrive il file corretto in correzioni/<canale>/
+     propone una regex nuova che mantiene i nomi dei gruppi e scrive il file corretto in rapporti/correzioni/<canale>/
 
 Non scrive mai nella repo dell'addon: i file corretti restano qui, da copiare a mano dopo la verifica.
 
@@ -37,10 +37,11 @@ warnings.filterwarnings("ignore", category=SyntaxWarning)
 import s4me_gen as g
 
 QUI = os.path.dirname(os.path.abspath(__file__))
-BASE = os.environ.get('CANALI_BASE', os.path.join(QUI, 'canali_base'))
-SNAP = os.environ.get('SNAPSHOT_API', os.path.join(QUI, 'snapshot_api'))
+RADICE = os.path.dirname(QUI)
+BASE = os.environ.get('CANALI_BASE', os.path.join(RADICE, 'canali_base'))
+SNAP = os.environ.get('SNAPSHOT_API', os.path.join(RADICE, 'rapporti', 'snapshot_api'))
 PROFILI = os.path.join(QUI, 'profili')
-OUT = os.environ.get('CANALI_OUT', os.path.join(QUI, 'correzioni'))
+OUT = os.environ.get('CANALI_OUT', os.path.join(RADICE, 'rapporti', 'correzioni'))
 UA = g.UA
 NOMI_REGEX = ('patron', 'patronBlock', 'patronNext', 'patronMenu')
 PARCHEGGIATO = re.compile(r'(domain (is )?for sale|domainname\.de|abovedomains|forsale\.min|domain trading|sedo\.com|hugedomains|dominio in vendita|'
@@ -810,7 +811,7 @@ def controlla(nome, hosts, ripara=True):
             os.makedirs(cartella_pagine, exist_ok=True)
             nf = 'pagina_%s_%s.html' % (azione, re.sub(r'\W+', '_', rel).strip('_')[:40] or 'home')
             open(os.path.join(cartella_pagine, nf), 'w', encoding='utf-8').write(html[:250000])
-            ris['dettagli'].append('  campione della pagina salvato in correzioni/%s/%s' % (nome, nf))
+            ris['dettagli'].append('  campione della pagina salvato in rapporti/correzioni/%s/%s' % (nome, nf))
         except Exception:
             pass
         if r['blocchi'] == 0 and fn['patronBlock'] and ripara and all(x['valore'] is not None for x in fn['patron']):
@@ -876,7 +877,7 @@ def controlla(nome, hosts, ripara=True):
         os.makedirs(cartella, exist_ok=True)
         open(os.path.join(cartella, nome + '.py'), 'w', encoding='utf-8').write(nuovo_src)
         diff = ''.join(difflib.unified_diff(src.splitlines(True), nuovo_src.splitlines(True),
-                                            'canali_base/%s.py' % nome, 'correzioni/%s/%s.py' % (nome, nome)))
+                                            'canali_base/%s.py' % nome, 'rapporti/correzioni/%s/%s.py' % (nome, nome)))
         open(os.path.join(cartella, nome + '.diff'), 'w', encoding='utf-8').write(diff)
         # verifica del file corretto sulle stesse pagine
         f2, _ = leggi_canale(nuovo_src)
@@ -885,7 +886,7 @@ def controlla(nome, hosts, ripara=True):
             st, html, finale, motivo = scarica(urljoin(host + '/', rel))
             if st == 'ok' and prova_pagina(f2[azione], uniforma(html))['match']:
                 buone += 1
-        ris['dettagli'].append('file corretto scritto in correzioni/%s: %d pagine su %d ora trovano titoli' % (nome, buone, len(prove)))
+        ris['dettagli'].append('file corretto scritto in rapporti/correzioni/%s: %d pagine su %d ora trovano titoli' % (nome, buone, len(prove)))
         ris['stato'] = 'CORRETTO' if buone >= ok + 1 else 'ROTTO'
         ris['correzione'] = ris['stato'] == 'CORRETTO'
     else:

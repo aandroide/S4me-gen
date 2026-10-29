@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Raccoglie prove/<canale>/esito.json e scrive prove/RAPPORTO_VIDEO.md."""
+"""Raccoglie rapporti/prove/<canale>/esito.json e scrive rapporti/prove/RAPPORTO_VIDEO.md."""
 import glob, json, os, sys
 from collections import defaultdict
 
-QUI = os.path.dirname(os.path.abspath(__file__))
-prove = os.path.join(QUI, 'prove')
+QUI = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+prove = os.path.join(QUI, 'rapporti', 'prove')
 gruppi = defaultdict(list)
 righe = {}
 for f in sorted(glob.glob(os.path.join(prove, '*', 'esito.json'))):

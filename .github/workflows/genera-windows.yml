@@ -56,7 +56,7 @@ jobs:
           "NOME=$nome" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
           $extra = @()
           if ($env:TIPO -ne 'auto') { $extra = @('--tipo', $env:TIPO) }
-          python s4me_gen.py $env:SITO --nome $nome --out "canali/$nome" --attesa $env:ATTESA @extra
+          python strumenti/s4me_gen.py $env:SITO --nome $nome --out "archivio/canali/$nome" --attesa $env:ATTESA @extra
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Salva i file nella repo
@@ -64,7 +64,7 @@ jobs:
         run: |
           git config user.name "aandroide"
           git config user.email "aandroide@users.noreply.github.com"
-          git add "canali/$env:NOME"
+          git add "archivio/canali/$env:NOME"
           git commit -m "Canale generato: $env:NOME"
           git pull --rebase
           git push

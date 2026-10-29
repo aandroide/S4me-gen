@@ -1,6 +1,6 @@
 name: Scarica pagine di un sito
 
-# Salva in pagine/ l'html, i frame e le richieste di rete delle pagine indicate, per studiare un sito.
+# Salva in rapporti/pagine/ l'html, i frame e le richieste di rete delle pagine indicate, per studiare un sito.
 
 on:
   workflow_dispatch:
@@ -29,8 +29,8 @@ jobs:
         env:
           INDIRIZZI: ${{ github.event.inputs.indirizzi }}
         run: |
-          rm -rf pagine
-          python3 scarica_pagine.py $INDIRIZZI
+          rm -rf rapporti/pagine
+          python3 strumenti/scarica_pagine.py $INDIRIZZI
       - name: Salva
         run: |
           git config user.name aandroide
@@ -38,7 +38,7 @@ jobs:
           for i in 1 2 3; do
             git fetch -q origin master
             git reset -q origin/master
-            git add pagine
+            git add rapporti/pagine
             git commit -qm "Pagine scaricate" || exit 0
             git push -q origin HEAD:master && exit 0
           done

@@ -36,7 +36,7 @@ cd /d "%PROGETTO%"
 echo.
 echo Provo tutti i canali (ci vuole un po', lascia aperta la finestra)...
 echo.
-python prova_locale.py tutti
+python strumenti\prova_locale.py tutti
 
 rem 4) Risultati
 echo.

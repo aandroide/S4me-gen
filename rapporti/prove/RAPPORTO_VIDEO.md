@@ -1,6 +1,6 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 14, SI FERMA AL SERVER O AL VIDEO 2, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
+Riepilogo: ARRIVA AL VIDEO 14, SI FERMA AL SERVER O AL VIDEO 2, SI FERMA PRIMA DEL VIDEO 39
 
 ## ARRIVA AL VIDEO (14)
 
@@ -282,7 +282,3 @@ Sito:  | verdetto: SI FERMA A: lista "Visibile solo dall'Italia"
 ### youtube_channel
 Sito:  | verdetto: SI FERMA A: mainlist
 - passo "mainlist": ERRORE annel=nome, action='mainlist')))                                      ^^^^^^^^^^^ AttributeError: module 'channels.youtube_channel' has no attribute 'mainlist' 
-
-## SENZA ESITO (2)
-
-Il tempo e finito prima di concludere: discoveryplus paramount

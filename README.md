@@ -1,42 +1,37 @@
-# s4me_gen
+# S4me-gen
 
-Genera il canale S4Me (file .py e .json) analizzando un sito.
+Strumenti per tenere in ordine i canali di S4Me (Stream4me). Non scrive mai nella repo dell'addon: le correzioni pronte stanno in `riparazioni/` e si passano a mano.
 
-## Uso con GitHub Actions
-1. Carica questi file in una tua repo (s4me_gen.py, requirements.txt, .github/workflows/genera.yml).
-2. Impostazioni, Actions, General, Workflow permissions: Read and write permissions.
-3. Actions, "Genera canale S4Me", Run workflow: scrivi il sito e avvia.
-4. Dopo qualche minuto trovi la cartella `canali/<nome del sito>/` con il .py, il .json, il rapporto e la cattura.
-   Gli stessi file sono anche nell'artifact della run.
+## Come e organizzato
 
-Il nome della cartella e dato dal dominio senza www e senza estensione.
+| Cartella | Cosa contiene |
+|---|---|
+| `strumenti/` | Tutti gli script (controllo canali, prova fino al video, generatore, scarica pagine, proxy) e le prove (`strumenti/test/`, con il Kodi finto in `strumenti/test/kodi_finto/`). |
+| `canali_base/` | Copia dei canali S4Me ufficiali e `channels.json.txt` con gli indirizzi. Si aggiorna da sola ogni giorno. |
+| `riparazioni/` | Canali corretti da me (la7, tantifilm, eurostreaming, streamingcommunity e altri), pronti da portare nell'addon. Le Action li usano al posto dell'originale. |
+| `rapporti/` | Risultati delle Action: `correzioni/` (regex rotte e file corretti), `prove/` (esito fino al video), `snapshot_api/` (riferimenti delle API), `pagine/` (pagine scaricate). |
+| `archivio/` | Canali generati dal tool e canale di riferimento JustWatch TV. Non servono al controllo giornaliero. |
 
-## Cloudflare
-La action controlla prima se il sito mostra la challenge di Cloudflare. Solo in quel caso avvia FlareSolverr in Docker con LANG=en-US
-(serve perche la challenge in italiano non viene riconosciuta), supera la challenge e passa cookie e user agent
-al browser del tool. In locale: `python3 s4me_gen.py SITO --flaresolverr http://localhost:8191`.
+## Le Action (Actions su GitHub)
+
+- **Controlla canali** (ogni giorno alle 5:23, anche a mano): aggiorna indirizzi e canali da S4Me, prova le regex sui siti veri, scrive `rapporti/correzioni/` e poi prova ogni canale fino al video in `rapporti/prove/`.
+- **Prova canale fino al video**: prova uno o piu canali (e una voce di menu) fino al flusso video.
+- **Scarica pagine di un sito**: salva html, frame e richieste di rete in `rapporti/pagine/`.
+- **Scarica file di un sito**: scarica file o pagine dal runner e li committa in `file_scaricati/` (da cancellare dopo l'uso).
+- **Genera canale S4Me** e **Genera canale S4Me (sul mio PC Windows)**: analizzano un sito nuovo e scrivono il canale in `archivio/canali/<sito>/`.
+
+## Sul mio PC (indirizzo italiano)
+
+`PROVA_SUL_MIO_PC.bat` scarica il progetto, prova tutti i canali con `strumenti/prova_locale.py` e mette `prove_locali.zip` sul Desktop.
 
 ## Limiti
-Gli IP dei runner GitHub a volte vengono bloccati da Cloudflare: in quel caso rilancia la action.
-Se continua a fallire usa il tool sul PC con --pausa.
-Controlla sempre il rapporto: le righe TODO vanno completate a mano.
 
-## Paese del sito
-I runner GitHub sono negli Stati Uniti: i siti che scelgono il paese dall'IP (come JustWatch) aprono la versione americana.
-Scrivi nel campo "sito" l'indirizzo con il paese, per esempio `https://www.justwatch.com/it`.
+I runner di GitHub hanno un indirizzo americano: i siti che bloccano fuori Italia o usano Cloudflare duro possono dare falsi errori. Il controllo video con DRM e token va provato sul PC.
 
-Se la run si blocca, il log stampa dopo 5 minuti lo stato del programma e la run si ferma da sola dopo 20 minuti.
+## Generatore di canali (`strumenti/s4me_gen.py`)
 
-## Riferimento
-La cartella `riferimento/` contiene il canale JustWatch TV scritto a mano e verificato nell addon: è il modello di quello che il tool deve produrre per i siti con API (menu, cursore, TMDB con controllo, riproduzione Widevine).
+1. Actions, "Genera canale S4Me", Run workflow: scrivi il sito e avvia (`https://www.justwatch.com/it` per i siti che scelgono il paese dall'IP).
+2. Dopo qualche minuto in `archivio/canali/<nome del sito>/` trovi il `.py`, il `.json`, il rapporto e la cattura.
+3. Controlla sempre il rapporto: le righe TODO vanno completate a mano.
 
-## Cosa scopre da solo
-Per i siti con API il tool visita le sezioni del menu, i percorsi dei titoli e i link a contenuti gratuiti, prova i menu a tendina (ordinamenti e filtri), apre un film e una serie di esempio, cerca la richiesta degli episodi (stagione ed episodio) e prova a far partire un film e un episodio. Il canale generato ha una voce di menu per ogni sezione e ordinamento trovati.
-In `test/` ci sono un sito di prova (`server_c.py`) con sezioni, ordinamenti, serie, episodi e riproduzione, e lo script `run_c.py` che prova il canale generato.
-
-## Controllo dei canali esistenti
-
-`controlla_canali.py` legge i canali scritti a mano in `canali_base/` (con `channels.json.txt` per gli indirizzi),
-prova le loro regex sui siti veri come fa `support.scrape` e, se una regex non trova piu titoli, scrive il file
-corretto in `correzioni/<canale>/` insieme al diff. L'Action `Controlla canali` gira ogni giorno e apre una issue
-quando qualcosa cambia. Non scrive mai nella repo dell'addon.
+Se il sito e dietro Cloudflare parte FlareSolverr in Docker. In locale: `python3 strumenti/s4me_gen.py SITO --flaresolverr http://localhost:8191`. Se la run si blocca si ferma da sola dopo 20 minuti.

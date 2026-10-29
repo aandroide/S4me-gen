@@ -89,7 +89,7 @@ def scarica_liste(paese):
         except Exception as ex:
             print('Lista non raggiungibile', u.split('?')[0][:70], str(ex)[:60], flush=True)
     # liste salvate nel repo (istantanee): servono se le liste online non rispondono
-    cartella = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'proxy_locali')
+    cartella = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'proxy_locali')
     if os.path.isdir(cartella):
         for nome in sorted(os.listdir(cartella)):
             try:
