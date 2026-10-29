@@ -17,6 +17,11 @@ import json
 import re
 from urllib.parse import urlsplit, parse_qsl
 
+# ---------------------------------------------------------------------------
+# Parte copiata nel canale
+# ---------------------------------------------------------------------------
+from urllib.parse import urlsplit as _urlsplit
+
 ESPR = re.compile(r'"([A-Za-z_][\w\-]*)":("(?:[^"\\]|\\.)*"|true|false|-?\d+(?:\.\d+)?)')
 
 
@@ -45,11 +50,67 @@ TRASFORMAZIONI = [
     ('id', lambda v: v),
     ('ultimo', _ultimo),
     ('senza_slash', lambda v: v.strip('/')),
+    ('senza_mp4', lambda v: v.replace('.mp4', '')),
     ('prima', lambda v: v.split('|')[0]),
     ('seconda', lambda v: v.split('|')[1] if '|' in v else ''),
-    ('origine', lambda v: '%s://%s' % (urlsplit(v).scheme, urlsplit(v).netloc) if v.startswith('http') else ''),
+    ('origine', lambda v: '%s://%s' % (_urlsplit(v).scheme, _urlsplit(v).netloc) if v.startswith('http') else ''),
 ]
 TR = dict(TRASFORMAZIONI)
+
+
+def applica(modello, valori):
+    out = ''
+    for p in modello:
+        if p[0] == 'lett':
+            out += p[1]
+        else:
+            v = valori.get(p[1])
+            if v is None or v == '':
+                return None
+            out += TR[p[2]](v)
+    return out
+
+
+def licenza_url(v, sistema='com.widevine.alpha'):
+    """Indirizzo del server di licenza dentro il valore della pagina (elenco 'sistema|indirizzo;sistema|indirizzo')."""
+    for parte in (v or '').split(';'):
+        if parte.lower().startswith(sistema) and '|' in parte:
+            return parte.split('|', 1)[1]
+    return v if (v or '').startswith('http') else ''
+
+
+def condizione_ok(c, url, valori):
+    if not c:
+        return True
+    if c[0] == 'percorso':
+        return c[1] in url
+    if c[0] == 'chiave':
+        return valori.get(c[1]) == c[2]
+    return True
+
+
+def indirizzo_token(tk, valori):
+    base = applica(tk['base'], valori)
+    if not base:
+        return None
+    q = []
+    for k, v in tk['param']:
+        x = valori.get(v[1]) if v[0] == 'chiave' else v[1]
+        if x is None:
+            return None
+        q.append('%s=%s' % (k, x))
+    return base + ('?' + '&'.join(q) if q else '')
+
+
+#<<FINE_CANALE
+
+
+def codice_helper():
+    """Sorgente della parte da copiare nel canale."""
+    testo = open(__file__, encoding='utf-8').read()
+    ini = testo.index('from urllib.parse import urlsplit as _urlsplit')
+    fin = testo.index('#<<' + 'FINE_CANALE')
+    return testo[ini:fin].rstrip() + '\n'
 
 
 def impara_url(m, valori):
@@ -75,10 +136,8 @@ def impara_url(m, valori):
                 break
             if all(usato[j] is None for j in range(i, i + lung)):
                 for j in range(i, i + lung):
-                    usato[j] = (k, nome)
-                usato[i] = (k, nome, True)
-                for j in range(i + 1, i + lung):
                     usato[j] = 'dentro'
+                usato[i] = (k, nome, True)
             pos = i + 1
     modello, lett, i = [], '', 0
     while i < len(m):
@@ -101,33 +160,30 @@ def impara_url(m, valori):
     return modello
 
 
-def applica(modello, valori):
-    out = ''
-    for p in modello:
-        if p[0] == 'lett':
-            out += p[1]
-        else:
-            v = valori.get(p[1])
-            if v is None:
-                return None
-            out += TR[p[2]](v)
-    return out
+def senza_marcatore(url):
+    """Toglie dall'indirizzo i parametri che sono solo un marcatore anti cache (numero di 10 o piu cifre)."""
+    p = urlsplit(url)
+    q = [(k, v) for k, v in parse_qsl(p.query, keep_blank_values=True) if not re.fullmatch(r'\d{10,13}', v)]
+    return p, q
 
 
 def impara_token(url, valori, corpo_json):
-    """Ricetta del token: indirizzo con i parametri (letterali o presi dalla pagina) e nome del campo nella risposta."""
-    parti = urlsplit(url)
+    """Ricetta del token: indirizzo base e parametri (letterali o presi dalla pagina) e campo della risposta."""
+    parti, query = senza_marcatore(url)
     base = '%s://%s%s' % (parti.scheme, parti.netloc, parti.path)
+    mod_base = impara_url(base, valori) or [('lett', base)]
     param = []
-    for k, v in parse_qsl(parti.query, keep_blank_values=True):
-        if re.fullmatch(r'\d{10,13}', v):
-            continue  # marcatore anti cache
-        da_pagina = [c for c, x in valori.items() if x == v and c not in ('id',)]
-        param.append((k, ('chiave', da_pagina[0]) if da_pagina else ('lett', v)))
-    base_k = [c for c, x in valori.items() if x == base]
+    for k, v in query:
+        chiavi = [c for c, x in valori.items() if x == v and v != '']
+        if chiavi and re.fullmatch(r'[\w\-]{1,}', v) and not re.fullmatch(r'[A-Z]{2,}', v):
+            pref = [c for c in chiavi if re.search(r'id$', c, re.I) or k.lower() in c.lower()]
+            param.append((k, ('chiave', (pref or chiavi)[0])))
+        else:
+            param.append((k, ('lett', v)))
     campo = ''
     try:
         j = json.loads(corpo_json)
+
         def cerca(o):
             if isinstance(o, dict):
                 for kk, vv in o.items():
@@ -140,7 +196,7 @@ def impara_token(url, valori, corpo_json):
         campo = cerca(j) or ''
     except Exception:
         pass
-    return {'base': ('chiave', base_k[0]) if base_k else ('lett', base), 'param': param, 'campo': campo}
+    return {'base': mod_base, 'param': param, 'campo': campo}
 
 
 def trova_licenza(valori):
@@ -211,9 +267,8 @@ def _token(net, host_sito):
 
 
 def campione(s, url, grezzo_fn, attesa=8, rp=print):
-    """Apre la pagina, prova i pulsanti di avvio finche parte il manifest, e ricava manifest e token."""
+    """Apre la pagina, prova i pulsanti di avvio finche parte il manifest, e ricava manifest, token e licenza."""
     h = grezzo_fn(url)
-    valori = valori_pagina(h)
     s.vai(url, attesa=4)
     net_tot = list(s.net)
     man, tok, cliccato = _manifest(net_tot), _token(net_tot, ''), 'autoplay' if _manifest(net_tot) else ''
@@ -249,6 +304,13 @@ def campione(s, url, grezzo_fn, attesa=8, rp=print):
         s.page.screenshot(path='rapporti/riproduzione/%s.png' % re.sub(r'\W+', '_', url)[-60:])
     except Exception:
         pass
+    # valori: quelli della pagina e, per le chiavi che mancano, quelli delle risposte JSON viste mentre il video partiva
+    # (una pagina di elenco puo far partire un video i cui dati arrivano da una richiesta)
+    valori = valori_pagina(h)
+    for e in net_tot:
+        if e.get('status') == 200 and 'json' in (e.get('ct') or '') and e.get('body') and e is not tok:
+            for k, v in valori_pagina(e['body']).items():
+                valori.setdefault(k, v)
     altri = [e['url'][:110] for e in net_tot if e.get('tipo') in ('fetch', 'xhr', 'other') and not re.search(r'google|doubleclick|permutive|tncid|adsrvr|pubmatic|adform|onetag|demdex|ipify|iab|rcsmetrics|/api/gql/', e['url'])]
     intest = ''
     if tok:
@@ -263,16 +325,64 @@ def campione(s, url, grezzo_fn, attesa=8, rp=print):
             'cliccato': cliccato, 'tentativi': tentativi, 'altre_richieste': altri[:25], 'html_grezzo': h}
 
 
-def ricetta_da_campioni(campioni, rp=print):
-    """Una ricetta per gruppo di campioni con lo stesso comportamento (con o senza token)."""
+def _gruppo(c):
+    """Campioni dello stesso tipo: stesso esito (con o senza token) e stessi parametri di testo del token (per esempio VOD o LIVE)."""
+    if not c.get('token'):
+        return (False, ())
+    _, q = senza_marcatore(c['token']['url'])
+    return (True, tuple(sorted((k, v) for k, v in q if not re.fullmatch(r'[\w\-]*\d[\w\-]*', v))))
+
+
+def _segmento(url):
+    p = urlsplit(url).path.strip('/').split('/')
+    return p[0] if p and p[0] else ''
+
+
+def _condizioni(gruppi):
+    """Per ogni gruppo una condizione che vale per tutti i suoi campioni e per nessuno degli altri (o None).
+    Ordine di preferenza: chiave booleana col nome di un lettore (drm, live...), parte iniziale dell'indirizzo, altra chiave booleana."""
+    risultato = []
+    for i, lista in enumerate(gruppi):
+        altri = [c for j, l in enumerate(gruppi) if j != i for c in l]
+        scelta = None
+        if altri:
+            chiavi = set.intersection(*[{k for k, v in c['valori'].items() if v in ('true', 'false')} for c in lista])
+            buone = []
+            for k in sorted(chiavi):
+                vals = {c['valori'][k] for c in lista}
+                if len(vals) == 1 and all(a['valori'].get(k) not in vals for a in altri):
+                    buone.append(('chiave', k, next(iter(vals))))
+            lettore = [b for b in buone if re.search(r'drm|live|vod|stream|video|player|protect|premium', b[1], re.I)]
+            segs = {_segmento(c['url']) for c in lista}
+            percorso = None
+            if len(segs) == 1 and segs != {''} and all(_segmento(a['url']) not in segs for a in altri):
+                percorso = ('percorso', '/%s/' % next(iter(segs)))
+            scelta = (lettore or [None])[0] or percorso or (buone or [None])[0]
+        risultato.append(scelta)
+    return risultato
+
+
+def varianti_manifest(m):
+    """Manifest alternativi sullo stesso sito (HLS al posto di DASH), da verificare."""
+    out = []
+    if re.search(r'/dash/', m) and m.endswith('manifest.mpd'):
+        out.append(m.replace('/dash/', '/hls/').replace('manifest.mpd', 'master.m3u8'))
+    return out
+
+
+def ricetta_da_campioni(campioni, rp=print, esiste=None):
+    """Una ricetta per ogni gruppo di campioni con lo stesso comportamento. esiste(url) dice se un indirizzo risponde."""
     gruppi = {}
     for c in campioni:
         if not c['manifest']:
             rp('  campione senza manifest: %s' % c['url'])
             continue
-        gruppi.setdefault(bool(c['token']), []).append(c)
+        gruppi.setdefault(_gruppo(c), []).append(c)
+    liste = list(gruppi.values())
+    condizioni = _condizioni(liste)
     ricette = []
-    for con_token, lista in gruppi.items():
+    for lista, cond in zip(liste, condizioni):
+        con_token = bool(lista[0].get('token'))
         migliore, punti = None, -1
         for c in lista:
             mod = impara_url(c['manifest'], c['valori'])
@@ -285,32 +395,69 @@ def ricetta_da_campioni(campioni, rp=print):
             rp('  nessun modello di manifest per il gruppo %s' % ('con token' if con_token else 'senza token'))
             continue
         ric = {'token': None, 'licenza': None, 'manifest': migliore, 'campioni': len(lista), 'riprodotti': punti,
-               'esempio': lista[0]['url']}
+               'esempio': lista[0]['url'], 'condizione': cond}
         if con_token:
             c0 = lista[0]
             ric['token'] = impara_token(c0['token']['url'], c0['valori'], c0['token']['corpo'])
             ric['licenza'] = trova_licenza(c0['valori'])
-            ric['intestazione'] = c0.get('intestazione') or ''
+            nome = c0.get('intestazione') or ''
             if c0.get('licenza') and c0['licenza'].get('hdr'):
-                # licenza vista dal browser: l'intestazione che contiene il token
                 for hk, hv in c0['licenza']['hdr'].items():
-                    if hv and hv in json.dumps(c0['token']['corpo']):
-                        ric['intestazione'] = hk
-        # condizione: chiave booleana della pagina che separa questo gruppo dall'altro
-        ric['condizione'] = None
-        ricette.append((con_token, ric, lista))
-    # condizione tra i gruppi
-    if len(ricette) > 1:
-        tutti = [c for _, _, l in ricette for c in l]
-        chiavi = set.intersection(*[{k for k, v in c['valori'].items() if v in ('true', 'false')} for c in tutti])
-        for k in sorted(chiavi):
-            sep = True
-            for con, ric, lista in ricette:
-                vals = {c['valori'][k] for c in lista}
-                if len(vals) != 1:
-                    sep = False
-            if sep and len({tuple({c['valori'][k] for c in l}) for _, _, l in ricette}) == len(ricette):
-                for con, ric, lista in ricette:
-                    ric['condizione'] = (k, lista[0]['valori'][k])
-                break
-    return [r for _, r, _ in ricette]
+                    if hv and hv in json.dumps(c0['token']['corpo']) and not nome.lower() == hk.lower():
+                        nome = hk
+            ric['intestazione'] = nome
+        elif esiste:
+            for v in varianti_manifest(lista[0]['manifest']):
+                mod = impara_url(v, lista[0]['valori'])
+                if mod and applica(mod, lista[0]['valori']) == v and esiste(v):
+                    rp('  preferisco la variante %s' % v[:100])
+                    ric['manifest'] = mod
+                    break
+        ricette.append(ric)
+    # prima le ricette con condizione, poi quella senza
+    ricette.sort(key=lambda r: r['condizione'] is None)
+    return ricette
+
+
+FUNZIONI_VIDEO = r'''
+RICETTE_VIDEO = __RICETTE__
+DRM_SISTEMA = 'com.widevine.alpha'
+
+
+def _token_video(tk, valori):
+    url = indirizzo_token(tk, valori)
+    if not url:
+        return ''
+    try:
+        j = json.loads(httptools.downloadpage(url, headers=headers).data)
+    except Exception as e:
+        logger.error('token non ottenuto %s' % e)
+        return ''
+    return j.get(tk['campo']) or j.get('preAuthToken') or j.get('token') or j.get('auth') or ''
+
+
+def findvideos(item):
+    support.info(item)
+    valori = valori_pagina(_pagina(item.url))
+    for ric in RICETTE_VIDEO:
+        if not condizione_ok(ric.get('condizione'), item.url, valori):
+            continue
+        url = applica(ric['manifest'], valori)
+        if not url:
+            continue
+        it = item.clone(title='Direct', server='directo', url=url, action='play')
+        if ric.get('token'):
+            token = _token_video(ric['token'], valori)
+            licenza = licenza_url(valori.get(ric['licenza']), DRM_SISTEMA)
+            if token and licenza:
+                it.drm = DRM_SISTEMA
+                it.license = '%s|%s=%s&Origin=%s&Referer=%s/|R{SSM}|' % (licenza, ric['intestazione'], token, host, host + '/')
+        return support.server(it, itemlist=[it], Download=False, Videolibrary=False)
+    return support.server(item, headers=headers)
+'''
+
+
+def codice_canale(ricette):
+    """Sorgente di findvideos (con le ricette) per il canale generato."""
+    import pprint
+    return FUNZIONI_VIDEO.replace('__RICETTE__', pprint.pformat(ricette, width=110, sort_dicts=False))

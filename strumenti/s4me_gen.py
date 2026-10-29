@@ -21,6 +21,8 @@ Cosa fa:
 """
 
 import dati_incorporati as di
+import esplora_dati as ed
+import riproduzione as rip
 import argparse
 import pprint
 import faulthandler
@@ -1515,14 +1517,14 @@ headers = [['Referer', host + '/']]
 '''
 
 
-def genera_menu(voci, tipo_default):
+def genera_menu(voci, tipo_default, azioni=None):
     film, serie, anime, top = [], [], [], []
     for nome, full in voci:
         t = tipo_da_testo(nome)
         if t == 'movie' and not re.search(r'(film|movie|cinema)', nome, re.I):
             t = tipo_default
         path = urlparse(full).path + (('?' + urlparse(full).query) if urlparse(full).query else '')
-        riga = "('%s', ['%s', 'peliculas', '', '%s'])" % (nome.replace("'", ''), path, 'tvshow' if t == 'anime' else t)
+        riga = "('%s', ['%s', '%s', '', '%s'])" % (nome.replace("'", ''), path, (azioni or {}).get(full, 'peliculas'), 'tvshow' if t == 'anime' else t)
         top.append(riga)
     righe = ['    top = [' + ',\n           '.join(top) + ']'] if top else []
     return '\n'.join(righe)
@@ -1530,7 +1532,7 @@ def genera_menu(voci, tipo_default):
 
 def genera_html(nome, ctx):
     cod = HEADER.replace('__NOME__', nome)
-    menu = genera_menu(ctx['menu'], ctx['tipo'])
+    menu = genera_menu(ctx['menu'], ctx['tipo'], ctx.get('azioni_menu'))
     cod += '''
 @support.menu
 def mainlist(item):
@@ -2030,13 +2032,20 @@ def genera_dati(nome, ctx):
         return inizi[f.end_lineno - 1] + len(righe[f.end_lineno - 1])
     sost = []
     for f in tree.body:
-        if isinstance(f, _ast.FunctionDef) and (f.name in ('peliculas', 'episodios') or (f.name == 'search' and ctx.get('search_gql'))):
+        if isinstance(f, _ast.FunctionDef) and (f.name in ('peliculas', 'episodios') or (f.name == 'search' and ctx.get('search_gql'))
+                                                or (f.name == 'findvideos' and ctx.get('ricette_video'))):
             sost.append((inizio(f), fine(f), ''))
     for ini, fin, t in sorted(sost, reverse=True):
         cod = cod[:ini] + t + cod[fin:]
     # lettore dei dati e funzioni nuove subito dopo la riga dei header
     punto = cod.index("headers = [['Referer', host + '/']]\n") + len("headers = [['Referer', host + '/']]\n")
-    cod = cod[:punto] + '\n\n# lettore dei dati incorporati nella pagina (generato da dati_incorporati.py)\n' + di.codice_helper() + '\n' + di.FUNZIONI_CANALE + '\n' + (di.funzione_ricerca(ctx['search_gql']) + '\n' if ctx.get('search_gql') else '') + cod[punto:]
+    costanti = ('ELENCHI_API = %s  # elenchi completi presi dalle richieste del sito: percorso -> codici delle richieste\n'
+                'CANALI_AZIONE = %s  # cosa apre ogni canale: findvideos (diretta) oppure peliculas (guida a giorni)\n') % (
+        pprint.pformat(ctx.get('elenchi_api') or {}, width=110), pprint.pformat(ctx.get('canali_azione') or {}, width=110))
+    video = ''
+    if ctx.get('ricette_video'):
+        video = '\n# riproduzione imparata dal sito (riproduzione.py)\n' + rip.codice_helper() + '\n' + rip.codice_canale(ctx['ricette_video']) + '\n'
+    cod = cod[:punto] + '\n\n# lettore dei dati incorporati nella pagina (generato da dati_incorporati.py)\n' + di.codice_helper() + '\n' + costanti + '\n' + di.FUNZIONI_CANALE + '\n' + (di.funzione_ricerca(ctx['search_gql']) + '\n' if ctx.get('search_gql') else '') + video + cod[punto:]
     return cod
 
 
@@ -3287,9 +3296,17 @@ def analizza(url, args):
         if args.tipo:
             ctx['tipo'] = args.tipo
 
+        if modo == 'dati':
+            try:
+                ed.esplora(s, ctx, base, args, rp, cattura, scarica_grezzo, pagina_elenco)
+            except BaseException as ex:
+                import traceback
+                rp('Esplorazione dei dati non completata: %s' % str(ex)[:150])
+                rp(traceback.format_exc()[-600:])
+
         # Ricerca
         ric = trova_ricerca(soup, base)
-        if not ric:
+        if not ric and not ctx.get('search_gql'):
             try:
                 s.vai(pagina_elenco, attesa=2)
                 rd = s.cerca_dinamica('matrix', attesa=args.attesa)
@@ -3662,7 +3679,7 @@ def main():
             rapporto.append('TODO: regex patron non generata, scritta una regex di esempio da adattare.')
         py = genera_html(nome, ctx)
     mancano = []
-    if not ctx.get('manifest') and not (ctx.get('player') and ctx['player'].get('video')):
+    if not ctx.get('manifest') and not ctx.get('ricette_video') and not (ctx.get('player') and ctx['player'].get('video')):
         mancano.append('riproduzione (nessun manifest rilevato: findvideos generico con support.server)')
     if not ctx.get('ricerca') and not ctx.get('search_api') and not ctx.get('search_gql'):
         mancano.append('ricerca')

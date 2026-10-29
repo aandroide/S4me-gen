@@ -14,11 +14,12 @@ import html as _html
 import json
 import re
 
-TITOLO = ('titolo', 'title', 'name', 'nome', 'headline', 'label')
-LINK = ('pathname', 'url', 'href', 'link', 'permalink', 'path')
+TITOLO = ('titolo', 'title', 'name', 'nome', 'headline', 'label', 'canale')
+LINK = ('pathname', 'url', 'href', 'link', 'permalink', 'path', 'streamingUrl')
 IMMAGINE = ('imageUrl', 'image_url', 'thumbnailUrl', 'immagine_scena', 'immagine', 'image', 'img', 'thumbnail', 'thumb', 'poster', 'cover', 'immagine_programma',
             'immagine_cover', 'picture')
-TRAMA = ('excerpt', 'teaser', 'sinossi', 'plot', 'description', 'descrizione', 'abstract', 'occhiello', 'synopsis', 'summary')
+TRAMA = ('excerpt', 'teaser', 'sinossi', 'plot', 'description', 'descrizione', 'abstract', 'occhiello', 'synopsis', 'summary', 'datePublished')
+PROGRAMMA = ('propertyName', 'programma', 'program', 'show', 'serie', 'series')
 ORARIO = ('ora', 'orario', 'time', 'start')
 GRUPPO = ('data', 'date', 'day', 'giorno', 'stagione', 'season', 'nome', 'title', 'titolo', 'label')
 
@@ -118,6 +119,11 @@ def _record(d, firma):
     for nome in ('immagine', 'trama', 'orario'):
         k = firma.get(nome)
         r[nome] = _scegli(d, (k,))[1] if k else ''
+    r['programma'] = _scegli(d, PROGRAMMA)[1]
+    if re.match(r'\d{4}-\d{2}-\d{2}T', r['trama']):
+        r['trama'] = r['trama'][:10]
+    if r['trama']:
+        r['trama'] = _html.unescape(re.sub(r'<[^>]+>', '', r['trama'])).replace('\xa0', ' ').strip()
     return r
 
 
@@ -239,6 +245,28 @@ def rileva_json(ob):
     return rileva('<script type="application/json">' + json.dumps(ob) + '</script>')
 
 
+def canali_fratelli(h, percorso):
+    """Pagine sorelle di una pagina del tipo /sezione/nome (per esempio le dirette o le guide dei canali) nominate nella pagina:
+    [(titolo, percorso)]. Il titolo e il nome del canale se la pagina lo indica, altrimenti l'ultimo pezzo dell'indirizzo."""
+    parti = [x for x in percorso.split('/') if x]
+    if len(parti) != 2:
+        return []
+    testo = h.replace('\\"', '"').replace('\\/', '/')
+    trovati = []
+    for m in re.finditer(r'["\'(=]/%s/([A-Za-z0-9_\-]+)["\')> ?#]' % re.escape(parti[0]), testo):
+        p = '/%s/%s' % (parti[0], m.group(1))
+        if p not in [x[1] for x in trovati]:
+            nome = ''
+            for n in re.finditer(r'"(?:canale|name|title|titolo)":"([^"]{2,40})"[^{}]{0,80}"[A-Za-z]+":"%s"' % re.escape(p), testo):
+                nome = n.group(1)
+            if not nome:
+                nome = m.group(1).replace('-', ' ')
+            if nome.isupper():
+                nome = nome.title()
+            trovati.append((nome, p))
+    return trovati if len(trovati) >= 2 and percorso.rstrip('/') in [x[1] for x in trovati] else []
+
+
 #<<FINE_CANALE
 
 
@@ -315,11 +343,13 @@ def _e_serie(url):
     return not re.search(r'-\d{4,}/?$', url.split('?')[0])
 
 
-def _voci(item, elenco, pagina_corrente=0, html=''):
+def _voci(item, elenco, pagina_corrente=0, html='', azione_pagina='peliculas'):
     itemlist = []
     for r in elenco:
         serie = _e_serie(r['url'])
         titolo = '%s - %s' % (r['orario'], r['titolo']) if r['orario'] else r['titolo']
+        if r.get('programma') and not serie and r['programma'] != r['titolo']:
+            titolo = '%s (%s)' % (titolo, r['programma'])
         itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=r['titolo'], show=r['titolo'],
                                    contentTitle='' if serie else r['titolo'],
                                    contentSerieName=r['titolo'] if serie else '',
@@ -332,18 +362,73 @@ def _voci(item, elenco, pagina_corrente=0, html=''):
         base = item.url.split('?')[0]
         itemlist.append(item.clone(title=support.typo(config.get_localized_string(30992), 'color kod bold'),
                                    url='%s?page=%d' % (base, pagina_corrente + 1), page=pagina_corrente + 1,
-                                   action=item.action, thumbnail=support.thumb()))
+                                   action=azione_pagina, nextPage=True, thumbnail=support.thumb()))
     return itemlist
+
+
+GIORNI_IT = ['lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato', 'domenica']
+MESI_IT = ['', 'gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre',
+           'ottobre', 'novembre', 'dicembre']
+
+
+def _data_it(etichetta):
+    """Se l'etichetta di un gruppo e una data: (data, 'Giovedi 22 ottobre'), altrimenti None."""
+    from datetime import datetime
+    m = re.fullmatch(r'(\d{2})[-/.](\d{2})[-/.](\d{4})', etichetta or '')
+    if m:
+        g, me, a = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    else:
+        m = re.match(r'(\d{4})-(\d{2})-(\d{2})(?:$|T|\s)', etichetta or '')
+        if not m:
+            return None
+        a, me, g = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    try:
+        d = datetime(a, me, g)
+    except ValueError:
+        return None
+    return d, '%s %d %s' % (GIORNI_IT[d.weekday()].capitalize(), g, MESI_IT[me])
+
+
+def _da_api(codici):
+    """Elenco completo dalle richieste del sito (la pagina ne mostra solo una parte)."""
+    for codice in codici:
+        try:
+            r = rileva_json(json.loads(_pagina(host + '/api/gql/' + codice)))
+        except Exception:
+            continue
+        if r:
+            return [x for _, rr in r['gruppi'] for x in rr]
+    return []
+
+
+def canali(item):
+    itemlist = []
+    percorso = re.sub(r'^https?://[^/]+', '', item.url.split('?')[0]).rstrip('/')
+    azione = CANALI_AZIONE.get(percorso.strip('/').split('/')[0], 'findvideos')
+    for titolo, p in canali_fratelli(_pagina(item.url), percorso):
+        itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=titolo, url=_unisci(host, p),
+                                   action=azione, forcethumb=True, no_return=True))
+    return support.thumb(itemlist, live=True)
 
 
 def peliculas(item):
     support.info(item)
+    percorso = re.sub(r'^https?://[^/]+', '', item.url.split('?')[0]).rstrip('/')
+    if percorso in ELENCHI_API:
+        elenco = _da_api(ELENCHI_API[percorso])
+        if elenco:
+            return _voci(item, elenco)
     h = _pagina(item.url)
     r = rileva(h)
     if not r:
         logger.error('nessuna lista di titoli nei dati della pagina %s' % item.url)
         return []
     if r['firma'].get('gruppo'):
+        date = [_data_it(etichetta) for etichetta, elenco in r['gruppi']]
+        if all(date):
+            ordine = sorted(zip(date, r['gruppi']), key=lambda x: x[0][0], reverse=True)
+            return [item.clone(title=support.typo(d[1], 'bold'), gruppo=etichetta, action='giorno', thumbnail=support.thumb())
+                    for d, (etichetta, elenco) in ordine]
         return [item.clone(title=support.typo(etichetta, 'bold'), gruppo=etichetta, action='giorno')
                 for etichetta, elenco in r['gruppi']]
     elenco = [x for _, rr in r['gruppi'] for x in rr]
@@ -363,10 +448,14 @@ def episodios(item):
     support.info(item)
     h = _pagina(item.url)
     percorso = re.sub(r'^https?://[^/]+', '', item.url.split('?')[0]).rstrip('/')
-    candidati = [item.url]
-    for u in re.findall(r'href="(%s/[^"/#?]+)"' % re.escape(percorso), h):
-        if re.search(r'puntat|episod|stagion|video', u) and _unisci(host, u) not in candidati:
-            candidati.append(_unisci(host, u))
+    # prima le pagine dedicate agli episodi, poi le altre sezioni, per ultima la pagina stessa (che mescola episodi e video)
+    candidati = []
+    for rx in (r'puntat|episod', r'stagion', r'video'):
+        for u in re.findall(r'href="(%s/[^"/#?]+)"' % re.escape(percorso), h):
+            if re.search(rx, u) and _unisci(host, u) not in candidati:
+                candidati.append(_unisci(host, u))
+    if item.url not in candidati:
+        candidati.append(item.url)
     migliore, pagina_ok = [], item.url
     for u in candidati:
         hh = h if u == item.url else _pagina(u)
@@ -374,14 +463,15 @@ def episodios(item):
         if not r:
             continue
         elenco = [x for _, rr in r['gruppi'] for x in rr if percorso in x['url'] and x['url'].rstrip('/') != percorso]
-        if len(elenco) > len(migliore):
+        if elenco:
             migliore, pagina_ok, h = elenco, u, hh
+            break
     if not migliore:
         return []
     item.url = pagina_ok
-    itemlist = _voci(item, migliore, int(item.page or 1) if getattr(item, 'page', '') else 1, h)
+    itemlist = _voci(item, migliore, int(item.page or 1) if getattr(item, 'page', '') else 1, h, 'episodios')
     for it in itemlist:
-        if it.action == 'episodios':
+        if it.action == 'episodios' and not getattr(it, 'nextPage', False):
             it.action = 'findvideos'
             it.contentType = 'episode'
     return itemlist
@@ -402,21 +492,67 @@ def _sostituisci(v, testo):
     return v
 
 
+def _raccogli(ob, firma, uscita):
+    # tutti i gruppi di risultati (programmi, video, film), tranne gli articoli di giornale
+    if isinstance(ob, dict):
+        if any(isinstance(ob.get(k), str) and re.search(r'articl', ob.get(k), re.I) for k in ('contentType', 'type', 'tipo')):
+            return
+        for v in ob.values():
+            _raccogli(v, firma, uscita)
+    elif isinstance(ob, list):
+        rec = [x for x in (_record(d, firma) for d in ob if isinstance(d, dict)) if x]
+        if rec:
+            uscita.extend(rec)
+        else:
+            for x in ob:
+                _raccogli(x, firma, uscita)
+
+
+def _pagine_totali(ob):
+    if isinstance(ob, dict):
+        for k, v in ob.items():
+            if re.fullmatch(r'total_?pages', k, re.I) and isinstance(v, int):
+                return v
+            r = _pagine_totali(v)
+            if r:
+                return r
+    elif isinstance(ob, list):
+        for x in ob:
+            r = _pagine_totali(x)
+            if r:
+                return r
+    return 0
+
+
 def search(item, text):
     support.info(text)
+    q = str(getattr(item, 'search', '') or text).strip()
+    pagina = int(getattr(item, 'page', 0) or 1)
     try:
-        variabili = _sostituisci(__PAYLOAD__, text)
+        variabili = _sostituisci(__PAYLOAD__, q)
+        if pagina > 1:
+            variabili['page'] = pagina
         r = json.loads(_pagina(host + '__PREFISSO__' + _codifica(variabili)))
         trovati = rileva_json(r)
         if not trovati:
             return []
-        elenco = [x for _, rr in trovati['gruppi'] for x in rr]
-        return _voci(item, elenco)
+        elenco, visti = [], set()
+        _raccogli(r, trovati['firma'], elenco)
+        elenco = [x for x in elenco if not (x['url'] in visti or visti.add(x['url']))]
+        itemlist = _voci(item, elenco)
+        if pagina < _pagine_totali(r):
+            itemlist.append(item.clone(title=support.typo(config.get_localized_string(30992), 'color kod bold'), search=q,
+                                       page=pagina + 1, action='search_page', nextPage=True, thumbnail=support.thumb()))
+        return itemlist
     except Exception:
         import sys
         for line in sys.exc_info():
             logger.error('%s' % line)
         return []
+
+
+def search_page(item):
+    return search(item, item.search)
 '''
 
 
