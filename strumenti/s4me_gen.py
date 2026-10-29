@@ -2037,6 +2037,9 @@ def genera_dati(nome, ctx):
             sost.append((inizio(f), fine(f), ''))
     for ini, fin, t in sorted(sost, reverse=True):
         cod = cod[:ini] + t + cod[fin:]
+    if ctx.get('host_finale'):
+        cod = cod.replace("host = support.config.get_channel_url().rstrip('/')",
+                          "host = %r  # il dominio di channels.json ora reindirizza qui" % ctx['host_finale'], 1)
     # lettore dei dati e funzioni nuove subito dopo la riga dei header
     punto = cod.index("headers = [['Referer', host + '/']]\n") + len("headers = [['Referer', host + '/']]\n")
     costanti = ('ELENCHI_API = %s  # elenchi completi presi dalle richieste del sito: percorso -> codici delle richieste\n'
@@ -3184,6 +3187,8 @@ def analizza(url, args):
         finale = '{0.scheme}://{0.netloc}'.format(urlparse(elenco['url']))
         if finale != base and elenco.get('url'):
             rp('Il sito ha reindirizzato a', finale, '(uso questo indirizzo per le pagine interne)')
+            if dominio_base(finale) != dominio_base(url):
+                ctx['host_finale'] = finale  # altro dominio: il canale usa direttamente quello (anche per Origin e Referer)
             base = finale
             ctx['base'] = base
             SITO_BASE[0] = dominio_base(finale)
