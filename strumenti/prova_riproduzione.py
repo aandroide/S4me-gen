@@ -27,6 +27,10 @@ def main(urls):
             print('==', u)
             print('   manifest:', c['manifest'][:160])
             print('   token:', (c['token'] or {}).get('url', '')[:160], '| cliccato:', c['cliccato'])
+            for t in c['tentativi']:
+                print('   tentativo:', t)
+            for t in c['altre_richieste']:
+                print('   richiesta:', t)
             for k in ('drm', 'geolock', 'drmContentId', 'drmTokenEndpoint', 'mainLiveUrl', 'cf_remote_url', 'cf_old_entry_id', 'hostnameCdn', 'hostnameCdnDrm'):
                 if k in c['valori']:
                     print('   %s = %s' % (k, c['valori'][k][:120]))

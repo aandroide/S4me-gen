@@ -190,18 +190,49 @@ def _token(net, host_sito):
     return None
 
 
-def campione(s, url, grezzo_fn, attesa=12):
-    """Apre la pagina, preme play e ricava manifest e token: {'url','valori','manifest','token':{url,corpo}}."""
+def campione(s, url, grezzo_fn, attesa=8, rp=print):
+    """Apre la pagina, prova i pulsanti di avvio finche parte il manifest, e ricava manifest e token."""
     h = grezzo_fn(url)
     valori = valori_pagina(h)
     s.vai(url, attesa=4)
-    st = s.prova_play(attesa=attesa)
-    net = st.get('net', [])
-    man = _manifest(net)
-    tok = _token(net, urlsplit(url).netloc)
+    net_tot = list(s.net)
+    man, tok, cliccato = _manifest(net_tot), _token(net_tot, ''), 'autoplay' if _manifest(net_tot) else ''
+    tentativi = []
+    if not man:
+        from s4me_gen import PLAY_SELETTORI
+        for sel in PLAY_SELETTORI + ['video']:
+            try:
+                loc = s.page.locator(sel)
+                n = loc.count()
+            except Exception:
+                continue
+            for i in range(min(n, 3)):
+                try:
+                    if not loc.nth(i).is_visible():
+                        continue
+                    s.net = []
+                    loc.nth(i).click(timeout=3000, force=True)
+                except Exception:
+                    continue
+                s.page.wait_for_timeout(int(attesa * 1000))
+                st = s.stato()
+                net = st.get('net', [])
+                net_tot += net
+                tentativi.append('%s #%d -> manifest %s token %s' % (sel, i, 'si' if _manifest(net) else 'no', 'si' if _token(net, '') else 'no'))
+                man, tok = _manifest(net_tot), _token(net_tot, '')
+                if man:
+                    cliccato = '%s #%d' % (sel, i)
+                    break
+            if man:
+                break
+    try:
+        s.page.screenshot(path='rapporti/riproduzione/%s.png' % re.sub(r'\W+', '_', url)[-60:])
+    except Exception:
+        pass
+    altri = [e['url'][:110] for e in net_tot if e.get('tipo') in ('fetch', 'xhr', 'other') and not re.search(r'google|doubleclick|permutive|tncid|adsrvr|pubmatic|adform|onetag|demdex|ipify|iab|rcsmetrics|/api/gql/', e['url'])]
     return {'url': url, 'valori': valori, 'manifest': man,
             'token': ({'url': tok['url'], 'corpo': tok.get('body') or ''} if tok else None),
-            'cliccato': st.get('cliccato', ''), 'html_grezzo': h}
+            'cliccato': cliccato, 'tentativi': tentativi, 'altre_richieste': altri[:25], 'html_grezzo': h}
 
 
 def ricetta_da_campioni(campioni, rp=print):
