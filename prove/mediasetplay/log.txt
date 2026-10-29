@@ -26,11 +26,11 @@ KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
    -> 21 voci
-      findvideos | Bullet train | https://mediasetinfinity.mediaset.it/movie/bullettrain/bullet-train_F311877201000103
-      findvideos | Simulant - Il futuro è per sempre | https://mediasetinfinity.mediaset.it/movie/simulantilfuturoepersempre/simulant-il-futuro-e-per-sempr
-      findvideos | Bridget Jones's baby | https://mediasetinfinity.mediaset.it/movie/bridgetjonessbaby/bridget-joness-baby_F307645501000102
-      findvideos | Buongiorno papà | https://mediasetinfinity.mediaset.it/movie/buongiornopapa/buongiorno-papa_F304256401000101
-== findvideos su "Bullet train"
+      findvideos | Il confine dell'inganno | https://mediasetinfinity.mediaset.it/movie/ilconfinedellinganno/il-confine-dellinganno_F309212101000
+      findvideos | Samson - La vera storia di Sansone | https://mediasetinfinity.mediaset.it/movie/samsonlaverastoriadisansone/samson-la-vera-storia-di-sans
+      findvideos | The lost city | https://mediasetinfinity.mediaset.it/movie/thelostcity/the-lost-city_F311799901000102
+      findvideos | Inga Lindstrom - Il ritorno di Ellen - Inga lindstrom - Il r | https://mediasetinfinity.mediaset.it/movie/ingalindstromilritornodiellen/inga-lindstrom-il-ritorno-d
+== findvideos su "Il confine dell'inganno"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
@@ -46,9 +46,9 @@ KeyError: 'response'
 == lista "•• Film più visti del giorno"
    -> 21 voci
       findvideos | Spy Game | https://mediasetinfinity.mediaset.it/movie/spygame/spy-game_F011035001000102
+      findvideos | Wedding every weekend | https://mediasetinfinity.mediaset.it/movie/weddingeveryweekend/wedding-every-weekend_F31136270100010
+      findvideos | Quella casa nel bosco | https://mediasetinfinity.mediaset.it/movie/quellacasanelbosco/quella-casa-nel-bosco_F303296801000102
       findvideos | Maigret e il falso amico | https://mediasetinfinity.mediaset.it/movie/maigreteilfalsoamico/maigret-e-il-falso-amico_F0114501010
-      findvideos | Anima gemella cercasi | https://mediasetinfinity.mediaset.it/movie/animagemellacercasi/anima-gemella-cercasi_F31124070100010
-      findvideos | Survivor | https://mediasetinfinity.mediaset.it/movie/survivor/survivor_F306762501000102
 == findvideos su "Spy Game"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
@@ -90,64 +90,64 @@ Nessuna voce da riprodurre trovata
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 46 
    SEZIONE Replay -> OK 23 
-   SEZIONE •• Tutti i Film -> OK 90 
+   SEZIONE •• Tutti i Film -> OK 92 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
-   SEZIONE •• Tutte le Serie TV -> OK 5 
-   SEZIONE The Last Ship 3 -> OK 5 
-   SEZIONE I Simpson -> OK 3 
+   SEZIONE •• Tutte le Serie TV -> OK 6 
+   SEZIONE The Last Ship 3 -> OK 7 
+   SEZIONE I Simpson -> OK 2 
    SEZIONE NCIS - Unità anticrimine 13 -> OK 6 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Innocence -> OK 5 
    SEZIONE Bitter Sweet - Ingredienti d'amore -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
+   SEZIONE Tempesta d'amore -> OK 3 
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE La promessa -> OK 7 
-   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
    SEZIONE Dragon Ball Daima -> OK 10 
    SEZIONE Dragon Ball Super -> OK 30 
-   SEZIONE Captain Tsubasa 2 -> OK 35 
+   SEZIONE Captain Tsubasa 2 -> OK 33 
    SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
-   SEZIONE I Simpson -> OK 3 
+   SEZIONE I Simpson -> OK 2 
    SEZIONE C.S.I. Scena del crimine 10 -> OK 5 
-   SEZIONE NCIS - Unità anticrimine 13 -> OK 6 
+   SEZIONE NCIS: Los Angeles 6 -> OK 5 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
-   SEZIONE Racconto di una notte -> OK 4 
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
+   SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE •• Serie Turche -> SOTTOMENU  
-   SEZIONE Zelig 30 - Autunno 2026 -> OK 4 
+   SEZIONE Il Volo - Uno per tutti -> OK 4 
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
-   SEZIONE Tu Si Que Vales 2026 -> OK 6 
+   SEZIONE Zelig 30 - Autunno 2026 -> OK 4 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
    SEZIONE Caduta libera 2026/2027 -> OK 4 
-   SEZIONE Amici EDIZIONE 26 -> OK 9 
+   SEZIONE Amici 26 -> OK 10 
    SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
-   SEZIONE Amici EDIZIONE 26 -> OK 9 
+   SEZIONE Amici 26 -> OK 10 
    SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Lo straordinario mondo di Gumball -> OK 10 
-   SEZIONE Teen Titans Go! -> OK 8 
-   SEZIONE Lo strano e meraviglioso mondo di Gumball -> OK 3 
+   SEZIONE Teen Titans Go! -> OK 7 
+   SEZIONE Beyblade X - Terza stagione -> OK 8 
    SEZIONE •• Kids Boing -> SOTTOMENU  
    SEZIONE Paw Patrol -> OK 5 
    SEZIONE La casa delle bambole di Gabby -> OK 5 
-   SEZIONE Chi ha sfidato Ninna e Matti? -> OK 15 
+   SEZIONE Simone -> OK 10 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
-   SEZIONE Marco - Dagli Appennini alle Ande -> OK 32 
+   SEZIONE Marco - Dagli Appennini alle Ande -> OK 29 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
    SEZIONE •• Tutti i Documentari -> OK 15 
+   SEZIONE Enigmi alieni 13 -> OK 7 
    SEZIONE Segnali dall'universo 2026 -> OK 6 
    SEZIONE Vietato entrare! - I luoghi più segreti del mondo -> OK 4 
-   SEZIONE Lo sapevi che? 2024 -> OK 25 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
    SEZIONE •• Film Documentari di Focus -> OK 20 
    SEZIONE txt70741 … -> OK 20 

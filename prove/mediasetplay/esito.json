@@ -23,7 +23,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"Bullet train\"",
+   "passo": "findvideos su \"Il confine dell'inganno\"",
    "esito": "ERRORE",
    "errore": "/S4me-gen/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 90
+   "titoli": 92
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -105,7 +105,7 @@
    "voce": "•• Tutte le Serie TV",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 5
+   "titoli": 6
   },
   {
    "voce": "•• Fiction e Serie Tv del momento",
@@ -117,13 +117,13 @@
      "voce": "The Last Ship 3",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 7
     },
     {
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 2
     },
     {
      "voce": "NCIS - Unità anticrimine 13",
@@ -166,6 +166,12 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Tempesta d'amore",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
+    },
+    {
      "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
@@ -176,12 +182,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 7
-    },
-    {
-     "voce": "Tutto per la mia famiglia 2",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
     }
    ]
   },
@@ -213,7 +213,7 @@
      "voce": "Captain Tsubasa 2",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 35
+     "titoli": 33
     }
    ]
   },
@@ -227,7 +227,7 @@
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 2
     },
     {
      "voce": "C.S.I. Scena del crimine 10",
@@ -236,10 +236,10 @@
      "titoli": 5
     },
     {
-     "voce": "NCIS - Unità anticrimine 13",
+     "voce": "NCIS: Los Angeles 6",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 5
     }
    ]
   },
@@ -250,12 +250,6 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Racconto di una notte",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
-    },
-    {
      "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
@@ -263,6 +257,12 @@
     },
     {
      "voce": "Tutto per la mia famiglia 2",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
+     "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
@@ -276,7 +276,7 @@
    "sottovoci": 12,
    "figli": [
     {
-     "voce": "Zelig 30 - Autunno 2026",
+     "voce": "Il Volo - Uno per tutti",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
@@ -288,10 +288,10 @@
      "titoli": 6
     },
     {
-     "voce": "Tu Si Que Vales 2026",
+     "voce": "Zelig 30 - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 4
     }
    ]
   },
@@ -314,10 +314,10 @@
      "titoli": 4
     },
     {
-     "voce": "Amici EDIZIONE 26",
+     "voce": "Amici 26",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 9
+     "titoli": 10
     }
    ]
   },
@@ -334,10 +334,10 @@
      "titoli": 6
     },
     {
-     "voce": "Amici EDIZIONE 26",
+     "voce": "Amici 26",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 9
+     "titoli": 10
     },
     {
      "voce": "Uomini e Donne 2026/2027",
@@ -363,13 +363,13 @@
      "voce": "Teen Titans Go!",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 8
+     "titoli": 7
     },
     {
-     "voce": "Lo strano e meraviglioso mondo di Gumball",
+     "voce": "Beyblade X - Terza stagione",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 8
     }
    ]
   },
@@ -377,7 +377,7 @@
    "voce": "•• Kids Cartoonito",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 16,
+   "sottovoci": 17,
    "figli": [
     {
      "voce": "Paw Patrol",
@@ -392,10 +392,10 @@
      "titoli": 5
     },
     {
-     "voce": "Chi ha sfidato Ninna e Matti?",
+     "voce": "Simone",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 15
+     "titoli": 10
     }
    ]
   },
@@ -421,7 +421,7 @@
      "voce": "Marco - Dagli Appennini alle Ande",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 32
+     "titoli": 29
     }
    ]
   },
@@ -438,6 +438,12 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Enigmi alieni 13",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 7
+    },
+    {
      "voce": "Segnali dall'universo 2026",
      "azione": "epmenu",
      "esito": "OK",
@@ -448,12 +454,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
-    },
-    {
-     "voce": "Lo sapevi che? 2024",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 25
     }
    ]
   },

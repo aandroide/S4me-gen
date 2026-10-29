@@ -1,23 +1,23 @@
-Canale eurostreaming | indirizzo https://eurostream.fun
+Canale eurostreaming | indirizzo https://eurostream.fit
 == mainlist
    -> 6 voci
-      peliculas | • Serie TV | https://eurostream.fun
-      peliculas | • Anime | https://eurostream.fun/category/anime-cartoni-animati/
-      peliculas | • Aggiornamenti | https://eurostream.fun/nuovi-ep-aggiornamento/
-      peliculas | • Archivio | https://eurostream.fun/category/serie-tv-archive/
+      peliculas | • Serie TV | https://eurostream.fit
+      peliculas | • Anime | https://eurostream.fit/category/anime-cartoni-animati/
+      peliculas | • Aggiornamenti | https://eurostream.fit/nuovi-ep-aggiornamento/
+      peliculas | • Archivio | https://eurostream.fit/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | All Creatures Great and Small | https://eurostream.fit/all-creatures-great-and-small/
-      episodios | Phony | https://eurostream.fit/phony/
-      episodios | Tommy & Tuppence | https://eurostream.fit/tommy-tuppence/
-      episodios | Amore sotto copertura | https://eurostream.fit/amore-sotto-copertura/
-== episodios su "All Creatures Great and Small"
-   -> 66 voci
-      findvideos | 1x01 - Devi avere un sogno  | https://eurostream.fit/all-creatures-great-and-small/
-      findvideos | 1x02 - Un altro Farnon?  | https://eurostream.fit/all-creatures-great-and-small/
-      findvideos | 1x03 - Ce ne vogliono di tutti i colori  | https://eurostream.fit/all-creatures-great-and-small/
-      findvideos | 1x04 - L’amore per i vitelli  | https://eurostream.fit/all-creatures-great-and-small/
-== findvideos su "1x01 - Devi avere un sogno "
+      episodios | The One About Matthew Perry | https://eurostream.fit/one-matthew-perry/
+      episodios | Sacrifice | https://eurostream.fit/sacrifice/
+      episodios | R.J. Decker | https://eurostream.fit/r-j-decker/
+      episodios | Dragon Ball Super: Beerus | https://eurostream.fit/dragon-ball-super-beerus/
+== episodios su "The One About Matthew Perry"
+   -> 7 voci
+      findvideos | 1x01 - Parte I  | https://eurostream.fit/one-matthew-perry/
+      findvideos | 1x02 - Parte II  | https://eurostream.fit/one-matthew-perry/
+      findvideos | 1x03 - Parte III  | https://eurostream.fit/one-matthew-perry/
+      findvideos | 1x01 - Part I  | https://eurostream.fit/one-matthew-perry/
+== findvideos su "1x01 - Parte I "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5
+Exception: Not un-shortened link: https://clicka.cc/delta/8iwadwidl4p6
 
 == lista "• Anime"
    -> 19 voci
@@ -69,17 +69,17 @@ Exception: Not un-shortened link: https://clicka.cc/tv/c4q9u136
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 7x06 - All Creatures Great and Small - Give Us This Day  | https://eurostream.fit/all-creatures-great-and-small/
-      episodios | 1x03 - Phony - Reverse Cuckoo Situation  | https://eurostream.fit/phony/
-      episodios | 1x02 - Tommy & Tuppence - Episode 2  | https://eurostream.fit/tommy-tuppence/
-      episodios | 1x04 - Amore sotto copertura - Episodio 4 | https://eurostream.fit/amore-sotto-copertura/
-== episodios su "7x06 - All Creatures Great and Small - G"
-   -> 66 voci
-      findvideos | 1x01 - Devi avere un sogno  | https://eurostream.fit/all-creatures-great-and-small/
-      findvideos | 1x02 - Un altro Farnon?  | https://eurostream.fit/all-creatures-great-and-small/
-      findvideos | 1x03 - Ce ne vogliono di tutti i colori  | https://eurostream.fit/all-creatures-great-and-small/
-      findvideos | 1x04 - L’amore per i vitelli  | https://eurostream.fit/all-creatures-great-and-small/
-== findvideos su "1x01 - Devi avere un sogno "
+      episodios | 1x01 - The One About Matthew Perry - Parte I , 1x02 Parte II | https://eurostream.fit/one-matthew-perry/
+      episodios | 2x06 - Sacrifice - Lagniappe | https://eurostream.fit/sacrifice/
+      episodios | 2x01 - R.J. Decker - Il motivo per cui ci siamo lasciati | https://eurostream.fit/r-j-decker/
+      episodios | 1x01 - Dragon Ball Super: Beerus - Il Dio che distrugge , 1x | https://eurostream.fit/dragon-ball-super-beerus/
+== episodios su "1x01 - The One About Matthew Perry - Par"
+   -> 7 voci
+      findvideos | 1x01 - Parte I  | https://eurostream.fit/one-matthew-perry/
+      findvideos | 1x02 - Parte II  | https://eurostream.fit/one-matthew-perry/
+      findvideos | 1x03 - Parte III  | https://eurostream.fit/one-matthew-perry/
+      findvideos | 1x01 - Part I  | https://eurostream.fit/one-matthew-perry/
+== findvideos su "1x01 - Parte I "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5
+Exception: Not un-shortened link: https://clicka.cc/ga/aHR0cHM6Ly9taXhkcm9wLnRvcC9mLzRkZDd3ZTB6dGRva25wDQ==
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -108,6 +108,7 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
    SEZIONE • Archivio -> OK 18 
-   SEZIONE txt70741 … -> OK 11 
-SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - Devi avere un sogno "
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostream.fit/?s=avatar', 'status': 403, 'byte': 5913, 'titolo_pagina': 'Just a moment...'}
+SEZIONI: 4 ok su 5
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
+VERDETTO: SI FERMA A: findvideos su "1x01 - Parte I "

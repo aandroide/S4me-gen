@@ -135,7 +135,7 @@
    "url": "https://altadefinizione.nuovo.live/category/film//page/2",
    "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 382, in downloadpage\n    req = session.head(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 564, in head\n    return self.request('HEAD', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
    "byte": 0,
-   "secondi": 0.9,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
@@ -143,7 +143,7 @@
    "url": "https://altadefinizione.nuovo.live/category/ora-al-cinema//page/2",
    "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 382, in downloadpage\n    req = session.head(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 564, in head\n    return self.request('HEAD', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
    "byte": 0,
-   "secondi": 0.8,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
@@ -159,7 +159,7 @@
    "url": "https://altadefinizione.nuovo.live",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.5,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
@@ -167,7 +167,7 @@
    "url": "https://altadefinizione.nuovo.live/category/film//page/3",
    "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 382, in downloadpage\n    req = session.head(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 564, in head\n    return self.request('HEAD', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
    "byte": 0,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
@@ -175,7 +175,7 @@
    "url": "https://altadefinizione.nuovo.live/category/ora-al-cinema//page/3",
    "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 382, in downloadpage\n    req = session.head(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 564, in head\n    return self.request('HEAD', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
    "byte": 0,
-   "secondi": 0.4,
+   "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
@@ -183,7 +183,7 @@
    "url": "https://altadefinizione.nuovo.live",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
@@ -191,7 +191,7 @@
    "url": "https://altadefinizione.nuovo.live",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.7,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   },
@@ -199,7 +199,7 @@
    "url": "https://altadefinizione.nuovo.live",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.4,
+   "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
@@ -215,7 +215,7 @@
    "url": "https://altadefinizione.nuovo.live/category/serie-tv//page/2",
    "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 382, in downloadpage\n    req = session.head(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 564, in head\n    return self.request('HEAD', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
    "byte": 0,
-   "secondi": 0.5,
+   "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/11.html"
   },
@@ -223,7 +223,7 @@
    "url": "https://altadefinizione.nuovo.live/?s=avatar",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/12.html"
   },

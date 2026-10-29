@@ -1,6 +1,6 @@
 {
  "canale": "eurostreaming",
- "host": "https://eurostream.fun",
+ "host": "https://eurostream.fit",
  "passi": [
   {
    "passo": "mainlist",
@@ -13,14 +13,14 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"All Creatures Great and Small\"",
+   "passo": "episodios su \"The One About Matthew Perry\"",
    "esito": "OK",
-   "voci": 66
+   "voci": 7
   },
   {
-   "passo": "findvideos su \"1x01 - Devi avere un sogno \"",
+   "passo": "findvideos su \"1x01 - Parte I \"",
    "esito": "ERRORE",
-   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5\n"
+   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/8iwadwidl4p6\n"
   },
   {
    "passo": "lista \"• Anime\"",
@@ -43,14 +43,14 @@
    "voci": 21
   },
   {
-   "passo": "episodios su \"7x06 - All Creatures Great and Small - G\"",
+   "passo": "episodios su \"1x01 - The One About Matthew Perry - Par\"",
    "esito": "OK",
-   "voci": 66
+   "voci": 7
   },
   {
-   "passo": "findvideos su \"1x01 - Devi avere un sogno \"",
+   "passo": "findvideos su \"1x01 - Parte I \"",
    "esito": "ERRORE",
-   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5\n"
+   "errore": "), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/ga/aHR0cHM6Ly9taXhkcm9wLnRvcC9mLzRkZDd3ZTB6dGRva25wDQ==\n"
   }
  ],
  "video": [],
@@ -87,46 +87,59 @@
   {
    "voce": "txt70741 …",
    "azione": "search",
-   "esito": "OK",
-   "titoli": 11
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/?s=avatar",
+     "status": 403,
+     "byte": 5913,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://eurostream.fit/?s=avatar",
+     "status": 403,
+     "byte": 5913,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   }
  ],
- "sezioni_riepilogo": "5 ok su 5",
+ "sezioni_riepilogo": "4 ok su 5",
  "rete": [
   {
-   "url": "https://eurostream.fun",
+   "url": "https://eurostream.fit",
    "status": 200,
-   "byte": 42951,
-   "secondi": 1.3,
+   "byte": 42666,
+   "secondi": 1.1,
    "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://eurostream.fit/all-creatures-great-and-small/",
+   "url": "https://eurostream.fit/one-matthew-perry/",
    "status": 200,
-   "byte": 53985,
-   "secondi": 0.9,
-   "titolo_pagina": "All Creatures Great and Small streaming Serie TV - euroStreaming",
+   "byte": 33887,
+   "secondi": 0.7,
+   "titolo_pagina": "The One About Matthew Perry streaming Serie TV - euroStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/delta/qt6wmwfobtn5",
-   "status": 403,
-   "byte": 5877,
-   "secondi": 0.5,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/03.html"
-  },
-  {
-   "url": "https://clicka.cc/delta/qt6wmwfobtn5",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/delta/8iwadwidl4p6",
    "status": 403,
    "byte": 5877,
    "secondi": 0.6,
    "titolo_pagina": "Just a moment...",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://clicka.cc/delta/8iwadwidl4p6",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.8,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/msf/7iekfeazam61",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/msf/gk43bl8azhuk",
    "status": 403,
    "byte": 6521,
    "secondi": 0.6,
@@ -134,134 +147,162 @@
    "file": "pagine/05.html"
   },
   {
-   "url": "https://uprot.net/msf/7iekfeazam61",
+   "url": "https://uprot.net/msf/gk43bl8azhuk",
    "status": 403,
    "byte": 6521,
-   "secondi": 0.7,
+   "secondi": 0.8,
    "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://eurostream.fun/category/anime-cartoni-animati/",
-   "status": 200,
-   "byte": 43973,
-   "secondi": 1.0,
-   "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/ga/aHR0cHM6Ly9taXhkcm9wLnRvcC9mLzRkZDd3ZTB6dGRva25wDQ==",
+   "status": 403,
+   "byte": 6052,
+   "secondi": 0.8,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/07.html"
+  },
+  {
+   "url": "https://clicka.cc/ga/aHR0cHM6Ly9taXhkcm9wLnRvcC9mLzRkZDd3ZTB6dGRva25wDQ==",
+   "status": 403,
+   "byte": 6052,
+   "secondi": 1.0,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://eurostream.fit/category/anime-cartoni-animati/",
+   "status": 200,
+   "byte": 43980,
+   "secondi": 0.9,
+   "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming",
+   "file": "pagine/09.html"
   },
   {
    "url": "https://eurostream.fit/adventure-time-side-quests/",
    "status": 200,
-   "byte": 37324,
-   "secondi": 0.4,
+   "byte": 37331,
+   "secondi": 0.7,
    "titolo_pagina": "Adventure Time: Side Quests streaming Serie TV - euroStreaming",
-   "file": "pagine/08.html"
+   "file": "pagine/10.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/tv/c4q9u136",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/tv/c4q9u136",
    "status": 403,
    "byte": 5856,
    "secondi": 0.4,
    "titolo_pagina": "Just a moment...",
-   "file": "pagine/09.html"
+   "file": "pagine/11.html"
   },
   {
    "url": "https://clicka.cc/tv/c4q9u136",
    "status": 403,
    "byte": 5856,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "Just a moment...",
-   "file": "pagine/10.html"
-  },
-  {
-   "url": "https://eurostream.fun/nuovi-ep-aggiornamento/",
-   "status": 200,
-   "byte": 46009,
-   "secondi": 1.1,
-   "titolo_pagina": "Aggiornamento Episodi - euroStreaming",
-   "file": "pagine/11.html"
-  },
-  {
-   "url": "https://eurostream.fit/all-creatures-great-and-small/",
-   "status": 200,
-   "byte": 53985,
-   "secondi": 0.9,
-   "titolo_pagina": "All Creatures Great and Small streaming Serie TV - euroStreaming",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/delta/qt6wmwfobtn5",
-   "status": 403,
-   "byte": 5877,
-   "secondi": 0.4,
-   "titolo_pagina": "Just a moment...",
+   "url": "https://eurostream.fit/nuovi-ep-aggiornamento/",
+   "status": 200,
+   "byte": 46049,
+   "secondi": 1.0,
+   "titolo_pagina": "Aggiornamento Episodi - euroStreaming",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://clicka.cc/delta/qt6wmwfobtn5",
-   "status": 403,
-   "byte": 5877,
-   "secondi": 0.4,
-   "titolo_pagina": "Just a moment...",
+   "url": "https://eurostream.fit/one-matthew-perry/",
+   "status": 200,
+   "byte": 33887,
+   "secondi": 0.6,
+   "titolo_pagina": "The One About Matthew Perry streaming Serie TV - euroStreaming",
    "file": "pagine/14.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/7iekfeazam61",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/ga/aHR0cHM6Ly9taXhkcm9wLnRvcC9mLzRkZDd3ZTB6dGRva25wDQ==",
    "status": 403,
-   "byte": 6521,
+   "byte": 6052,
    "secondi": 0.4,
-   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/15.html"
   },
   {
-   "url": "https://uprot.net/msf/7iekfeazam61",
+   "url": "https://clicka.cc/ga/aHR0cHM6Ly9taXhkcm9wLnRvcC9mLzRkZDd3ZTB6dGRva25wDQ==",
+   "status": 403,
+   "byte": 6052,
+   "secondi": 0.5,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/gk43bl8azhuk",
    "status": 403,
    "byte": 6521,
-   "secondi": 0.5,
+   "secondi": 0.7,
    "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud"
   },
   {
-   "url": "https://eurostream.fun",
+   "url": "https://uprot.net/msf/gk43bl8azhuk",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.8,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/delta/8iwadwidl4p6",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.8,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://clicka.cc/delta/8iwadwidl4p6",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.9,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://eurostream.fit",
    "status": 200,
-   "byte": 42951,
-   "secondi": 1.1,
+   "byte": 42666,
+   "secondi": 0.8,
    "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming"
   },
   {
-   "url": "https://eurostream.fun/category/anime-cartoni-animati/",
+   "url": "https://eurostream.fit/category/anime-cartoni-animati/",
    "status": 200,
-   "byte": 43973,
-   "secondi": 1.0,
+   "byte": 43980,
+   "secondi": 0.8,
    "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming"
   },
   {
-   "url": "https://eurostream.fun/nuovi-ep-aggiornamento/",
+   "url": "https://eurostream.fit/nuovi-ep-aggiornamento/",
    "status": 200,
-   "byte": 46009,
-   "secondi": 0.9,
+   "byte": 46049,
+   "secondi": 1.0,
    "titolo_pagina": "Aggiornamento Episodi - euroStreaming"
   },
   {
-   "url": "https://eurostream.fun/category/serie-tv-archive/",
+   "url": "https://eurostream.fit/category/serie-tv-archive/",
    "status": 200,
-   "byte": 42610,
+   "byte": 42689,
    "secondi": 0.8,
    "titolo_pagina": "SERIE TV ARCHIVIO Archives - euroStreaming :: Serie TV e Film in Streaming"
   },
   {
    "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/?s=avatar",
-   "status": 200,
-   "byte": 43849,
-   "secondi": 1.7,
-   "titolo_pagina": "Hai cercato avatar - euroStreaming :: Serie TV e Film in Streaming"
+   "status": 403,
+   "byte": 5913,
+   "secondi": 0.5,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://eurostream.fun/?s=avatar",
-   "status": 200,
-   "byte": 43849,
-   "secondi": 1.7,
-   "titolo_pagina": "Hai cercato avatar - euroStreaming :: Serie TV e Film in Streaming"
+   "url": "https://eurostream.fit/?s=avatar",
+   "status": 403,
+   "byte": 5913,
+   "secondi": 0.6,
+   "titolo_pagina": "Just a moment..."
   }
  ],
- "verdetto": "SI FERMA A: findvideos su \"1x01 - Devi avere un sogno \""
+ "verdetto": "SI FERMA A: findvideos su \"1x01 - Parte I \""
 }

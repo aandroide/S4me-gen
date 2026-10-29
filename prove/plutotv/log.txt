@@ -10,12 +10,11 @@ Nessuna voce da riprodurre trovata
     top | ('Dirette {bold}', ['/it/live-tv/', 'live'])
     menu | ('Categorie', ['', 'category'])
 == controllo di tutte le sezioni
-   SEZIONE Dirette -> OK 441 
+   SEZIONE Dirette -> OK 438 
    SEZIONE '00s Movies -> OK 20 
    SEZIONE '70s Movies -> OK 20 
    SEZIONE '80s Movies -> OK 20 
    SEZIONE Categorie -> SOTTOMENU  
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://service-media-search.clusters.pluto.tv/v1/search?q=avatar&limit=100', 'status': 500, 'byte': 50, 'titolo_pagina': ''}
-SEZIONI: 2 ok su 3
-   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
+   SEZIONE txt70741 … -> OK 61 
+SEZIONI: 3 ok su 3
 VERDETTO: SI FERMA A: ultimo passo, nessuna voce da riprodurre

@@ -1,32 +1,49 @@
 Canale la7 | indirizzo 
 == mainlist
-   -> 7 voci
-      live | Dirette | https://www.la7.it
-      replay_channels | Replay | https://www.la7.it
-      peliculas | • Programmi TV | https://www.la7.it/tutti-i-programmi
-      peliculas | • Teche La7 | https://www.la7.it/la7teche
+   -> 8 voci
+      live | Dirette | https://www.la7play.it
+      replay_channels | Rivedi oggi | https://www.la7play.it
+      peliculas | • Programmi TV | https://www.la7play.it/programmi
+      film | • Film La7 | https://www.la7play.it/film
 == lista "• Programmi TV"
-   -> 0 voci
-== lista "• Teche La7"
-   -> 0 voci
-Nessuna voce da riprodurre trovata
-== voci dichiarate in mainlist (5)
+   -> 71 voci
+      episodios | 100 minuti | https://www.la7play.it/100minuti
+      episodios | Amarsi un po' - Istruzioni per l'uso | https://www.la7play.it/amarsi-un-po
+      episodios | Atlantide | https://www.la7play.it/atlantide
+      episodios | Barbero Risponde | https://www.la7play.it/barbero-risponde
+== episodios su "100 minuti"
+   -> 21 voci
+      findvideos | 100 Minuti - Senza tetto né legge | https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465
+      findvideos | 100 minuti - IMMORTALITÀ. Cosa rende immortale il potere cri | https://www.la7play.it/100minuti/rivedila7/100-minuti-immortalita-cosa-rende-immortale-il-potere-cri
+      findvideos | 100 minuti - AVIDITÀ I soldi, le lobby e la politica | https://www.la7play.it/100minuti/rivedila7/100-minuti-avidita-i-soldi-le-lobby-e-la-politica-24-06-2
+      findvideos | 100 minuti - Milano siamo noi - Puntata del 16/6/2025 | https://www.la7play.it/100minuti/rivedila7/100-minuti-milano-siamo-noi-17-06-2025-600774
+== findvideos su "100 Minuti - Senza tetto né legge"
+   -> 1 voci
+      play | Direct | https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/cont
+== risoluzione directo https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/cont
+   -> VIDEO OK m3u8 206 
+== voci dichiarate in mainlist (6)
     top | ('Dirette {bold}', ['', 'live'])
-    top | ('Replay {bold}', ['', 'replay_channels'])
-    menu | ('Programmi TV {bullet bold}', ['/tutti-i-programmi', 'peliculas', '', 'tvshow'])
-    menu | ('Teche La7 {bullet bold}', ['/la7teche', 'peliculas', '', 'tvshow'])
-    menu | ('Film La7Cinema {bullet bold}', ['/la7-cinema-tutti-i-film/rivedila7', 'episodios', '', 'peliculas'])
+    top | ('Rivedi oggi {bold}', ['', 'replay_channels'])
+    menu | ('Programmi TV {bullet bold}', ['/programmi', 'peliculas', '', 'tvshow'])
+    menu | ('Film La7 {bullet bold}', ['/film', 'film', '', 'movie'])
+    menu | ('Documentari {bullet bold}', ['/documentari', 'documentari', '', 'movie'])
+    menu | ('TG La7 {bullet bold}', ['/tgla7/puntate', 'episodios', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Dirette -> ERRORE JSONDecodeError
-   SEZIONE Replay -> OK 1 
-   SEZIONE • Programmi TV -> VUOTA   | ultima pagina: {'url': 'https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=84090', 'status': 200, 'byte': 2, 'titolo_pagina': ''}
-   SEZIONE • Teche La7 -> VUOTA   | ultima pagina: {'url': 'https://www.la7.it/la7teche', 'status': 200, 'byte': 104635, 'titolo_pagina': 'Programmi | La7'}
-   SEZIONE • Film La7Cinema -> VUOTA   | ultima pagina: {'url': 'https://www.la7.it/la7-cinema-tutti-i-film/rivedila7', 'status': 200, 'byte': 146915, 'titolo_pagina': 'Film | La7'}
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://www.la7.it/ricerca?query=avatar&page=0', 'status': 200, 'byte': 47137, 'titolo_pagina': 'Ricerca | LA7 | La7'}
-SEZIONI: 1 ok su 6
-   SEZIONE SENZA TITOLI: Dirette | ERRORE JSONDecodeError
-   SEZIONE SENZA TITOLI: • Programmi TV | VUOTA
-   SEZIONE SENZA TITOLI: • Teche La7 | VUOTA
-   SEZIONE SENZA TITOLI: • Film La7Cinema | VUOTA
-   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: lista "• Programmi TV"
+   SEZIONE Dirette -> OK 2 
+   SEZIONE Oggi -> OK 5 
+   SEZIONE Giovedi 29 ottobre -> OK 5 
+   SEZIONE Mercoledi 28 ottobre -> OK 25 
+   SEZIONE La7 -> SOTTOMENU  
+   SEZIONE Oggi -> OK 3 
+   SEZIONE Giovedi 29 ottobre -> OK 3 
+   SEZIONE Mercoledi 28 ottobre -> OK 7 
+   SEZIONE La7Cinema -> SOTTOMENU  
+   SEZIONE Rivedi oggi -> SOTTOMENU  
+   SEZIONE • Programmi TV -> OK 71 
+   SEZIONE • Film La7 -> OK 34 
+   SEZIONE • Documentari -> OK 16 
+   SEZIONE • TG La7 -> OK 20 
+   SEZIONE txt70741 … -> OK 3 
+SEZIONI: 7 ok su 7
+VERDETTO: ARRIVA AL VIDEO

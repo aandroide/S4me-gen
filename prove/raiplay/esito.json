@@ -71,6 +71,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str14 29 str30",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 19
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 16
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 12
+      }
+     ]
+    },
+    {
      "voce": "str13 28 str30",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -80,19 +106,19 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 20
+       "titoli": 31
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 17
+       "titoli": 34
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 11
+       "titoli": 30
       }
      ]
     },
@@ -117,34 +143,8 @@
       {
        "voce": "Rai 3",
        "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      }
-     ]
-    },
-    {
-     "voce": "str11 26 str30",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 31
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
        "esito": "OK",
        "titoli": 30
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
       }
      ]
     }
@@ -166,7 +166,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 23
     },
     {
      "voce": "Stregati da Halloween",
@@ -264,7 +264,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 28
+     "titoli": 30
     },
     {
      "voce": "Docu-serie Original",
@@ -342,7 +342,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 22
     },
     {
      "voce": "Il teatro di Eduardo",

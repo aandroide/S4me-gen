@@ -50,21 +50,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 20 
-   SEZIONE Rai 2 -> OK 17 
-   SEZIONE Rai 3 -> OK 11 
+   SEZIONE Rai 1 -> OK 19 
+   SEZIONE Rai 2 -> OK 16 
+   SEZIONE Rai 3 -> OK 12 
+   SEZIONE str14 29 str30 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 31 
+   SEZIONE Rai 2 -> OK 34 
+   SEZIONE Rai 3 -> OK 30 
    SEZIONE str13 28 str30 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 32 
    SEZIONE Rai 2 -> OK 33 
-   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE Rai 3 -> OK 30 
    SEZIONE str12 27 str30 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 31 
-   SEZIONE Rai 2 -> OK 30 
-   SEZIONE Rai 3 -> ERRORE JSONDecodeError
-   SEZIONE str11 26 str30 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE Novità -> OK 24 
-   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Da non perdere -> OK 23 
    SEZIONE Stregati da Halloween -> OK 18 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 25 
@@ -79,7 +79,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Territori e itinerari -> OK 32 
    SEZIONE Approfondimento -> OK 25 
    SEZIONE Programmi TV -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 28 
+   SEZIONE Da non perdere -> OK 30 
    SEZIONE Docu-serie Original -> OK 28 
    SEZIONE Documentari Original -> OK 25 
    SEZIONE Documentari -> SOTTOMENU  
@@ -91,7 +91,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Next Star -> OK 21 
    SEZIONE Un mondo di fumetti -> OK 15 
    SEZIONE Teen -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 23 
+   SEZIONE Da non perdere -> OK 22 
    SEZIONE Il teatro di Eduardo -> OK 25 
    SEZIONE Musica classica -> OK 24 
    SEZIONE Musica e Teatro -> SOTTOMENU  

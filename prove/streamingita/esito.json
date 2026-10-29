@@ -38,7 +38,7 @@
    "pagine": [
     {
      "url": "https://streamingita.homes/film",
-     "status": "'NoneType' object has no attribute 'elapsed'",
+     "status": "HTTPSConnectionPool(host='ww17.streamingita.homes', port=443): Read timed out. (read timeout=5)",
      "byte": 0,
      "titolo_pagina": ""
     }
@@ -51,7 +51,7 @@
    "pagine": [
     {
      "url": "https://streamingita.homes/film",
-     "status": "'NoneType' object has no attribute 'elapsed'",
+     "status": "HTTPSConnectionPool(host='ww17.streamingita.homes', port=443): Read timed out. (read timeout=5)",
      "byte": 0,
      "titolo_pagina": ""
     }
@@ -64,7 +64,7 @@
    "pagine": [
     {
      "url": "https://streamingita.homes/film",
-     "status": "'NoneType' object has no attribute 'elapsed'",
+     "status": "HTTPSConnectionPool(host='ww17.streamingita.homes', port=443): Read timed out. (read timeout=5)",
      "byte": 0,
      "titolo_pagina": ""
     }
@@ -103,47 +103,47 @@
    "url": "https://streamingita.homes/film",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.9,
+   "secondi": 6.5,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
    "url": "https://streamingita.homes/film",
-   "status": "'NoneType' object has no attribute 'elapsed'",
+   "status": "HTTPSConnectionPool(host='ww17.streamingita.homes', port=443): Read timed out. (read timeout=5)",
    "byte": 0,
-   "secondi": 0.7,
+   "secondi": 5.5,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://streamingita.homes/film",
-   "status": "'NoneType' object has no attribute 'elapsed'",
+   "status": "HTTPSConnectionPool(host='ww17.streamingita.homes', port=443): Read timed out. (read timeout=5)",
    "byte": 0,
-   "secondi": 0.7,
+   "secondi": 5.3,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
    "url": "https://streamingita.homes/film",
-   "status": "'NoneType' object has no attribute 'elapsed'",
+   "status": "HTTPSConnectionPool(host='ww17.streamingita.homes', port=443): Read timed out. (read timeout=5)",
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 5.5,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://streamingita.homes/film",
-   "status": "'NoneType' object has no attribute 'elapsed'",
+   "status": "HTTPSConnectionPool(host='ww17.streamingita.homes', port=443): Read timed out. (read timeout=5)",
    "byte": 0,
-   "secondi": 0.5,
+   "secondi": 8.8,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
    "url": "https://streamingita.homes/film",
-   "status": "'NoneType' object has no attribute 'elapsed'",
+   "status": "HTTPSConnectionPool(host='ww17.streamingita.homes', port=443): Read timed out. (read timeout=5)",
    "byte": 0,
-   "secondi": 0.5,
+   "secondi": 5.5,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
@@ -151,7 +151,7 @@
    "url": "https://streamingita.homes/tv",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.6,
+   "secondi": 10.3,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
@@ -159,7 +159,7 @@
    "url": "https://streamingita.homes/?s=avatar",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 10.1,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   }

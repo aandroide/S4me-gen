@@ -6,7 +6,7 @@ Riepilogo: ARRIVA AL VIDEO 14, SI FERMA AL SERVER O AL VIDEO 2, SI FERMA PRIMA D
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.autos | verdetto: ARRIVA AL VIDEO
-- passo "check su "Solo Noi. Una stagione da Double "": VUOTO 
+- passo "check su "Concerto Geolier - Live Maradona 26 "": VUOTO 
 - server vixsrc: VIDEO OK m3u8 200
 
 ### altadefinizioneclick
@@ -27,6 +27,7 @@ Sito: https://casa-cinema.boats | verdetto: ARRIVA AL VIDEO
 
 ### cineblog001
 Sito: https://cineblog001.men | verdetto: ARRIVA AL VIDEO
+- passo "findvideos su "Concerto Geolier - Live Maradona 26"": VUOTO 
 - server vidxgo: VIDEO OK m3u8 200
 
 ### cinetecadibologna
@@ -43,8 +44,11 @@ Sito:  | verdetto: ARRIVA AL VIDEO
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.ink | verdetto: ARRIVA AL VIDEO
-- passo "check su "Solo Noi. Una stagione da Double"": VUOTO 
 - server vidxgo: VIDEO OK m3u8 200
+
+### la7
+Sito:  | verdetto: ARRIVA AL VIDEO
+- server directo: VIDEO OK m3u8 206
 
 ### raiplay
 Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
@@ -54,13 +58,9 @@ Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
 Sito: https://streamingcommunityz.day | verdetto: ARRIVA AL VIDEO
 - server streamingcommunityws: VIDEO OK m3u8 200
 
-### tantifilm
-Sito: https://tanti-film.garden | verdetto: ARRIVA AL VIDEO
-- server vidxgo: VIDEO OK m3u8 200
-
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
-- passo "findvideos su "1x01 - Maomao"": VUOTO 
+- passo "findvideos su "06 - Subterranean Holdup"": VUOTO 
 - server voe: VIDEO OK m3u8 200
 
 ## SI FERMA AL SERVER O AL VIDEO (2)
@@ -82,8 +82,9 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista ""Best Indie of 2026" — Featuring Metric,"
-- passo "lista ""Best Indie of 2026" — Featuring Metric,"": VUOTO 
+Sito:  | verdetto: SI FERMA A: lista ""HitKast: Best of 2026" — It was sombr, "
+- passo "lista ""HitKast: Best of 2026" — It was sombr, "": VUOTO 
+- passo "lista "Today's Rocktober Featured Channel: "Nu "": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -110,7 +111,7 @@ Sito: https://www.animeforce.it | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• Completi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### animeunity
-Sito: https://www.animeunity.to | verdetto: SI FERMA A: peliculas su "Action"
+Sito: https://www.animeunity.co | verdetto: SI FERMA A: peliculas su "Action"
 - passo "peliculas su "Action"": ERRORE payload).json['records']               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^ KeyError: 'records' 
 - passo "peliculas su "Action"": ERRORE payload).json['records']               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^ KeyError: 'records' 
 - passo "peliculas su "Action"": ERRORE payload).json['records']               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^ KeyError: 'records' 
@@ -153,10 +154,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.fun | verdetto: SI FERMA A: findvideos su "1x01 - Devi avere un sogno "
-- passo "findvideos su "1x01 - Devi avere un sogno "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5 
+Sito: https://eurostream.fit | verdetto: SI FERMA A: findvideos su "1x01 - Parte I "
+- passo "findvideos su "1x01 - Parte I "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/8iwadwidl4p6 
 - passo "findvideos su "1x01 - Bros & Arrows "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/c4q9u136 
-- passo "findvideos su "1x01 - Devi avere un sogno "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/qt6wmwfobtn5 
+- passo "findvideos su "1x01 - Parte I "": ERRORE er)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/ga/aHR0cHM6Ly9taXhkcm9wLnRvcC9mLzRkZDd3ZTB6dGRva25wDQ== 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -209,11 +210,6 @@ Sito: https://www.justwatch.com | verdetto: SI FERMA A: findvideos su "Fight Clu
 - passo "findvideos su "Fight Club"": VUOTO 
 - passo "findvideos su "Fight Club"": VUOTO 
 
-### la7
-Sito:  | verdetto: SI FERMA A: lista "• Programmi TV"
-- passo "lista "• Programmi TV"": VUOTO 
-- passo "lista "• Teche La7"": VUOTO 
-
 ### lordchannel
 Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Film"": VUOTO 
@@ -223,7 +219,7 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Bullet train"
 - passo "findvideos su "Bullet train"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Bullet train"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Il confine dell'inganno"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "Spy Game"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
@@ -263,6 +259,12 @@ Sito: https://streamingita.homes | verdetto: SI FERMA A: lista "Generi"
 Sito:  | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Film"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "• Serie TV"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+
+### tantifilm
+Sito: https://tanti-film.garden | verdetto: SI FERMA A: check su "Concerto Geolier - Live Maradona 26 "
+- passo "check su "Concerto Geolier - Live Maradona 26 "": VUOTO 
+- passo "check su "Concerto Geolier - Live Maradona 26 "": VUOTO 
+- passo "check su "Magic Knight Rayearth "": VUOTO 
 
 ### thepiratebay
 Sito:  | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre

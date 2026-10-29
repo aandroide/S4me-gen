@@ -5,549 +5,268 @@
   {
    "passo": "mainlist",
    "esito": "OK",
-   "voci": 7
+   "voci": 8
   },
   {
    "passo": "lista \"• Programmi TV\"",
-   "esito": "VUOTO",
-   "voci": 0
+   "esito": "OK",
+   "voci": 71
   },
   {
-   "passo": "lista \"• Teche La7\"",
-   "esito": "VUOTO",
-   "voci": 0
+   "passo": "episodios su \"100 minuti\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "findvideos su \"100 Minuti - Senza tetto né legge\"",
+   "esito": "OK",
+   "voci": 1
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "directo",
+   "url": "https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/content/entry/data/0/679/0_f0rztze5_0_g8ywvqlq_1,.mp4.urlset/master.m3u8",
+   "finale": "https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/content/entry/data/0/679/0_f0rztze5_0_g8ywvqlq_1,.mp4.urlset/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 206"
+  }
+ ],
  "menu_dichiarato": [
   "top | ('Dirette {bold}', ['', 'live'])",
-  "top | ('Replay {bold}', ['', 'replay_channels'])",
-  "menu | ('Programmi TV {bullet bold}', ['/tutti-i-programmi', 'peliculas', '', 'tvshow'])",
-  "menu | ('Teche La7 {bullet bold}', ['/la7teche', 'peliculas', '', 'tvshow'])",
-  "menu | ('Film La7Cinema {bullet bold}', ['/la7-cinema-tutti-i-film/rivedila7', 'episodios', '', 'peliculas'])"
+  "top | ('Rivedi oggi {bold}', ['', 'replay_channels'])",
+  "menu | ('Programmi TV {bullet bold}', ['/programmi', 'peliculas', '', 'tvshow'])",
+  "menu | ('Film La7 {bullet bold}', ['/film', 'film', '', 'movie'])",
+  "menu | ('Documentari {bullet bold}', ['/documentari', 'documentari', '', 'movie'])",
+  "menu | ('TG La7 {bullet bold}', ['/tgla7/puntate', 'episodios', '', 'tvshow'])"
  ],
  "sezioni": [
   {
    "voce": "Dirette",
    "azione": "live",
-   "esito": "ERRORE JSONDecodeError",
-   "pagine": [
-    {
-     "url": "https://www.la7.it/sites/default/files/la7_app_home_smarttv.json",
-     "status": 404,
-     "byte": 7346,
-     "titolo_pagina": "404: This page could not be found."
-    }
-   ]
+   "esito": "OK",
+   "titoli": 2
   },
   {
-   "voce": "Replay",
+   "voce": "Rivedi oggi",
    "azione": "replay_channels",
-   "esito": "OK",
-   "titoli": 1
+   "esito": "SOTTOMENU",
+   "sottovoci": 2,
+   "figli": [
+    {
+     "voce": "La7",
+     "azione": "replay_giorni",
+     "esito": "SOTTOMENU",
+     "sottovoci": 9,
+     "figli": [
+      {
+       "voce": "Oggi",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 5
+      },
+      {
+       "voce": "Giovedi 29 ottobre",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 5
+      },
+      {
+       "voce": "Mercoledi 28 ottobre",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 25
+      }
+     ]
+    },
+    {
+     "voce": "La7Cinema",
+     "azione": "replay_giorni",
+     "esito": "SOTTOMENU",
+     "sottovoci": 9,
+     "figli": [
+      {
+       "voce": "Oggi",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 3
+      },
+      {
+       "voce": "Giovedi 29 ottobre",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 3
+      },
+      {
+       "voce": "Mercoledi 28 ottobre",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 7
+      }
+     ]
+    }
+   ]
   },
   {
    "voce": "• Programmi TV",
    "azione": "peliculas",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://www.la7.it/tutti-i-programmi",
-     "status": 404,
-     "byte": 7306,
-     "titolo_pagina": "404: This page could not be found."
-    },
-    {
-     "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=115737",
-     "status": 200,
-     "byte": 860,
-     "titolo_pagina": ""
-    },
-    {
-     "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=84090",
-     "status": 200,
-     "byte": 2,
-     "titolo_pagina": ""
-    }
-   ]
+   "esito": "OK",
+   "titoli": 71
   },
   {
-   "voce": "• Teche La7",
-   "azione": "peliculas",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://www.la7.it/la7teche",
-     "status": 200,
-     "byte": 104635,
-     "titolo_pagina": "Programmi | La7"
-    }
-   ]
+   "voce": "• Film La7",
+   "azione": "film",
+   "esito": "OK",
+   "titoli": 34
   },
   {
-   "voce": "• Film La7Cinema",
+   "voce": "• Documentari",
+   "azione": "documentari",
+   "esito": "OK",
+   "titoli": 16
+  },
+  {
+   "voce": "• TG La7",
    "azione": "episodios",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://www.la7.it/la7-cinema-tutti-i-film/rivedila7",
-     "status": 200,
-     "byte": 146915,
-     "titolo_pagina": "Film | La7"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "txt70741 …",
    "azione": "search",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://www.la7.it/ricerca?query=avatar&page=0",
-     "status": 200,
-     "byte": 47137,
-     "titolo_pagina": "Ricerca | LA7 | La7"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 3
   }
  ],
- "sezioni_riepilogo": "1 ok su 6",
+ "sezioni_riepilogo": "7 ok su 7",
  "rete": [
   {
-   "url": "https://www.la7.it/tutti-i-programmi",
-   "status": 404,
-   "byte": 7306,
-   "secondi": 3.2,
-   "titolo_pagina": "404: This page could not be found.",
+   "url": "https://www.la7play.it/api/gql/75b0227f0361abcf",
+   "status": 200,
+   "byte": 48357,
+   "secondi": 1.4,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=115239",
+   "url": "https://www.la7play.it/100minuti/puntate",
    "status": 200,
-   "byte": 595,
-   "secondi": 0.8,
-   "titolo_pagina": "",
+   "byte": 187071,
+   "secondi": 0.3,
+   "titolo_pagina": "Puntate di 100 minuti | La7",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=79999",
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465",
    "status": 200,
-   "byte": 2,
-   "secondi": 0.9,
-   "titolo_pagina": "",
+   "byte": 90078,
+   "secondi": 1.3,
+   "titolo_pagina": "100 Minuti - Senza tetto né legge | La7",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=112885",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 2,
-   "secondi": 0.9,
-   "titolo_pagina": "",
+   "byte": 828450,
+   "secondi": 0.4,
+   "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=114921",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 1267,
-   "secondi": 0.9,
-   "titolo_pagina": "",
+   "byte": 828450,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=84090",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 2,
-   "secondi": 0.9,
-   "titolo_pagina": "",
+   "byte": 828450,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=104964",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 588,
-   "secondi": 0.9,
-   "titolo_pagina": "",
+   "byte": 828450,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=115737",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 860,
-   "secondi": 0.9,
-   "titolo_pagina": "",
+   "byte": 533497,
+   "secondi": 0.2,
+   "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=115013",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 2,
-   "secondi": 1.0,
-   "titolo_pagina": "",
+   "byte": 533497,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=27381",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 443,
-   "secondi": 0.7,
-   "titolo_pagina": "",
+   "byte": 533497,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=118666",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 517,
-   "secondi": 0.6,
-   "titolo_pagina": "",
+   "byte": 533497,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=45819",
+   "url": "https://www.la7play.it/api/gql/75b0227f0361abcf",
    "status": 200,
-   "byte": 417,
-   "secondi": 0.6,
+   "byte": 48357,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=115680",
+   "url": "https://www.la7play.it/film",
    "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": "",
+   "byte": 152929,
+   "secondi": 0.3,
+   "titolo_pagina": "Film | La7",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=82353",
+   "url": "https://www.la7play.it/documentari",
    "status": 200,
-   "byte": 648,
-   "secondi": 0.6,
-   "titolo_pagina": "",
+   "byte": 67715,
+   "secondi": 0.2,
+   "titolo_pagina": "Documentari | La7",
    "file": "pagine/14.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=102099",
+   "url": "https://www.la7play.it/tgla7/puntate",
    "status": 200,
-   "byte": 1184,
-   "secondi": 0.7,
-   "titolo_pagina": "",
+   "byte": 176218,
+   "secondi": 0.2,
+   "titolo_pagina": "Puntate di Tg La7 | La7",
    "file": "pagine/15.html"
   },
   {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=119675",
+   "url": "https://www.la7play.it/api/gql/4da1e384f8a63808/eyJxIjoiYXZhdGFyIn0",
    "status": 200,
-   "byte": 1012,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=87126",
-   "status": 200,
-   "byte": 427,
-   "secondi": 1.0,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=111648",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=82794",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=111932",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=75628",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=27592",
-   "status": 200,
-   "byte": 540,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=27533",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=81722",
-   "status": 200,
-   "byte": 540,
-   "secondi": 0.8,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=59403",
-   "status": 200,
-   "byte": 555,
-   "secondi": 0.2,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=25457",
-   "status": 200,
-   "byte": 338,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=33163",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=114836",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=59402",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=101035",
-   "status": 200,
-   "byte": 536,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=33198",
-   "status": 200,
-   "byte": 402,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=96013",
-   "status": 200,
-   "byte": 434,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=106972",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=86027",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=69716",
-   "status": 200,
-   "byte": 178,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=74976",
-   "status": 200,
-   "byte": 361,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=72974",
-   "status": 200,
-   "byte": 186,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=33311",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=114491",
-   "status": 200,
-   "byte": 168,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=106765",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=104639",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=32577",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=117571",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=109941",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=65426",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=95091",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=94442",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=114288",
-   "status": 200,
-   "byte": 2,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=119993",
-   "status": 200,
-   "byte": 671,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=117427",
-   "status": 200,
-   "byte": 740,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=116094",
-   "status": 200,
-   "byte": 299,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=119401",
-   "status": 200,
-   "byte": 456,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=118714",
-   "status": 200,
-   "byte": 1438,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=34470",
-   "status": 200,
-   "byte": 441,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=73973",
-   "status": 200,
-   "byte": 231,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=53050",
-   "status": 200,
-   "byte": 465,
-   "secondi": 0.8,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=58781",
-   "status": 200,
-   "byte": 166,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=34408",
-   "status": 200,
-   "byte": 175,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=69092",
-   "status": 200,
-   "byte": 158,
-   "secondi": 0.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7.it/appla7/service_propertysmarttv?s=hbbtv&field_property_tid=72814",
-   "status": 200,
-   "byte": 166,
-   "secondi": 0.6,
+   "byte": 2930,
+   "secondi": 1.1,
    "titolo_pagina": ""
   }
  ],
- "verdetto": "SI FERMA A: lista \"• Programmi TV\""
+ "verdetto": "ARRIVA AL VIDEO"
 }

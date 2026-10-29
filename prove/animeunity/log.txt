@@ -1,22 +1,22 @@
-Canale animeunity | indirizzo https://www.animeunity.to
+Canale animeunity | indirizzo https://www.animeunity.co
 == mainlist
    -> 9 voci
-      news | Ultimi Episodi | https://www.animeunity.to
-      menu | • Anime | https://www.animeunity.to
-      menu | •• Film | https://www.animeunity.to
-      menu | •• TV | https://www.animeunity.to
+      news | Ultimi Episodi | https://www.animeunity.co
+      menu | • Anime | https://www.animeunity.co
+      menu | •• Film | https://www.animeunity.co
+      menu | •• TV | https://www.animeunity.co
 == lista "• Anime"
    -> 7 voci
-      peliculas | Tutti | https://www.animeunity.to
-      peliculas | ITA | https://www.animeunity.to
-      genres | Genere | https://www.animeunity.to
-      years | Anno | https://www.animeunity.to
+      peliculas | Tutti | https://www.animeunity.co
+      peliculas | ITA | https://www.animeunity.co
+      genres | Genere | https://www.animeunity.co
+      years | Anno | https://www.animeunity.co
 == genres su "Genere"
    -> 46 voci
-      peliculas | Action | https://www.animeunity.to
-      peliculas | Adventure | https://www.animeunity.to
-      peliculas | Avant Garde | https://www.animeunity.to
-      peliculas | Boys Love | https://www.animeunity.to
+      peliculas | Action | https://www.animeunity.co
+      peliculas | Adventure | https://www.animeunity.co
+      peliculas | Avant Garde | https://www.animeunity.co
+      peliculas | Boys Love | https://www.animeunity.co
 == peliculas su "Action"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
@@ -32,16 +32,16 @@ KeyError: 'records'
 
 == lista "•• Film"
    -> 5 voci
-      peliculas | Tutti | https://www.animeunity.to
-      peliculas | ITA | https://www.animeunity.to
-      genres | Genere | https://www.animeunity.to
-      years | Anno | https://www.animeunity.to
+      peliculas | Tutti | https://www.animeunity.co
+      peliculas | ITA | https://www.animeunity.co
+      genres | Genere | https://www.animeunity.co
+      years | Anno | https://www.animeunity.co
 == genres su "Genere"
    -> 46 voci
-      peliculas | Action | https://www.animeunity.to
-      peliculas | Adventure | https://www.animeunity.to
-      peliculas | Avant Garde | https://www.animeunity.to
-      peliculas | Boys Love | https://www.animeunity.to
+      peliculas | Action | https://www.animeunity.co
+      peliculas | Adventure | https://www.animeunity.co
+      peliculas | Avant Garde | https://www.animeunity.co
+      peliculas | Boys Love | https://www.animeunity.co
 == peliculas su "Action"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
@@ -57,16 +57,16 @@ KeyError: 'records'
 
 == lista "•• TV"
    -> 7 voci
-      peliculas | Tutti | https://www.animeunity.to
-      peliculas | ITA | https://www.animeunity.to
-      genres | Genere | https://www.animeunity.to
-      years | Anno | https://www.animeunity.to
+      peliculas | Tutti | https://www.animeunity.co
+      peliculas | ITA | https://www.animeunity.co
+      genres | Genere | https://www.animeunity.co
+      years | Anno | https://www.animeunity.co
 == genres su "Genere"
    -> 46 voci
-      peliculas | Action | https://www.animeunity.to
-      peliculas | Adventure | https://www.animeunity.to
-      peliculas | Avant Garde | https://www.animeunity.to
-      peliculas | Boys Love | https://www.animeunity.to
+      peliculas | Action | https://www.animeunity.co
+      peliculas | Adventure | https://www.animeunity.co
+      peliculas | Avant Garde | https://www.animeunity.co
+      peliculas | Boys Love | https://www.animeunity.co
 == peliculas su "Action"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/prova_video.py", line 86, in passo
@@ -99,23 +99,23 @@ Nessuna voce da riprodurre trovata
    SEZIONE Action -> ERRORE KeyError
    SEZIONE Adventure -> ERRORE KeyError
    SEZIONE Avant Garde -> ERRORE KeyError
-   SEZIONE Genere -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.to/archivio/get-animes', 'status': 302, 'byte': 521, 'titolo_pagina': '302 Found'}
-   SEZIONE •• OVA -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.to/archivio/get-animes', 'status': 302, 'byte': 521, 'titolo_pagina': '302 Found'}
+   SEZIONE Genere -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8162, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
+   SEZIONE •• OVA -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8162, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
    SEZIONE Tutti -> ERRORE KeyError
    SEZIONE ITA -> ERRORE KeyError
    SEZIONE Action -> ERRORE KeyError
    SEZIONE Adventure -> ERRORE KeyError
    SEZIONE Avant Garde -> ERRORE KeyError
-   SEZIONE Genere -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.to/archivio/get-animes', 'status': 302, 'byte': 521, 'titolo_pagina': '302 Found'}
-   SEZIONE •• ONA -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.to/archivio/get-animes', 'status': 302, 'byte': 521, 'titolo_pagina': '302 Found'}
+   SEZIONE Genere -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8162, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
+   SEZIONE •• ONA -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8162, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
    SEZIONE Tutti -> ERRORE KeyError
    SEZIONE ITA -> ERRORE KeyError
    SEZIONE Action -> ERRORE KeyError
    SEZIONE Adventure -> ERRORE KeyError
    SEZIONE Avant Garde -> ERRORE KeyError
-   SEZIONE Genere -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.to/archivio/get-animes', 'status': 302, 'byte': 521, 'titolo_pagina': '302 Found'}
-   SEZIONE •• Special -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.to/archivio/get-animes', 'status': 302, 'byte': 521, 'titolo_pagina': '302 Found'}
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://www.animeunity.to/archivio/get-animes', 'status': 302, 'byte': 521, 'titolo_pagina': '302 Found'}
+   SEZIONE Genere -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8162, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
+   SEZIONE •• Special -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8162, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8162, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
 SEZIONI: 1 ok su 8
    SEZIONE SENZA TITOLI: • Anime | ERRORE KeyError
    SEZIONE SENZA TITOLI: •• Film | ERRORE KeyError
