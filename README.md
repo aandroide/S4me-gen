@@ -20,6 +20,10 @@ Strumenti per tenere in ordine i canali di S4Me (Stream4me). Non scrive mai nell
 - **Scarica file di un sito**: scarica file o pagine dal runner e li committa in `file_scaricati/` (da cancellare dopo l'uso).
 - **Genera canale S4Me** e **Genera canale S4Me (sul mio PC Windows)**: analizzano un sito nuovo e scrivono il canale in `archivio/canali/<sito>/`.
 
+## Siti che cambiano struttura (Next.js, JSON-LD)
+
+Quando una regex sull'html non trova piu titoli, `strumenti/dati_incorporati.py` cerca nella pagina i dati che il sito incorpora (self.__next_f, __NEXT_DATA__, JSON-LD), riconosce la lista di contenuti con titolo, link, immagine, trama e orario e, se i contenuti sono raggruppati (per esempio puntate dentro un giorno), anche il gruppo. In quel caso il canale corretto riceve funzioni nuove al posto di quelle rotte, piu un piccolo lettore dei dati copiato nel file. Se il controllo ripara solo una parte delle pagine lo stato e `CORRETTO IN PARTE`. Non rifa da solo ricerca, token, DRM e riproduzione: quelle parti si scrivono a mano.
+
 ## Sul mio PC (indirizzo italiano)
 
 `PROVA_SUL_MIO_PC.bat` scarica il progetto, prova tutti i canali con `strumenti/prova_locale.py` e mette `prove_locali.zip` sul Desktop.

@@ -29,6 +29,7 @@ import time
 from urllib.parse import urlparse, urljoin
 
 import requests
+import dati_incorporati as di
 import urllib3
 import warnings
 urllib3.disable_warnings()
@@ -112,10 +113,14 @@ def leggi_canale(src):
             continue
         if not usa_scrape(f):
             continue
-        d = {'patron': [], 'patronBlock': [], 'patronNext': [], 'patronMenu': [], 'flags': None}
+        d = {'patron': [], 'patronBlock': [], 'patronNext': [], 'patronMenu': [], 'flags': None, 'action': None,
+             'ini_f': offset(righe, inizi, min([x.lineno for x in f.decorator_list] + [f.lineno]), 0),
+             'fin_f': offset(righe, inizi, f.end_lineno, 10 ** 6)}
         for n in ast.walk(f):
             if isinstance(n, ast.Assign) and len(n.targets) == 1 and isinstance(n.targets[0], ast.Name):
                 nome = n.targets[0].id
+                if nome == 'action' and d['action'] is None:
+                    d['action'] = valore_stringa(n.value)
                 if nome in NOMI_REGEX:
                     v = valore_stringa(n.value)
                     ini = offset(righe, inizi, n.value.lineno, n.value.col_offset)
@@ -681,6 +686,37 @@ def pagina_non_reale(html):
     return None
 
 
+def sostituzioni_dati(src, funzioni, generate, sostituzioni, ris):
+    """Riscrive le funzioni che leggono i dati incorporati e inserisce nel canale il lettore (dati_incorporati.codice_helper)."""
+    if not generate:
+        return sostituzioni
+    nuove = {}
+    for nome_f, spec in generate.items():
+        if nome_f in nuove:
+            continue
+        fn = funzioni[nome_f]
+        azione = fn['action'] or 'findvideos'
+        firma = spec['firma']
+        if spec['gruppi'] and azione in funzioni and azione not in generate:
+            menu, figli = di.funzioni_gruppi(nome_f, azione, azione, funzioni[azione]['action'] or 'findvideos', firma)
+            nuove[nome_f], nuove[azione] = menu, figli
+            ris['dettagli'].append('  %s: menu dei gruppi, %s: elenco del gruppo scelto (riscritte dai dati incorporati)' % (nome_f, azione))
+        else:
+            nuove[nome_f] = di.funzione_lista(nome_f, azione, firma)
+            ris['dettagli'].append('  %s: riscritta dai dati incorporati' % nome_f)
+    intervalli = [(funzioni[n]['ini_f'], funzioni[n]['fin_f']) for n in nuove]
+    sostituzioni = [x for x in sostituzioni if not any(a <= x[0] < b for a, b in intervalli)]
+    for n, testo in nuove.items():
+        sostituzioni.append((funzioni[n]['ini_f'], funzioni[n]['fin_f'], testo.rstrip('\n')))
+    # il lettore dei dati va dopo l'ultimo import del file
+    tree = ast.parse(src)
+    righe, inizi = posizioni(src)
+    ultimo = max([n.end_lineno for n in tree.body if isinstance(n, (ast.Import, ast.ImportFrom))] or [0])
+    pos = offset(righe, inizi, ultimo, 10 ** 6) if ultimo else 0
+    sostituzioni.append((pos, pos, '\n\n# lettore dei dati incorporati nella pagina (aggiunto dal controllo dei canali)\n' + di.codice_helper()))
+    return sostituzioni
+
+
 def controlla(nome, hosts, ripara=True):
     ris = {'canale': nome, 'stato': '', 'dettagli': [], 'correzione': False, 'host': host_di(nome, hosts)}
     percorso = os.path.join(BASE, nome + '.py')
@@ -755,6 +791,7 @@ def controlla(nome, hosts, ripara=True):
         ris['nuovo_host'] = nuovo
 
     sostituzioni = []
+    generate = {}  # funzioni da riscrivere leggendo i dati incorporati nella pagina
     problemi = 0
     ok = 0
     bloccate = []
@@ -814,6 +851,21 @@ def controlla(nome, hosts, ripara=True):
             ris['dettagli'].append('  campione della pagina salvato in rapporti/correzioni/%s/%s' % (nome, nf))
         except Exception:
             pass
+        dati = None
+        if ripara and re.search(r'__next_f|__NEXT_DATA__|ld\+json', html):
+            try:
+                dati = g.con_timeout(90, di.rileva, html)
+            except BaseException:
+                dati = None
+        if dati and (not prop or prop['n'] < 0.5 * dati['n'] or (set(prop['perse']) & GRUPPI_ESSENZIALI)):
+            f_ = dati['firma']
+            campi = ', '.join(k for k in ('titolo', 'link', 'immagine', 'trama', 'orario') if f_.get(k))
+            ris['dettagli'].append('  dati incorporati nella pagina: %d elementi%s (campi: %s)' % (
+                dati['n'], (' in %d gruppi' % len(dati['gruppi'])) if f_.get('gruppo') else '', campi))
+            if prop:
+                ris['dettagli'].append('  la regex sul codice html (%d card) e peggiore: scelgo i dati incorporati' % prop['n'])
+            generate.setdefault(azione, {'firma': f_, 'n': dati['n'], 'gruppi': bool(f_.get('gruppo'))})
+            continue
         if r['blocchi'] == 0 and fn['patronBlock'] and ripara and all(x['valore'] is not None for x in fn['patron']):
             # il blocco non esiste piu ma le regex dei titoli potrebbero funzionare sull'intera pagina
             try:
@@ -864,8 +916,9 @@ def controlla(nome, hosts, ripara=True):
         ris['stato'] = bloccate[0]
     elif ok == 0 and problemi == 0:
         ris['stato'] = 'NON VERIFICATO'
-    elif sostituzioni:
+    elif sostituzioni or generate:
         sostituzioni = list({(i, f): (i, f, t) for i, f, t in sostituzioni}.values())
+        sostituzioni = sostituzioni_dati(src, funzioni, generate, sostituzioni, ris)
         nuovo_src = applica(src, sostituzioni)
         try:
             ast.parse(nuovo_src)
@@ -884,11 +937,22 @@ def controlla(nome, hosts, ripara=True):
         buone = 0
         for azione, rel in prove:
             st, html, finale, motivo = scarica(urljoin(host + '/', rel))
-            if st == 'ok' and prova_pagina(f2[azione], uniforma(html))['match']:
+            if st != 'ok':
+                continue
+            if azione in generate:
+                if sum(len(x) for _, x in di._trova(html, generate[azione]['firma'])) >= 3:
+                    buone += 1
+            elif azione in f2 and prova_pagina(f2[azione], uniforma(html))['match']:
                 buone += 1
         ris['dettagli'].append('file corretto scritto in rapporti/correzioni/%s: %d pagine su %d ora trovano titoli' % (nome, buone, len(prove)))
-        ris['stato'] = 'CORRETTO' if buone >= ok + 1 else 'ROTTO'
-        ris['correzione'] = ris['stato'] == 'CORRETTO'
+        if buone >= len(prove):
+            ris['stato'] = 'CORRETTO'
+        elif buone >= ok + 1:
+            ris['stato'] = 'CORRETTO IN PARTE'
+            ris['dettagli'].append('attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano')
+        else:
+            ris['stato'] = 'ROTTO'
+        ris['correzione'] = ris['stato'] in ('CORRETTO', 'CORRETTO IN PARTE')
     else:
         ris['stato'] = 'ROTTO'
     return ris
@@ -908,7 +972,7 @@ def carica_hosts():
 
 
 def riepilogo(risultati):
-    ordine = ['CORRETTO', 'ROTTO', 'DOMINIO PARCHEGGIATO', 'BLOCCO ANTI BOT', 'IRRAGGIUNGIBILE', 'CLOUDFLARE', 'NON VERIFICATO', 'OK',
+    ordine = ['CORRETTO', 'CORRETTO IN PARTE', 'ROTTO', 'DOMINIO PARCHEGGIATO', 'BLOCCO ANTI BOT', 'IRRAGGIUNGIBILE', 'CLOUDFLARE', 'NON VERIFICATO', 'OK',
               'NON REGEX', 'SENZA INDIRIZZO', 'NON ANALIZZABILE', 'TEMPO SCADUTO', 'ERRORE']
     r = ['# Controllo dei canali', '']
     conta = {}
