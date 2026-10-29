@@ -1,22 +1,7 @@
 [
  {
-  "canale": "tantifilm",
-  "stato": "CORRETTO",
-  "dettagli": [
-   "ROTTO: peliculas /film | patronBlock non trova nessun blocco",
-   "  campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_film.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
-   "ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco",
-   "  campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
-   "file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli"
-  ],
-  "correzione": true,
-  "host": "https://tanti-film.garden"
- },
- {
   "canale": "la7",
-  "stato": "CORRETTO",
+  "stato": "CORRETTO IN PARTE",
   "dettagli": [
    "indirizzo scritto nel canale: https://www.la7.it",
    "il sito reindirizza a un altro indirizzo: https://www.la7play.it (in channels.json c'e https://www.la7.it)",
@@ -27,7 +12,8 @@
    "  campione della pagina salvato in rapporti/correzioni/la7/pagina_replay_menu_rivedila7_0_la7cinema.html",
    "  regex proposta: 5 titoli su 5 card | gruppi persi: day, month, num",
    "  gruppi non piu presenti nelle card e non essenziali per S4Me: day, month, num",
-   "file corretto scritto in rapporti/correzioni/la7: 1 pagine su 2 ora trovano titoli"
+   "file corretto scritto in rapporti/correzioni/la7: 1 pagine su 2 ora trovano titoli",
+   "attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano"
   ],
   "correzione": true,
   "host": "https://www.la7.it",
@@ -62,52 +48,6 @@
      "month",
      "num"
     ]
-   }
-  ]
- },
- {
-  "canale": "cinetecadibologna",
-  "stato": "CORRETTO",
-  "dettagli": [
-   "ROTTO: peliculas /video/alfabetico_completo | patronBlock non trova nessun blocco",
-   "  campione della pagina salvato in rapporti/correzioni/cinetecadibologna/pagina_peliculas_video_alfabetico_completo.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 10 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
-   "ROTTO: menu /video/epoche | patron non trova titoli",
-   "  campione della pagina salvato in rapporti/correzioni/cinetecadibologna/pagina_menu_video_epoche.html",
-   "  regex proposta: 10 titoli su 10 card",
-   "  non applicata al file: la funzione ha piu varianti di regex",
-   "OK: menu /video/registi | 20 risultati",
-   "OK: menu /video/attori | 19 risultati",
-   "file corretto scritto in rapporti/correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli"
-  ],
-  "correzione": true,
-  "host": "http://cinestore.cinetecadibologna.it",
-  "proposte": [
-   {
-    "funzione": "menu",
-    "pagina": "/video/epoche",
-    "patron": "<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")(?:(?!<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<li(?=[^>]*class=\"(?:[^\"]*\\s)?itemList(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?museo(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
-    "esempi": [
-     {
-      "url": "/video/dettaglio/35551",
-      "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/3/9/7/39742.jpg",
-      "title": "[A. Drankoff St. Petersburg]",
-      "lang": null
-     },
-     {
-      "url": "/video/dettaglio/8574",
-      "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/9/9/5/9956.jpg",
-      "title": "Ben Hur",
-      "lang": null
-     },
-     {
-      "url": "/video/dettaglio/10139",
-      "thumb": "/imageserver/thumbnail_item_list/files/targetvideo/1/1/7/11713.jpg",
-      "title": "Bersaglieri, i",
-      "lang": null
-     }
-    ],
-    "perse": []
    }
   ]
  }
