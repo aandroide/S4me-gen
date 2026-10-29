@@ -131,29 +131,40 @@ def _in_onda(url):
     return '', ''
 
 
+def _dirette_sito():
+    # elenco delle dirette dell'app La7: titolo e locandina del programma in onda per La7 e La7d
+    try:
+        j = json.loads(httptools.downloadpage('https://www.la7.it/sites/default/files/la7_app_home_smarttv.json').data)
+        return j.get('fascia_dirette', {}) or {}
+    except Exception as e:
+        logger.error('la7: elenco delle dirette non letto %s' % e)
+        return {}
+
+
 def live(item):
     from concurrent.futures import ThreadPoolExecutor
     itemlist = []
     for nome, percorso in LIVE:
         itemlist.append(item.clone(title=support.typo(nome, 'bold'), fulltitle=nome, url=host + percorso,
                                    action='findvideos', forcethumb=True, no_return=True))
+    sito = _dirette_sito()
     try:
         with ThreadPoolExecutor(max_workers=2) as ex:
             onda = list(ex.map(lambda it: _in_onda(it.url), itemlist))
-        for it, (t, img) in zip(itemlist, onda):
-            if t:
-                it.plot = t
-                it.infoLabels['plot'] = t
-            if img:
-                it.fanart = img
     except Exception as e:
         logger.error('la7: palinsesto delle dirette non letto %s' % e)
-        onda = []
-    itemlist = support.thumb(itemlist, live=True)
+        onda = [('', '')] * len(itemlist)
     for it, (t, img) in zip(itemlist, onda):
+        d = sito.get('la7d' if it.fulltitle == 'La7Cinema' else 'la7') or {}
+        if d.get('titolo'):
+            t = 'In onda adesso: ' + d['titolo'].strip()
+        img = d.get('url_locandina') or img
+        if t:
+            it.plot = t
+            it.infoLabels['plot'] = t
         if img:
-            it.thumbnail = img
-    return itemlist
+            it.fanart = img
+    return support.thumb(itemlist, live=True)
 
 
 def replay_channels(item):

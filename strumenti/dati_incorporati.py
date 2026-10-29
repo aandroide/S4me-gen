@@ -509,7 +509,6 @@ def canali(item):
     for titolo, p in canali_fratelli(_pagina(item.url), percorso):
         itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=titolo, url=_unisci(host, p),
                                    action=azione, forcethumb=True, no_return=True))
-    trame = []
     if azione == 'findvideos':
         try:
             from concurrent.futures import ThreadPoolExecutor
@@ -523,12 +522,7 @@ def canali(item):
                     it.fanart = img
         except Exception as e:
             logger.error('palinsesto delle dirette non letto %s' % e)
-            trame = []
-    itemlist = support.thumb(itemlist, live=True)
-    for it, (t, img) in zip(itemlist, trame):
-        if img:
-            it.thumbnail = img
-    return itemlist
+    return support.thumb(itemlist, live=True)
 
 
 def peliculas(item):
