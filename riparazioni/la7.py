@@ -239,6 +239,43 @@ def episodios(item):
     return itemlist
 
 
+def _dettagli(itemlist):
+    """Trama, anno, durata, generi e regista dalla pagina di ogni film (richieste in parallelo)."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    def leggi(it):
+        for nodo in _ld(_scarica(it.url)):
+            if nodo.get('@type') in ('Movie', 'TVEpisode', 'VideoObject') and nodo.get('description'):
+                return nodo
+        return {}
+
+    try:
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            nodi = list(ex.map(leggi, itemlist))
+    except Exception as e:
+        logger.error('la7: dettagli non letti %s' % e)
+        return itemlist
+    for it, n in zip(itemlist, nodi):
+        trama = _html.unescape(re.sub(r'<[^>]+>', ' ', n.get('description', ''))).replace('\xa0', ' ').strip()
+        if trama:
+            it.plot = trama
+            it.infoLabels['plot'] = trama
+        if re.match(r'\d{4}$', str(n.get('dateCreated', ''))):
+            it.infoLabels['year'] = int(n['dateCreated'])
+        d = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', n.get('duration', '') or '')
+        if d and any(d.groups()):
+            it.infoLabels['duration'] = int(d.group(1) or 0) * 3600 + int(d.group(2) or 0) * 60 + int(d.group(3) or 0)
+        gen = n.get('genre', '')
+        gen = [g for g in (gen if isinstance(gen, list) else [gen]) if g and g != 'Film']
+        if gen:
+            it.infoLabels['genre'] = ', '.join(gen)
+        reg = n.get('director')
+        reg = reg.get('name', '') if isinstance(reg, dict) else ''
+        if reg:
+            it.infoLabels['director'] = reg
+    return itemlist
+
+
 def film(item):
     itemlist = []
     for f in _elementi(_scarica(host + '/film'), ('Movie',)):
@@ -248,7 +285,7 @@ def film(item):
         itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=titolo, contentTitle=titolo,
                                    url=f['url'], thumbnail=_img(f), fanart=_img(f), contentType='movie',
                                    action='findvideos', forcethumb=True))
-    return itemlist
+    return _dettagli(itemlist)
 
 
 def documentari(item):
@@ -260,7 +297,7 @@ def documentari(item):
         itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=titolo, contentTitle=titolo,
                                    url=d['url'], thumbnail=_img(d), fanart=_img(d), contentType='movie',
                                    action='findvideos', forcethumb=True))
-    return itemlist
+    return _dettagli(itemlist)
 
 
 def _codifica(variabili):

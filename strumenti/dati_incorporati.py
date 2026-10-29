@@ -374,6 +374,56 @@ def _e_serie(url):
     return not re.search(r'-\d{4,}/?$', url.split('?')[0])
 
 
+def _dettagli(item, itemlist):
+    """Nelle liste di film: trama, anno, durata, generi e regista dalla pagina di ogni film (richieste in parallelo)."""
+    if item.contentType != 'movie' or not itemlist:
+        return itemlist
+    from concurrent.futures import ThreadPoolExecutor
+
+    def leggi(it):
+        if it.action != 'findvideos':
+            return {}
+        try:
+            h = _pagina(it.url)
+        except Exception:
+            return {}
+        for blocco in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', h, re.S):
+            try:
+                j = json.loads(blocco)
+            except Exception:
+                continue
+            for n in (j.get('@graph', [j]) if isinstance(j, dict) else j):
+                if isinstance(n, dict) and n.get('@type') in ('Movie', 'TVEpisode', 'VideoObject') and n.get('description'):
+                    return n
+        return {}
+
+    try:
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            nodi = list(ex.map(leggi, itemlist))
+    except Exception as e:
+        logger.error('dettagli non letti %s' % e)
+        return itemlist
+    for it, n in zip(itemlist, nodi):
+        trama = _html.unescape(re.sub(r'<[^>]+>', ' ', n.get('description', ''))).replace('\xa0', ' ').strip()
+        if trama:
+            it.plot = trama
+            it.infoLabels['plot'] = trama
+        if re.match(r'\d{4}$', str(n.get('dateCreated', ''))):
+            it.infoLabels['year'] = int(n['dateCreated'])
+        d = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', n.get('duration', '') or '')
+        if d and any(d.groups()):
+            it.infoLabels['duration'] = int(d.group(1) or 0) * 3600 + int(d.group(2) or 0) * 60 + int(d.group(3) or 0)
+        gen = n.get('genre', '')
+        gen = [g for g in (gen if isinstance(gen, list) else [gen]) if g and g != 'Film']
+        if gen:
+            it.infoLabels['genre'] = ', '.join(gen)
+        reg = n.get('director')
+        reg = reg.get('name', '') if isinstance(reg, dict) else ''
+        if reg:
+            it.infoLabels['director'] = reg
+    return itemlist
+
+
 def _voci(item, elenco, pagina_corrente=0, html='', azione_pagina='peliculas'):
     itemlist = []
     for r in elenco:
@@ -449,7 +499,7 @@ def peliculas(item):
     if percorso in ELENCHI_API:
         elenco = _da_api(ELENCHI_API[percorso])
         if elenco:
-            return _voci(item, elenco)
+            return _dettagli(item, _voci(item, elenco))
     h = _pagina(item.url)
     r = rileva(h)
     if not r:
@@ -464,7 +514,7 @@ def peliculas(item):
         return [item.clone(title=support.typo(etichetta, 'bold'), gruppo=etichetta, action='giorno')
                 for etichetta, elenco in r['gruppi']]
     elenco = [x for _, rr in r['gruppi'] for x in rr]
-    return _voci(item, elenco, int(item.page or 1) if getattr(item, 'page', '') else 1, h)
+    return _dettagli(item, _voci(item, elenco, int(item.page or 1) if getattr(item, 'page', '') else 1, h))
 
 
 def giorno(item):
