@@ -1,5 +1,5 @@
 --- canali_base/cinetecadibologna.py
-+++ correzioni/cinetecadibologna/cinetecadibologna.py
++++ rapporti/correzioni/cinetecadibologna/cinetecadibologna.py
 @@ -54,8 +54,8 @@
      if 'alfabetico' in item.url:
          patron = r'<img src="(?P<thumb>[^"]+)"[^>]+>\s*[^>]+>\s*<div[^>]+>\s*<div[^>]+>[^>]+>\s*<a href="(?P<url>[^"]+)"[^>]+>(?:\[)?(?P<title>[^\]<]+)(?:\]|<)'
