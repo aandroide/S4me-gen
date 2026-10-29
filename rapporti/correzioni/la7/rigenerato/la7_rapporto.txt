@@ -1,0 +1,40 @@
+Nessun proxy: il sito vede l'IP del computer che esegue il tool.
+Apro https://www.la7.it
+Voci di menu trovate: 6
+Card trovate nel DOM: 86 | regex sul DOM: 98 | regex sull'html grezzo: 0
+La regex non trova i titoli nell'html grezzo, ma la pagina contiene i dati dei titoli (Next.js o JSON-LD): campi {"titolo": "name", "link": "url", "immagine": "image"}. Il canale li leggera da li.
+Modalita scelta: dati
+Voce "Dirette": elenco di canali ['La7', 'La7Cinema'] | ogni canale apre il video
+Voce "Guida Tv e Rivedi": elenco di canali ['La7', 'La7Cinema'] | ogni canale apre i giorni (elenco a gruppi)
+Voce "Programmi": 58 titoli nei dati della pagina
+Voce "Film": 35 titoli nei dati della pagina
+Voce "Documentari": 16 titoli nei dati della pagina
+Voce "Podcast": 17 titoli nei dati della pagina
+Richieste persistite trovate nei file JavaScript: 125
+  operazioni provate: 125 | con un elenco: 10
+Ricerca completa: operazione siteSearch (4da1e384f8a63808), parametro "q", 10 risultati per "matrix"
+Pagine in cui provo la riproduzione: 10
+  https://www.la7.it/dirette/la7 -> manifest si | token si
+  https://www.la7.it/dirette/la7-cinema -> manifest no | token no
+  https://www.la7.it/programmi -> manifest si | token si
+  https://www.la7.it/film -> manifest no | token no
+  https://www.la7.it/documentari -> manifest si | token no
+  https://www.la7.it/podcast -> manifest no | token no
+  https://www.la7.it/omnibus/puntate/puntata-del-22-10-2026-397477 -> manifest si | token no
+  https://www.la7.it/tgla7/puntate/puntata-del-22-10-2026-397474 -> manifest si | token no
+  https://www.la7.it/omnibus-meteo/puntate/puntata-del-22-10-2026-397475 -> manifest si | token no
+  https://www.la7.it/coffee-break/puntate/puntata-del-22-10-2026-397478 -> manifest si | token no
+  campione senza manifest: https://www.la7.it/dirette/la7-cinema
+  campione senza manifest: https://www.la7.it/film
+  campione senza manifest: https://www.la7.it/podcast
+  preferisco la variante https://awsvodpkg.iltrovatore.it/local/hls/,/nk/content/entry/data/0/406/0_8idsjlog_0_411kxsp3_2,/nk
+  ricetta (DRM con token): condizione ('chiave', 'isLiveBroadcast', 'true') | campioni che la soddisfano: 1 | manifest ricostruito: [True]
+  ricetta (DRM con token): condizione ('chiave', 'drm', 'true') | campioni che la soddisfano: 1 | manifest ricostruito: [True]
+  ricetta (senza DRM): condizione ('chiave', 'drm', 'false') | campioni che la soddisfano: 5 | manifest ricostruito: [True, True, True, True, True]
+Ricette di riproduzione: 3
+  verifica ricetta 1: 7 pagine, 7 ok
+  verifica ricetta 2: 17 pagine, 17 ok
+Voce "Podcast" tolta: dai suoi titoli non si arriva a nessun video
+
+File scritti in /home/runner/work/S4me-gen/S4me-gen/rapporti/correzioni/la7/rigenerato: la7.py, la7.json, riga_channels_json.txt
+Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), caricare l'icona la7.png nella repo media.
