@@ -3301,20 +3301,33 @@ def analizza(url, args):
                     rp('   ' + riga_d)
             else:
                 pl = trova_ricerca_payload(rd.get('net', []))
+                pagina_ricerca = False
                 if 'matrix' in (rd.get('url') or '').lower():
-                    # il sito ha aperto una pagina dei risultati: li' c'e la ricerca vera (i suggerimenti hanno un limite basso)
+                    # il sito ha aperto una pagina dei risultati: se i titoli stanno nei dati della pagina e cambiano con il testo,
+                    # la ricerca e quella pagina (i suggerimenti mentre si scrive hanno un limite basso e altri tipi di contenuto)
                     try:
-                        r2 = s.vai(rd['url'], attesa=args.attesa)
-                        pl2 = trova_ricerca_payload(r2.get('net', []))
-                        cattura['ricerca_pagina'] = {'url': rd['url'], 'net': [{k: v for k, v in x.items() if k not in ('_resp', 'body')} for x in r2.get('net', [])][:60]}
-                        if pl2:
-                            pl = pl2
-                        elif di.rileva(scarica_grezzo(rd['url'])):
+                        def titoli_pagina(u):
+                            rr = di.rileva(scarica_grezzo(u))
+                            return {x['titolo'] for _, gg in rr['gruppi'] for x in gg} if rr else set()
+                        t1 = titoli_pagina(rd['url'])
+                        t2 = titoli_pagina(rd['url'].replace('matrix', 'amore'))
+                        rp('Pagina dei risultati: %d titoli con "matrix", %d con "amore"' % (len(t1), len(t2)))
+                        if (t1 or t2) and t1 != t2:
+                            pagina_ricerca = True
                             pl = None
-                            rd = dict(rd, net=[])
+                            u_r = rd['url']
+                            ctx['ricerca'] = {'selettore': '', 'nome': '', 'azione': '', 'metodo': '',
+                                              'url_modello': (u_r.replace('matrix', '%s')[len(base):] if u_r.startswith(base) else u_r.replace('matrix', '%s'))}
+                            rp('Ricerca su pagina con i titoli nei dati:', u_r)
+                        else:
+                            r2 = s.vai(rd['url'], attesa=args.attesa)
+                            pl2 = trova_ricerca_payload(r2.get('net', []))
+                            pl = pl2 or pl
                     except BaseException as ex:
-                        rp('Pagina dei risultati non aperta: %s' % str(ex)[:80])
-                if pl:
+                        rp('Pagina dei risultati non analizzata: %s' % str(ex)[:80])
+                if pagina_ricerca:
+                    pass
+                elif pl:
                     ctx['search_gql'] = pl
                     rp('Ricerca via richiesta con parametri in base64:', pl['esempio'], '| parametri:', json.dumps(pl['payload']))
                 else:
