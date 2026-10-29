@@ -148,7 +148,12 @@ def live(item):
                 it.fanart = img
     except Exception as e:
         logger.error('la7: palinsesto delle dirette non letto %s' % e)
-    return support.thumb(itemlist, live=True)
+        onda = []
+    itemlist = support.thumb(itemlist, live=True)
+    for it, (t, img) in zip(itemlist, onda):
+        if img:
+            it.thumbnail = img
+    return itemlist
 
 
 def replay_channels(item):
