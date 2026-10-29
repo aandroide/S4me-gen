@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 5, ROTTO 4, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, CLOUDFLARE 2, NON VERIFICATO 4, OK 19, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 5, ROTTO 5, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 20, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (5)
 
@@ -44,7 +44,7 @@ Sito: https://www.la7.it
 -   nessuna regex sostitutiva trovata automaticamente in /rivedila7/0/la7
 - ROTTO: replay_menu /rivedila7/0/la7cinema | patron non trova titoli
 -   campione della pagina salvato in correzioni/la7/pagina_replay_menu_rivedila7_0_la7cinema.html
--   regex proposta: 5 titoli su 4 card | gruppi persi: day, month, num
+-   regex proposta: 4 titoli su 4 card | gruppi persi: day, month, num
 -   gruppi non piu presenti nelle card e non essenziali per S4Me: day, month, num
 - file corretto scritto in correzioni/la7: 1 pagine su 2 ora trovano titoli
 - riga per channels.json: "la7": "https://www.la7play.it",
@@ -59,7 +59,7 @@ Sito: https://tanti-film.garden
 -   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - file corretto scritto in correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
 
-## ROTTO (4)
+## ROTTO (5)
 
 ### accuradio
 Sito: https://www.accuradio.com
@@ -102,9 +102,22 @@ Sito: https://www.animeworld.ac
 -   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 
+### eurostreaming_actor
+Sito: https://eurostreaming.ooo
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- il sito reindirizza a un altro indirizzo: https://guardaseriex.best (in channels.json c'e https://eurostreaming.ooo)
+- ROTTO: peliculas /animazione/ | patron non trova titoli
+-   campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_animazione.html
+-   regex proposta: 1040 titoli su 343 card | gruppi persi: episode, title2
+-   non applicata al file: la funzione ha piu varianti di regex
+- ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli
+-   campione della pagina salvato in correzioni/eurostreaming_actor/pagina_peliculas_aggiornamento_episodi.html
+-   nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi/
+- riga per channels.json: "eurostreaming_actor": "https://guardaseriex.best",
+
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.ink
-- OK: peliculas /catalog/all | 18 risultati
+- OK: peliculas /catalog/all | 17 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
@@ -122,16 +135,16 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27442 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27591 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5650 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5670 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5659 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5646 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (12)
 
@@ -183,23 +196,13 @@ Sito: http://ww25.mondoserietv.club
 Sito: https://piratestreaming.design
 - il nome del sito non esiste piu (DNS) (https://piratestreaming.design)
 
-## CLOUDFLARE (2)
-
-### eurostreaming_actor
-Sito: https://eurostreaming.ooo
-- FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://eurostreaming.ooo)
-
-### toonitalia
-Sito: https://toonitalia.xyz
-- FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://toonitalia.xyz)
-
 ## NON VERIFICATO (4)
 
 ### animeunity
-Sito: https://www.animeunity.to
-- home https://www.animeunity.to: FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl
-- PROBLEMA: https://www.animeunity.to/archivio rispondeva e ora no (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
-- PROBLEMA: https://www.animeunity.to/archivio/get-animes rispondeva e ora no (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
+Sito: https://www.animeunity.co
+- home https://www.animeunity.co: FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl
+- non controllabile senza parametri: https://www.animeunity.co/archivio (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
+- non controllabile senza parametri: https://www.animeunity.co/archivio/get-animes (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
 ### aniplay
@@ -214,8 +217,10 @@ Sito: https://www.mtv.com
 
 ### streamingita
 Sito: https://streamingita.homes
+- il sito reindirizza a un altro indirizzo: https://ww17.streamingita.homes (in channels.json c'e https://streamingita.homes)
+- riga per channels.json: "streamingita": "https://ww17.streamingita.homes",
 
-## OK (19)
+## OK (20)
 
 ### 1337x
 Sito: https://1337x.to
@@ -226,10 +231,10 @@ Sito: https://1337x.to
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.autos
-- OK: peliculas /lastnews/ | 78 risultati
-- OK: peliculas /cinema/ | 94 risultati
-- OK: peliculas /sub-ita/ | 94 risultati
-- OK: peliculas /serie-tv/ | 94 risultati
+- OK: peliculas /lastnews/ | 79 risultati
+- OK: peliculas /cinema/ | 95 risultati
+- OK: peliculas /sub-ita/ | 95 risultati
+- OK: peliculas /serie-tv/ | 93 risultati
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.vip
@@ -247,7 +252,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 80 risultati
+- OK: peliculas /updated | 79 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -265,19 +270,17 @@ Sito: https://www.discoveryplus.com
 - OK: https://eu1-prod-direct.discoveryplus.com | html
 
 ### eurostreaming
-Sito: https://eurostream.fun
-- il sito reindirizza a un altro indirizzo: https://eurostream.fit (in channels.json c'e https://eurostream.fun)
+Sito: https://eurostream.fit
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.fit/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 92 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 93 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
-- riga per channels.json: "eurostreaming": "https://eurostream.fit",
 
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10183 risultati
+- OK: peliculas /index | 3449 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -309,7 +312,7 @@ Sito: https://pluto.tv
 
 ### raiplay
 Sito: https://www.raiplay.it
-- attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.parental_control_level
+- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
 - OK: https://www.raiplay.it/dirette | html
 - OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
 - OK: https://www.raiplay.it/guidatv | html
@@ -330,11 +333,20 @@ Sito: https://streamingcommunityz.day
 - OK: Archivio per nome | 60 titoli in props.titles
 - OK: Ricerca | 60 titoli in props.titles
 - OK: Generi | 20 titoli in props.genres
-- OK: serie di esempio /it/titles/66435-the-one-about-matthew-perry | 1 stagioni, 3 episodi nella prima
+- OK: serie di esempio /it/titles/66444-il-dono-dellinganno | 1 stagioni, 10 episodi nella prima
 
 ### thepiratebay
 Sito: https://apibay.org
 - OK: https://apibay.org/q.php?q=matrix | html
+
+### toonitalia
+Sito: https://toonitalia.xyz
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- OK: peliculas /category/anime | 400 risultati
+- OK: peliculas /anime-ita | 2768 risultati
+- attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
+- OK: peliculas /contatti | 822 risultati
+- attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 
 ### tunein
 Sito: http://api.radiotime.com
