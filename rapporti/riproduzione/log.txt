@@ -1,5 +1,6 @@
 == https://www.la7play.it/film/passenger-397232
    manifest: 
+   licenza: null
    token:  | cliccato: 
    tentativo: button[aria-label*="lay" i] #0 -> manifest no token no
    tentativo: button:has-text("Guarda") #0 -> manifest no token no
@@ -17,6 +18,7 @@
    hostnameCdnDrm = https://d3iki3eydrtvsa.cloudfront.net
 == https://www.la7play.it/m-il-figlio-del-secolo/puntate/st-1-episodio-3-397859
    manifest: 
+   licenza: null
    token:  | cliccato: 
    tentativo: button[aria-label*="lay" i] #0 -> manifest no token no
    tentativo: button:has-text("Guarda") #0 -> manifest no token no
@@ -29,13 +31,66 @@
    hostnameCdnDrm = https://d3iki3eydrtvsa.cloudfront.net
 == https://www.la7play.it/dirette/la7-cinema
    manifest: 
+   licenza: null
    token:  | cliccato: 
    tentativo: button[aria-label*="lay" i] #0 -> manifest no token no
    richiesta: https://limone.iltrovatore.it/geoip/json/
    drmContentId = 2
    drmTokenEndpoint = https://svc-01.la7play.it/DRM/tk.php
    mainLiveUrl = https://d15umi5iaezxgx.cloudfront.net/LA7D/DRM/DASH/Live.mpd|https://d15umi5iaezxgx.cloudfront.net/LA7D/DRM/HLS/Live.m3u
+== https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-28-10-2026-398171
+   manifest: https://awsvodpkg.iltrovatore.it/local/dash/,/nk/content/entry/data/0/406/0_7dr3gqdd_0_mholhfyz_2,/nk/content/entry/data/0/406/0_7dr3gqdd_0_8gpvmwam_2,.mp4.urls
+   licenza: null
+   token:  | cliccato: button[aria-label*="lay" i] #0
+   tentativo: button[aria-label*="lay" i] #0 -> manifest si token no
+   richiesta: https://limone.iltrovatore.it/geoip/json/
+   richiesta: https://awsvodpkg.iltrovatore.it/local/dash/,/nk/content/entry/data/0/406/0_7dr3gqdd_0_mholhfyz_2,/nk/content/
+   richiesta: https://d3on3f7zdcfg.cloudfront.net/storyboards/0_7dr3gqdd/thumbnails.vtt
+   drm = false
+   drmContentId = 667
+   drmTokenEndpoint = https://svc-01.la7play.it/DRM/tk.php
+   cf_remote_url = /nk/content/entry/data/0/406/0_7dr3gqdd_0_mholhfyz_2.mp4,/nk/content/entry/data/0/406/0_7dr3gqdd_0_8gpvmwam_2.mp4
+   hostnameCdn = https://awsvodpkg.iltrovatore.it
+   hostnameCdnDrm = https://d3iki3eydrtvsa.cloudfront.net
   campione senza manifest: https://www.la7play.it/film/passenger-397232
   campione senza manifest: https://www.la7play.it/m-il-figlio-del-secolo/puntate/st-1-episodio-3-397859
   campione senza manifest: https://www.la7play.it/dirette/la7-cinema
-[]
+[
+ {
+  "token": null,
+  "licenza": null,
+  "manifest": [
+   [
+    "chiave",
+    "hostnameCdn",
+    "id"
+   ],
+   [
+    "lett",
+    "/local/dash/,/nk/content/entry/data/0/406/"
+   ],
+   [
+    "chiave",
+    "cf_entry_id",
+    "id"
+   ],
+   [
+    "lett",
+    "_0_mholhfyz_2,/nk/content/entry/data/0/406/"
+   ],
+   [
+    "chiave",
+    "cf_entry_id",
+    "id"
+   ],
+   [
+    "lett",
+    "_0_8gpvmwam_2,.mp4.urlset/manifest.mpd"
+   ]
+  ],
+  "campioni": 1,
+  "riprodotti": 1,
+  "esempio": "https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-28-10-2026-398171",
+  "condizione": null
+ }
+]
