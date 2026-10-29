@@ -32,8 +32,8 @@ def mainlist(item):
             ('Documentari', ['/documentari', 'peliculas', '', 'movie'])]
 
     tvshow = ['/programmi',
-              ('Tg La7', ['/tgla7/puntate', 'episodios', '', 'tvshow']),
-              ('Coffee Tech', ['/coffee-tech', 'episodios', '', 'tvshow'])]
+              ('Tg La7 {submenu} {teen}', ['/tgla7/puntate', 'episodios', '', 'tvshow']),
+              ('Coffee Tech {submenu} {teen}', ['/coffee-tech', 'episodios', '', 'tvshow'])]
 
     search = ''
     return locals()
