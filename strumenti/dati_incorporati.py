@@ -374,6 +374,13 @@ def _e_serie(url):
     return not re.search(r'-\d{4,}/?$', url.split('?')[0])
 
 
+def _tmdb(item, itemlist):
+    # nelle liste di film cerca le informazioni su TMDB, come farebbe support.scrape
+    if item.contentType == 'movie' and itemlist:
+        tmdb.set_infoLabels_itemlist([i for i in itemlist if not i.nextPage], seekTmdb=True)
+    return itemlist
+
+
 def _voci(item, elenco, pagina_corrente=0, html='', azione_pagina='peliculas'):
     itemlist = []
     for r in elenco:
@@ -449,7 +456,7 @@ def peliculas(item):
     if percorso in ELENCHI_API:
         elenco = _da_api(ELENCHI_API[percorso])
         if elenco:
-            return _voci(item, elenco)
+            return _tmdb(item, _voci(item, elenco))
     h = _pagina(item.url)
     r = rileva(h)
     if not r:
@@ -464,7 +471,7 @@ def peliculas(item):
         return [item.clone(title=support.typo(etichetta, 'bold'), gruppo=etichetta, action='giorno')
                 for etichetta, elenco in r['gruppi']]
     elenco = [x for _, rr in r['gruppi'] for x in rr]
-    return _voci(item, elenco, int(item.page or 1) if getattr(item, 'page', '') else 1, h)
+    return _tmdb(item, _voci(item, elenco, int(item.page or 1) if getattr(item, 'page', '') else 1, h))
 
 
 def giorno(item):

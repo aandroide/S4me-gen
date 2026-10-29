@@ -9,7 +9,7 @@ import json
 import re
 from datetime import datetime, timedelta
 
-from core import support, httptools
+from core import support, httptools, tmdb
 from platformcode import logger
 
 DRM = 'com.widevine.alpha'
@@ -248,6 +248,7 @@ def film(item):
         itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=titolo, contentTitle=titolo,
                                    url=f['url'], thumbnail=_img(f), fanart=_img(f), contentType='movie',
                                    action='findvideos', forcethumb=True))
+    tmdb.set_infoLabels_itemlist(itemlist, seekTmdb=True)  # come farebbe support.scrape
     return itemlist
 
 
@@ -260,6 +261,7 @@ def documentari(item):
         itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=titolo, contentTitle=titolo,
                                    url=d['url'], thumbnail=_img(d), fanart=_img(d), contentType='movie',
                                    action='findvideos', forcethumb=True))
+    tmdb.set_infoLabels_itemlist(itemlist, seekTmdb=True)  # come farebbe support.scrape
     return itemlist
 
 
