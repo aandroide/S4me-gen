@@ -179,13 +179,6 @@ def esplora(s, ctx, base, args, rp, cattura, grezzo_fn, pagina_elenco):
     if liste_pagina:
         ctx['elenchi_api'] = completa_liste(base, ops, liste_pagina, rp)
 
-    # titoli mostrati in altre pagine ma assenti dall'elenco completo
-    if ctx.get('elenchi_api'):
-        try:
-            trova_extra(ctx, base, grezzo_fn, pagine_viste, rp)
-        except BaseException as ex:
-            rp('Ricerca di titoli mancanti non completata: %s' % str(ex)[:100])
-
     # ricerca completa
     ric = trova_ricerca_ops(base, ops, rp)
     if ric:
@@ -225,6 +218,13 @@ def esplora(s, ctx, base, args, rp, cattura, grezzo_fn, pagina_elenco):
             verifica_ricette(ctx, base, grezzo_fn, giocabili, rp)
         except BaseException as ex:
             rp('Verifica delle ricette non completata: %s' % str(ex)[:100])
+
+    # voci di menu che non arrivano a nessun video vengono tolte; i titoli mostrati dal sito ma assenti dall'elenco completo
+    # diventano voci di menu (per esempio un telegiornale)
+    try:
+        completa_menu(ctx, base, grezzo_fn, pagine_viste, liste_pagina, rp)
+    except BaseException as ex:
+        rp('Pulizia del menu non completata: %s' % str(ex)[:100])
 
 
 def _risposta_video(url, base):
@@ -294,16 +294,14 @@ def _forma(url):
 
 
 def trova_extra(ctx, base, grezzo_fn, pagine_viste, rp):
-    """Per ogni elenco completo preso dalla API cerca nelle altre pagine liste dello stesso tipo con titoli in piu."""
-    ctx['elenchi_extra'], ctx['ordina_elenchi'] = {}, {}
+    """Titoli che il sito mostra in altre pagine ma che l'elenco completo non ha (per esempio un telegiornale): [record]."""
+    extra = []
     for perc, codici in ctx['elenchi_api'].items():
         st, t = richiedi('%s/api/gql/%s' % (base, codici[0]), base)
         r = di.rileva_json(json.loads(t))
         principale = [x for _, g in r['gruppi'] for x in g]
         chiavi = {x['url'].split('?')[0].rstrip('/') for x in principale}
         forma = {_forma(di._unisci(base, x['url'])) for x in principale}
-        titoli = [x['titolo'] for x in principale]
-        ctx['ordina_elenchi'][perc] = titoli == sorted(titoli, key=str.lower)
         for pagina in pagine_viste:
             h = grezzo_fn(pagina)
             for lista in di.rileva_tutte(h):
@@ -311,16 +309,80 @@ def trova_extra(ctx, base, grezzo_fn, pagine_viste, rp):
                 if not lista['firma'].get('immagine'):
                     continue
                 mie = {x['url'].split('?')[0].rstrip('/') for x in rec}
-                if len(mie & chiavi) < 0.3 * len(mie):
+                if len(mie & chiavi) < 0.3 * len(mie) or {_forma(di._unisci(base, x['url'])) for x in rec} - forma:
                     continue
-                if {_forma(di._unisci(base, x['url'])) for x in rec} - forma:
-                    continue
-                nuovi = [x for x in rec if x['url'].split('?')[0].rstrip('/') not in chiavi]
-                if nuovi:
-                    ctx['elenchi_extra'].setdefault(perc, []).append((percorso_di(pagina), lista['firma']))
-                    rp('  %s: la pagina %s mostra anche %s' % (perc, percorso_di(pagina), [x['titolo'] for x in nuovi]))
-                    chiavi |= {x['url'].split('?')[0].rstrip('/') for x in nuovi}
-                    break
+                for x in rec:
+                    k = x['url'].split('?')[0].rstrip('/')
+                    if k not in chiavi:
+                        chiavi.add(k)
+                        extra.append(x)
+                        rp('  %s: la pagina %s mostra anche "%s" (%s)' % (perc, percorso_di(pagina), x['titolo'], x['url']))
+    return extra
+
+
+def primo_giocabile(base, grezzo_fn, rec, tentativi=6, incerto=None):
+    """Indirizzo del primo contenuto riproducibile raggiungibile da questi titoli (scende negli episodi dei programmi), o ''.
+    incerto: lista a cui si aggiunge qualcosa se una pagina non si e potuta scaricare (allora il '' non e una prova)."""
+    for x in rec[:tentativi]:
+        u = di._unisci(base, x['url'])
+        if not _e_serie(u):
+            return u
+        percorso = percorso_di(u)
+        h = grezzo_fn(u)
+        if not h and incerto is not None:
+            incerto.append(u)
+        cand = []
+        for rx in (r'puntat|episod', r'stagion', r'video'):
+            for l in re.findall(r'href="(%s/[^"/#?]+)"' % re.escape(percorso), h or ''):
+                if re.search(rx, l) and di._unisci(base, l) not in cand:
+                    cand.append(di._unisci(base, l))
+        cand.append(u)
+        for c in cand:
+            hc = grezzo_fn(c)
+            if not hc and incerto is not None:
+                incerto.append(c)
+            r = di.rileva(hc)
+            for _, g in (r['gruppi'] if r else []):
+                for y in g:
+                    if not _e_serie(y['url']) and percorso in y['url']:
+                        return di._unisci(base, y['url'])
+    return ''
+
+
+def video_ok(ctx, base, grezzo_fn, u):
+    """La pagina u si riproduce con una delle ricette imparate (il manifest risponde)."""
+    valori = rip.valori_pagina(grezzo_fn(u))
+    for ric in ctx.get('ricette_video') or []:
+        if rip.condizione_ok(ric['condizione'], u, valori):
+            url = rip.applica(ric['manifest'], valori)
+            return bool(url) and _risposta_video(url, base)[0]
+    return False
+
+
+def completa_menu(ctx, base, grezzo_fn, pagine_viste, liste_pagina, rp):
+    azioni = ctx['azioni_menu']
+    tengo = []
+    for nome, url in ctx['menu']:
+        if azioni.get(url) == 'canali' or percorso_di(url) not in liste_pagina:
+            tengo.append((nome, url))
+            continue
+        dubbi = []
+        g = primo_giocabile(base, grezzo_fn, liste_pagina[percorso_di(url)], incerto=dubbi)
+        if not g and not dubbi:
+            rp('Voce "%s" tolta: dai suoi titoli non si arriva a nessun video' % nome)
+            continue
+        tengo.append((nome, url))
+    ctx['menu'] = tengo
+    if ctx.get('elenchi_api'):
+        for x in trova_extra(ctx, base, grezzo_fn, pagine_viste, rp):
+            g = primo_giocabile(base, grezzo_fn, [x])
+            if g:
+                u = di._unisci(base, x['url'])
+                ctx['menu'].append((x['titolo'], u))
+                azioni[u] = 'episodios'
+                rp('Voce di menu aggiunta: "%s" (%s)' % (x['titolo'], u))
+            else:
+                rp('Titolo "%s" non aggiunto: non arriva a nessun video' % x['titolo'])
 
 
 def _e_serie(url):

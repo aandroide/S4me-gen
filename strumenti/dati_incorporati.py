@@ -432,20 +432,6 @@ def _da_api(codici):
     return []
 
 
-def _extra(percorso, elenco):
-    # titoli che il sito mostra in altre pagine ma che l'elenco completo non ha (per esempio un telegiornale)
-    visti = {x['url'].split('?')[0].rstrip('/') for x in elenco}
-    nuovi = []
-    for pagina, firma in ELENCHI_EXTRA.get(percorso, []):
-        for rr in _trova_tutte(_pagina(host + pagina), firma):
-            for x in rr:
-                chiave = x['url'].split('?')[0].rstrip('/')
-                if chiave not in visti:
-                    visti.add(chiave)
-                    nuovi.append(x)
-    return nuovi
-
-
 def canali(item):
     itemlist = []
     percorso = re.sub(r'^https?://[^/]+', '', item.url.split('?')[0]).rstrip('/')
@@ -462,11 +448,6 @@ def peliculas(item):
     if percorso in ELENCHI_API:
         elenco = _da_api(ELENCHI_API[percorso])
         if elenco:
-            extra = _extra(percorso, elenco)
-            if extra:
-                elenco = elenco + extra
-                if ORDINA_ELENCHI.get(percorso):
-                    elenco.sort(key=lambda x: x['titolo'].lower())
             return _voci(item, elenco)
     h = _pagina(item.url)
     r = rileva(h)
