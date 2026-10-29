@@ -326,6 +326,35 @@ def episodios(item):
     return itemlist
 
 
+def _codifica(variabili):
+    return base64.urlsafe_b64encode(json.dumps(variabili, separators=(',', ':'), sort_keys=True).encode()).decode().rstrip('=')
+
+
+def _sostituisci(v, testo):
+    if isinstance(v, dict):
+        return {k: _sostituisci(x, testo) for k, x in v.items()}
+    if v == '__TESTO__':
+        return testo
+    return v
+
+
+def search(item, text):
+    support.info(text)
+    try:
+        variabili = _sostituisci({'filters': {'contentTypes': ['property', 'film', 'article']}, 'limit': 3, 'q': '__TESTO__'}, text)
+        r = json.loads(_pagina(host + '/api/gql/647c199f01d967ce/' + _codifica(variabili)))
+        trovati = rileva_json(r)
+        if not trovati:
+            return []
+        elenco = [x for _, rr in trovati['gruppi'] for x in rr]
+        return _voci(item, elenco)
+    except Exception:
+        import sys
+        for line in sys.exc_info():
+            logger.error('%s' % line)
+        return []
+
+
 
 @support.menu
 def mainlist(item):
@@ -341,17 +370,6 @@ def mainlist(item):
 
 
 
-def search(item, text):
-    # TODO: ricerca non rilevata automaticamente, impostare l'url della ricerca del sito
-    support.info(text)
-    item.url = host + '/?s=' + text.replace(' ', '+')
-    try:
-        return peliculas(item)
-    except:
-        import sys
-        for line in sys.exc_info():
-            logger.error('%s' % line)
-        return []
 
 
 def findvideos(item):
