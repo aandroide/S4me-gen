@@ -749,6 +749,7 @@ def trova_ricerca(soup, base):
 def trova_ricerca_payload(net, testo='matrix'):
     """Richiesta GET il cui ultimo pezzo dell'indirizzo e un JSON in base64 che contiene il testo cercato."""
     import base64 as b64
+    trovate = []
     for e in net:
         if e.get('method') != 'GET':
             continue
@@ -780,9 +781,16 @@ def trova_ricerca_payload(net, testo='matrix'):
             if stile:
                 break
         stile = stile or ((',', ':'), True)
-        return {'prefisso': parti.path[:len(parti.path) - len(seg)], 'payload': payload,
-                'separatori': stile[0], 'ordinate': stile[1], 'esempio': e['url'][:160]}
-    return None
+        trovate.append({'prefisso': parti.path[:len(parti.path) - len(seg)], 'payload': payload,
+                        'separatori': stile[0], 'ordinate': stile[1], 'esempio': e['url'][:160]})
+    if not trovate:
+        return None
+
+    def punti(t):
+        # la ricerca vera e quella con la pagina e senza un limite basso (i suggerimenti mentre si scrive hanno un limite)
+        chiavi = set(t['payload'])
+        return ('page' in chiavi or 'pagina' in chiavi or 'offset' in chiavi, 'limit' not in chiavi, trovate.index(t))
+    return max(trovate, key=punti)
 
 
 def trova_episodi(soup):
