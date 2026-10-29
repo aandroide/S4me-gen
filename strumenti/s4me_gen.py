@@ -1517,6 +1517,50 @@ headers = [['Referer', host + '/']]
 '''
 
 
+def genera_menu_s4me(voci, tipo_default, azioni):
+    """Menu nella struttura che S4Me si aspetta (top, film, tvshow): cosi le icone e i titoli li assegna S4Me."""
+    top, film, serie = [], [], []
+    for nome, full in voci:
+        u = urlparse(full)
+        path = u.path + (('?' + u.query) if u.query else '')
+        azione = (azioni or {}).get(full, 'peliculas')
+        nome = nome.replace("'", '')
+        if azione == 'canali':
+            if re.search(r'rivedi|guida|replay', nome, re.I):
+                nome = 'Replay'
+            top.append((nome, path, azione))
+        elif re.search(r'film|movie|cinema|documentar', nome, re.I):
+            film.append((nome, path, azione, 'movie'))
+        else:
+            serie.append((nome, path, azione, 'tvshow'))
+
+    def gruppo(nome_var, voci_g, rx_principale):
+        if not voci_g:
+            return None
+        principale = next((v for v in voci_g if re.search(rx_principale, v[0], re.I)), None)
+        if not principale:
+            return None
+        righe = ["'%s'" % principale[1]]
+        for v in voci_g:
+            if v is not principale:
+                righe.append("('%s', ['%s', '%s', '', '%s'])" % (v[0], v[1], v[2], v[3]))
+        return '    %s = [%s]' % (nome_var, ',\n            '.join(righe))
+
+    righe_film = gruppo('film', film, r'^(film|movie)')
+    righe_serie = gruppo('tvshow', serie, r'programm|serie|tv|show')
+    if not righe_film:   # senza voce principale le voci restano nel menu in alto
+        top += [(n, p, a) for n, p, a, t in film]
+    if not righe_serie:
+        top += [(n, p, a) for n, p, a, t in serie]
+    blocchi = []
+    if top:
+        blocchi.append('    top = [' + ',\n           '.join("('%s', ['%s', '%s'])" % (n, p, a) if a == 'canali' else "('%s', ['%s', '%s', '', 'tvshow'])" % (n, p, a) for n, p, a in top) + ']')
+    for b in (righe_film, righe_serie):
+        if b:
+            blocchi.append(b)
+    return '\n\n'.join(blocchi)
+
+
 def genera_menu(voci, tipo_default, azioni=None):
     film, serie, anime, top = [], [], [], []
     for nome, full in voci:
@@ -1532,7 +1576,8 @@ def genera_menu(voci, tipo_default, azioni=None):
 
 def genera_html(nome, ctx):
     cod = HEADER.replace('__NOME__', nome)
-    menu = genera_menu(ctx['menu'], ctx['tipo'], ctx.get('azioni_menu'))
+    menu = (genera_menu_s4me(ctx['menu'], ctx['tipo'], ctx['azioni_menu']) if ctx.get('azioni_menu') else
+            genera_menu(ctx['menu'], ctx['tipo'], ctx.get('azioni_menu')))
     cod += '''
 @support.menu
 def mainlist(item):

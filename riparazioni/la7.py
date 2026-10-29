@@ -25,13 +25,14 @@ RIVEDI = [('La7', '/guida-tv-rivedi/la7'), ('La7Cinema', '/guida-tv-rivedi/la7-c
 
 @support.menu
 def mainlist(item):
-    top = [('Dirette {bold}', ['', 'live']),
-           ('Rivedi oggi {bold}', ['', 'replay_channels'])]
+    top = [('Dirette', ['', 'live']),
+           ('Replay', ['', 'replay_channels'])]
 
-    menu = [('Programmi TV {bullet bold}', ['/programmi', 'peliculas', '', 'tvshow']),
-            ('Film La7 {bullet bold}', ['/film', 'peliculas', '', 'movie']),
-            ('Documentari {bullet bold}', ['/documentari', 'peliculas', '', 'movie']),
-            ('TG La7 {bullet bold}', ['/tgla7/puntate', 'episodios', '', 'tvshow'])]
+    film = ['/film',
+            ('Documentari', ['/documentari', 'peliculas', '', 'movie'])]
+
+    tvshow = ['/programmi',
+              ('Tg La7', ['/tgla7/puntate', 'episodios', '', 'tvshow'])]
 
     search = ''
     return locals()
