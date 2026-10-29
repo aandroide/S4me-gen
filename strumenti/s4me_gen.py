@@ -382,6 +382,53 @@ class Sessione:
         self._assesta(attesa)
         return self.stato()
 
+    def cerca_dinamica(self, testo='matrix', attesa=4):
+        """Ricerca senza modulo: apre l'icona o il campo di ricerca (anche in un pannello), scrive il testo e invia."""
+        self.net = []
+        campi = ('input[type=search], input[placeholder*="erca" i], input[placeholder*="earch" i], '
+                 'input[name*="search" i], input[name="q"], input[aria-label*="erca" i], input[aria-label*="earch" i]')
+
+        def visibile():
+            loc = self.page.locator(campi)
+            for i in range(min(loc.count(), 8)):
+                try:
+                    if loc.nth(i).is_visible():
+                        return loc.nth(i)
+                except Exception:
+                    continue
+            return None
+        box = visibile()
+        if not box:
+            for sel in ('[aria-label*="erca" i]', '[aria-label*="earch" i]', '[title*="erca" i]', '[title*="earch" i]',
+                        'a[href*="cerca"]', 'a[href*="search"]', 'button[class*="search" i]', '[data-testid*="search" i]',
+                        '[class*="search" i]'):
+                try:
+                    loc = self.page.locator(sel)
+                    for i in range(min(loc.count(), 4)):
+                        if loc.nth(i).is_visible():
+                            loc.nth(i).click(timeout=3000, force=True)
+                            self.page.wait_for_timeout(800)
+                            box = visibile()
+                            if box:
+                                break
+                except Exception:
+                    continue
+                if box:
+                    break
+        if not box:
+            return {'errore': 'campo di ricerca non trovato', 'url': self.page.url, 'html': '', 'net': []}
+        try:
+            self.net = []
+            box.click(timeout=3000)
+            box.type(testo, delay=80, timeout=8000)
+            box.press('Enter', timeout=3000)
+        except Exception as e:
+            return {'errore': str(e), 'url': self.page.url, 'html': '', 'net': []}
+        self._assesta(attesa)
+        st = self.stato()
+        st['campo_dinamico'] = True
+        return st
+
     def prova_play(self, attesa=10):
         self.net = []
         cliccato = ''
@@ -683,6 +730,45 @@ def trova_ricerca(soup, base):
     if inp:
         sel = ('input[name="%s"]' % inp['name']) if inp.get('name') else 'input[type=search]'
         return {'selettore': sel, 'nome': inp.get('name', ''), 'azione': '', 'metodo': ''}
+    return None
+
+
+def trova_ricerca_payload(net, testo='matrix'):
+    """Richiesta GET il cui ultimo pezzo dell'indirizzo e un JSON in base64 che contiene il testo cercato."""
+    import base64 as b64
+    for e in net:
+        if e.get('method') != 'GET':
+            continue
+        parti = urlsplit(e['url'])
+        seg = parti.path.rsplit('/', 1)[-1]
+        if len(seg) < 8:
+            continue
+        try:
+            grezzo = b64.urlsafe_b64decode(seg + '=' * (-len(seg) % 4)).decode('utf-8')
+            pay = json.loads(grezzo)
+        except Exception:
+            continue
+        if not isinstance(pay, dict) or testo not in grezzo.lower():
+            continue
+        def marca(v):
+            if isinstance(v, dict):
+                return {k: marca(x) for k, x in v.items()}
+            return '__TESTO__' if isinstance(v, str) and v.lower() == testo else v
+        payload = marca(pay)
+        if '__TESTO__' not in json.dumps(payload):
+            continue
+        stile = None
+        for sep in ((',', ':'), (', ', ': ')):
+            for ordine in (True, False):
+                rid = b64.urlsafe_b64encode(json.dumps(pay, separators=sep, sort_keys=ordine).encode()).decode().rstrip('=')
+                if rid == seg:
+                    stile = (sep, ordine)
+                    break
+            if stile:
+                break
+        stile = stile or ((',', ':'), True)
+        return {'prefisso': parti.path[:len(parti.path) - len(seg)], 'payload': payload,
+                'separatori': stile[0], 'ordinate': stile[1], 'esempio': e['url'][:160]}
     return None
 
 
@@ -1921,13 +2007,13 @@ def genera_dati(nome, ctx):
         return inizi[f.end_lineno - 1] + len(righe[f.end_lineno - 1])
     sost = []
     for f in tree.body:
-        if isinstance(f, _ast.FunctionDef) and f.name in ('peliculas', 'episodios'):
+        if isinstance(f, _ast.FunctionDef) and (f.name in ('peliculas', 'episodios') or (f.name == 'search' and ctx.get('search_gql'))):
             sost.append((inizio(f), fine(f), ''))
     for ini, fin, t in sorted(sost, reverse=True):
         cod = cod[:ini] + t + cod[fin:]
     # lettore dei dati e funzioni nuove subito dopo la riga dei header
     punto = cod.index("headers = [['Referer', host + '/']]\n") + len("headers = [['Referer', host + '/']]\n")
-    cod = cod[:punto] + '\n\n# lettore dei dati incorporati nella pagina (generato da dati_incorporati.py)\n' + di.codice_helper() + '\n' + di.FUNZIONI_CANALE + '\n' + cod[punto:]
+    cod = cod[:punto] + '\n\n# lettore dei dati incorporati nella pagina (generato da dati_incorporati.py)\n' + di.codice_helper() + '\n' + di.FUNZIONI_CANALE + '\n' + (di.funzione_ricerca(ctx['search_gql']) + '\n' if ctx.get('search_gql') else '') + cod[punto:]
     return cod
 
 
@@ -3180,6 +3266,34 @@ def analizza(url, args):
 
         # Ricerca
         ric = trova_ricerca(soup, base)
+        if not ric:
+            try:
+                s.vai(pagina_elenco, attesa=2)
+                rd = s.cerca_dinamica('matrix', attesa=args.attesa)
+            except BaseException as ex:
+                rd = {'errore': str(ex)[:100], 'net': []}
+            cattura['ricerca_dinamica'] = {'url': rd.get('url'), 'errore': rd.get('errore'),
+                                           'net': [{k: v for k, v in x.items() if k not in ('_resp', 'body')} for x in rd.get('net', [])][:60]}
+            if rd.get('errore'):
+                rp('Ricerca senza modulo: %s' % rd['errore'])
+            else:
+                pl = trova_ricerca_payload(rd.get('net', []))
+                if pl:
+                    ctx['search_gql'] = pl
+                    rp('Ricerca via richiesta con parametri in base64:', pl['esempio'], '| parametri:', json.dumps(pl['payload']))
+                else:
+                    for e in rd.get('net', []):
+                        if 'matrix' in e['url'].lower() and e['method'] == 'GET' and not RUMORE.search(e['url']):
+                            ctx['search_api'] = e['url']
+                            rp('Ricerca via API:', e['url'][:120])
+                            break
+                    else:
+                        if 'matrix' in (rd.get('url') or '').lower():
+                            ctx['ricerca'] = {'selettore': '', 'nome': '', 'azione': '', 'metodo': '',
+                                              'url_modello': (rd['url'].replace('matrix', '%s')[len(base):] if rd['url'].startswith(base) else rd['url'].replace('matrix', '%s'))}
+                            rp('Url di ricerca (campo aperto dalla pagina):', rd['url'])
+                        else:
+                            rp('Ricerca senza modulo: il testo e stato inviato ma non ho trovato una richiesta riconoscibile (url finale %s)' % rd.get('url'))
         if ric:
             rp('Campo di ricerca:', ric['selettore'])
             s.vai(pagina_elenco, attesa=2)
@@ -3499,7 +3613,7 @@ def main():
     mancano = []
     if not ctx.get('manifest') and not (ctx.get('player') and ctx['player'].get('video')):
         mancano.append('riproduzione (nessun manifest rilevato: findvideos generico con support.server)')
-    if not ctx.get('ricerca') and not ctx.get('search_api'):
+    if not ctx.get('ricerca') and not ctx.get('search_api') and not ctx.get('search_gql'):
         mancano.append('ricerca')
     if ctx.get('modo') == 'api' and any(z['tipo'] == 'tvshow' for z in ctx.get('sezioni', [])) and not ctx.get('episodi_api'):
         mancano.append('episodi delle serie (nessuna richiesta di episodi rilevata)')

@@ -16,9 +16,9 @@ import re
 
 TITOLO = ('titolo', 'title', 'name', 'nome', 'headline', 'label')
 LINK = ('pathname', 'url', 'href', 'link', 'permalink', 'path')
-IMMAGINE = ('immagine_scena', 'immagine', 'image', 'img', 'thumbnail', 'thumb', 'poster', 'cover', 'immagine_programma',
+IMMAGINE = ('imageUrl', 'image_url', 'thumbnailUrl', 'immagine_scena', 'immagine', 'image', 'img', 'thumbnail', 'thumb', 'poster', 'cover', 'immagine_programma',
             'immagine_cover', 'picture')
-TRAMA = ('sinossi', 'plot', 'description', 'descrizione', 'abstract', 'occhiello', 'synopsis', 'summary')
+TRAMA = ('excerpt', 'teaser', 'sinossi', 'plot', 'description', 'descrizione', 'abstract', 'occhiello', 'synopsis', 'summary')
 ORARIO = ('ora', 'orario', 'time', 'start')
 GRUPPO = ('data', 'date', 'day', 'giorno', 'stagione', 'season', 'nome', 'title', 'titolo', 'label')
 
@@ -231,6 +231,11 @@ def rileva(h):
     return migliore
 
 
+def rileva_json(ob):
+    """Come rileva, ma su una risposta JSON gia letta (per esempio la ricerca del sito)."""
+    return rileva('<script type="application/json">' + json.dumps(ob) + '</script>')
+
+
 #<<FINE_CANALE
 
 
@@ -378,3 +383,40 @@ def episodios(item):
             it.contentType = 'episode'
     return itemlist
 '''
+
+
+# Ricerca tramite richiesta GET con i parametri codificati in base64 nell'ultimo pezzo dell'indirizzo (GraphQL persistito).
+FUNZIONI_RICERCA = r'''
+def _codifica(variabili):
+    return base64.urlsafe_b64encode(json.dumps(variabili, separators=__SEP__, sort_keys=__ORD__).encode()).decode().rstrip('=')
+
+
+def _sostituisci(v, testo):
+    if isinstance(v, dict):
+        return {k: _sostituisci(x, testo) for k, x in v.items()}
+    if v == '__TESTO__':
+        return testo
+    return v
+
+
+def search(item, text):
+    support.info(text)
+    try:
+        variabili = _sostituisci(__PAYLOAD__, text)
+        r = json.loads(_pagina(host + '__PREFISSO__' + _codifica(variabili)))
+        trovati = rileva_json(r)
+        if not trovati:
+            return []
+        elenco = [x for _, rr in trovati['gruppi'] for x in rr]
+        return _voci(item, elenco)
+    except Exception:
+        import sys
+        for line in sys.exc_info():
+            logger.error('%s' % line)
+        return []
+'''
+
+
+def funzione_ricerca(ric):
+    return (FUNZIONI_RICERCA.replace('__SEP__', repr(tuple(ric['separatori']))).replace('__ORD__', repr(ric['ordinate']))
+            .replace('__PAYLOAD__', repr(ric['payload'])).replace('__PREFISSO__', ric['prefisso']))
