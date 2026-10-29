@@ -306,6 +306,8 @@ def trova_extra(ctx, base, grezzo_fn, pagine_viste, rp):
         chiavi = _percorsi(principale)
         forma = {_forma(di._unisci(base, x['url'])) for x in principale}
         for pagina in pagine_viste:
+            if percorso_di(pagina) == perc:
+                continue  # la pagina dell'elenco stesso e gia stata confrontata: l'elenco completo la sostituisce
             h = grezzo_fn(pagina)
             for lista in di.rileva_tutte(h):
                 rec = lista['record']
