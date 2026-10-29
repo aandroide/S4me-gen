@@ -39,3 +39,10 @@ I runner di GitHub hanno un indirizzo americano: i siti che bloccano fuori Itali
 3. Controlla sempre il rapporto: le righe TODO vanno completate a mano.
 
 Se il sito e dietro Cloudflare parte FlareSolverr in Docker. In locale: `python3 strumenti/s4me_gen.py SITO --flaresolverr http://localhost:8191`. Se la run si blocca si ferma da sola dopo 20 minuti.
+
+## Riproduzione e confronto con i file scritti a mano
+
+- `strumenti/esplora_dati.py`: legge le richieste del sito (elenchi completi, ricerca, programmi) e completa le liste.
+- `strumenti/riproduzione.py`: impara dal sito come si ottiene il video (diretta e on demand, con o senza DRM, token e licenza) e scrive il codice nel canale generato.
+- `strumenti/confronta_canali.py` e workflow `confronta-canali.yml`: confrontano un canale generato con quello scritto a mano (pagine e video).
+- Workflow `controlla-canali.yml`, job `rigenera`: se un canale e rotto, lo rigenera dal sito e scrive file e rapporto in `rapporti/correzioni/<canale>/`.
