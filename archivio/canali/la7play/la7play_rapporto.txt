@@ -33,6 +33,8 @@ Pagine in cui provo la riproduzione: 10
   ricetta (DRM con token): condizione ('chiave', 'drm', 'true') | campioni che la soddisfano: 1 | manifest ricostruito: [True]
   ricetta (senza DRM): condizione ('chiave', 'drm', 'false') | campioni che la soddisfano: 5 | manifest ricostruito: [True, True, True, True, True]
 Ricette di riproduzione: 3
+  verifica ricetta 1: 7 pagine, 7 ok
+  verifica ricetta 2: 17 pagine, 17 ok
 
 File scritti in archivio/canali/la7play: la7play.py, la7play.json, riga_channels_json.txt
 Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), caricare l'icona la7play.png nella repo media.
