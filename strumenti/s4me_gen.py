@@ -397,6 +397,7 @@ class Sessione:
                 except Exception:
                     continue
             return None
+        diag = []
         box = visibile()
         if not box:
             for sel in ('button:has(img[alt*="erca" i])', 'button:has(img[alt*="earch" i])', 'button:has(img[src*="search" i])',
@@ -406,19 +407,29 @@ class Sessione:
                         '[class*="search" i]'):
                 try:
                     loc = self.page.locator(sel)
-                    for i in range(min(loc.count(), 4)):
-                        if loc.nth(i).is_visible():
+                    n = loc.count()
+                    diag.append('%s: %d' % (sel, n))
+                    for i in range(min(n, 4)):
+                        vis = loc.nth(i).is_visible()
+                        if vis:
                             loc.nth(i).click(timeout=3000, force=True)
-                            self.page.wait_for_timeout(800)
+                            self.page.wait_for_timeout(1800)
                             box = visibile()
+                            diag.append('  cliccato %s #%d, url %s, campo %s' % (sel, i, self.page.url[:80], 'si' if box else 'no'))
                             if box:
                                 break
-                except Exception:
+                except Exception as ex:
+                    diag.append('  errore %s: %s' % (sel, str(ex)[:80]))
                     continue
                 if box:
                     break
         if not box:
-            return {'errore': 'campo di ricerca non trovato', 'url': self.page.url, 'html': '', 'net': []}
+            try:
+                diag.append('input presenti: ' + ' | '.join(
+                    self.page.eval_on_selector_all('input', 'els => els.map(e => (e.type||"") + "/" + (e.name||"") + "/" + (e.placeholder||"") + "/" + (e.offsetParent ? "v" : "n"))')[:12]))
+            except Exception:
+                pass
+            return {'errore': 'campo di ricerca non trovato', 'url': self.page.url, 'html': '', 'net': [], 'diagnosi': diag}
         try:
             self.net = []
             box.click(timeout=3000)
@@ -3278,6 +3289,8 @@ def analizza(url, args):
                                            'net': [{k: v for k, v in x.items() if k not in ('_resp', 'body')} for x in rd.get('net', [])][:60]}
             if rd.get('errore'):
                 rp('Ricerca senza modulo: %s' % rd['errore'])
+                for riga_d in rd.get('diagnosi', []):
+                    rp('   ' + riga_d)
             else:
                 pl = trova_ricerca_payload(rd.get('net', []))
                 if pl:
