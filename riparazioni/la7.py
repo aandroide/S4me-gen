@@ -117,10 +117,11 @@ def _programmi():
 # ---------------------------------------------------------------- dirette e rivedi
 
 def _in_onda(url):
-    # programma in onda adesso e relativa immagine, dal palinsesto nella pagina della diretta
+    # programma in onda adesso e relativa immagine, dal palinsesto nella pagina della diretta (che elenca tutti i canali)
+    chiave = url.rstrip('/').split('/')[-1].replace('-', '').upper()
     h = _pulisci(_scarica(url))
     for blocco in h.split('{"ora":"')[1:]:
-        if '"isOnAir":true' not in blocco:
+        if '"isOnAir":true' not in blocco or ('guidatv/%s/' % chiave) not in blocco:
             continue
         m = re.match(r'\d{2}:\d{2}","titolo":"([^"]*)"', blocco)
         if not m:
