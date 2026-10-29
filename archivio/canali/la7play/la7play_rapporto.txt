@@ -13,7 +13,6 @@ Voce "Podcast": 17 titoli nei dati della pagina
 Richieste persistite trovate nei file JavaScript: 125
   operazioni provate: 125 | con un elenco: 10
   /programmi: la pagina mostra 58 titoli, la richiesta allPrograms (f7034d55158fc906) ne da 71
-  /programmi: la pagina /dirette/la7 mostra anche ['Tg La7', 'Coffee Tech']
 Ricerca completa: operazione siteSearch (4da1e384f8a63808), parametro "q", 10 risultati per "matrix"
 Pagine in cui provo la riproduzione: 10
   https://www.la7play.it/dirette/la7 -> manifest si | token si
@@ -36,6 +35,11 @@ Pagine in cui provo la riproduzione: 10
 Ricette di riproduzione: 3
   verifica ricetta 1: 7 pagine, 7 ok
   verifica ricetta 2: 17 pagine, 17 ok
+Voce "Podcast" tolta: dai suoi titoli non si arriva a nessun video
+  /programmi: la pagina /dirette/la7 mostra anche "Tg La7" (/tgla7)
+  /programmi: la pagina /dirette/la7 mostra anche "Coffee Tech" (/coffee-tech)
+Voce di menu aggiunta: "Tg La7" (https://www.la7play.it/tgla7)
+Voce di menu aggiunta: "Coffee Tech" (https://www.la7play.it/coffee-tech)
 
 File scritti in archivio/canali/la7play: la7play.py, la7play.json, riga_channels_json.txt
 Da fare a mano: copiare i file in channels/, aggiungere la riga in channels.json (sezione direct), caricare l'icona la7play.png nella repo media.

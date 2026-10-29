@@ -308,8 +308,6 @@ def canali_fratelli(h, percorso):
 
 ELENCHI_API = {'/programmi': ['f7034d55158fc906', '75b0227f0361abcf']}  # elenchi completi presi dalle richieste del sito: percorso -> codici delle richieste
 CANALI_AZIONE = {'dirette': 'findvideos', 'guida-tv-rivedi': 'peliculas'}  # cosa apre ogni canale: findvideos (diretta) oppure peliculas (guida a giorni)
-ELENCHI_EXTRA = {'/programmi': [('/dirette/la7', {'buoni': 8, 'immagine': 'scenaImage', 'link': 'path', 'titolo': 'titolo'})]}  # altre pagine che mostrano titoli mancanti nell'elenco completo: percorso -> [(pagina, campi)]
-ORDINA_ELENCHI = {'/programmi': True}  # elenchi che il sito mostra in ordine alfabetico
 
 
 def _pagina(url):
@@ -379,20 +377,6 @@ def _da_api(codici):
     return []
 
 
-def _extra(percorso, elenco):
-    # titoli che il sito mostra in altre pagine ma che l'elenco completo non ha (per esempio un telegiornale)
-    visti = {x['url'].split('?')[0].rstrip('/') for x in elenco}
-    nuovi = []
-    for pagina, firma in ELENCHI_EXTRA.get(percorso, []):
-        for rr in _trova_tutte(_pagina(host + pagina), firma):
-            for x in rr:
-                chiave = x['url'].split('?')[0].rstrip('/')
-                if chiave not in visti:
-                    visti.add(chiave)
-                    nuovi.append(x)
-    return nuovi
-
-
 def canali(item):
     itemlist = []
     percorso = re.sub(r'^https?://[^/]+', '', item.url.split('?')[0]).rstrip('/')
@@ -409,11 +393,6 @@ def peliculas(item):
     if percorso in ELENCHI_API:
         elenco = _da_api(ELENCHI_API[percorso])
         if elenco:
-            extra = _extra(percorso, elenco)
-            if extra:
-                elenco = elenco + extra
-                if ORDINA_ELENCHI.get(percorso):
-                    elenco.sort(key=lambda x: x['titolo'].lower())
             return _voci(item, elenco)
     h = _pagina(item.url)
     r = rileva(h)
@@ -709,7 +688,8 @@ def mainlist(item):
            ('Programmi', ['/programmi', 'peliculas', '', 'movie']),
            ('Film', ['/film', 'peliculas', '', 'movie']),
            ('Documentari', ['/documentari', 'peliculas', '', 'movie']),
-           ('Podcast', ['/podcast', 'peliculas', '', 'movie'])]
+           ('Tg La7', ['/tgla7', 'episodios', '', 'movie']),
+           ('Coffee Tech', ['/coffee-tech', 'episodios', '', 'movie'])]
     search = ''
     return locals()
 

@@ -1,12 +1,12 @@
 Canale la7play | indirizzo https://www.la7play.it
 == mainlist
-   -> 8 voci
+   -> 9 voci
       canali | Dirette | https://www.la7play.it/dirette/la7
       canali | Guida Tv e Rivedi | https://www.la7play.it/guida-tv-rivedi/la7
       peliculas | Programmi | https://www.la7play.it/programmi
       peliculas | Film | https://www.la7play.it/film
 == lista "Programmi"
-   -> 73 voci
+   -> 71 voci
       episodios | 100 minuti | https://www.la7play.it/100minuti
       episodios | Amarsi un po' - Istruzioni per l'uso | https://www.la7play.it/amarsi-un-po
       episodios | Atlantide | https://www.la7play.it/atlantide
@@ -22,13 +22,14 @@ Canale la7play | indirizzo https://www.la7play.it
       play | Direct | https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/cont
 == risoluzione directo https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/cont
    -> VIDEO OK m3u8 206 
-== voci dichiarate in mainlist (6)
+== voci dichiarate in mainlist (7)
     top | ('Dirette', ['/dirette/la7', 'canali', '', 'movie'])
     top | ('Guida Tv e Rivedi', ['/guida-tv-rivedi/la7', 'canali', '', 'tvshow'])
     top | ('Programmi', ['/programmi', 'peliculas', '', 'movie'])
     top | ('Film', ['/film', 'peliculas', '', 'movie'])
     top | ('Documentari', ['/documentari', 'peliculas', '', 'movie'])
-    top | ('Podcast', ['/podcast', 'peliculas', '', 'movie'])
+    top | ('Tg La7', ['/tgla7', 'episodios', '', 'movie'])
+    top | ('Coffee Tech', ['/coffee-tech', 'episodios', '', 'movie'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 2 
    SEZIONE Giovedi 29 ottobre -> OK 12 
@@ -40,10 +41,11 @@ Canale la7play | indirizzo https://www.la7play.it
    SEZIONE Martedi 27 ottobre -> OK 7 
    SEZIONE La7Cinema -> SOTTOMENU  
    SEZIONE Guida Tv e Rivedi -> SOTTOMENU  
-   SEZIONE Programmi -> OK 73 
+   SEZIONE Programmi -> OK 71 
    SEZIONE Film -> OK 35 
    SEZIONE Documentari -> OK 16 
-   SEZIONE Podcast -> OK 17 
+   SEZIONE Tg La7 -> OK 20 
+   SEZIONE Coffee Tech -> OK 20 
    SEZIONE txt70741 … -> OK 3 
-SEZIONI: 7 ok su 7
+SEZIONI: 8 ok su 8
 VERDETTO: ARRIVA AL VIDEO

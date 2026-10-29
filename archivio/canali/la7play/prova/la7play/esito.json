@@ -5,12 +5,12 @@
   {
    "passo": "mainlist",
    "esito": "OK",
-   "voci": 8
+   "voci": 9
   },
   {
    "passo": "lista \"Programmi\"",
    "esito": "OK",
-   "voci": 73
+   "voci": 71
   },
   {
    "passo": "episodios su \"100 minuti\"",
@@ -38,7 +38,8 @@
   "top | ('Programmi', ['/programmi', 'peliculas', '', 'movie'])",
   "top | ('Film', ['/film', 'peliculas', '', 'movie'])",
   "top | ('Documentari', ['/documentari', 'peliculas', '', 'movie'])",
-  "top | ('Podcast', ['/podcast', 'peliculas', '', 'movie'])"
+  "top | ('Tg La7', ['/tgla7', 'episodios', '', 'movie'])",
+  "top | ('Coffee Tech', ['/coffee-tech', 'episodios', '', 'movie'])"
  ],
  "sezioni": [
   {
@@ -111,7 +112,7 @@
    "voce": "Programmi",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 73
+   "titoli": 71
   },
   {
    "voce": "Film",
@@ -126,10 +127,16 @@
    "titoli": 16
   },
   {
-   "voce": "Podcast",
-   "azione": "peliculas",
+   "voce": "Tg La7",
+   "azione": "episodios",
    "esito": "OK",
-   "titoli": 17
+   "titoli": 20
+  },
+  {
+   "voce": "Coffee Tech",
+   "azione": "episodios",
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "txt70741 …",
@@ -138,61 +145,61 @@
    "titoli": 3
   }
  ],
- "sezioni_riepilogo": "7 ok su 7",
+ "sezioni_riepilogo": "8 ok su 8",
  "rete": [
   {
    "url": "https://www.la7play.it/api/gql/f7034d55158fc906",
    "status": 200,
    "byte": 47524,
-   "secondi": 0.7,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/01.html"
-  },
-  {
-   "url": "https://www.la7play.it/dirette/la7",
-   "status": 200,
-   "byte": 131751,
-   "secondi": 0.1,
-   "titolo_pagina": "La7 in diretta | La7",
-   "file": "pagine/02.html"
   },
   {
    "url": "https://www.la7play.it/100minuti",
    "status": 200,
    "byte": 109945,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "100 minuti | La7",
-   "file": "pagine/03.html"
+   "file": "pagine/02.html"
   },
   {
    "url": "https://www.la7play.it/100minuti/puntate",
    "status": 200,
    "byte": 187071,
-   "secondi": 0.1,
+   "secondi": 0.0,
    "titolo_pagina": "Puntate di 100 minuti | La7",
-   "file": "pagine/04.html"
+   "file": "pagine/03.html"
   },
   {
    "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465",
    "status": 200,
    "byte": 90078,
-   "secondi": 0.3,
+   "secondi": 0.4,
    "titolo_pagina": "100 Minuti - Senza tetto né legge | La7",
-   "file": "pagine/05.html"
+   "file": "pagine/04.html"
   },
   {
    "url": "https://www.la7play.it/dirette/la7",
    "status": 200,
-   "byte": 131751,
+   "byte": 131725,
    "secondi": 0.1,
    "titolo_pagina": "La7 in diretta | La7",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
+   "status": 200,
+   "byte": 871202,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/06.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
    "byte": 871202,
-   "secondi": 0.8,
+   "secondi": 0.1,
    "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/07.html"
   },
@@ -221,18 +228,18 @@
    "file": "pagine/10.html"
   },
   {
-   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 871202,
-   "secondi": 0.1,
-   "titolo_pagina": "Guida TV LA7 | La7",
+   "byte": 539262,
+   "secondi": 0.5,
+   "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/11.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
    "byte": 539262,
-   "secondi": 0.6,
+   "secondi": 0.1,
    "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/12.html"
   },
@@ -253,31 +260,17 @@
    "file": "pagine/14.html"
   },
   {
-   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
-   "status": 200,
-   "byte": 539262,
-   "secondi": 0.1,
-   "titolo_pagina": "Guida TV LA7 Cinema | La7",
-   "file": "pagine/15.html"
-  },
-  {
    "url": "https://www.la7play.it/api/gql/f7034d55158fc906",
    "status": 200,
    "byte": 47524,
    "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.la7play.it/dirette/la7",
-   "status": 200,
-   "byte": 131725,
-   "secondi": 0.3,
-   "titolo_pagina": "La7 in diretta | La7"
+   "titolo_pagina": "",
+   "file": "pagine/15.html"
   },
   {
    "url": "https://www.la7play.it/film",
    "status": 200,
-   "byte": 155472,
+   "byte": 155020,
    "secondi": 0.1,
    "titolo_pagina": "Film | La7"
   },
@@ -289,17 +282,38 @@
    "titolo_pagina": "Documentari | La7"
   },
   {
-   "url": "https://www.la7play.it/podcast",
+   "url": "https://www.la7play.it/tgla7",
    "status": 200,
-   "byte": 101644,
+   "byte": 83988,
+   "secondi": 0.0,
+   "titolo_pagina": "Tg La7 | La7"
+  },
+  {
+   "url": "https://www.la7play.it/tgla7/puntate",
+   "status": 200,
+   "byte": 178137,
+   "secondi": 0.0,
+   "titolo_pagina": "Puntate di Tg La7 | La7"
+  },
+  {
+   "url": "https://www.la7play.it/coffee-tech",
+   "status": 200,
+   "byte": 79678,
    "secondi": 0.1,
-   "titolo_pagina": "Podcast | La7"
+   "titolo_pagina": "Coffee Tech | La7"
+  },
+  {
+   "url": "https://www.la7play.it/coffee-tech/puntate",
+   "status": 200,
+   "byte": 151035,
+   "secondi": 0.1,
+   "titolo_pagina": "Puntate di Coffee Tech | La7"
   },
   {
    "url": "https://www.la7play.it/api/gql/4da1e384f8a63808/eyJxIjoiYXZhdGFyIn0",
    "status": 200,
    "byte": 2930,
-   "secondi": 0.2,
+   "secondi": 0.5,
    "titolo_pagina": ""
   }
  ],
