@@ -1,0 +1,47 @@
+name: Prova la riproduzione di alcune pagine
+
+# Apre le pagine con un browser, preme play e salva in rapporti/riproduzione/ manifest, token e la ricetta imparata.
+
+on:
+  workflow_dispatch:
+    inputs:
+      indirizzi:
+        description: "Indirizzi completi separati da spazio"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installa
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Prova
+        env:
+          INDIRIZZI: ${{ github.event.inputs.indirizzi }}
+        run: |
+          rm -rf rapporti/riproduzione
+          mkdir -p rapporti/riproduzione
+          python3 strumenti/prova_riproduzione.py $INDIRIZZI 2>&1 | tee rapporti/riproduzione/log.txt
+      - name: Salva
+        if: always()
+        run: |
+          git config user.name aandroide
+          git config user.email aandroide@users.noreply.github.com
+          for i in 1 2 3; do
+            git fetch -q origin master
+            git reset -q origin/master
+            git add rapporti/riproduzione
+            git commit -qm "Prova della riproduzione" || exit 0
+            git push -q origin HEAD:master && exit 0
+          done
+          exit 1
