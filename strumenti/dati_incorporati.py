@@ -168,10 +168,10 @@ def codice_helper():
 # Parte del controllo: riconosce la firma da una pagina
 # ---------------------------------------------------------------------------
 
-def _riconosci(dizionari):
+def _riconosci(dizionari, soglia=0.7):
     """Firma dei campi se la lista sembra un elenco di contenuti, altrimenti None."""
     dizionari = [_spacchetta(d) for d in dizionari]
-    campioni = dizionari[: min(len(dizionari), 40)]
+    campioni = dizionari[:400]
     firma = None
     for kt in TITOLO:
         for kl in LINK:
@@ -182,7 +182,7 @@ def _riconosci(dizionari):
                     u = u.get('url') or u.get('@id')
                 if isinstance(t, str) and t.strip() and isinstance(u, str) and (u.startswith('/') or u.startswith('http')):
                     buoni += 1
-            if buoni >= max(3, int(0.7 * len(campioni))):
+            if buoni >= max(3, int(soglia * len(campioni))):
                 if not firma or buoni > firma['buoni']:
                     firma = {'titolo': kt, 'link': kl, 'buoni': buoni}
     if not firma:
@@ -195,7 +195,7 @@ def _riconosci(dizionari):
                 conteggio[k] = conteggio.get(k, 0) + 1
         if conteggio:
             k = max(conteggio, key=conteggio.get)
-            if conteggio[k] >= 0.5 * len(campioni):
+            if conteggio[k] >= 0.5 * firma['buoni']:
                 firma[nome] = k
     return firma
 
@@ -217,7 +217,7 @@ def rileva(h):
                 for k, lf in figli.items():
                     if len(lf) < 3 or len(lista) < 2:
                         continue
-                    firma = _riconosci(lf)
+                    firma = _riconosci(lf, 0.1)
                     if not firma:
                         continue
                     percorsi = list(GRUPPO)
