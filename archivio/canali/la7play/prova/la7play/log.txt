@@ -1,0 +1,37 @@
+Canale la7play | indirizzo https://www.la7play.it
+== mainlist
+   -> 6 voci
+      peliculas | Dirette | https://www.la7play.it/dirette/la7
+      peliculas | Programmi | https://www.la7play.it/programmi
+      peliculas | Film | https://www.la7play.it/film
+      peliculas | Documentari | https://www.la7play.it/documentari
+== lista "Dirette"
+   -> 16 voci
+      findvideos | Otto e mezzo | https://www.la7play.it/otto-e-mezzo
+      findvideos | La torre di babele | https://www.la7play.it/la-torre-di-babele
+      findvideos | diMartedì | https://www.la7play.it/dimartedi
+      findvideos | Una giornata particolare | https://www.la7play.it/una-giornata-particolare
+== findvideos su "Otto e mezzo"
+   -> 0 voci
+== lista "Programmi"
+   -> 0 voci
+== lista "Film"
+   -> 0 voci
+Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (4)
+    top | ('Dirette', ['/dirette/la7', 'peliculas', '', 'tvshow'])
+    top | ('Programmi', ['/programmi', 'peliculas', '', 'tvshow'])
+    top | ('Film', ['/film', 'peliculas', '', 'movie'])
+    top | ('Documentari', ['/documentari', 'peliculas', '', 'tvshow'])
+== controllo di tutte le sezioni
+   SEZIONE Dirette -> OK 16 
+   SEZIONE Programmi -> VUOTA   | ultima pagina: {'url': 'https://www.la7play.it/programmi', 'status': 200, 'byte': 104635, 'titolo_pagina': 'Programmi | La7'}
+   SEZIONE Film -> VUOTA   | ultima pagina: {'url': 'https://www.la7play.it/film', 'status': 200, 'byte': 155103, 'titolo_pagina': 'Film | La7'}
+   SEZIONE Documentari -> VUOTA   | ultima pagina: {'url': 'https://www.la7play.it/documentari', 'status': 200, 'byte': 67715, 'titolo_pagina': 'Documentari | La7'}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://www.la7play.it/?s=avatar', 'status': 200, 'byte': 151534, 'titolo_pagina': 'La7 - Video, news, dibattiti e approfondimenti'}
+SEZIONI: 1 ok su 5
+   SEZIONE SENZA TITOLI: Programmi | VUOTA
+   SEZIONE SENZA TITOLI: Film | VUOTA
+   SEZIONE SENZA TITOLI: Documentari | VUOTA
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
+VERDETTO: SI FERMA A: findvideos su "Otto e mezzo"

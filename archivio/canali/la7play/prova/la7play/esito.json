@@ -1,0 +1,174 @@
+{
+ "canale": "la7play",
+ "host": "https://www.la7play.it",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 6
+  },
+  {
+   "passo": "lista \"Dirette\"",
+   "esito": "OK",
+   "voci": 16
+  },
+  {
+   "passo": "findvideos su \"Otto e mezzo\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"Programmi\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"Film\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [
+  "top | ('Dirette', ['/dirette/la7', 'peliculas', '', 'tvshow'])",
+  "top | ('Programmi', ['/programmi', 'peliculas', '', 'tvshow'])",
+  "top | ('Film', ['/film', 'peliculas', '', 'movie'])",
+  "top | ('Documentari', ['/documentari', 'peliculas', '', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Dirette",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 16
+  },
+  {
+   "voce": "Programmi",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.la7play.it/programmi",
+     "status": 200,
+     "byte": 104635,
+     "titolo_pagina": "Programmi | La7"
+    }
+   ]
+  },
+  {
+   "voce": "Film",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.la7play.it/film",
+     "status": 200,
+     "byte": 155103,
+     "titolo_pagina": "Film | La7"
+    }
+   ]
+  },
+  {
+   "voce": "Documentari",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.la7play.it/documentari",
+     "status": 200,
+     "byte": 67715,
+     "titolo_pagina": "Documentari | La7"
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.la7play.it/?s=avatar",
+     "status": 200,
+     "byte": 151534,
+     "titolo_pagina": "La7 - Video, news, dibattiti e approfondimenti"
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "1 ok su 5",
+ "rete": [
+  {
+   "url": "https://www.la7play.it/dirette/la7",
+   "status": 200,
+   "byte": 131835,
+   "secondi": 1.1,
+   "titolo_pagina": "La7 in diretta | La7",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://www.la7play.it/otto-e-mezzo",
+   "status": 200,
+   "byte": 117092,
+   "secondi": 0.0,
+   "titolo_pagina": "Otto e mezzo | La7",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://www.la7play.it/programmi",
+   "status": 200,
+   "byte": 104635,
+   "secondi": 0.0,
+   "titolo_pagina": "Programmi | La7",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://www.la7play.it/film",
+   "status": 200,
+   "byte": 155103,
+   "secondi": 0.0,
+   "titolo_pagina": "Film | La7",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://www.la7play.it/dirette/la7",
+   "status": 200,
+   "byte": 131835,
+   "secondi": 0.0,
+   "titolo_pagina": "La7 in diretta | La7",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://www.la7play.it/programmi",
+   "status": 200,
+   "byte": 104635,
+   "secondi": 0.0,
+   "titolo_pagina": "Programmi | La7",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://www.la7play.it/film",
+   "status": 200,
+   "byte": 155103,
+   "secondi": 0.0,
+   "titolo_pagina": "Film | La7",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://www.la7play.it/documentari",
+   "status": 200,
+   "byte": 67715,
+   "secondi": 0.0,
+   "titolo_pagina": "Documentari | La7",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://www.la7play.it/?s=avatar",
+   "status": 200,
+   "byte": 151534,
+   "secondi": 3.6,
+   "titolo_pagina": "La7 - Video, news, dibattiti e approfondimenti",
+   "file": "pagine/09.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: findvideos su \"Otto e mezzo\""
+}

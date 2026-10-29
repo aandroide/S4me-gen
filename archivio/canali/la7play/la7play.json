@@ -1,0 +1,26 @@
+{
+    "id": "la7play",
+    "name": "La7play",
+    "language": [
+        "ita"
+    ],
+    "active": true,
+    "thumbnail": "la7play.png",
+    "banner": "la7play.png",
+    "categories": [
+        "tvshow"
+    ],
+    "not_active": [
+        "include_in_newest"
+    ],
+    "settings": [
+        {
+            "id": "include_in_global_search",
+            "type": "bool",
+            "label": "Includi in Ricerca Globale",
+            "default": true,
+            "enabled": true,
+            "visible": true
+        }
+    ]
+}
