@@ -374,6 +374,15 @@ def _e_serie(url):
     return not re.search(r'-\d{4,}/?$', url.split('?')[0])
 
 
+def _secondi(d):
+    """Durata in secondi da 'PT1H56M39S', 'PT45M' oppure da un numero di secondi."""
+    d = str(d or '')
+    if d.isdigit():
+        return int(d)
+    m = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)(?:\.\d+)?S)?$', d)
+    return int(m.group(1) or 0) * 3600 + int(m.group(2) or 0) * 60 + int(m.group(3) or 0) if m else 0
+
+
 def _dettagli(item, itemlist, forza=False):
     """Nelle liste di film: trama, anno, durata, generi e regista dalla pagina di ogni film o puntata (richieste in parallelo)."""
     if (item.contentType != 'movie' and not forza) or not itemlist:
@@ -387,15 +396,22 @@ def _dettagli(item, itemlist, forza=False):
             h = _pagina(it.url)
         except Exception:
             return {}
+        unito = {}
         for blocco in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', h, re.S):
             try:
                 j = json.loads(blocco)
             except Exception:
                 continue
             for n in (j.get('@graph', [j]) if isinstance(j, dict) else j):
-                if isinstance(n, dict) and n.get('@type') in ('Movie', 'TVEpisode', 'VideoObject') and n.get('description'):
-                    return n
-        return {}
+                if isinstance(n, dict) and n.get('@type') in ('Movie', 'TVEpisode', 'VideoObject'):
+                    for k, v in n.items():
+                        if v and k not in unito:
+                            unito[k] = v
+        if not unito.get('duration'):  # la durata puo stare solo nei dati della pagina
+            m = re.search(r'"duration":"?(PT[0-9HMS.]+|\d+)', h)
+            if m:
+                unito['duration'] = m.group(1)
+        return unito
 
     try:
         with ThreadPoolExecutor(max_workers=8) as ex:
@@ -413,9 +429,9 @@ def _dettagli(item, itemlist, forza=False):
             it.infoLabels['plot'] = trama
         if re.match(r'\d{4}$', str(n.get('dateCreated', ''))):
             it.infoLabels['year'] = int(n['dateCreated'])
-        d = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', n.get('duration', '') or '')
-        if d and any(d.groups()):
-            it.infoLabels['duration'] = int(d.group(1) or 0) * 3600 + int(d.group(2) or 0) * 60 + int(d.group(3) or 0)
+        sec = _secondi(n.get('duration'))
+        if sec:
+            it.infoLabels['duration'] = sec
         gen = n.get('genre', '')
         gen = [g for g in (gen if isinstance(gen, list) else [gen]) if g and g != 'Film']
         if gen:

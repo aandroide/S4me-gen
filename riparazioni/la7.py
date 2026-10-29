@@ -240,6 +240,15 @@ def episodios(item):
     return itemlist
 
 
+def _secondi(d):
+    """Durata in secondi da 'PT1H56M39S', 'PT45M' oppure da un numero di secondi."""
+    d = str(d or '')
+    if d.isdigit():
+        return int(d)
+    m = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)(?:\.\d+)?S)?$', d)
+    return int(m.group(1) or 0) * 3600 + int(m.group(2) or 0) * 60 + int(m.group(3) or 0) if m else 0
+
+
 def _dettagli(itemlist):
     """Trama, anno, durata, generi e regista dalla pagina di ogni film o puntata (richieste in parallelo)."""
     from concurrent.futures import ThreadPoolExecutor
@@ -247,10 +256,18 @@ def _dettagli(itemlist):
     def leggi(it):
         if it.action != 'findvideos':
             return {}
-        for nodo in _ld(_scarica(it.url)):
-            if nodo.get('@type') in ('Movie', 'TVEpisode', 'VideoObject') and nodo.get('description'):
-                return nodo
-        return {}
+        h = _scarica(it.url)
+        unito = {}
+        for nodo in _ld(h):
+            if nodo.get('@type') in ('Movie', 'TVEpisode', 'VideoObject'):
+                for k, v in nodo.items():
+                    if v and k not in unito:
+                        unito[k] = v
+        if not unito.get('duration'):  # la durata puo stare solo nei dati della pagina
+            m = re.search(r'"duration":"?(PT[0-9HMS.]+|\d+)', h)
+            if m:
+                unito['duration'] = m.group(1)
+        return unito
 
     try:
         with ThreadPoolExecutor(max_workers=8) as ex:
@@ -268,9 +285,9 @@ def _dettagli(itemlist):
             it.infoLabels['plot'] = trama
         if re.match(r'\d{4}$', str(n.get('dateCreated', ''))):
             it.infoLabels['year'] = int(n['dateCreated'])
-        d = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', n.get('duration', '') or '')
-        if d and any(d.groups()):
-            it.infoLabels['duration'] = int(d.group(1) or 0) * 3600 + int(d.group(2) or 0) * 60 + int(d.group(3) or 0)
+        sec = _secondi(n.get('duration'))
+        if sec:
+            it.infoLabels['duration'] = sec
         gen = n.get('genre', '')
         gen = [g for g in (gen if isinstance(gen, list) else [gen]) if g and g != 'Film']
         if gen:
