@@ -20,6 +20,7 @@ Cosa fa:
     4. scrive <id>.py, <id>.json, la riga per channels.json e un rapporto con cio che va controllato
 """
 
+import dati_incorporati as di
 import argparse
 import pprint
 import faulthandler
@@ -1902,6 +1903,34 @@ def episodios(item):
 """
 
 
+def genera_dati(nome, ctx):
+    """Canale per i siti che mettono i titoli nei dati della pagina: stesso scheletro del canale html, ma le liste
+    (programmi, episodi, giorni) si leggono dai dati incorporati con il lettore copiato nel file."""
+    import ast as _ast
+    ctx = dict(ctx, patron=ctx.get('patron') or r'(?P<url>x)(?P<title>x)', modo='html')
+    cod = genera_html(nome, ctx)
+    tree = _ast.parse(cod)
+    righe = cod.splitlines(keepends=True)
+    inizi, tot = [], 0
+    for r_ in righe:
+        inizi.append(tot)
+        tot += len(r_)
+    def inizio(f):
+        return inizi[min([d.lineno for d in f.decorator_list] + [f.lineno]) - 1]
+    def fine(f):
+        return inizi[f.end_lineno - 1] + len(righe[f.end_lineno - 1])
+    sost = []
+    for f in tree.body:
+        if isinstance(f, _ast.FunctionDef) and f.name in ('peliculas', 'episodios'):
+            sost.append((inizio(f), fine(f), ''))
+    for ini, fin, t in sorted(sost, reverse=True):
+        cod = cod[:ini] + t + cod[fin:]
+    # lettore dei dati e funzioni nuove subito dopo la riga dei header
+    punto = cod.index("headers = [['Referer', host + '/']]\n") + len("headers = [['Referer', host + '/']]\n")
+    cod = cod[:punto] + '\n\n# lettore dei dati incorporati nella pagina (generato da dati_incorporati.py)\n' + di.codice_helper() + '\n' + di.FUNZIONI_CANALE + '\n' + cod[punto:]
+    return cod
+
+
 def genera_api(nome, ctx):
     api = ctx['api']
     e = api['entry']
@@ -3085,6 +3114,11 @@ def analizza(url, args):
             modo = 'html'
         elif api:
             modo = 'api'
+        elif (_dati := di.rileva(scarica_grezzo(pagina_elenco))):
+            modo = 'dati'
+            ctx['dati'] = _dati['firma']
+            rp('La regex non trova i titoli nell\'html grezzo, ma la pagina contiene i dati dei titoli (Next.js o JSON-LD): '
+               'campi %s. Il canale li leggera da li.' % json.dumps({k: v for k, v in ctx['dati'].items() if k != 'buoni'}))
         elif card:
             modo = 'html'
             rp('ATTENZIONE: la regex non trova i titoli nell\'html grezzo: il sito genera la lista con JavaScript '
@@ -3455,6 +3489,8 @@ def main():
     os.makedirs(args.out, exist_ok=True)
     if ctx['modo'] == 'api':
         py = genera_api(nome, ctx)
+    elif ctx['modo'] == 'dati':
+        py = genera_dati(nome, ctx)
     else:
         if not ctx['patron']:
             ctx['patron'] = r'<a [^>]*?href="(?P<url>[^"]+)"[^>]*>.*?<img [^>]*?src="(?P<thumb>[^"]+)".*?(?P<title>[^<]+)<'

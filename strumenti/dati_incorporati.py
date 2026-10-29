@@ -7,11 +7,10 @@ trame stanno quasi sempre dentro un blocco di dati della pagina (self.__next_f.p
 Questo modulo trova la lista piu grande e omogenea, riconosce i campi (titolo, link, immagine, trama, orario) e,
 se i record sono raggruppati (per esempio puntate dentro un giorno), anche il gruppo.
 
-Le funzioni che iniziano con "_" e sono elencate in PARTI_CANALE vengono copiate nel canale corretto, cosi il
-canale non dipende da questo file. Il resto serve solo al controllo.
+La parte che arriva fino al marcatore di fine viene copiata nel canale corretto (codice_helper), cosi il
+canale non dipende da questo file. Il resto serve solo al controllo e alla generazione.
 """
 import html as _html
-import inspect
 import json
 import re
 
@@ -154,18 +153,8 @@ def _unisci(base, u):
     return base.rstrip('/') + '/' + u.lstrip('/')
 
 
-PARTI_CANALE = (_testi, _oggetti, _scegli, _liste, _spacchetta, _etichetta, _record, _trova, _unisci)
-
-
-def codice_helper():
-    """Sorgente da copiare nel canale corretto (usa solo json, re e html)."""
-    righe = ['import html as _html', 'import json', 'import re', '', '']
-    righe += [inspect.getsource(f).rstrip() + '\n\n' for f in PARTI_CANALE]
-    return '\n'.join(righe)
-
-
 # ---------------------------------------------------------------------------
-# Parte del controllo: riconosce la firma da una pagina
+# Riconoscimento della lista in una pagina (copiato anche nel canale)
 # ---------------------------------------------------------------------------
 
 def _riconosci(dizionari, soglia=0.7):
@@ -242,6 +231,19 @@ def rileva(h):
     return migliore
 
 
+#<<FINE_CANALE
+
+
+
+
+def codice_helper():
+    """Sorgente del lettore da copiare nel canale: tutto cio che sta tra gli import e il marcatore di fine."""
+    testo = open(__file__, encoding='utf-8').read()
+    ini = testo.index('import html as _html')
+    fin = testo.index('#<<' + 'FINE_CANALE')
+    return testo[ini:fin].rstrip() + '\n'
+
+
 # ---------------------------------------------------------------------------
 # Generazione delle funzioni del canale
 # ---------------------------------------------------------------------------
@@ -292,3 +294,87 @@ def funzioni_gruppi(nome_menu, azione_menu, nome_figli, azione_figli, firma):
     return itemlist
 ''' % {'nome': nome_figli, 'azione': azione_figli, 'firma': firma, 'titolo': _titolo_py(firma, 'r')}
     return menu, figli
+
+
+# Funzioni del canale generato per i siti che mettono i titoli nei dati della pagina (nessuna regex sull'html).
+FUNZIONI_CANALE = r'''
+def _pagina(url):
+    return httptools.downloadpage(url, headers=headers).data
+
+
+def _e_serie(url):
+    # un contenuto riproducibile ha un numero identificativo in fondo all'indirizzo; il resto sono programmi e serie
+    return not re.search(r'-\d{4,}/?$', url.split('?')[0])
+
+
+def _voci(item, elenco, pagina_corrente=0, html=''):
+    itemlist = []
+    for r in elenco:
+        serie = _e_serie(r['url'])
+        titolo = '%s - %s' % (r['orario'], r['titolo']) if r['orario'] else r['titolo']
+        itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=r['titolo'], show=r['titolo'],
+                                   contentTitle='' if serie else r['titolo'],
+                                   contentSerieName=r['titolo'] if serie else '',
+                                   contentType='tvshow' if serie else 'movie',
+                                   url=_unisci(host, r['url']),
+                                   thumbnail=_unisci(host, r['immagine']) if r['immagine'] else '',
+                                   fanart=_unisci(host, r['immagine']) if r['immagine'] else '',
+                                   plot=r['trama'], action='episodios' if serie else 'findvideos', forcethumb=True))
+    if pagina_corrente and len(itemlist) >= 10 and re.search(r'[?&]page=%d\b' % (pagina_corrente + 1), html):
+        base = item.url.split('?')[0]
+        itemlist.append(item.clone(title=support.typo(config.get_localized_string(30992), 'color kod bold'),
+                                   url='%s?page=%d' % (base, pagina_corrente + 1), page=pagina_corrente + 1,
+                                   action=item.action, thumbnail=support.thumb()))
+    return itemlist
+
+
+def peliculas(item):
+    support.info(item)
+    h = _pagina(item.url)
+    r = rileva(h)
+    if not r:
+        logger.error('nessuna lista di titoli nei dati della pagina %s' % item.url)
+        return []
+    if r['firma'].get('gruppo'):
+        return [item.clone(title=support.typo(etichetta, 'bold'), gruppo=etichetta, action='giorno')
+                for etichetta, elenco in r['gruppi']]
+    elenco = [x for _, rr in r['gruppi'] for x in rr]
+    return _voci(item, elenco, int(item.page or 1) if getattr(item, 'page', '') else 1, h)
+
+
+def giorno(item):
+    r = rileva(_pagina(item.url))
+    itemlist = []
+    for etichetta, elenco in (r['gruppi'] if r else []):
+        if etichetta == item.gruppo:
+            itemlist = _voci(item, elenco)
+    return itemlist
+
+
+def episodios(item):
+    support.info(item)
+    h = _pagina(item.url)
+    percorso = re.sub(r'^https?://[^/]+', '', item.url.split('?')[0]).rstrip('/')
+    candidati = [item.url]
+    for u in re.findall(r'href="(%s/[^"/#?]+)"' % re.escape(percorso), h):
+        if re.search(r'puntat|episod|stagion|video', u) and _unisci(host, u) not in candidati:
+            candidati.append(_unisci(host, u))
+    migliore, pagina_ok = [], item.url
+    for u in candidati:
+        hh = h if u == item.url else _pagina(u)
+        r = rileva(hh)
+        if not r:
+            continue
+        elenco = [x for _, rr in r['gruppi'] for x in rr if percorso in x['url'] and x['url'].rstrip('/') != percorso]
+        if len(elenco) > len(migliore):
+            migliore, pagina_ok, h = elenco, u, hh
+    if not migliore:
+        return []
+    item.url = pagina_ok
+    itemlist = _voci(item, migliore, int(item.page or 1) if getattr(item, 'page', '') else 1, h)
+    for it in itemlist:
+        if it.action == 'episodios':
+            it.action = 'findvideos'
+            it.contentType = 'episode'
+    return itemlist
+'''
