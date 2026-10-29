@@ -3301,6 +3301,19 @@ def analizza(url, args):
                     rp('   ' + riga_d)
             else:
                 pl = trova_ricerca_payload(rd.get('net', []))
+                if 'matrix' in (rd.get('url') or '').lower():
+                    # il sito ha aperto una pagina dei risultati: li' c'e la ricerca vera (i suggerimenti hanno un limite basso)
+                    try:
+                        r2 = s.vai(rd['url'], attesa=args.attesa)
+                        pl2 = trova_ricerca_payload(r2.get('net', []))
+                        cattura['ricerca_pagina'] = {'url': rd['url'], 'net': [{k: v for k, v in x.items() if k not in ('_resp', 'body')} for x in r2.get('net', [])][:60]}
+                        if pl2:
+                            pl = pl2
+                        elif di.rileva(scarica_grezzo(rd['url'])):
+                            pl = None
+                            rd = dict(rd, net=[])
+                    except BaseException as ex:
+                        rp('Pagina dei risultati non aperta: %s' % str(ex)[:80])
                 if pl:
                     ctx['search_gql'] = pl
                     rp('Ricerca via richiesta con parametri in base64:', pl['esempio'], '| parametri:', json.dumps(pl['payload']))
