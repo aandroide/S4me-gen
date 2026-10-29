@@ -2040,8 +2040,11 @@ def genera_dati(nome, ctx):
     # lettore dei dati e funzioni nuove subito dopo la riga dei header
     punto = cod.index("headers = [['Referer', host + '/']]\n") + len("headers = [['Referer', host + '/']]\n")
     costanti = ('ELENCHI_API = %s  # elenchi completi presi dalle richieste del sito: percorso -> codici delle richieste\n'
-                'CANALI_AZIONE = %s  # cosa apre ogni canale: findvideos (diretta) oppure peliculas (guida a giorni)\n') % (
-        pprint.pformat(ctx.get('elenchi_api') or {}, width=110), pprint.pformat(ctx.get('canali_azione') or {}, width=110))
+                'CANALI_AZIONE = %s  # cosa apre ogni canale: findvideos (diretta) oppure peliculas (guida a giorni)\n'
+                'ELENCHI_EXTRA = %s  # altre pagine che mostrano titoli mancanti nell\'elenco completo: percorso -> [(pagina, campi)]\n'
+                'ORDINA_ELENCHI = %s  # elenchi che il sito mostra in ordine alfabetico\n') % (
+        pprint.pformat(ctx.get('elenchi_api') or {}, width=110), pprint.pformat(ctx.get('canali_azione') or {}, width=110),
+        pprint.pformat(ctx.get('elenchi_extra') or {}, width=110), pprint.pformat(ctx.get('ordina_elenchi') or {}, width=110))
     video = ''
     if ctx.get('ricette_video'):
         video = '\n# riproduzione imparata dal sito (riproduzione.py)\n' + rip.codice_helper() + '\n' + rip.codice_canale(ctx['ricette_video']) + '\n'

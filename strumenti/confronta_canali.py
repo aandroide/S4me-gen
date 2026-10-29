@@ -74,13 +74,14 @@ def esplora(mod, nome):
         f = getattr(mod, az, None)
         if not f:
             continue
+        copia = it.clone()
         ingresso = perc(it.url) + ('#' + (getattr(it, 'gruppo', '') or getattr(it, 'day', '') or '') if getattr(it, 'gruppo', '') or getattr(it, 'day', '') else '')
         try:
             figli = f(it) or []
         except BaseException:
             errori.append('%s %s: %s' % (az, it.url, traceback.format_exc(limit=1)[-120:]))
             continue
-        nodi[len(nodi)] = {'da': ingresso or '(menu)', 'az': az, 'n': len(figli), 'urls': [perc(c.url) for c in figli if c.url],
+        nodi[len(nodi)] = {'da': ingresso or '(menu)', 'az': az, 'item': copia, 'n': len(figli), 'urls': [perc(c.url) for c in figli if c.url],
                            'titoli': [pulito(c.title) for c in figli]}
         if d + 1 < a.profondita:
             for c in figli[:a.larghezza]:
@@ -112,33 +113,55 @@ na, fa, ea = esplora(A, 'confr_rif')
 nb, fb, eb = esplora(B, 'confr_gen')
 
 righe = ['# Confronto dei canali', '', 'Riferimento: `%s`' % a.riferimento, 'Generato: `%s`' % a.generato, 'Sito: %s' % host, '']
+def coppie(n):
+    return set(zip(n['urls'], n['titoli'])) if len(n['urls']) == len(n['titoli']) else set(n['urls'])
+
+
+def jaccard(x, y):
+    return len(x & y) / float(len(x | y) or 1)
+
+
 def cerca(n, altri):
-    """Il nodo dell'altro canale che da le stesse voci (stessi indirizzi), o quello che ne ha di piu in comune."""
-    ins = set(n['urls'])
-    migl, punti = None, -1
+    """Il nodo dell'altro canale piu simile (stesse voci); parita: il primo."""
+    migl, punti = None, -1.0
     for k, m in altri.items():
-        comuni_ = len(ins & set(m['urls']))
-        if comuni_ > punti:
-            migl, punti = k, comuni_
+        j = jaccard(set(n['urls']), set(m['urls']))
+        if j > punti:
+            migl, punti = k, j
     return migl, punti
 
 
-uguali, diversi, senza = [], [], []
+uguali, titoli_diversi, diversi, senza, stessa_azione = [], [], [], [], []
 for k, n in na.items():
     if not n['urls']:
         continue
     j, p = cerca(n, nb)
     if j is not None and set(n['urls']) == set(nb[j]['urls']):
-        uguali.append(k)
-    elif j is not None and p >= 0.5 * len(set(n['urls'])):
+        (uguali if coppie(n) == coppie(nb[j]) else titoli_diversi).append((k, j))
+    elif j is not None and p >= 0.5:
         diversi.append((k, j, p))
     else:
-        senza.append(k)
+        # il generato non ha questa pagina nel menu: provo la stessa azione sullo stesso indirizzo
+        f = getattr(B, n['az'], None)
+        try:
+            figli = (f(n['item'].clone()) or []) if f else None
+        except BaseException:
+            figli = None
+        if figli is not None and set(perc(c.url) for c in figli if c.url) == set(n['urls']):
+            stessa_azione.append(k)
+        else:
+            senza.append(k)
 extra = [k for k, n in nb.items() if n['urls'] and not any(set(n['urls']) == set(m['urls']) for m in na.values())]
 righe += ['## Pagine', '',
-          'Pagine del riferimento: %d | con le stesse voci negli stessi indirizzi nel generato: %d | simili: %d | senza corrispondenza: %d' % (
-              len([1 for n in na.values() if n['urls']]), len(uguali), len(diversi), len(senza)),
+          'Pagine del riferimento: %d | uguali nel generato (stesse voci, stessi titoli): %d | stesse voci ma titoli diversi: %d | '
+          'raggiungibili solo con la stessa azione (non dal menu): %d | simili: %d | senza corrispondenza: %d' % (
+              len([1 for n in na.values() if n['urls']]), len(uguali), len(titoli_diversi), len(stessa_azione), len(diversi), len(senza)),
           'Pagine solo nel generato (voci in piu): %d' % len(extra), '']
+for k, j in titoli_diversi[:8]:
+    ta, tb = na[k]['titoli'], nb[j]['titoli']
+    righe.append('- titoli diversi in `%s` (%s): riferimento "%s" | generato "%s"' % (na[k]['da'], na[k]['az'], next((x for x in ta if x not in tb), ''), next((x for x in tb if x not in ta), '')))
+for k in stessa_azione:
+    righe.append('- `%s` (%s): nel generato non e una voce di menu ma da lo stesso risultato' % (na[k]['da'], na[k]['az']))
 for k, j, p in diversi:
     sa, sb = set(na[k]['urls']), set(nb[j]['urls'])
     righe.append('- `%s` (%s): riferimento %d voci, generato %d | solo riferimento: %d | solo generato: %d' % (na[k]['da'], na[k]['az'], len(sa), len(sb), len(sa - sb), len(sb - sa)))
@@ -181,8 +204,8 @@ for u in scelti:
         righe.append('    generato: %s' % json.dumps(vb)[:400])
     elif va:
         righe.append('    %s | %s | DRM %s | token %s' % (va[0].get('server'), va[0].get('url', '')[:110], va[0].get('drm') or 'no', va[0].get('con_token')))
-righe += ['', '## Esito', '', ('IDENTICI: ogni pagina del riferimento ha lo stesso elenco nel generato e i video sono uguali.' if (not diversi and not senza and ok_v == len(scelti))
-                              else 'DIFFERENZE: vedi sopra (pagine uguali %d su %d, video uguali %d su %d).' % (len(uguali), len([1 for n in na.values() if n['urls']]), ok_v, len(scelti)))]
+righe += ['', '## Esito', '', ('IDENTICI: ogni pagina del riferimento ha lo stesso elenco nel generato e i video sono uguali.' if (not diversi and not senza and not titoli_diversi and ok_v == len(scelti))
+                              else 'DIFFERENZE: vedi sopra (pagine uguali %d su %d, video uguali %d su %d).' % (len(uguali) + len(stessa_azione), len([1 for n in na.values() if n['urls']]), ok_v, len(scelti)))]
 os.makedirs(a.out, exist_ok=True)
 nome_out = os.path.splitext(os.path.basename(a.riferimento))[0]
 open(os.path.join(a.out, nome_out + '.md'), 'w', encoding='utf-8').write('\n'.join(righe) + '\n')

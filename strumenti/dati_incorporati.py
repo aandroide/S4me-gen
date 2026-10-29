@@ -17,7 +17,7 @@ import re
 TITOLO = ('titolo', 'title', 'name', 'nome', 'headline', 'label', 'canale')
 LINK = ('pathname', 'url', 'href', 'link', 'permalink', 'path', 'streamingUrl')
 IMMAGINE = ('imageUrl', 'image_url', 'thumbnailUrl', 'immagine_scena', 'immagine', 'image', 'img', 'thumbnail', 'thumb', 'poster', 'cover', 'immagine_programma',
-            'immagine_cover', 'picture')
+            'immagine_cover', 'picture', 'scenaImage', 'coverImage', 'programmaImage')
 TRAMA = ('excerpt', 'teaser', 'sinossi', 'plot', 'description', 'descrizione', 'abstract', 'occhiello', 'synopsis', 'summary', 'datePublished')
 PROGRAMMA = ('propertyName', 'programma', 'program', 'show', 'serie', 'series')
 ORARIO = ('ora', 'orario', 'time', 'start')
@@ -154,6 +154,20 @@ def _trova(h, firma):
     return migliore
 
 
+def _trova_tutte(h, firma):
+    """Come _trova, ma tutte le liste che hanno quei campi, non solo la piu grande (carosello diviso in piu liste)."""
+    out = []
+    for testo in _testi(h):
+        for ob in _oggetti(testo):
+            liste = []
+            _liste(ob, liste)
+            for lista in liste:
+                rec = [x for x in (_record(d, firma) for d in lista) if x]
+                if len(rec) >= 3 and (not firma.get('immagine') or sum(1 for x in rec if x['immagine']) >= 0.5 * len(rec)):
+                    out.append(rec)
+    return out
+
+
 def _unisci(base, u):
     if u.startswith('http'):
         return u
@@ -238,6 +252,23 @@ def rileva(h):
                     if n >= 3 and (not migliore or (not migliore['firma'].get('gruppo') and (bool(firma.get('immagine')), n, len(firma)) > (bool(migliore['firma'].get('immagine')), migliore['n'], len(migliore['firma'])))):
                         migliore = {'firma': firma, 'gruppi': gruppi, 'n': n}
     return migliore
+
+
+def rileva_tutte(h, minimo=3):
+    """Tutte le liste di contenuti della pagina (non solo la migliore): [{'firma':..., 'record': [...]}]."""
+    out = []
+    for testo in _testi(h):
+        for ob in _oggetti(testo):
+            liste = []
+            _liste(ob, liste)
+            for lista in liste:
+                firma = _riconosci(lista)
+                if not firma:
+                    continue
+                rec = [x for x in (_record(d, firma) for d in lista) if x]
+                if len(rec) >= minimo and not any(o['firma'] == firma and [x['url'] for x in o['record']] == [x['url'] for x in rec] for o in out):
+                    out.append({'firma': firma, 'record': rec})
+    return out
 
 
 def rileva_json(ob):
@@ -401,6 +432,20 @@ def _da_api(codici):
     return []
 
 
+def _extra(percorso, elenco):
+    # titoli che il sito mostra in altre pagine ma che l'elenco completo non ha (per esempio un telegiornale)
+    visti = {x['url'].split('?')[0].rstrip('/') for x in elenco}
+    nuovi = []
+    for pagina, firma in ELENCHI_EXTRA.get(percorso, []):
+        for rr in _trova_tutte(_pagina(host + pagina), firma):
+            for x in rr:
+                chiave = x['url'].split('?')[0].rstrip('/')
+                if chiave not in visti:
+                    visti.add(chiave)
+                    nuovi.append(x)
+    return nuovi
+
+
 def canali(item):
     itemlist = []
     percorso = re.sub(r'^https?://[^/]+', '', item.url.split('?')[0]).rstrip('/')
@@ -417,6 +462,11 @@ def peliculas(item):
     if percorso in ELENCHI_API:
         elenco = _da_api(ELENCHI_API[percorso])
         if elenco:
+            extra = _extra(percorso, elenco)
+            if extra:
+                elenco = elenco + extra
+                if ORDINA_ELENCHI.get(percorso):
+                    elenco.sort(key=lambda x: x['titolo'].lower())
             return _voci(item, elenco)
     h = _pagina(item.url)
     r = rileva(h)

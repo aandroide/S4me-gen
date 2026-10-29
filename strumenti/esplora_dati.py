@@ -125,9 +125,11 @@ def esplora(s, ctx, base, args, rp, cattura, grezzo_fn, pagina_elenco):
     rip.CARTELLA = os.path.join(getattr(args, 'out', 'canali_generati'), 'riproduzione')
     voci_ok, azioni, canali_azione = [], {}, {}
     liste_pagina, pagine_video, giocabili = {}, [], []
+    pagine_viste = []
 
     for nome, url in ctx['menu']:
         h = grezzo_fn(url)
+        pagine_viste.append(url)
         perc = percorso_di(url)
         fr = di.canali_fratelli(h, perc)
         if fr:
@@ -135,6 +137,7 @@ def esplora(s, ctx, base, args, rp, cattura, grezzo_fn, pagina_elenco):
             azioni[url] = 'canali'
             figlio = base + fr[0][1] if not fr[0][1].startswith('http') else fr[0][1]
             hf = grezzo_fn(figlio)
+            pagine_viste.append(figlio)
             r = di.rileva(hf)
             gruppi = bool(r and r['firma'].get('gruppo'))
             sezione = perc.strip('/').split('/')[0]
@@ -175,6 +178,13 @@ def esplora(s, ctx, base, args, rp, cattura, grezzo_fn, pagina_elenco):
     ctx['operazioni'] = ops
     if liste_pagina:
         ctx['elenchi_api'] = completa_liste(base, ops, liste_pagina, rp)
+
+    # titoli mostrati in altre pagine ma assenti dall'elenco completo
+    if ctx.get('elenchi_api'):
+        try:
+            trova_extra(ctx, base, grezzo_fn, pagine_viste, rp)
+        except BaseException as ex:
+            rp('Ricerca di titoli mancanti non completata: %s' % str(ex)[:100])
 
     # ricerca completa
     ric = trova_ricerca_ops(base, ops, rp)
@@ -275,6 +285,42 @@ def verifica_ricette(ctx, base, grezzo_fn, giocabili, rp, massimo=24):
             if not ok:
                 rp('    NON RIESCE: %s | %s' % (u, det))
     ctx['verifica_video'] = {str(i): [sum(1 for x in l if x[1]), len(l)] for i, l in esito.items()}
+
+
+def _forma(url):
+    """Forma dell'indirizzo: numero di pezzi del percorso e se ha un numero in fondo."""
+    p = [x for x in urlsplit(url).path.split('/') if x]
+    return (len(p), bool(re.search(r'-\d{4,}$', url.split('?')[0])))
+
+
+def trova_extra(ctx, base, grezzo_fn, pagine_viste, rp):
+    """Per ogni elenco completo preso dalla API cerca nelle altre pagine liste dello stesso tipo con titoli in piu."""
+    ctx['elenchi_extra'], ctx['ordina_elenchi'] = {}, {}
+    for perc, codici in ctx['elenchi_api'].items():
+        st, t = richiedi('%s/api/gql/%s' % (base, codici[0]), base)
+        r = di.rileva_json(json.loads(t))
+        principale = [x for _, g in r['gruppi'] for x in g]
+        chiavi = {x['url'].split('?')[0].rstrip('/') for x in principale}
+        forma = {_forma(di._unisci(base, x['url'])) for x in principale}
+        titoli = [x['titolo'] for x in principale]
+        ctx['ordina_elenchi'][perc] = titoli == sorted(titoli, key=str.lower)
+        for pagina in pagine_viste:
+            h = grezzo_fn(pagina)
+            for lista in di.rileva_tutte(h):
+                rec = lista['record']
+                if not lista['firma'].get('immagine'):
+                    continue
+                mie = {x['url'].split('?')[0].rstrip('/') for x in rec}
+                if len(mie & chiavi) < 0.3 * len(mie):
+                    continue
+                if {_forma(di._unisci(base, x['url'])) for x in rec} - forma:
+                    continue
+                nuovi = [x for x in rec if x['url'].split('?')[0].rstrip('/') not in chiavi]
+                if nuovi:
+                    ctx['elenchi_extra'].setdefault(perc, []).append((percorso_di(pagina), lista['firma']))
+                    rp('  %s: la pagina %s mostra anche %s' % (perc, percorso_di(pagina), [x['titolo'] for x in nuovi]))
+                    chiavi |= {x['url'].split('?')[0].rstrip('/') for x in nuovi}
+                    break
 
 
 def _e_serie(url):
