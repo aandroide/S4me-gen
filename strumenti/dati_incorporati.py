@@ -374,17 +374,8 @@ def _e_serie(url):
     return not re.search(r'-\d{4,}/?$', url.split('?')[0])
 
 
-def _secondi(d):
-    """Durata in secondi da 'PT1H56M39S', 'PT45M' oppure da un numero di secondi."""
-    d = str(d or '')
-    if d.isdigit():
-        return int(d)
-    m = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)(?:\.\d+)?S)?$', d)
-    return int(m.group(1) or 0) * 3600 + int(m.group(2) or 0) * 60 + int(m.group(3) or 0) if m else 0
-
-
 def _dettagli(item, itemlist, forza=False):
-    """Nelle liste di film: trama, anno, durata, generi e regista dalla pagina di ogni film o puntata (richieste in parallelo)."""
+    """Nelle liste di film: trama, anno, generi e regista dalla pagina di ogni film o puntata (richieste in parallelo)."""
     if (item.contentType != 'movie' and not forza) or not itemlist:
         return itemlist
     from concurrent.futures import ThreadPoolExecutor
@@ -407,10 +398,6 @@ def _dettagli(item, itemlist, forza=False):
                     for k, v in n.items():
                         if v and k not in unito:
                             unito[k] = v
-        if not unito.get('duration'):  # la durata puo stare solo nei dati della pagina
-            m = re.search(r'"duration":"?(PT[0-9HMS.]+|\d+)', h)
-            if m:
-                unito['duration'] = m.group(1)
         return unito
 
     try:
@@ -429,8 +416,7 @@ def _dettagli(item, itemlist, forza=False):
             it.infoLabels['plot'] = trama
         if re.match(r'\d{4}$', str(n.get('dateCreated', ''))):
             it.infoLabels['year'] = int(n['dateCreated'])
-        sec = _secondi(n.get('duration'))
-        it.infoLabels['duration'] = sec if sec else ''  # valore vuoto quando il sito non la da
+        it.infoLabels.pop('duration', None)  # la durata non si mostra
         gen = n.get('genre', '')
         gen = [g for g in (gen if isinstance(gen, list) else [gen]) if g and g != 'Film']
         if gen:
