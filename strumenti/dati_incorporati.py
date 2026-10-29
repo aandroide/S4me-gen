@@ -488,24 +488,17 @@ def _da_api(codici):
 
 
 def _in_onda(url):
-    """Palinsesto di oggi dalla pagina della diretta: programma in onda con orario di fine e i successivi."""
+    """Programma in onda adesso e relativa immagine, dal palinsesto nella pagina della diretta."""
     h = _pagina(url).replace('\\"', '"')
-    prog = []
     for blocco in h.split('{"ora":"')[1:]:
-        m = re.match(r'(\d{2}):(\d{2})","titolo":"([^"]*)","durata":(\d+)', blocco)
+        if '"isOnAir":true' not in blocco:
+            continue
+        m = re.match(r'\d{2}:\d{2}","titolo":"([^"]*)"', blocco)
         if not m:
             continue
-        fine = (int(m.group(1)) * 60 + int(m.group(2)) + int(m.group(4)) // 60) % 1440
-        prog.append(('%s:%s' % (m.group(1), m.group(2)), _html.unescape(m.group(3)).strip(),
-                     '%02d:%02d' % (fine // 60, fine % 60), '"isOnAir":true' in blocco))
-    for n, p in enumerate(prog):
-        if p[3]:
-            righe = ['In onda: %s %s (fino alle %s)' % (p[0], p[1], p[2])]
-            dopo = ['%s %s' % (q[0], q[1]) for q in prog[n + 1:n + 4]]
-            if dopo:
-                righe.append('Poi: ' + ', '.join(dopo))
-            return '\n'.join(righe)
-    return ''
+        img = re.search(r'"immagineScena":"([^"]+)"', blocco) or re.search(r'"immagineProgramma":"([^"]+)"', blocco)
+        return 'In onda adesso: ' + _html.unescape(m.group(1)).strip(), img.group(1) if img else ''
+    return '', ''
 
 
 def canali(item):
@@ -520,10 +513,12 @@ def canali(item):
             from concurrent.futures import ThreadPoolExecutor
             with ThreadPoolExecutor(max_workers=4) as ex:
                 trame = list(ex.map(lambda it: _in_onda(it.url), itemlist))
-            for it, t in zip(itemlist, trame):
+            for it, (t, img) in zip(itemlist, trame):
                 if t:
                     it.plot = t
                     it.infoLabels['plot'] = t
+                if img:
+                    it.fanart = img
         except Exception as e:
             logger.error('palinsesto delle dirette non letto %s' % e)
     return support.thumb(itemlist, live=True)
