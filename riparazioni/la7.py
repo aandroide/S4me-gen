@@ -288,8 +288,7 @@ def _dettagli(itemlist):
         if re.match(r'\d{4}$', str(n.get('dateCreated', ''))):
             it.infoLabels['year'] = int(n['dateCreated'])
         sec = _secondi(n.get('duration'))
-        if sec:
-            it.infoLabels['duration'] = sec
+        it.infoLabels['duration'] = sec if sec else ''  # valore vuoto quando il sito non la da
         gen = n.get('genre', '')
         gen = [g for g in (gen if isinstance(gen, list) else [gen]) if g and g != 'Film']
         if gen:
