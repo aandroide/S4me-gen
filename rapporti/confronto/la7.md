@@ -6,19 +6,14 @@ Sito: https://www.la7play.it
 
 ## Pagine
 
-Pagine del riferimento: 17 | uguali nel generato (stesse voci, stessi titoli): 15 | stesse voci ma titoli diversi: 0 | raggiungibili solo con la stessa azione (non dal menu): 1 | simili: 1 | senza corrispondenza: 0
-Pagine solo nel generato (voci in piu): 2
+Pagine del riferimento: 17 | uguali nel generato (stesse voci, stessi titoli): 17 | stesse voci ma titoli diversi: 0 | raggiungibili solo con la stessa azione (non dal menu): 0 | simili: 0 | senza corrispondenza: 0
+Pagine solo nel generato (voci in piu): 1
 
-- `/tgla7/puntate` (episodios): nel generato non e una voce di menu ma da lo stesso risultato
-- `/programmi` (peliculas): riferimento 71 voci, generato 73 | solo riferimento: 0 | solo generato: 2
-    solo generato: /coffee-tech
-    solo generato: /tgla7
-- in piu nel generato: `/programmi` (peliculas) con 73 voci
-- in piu nel generato: `/podcast` (peliculas) con 17 voci
+- in piu nel generato: `/coffee-tech` (episodios) con 21 voci
 
 ## Video
 
-Contenuti raggiunti da tutte e due: 164 (provati 10)
+Contenuti raggiunti da tutte e due: 173 (provati 10)
 
 - UGUALE `/dirette/la7`
     directo | https://d15umi5iaezxgx.cloudfront.net/LA7/DRM/DASH/Live.mpd | DRM com.widevine.alpha | token True
@@ -43,4 +38,4 @@ Contenuti raggiunti da tutte e due: 164 (provati 10)
 
 ## Esito
 
-DIFFERENZE: vedi sopra (pagine uguali 16 su 17, video uguali 10 su 10).
+IDENTICI: ogni pagina del riferimento ha lo stesso elenco nel generato e i video sono uguali.
