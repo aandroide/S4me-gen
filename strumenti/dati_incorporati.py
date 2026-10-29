@@ -497,8 +497,9 @@ def _in_onda(url):
         m = re.match(r'\d{2}:\d{2}","titolo":"([^"]*)"', blocco)
         if not m:
             continue
-        img = re.search(r'"immagineScena":"([^"]+)"', blocco) or re.search(r'"immagineProgramma":"([^"]+)"', blocco)
-        return 'In onda adesso: ' + _html.unescape(m.group(1)).strip(), img.group(1) if img else ''
+        poster = [u for u in re.findall(r'"ssrPosterUrl":"([^"]+)"', h) if 'guidatv/%s/' % chiave in u]
+        img = re.search(r'"immagineProgramma":"([^"]+)"', blocco) or re.search(r'"immagineScena":"([^"]+)"', blocco)
+        return 'In onda adesso: ' + _html.unescape(m.group(1)).strip(), poster[0] if poster else (img.group(1) if img else '')
     return '', ''
 
 
