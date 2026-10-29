@@ -1,62 +1,49 @@
 Canale la7play | indirizzo https://www.la7play.it
 == mainlist
    -> 8 voci
-      peliculas | Dirette | https://www.la7play.it/dirette/la7
-      peliculas | Guida Tv e Rivedi | https://www.la7play.it/guida-tv-rivedi/la7
+      canali | Dirette | https://www.la7play.it/dirette/la7
+      canali | Guida Tv e Rivedi | https://www.la7play.it/guida-tv-rivedi/la7
       peliculas | Programmi | https://www.la7play.it/programmi
       peliculas | Film | https://www.la7play.it/film
-== lista "Dirette"
-   -> 8 voci
-      episodios | Otto e mezzo | https://www.la7play.it/otto-e-mezzo
-      episodios | La torre di babele | https://www.la7play.it/la-torre-di-babele
-      episodios | diMartedì | https://www.la7play.it/dimartedi
-      episodios | Una giornata particolare | https://www.la7play.it/una-giornata-particolare
-== episodios su "Otto e mezzo"
-   -> 40 voci
-      findvideos | D'Alema: l'ex comunista e la destra al potere - Puntata del  | https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-28-10-2026-398171
-      findvideos | Del Vecchio vuole comprare Travaglio - Puntata del 27/10/202 | https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-27-10-2026-397980
-      findvideos | Le piazze, la destra e i conti con la storia - Puntata del 2 | https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-26-10-2026-397857
-      findvideos | Puntata del 23/10/2026 | https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-23-10-2026-397616
-== findvideos su "D'Alema: l'ex comunista e la destra al p"
-   -> 0 voci
-== lista "Guida Tv e Rivedi"
-   -> 8 voci
-      giorno | 22-10-2026 | https://www.la7play.it/guida-tv-rivedi/la7
-      giorno | 23-10-2026 | https://www.la7play.it/guida-tv-rivedi/la7
-      giorno | 24-10-2026 | https://www.la7play.it/guida-tv-rivedi/la7
-      giorno | 25-10-2026 | https://www.la7play.it/guida-tv-rivedi/la7
 == lista "Programmi"
-   -> 58 voci
-      episodios | Otto e mezzo | https://www.la7play.it/otto-e-mezzo
-      episodios | La torre di babele | https://www.la7play.it/la-torre-di-babele
-      episodios | diMartedì | https://www.la7play.it/dimartedi
-      episodios | Una giornata particolare | https://www.la7play.it/una-giornata-particolare
-== episodios su "Otto e mezzo"
-   -> 40 voci
-      findvideos | D'Alema: l'ex comunista e la destra al potere - Puntata del  | https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-28-10-2026-398171
-      findvideos | Del Vecchio vuole comprare Travaglio - Puntata del 27/10/202 | https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-27-10-2026-397980
-      findvideos | Le piazze, la destra e i conti con la storia - Puntata del 2 | https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-26-10-2026-397857
-      findvideos | Puntata del 23/10/2026 | https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-23-10-2026-397616
-== findvideos su "D'Alema: l'ex comunista e la destra al p"
-   -> 0 voci
-Nessuna voce da riprodurre trovata
+   -> 71 voci
+      episodios | 100 minuti | https://www.la7play.it/100minuti
+      episodios | Amarsi un po' - Istruzioni per l'uso | https://www.la7play.it/amarsi-un-po
+      episodios | Atlantide | https://www.la7play.it/atlantide
+      episodios | Barbero Risponde | https://www.la7play.it/barbero-risponde
+== episodios su "100 minuti"
+   -> 21 voci
+      findvideos | 100 Minuti - Senza tetto né legge | https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465
+      findvideos | 100 minuti - IMMORTALITÀ. Cosa rende immortale il potere cri | https://www.la7play.it/100minuti/rivedila7/100-minuti-immortalita-cosa-rende-immortale-il-potere-cri
+      findvideos | 100 minuti - AVIDITÀ I soldi, le lobby e la politica | https://www.la7play.it/100minuti/rivedila7/100-minuti-avidita-i-soldi-le-lobby-e-la-politica-24-06-2
+      findvideos | 100 minuti - Milano siamo noi - Puntata del 16/6/2025 | https://www.la7play.it/100minuti/rivedila7/100-minuti-milano-siamo-noi-17-06-2025-600774
+== findvideos su "100 Minuti - Senza tetto né legge"
+   -> 1 voci
+      play | Direct | https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/cont
+== risoluzione directo https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/cont
+   -> VIDEO OK m3u8 206 
 == voci dichiarate in mainlist (6)
-    top | ('Dirette', ['/dirette/la7', 'peliculas', '', 'tvshow'])
-    top | ('Guida Tv e Rivedi', ['/guida-tv-rivedi/la7', 'peliculas', '', 'tvshow'])
-    top | ('Programmi', ['/programmi', 'peliculas', '', 'tvshow'])
+    top | ('Dirette', ['/dirette/la7', 'canali', '', 'movie'])
+    top | ('Guida Tv e Rivedi', ['/guida-tv-rivedi/la7', 'canali', '', 'tvshow'])
+    top | ('Programmi', ['/programmi', 'peliculas', '', 'movie'])
     top | ('Film', ['/film', 'peliculas', '', 'movie'])
-    top | ('Documentari', ['/documentari', 'peliculas', '', 'tvshow'])
-    top | ('Podcast', ['/podcast', 'peliculas', '', 'tvshow'])
+    top | ('Documentari', ['/documentari', 'peliculas', '', 'movie'])
+    top | ('Podcast', ['/podcast', 'peliculas', '', 'movie'])
 == controllo di tutte le sezioni
-   SEZIONE Dirette -> OK 8 
-   SEZIONE 22-10-2026 -> OK 28 
-   SEZIONE 23-10-2026 -> OK 27 
-   SEZIONE 24-10-2026 -> OK 25 
+   SEZIONE Dirette -> OK 2 
+   SEZIONE Giovedi 29 ottobre -> OK 9 
+   SEZIONE Mercoledi 28 ottobre -> OK 25 
+   SEZIONE Martedi 27 ottobre -> OK 25 
+   SEZIONE La7 -> SOTTOMENU  
+   SEZIONE Giovedi 29 ottobre -> OK 5 
+   SEZIONE Mercoledi 28 ottobre -> OK 7 
+   SEZIONE Martedi 27 ottobre -> OK 7 
+   SEZIONE La7Cinema -> SOTTOMENU  
    SEZIONE Guida Tv e Rivedi -> SOTTOMENU  
-   SEZIONE Programmi -> OK 58 
+   SEZIONE Programmi -> OK 71 
    SEZIONE Film -> OK 35 
    SEZIONE Documentari -> OK 16 
    SEZIONE Podcast -> OK 17 
    SEZIONE txt70741 … -> OK 3 
 SEZIONI: 7 ok su 7
-VERDETTO: SI FERMA A: findvideos su "D'Alema: l'ex comunista e la destra al p"
+VERDETTO: ARRIVA AL VIDEO

@@ -8,80 +8,102 @@
    "voci": 8
   },
   {
-   "passo": "lista \"Dirette\"",
-   "esito": "OK",
-   "voci": 8
-  },
-  {
-   "passo": "episodios su \"Otto e mezzo\"",
-   "esito": "OK",
-   "voci": 40
-  },
-  {
-   "passo": "findvideos su \"D'Alema: l'ex comunista e la destra al p\"",
-   "esito": "VUOTO",
-   "voci": 0
-  },
-  {
-   "passo": "lista \"Guida Tv e Rivedi\"",
-   "esito": "OK",
-   "voci": 8
-  },
-  {
    "passo": "lista \"Programmi\"",
    "esito": "OK",
-   "voci": 58
+   "voci": 71
   },
   {
-   "passo": "episodios su \"Otto e mezzo\"",
+   "passo": "episodios su \"100 minuti\"",
    "esito": "OK",
-   "voci": 40
+   "voci": 21
   },
   {
-   "passo": "findvideos su \"D'Alema: l'ex comunista e la destra al p\"",
-   "esito": "VUOTO",
-   "voci": 0
+   "passo": "findvideos su \"100 Minuti - Senza tetto né legge\"",
+   "esito": "OK",
+   "voci": 1
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "directo",
+   "url": "https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/content/entry/data/0/679/0_f0rztze5_0_g8ywvqlq_1,.mp4.urlset/master.m3u8",
+   "finale": "https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/content/entry/data/0/679/0_f0rztze5_0_g8ywvqlq_1,.mp4.urlset/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 206"
+  }
+ ],
  "menu_dichiarato": [
-  "top | ('Dirette', ['/dirette/la7', 'peliculas', '', 'tvshow'])",
-  "top | ('Guida Tv e Rivedi', ['/guida-tv-rivedi/la7', 'peliculas', '', 'tvshow'])",
-  "top | ('Programmi', ['/programmi', 'peliculas', '', 'tvshow'])",
+  "top | ('Dirette', ['/dirette/la7', 'canali', '', 'movie'])",
+  "top | ('Guida Tv e Rivedi', ['/guida-tv-rivedi/la7', 'canali', '', 'tvshow'])",
+  "top | ('Programmi', ['/programmi', 'peliculas', '', 'movie'])",
   "top | ('Film', ['/film', 'peliculas', '', 'movie'])",
-  "top | ('Documentari', ['/documentari', 'peliculas', '', 'tvshow'])",
-  "top | ('Podcast', ['/podcast', 'peliculas', '', 'tvshow'])"
+  "top | ('Documentari', ['/documentari', 'peliculas', '', 'movie'])",
+  "top | ('Podcast', ['/podcast', 'peliculas', '', 'movie'])"
  ],
  "sezioni": [
   {
    "voce": "Dirette",
-   "azione": "peliculas",
+   "azione": "canali",
    "esito": "OK",
-   "titoli": 8
+   "titoli": 2
   },
   {
    "voce": "Guida Tv e Rivedi",
-   "azione": "peliculas",
+   "azione": "canali",
    "esito": "SOTTOMENU",
-   "sottovoci": 8,
+   "sottovoci": 2,
    "figli": [
     {
-     "voce": "22-10-2026",
-     "azione": "giorno",
-     "esito": "OK",
-     "titoli": 28
+     "voce": "La7",
+     "azione": "peliculas",
+     "esito": "SOTTOMENU",
+     "sottovoci": 8,
+     "figli": [
+      {
+       "voce": "Giovedi 29 ottobre",
+       "azione": "giorno",
+       "esito": "OK",
+       "titoli": 9
+      },
+      {
+       "voce": "Mercoledi 28 ottobre",
+       "azione": "giorno",
+       "esito": "OK",
+       "titoli": 25
+      },
+      {
+       "voce": "Martedi 27 ottobre",
+       "azione": "giorno",
+       "esito": "OK",
+       "titoli": 25
+      }
+     ]
     },
     {
-     "voce": "23-10-2026",
-     "azione": "giorno",
-     "esito": "OK",
-     "titoli": 27
-    },
-    {
-     "voce": "24-10-2026",
-     "azione": "giorno",
-     "esito": "OK",
-     "titoli": 25
+     "voce": "La7Cinema",
+     "azione": "peliculas",
+     "esito": "SOTTOMENU",
+     "sottovoci": 8,
+     "figli": [
+      {
+       "voce": "Giovedi 29 ottobre",
+       "azione": "giorno",
+       "esito": "OK",
+       "titoli": 5
+      },
+      {
+       "voce": "Mercoledi 28 ottobre",
+       "azione": "giorno",
+       "esito": "OK",
+       "titoli": 7
+      },
+      {
+       "voce": "Martedi 27 ottobre",
+       "azione": "giorno",
+       "esito": "OK",
+       "titoli": 7
+      }
+     ]
     }
    ]
   },
@@ -89,7 +111,7 @@
    "voce": "Programmi",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 58
+   "titoli": 71
   },
   {
    "voce": "Film",
@@ -119,151 +141,137 @@
  "sezioni_riepilogo": "7 ok su 7",
  "rete": [
   {
-   "url": "https://www.la7play.it/dirette/la7",
+   "url": "https://www.la7play.it/api/gql/f7034d55158fc906",
    "status": 200,
-   "byte": 131835,
-   "secondi": 0.5,
-   "titolo_pagina": "La7 in diretta | La7",
+   "byte": 47524,
+   "secondi": 1.3,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://www.la7play.it/otto-e-mezzo",
+   "url": "https://www.la7play.it/100minuti",
    "status": 200,
-   "byte": 117092,
-   "secondi": 0.1,
-   "titolo_pagina": "Otto e mezzo | La7",
+   "byte": 109945,
+   "secondi": 0.2,
+   "titolo_pagina": "100 minuti | La7",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://www.la7play.it/otto-e-mezzo/puntate",
+   "url": "https://www.la7play.it/100minuti/puntate",
    "status": 200,
-   "byte": 211839,
-   "secondi": 0.3,
-   "titolo_pagina": "Puntate di Otto e mezzo | La7",
+   "byte": 187071,
+   "secondi": 0.4,
+   "titolo_pagina": "Puntate di 100 minuti | La7",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://www.la7play.it/otto-e-mezzo/video",
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465",
    "status": 200,
-   "byte": 127075,
-   "secondi": 0.1,
-   "titolo_pagina": "Video di Otto e mezzo | La7",
+   "byte": 90078,
+   "secondi": 0.3,
+   "titolo_pagina": "100 Minuti - Senza tetto né legge | La7",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-28-10-2026-398171",
+   "url": "https://www.la7play.it/dirette/la7",
    "status": 200,
-   "byte": 87332,
-   "secondi": 0.4,
-   "titolo_pagina": "D&#x27;Alema: l&#x27;ex comunista e la destra al potere - Puntata del 28/10/2026",
+   "byte": 131835,
+   "secondi": 0.1,
+   "titolo_pagina": "La7 in diretta | La7",
    "file": "pagine/05.html"
   },
   {
    "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
    "byte": 864497,
-   "secondi": 0.1,
+   "secondi": 0.2,
    "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://www.la7play.it/programmi",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 104635,
-   "secondi": 0.4,
-   "titolo_pagina": "Programmi | La7",
+   "byte": 864497,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://www.la7play.it/otto-e-mezzo",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 117092,
+   "byte": 864497,
    "secondi": 0.1,
-   "titolo_pagina": "Otto e mezzo | La7",
+   "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://www.la7play.it/otto-e-mezzo/puntate",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 211839,
+   "byte": 864497,
    "secondi": 0.1,
-   "titolo_pagina": "Puntate di Otto e mezzo | La7",
+   "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://www.la7play.it/otto-e-mezzo/video",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
    "status": 200,
-   "byte": 127075,
+   "byte": 864497,
    "secondi": 0.1,
-   "titolo_pagina": "Video di Otto e mezzo | La7",
+   "titolo_pagina": "Guida TV LA7 | La7",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://www.la7play.it/otto-e-mezzo/puntate/puntata-del-28-10-2026-398171",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 87332,
-   "secondi": 0.1,
-   "titolo_pagina": "D&#x27;Alema: l&#x27;ex comunista e la destra al potere - Puntata del 28/10/2026",
+   "byte": 539262,
+   "secondi": 0.5,
+   "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://www.la7play.it/dirette/la7",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 131835,
+   "byte": 539262,
    "secondi": 0.1,
-   "titolo_pagina": "La7 in diretta | La7",
+   "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 864497,
+   "byte": 539262,
    "secondi": 0.1,
-   "titolo_pagina": "Guida TV LA7 | La7",
+   "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
    "status": 200,
-   "byte": 864497,
+   "byte": 539262,
    "secondi": 0.1,
-   "titolo_pagina": "Guida TV LA7 | La7",
+   "titolo_pagina": "Guida TV LA7 Cinema | La7",
    "file": "pagine/14.html"
   },
   {
-   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
+   "url": "https://www.la7play.it/api/gql/f7034d55158fc906",
    "status": 200,
-   "byte": 864497,
+   "byte": 47524,
    "secondi": 0.1,
-   "titolo_pagina": "Guida TV LA7 | La7",
+   "titolo_pagina": "",
    "file": "pagine/15.html"
-  },
-  {
-   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
-   "status": 200,
-   "byte": 864497,
-   "secondi": 0.1,
-   "titolo_pagina": "Guida TV LA7 | La7"
-  },
-  {
-   "url": "https://www.la7play.it/programmi",
-   "status": 200,
-   "byte": 104635,
-   "secondi": 0.1,
-   "titolo_pagina": "Programmi | La7"
   },
   {
    "url": "https://www.la7play.it/film",
    "status": 200,
    "byte": 155472,
-   "secondi": 0.3,
+   "secondi": 0.1,
    "titolo_pagina": "Film | La7"
   },
   {
    "url": "https://www.la7play.it/documentari",
    "status": 200,
    "byte": 67715,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Documentari | La7"
   },
   {
@@ -274,12 +282,12 @@
    "titolo_pagina": "Podcast | La7"
   },
   {
-   "url": "https://www.la7play.it/ricerca?query=avatar",
+   "url": "https://www.la7play.it/api/gql/4da1e384f8a63808/eyJxIjoiYXZhdGFyIn0",
    "status": 200,
-   "byte": 47072,
-   "secondi": 0.5,
-   "titolo_pagina": "Ricerca | LA7 | La7"
+   "byte": 2930,
+   "secondi": 0.2,
+   "titolo_pagina": ""
   }
  ],
- "verdetto": "SI FERMA A: findvideos su \"D'Alema: l'ex comunista e la destra al p\""
+ "verdetto": "ARRIVA AL VIDEO"
 }
