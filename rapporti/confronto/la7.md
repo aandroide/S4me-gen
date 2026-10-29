@@ -6,14 +6,14 @@ Sito: https://www.la7play.it
 
 ## Pagine
 
-Pagine del riferimento: 17 | con le stesse voci negli stessi indirizzi nel generato: 14 | simili: 2 | senza corrispondenza: 1
-Pagine solo nel generato (voci in piu): 1
+Pagine del riferimento: 17 | uguali nel generato (stesse voci, stessi titoli): 15 | stesse voci ma titoli diversi: 0 | raggiungibili solo con la stessa azione (non dal menu): 1 | simili: 1 | senza corrispondenza: 0
+Pagine solo nel generato (voci in piu): 2
 
-- `/guida-tv-rivedi/la7` (replay_giorni): riferimento 1 voci, generato 2 | solo riferimento: 0 | solo generato: 1
-    solo generato: /guida-tv-rivedi/la7-cinema
-- `/guida-tv-rivedi/la7-cinema` (replay_giorni): riferimento 1 voci, generato 2 | solo riferimento: 0 | solo generato: 1
-    solo generato: /guida-tv-rivedi/la7
-- senza corrispondenza nel generato: `/tgla7/puntate` (episodios) con 21 voci
+- `/tgla7/puntate` (episodios): nel generato non e una voce di menu ma da lo stesso risultato
+- `/programmi` (peliculas): riferimento 71 voci, generato 73 | solo riferimento: 0 | solo generato: 2
+    solo generato: /coffee-tech
+    solo generato: /tgla7
+- in piu nel generato: `/programmi` (peliculas) con 73 voci
 - in piu nel generato: `/podcast` (peliculas) con 17 voci
 
 ## Video
@@ -43,4 +43,4 @@ Contenuti raggiunti da tutte e due: 164 (provati 10)
 
 ## Esito
 
-DIFFERENZE: vedi sopra (pagine uguali 14 su 17, video uguali 10 su 10).
+DIFFERENZE: vedi sopra (pagine uguali 16 su 17, video uguali 10 su 10).
