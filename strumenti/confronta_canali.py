@@ -28,10 +28,12 @@ config.get_channel_url = lambda *x, **k: a.host
 host = a.host.rstrip('/')
 
 
-def carica(percorso, nome):
+def carica(percorso, nome, altro=''):
     dest = os.path.join(a.addon, 'channels')
     shutil.copy(percorso, os.path.join(dest, nome + '.py'))
     js = os.path.splitext(percorso)[0] + '.json'
+    if not os.path.exists(js) and altro:
+        js = os.path.splitext(altro)[0] + '.json'  # il file di descrizione del canale e lo stesso
     if os.path.exists(js):
         t = open(js, encoding='utf-8').read()
         try:
@@ -72,14 +74,14 @@ def esplora(mod, nome):
         f = getattr(mod, az, None)
         if not f:
             continue
+        ingresso = perc(it.url) + ('#' + (getattr(it, 'gruppo', '') or getattr(it, 'day', '') or '') if getattr(it, 'gruppo', '') or getattr(it, 'day', '') else '')
         try:
             figli = f(it) or []
         except BaseException:
             errori.append('%s %s: %s' % (az, it.url, traceback.format_exc(limit=1)[-120:]))
             continue
-        chiave = perc(it.url) + ('#' + (getattr(it, 'gruppo', '') or getattr(it, 'day', '') or '') if getattr(it, 'gruppo', '') or getattr(it, 'day', '') else '')
-        if chiave and chiave not in nodi:
-            nodi[chiave] = {'n': len(figli), 'urls': [perc(c.url) for c in figli if c.url], 'titoli': [pulito(c.title) for c in figli]}
+        nodi[len(nodi)] = {'da': ingresso or '(menu)', 'az': az, 'n': len(figli), 'urls': [perc(c.url) for c in figli if c.url],
+                           'titoli': [pulito(c.title) for c in figli]}
         if d + 1 < a.profondita:
             for c in figli[:a.larghezza]:
                 coda.append((c, d + 1))
@@ -104,30 +106,50 @@ def video(mod, nome, url):
     return out
 
 
-A = carica(a.riferimento, 'confr_rif')
-B = carica(a.generato, 'confr_gen')
+A = carica(a.riferimento, 'confr_rif', a.generato)
+B = carica(a.generato, 'confr_gen', a.riferimento)
 na, fa, ea = esplora(A, 'confr_rif')
 nb, fb, eb = esplora(B, 'confr_gen')
 
 righe = ['# Confronto dei canali', '', 'Riferimento: `%s`' % a.riferimento, 'Generato: `%s`' % a.generato, 'Sito: %s' % host, '']
-solo_a = sorted(set(na) - set(nb))
-solo_b = sorted(set(nb) - set(na))
-comuni = sorted(set(na) & set(nb))
-righe += ['## Pagine raggiunte', '', 'In tutte e due: %d | solo nel riferimento: %d | solo nel generato: %d' % (len(comuni), len(solo_a), len(solo_b)), '']
-uguali = [k for k in comuni if na[k]['urls'] == nb[k]['urls']]
-righe += ['Pagine con le stesse voci negli stessi indirizzi: %d su %d' % (len(uguali), len(comuni)), '']
-for k in comuni:
-    if na[k]['urls'] != nb[k]['urls']:
-        sa, sb = set(na[k]['urls']), set(nb[k]['urls'])
-        righe.append('- `%s`: riferimento %d voci, generato %d voci | solo riferimento: %d | solo generato: %d' % (k, na[k]['n'], nb[k]['n'], len(sa - sb), len(sb - sa)))
-        for u in sorted(sa - sb)[:3]:
-            righe.append('    solo riferimento: %s' % u)
-        for u in sorted(sb - sa)[:3]:
-            righe.append('    solo generato: %s' % u)
-if solo_a:
-    righe += ['', 'Pagine solo nel riferimento: ' + ', '.join('`%s`' % x for x in solo_a[:20])]
-if solo_b:
-    righe += ['', 'Pagine solo nel generato: ' + ', '.join('`%s`' % x for x in solo_b[:20])]
+def cerca(n, altri):
+    """Il nodo dell'altro canale che da le stesse voci (stessi indirizzi), o quello che ne ha di piu in comune."""
+    ins = set(n['urls'])
+    migl, punti = None, -1
+    for k, m in altri.items():
+        comuni_ = len(ins & set(m['urls']))
+        if comuni_ > punti:
+            migl, punti = k, comuni_
+    return migl, punti
+
+
+uguali, diversi, senza = [], [], []
+for k, n in na.items():
+    if not n['urls']:
+        continue
+    j, p = cerca(n, nb)
+    if j is not None and set(n['urls']) == set(nb[j]['urls']):
+        uguali.append(k)
+    elif j is not None and p >= 0.5 * len(set(n['urls'])):
+        diversi.append((k, j, p))
+    else:
+        senza.append(k)
+extra = [k for k, n in nb.items() if n['urls'] and not any(set(n['urls']) == set(m['urls']) for m in na.values())]
+righe += ['## Pagine', '',
+          'Pagine del riferimento: %d | con le stesse voci negli stessi indirizzi nel generato: %d | simili: %d | senza corrispondenza: %d' % (
+              len([1 for n in na.values() if n['urls']]), len(uguali), len(diversi), len(senza)),
+          'Pagine solo nel generato (voci in piu): %d' % len(extra), '']
+for k, j, p in diversi:
+    sa, sb = set(na[k]['urls']), set(nb[j]['urls'])
+    righe.append('- `%s` (%s): riferimento %d voci, generato %d | solo riferimento: %d | solo generato: %d' % (na[k]['da'], na[k]['az'], len(sa), len(sb), len(sa - sb), len(sb - sa)))
+    for u in sorted(sa - sb)[:3]:
+        righe.append('    solo riferimento: %s' % u)
+    for u in sorted(sb - sa)[:3]:
+        righe.append('    solo generato: %s' % u)
+for k in senza:
+    righe.append('- senza corrispondenza nel generato: `%s` (%s) con %d voci' % (na[k]['da'], na[k]['az'], na[k]['n']))
+for k in extra[:12]:
+    righe.append('- in piu nel generato: `%s` (%s) con %d voci' % (nb[k]['da'], nb[k]['az'], nb[k]['n']))
 if ea or eb:
     righe += ['', '## Errori', ''] + ['- riferimento: ' + e for e in ea[:5]] + ['- generato: ' + e for e in eb[:5]]
 
@@ -159,8 +181,8 @@ for u in scelti:
         righe.append('    generato: %s' % json.dumps(vb)[:400])
     elif va:
         righe.append('    %s | %s | DRM %s | token %s' % (va[0].get('server'), va[0].get('url', '')[:110], va[0].get('drm') or 'no', va[0].get('con_token')))
-righe += ['', '## Esito', '', ('IDENTICI: stesse pagine, stesse voci, stessi video.' if (not solo_a and not solo_b and len(uguali) == len(comuni) and ok_v == len(scelti))
-                              else 'DIFFERENZE: vedi sopra (pagine uguali %d/%d, video uguali %d/%d).' % (len(uguali), len(comuni), ok_v, len(scelti)))]
+righe += ['', '## Esito', '', ('IDENTICI: ogni pagina del riferimento ha lo stesso elenco nel generato e i video sono uguali.' if (not diversi and not senza and ok_v == len(scelti))
+                              else 'DIFFERENZE: vedi sopra (pagine uguali %d su %d, video uguali %d su %d).' % (len(uguali), len([1 for n in na.values() if n['urls']]), ok_v, len(scelti)))]
 os.makedirs(a.out, exist_ok=True)
 nome_out = os.path.splitext(os.path.basename(a.riferimento))[0]
 open(os.path.join(a.out, nome_out + '.md'), 'w', encoding='utf-8').write('\n'.join(righe) + '\n')
