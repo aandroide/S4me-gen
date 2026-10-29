@@ -10,45 +10,14 @@
    "  nessuna regex sostitutiva trovata automaticamente in /rivedila7/0/la7",
    "ROTTO: replay_menu /rivedila7/0/la7cinema | patron non trova titoli",
    "  campione della pagina salvato in rapporti/correzioni/la7/pagina_replay_menu_rivedila7_0_la7cinema.html",
-   "  regex proposta: 5 titoli su 5 card | gruppi persi: day, month, num",
-   "  gruppi non piu presenti nelle card e non essenziali per S4Me: day, month, num",
+   "  dati incorporati nella pagina: 48 elementi in 8 gruppi (campi: titolo, link, immagine, trama, orario)",
+   "  la regex sul codice html (5 card) e peggiore: scelgo i dati incorporati",
+   "  replay_menu: menu dei gruppi, replay: elenco del gruppo scelto (riscritte dai dati incorporati)",
    "file corretto scritto in rapporti/correzioni/la7: 1 pagine su 2 ora trovano titoli",
    "attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano"
   ],
   "correzione": true,
   "host": "https://www.la7.it",
-  "nuovo_host": "https://www.la7play.it",
-  "proposte": [
-   {
-    "funzione": "replay_menu",
-    "pagina": "/rivedila7/0/la7cinema",
-    "patron": "<div.*?<img (?=[^>]*?alt=\"(?P<title>[^\"]+)\")[^>]*?src=\"(?P<thumb>[^\"]+)\".*?<p(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-fg\\-default(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?font\\-manrope(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?lg:line\\-clamp\\-5(?:\\s[^\"]*)?\")[^>]*>\\s*(?P<plot>[^<]+).*?<a [^>]*?href=\"(?P<url>[^\"]+)\"",
-    "esempi": [
-     {
-      "title": "La7 Play Logo",
-      "thumb": "/_next/static/media/La7Play_logo.1wfjue8qdd8e-.png",
-      "plot": "TG La7 Edizione Notte - Direttore Enrico Mentana.",
-      "url": "/tgla7/puntate/puntata-del-29-10-2026-398179"
-     },
-     {
-      "title": "The Hollywood Collection",
-      "thumb": "https://images.la7play.it/media/c/h5542b58b/guidatv/LA7CINEMA/the-hollywood-collection-programma-7fe934e2.jpg/the-hollywood-collection/640x360.webp",
-      "plot": "Josephine è un angelo custode che sulla terra risolve problemi di persone in difficoltà, rendendole felici.",
-      "url": "/josephineangegardien/puntate/josephine-ange-gardien-398190"
-     },
-     {
-      "title": "MAGIC MIKE",
-      "thumb": "https://images.la7play.it/media/c/hd95e4ae2/guidatv/LA7CINEMA/magic-mike-programma-4440f6fc.jpg/magic-mike/640x360.webp",
-      "plot": "Di giorno Mike è un uomo dai molti talenti, di notte diventa Magic Mike stripper mozzafiato. Finché non conosce Adam, un giovane a cui vuole insegnare il mestiere, e la bella sorella di lui, Brooke.",
-      "url": "/film/magic-mike-398213"
-     }
-    ],
-    "perse": [
-     "day",
-     "month",
-     "num"
-    ]
-   }
-  ]
+  "nuovo_host": "https://www.la7play.it"
  }
 ]

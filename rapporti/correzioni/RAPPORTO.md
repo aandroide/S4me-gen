@@ -13,8 +13,9 @@ Sito: https://www.la7.it
 -   nessuna regex sostitutiva trovata automaticamente in /rivedila7/0/la7
 - ROTTO: replay_menu /rivedila7/0/la7cinema | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/la7/pagina_replay_menu_rivedila7_0_la7cinema.html
--   regex proposta: 5 titoli su 5 card | gruppi persi: day, month, num
--   gruppi non piu presenti nelle card e non essenziali per S4Me: day, month, num
+-   dati incorporati nella pagina: 48 elementi in 8 gruppi (campi: titolo, link, immagine, trama, orario)
+-   la regex sul codice html (5 card) e peggiore: scelgo i dati incorporati
+-   replay_menu: menu dei gruppi, replay: elenco del gruppo scelto (riscritte dai dati incorporati)
 - file corretto scritto in rapporti/correzioni/la7: 1 pagine su 2 ora trovano titoli
 - attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano
 - riga per channels.json: "la7": "https://www.la7play.it",

@@ -12,6 +12,139 @@ import html
 import json
 import ssl
 
+
+# lettore dei dati incorporati nella pagina (aggiunto dal controllo dei canali)
+import html as _html
+import json
+import re
+
+
+def _testi(h):
+    """Testi con dati JSON dentro la pagina: payload Next.js, __NEXT_DATA__, JSON-LD, script application/json."""
+    out = []
+    for m in re.finditer(r'self\.__next_f\.push\(\[\d+,\s*("(?:[^"\\]|\\.)*")\s*\]\)', h):
+        try:
+            out.append(json.loads(m.group(1)))
+        except Exception:
+            pass
+    for m in re.finditer(r'<script[^>]*type="application/(?:ld\+)?json"[^>]*>(.*?)</script>', h, re.S):
+        out.append(m.group(1))
+    for m in re.finditer(r'<script[^>]*id="__NEXT_DATA__"[^>]*>(.*?)</script>', h, re.S):
+        out.append(m.group(1))
+    return out
+
+
+def _oggetti(testo):
+    """Tutti gli array e oggetti JSON che iniziano con [{ oppure {" dentro il testo (senza rileggere quelli annidati)."""
+    dec = json.JSONDecoder()
+    i, n, trovati = 0, len(testo), []
+    rx = re.compile(r'\[\s*\{|\{\s*"')
+    while i < n:
+        m = rx.search(testo, i)
+        if not m:
+            break
+        try:
+            ob, fine = dec.raw_decode(testo, m.start())
+            trovati.append(ob)
+            i = fine
+        except Exception:
+            i = m.start() + 1
+    return trovati
+
+
+def _scegli(d, chiavi):
+    for k in chiavi:
+        v = d.get(k)
+        if isinstance(v, dict):
+            v = v.get('url') or v.get('contentUrl') or v.get('src')
+        if isinstance(v, list) and v:
+            v = v[0].get('url') if isinstance(v[0], dict) else v[0]
+        if isinstance(v, str) and v.strip():
+            return k, v.strip()
+    return None, ''
+
+
+def _liste(ob, uscita, profondita=0):
+    """Liste di almeno 3 dizionari, anche annidate."""
+    if profondita > 12:
+        return
+    if isinstance(ob, list):
+        dizionari = [x for x in ob if isinstance(x, dict)]
+        if len(dizionari) >= 3:
+            uscita.append(dizionari)
+        for x in ob:
+            _liste(x, uscita, profondita + 1)
+    elif isinstance(ob, dict):
+        for v in ob.values():
+            if isinstance(v, (list, dict)):
+                _liste(v, uscita, profondita + 1)
+
+
+def _spacchetta(d):
+    """JSON-LD: ListItem con item dentro, o record con workFeatured."""
+    if isinstance(d.get('item'), dict):
+        return dict(d['item'])
+    return d
+
+
+def _etichetta(p, percorso):
+    """Valore scalare di un campo del gruppo; il percorso puo essere annidato, per esempio '@attributes.data'."""
+    v = p
+    for k in percorso.split('.'):
+        v = v.get(k) if isinstance(v, dict) else None
+    return v if isinstance(v, (str, int)) else None
+
+
+def _record(d, firma):
+    d = _spacchetta(d)
+    kt = firma['titolo']
+    kl = firma['link']
+    t = d.get(kt)
+    u = d.get(kl)
+    if isinstance(u, dict):
+        u = u.get('url') or u.get('@id')
+    if not isinstance(t, str) or not isinstance(u, str) or not t.strip() or not u.strip():
+        return None
+    r = {'titolo': _html.unescape(t).strip(), 'url': u.strip()}
+    for nome in ('immagine', 'trama', 'orario'):
+        k = firma.get(nome)
+        r[nome] = _scegli(d, (k,))[1] if k else ''
+    return r
+
+
+def _trova(h, firma):
+    """Applica la firma (nomi dei campi) alla pagina e restituisce [(etichetta_gruppo, [record])]. Senza gruppo: etichetta ''."""
+    migliore = []
+    for testo in _testi(h):
+        for ob in _oggetti(testo):
+            liste = []
+            _liste(ob, liste)
+            for lista in liste:
+                if firma.get('gruppo'):
+                    gruppi = []
+                    for p in lista:
+                        figli = p.get(firma['figli'])
+                        if isinstance(figli, list):
+                            rec = [x for x in (_record(f, firma) for f in figli if isinstance(f, dict)) if x]
+                            if rec:
+                                gruppi.append((str(_etichetta(p, firma['gruppo'])), rec))
+                    if sum(len(r) for _, r in gruppi) > sum(len(r) for _, r in migliore):
+                        migliore = gruppi
+                else:
+                    rec = [x for x in (_record(d, firma) for d in lista) if x]
+                    if len(rec) > sum(len(r) for _, r in migliore):
+                        migliore = [('', rec)]
+    return migliore
+
+
+def _unisci(base, u):
+    if u.startswith('http'):
+        return u
+    if u.startswith('//'):
+        return 'https:' + u
+    return base.rstrip('/') + '/' + u.lstrip('/')
+
+
 if sys.version_info[0] >= 3:
     from concurrent import futures
     from urllib.parse import urlencode
@@ -78,29 +211,26 @@ def replay_channels(item):
     return itemlist
 
 
-@support.scrape
 def replay_menu(item):
-    action = 'replay'
-    patron = r'''<div.*?<img (?=[^>]*?alt="(?P<title>[^"]+)")[^>]*?src="(?P<thumb>[^"]+)".*?<p(?=[^>]*class="(?:[^"]*\s)?text\-fg\-default(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?font\-manrope(?:\s[^"]*)?")(?=[^>]*class="(?:[^"]*\s)?lg:line\-clamp\-5(?:\s[^"]*)?")[^>]*>\s*(?P<plot>[^<]+).*?<a [^>]*?href="(?P<url>[^"]+)"'''
-    def itemHook(item):
-        item.title = support.typo(item.day + ' ' + item.num + ' ' + item.month,'bold')
-        return item
-    return locals()
+    itemlist = []
+    h = httptools.downloadpage(item.url).data
+    for etichetta, elenco in _trova(h, {'titolo': 'titolo', 'link': 'pathname', 'buoni': 48, 'immagine': 'immagine_scena', 'trama': 'sinossi', 'orario': 'ora', 'gruppo': '@attributes.data', 'figli': 'programma'}):
+        itemlist.append(item.clone(title=support.typo(etichetta, 'bold'), gruppo=etichetta, action='replay'))
+    return itemlist
 
-
-@support.scrape
 def replay(item):
-    action = 'findvideos'
-    patron = r'<div class="orario">(?P<hour>[^<]+)</div>.*?<a href="(?P<url>[^"]+)">.*?data-background-image="(?P<t>[^"]+)".*?<h2>\s*(?P<name>[^<]+)\s*</h2>.*?<div class="occhiello">\s*(?P<plot>[^<]+)\s*</div>'
-    def itemHook(item):
-        item.title = support.typo(item.hour + ' - ' + item.name,'bold')
-        item.contentTitle = item.fulltitle = item.show = item.name
-        item.thumbnail = 'http:' + item.t
-        item.fanart = item.thumbnail
-        item.forcethumb = True
-        return item
-    return locals()
-
+    itemlist = []
+    h = httptools.downloadpage(item.url).data
+    for etichetta, elenco in _trova(h, {'titolo': 'titolo', 'link': 'pathname', 'buoni': 48, 'immagine': 'immagine_scena', 'trama': 'sinossi', 'orario': 'ora', 'gruppo': '@attributes.data', 'figli': 'programma'}):
+        if etichetta != item.gruppo:
+            continue
+        for r in elenco:
+            titolo = '%s - %s' % (r['orario'], r['titolo']) if r['orario'] else r['titolo']
+            itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=r['titolo'], show=r['titolo'],
+                                       url=_unisci(host, r['url']), thumbnail=_unisci(host, r['immagine']) if r['immagine'] else '',
+                                       fanart=_unisci(host, r['immagine']) if r['immagine'] else '', plot=r['trama'],
+                                       action='findvideos', forcethumb=True))
+    return itemlist
 
 def clean_title(t):
     t = html.unescape(t)
