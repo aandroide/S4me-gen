@@ -229,7 +229,7 @@ def rileva(h):
                             firma2 = dict(firma, gruppo=g, figli=k)
                             gruppi = _trova(h, firma2)
                             n = sum(len(r) for _, r in gruppi)
-                            if n >= 3 and len(gruppi) >= 2 and (not migliore or n > migliore['n']):
+                            if n >= 3 and len(gruppi) >= 2 and (not migliore or (n, len(firma2)) > (migliore['n'], len(migliore['firma']))):
                                 migliore = {'firma': firma2, 'gruppi': gruppi, 'n': n}
                             break
                 firma = _riconosci(lista)
@@ -237,7 +237,7 @@ def rileva(h):
                     gruppi = _trova(h, firma)
                     n = sum(len(r) for _, r in gruppi)
                     # a parita di elementi, una lista con gruppi vale di piu: gia gestita sopra
-                    if n >= 3 and (not migliore or n > migliore['n'] * 1.0 and not migliore['firma'].get('gruppo')):
+                    if n >= 3 and (not migliore or (not migliore['firma'].get('gruppo') and (n, len(firma)) > (migliore['n'], len(migliore['firma'])))):
                         migliore = {'firma': firma, 'gruppi': gruppi, 'n': n}
     return migliore
 
