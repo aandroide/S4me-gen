@@ -116,6 +116,13 @@ def _programmi():
 
 # ---------------------------------------------------------------- dirette e rivedi
 
+def _titolo_visibile(itemlist):
+    for it in itemlist:
+        if it.fulltitle == 'La7d':
+            it.fulltitle = 'La7Cinema'
+    return itemlist
+
+
 def _in_onda(url):
     # programma in onda adesso e relativa immagine; la pagina puo avere il flag isOnAir vecchio (cache),
     # quindi si sceglie dall'orario: l'ultimo programma del canale gia iniziato
@@ -177,7 +184,7 @@ def live(item):
             it.infoLabels['plot'] = t
         if img:
             it.fanart = img
-    return support.thumb(itemlist, live=True)
+    return _titolo_visibile(support.thumb(itemlist, live=True))
 
 
 def replay_channels(item):
@@ -186,7 +193,7 @@ def replay_channels(item):
         f_title = 'La7d' if nome == 'La7Cinema' else nome
         itemlist.append(item.clone(title=support.typo(nome, 'bold'), fulltitle=f_title, url=host + percorso,
                                    action='replay_giorni', forcethumb=True))
-    return support.thumb(itemlist, live=True)
+    return _titolo_visibile(support.thumb(itemlist, live=True))
 
 
 GIORNI = ['lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato', 'domenica']
