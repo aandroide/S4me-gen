@@ -224,15 +224,12 @@ def findvideos(item):
 
     itemlist = [item.clone(title=channeltools.get_channel_parameters(item.channel)['title'],
                            url=item.url.replace('/watch/', '/iframe/'), server='streamingcommunityws')]
-    # Riserva Vixsrc tramite ID TMDb, utile quando Vixcloud e' limitato a 720p o non risponde
+    # Vixsrc come server: l'indirizzo con l'ID TMDb passa dal riconoscimento dei server (servers/vixsrc.json)
     tmdb_id = item.infoLabels.get('tmdb_id') or item.infoLabels.get('tmdb_id_show')
-    vurl = None
+    data = ''
     if tmdb_id:
         if item.contentType == 'movie':
-            vurl = 'https://vixsrc.to/movie/%s' % tmdb_id
+            data = 'https://vixsrc.to/movie/%s' % tmdb_id
         elif item.season and item.episode:
-            vurl = 'https://vixsrc.to/tv/%s/%s/%s' % (tmdb_id, item.season, item.episode)
-    if vurl:
-        itemlist.append(item.clone(title='Vixsrc', url=vurl, server='vixsrc'))
-
-    return support.server(item, itemlist=itemlist, referer=False)
+            data = 'https://vixsrc.to/tv/%s/%s/%s' % (tmdb_id, item.season, item.episode)
+    return support.server(item, data=data, itemlist=itemlist, referer=False)
