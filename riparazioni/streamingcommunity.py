@@ -233,3 +233,13 @@ def findvideos(item):
         elif item.season and item.episode:
             data = 'https://vixsrc.to/tv/%s/%s/%s' % (tmdb_id, item.season, item.episode)
     return support.server(item, data=data, itemlist=itemlist, referer=False)
+
+
+def play(item):
+    # avvio diretto da un player esterno (TMDb Helper): nessuna finestra dei server ha preparato l'elenco,
+    # quindi si svuota quello vecchio, altrimenti allo stop S4Me riapre la finestra dell'ultimo titolo visto
+    if item.direct:
+        from core import db
+        db['player']['itemlist'] = []
+        db.close()
+    return [item]
