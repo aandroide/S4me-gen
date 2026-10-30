@@ -1,16 +1,15 @@
 {
  "canale": "streamingcommunity",
- "tmdb": "603",
+ "tmdb": "1399",
  "voci": [
   "play | streamingcommunityws | https://streamingcommunityz.day/it/iframe/1",
-  "play | vixsrc | https://vixsrc.to/movie/603",
-  "add_pelicula_to_library |  | https://streamingcommunityz.day/it/watch/1"
+  "play | vixsrc | https://vixsrc.to/tv/1399/1/1"
  ],
  "esito": "VIDEO OK",
  "risolto": [
   [
    "hls [VixSrc]",
-   "https://vixsrc.to/playlist/214325.m3u8?ub=1&token=61b8a289c40a0ce0c950a93f5f70a2bb&expires=1798508395&h=1&lang=it"
+   "https://vixsrc.to/playlist/629736.m3u8?ub=1&token=7254aad8d8b5cac551d27af1f1432773&expires=1798508441&h=1&lang=it"
   ]
  ],
  "video": "200 #EXTM3U #EXT-X-MEDIA"
