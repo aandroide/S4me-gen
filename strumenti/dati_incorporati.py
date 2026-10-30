@@ -428,6 +428,37 @@ def _dettagli(item, itemlist, forza=False):
     return itemlist
 
 
+def _immagini_mancanti(itemlist):
+    """Voci senza immagine nell'elenco: la si prende dalla loro pagina (og:image, escluso il logo del sito), al massimo 12 richieste."""
+    from concurrent.futures import ThreadPoolExecutor
+    vuoti = [it for it in itemlist if not it.thumbnail and it.action in ('episodios', 'findvideos') and it.url][:12]
+    if not vuoti:
+        return itemlist
+
+    def leggi(it):
+        try:
+            h = _pagina(it.url).replace('\\"', '"')
+        except Exception:
+            return ''
+        m = re.search(r'<meta property="og:image" content="([^"]+)"', h)
+        if m and 'logo' not in m.group(1).lower():
+            return m.group(1)
+        m = re.search(r'(https?://[^"\s\\]+/scena-\d+x\d+\.webp)', h)
+        return m.group(1) if m else ''
+
+    try:
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            immagini = list(ex.map(leggi, vuoti))
+    except Exception as e:
+        logger.error('immagini non lette %s' % e)
+        return itemlist
+    for it, img in zip(vuoti, immagini):
+        if img:
+            it.thumbnail = img
+            it.fanart = img
+    return itemlist
+
+
 def _voci(item, elenco, pagina_corrente=0, html='', azione_pagina='peliculas'):
     itemlist = []
     for r in elenco:
@@ -448,7 +479,7 @@ def _voci(item, elenco, pagina_corrente=0, html='', azione_pagina='peliculas'):
         itemlist.append(item.clone(title=support.typo(config.get_localized_string(30992), 'color kod bold'),
                                    url='%s?page=%d' % (base, pagina_corrente + 1), page=pagina_corrente + 1,
                                    action=azione_pagina, nextPage=True, thumbnail=support.thumb()))
-    return itemlist
+    return _immagini_mancanti(itemlist)
 
 
 GIORNI_IT = ['lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato', 'domenica']

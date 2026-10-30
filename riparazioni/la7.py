@@ -308,8 +308,37 @@ def peliculas(item):
             thumb = host + thumb
         itemlist.append(item.clone(title=support.typo(titolo, 'bold'), fulltitle=titolo, show=titolo, contentSerieName=titolo,
                                    plot=plot, thumbnail=thumb, fanart=thumb, url=host + percorso, action='episodios'))
+    _immagini_mancanti(itemlist)
     itemlist.sort(key=lambda i: i.fulltitle.lower())
     return itemlist
+
+
+def _immagine_programma(url):
+    # immagine dalla pagina del programma: og:image, altrimenti la scena della prima puntata
+    h = _pulisci(_scarica(url))
+    m = re.search(r'<meta property="og:image" content="([^"]+)"', h)
+    if m and 'la7-logo-og' not in m.group(1):
+        return m.group(1)
+    m = re.search(r'(https://images\.la7play\.it/video/[^"\s\\]+/scena-\d+x\d+\.webp)', h)
+    return m.group(1) if m else ''
+
+
+def _immagini_mancanti(itemlist):
+    # alcuni programmi non hanno immagine nell'elenco: la si prende dalla loro pagina (richieste in parallelo)
+    from concurrent.futures import ThreadPoolExecutor
+    vuoti = [it for it in itemlist if not it.thumbnail]
+    if not vuoti:
+        return
+    try:
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            immagini = list(ex.map(lambda it: _immagine_programma(it.url), vuoti))
+    except Exception as e:
+        logger.error('la7: immagini dei programmi non lette %s' % e)
+        return
+    for it, img in zip(vuoti, immagini):
+        if img:
+            it.thumbnail = img
+            it.fanart = img
 
 
 def episodios(item):
