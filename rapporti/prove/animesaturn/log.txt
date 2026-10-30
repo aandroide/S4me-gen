@@ -1,0 +1,39 @@
+Canale animesaturn | indirizzo https://www.animesaturn.net
+== mainlist
+   -> 8 voci
+      peliculas | Anime  | https://www.animesaturn.net/az-list
+      peliculas | ITA  | https://www.animesaturn.net/filter?languages=it
+      peliculas | SUB-ITA  | https://www.animesaturn.net/filter?languages=jp
+      peliculas | Più Votati  | https://www.animesaturn.net/filter?sort=best_rated
+== lista "Anime "
+   -> 31 voci
+      check | .hack//G.U. Returner | https://www.animesaturn.net/anime/hack-g-u-returner-8PrAP
+      check | .hack//Intermezzo (ITA) | https://www.animesaturn.net/anime/hack-intermezzo-ita-G9e3L
+      check | .hack//Quantum | https://www.animesaturn.net/anime/hack-quantum-q7Uz7
+      check | .hack//Roots | https://www.animesaturn.net/anime/hack-roots-12ifn
+== check su ".hack//G.U. Returner"
+   -> 1 voci
+      findvideos | 1 | https://www.animesaturn.net/episode/hack-g-u-returner-8PrAP/ep-1
+== findvideos su "1"
+   -> 1 voci
+      play | Server principale | https://play.saturncdn.net/embed/45138?token=f10e43b76d8304152f686dfdef88e160&expires=1793403477
+   play del canale -> directo https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token
+== risoluzione directo https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token
+   -> VIDEO OK 206 video/mp4 
+== voci dichiarate in mainlist (6)
+    menu | ('Anime', ['/az-list', 'peliculas', 'az'])
+    menu | ('ITA', ['/filter?languages=it', 'peliculas', 'filter'])
+    menu | ('SUB-ITA', ['/filter?languages=jp', 'peliculas', 'filter'])
+    menu | ('Più Votati', ['/filter?sort=best_rated', 'peliculas', 'filter'])
+    menu | ('In Corso', ['/ongoing', 'peliculas', 'ongoing'])
+    menu | ('Ultimi Episodi', ['/newest', 'peliculas', 'updated'])
+== controllo di tutte le sezioni
+   SEZIONE Anime -> OK 30 
+   SEZIONE ITA -> OK 30 
+   SEZIONE SUB-ITA -> OK 30 
+   SEZIONE Più Votati -> OK 30 
+   SEZIONE In Corso -> OK 30 
+   SEZIONE Ultimi Episodi -> OK 30 
+   SEZIONE txt70741 … -> OK 7 
+SEZIONI: 7 ok su 7
+VERDETTO: ARRIVA AL VIDEO

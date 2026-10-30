@@ -1,0 +1,246 @@
+Canale raiplay | indirizzo https://www.raiplay.it
+== mainlist
+   -> 15 voci
+      live | Dirette | https://www.raiplay.it/dirette
+      replayMenu | Replay | https://www.raiplay.it/guidatv
+      menu | Film | https://www.raiplay.it/film
+      menu | Serie italiane | https://www.raiplay.it/serieitaliane
+== lista "Film"
+   -> 15 voci
+      peliculas | Novità | https://www.raiplay.it/film
+      peliculas | Da non perdere | https://www.raiplay.it/film
+      peliculas | Stregati da Halloween | https://www.raiplay.it/film
+      peliculas | Dal libro al film | https://www.raiplay.it/film
+== menu su "Generi"
+   -> 10 voci
+      genres | Film sottotitolati | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
+      genres | Drammatico | https://www.raiplay.it/genere/Drammatico-9307f261-b0eb-4bf4-b07a-a63acddc24e9.html
+      genres | Commedia | https://www.raiplay.it/genere/Film---Commedia-6b833537-2e77-477e-9719-5d75716591ee.html
+      genres | Azione e Avventura | https://www.raiplay.it/genere/Film---Azione-e-avventura-0c950063-7964-4fb1-8976-d19cb083b367.html
+== genres su "Film sottotitolati"
+   -> 22 voci
+      peliculas | A | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
+      peliculas | B | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
+      peliculas | C | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
+      peliculas | D | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
+== peliculas su "A"
+   -> 14 voci
+      findvideos | A caccia del vedovo d'oro | https://www.raiplay.it/programmi/acacciadelvedovodoro
+      findvideos | A mano disarmata | https://www.raiplay.it/programmi/amanodisarmata
+      findvideos | A Private War | https://www.raiplay.it/programmi/aprivatewar
+      findvideos | A un passo dalla verità | https://www.raiplay.it/programmi/aunpassodallaverita
+== findvideos su "A caccia del vedovo d'oro"
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/raiplay.py", line 261, in findvideos
+    res = requests.get(getUrl(res['first_item_path'])).json()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+== lista "Serie italiane"
+   -> 11 voci
+      peliculas | Da non perdere | https://www.raiplay.it/serieitaliane
+      peliculas | Serie Original RaiPlay | https://www.raiplay.it/serieitaliane
+      peliculas | Serie tratte da libri | https://www.raiplay.it/serieitaliane
+      peliculas | Crimini e misfatti | https://www.raiplay.it/serieitaliane
+== menu su "Generi serie italiane"
+   -> 11 voci
+      genres | Serie sottotitolate | https://www.raiplay.it/genere/Serie-Sottotitolate-70526feb-348f-4a57-94c7-e570aa24b926.html
+      genres | Drammatico | https://www.raiplay.it/genere/Fiction---Drammatico-a25e89bc-d7e3-4ce4-a6c5-d8e081fc49d7.html
+      genres | Commedia | https://www.raiplay.it/genere/Fiction---Commedia-0a2e1a90-b257-4ae6-9695-8e4338cc320c.html
+      genres | Sentimentale | https://www.raiplay.it/genere/Fiction---Sentimentale-719f377c-b684-49e6-8360-0ec2008929f5.html
+== genres su "Serie sottotitolate"
+   -> 21 voci
+      peliculas | A | https://www.raiplay.it/genere/Serie-Sottotitolate-70526feb-348f-4a57-94c7-e570aa24b926.html
+      peliculas | B | https://www.raiplay.it/genere/Serie-Sottotitolate-70526feb-348f-4a57-94c7-e570aa24b926.html
+      peliculas | C | https://www.raiplay.it/genere/Serie-Sottotitolate-70526feb-348f-4a57-94c7-e570aa24b926.html
+      peliculas | D | https://www.raiplay.it/genere/Serie-Sottotitolate-70526feb-348f-4a57-94c7-e570aa24b926.html
+== peliculas su "A"
+   -> 3 voci
+      findvideos | Abramo | https://www.raiplay.it/programmi/abramo
+      episodios | Aldo Moro, il Professore | https://www.raiplay.it/programmi/aldomoroilprofessore
+      episodios | Alfredino - Una storia italiana | https://www.raiplay.it/programmi/alfredino-unastoriaitaliana
+== findvideos su "Abramo"
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/raiplay.py", line 258, in findvideos
+    res = requests.get(item.video_url).json()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+== lista "Serie Internazionali"
+   -> 7 voci
+      peliculas | Da non perdere | https://www.raiplay.it/serieinternazionali
+      peliculas | Drama | https://www.raiplay.it/serieinternazionali
+      peliculas | Serie Original RaiPlay | https://www.raiplay.it/serieinternazionali
+      peliculas | Crime | https://www.raiplay.it/serieinternazionali
+== menu su "Generi"
+   -> 7 voci
+      genres | Serie sottotitolate | https://www.raiplay.it/genere/Serie-Sottotitolate-70526feb-348f-4a57-94c7-e570aa24b926.html
+      genres | Giallo e Crime | https://www.raiplay.it/genere/SerieTv---Crime-f0b4ad99-41ae-48a1-86df-98657c0595da.html
+      genres | Commedia | https://www.raiplay.it/genere/SerieTv---Commedia-57032be3-798f-4d8e-99ad-02af03fde527.html
+      genres | Drammatico | https://www.raiplay.it/genere/Serie-TV---Drammatico-5e16c634-2077-45e3-8087-db64dbecdc73.html
+== genres su "Serie sottotitolate"
+   -> 21 voci
+      peliculas | A | https://www.raiplay.it/genere/Serie-Sottotitolate-70526feb-348f-4a57-94c7-e570aa24b926.html
+      peliculas | B | https://www.raiplay.it/genere/Serie-Sottotitolate-70526feb-348f-4a57-94c7-e570aa24b926.html
+      peliculas | C | https://www.raiplay.it/genere/Serie-Sottotitolate-70526feb-348f-4a57-94c7-e570aa24b926.html
+      peliculas | D | https://www.raiplay.it/genere/Serie-Sottotitolate-70526feb-348f-4a57-94c7-e570aa24b926.html
+== peliculas su "A"
+   -> 3 voci
+      findvideos | Abramo | https://www.raiplay.it/programmi/abramo
+      episodios | Aldo Moro, il Professore | https://www.raiplay.it/programmi/aldomoroilprofessore
+      episodios | Alfredino - Una storia italiana | https://www.raiplay.it/programmi/alfredino-unastoriaitaliana
+== findvideos su "Abramo"
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/raiplay.py", line 258, in findvideos
+    res = requests.get(item.video_url).json()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (13)
+    top | ('Dirette {bold}', ['/dirette', 'live', '/palinsesto/onAir.json'])
+    top | ('Replay {bold}', ['/guidatv', 'replayMenu', '/guidatv.json'])
+    menu | ('Film {bold}', ['/film', 'menu', '/tipologia/film/index.json'])
+    menu | ('Serie italiane {bold}', ['/serieitaliane', 'menu', '/tipologia/serieitaliane/index.json'])
+    menu | ('Serie Internazionali {bold}', ['/serieinternazionali', 'menu', '/tipologia/serieinternazionali/index.json'])
+    menu | ('Programmi TV{bold}', ['/programmi', 'menu', '/tipologia/programmi/index.json'])
+    menu | ('Documentari {bold}', ['/documentari', 'menu', '/tipologia/documentari/index.json'])
+    menu | ('Bambini {bold}', ['/bambini', 'menu', '/tipologia/bambini/index.json'])
+    menu | ('Teen {bold}', ['/teen', 'menu', '/tipologia/teen/index.json'])
+    menu | ('Musica e Teatro {bold}', ['/musica-e-teatro', 'menu', '/tipologia/musica-e-teatro/index.json'])
+    menu | ('Teche Rai {bold storia}', ['/techerai', 'menu', '/tipologia/techerai/index.json'])
+    menu | ('Learning {bold}', ['/learning', 'menu', '/tipologia/learning/index.json'])
+    menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
+== controllo di tutte le sezioni
+   SEZIONE Dirette -> OK 15 
+   SEZIONE Rai 1 -> OK 17 
+   SEZIONE Rai 2 -> OK 17 
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE str15 30 str30 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 33 
+   SEZIONE Rai 2 -> OK 32 
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE str14 29 str30 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 31 
+   SEZIONE Rai 2 -> OK 34 
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE str13 28 str30 -> SOTTOMENU  
+   SEZIONE Replay -> SOTTOMENU  
+   SEZIONE Novità -> OK 24 
+   SEZIONE Da non perdere -> OK 23 
+   SEZIONE Stregati da Halloween -> OK 18 
+   SEZIONE Film -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 25 
+   SEZIONE Serie Original RaiPlay -> OK 24 
+   SEZIONE Serie tratte da libri -> OK 25 
+   SEZIONE Serie italiane -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 25 
+   SEZIONE Drama -> OK 14 
+   SEZIONE Serie Original RaiPlay -> OK 24 
+   SEZIONE Serie Internazionali -> SOTTOMENU  
+   SEZIONE Intrattenimento -> OK 26 
+   SEZIONE Territori e itinerari -> OK 32 
+   SEZIONE Approfondimento -> OK 25 
+   SEZIONE Programmi TV -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 30 
+   SEZIONE Docu-serie Original -> OK 28 
+   SEZIONE Documentari Original -> OK 24 
+   SEZIONE Documentari -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 28 
+   SEZIONE Halloween night: arrivano le tenebre! -> OK 17 
+   SEZIONE Cinema bambini -> OK 24 
+   SEZIONE Bambini -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 36 
+   SEZIONE Next Star -> OK 21 
+   SEZIONE Un mondo di fumetti -> OK 15 
+   SEZIONE Teen -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 22 
+   SEZIONE Il teatro di Eduardo -> OK 25 
+   SEZIONE Musica classica -> OK 24 
+   SEZIONE Musica e Teatro -> SOTTOMENU  
+   SEZIONE Da non perdere -> OK 24 
+   SEZIONE BiblioTeche -> OK 24 
+   SEZIONE Sceneggiati -> VUOTA  
+   SEZIONE Programmi -> VUOTA  
+   SEZIONE Varietà -> VUOTA  
+   SEZIONE Generi -> SOTTOMENU SENZA TITOLI  
+   SEZIONE Teche Rai -> SOTTOMENU  
+   SEZIONE Learning -> ERRORE JSONDecodeError
+   SEZIONE L'offerta -> OK 55 
+   SEZIONE Rai Italy -> SOTTOMENU  
+   SEZIONE txt70741 … -> OK 8 
+SEZIONI: 13 ok su 14
+   SEZIONE SENZA TITOLI: Learning | ERRORE JSONDecodeError
+VERDETTO: SI FERMA A: findvideos su "A caccia del vedovo d'oro"

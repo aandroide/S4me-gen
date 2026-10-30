@@ -1,0 +1,232 @@
+{
+ "canale": "toonitalia",
+ "host": "https://toonitalia.xyz",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "lista \"Anime \"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "check su \"Scuola di polizia \"",
+   "esito": "OK",
+   "voci": 64
+  },
+  {
+   "passo": "findvideos su \"1x01 - La banda dei clown\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "voe",
+   "url": "https://voe.sx/e/ntl49uc3jz9h",
+   "finale": "https://ugc-cdn-caching-n3lwmd5hbnobft1obu.cloudwindow-route.com/engine/hls2/01/09773/ntl49uc3jz9h_,n,.urlset/master.m3u8?t=LE_zADvTy4CBO-aEDk4XnEWezynMiyCtemkN6Tnv4e0&s=1793360458&e=14400&f=48868532&",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
+ "menu_dichiarato": [
+  "menu | ('Anime', ['/category/anime', 'peliculas', '', 'undefined'])",
+  "menu | ('Anime ITA {submenu}', ['/anime-ita', 'peliculas', 'list', 'undefined'])",
+  "menu | ('Anime Sub-ITA {submenu}', ['/contatti', 'peliculas', 'list', 'undefined'])",
+  "menu | ('Film Animazione', ['/film-animazione', 'peliculas', 'list', 'undefined'])",
+  "menu | ('Serie TV', ['/serie-tv/', 'peliculas', 'list', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Anime",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Anime ITA",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Anime Sub-ITA",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "Film Animazione",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 11
+  }
+ ],
+ "sezioni_riepilogo": "6 ok su 6",
+ "rete": [
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anime",
+   "status": 200,
+   "byte": 325229,
+   "secondi": 3.9,
+   "titolo_pagina": "Anime Archivi - TOONITALIA",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/category/anime",
+   "status": 200,
+   "byte": 325229,
+   "secondi": 4.1,
+   "titolo_pagina": "Anime Archivi - TOONITALIA",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/scuola-di-polizia/",
+   "status": 200,
+   "byte": 112142,
+   "secondi": 2.6,
+   "titolo_pagina": "Scuola di polizia streaming e download episodi Ita Toonitalia anime",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/scuola-di-polizia/",
+   "status": 200,
+   "byte": 112142,
+   "secondi": 2.7,
+   "titolo_pagina": "Scuola di polizia streaming e download episodi Ita Toonitalia anime",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://voe.sx/e/ntl49uc3jz9h",
+   "status": 200,
+   "byte": 745,
+   "secondi": 0.5,
+   "titolo_pagina": "Redirecting...",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://shanelocaldog.com/e/ntl49uc3jz9h",
+   "status": 200,
+   "byte": 126863,
+   "secondi": 0.7,
+   "titolo_pagina": "Guardi Scuola Di Polizia - 1x01 - La Banda Dei Clown.mp4 - VOE | Content Deliver",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://voe.sx/js/loader.a40897e.js",
+   "status": 200,
+   "byte": 86050,
+   "secondi": 0.8,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/anime",
+   "status": 200,
+   "byte": 325462,
+   "secondi": 3.8,
+   "titolo_pagina": "Anime Archivi - TOONITALIA",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/category/anime",
+   "status": 200,
+   "byte": 325462,
+   "secondi": 4.0,
+   "titolo_pagina": "Anime Archivi - TOONITALIA",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/anime-ita",
+   "status": 200,
+   "byte": 220370,
+   "secondi": 3.8,
+   "titolo_pagina": "Anime Ita",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/anime-ita",
+   "status": 200,
+   "byte": 220370,
+   "secondi": 3.9,
+   "titolo_pagina": "Anime Ita",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/contatti",
+   "status": 200,
+   "byte": 130016,
+   "secondi": 3.5,
+   "titolo_pagina": "Anime Sub-Ita",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/contatti",
+   "status": 200,
+   "byte": 130016,
+   "secondi": 3.6,
+   "titolo_pagina": "Anime Sub-Ita",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/film-animazione",
+   "status": 200,
+   "byte": 172539,
+   "secondi": 3.5,
+   "titolo_pagina": "Film Animazione",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/film-animazione",
+   "status": 200,
+   "byte": 172539,
+   "secondi": 3.5,
+   "titolo_pagina": "Film Animazione",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serie-tv/",
+   "status": 200,
+   "byte": 124830,
+   "secondi": 2.5,
+   "titolo_pagina": "Serie Tv"
+  },
+  {
+   "url": "https://toonitalia.xyz/serie-tv/",
+   "status": 200,
+   "byte": 124830,
+   "secondi": 2.6,
+   "titolo_pagina": "Serie Tv"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/?s=avatar",
+   "status": 200,
+   "byte": 113521,
+   "secondi": 2.4,
+   "titolo_pagina": "Hai cercato avatar - TOONITALIA"
+  },
+  {
+   "url": "https://toonitalia.xyz/?s=avatar",
+   "status": 200,
+   "byte": 113521,
+   "secondi": 2.5,
+   "titolo_pagina": "Hai cercato avatar - TOONITALIA"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

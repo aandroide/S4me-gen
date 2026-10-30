@@ -1,0 +1,40 @@
+Canale lordchannel | indirizzo https://lordchannel.net
+== mainlist
+   -> 9 voci
+      peliculas | • Film | https://lordchannel.net/film/
+      genres | •• Generi | https://lordchannel.net/film/
+      peliculas | • Serie TV | https://lordchannel.net/serietv/
+      genres | •• Generi | https://lordchannel.net/serietv/
+== lista "• Film"
+   -> 0 voci
+== lista "•• Generi"
+   -> 0 voci
+== lista "• Serie TV"
+   -> 0 voci
+Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (7)
+    film | '/film/'
+    film | ('Generi', ['/film/', 'genres', 'film'])
+    tvshow | '/serietv/'
+    tvshow | ('Generi', ['/serietv/', 'genres', 'serietv'])
+    anime | '/anime/anime-ita/'
+    anime | ('Generi', ['/anime/anime-ita/', 'genres', 'anime'])
+    anime | ('Anime SUB-Ita', ['/anime/anime-sub-ita/', 'peliculas'])
+== controllo di tutte le sezioni
+   SEZIONE • Film -> VUOTA   | ultima pagina: {'url': 'https://lordchannel.net/film/', 'status': 503, 'byte': 1534, 'titolo_pagina': 'Manutenzione – LC3Remix'}
+   SEZIONE •• Generi -> VUOTA   | ultima pagina: {'url': 'https://lordchannel.net/film/', 'status': 503, 'byte': 1534, 'titolo_pagina': 'Manutenzione – LC3Remix'}
+   SEZIONE • Serie TV -> VUOTA   | ultima pagina: {'url': 'https://lordchannel.net/serietv/', 'status': 503, 'byte': 1534, 'titolo_pagina': 'Manutenzione – LC3Remix'}
+   SEZIONE •• Generi -> VUOTA   | ultima pagina: {'url': 'https://lordchannel.net/serietv/', 'status': 503, 'byte': 1534, 'titolo_pagina': 'Manutenzione – LC3Remix'}
+   SEZIONE • Anime -> VUOTA   | ultima pagina: {'url': 'https://lordchannel.net/anime/anime-ita/', 'status': 503, 'byte': 1534, 'titolo_pagina': 'Manutenzione – LC3Remix'}
+   SEZIONE •• Generi -> VUOTA   | ultima pagina: {'url': 'https://lordchannel.net/anime/anime-ita/', 'status': 503, 'byte': 1534, 'titolo_pagina': 'Manutenzione – LC3Remix'}
+   SEZIONE •• Anime SUB-Ita -> VUOTA   | ultima pagina: {'url': 'https://lordchannel.net/anime/anime-sub-ita/', 'status': 503, 'byte': 1534, 'titolo_pagina': 'Manutenzione – LC3Remix'}
+   SEZIONE txt70741 … -> OK 5 
+SEZIONI: 1 ok su 8
+   SEZIONE SENZA TITOLI: • Film | VUOTA
+   SEZIONE SENZA TITOLI: •• Generi | VUOTA
+   SEZIONE SENZA TITOLI: • Serie TV | VUOTA
+   SEZIONE SENZA TITOLI: •• Generi | VUOTA
+   SEZIONE SENZA TITOLI: • Anime | VUOTA
+   SEZIONE SENZA TITOLI: •• Generi | VUOTA
+   SEZIONE SENZA TITOLI: •• Anime SUB-Ita | VUOTA
+VERDETTO: SI FERMA A: lista "• Film"

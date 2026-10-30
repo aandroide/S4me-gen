@@ -1,0 +1,76 @@
+Canale cineblog01 | indirizzo https://cb01official.uno
+== mainlist
+   -> 18 voci
+      peliculas | • Film | https://cb01official.uno
+      menu | •• HD | https://cb01official.uno
+      menu | •• Genere | https://cb01official.uno
+      menu | •• Anni | https://cb01official.uno
+== lista "• Film"
+   -> 13 voci
+      findvideos | Sakamoto Days  | https://cb01one.stream/sakamoto-days-sub-ita-2026/
+      findvideos | Il suono di una caduta  | https://cb01one.stream/il-suono-di-una-caduta-hd-2025/
+      findvideos | Noi, un po’ meglio  | https://cb01one.stream/noi-un-po-meglio-hd-2026/
+      findvideos | Ali G: Who Iz I?  | https://cb01one.stream/ali-g-who-iz-i-hd-2026/
+== findvideos su "Sakamoto Days "
+   -> 2 voci
+      play | Sakamoto Days  | https://stayonline.pro/l/B6WxG/
+      add_pelicula_to_library | txt30161 %s | https://cb01one.stream/sakamoto-days-sub-ita-2026/
+   play del canale -> mixdrop https://m1xdrop.net/e/r66009vnumegkj
+== risoluzione mixdrop https://m1xdrop.net/e/r66009vnumegkj
+   -> VIDEO NON RAGGIUNGIBILE HTTP 403 
+== voci dichiarate in mainlist (14)
+    film | ('HD', ['', 'menu', 'Film HD Streaming'])
+    film | ('Genere', ['', 'menu', 'Film per Genere'])
+    film | ('Anni', ['', 'menu', 'Film per Anno'])
+    film | ('Popolari per Genere', ['', 'menu', 'Film Popolari'])
+    film | ('Ultimi Aggiunti', ['/ultimi-100-film-aggiunti/', 'peliculas', 'newest'])
+    film | ('Popolari', ['/category/film-popolari/'])
+    film | ('Italiani', ['/category/nazione/italia/'])
+    tvshow | '/serietv/'
+    tvshow | ('Per Lettera', ['/serietv/', 'menu', 'Serie-TV x Lettera'])
+    tvshow | ('Per Genere', ['/serietv/', 'menu', 'Serie-TV x Genere'])
+    tvshow | ('Per anno', ['/serietv/', 'menu', 'Serie-TV x Anno'])
+    tvshow | ('Ultime Aggiunte', ['/serietv/ultime-100-serie-tv-aggiunte/', 'peliculas', 'newest'])
+    docu | ('Documentari {bullet bold}', ['/category/documentario/', 'peliculas'])
+    docu | ('HD {submenu} {documentari}', ['/category/hd-alta-definizione/documentario-hd/', 'peliculas'])
+== controllo di tutte le sezioni
+   SEZIONE • Film -> OK 12 
+   SEZIONE ANIMAZIONE HD -> OK 12 
+   SEZIONE AVVENTURA HD -> OK 12 
+   SEZIONE AZIONE HD -> OK 12 
+   SEZIONE •• HD -> SOTTOMENU  
+   SEZIONE ANIMAZIONE -> OK 12 
+   SEZIONE AVVENTURA -> OK 12 
+   SEZIONE AZIONE -> OK 12 
+   SEZIONE •• Genere -> SOTTOMENU  
+   SEZIONE 2026 -> OK 12 
+   SEZIONE 2025 -> OK 12 
+   SEZIONE 2024 -> OK 12 
+   SEZIONE •• Anni -> SOTTOMENU  
+   SEZIONE ANIMAZIONE -> OK 12 
+   SEZIONE AVVENTURA -> OK 12 
+   SEZIONE AZIONE -> OK 12 
+   SEZIONE •• Popolari per Genere -> SOTTOMENU  
+   SEZIONE •• Ultimi Aggiunti -> OK 20 
+   SEZIONE •• Popolari -> OK 12 
+   SEZIONE •• Italiani -> OK 12 
+   SEZIONE •• txt70741 Film… -> OK 4 
+   SEZIONE • Serie TV -> OK 12 
+   SEZIONE (#) -> OK 12 
+   SEZIONE (A) -> OK 12 
+   SEZIONE (B) -> OK 12 
+   SEZIONE •• Per Lettera -> SOTTOMENU  
+   SEZIONE ANIMAZIONE -> OK 12 
+   SEZIONE AVVENTURA -> OK 12 
+   SEZIONE AZIONE -> OK 12 
+   SEZIONE •• Per Genere -> SOTTOMENU  
+   SEZIONE 2026 -> OK 12 
+   SEZIONE 2025 -> OK 12 
+   SEZIONE 2024 -> OK 12 
+   SEZIONE •• Per anno -> SOTTOMENU  
+   SEZIONE •• Ultime Aggiunte -> OK 20 
+   SEZIONE •• txt70741 Serie TV… -> OK 2 
+   SEZIONE • Documentari -> OK 12 
+   SEZIONE •• HD -> OK 12 
+SEZIONI: 17 ok su 17
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE

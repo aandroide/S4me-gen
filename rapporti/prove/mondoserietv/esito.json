@@ -1,0 +1,256 @@
+{
+ "canale": "mondoserietv",
+ "host": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 10
+  },
+  {
+   "passo": "lista \"• Film\"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  },
+  {
+   "passo": "lista \"•• Ultimi Film Aggiunti\"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [
+  "film | '/lista-film'",
+  "film | ('Ultimi Film Aggiunti', ['/ultimi-film-aggiunti', 'peliculas', 'last'])",
+  "tvshow | '/lista-serie-tv'",
+  "tvshow | ('HD {TV}', ['/lista-serie-tv-in-altadefinizione'])",
+  "tvshow | ('Anni 50 60 70 80 {TV}', ['/lista-serie-tv-anni-60-70-80'])",
+  "tvshow | ('Serie Italiane', ['/lista-serie-tv-italiane'])",
+  "anime | '/lista-cartoni-animati-e-anime'",
+  "docu | ('Documentari {bullet bold}', ['/lista-documentari', 'peliculas', '', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-film",
+     "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-film (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e757ad50>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Ultimi Film Aggiunti",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/ultimi-film-aggiunti",
+     "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/ultimi-film-aggiunti (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73d1700>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv",
+     "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e7579ac0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "HD",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-in-altadefinizione",
+     "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-in-altadefinizione (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73d16a0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "Anni 50 60 70 80",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-anni-60-70-80",
+     "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-anni-60-70-80 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f55b0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Serie Italiane",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-italiane",
+     "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-italiane (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f6270>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Anime",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-cartoni-animati-e-anime",
+     "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-cartoni-animati-e-anime (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f6270>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "• Documentari",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-documentari",
+     "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-documentari (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f55b0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9?a=b&s=avatar",
+     "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9?a=b&s=avatar (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f46e0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 9",
+ "rete": [
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-film",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-film (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e757b8c0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/ultimi-film-aggiunti",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/ultimi-film-aggiunti (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e757b8c0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f45c0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-film",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-film (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e757ad50>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/ultimi-film-aggiunti",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/ultimi-film-aggiunti (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73d1700>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e7579ac0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-in-altadefinizione",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-in-altadefinizione (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73d16a0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-anni-60-70-80",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-anni-60-70-80 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f55b0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-italiane",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-serie-tv-italiane (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f6270>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-cartoni-animati-e-anime",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-cartoni-animati-e-anime (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f6270>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-documentari",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9/lista-documentari (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f55b0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "http://ww25.mondoserietv.club/?subid1=20230304-0434-261c-9cb0-a0044930e0a9?a=b&s=avatar",
+   "status": "HTTPConnectionPool(host='ww25.mondoserietv.club', port=80): Max retries exceeded with url: /?subid1=20230304-0434-261c-9cb0-a0044930e0a9?a=b&s=avatar (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f50e73f46e0>: Failed to establish a new connection: [Errno -2] Name or service not known'))",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/12.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Film\""
+}

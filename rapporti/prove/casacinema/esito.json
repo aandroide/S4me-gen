@@ -1,0 +1,185 @@
+{
+ "canale": "casacinema",
+ "host": "https://casa-cinema.boats",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 6
+  },
+  {
+   "passo": "lista \"Generi\"",
+   "esito": "OK",
+   "voci": 40
+  },
+  {
+   "passo": "peliculas su \"Prossimamente\"",
+   "esito": "OK",
+   "voci": 17
+  },
+  {
+   "passo": "findvideos su \"La fine di Oak Street \"",
+   "esito": "OK",
+   "voci": 2
+  }
+ ],
+ "video": [
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/27165187",
+   "finale": "http://127.0.0.1:42587/hls/27165187/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
+ "menu_dichiarato": [
+  "top | ('Generi', ['', 'genres'])",
+  "film | '/film'",
+  "tvshow | '/serie-tv'",
+  "tvshow | ('Miniserie ', ['/miniserie-tv', 'peliculas', ''])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Generi",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 40,
+   "figli": [
+    {
+     "voce": "Animazione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 16
+    },
+    {
+     "voce": "Avventura",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 16
+    },
+    {
+     "voce": "Biografico",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 16
+    }
+   ]
+  },
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 16
+  },
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 16
+  },
+  {
+   "voce": "•• Miniserie",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 16
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 10
+  }
+ ],
+ "sezioni_riepilogo": "5 ok su 5",
+ "rete": [
+  {
+   "url": "https://casa-cinema.boats",
+   "status": 200,
+   "byte": 39278,
+   "secondi": 0.7,
+   "titolo_pagina": "CasaCinema - Il tuo Cinema Streaming Numero UNO",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://casa-cinema.boats/prossimamente/",
+   "status": 200,
+   "byte": 53735,
+   "secondi": 0.5,
+   "titolo_pagina": "Prossimamente al Cinema",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://casa-cinema.boats/gratis/34552-guarda-la-fine-di-oak-street-streaming-online-ita.html",
+   "status": 200,
+   "byte": 25298,
+   "secondi": 0.5,
+   "titolo_pagina": "La fine di Oak Street (2026) Streaming HD | CasaCinema",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://casa-cinema.boats",
+   "status": 200,
+   "byte": 39278,
+   "secondi": 0.2,
+   "titolo_pagina": "CasaCinema - Il tuo Cinema Streaming Numero UNO",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://casa-cinema.boats/animazione/",
+   "status": 200,
+   "byte": 53256,
+   "secondi": 0.4,
+   "titolo_pagina": "Animazione Genere Film | Film Streaming",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://casa-cinema.boats/avventura/",
+   "status": 200,
+   "byte": 53222,
+   "secondi": 0.4,
+   "titolo_pagina": "Avventura Genere Film | Film Streaming",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://casa-cinema.boats/biografico/",
+   "status": 200,
+   "byte": 53272,
+   "secondi": 0.4,
+   "titolo_pagina": "Biografico Genere Film | Film Streaming",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://casa-cinema.boats/film",
+   "status": 200,
+   "byte": 32099,
+   "secondi": 0.6,
+   "titolo_pagina": "Last publications on the website &raquo; CasaCinema - Il tuo Cinema Streaming Nu",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://casa-cinema.boats/serie-tv",
+   "status": 200,
+   "byte": 53646,
+   "secondi": 0.3,
+   "titolo_pagina": "Serie TV in Streaming Gratis - CasaCinema",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://casa-cinema.boats/miniserie-tv",
+   "status": 200,
+   "byte": 53254,
+   "secondi": 0.6,
+   "titolo_pagina": "",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://casa-cinema.boats/?story=avatar&do=search&subaction=search",
+   "status": 200,
+   "byte": 29203,
+   "secondi": 0.2,
+   "titolo_pagina": "Site search &raquo; CasaCinema - Il tuo Cinema Streaming Numero UNO",
+   "file": "pagine/11.html"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

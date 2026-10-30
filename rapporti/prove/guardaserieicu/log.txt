@@ -1,0 +1,36 @@
+Canale guardaserieicu | indirizzo 
+== mainlist
+   -> 4 voci
+      peliculas | • Serie TV | https://guardaseriex.cyou/serietv-streaming/page/1/
+      genres | •• Generi | https://guardaseriex.cyou/serietv-streaming/page/1/
+      search | •• txt70741 Serie TV… | https://guardaseriex.cyou/serietv-streaming/page/1/
+      channel_config | txt60587 %s | 
+== lista "• Serie TV"
+   -> 19 voci
+      episodios | Estranei | https://guardaseriex.best/commedia/5820-estranei-streaming.html
+      episodios | Peccato | https://guardaseriex.best/commedia/5804-peccato-streaming.html
+      episodios | The Other Bennet Sister | https://guardaseriex.best/commedia/5791-the-other-bennet-sister-orgoglio-e-riscatto-streaming.html
+      episodios | Il nuovo esperimento carcerario di Stanford | https://guardaseriex.best/reality/5852-il-nuovo-esperimento-carcerario-di-stanford-streaming.html
+== episodios su "Estranei"
+   -> 2 voci
+      findvideos | 1x01 - Romeo e Giulietta | https://guardaseriex.best/commedia/5820-estranei-streaming.html
+      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.best/commedia/5820-estranei-streaming.html
+== findvideos su "1x01 - Romeo e Giulietta"
+   -> 1 voci
+      play | 1x01 - Romeo e Giulietta | https://v.vidxgo.co/37539393/1/1
+== risoluzione vidxgo https://v.vidxgo.co/37539393/1/1
+   api /t/ 37539393/1/1 referer https://v.vidxgo.co/37539393/1/1 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 37539393/1/1 referer / -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+== voci dichiarate in mainlist (2)
+    tvshow | '/serietv-streaming/page/1/'
+    tvshow | ('Generi', ['/serietv-streaming/page/1/', 'genres', 'genres'])
+== controllo di tutte le sezioni
+   SEZIONE • Serie TV -> OK 18 
+   SEZIONE Biografico -> OK 126 
+   SEZIONE Commedia -> OK 1516 
+   SEZIONE Crime -> OK 843 
+   SEZIONE •• Generi -> SOTTOMENU  
+   SEZIONE •• txt70741 Serie TV… -> OK 4 
+SEZIONI: 3 ok su 3
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)

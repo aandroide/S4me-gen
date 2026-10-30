@@ -1,0 +1,26 @@
+{
+ "canale": "videosky",
+ "host": "",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 3
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [
+  "top | ('Dirette {bold}', ['', 'live'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Dirette",
+   "azione": "live",
+   "esito": "OK",
+   "titoli": 3
+  }
+ ],
+ "sezioni_riepilogo": "1 ok su 1",
+ "rete": [],
+ "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
+}

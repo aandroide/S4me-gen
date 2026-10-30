@@ -1,0 +1,322 @@
+{
+ "canale": "eurostreaming",
+ "host": "https://eurostream.fit",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 6
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
+   "esito": "OK",
+   "voci": 19
+  },
+  {
+   "passo": "episodios su \"Grey’s Anatomy\"",
+   "esito": "OK",
+   "voci": 648
+  },
+  {
+   "passo": "findvideos su \"1x01 - Quando il Gioco si Fa Duro \"",
+   "esito": "ERRORE",
+   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/139roclchad5\n"
+  },
+  {
+   "passo": "lista \"• Anime\"",
+   "esito": "OK",
+   "voci": 19
+  },
+  {
+   "passo": "episodios su \"Daemons of the Shadow Realm\"",
+   "esito": "OK",
+   "voci": 25
+  },
+  {
+   "passo": "findvideos su \"1x01 - Asa e Yuru \"",
+   "esito": "ERRORE",
+   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47\n"
+  },
+  {
+   "passo": "lista \"• Aggiornamenti\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "episodios su \"3x01 - Signora Volpe - Raccolto amaro\"",
+   "esito": "OK",
+   "voci": 8
+  },
+  {
+   "passo": "findvideos su \"1x01 - Una zia ansiosa \"",
+   "esito": "ERRORE",
+   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/hs1d0mlmf4fu\n"
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [
+  "anime | '/category/anime-cartoni-animati/'",
+  "mix | ('Aggiornamenti {bullet bold} {TV}', ['/nuovi-ep-aggiornamento/', 'peliculas', 'newest'])",
+  "mix | ('Archivio {bullet bold} {TV}', ['/category/serie-tv-archive/', 'peliculas'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 18
+  },
+  {
+   "voce": "• Anime",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 18
+  },
+  {
+   "voce": "• Aggiornamenti",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "• Archivio",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 18
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/?s=avatar",
+     "status": 403,
+     "byte": 5913,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://eurostream.fit/?s=avatar",
+     "status": 403,
+     "byte": 5913,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "4 ok su 5",
+ "rete": [
+  {
+   "url": "https://eurostream.fit",
+   "status": 200,
+   "byte": 43787,
+   "secondi": 1.0,
+   "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://eurostream.fit/grey-s-anatomy-163/",
+   "status": 200,
+   "byte": 231770,
+   "secondi": 1.3,
+   "titolo_pagina": "Grey&#039;s Anatomy streaming Serie Tv - euroStreaming",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/delta/139roclchad5",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.6,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://clicka.cc/delta/139roclchad5",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.8,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/tv/ulrey7t9",
+   "status": 403,
+   "byte": 5856,
+   "secondi": 0.7,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://clicka.cc/tv/ulrey7t9",
+   "status": 403,
+   "byte": 5856,
+   "secondi": 0.8,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/msf/3rdlclrlqsve",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.8,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://uprot.net/msf/3rdlclrlqsve",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.9,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://eurostream.fit/category/anime-cartoni-animati/",
+   "status": 200,
+   "byte": 44108,
+   "secondi": 0.9,
+   "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://eurostream.fit/daemons-of-the-shadow-realm/",
+   "status": 200,
+   "byte": 40038,
+   "secondi": 0.7,
+   "titolo_pagina": "Daemons of the Shadow Realm streaming Serie TV - euroStreaming",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/delta/d40bd8wivg47",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.5,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://clicka.cc/delta/d40bd8wivg47",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.6,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/msf/9757l0irl08l",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.6,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://uprot.net/msf/9757l0irl08l",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.7,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/mix/0d9arej2",
+   "status": 403,
+   "byte": 5859,
+   "secondi": 0.6,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://clicka.cc/mix/0d9arej2",
+   "status": 403,
+   "byte": 5859,
+   "secondi": 0.7,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://eurostream.fit/nuovi-ep-aggiornamento/",
+   "status": 200,
+   "byte": 46158,
+   "secondi": 1.0,
+   "titolo_pagina": "Aggiornamento Episodi - euroStreaming"
+  },
+  {
+   "url": "https://eurostream.fit/signora-volpe/",
+   "status": 200,
+   "byte": 34430,
+   "secondi": 0.7,
+   "titolo_pagina": "Signora Volpe streaming Serie TV - euroStreaming"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/delta/hs1d0mlmf4fu",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://clicka.cc/delta/hs1d0mlmf4fu",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.5,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/msf/nd6n3f4nsaps",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.6,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud"
+  },
+  {
+   "url": "https://uprot.net/msf/nd6n3f4nsaps",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.7,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud"
+  },
+  {
+   "url": "https://eurostream.fit",
+   "status": 200,
+   "byte": 43787,
+   "secondi": 0.8,
+   "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming"
+  },
+  {
+   "url": "https://eurostream.fit/category/anime-cartoni-animati/",
+   "status": 200,
+   "byte": 44108,
+   "secondi": 0.8,
+   "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming"
+  },
+  {
+   "url": "https://eurostream.fit/nuovi-ep-aggiornamento/",
+   "status": 200,
+   "byte": 46158,
+   "secondi": 1.0,
+   "titolo_pagina": "Aggiornamento Episodi - euroStreaming"
+  },
+  {
+   "url": "https://eurostream.fit/category/serie-tv-archive/",
+   "status": 200,
+   "byte": 42998,
+   "secondi": 0.7,
+   "titolo_pagina": "SERIE TV ARCHIVIO Archives - euroStreaming :: Serie TV e Film in Streaming"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/?s=avatar",
+   "status": 403,
+   "byte": 5913,
+   "secondi": 0.8,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://eurostream.fit/?s=avatar",
+   "status": 403,
+   "byte": 5913,
+   "secondi": 0.9,
+   "titolo_pagina": "Just a moment..."
+  }
+ ],
+ "verdetto": "SI FERMA A: findvideos su \"1x01 - Quando il Gioco si Fa Duro \""
+}

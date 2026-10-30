@@ -1,0 +1,41 @@
+{
+ "canale": "bt4g",
+ "host": "https://bt4gprx.com",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 2
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [],
+ "sezioni": [
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 15
+  }
+ ],
+ "sezioni_riepilogo": "1 ok su 1",
+ "rete": [
+  {
+   "url": "https://bt4gprx.com/search?q=avatar&category=movie&page=rss&orderby=seeders&p=2",
+   "status": 200,
+   "byte": 25927,
+   "secondi": 0.6,
+   "titolo_pagina": "BT4G - Search RSS for avatar",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://bt4gprx.com/search?q=avatar&category=movie&page=rss&orderby=seeders",
+   "status": 200,
+   "byte": 25915,
+   "secondi": 0.2,
+   "titolo_pagina": "BT4G - Search RSS for avatar",
+   "file": "pagine/02.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
+}

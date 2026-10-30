@@ -1,0 +1,225 @@
+{
+ "canale": "eurostreaming_actor",
+ "host": "https://eurostreaming.ooo",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 5
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"• Anime\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"• Aggiornamenti\"",
+   "esito": "VUOTO",
+   "voci": 0
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [
+  "anime | '/animazione/'",
+  "mix | ('Aggiornamenti {bullet bold} {TV}', ['/aggiornamento-episodi/', 'peliculas', 'newest'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+     "status": 403,
+     "byte": 5866,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://eurostreaming.ooo",
+     "status": 403,
+     "byte": 5866,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
+  },
+  {
+   "voce": "• Anime",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/animazione/",
+     "status": 403,
+     "byte": 5899,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://eurostreaming.ooo/animazione/",
+     "status": 403,
+     "byte": 5899,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
+  },
+  {
+   "voce": "• Aggiornamenti",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/aggiornamento-episodi/",
+     "status": 403,
+     "byte": 5954,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://eurostreaming.ooo/aggiornamento-episodi/",
+     "status": 403,
+     "byte": 5954,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/index.php?story=avatar&do=search&subaction=search",
+     "status": 403,
+     "byte": 6122,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://eurostreaming.ooo/index.php?story=avatar&do=search&subaction=search",
+     "status": 403,
+     "byte": 6122,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 4",
+ "rete": [
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "status": 403,
+   "byte": 5866,
+   "secondi": 0.7,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://eurostreaming.ooo",
+   "status": 403,
+   "byte": 5866,
+   "secondi": 0.9,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/animazione/",
+   "status": 403,
+   "byte": 5899,
+   "secondi": 0.8,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://eurostreaming.ooo/animazione/",
+   "status": 403,
+   "byte": 5899,
+   "secondi": 0.9,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/aggiornamento-episodi/",
+   "status": 403,
+   "byte": 5954,
+   "secondi": 0.7,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://eurostreaming.ooo/aggiornamento-episodi/",
+   "status": 403,
+   "byte": 5954,
+   "secondi": 0.7,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "status": 403,
+   "byte": 5866,
+   "secondi": 0.6,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://eurostreaming.ooo",
+   "status": 403,
+   "byte": 5866,
+   "secondi": 0.6,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/animazione/",
+   "status": 403,
+   "byte": 5899,
+   "secondi": 0.8,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://eurostreaming.ooo/animazione/",
+   "status": 403,
+   "byte": 5899,
+   "secondi": 0.9,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/aggiornamento-episodi/",
+   "status": 403,
+   "byte": 5954,
+   "secondi": 0.6,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://eurostreaming.ooo/aggiornamento-episodi/",
+   "status": 403,
+   "byte": 5954,
+   "secondi": 0.7,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/index.php?story=avatar&do=search&subaction=search",
+   "status": 403,
+   "byte": 6122,
+   "secondi": 0.5,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://eurostreaming.ooo/index.php?story=avatar&do=search&subaction=search",
+   "status": 403,
+   "byte": 6122,
+   "secondi": 0.6,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/14.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Serie TV\""
+}

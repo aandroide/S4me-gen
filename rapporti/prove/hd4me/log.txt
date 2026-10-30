@@ -1,0 +1,31 @@
+Canale hd4me | indirizzo https://hd4me.net
+== mainlist
+   -> 4 voci
+      peliculas | • Film | https://hd4me.net/index
+      genre | •• Genere | https://hd4me.net
+      search | txt70741 … | https://hd4me.net
+      channel_config | txt60587 %s | 
+== lista "• Film"
+   -> 11 voci
+      findvideos | La gabbianella e il gatto REMASTERED | posts/55228.json
+      findvideos | 11 Giorni, 11 notti | posts/55225.json
+      findvideos | Lui e lei | posts/55223.json
+      findvideos | Fantasma per amore | posts/55221.json
+== findvideos su "La gabbianella e il gatto REMASTERED"
+   -> 2 voci
+      play | La gabbianella e il gatto REMASTERED | https://mega.nz/#!GzQxxDYD!sMdE9kpw-sYgAXzjyGjwMXgxemMdchv6alBJgn9iKlQ
+      add_pelicula_to_library | txt30161 %s | posts/55228.json
+== risoluzione mega https://mega.nz/#!GzQxxDYD!sMdE9kpw-sYgAXzjyGjwMXgxemMdchv6alBJgn9iKlQ
+   -> SERVER NON RISOLVE  
+== voci dichiarate in mainlist (2)
+    film | '/index'
+    film | ('Genere', ['', 'genre', 'genre'])
+== controllo di tutte le sezioni
+   SEZIONE • Film -> OK 10 
+   SEZIONE Animazione -> OK 10 
+   SEZIONE Classici Disney -> OK 54 
+   SEZIONE Pixar -> OK 10 
+   SEZIONE •• Genere -> SOTTOMENU  
+   SEZIONE txt70741 … -> OK 1 
+SEZIONI: 3 ok su 3
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE

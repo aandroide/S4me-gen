@@ -1,0 +1,39 @@
+Canale tantifilm | indirizzo https://tanti-film.garden
+== mainlist
+   -> 5 voci
+      genres | Generi | https://tanti-film.garden
+      peliculas | • Film | https://tanti-film.garden/film
+      peliculas | • Serie TV | https://tanti-film.garden/serie-tv/
+      search | txt70741 … | https://tanti-film.garden
+== lista "Generi"
+   -> 40 voci
+      peliculas | Animazione | https://tanti-film.garden/animazione/
+      peliculas | Avventura | https://tanti-film.garden/avventura/
+      peliculas | Biografico | https://tanti-film.garden/biografico/
+      peliculas | Commedia | https://tanti-film.garden/commedia/
+== peliculas su "Prossimamente"
+   -> 26 voci
+      check | Noi un po' meglio  | https://tanti-film.garden/guarda/35365-noi-un-po-meglio-streaming-streaming-hd.html
+      check | Concerto Geolier - Live Maradona 26  | https://tanti-film.garden/guarda/35356-concerto-geolier-live-maradona-26-streaming-streaming-hd.html
+      check | Ali G: Who Iz I?  | https://tanti-film.garden/guarda/35347-ali-g-who-iz-i-streaming-streaming-hd.html
+      check | Hellfire  | https://tanti-film.garden/guarda/35344-hellfire-streaming-streaming-hd.html
+== check su "Noi un po' meglio "
+   -> 2 voci
+      play | Noi un po' meglio  | https://v.vidxgo.co/38504402
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.garden/guarda/35365-noi-un-po-meglio-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/38504402
+   -> VIDEO OK m3u8 200 
+== voci dichiarate in mainlist (3)
+    top | ('Generi', ['', 'genres'])
+    film | '/film'
+    tvshow | '/serie-tv/'
+== controllo di tutte le sezioni
+   SEZIONE Animazione -> OK 25 
+   SEZIONE Avventura -> OK 25 
+   SEZIONE Biografico -> OK 20 
+   SEZIONE Generi -> SOTTOMENU  
+   SEZIONE • Film -> OK 34 
+   SEZIONE • Serie TV -> OK 25 
+   SEZIONE txt70741 … -> OK 11 
+SEZIONI: 4 ok su 4
+VERDETTO: ARRIVA AL VIDEO

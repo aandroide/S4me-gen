@@ -1,0 +1,673 @@
+{
+ "canale": "animeworld",
+ "host": "https://www.animeworld.ac",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 9
+  },
+  {
+   "passo": "lista \"• Anime\"",
+   "esito": "OK",
+   "voci": 41
+  },
+  {
+   "passo": "check su \"MaR - Märchen Awakens Romance \"",
+   "esito": "OK",
+   "voci": 52
+  },
+  {
+   "passo": "findvideos su \"1 - MaR - Märchen Awakens Romance\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "directo",
+   "url": "https://srv30-arinza.sweetpixel.org/DDL/ANIME/MARITA/MAR_Ep_001_ITA.mp4",
+   "finale": "https://srv30-arinza.sweetpixel.org/DDL/ANIME/MARITA/MAR_Ep_001_ITA.mp4",
+   "esito": "VIDEO OK",
+   "dettaglio": "206 video/mp4"
+  }
+ ],
+ "menu_dichiarato": [
+  "anime | '/filter?sort='",
+  "anime | ('ITA', ['/filter?dub=1&sort=', 'menu', 'dub=1'])",
+  "anime | ('SUB-ITA', ['/filter?dub=0&sort=', 'menu', 'dub=0'])",
+  "anime | ('In Corso', ['/ongoing', 'peliculas', 'noorder'])",
+  "anime | ('Ultimi Episodi', ['/updated', 'peliculas', 'updated'])",
+  "anime | ('Nuove Aggiunte', ['/newest', 'peliculas', 'noorder'])",
+  "anime | ('Generi', ['/?d=1', 'genres'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Anime",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "•• ITA",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 10,
+   "figli": [
+    {
+     "voce": "Tutti",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 40
+    },
+    {
+     "voce": "Generi",
+     "azione": "submenu",
+     "esito": "SOTTOMENU",
+     "sottovoci": 45,
+     "figli": [
+      {
+       "voce": "Arti Marziali",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      },
+      {
+       "voce": "Avanguardia",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 11
+      },
+      {
+       "voce": "Avventura",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      }
+     ]
+    },
+    {
+     "voce": "Stagioni",
+     "azione": "submenu",
+     "esito": "SOTTOMENU",
+     "sottovoci": 5,
+     "figli": [
+      {
+       "voce": "Inverno",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      },
+      {
+       "voce": "Primavera",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      },
+      {
+       "voce": "Estate",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "voce": "•• SUB-ITA",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 10,
+   "figli": [
+    {
+     "voce": "Tutti",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 40
+    },
+    {
+     "voce": "Generi",
+     "azione": "submenu",
+     "esito": "SOTTOMENU",
+     "sottovoci": 45,
+     "figli": [
+      {
+       "voce": "Arti Marziali",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      },
+      {
+       "voce": "Avanguardia",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      },
+      {
+       "voce": "Avventura",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      }
+     ]
+    },
+    {
+     "voce": "Stagioni",
+     "azione": "submenu",
+     "esito": "SOTTOMENU",
+     "sottovoci": 5,
+     "figli": [
+      {
+       "voce": "Inverno",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      },
+      {
+       "voce": "Primavera",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      },
+      {
+       "voce": "Estate",
+       "azione": "peliculas",
+       "esito": "OK",
+       "titoli": 40
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "voce": "•• In Corso",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "•• Ultimi Episodi",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 39
+  },
+  {
+   "voce": "•• Nuove Aggiunte",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 40
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 45,
+   "figli": [
+    {
+     "voce": "Arti Marziali",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 40
+    },
+    {
+     "voce": "Avanguardia",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 40
+    },
+    {
+     "voce": "Avventura",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 40
+    }
+   ]
+  },
+  {
+   "voce": "•• txt70741 Anime…",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 7
+  }
+ ],
+ "sezioni_riepilogo": "8 ok su 8",
+ "rete": [
+  {
+   "url": "https://www.animeworld.ac/filter?sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.7,
+   "titolo_pagina": "",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?sort=",
+   "status": 200,
+   "byte": 372179,
+   "secondi": 0.6,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?sort=0",
+   "status": 200,
+   "byte": 372189,
+   "secondi": 0.7,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/play/mar-marchen-awakens-romance-ita.BNESr",
+   "status": 200,
+   "byte": 170389,
+   "secondi": 0.9,
+   "titolo_pagina": "MaR - Märchen Awakens Romance (ITA) Episodio 1 Streaming & Download ITA - AnimeW",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/play/mar-marchen-awakens-romance-ita.BNESr",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.6,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/play/mar-marchen-awakens-romance-ita.BNESr/vodn-Y",
+   "status": 200,
+   "byte": 170389,
+   "secondi": 0.6,
+   "titolo_pagina": "MaR - Märchen Awakens Romance (ITA) Episodio 1 Streaming & Download ITA - AnimeW",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/play/mar-marchen-awakens-romance-ita.BNESr/vodn-Y",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/play/mar-marchen-awakens-romance-ita.BNESr/vodn-Y",
+   "status": 200,
+   "byte": 170389,
+   "secondi": 0.7,
+   "titolo_pagina": "MaR - Märchen Awakens Romance (ITA) Episodio 1 Streaming & Download ITA - AnimeW",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/api/episode/serverPlayerAnimeWorld?id=vodn-Y",
+   "status": 200,
+   "byte": 4923,
+   "secondi": 0.3,
+   "titolo_pagina": "AnimeWorld - Streaming",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?sort=0",
+   "status": 200,
+   "byte": 372189,
+   "secondi": 0.6,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?sort=0",
+   "status": 200,
+   "byte": 372189,
+   "secondi": 0.6,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=1&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=1&sort=",
+   "status": 200,
+   "byte": 377155,
+   "secondi": 0.6,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=1&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=1&sort=",
+   "status": 200,
+   "byte": 377155,
+   "secondi": 0.6,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=1&sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=1&sort=0",
+   "status": 200,
+   "byte": 377165,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=3&dub=1&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=3&dub=1&sort=",
+   "status": 200,
+   "byte": 380161,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=3&dub=1&sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=3&dub=1&sort=0",
+   "status": 200,
+   "byte": 380171,
+   "secondi": 0.6,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=5&dub=1&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.7,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=5&dub=1&sort=",
+   "status": 200,
+   "byte": 344985,
+   "secondi": 0.8,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=5&dub=1&sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=5&dub=1&sort=0",
+   "status": 200,
+   "byte": 344993,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=2&dub=1&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=2&dub=1&sort=",
+   "status": 200,
+   "byte": 378649,
+   "secondi": 0.6,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=2&dub=1&sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=2&dub=1&sort=0",
+   "status": 200,
+   "byte": 378659,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=winter&dub=1&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=winter&dub=1&sort=",
+   "status": 200,
+   "byte": 379478,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=winter&dub=1&sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=winter&dub=1&sort=0",
+   "status": 200,
+   "byte": 379488,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=spring&dub=1&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=spring&dub=1&sort=",
+   "status": 200,
+   "byte": 378009,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=spring&dub=1&sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=spring&dub=1&sort=0",
+   "status": 200,
+   "byte": 378019,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=summer&dub=1&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=summer&dub=1&sort=",
+   "status": 200,
+   "byte": 381499,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=summer&dub=1&sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?season=summer&dub=1&sort=0",
+   "status": 200,
+   "byte": 381509,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=0&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=0&sort=",
+   "status": 200,
+   "byte": 371813,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=0&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=0&sort=",
+   "status": 200,
+   "byte": 371813,
+   "secondi": 0.6,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=0&sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?dub=0&sort=0",
+   "status": 200,
+   "byte": 371823,
+   "secondi": 0.7,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=3&dub=0&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=3&dub=0&sort=",
+   "status": 200,
+   "byte": 374250,
+   "secondi": 0.8,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=3&dub=0&sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=3&dub=0&sort=0",
+   "status": 200,
+   "byte": 374260,
+   "secondi": 0.6,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=5&dub=0&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=5&dub=0&sort=",
+   "status": 200,
+   "byte": 373806,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=5&dub=0&sort=0",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=5&dub=0&sort=0",
+   "status": 200,
+   "byte": 373816,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=2&dub=0&sort=",
+   "status": 200,
+   "byte": 0,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.animeworld.ac/filter?genre=2&dub=0&sort=",
+   "status": 200,
+   "byte": 373287,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

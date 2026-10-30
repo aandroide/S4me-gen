@@ -1,0 +1,20 @@
+Canale plutotv | indirizzo https://pluto.tv/us/watch/live-tv
+== mainlist
+   -> 4 voci
+      live | Dirette | https://pluto.tv/us/watch/live-tv/it/live-tv/
+      category | Categorie  | https://pluto.tv/us/watch/live-tv
+      search | txt70741 … | https://pluto.tv/us/watch/live-tv
+      channel_config | txt60587 %s | 
+Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (2)
+    top | ('Dirette {bold}', ['/it/live-tv/', 'live'])
+    menu | ('Categorie', ['', 'category'])
+== controllo di tutte le sezioni
+   SEZIONE Dirette -> OK 444 
+   SEZIONE '00s Movies -> OK 20 
+   SEZIONE '70s Movies -> OK 20 
+   SEZIONE '80s Movies -> OK 20 
+   SEZIONE Categorie -> SOTTOMENU  
+   SEZIONE txt70741 … -> OK 31 
+SEZIONI: 3 ok su 3
+VERDETTO: SI FERMA A: ultimo passo, nessuna voce da riprodurre

@@ -1,0 +1,151 @@
+{
+ "canale": "italiafilm",
+ "host": "https://italia-film.lifestyle",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 7
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [
+  "menu | ('Film', ['/film/', 'list', 'film'])",
+  "menu | ('Per Genere', ['', 'list', 'genere'])",
+  "menu | ('Al Cinema', ['/cinema/', 'list', 'film'])",
+  "menu | ('Sub-ITA', ['/sub-ita/', 'list', 'film'])",
+  "menu | ('Top del Mese', ['/top-del-mese.html', 'list', 'film'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Film",
+   "azione": "list",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://italia-film.lifestyle/film/",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "Per Genere",
+   "azione": "list",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://italia-film.lifestyle",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "Al Cinema",
+   "azione": "list",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://italia-film.lifestyle/cinema/",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "Sub-ITA",
+   "azione": "list",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://italia-film.lifestyle/sub-ita/",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "Top del Mese",
+   "azione": "list",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "https://italia-film.lifestyle/top-del-mese.html",
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://italia-film.lifestyle/?story=avatar&do=search&subaction=search&search_start=",
+     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 6",
+ "rete": [
+  {
+   "url": "https://italia-film.lifestyle/film/",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://italia-film.lifestyle",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://italia-film.lifestyle/cinema/",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://italia-film.lifestyle/sub-ita/",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://italia-film.lifestyle/top-del-mese.html",
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://italia-film.lifestyle/?story=avatar&do=search&subaction=search&search_start=",
+   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
+}

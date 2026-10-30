@@ -1,0 +1,14 @@
+Canale youtube_channel | indirizzo 
+== mainlist
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 159, in <lambda>
+    menu = passo('mainlist', lambda: ch.mainlist(Item(channel=nome, action='mainlist')))
+                                     ^^^^^^^^^^^
+AttributeError: module 'channels.youtube_channel' has no attribute 'mainlist'
+
+Nessuna voce da riprodurre trovata
+== controllo di tutte le sezioni
+VERDETTO: SI FERMA A: mainlist

@@ -1,0 +1,476 @@
+{
+ "canale": "mediasetplay",
+ "host": "https://mediasetinfinity.mediaset.it",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 25
+  },
+  {
+   "passo": "lista \"•• Tutti i Film\"",
+   "esito": "OK",
+   "voci": 141
+  },
+  {
+   "passo": "findvideos su \"Bullet train\"",
+   "esito": "ERRORE",
+   "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+  },
+  {
+   "passo": "lista \"•• Film ultimi arrivi\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "findvideos su \"Windstorm 4 - Il vento sta cambiando\"",
+   "esito": "ERRORE",
+   "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+  },
+  {
+   "passo": "lista \"•• Film più visti del giorno\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "findvideos su \"Spy Game\"",
+   "esito": "ERRORE",
+   "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [
+  "top | ('Dirette {bold}', ['', 'live'])",
+  "top | ('Replay {bold}', ['', 'restart'])",
+  "menu | ('Tutti i Film {submenu}', ['/cinema', 'peliculas', {'uxReference': 'multipleBlockFilm'}, 'movie'])",
+  "menu | ('Film ultimi arrivi {submenu}', ['/cinema', 'peliculas', {'uxReference': 'filmUltimiArrivi'}, 'movie'])",
+  "menu | ('Film più visti del giorno {submenu}', ['/cinema', 'peliculas', {'uxReference': 'filmPiuVisti24H'}, 'movie'])",
+  "menu | ('Film da non perdere {submenu}', ['/cinema', 'peliculas', {'uxReference': 'filmClustering'}, 'movie'])",
+  "menu | ('Tutte le Serie TV {submenu}', ['/fiction', 'peliculas', {'uxReference': 'fictionSerieTvLibrary'}, 'tvshow'])",
+  "menu | ('Fiction e Serie Tv del momento {submenu}', ['/fiction', 'peliculas', {'uxReference': 'fictionSerieTvDelMomen",
+  "menu | ('Le serie di Mediaset Infinity {submenu}', ['/fiction', 'peliculas', {'uxReference': 'fictionOriginals'}, 'tv",
+  "menu | ('Soap del momento {submenu}', ['/cinema', 'peliculas', {'uxReference': 'fictionSerieTvParamsGenre', 'params':",
+  "menu | ('TV Movie italiani {submenu}', ['/fiction', 'peliculas', {'uxReference': 'tvMovieFiction'}, 'tvshow'])",
+  "menu | ('Animazione Made in Japan {submenu}', ['/fiction', 'peliculas', {'uxReference': 'kidsSerieAnimate'}, 'tvshow'",
+  "menu | ('Serie TV Piu Viste {submenu}', ['/fiction', 'peliculas', {'uxReference': 'serieTvPiuViste24H'}, 'tvshow'])",
+  "menu | ('Serie Turche {submenu}', ['/fiction', 'peliculas', {'uxReference': 'currentSeasonTurchia'}, 'tvshow'])",
+  "menu | ('Programmi TV Prima serata{ submenu}', ['/programmitv', 'peliculas', {'uxReference': 'stagioniPrimaSerata'}, ",
+  "menu | ('Programmi TV Daytime{ submenu}', ['/programmitv', 'peliculas', {'uxReference': 'stagioniDaytime'}, 'tvshow']",
+  "menu | ('Talent e reality {submenu}', ['/talent', 'peliculas', {'uxReference': 'multipleBlockProgrammiTv', 'userConte",
+  "menu | ('Kids Boing {submenu}', ['/kids', 'peliculas', {'uxReference': 'kidsBoing'}, 'undefined'])",
+  "menu | ('Kids Cartoonito {submenu}', ['/kids', 'peliculas', {'uxReference': 'kidsCartoonito'}, 'undefined'])",
+  "menu | ('Kids Evergreen {submenu}', ['/kids', 'peliculas', {'uxReference': 'kidsMediaset'}, 'undefined'])",
+  "menu | ('Tutti i Documentari {submenu}', ['/documentari', 'peliculas', {'uxReference': 'multipleBlockDocumentari'}, '",
+  "menu | ('Documentari più visti {submenu}', ['/documentari', 'peliculas', {'uxReference': 'documentariPiuVisti24H'}, '",
+  "menu | ('Film Documentari di Focus {submenu}', ['/documentari', 'peliculas', {'uxReference': 'filmDocumentari'}, 'und"
+ ],
+ "sezioni": [
+  {
+   "voce": "Dirette",
+   "azione": "live",
+   "esito": "OK",
+   "titoli": 46
+  },
+  {
+   "voce": "Replay",
+   "azione": "restart",
+   "esito": "OK",
+   "titoli": 23
+  },
+  {
+   "voce": "•• Tutti i Film",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 96
+  },
+  {
+   "voce": "•• Film ultimi arrivi",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 10
+  },
+  {
+   "voce": "•• Film più visti del giorno",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 10
+  },
+  {
+   "voce": "•• Film da non perdere",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Tutte le Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 6
+  },
+  {
+   "voce": "•• Fiction e Serie Tv del momento",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 18,
+   "figli": [
+    {
+     "voce": "The Last Ship 3",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 9
+    },
+    {
+     "voce": "I Simpson",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 1
+    },
+    {
+     "voce": "NCIS - Unità anticrimine 13",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    }
+   ]
+  },
+  {
+   "voce": "•• Le serie di Mediaset Infinity",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 20,
+   "figli": [
+    {
+     "voce": "My Sweet Lie",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    },
+    {
+     "voce": "Innocence",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    },
+    {
+     "voce": "Bitter Sweet - Ingredienti d'amore",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    }
+   ]
+  },
+  {
+   "voce": "•• Soap del momento",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 20,
+   "figli": [
+    {
+     "voce": "Tutto per la mia famiglia 2",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
+     "voce": "My Sweet Lie",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    },
+    {
+     "voce": "La promessa",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 7
+    }
+   ]
+  },
+  {
+   "voce": "•• TV Movie italiani",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Animazione Made in Japan",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 20,
+   "figli": [
+    {
+     "voce": "Dragon Ball Daima",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 8
+    },
+    {
+     "voce": "One Piece 18",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 2
+    },
+    {
+     "voce": "Dragon Ball Super",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 30
+    }
+   ]
+  },
+  {
+   "voce": "•• Serie TV Piu Viste",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 20,
+   "figli": [
+    {
+     "voce": "I Simpson",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 1
+    },
+    {
+     "voce": "The Last Ship 3",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 9
+    },
+    {
+     "voce": "C.S.I. Scena del crimine 10",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    }
+   ]
+  },
+  {
+   "voce": "•• Serie Turche",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 20,
+   "figli": [
+    {
+     "voce": "My Sweet Lie",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    },
+    {
+     "voce": "Tutto per la mia famiglia 2",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
+     "voce": "Forbidden Fruit 4",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    }
+   ]
+  },
+  {
+   "voce": "•• Programmi TV Prima serata",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 12,
+   "figli": [
+    {
+     "voce": "Le Iene 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
+     "voce": "Grande Fratello VIP - Autunno 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
+     "voce": "Il Volo - Uno per tutti",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    }
+   ]
+  },
+  {
+   "voce": "•• Programmi TV Daytime",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 20,
+   "figli": [
+    {
+     "voce": "La ruota della fortuna 2025/2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    },
+    {
+     "voce": "Caduta libera 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
+     "voce": "Amici 26",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 10
+    }
+   ]
+  },
+  {
+   "voce": "•• Talent e reality",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 100,
+   "figli": [
+    {
+     "voce": "Grande Fratello VIP - Autunno 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
+     "voce": "Amici 26",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 10
+    },
+    {
+     "voce": "Uomini e Donne 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 10
+    }
+   ]
+  },
+  {
+   "voce": "•• Kids Boing",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 20,
+   "figli": [
+    {
+     "voce": "Lo straordinario mondo di Gumball",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 10
+    },
+    {
+     "voce": "Teen Titans Go!",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 12
+    },
+    {
+     "voce": "Beyblade X - Terza stagione",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 9
+    }
+   ]
+  },
+  {
+   "voce": "•• Kids Cartoonito",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 17,
+   "figli": [
+    {
+     "voce": "Paw Patrol",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    },
+    {
+     "voce": "Simone",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 10
+    },
+    {
+     "voce": "La casa delle bambole di Gabby",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    }
+   ]
+  },
+  {
+   "voce": "•• Kids Evergreen",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 7,
+   "figli": [
+    {
+     "voce": "C'era una volta... Pollon",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 51
+    },
+    {
+     "voce": "Holly e Benji Forever",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 52
+    },
+    {
+     "voce": "Marco - Dagli Appennini alle Ande",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 26
+    }
+   ]
+  },
+  {
+   "voce": "•• Tutti i Documentari",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 16
+  },
+  {
+   "voce": "•• Documentari più visti",
+   "azione": "peliculas",
+   "esito": "SOTTOMENU",
+   "sottovoci": 20,
+   "figli": [
+    {
+     "voce": "Segnali dall'universo 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
+     "voce": "Enigmi alieni 13",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
+     "voce": "Enigmi alieni 10",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    }
+   ]
+  },
+  {
+   "voce": "•• Film Documentari di Focus",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 20
+  }
+ ],
+ "sezioni_riepilogo": "24 ok su 24",
+ "rete": [],
+ "verdetto": "SI FERMA A: findvideos su \"Bullet train\""
+}

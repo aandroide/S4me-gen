@@ -1,0 +1,35 @@
+Canale cineblog001 | indirizzo https://cineblog001.men
+== mainlist
+   -> 6 voci
+      peliculas | Film | https://cineblog001.center/film/
+      peliculas | Serie TV | https://cineblog001.center/serie-tv/
+      peliculas | Sub-ITA | https://cineblog001.center/sub-ita/
+      genres | Generi | https://cineblog001.center
+== lista "Film"
+   -> 19 voci
+      findvideos | Noi un po' meglio | https://cineblog001.men/cb01-streaming/35365-noi-un-po-meglio-streaming-cb01.html
+      findvideos | Concerto Geolier - Live Maradona 26 | https://cineblog001.men/cb01-streaming/35356-concerto-geolier-live-maradona-26-streaming-cb01.html
+      findvideos | Ali G: Who Iz I? | https://cineblog001.men/cb01-streaming/35347-ali-g-who-iz-i-streaming-cb01.html
+      findvideos | Hellfire | https://cineblog001.men/cb01-streaming/35344-hellfire-streaming-cb01.html
+== findvideos su "Noi un po' meglio"
+   -> 2 voci
+      play | Noi un po' meglio | https://v.vidxgo.co/38504402
+      add_pelicula_to_library | txt30161 %s | https://cineblog001.men/cb01-streaming/35365-noi-un-po-meglio-streaming-cb01.html
+== risoluzione vidxgo https://v.vidxgo.co/38504402
+   -> VIDEO OK m3u8 200 
+== voci dichiarate in mainlist (4)
+    top | ('Film', ['/film/', 'peliculas', ''])
+    top | ('Serie TV', ['/serie-tv/', 'peliculas', ''])
+    top | ('Sub-ITA', ['/sub-ita/', 'peliculas', ''])
+    top | ('Generi', ['', 'genres', ''])
+== controllo di tutte le sezioni
+   SEZIONE Film -> OK 18 
+   SEZIONE Serie TV -> OK 18 
+   SEZIONE Sub-ITA -> OK 18 
+   SEZIONE Azione -> OK 16 
+   SEZIONE Animazione -> OK 17 
+   SEZIONE Avventura -> OK 20 
+   SEZIONE Generi -> SOTTOMENU  
+   SEZIONE txt70741 … -> OK 10 
+SEZIONI: 5 ok su 5
+VERDETTO: ARRIVA AL VIDEO

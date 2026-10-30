@@ -1,0 +1,33 @@
+{
+ "canale": "thepiratebay",
+ "host": "",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 2
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [],
+ "sezioni": [
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 100
+  }
+ ],
+ "sezioni_riepilogo": "1 ok su 1",
+ "rete": [
+  {
+   "url": "https://apibay.org/q.php?q=avatar",
+   "status": 200,
+   "byte": 30482,
+   "secondi": 0.2,
+   "titolo_pagina": "",
+   "file": "pagine/01.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: ultimo passo, nessuna voce da riprodurre"
+}

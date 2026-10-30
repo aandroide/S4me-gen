@@ -1,0 +1,587 @@
+{
+ "canale": "la7",
+ "host": "",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 9
+  },
+  {
+   "passo": "lista \"• Programmi TV\"",
+   "esito": "OK",
+   "voci": 71
+  },
+  {
+   "passo": "episodios su \"100 minuti\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "findvideos su \"100 Minuti - Senza tetto né legge\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "directo",
+   "url": "https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/content/entry/data/0/679/0_f0rztze5_0_g8ywvqlq_1,.mp4.urlset/master.m3u8",
+   "finale": "https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/content/entry/data/0/679/0_f0rztze5_0_g8ywvqlq_1,.mp4.urlset/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 206"
+  }
+ ],
+ "menu_dichiarato": [
+  "top | ('Dirette {bold}', ['', 'live'])",
+  "top | ('Replay {bold}', ['', 'replay_channels'])",
+  "menu | ('Programmi TV {bullet bold}', ['/programmi', 'peliculas', '', 'tvshow'])",
+  "menu | ('Film {bullet bold}', ['/film', 'peliculas', '', 'movie'])",
+  "menu | ('Documentari {bullet bold}', ['/documentari', 'peliculas', '', 'movie'])",
+  "menu | ('Tg La7 {bullet bold} {teen}', ['/tgla7/puntate', 'episodios', '', 'tvshow'])",
+  "menu | ('Coffee Tech {bullet bold} {teen}', ['/coffee-tech', 'episodios', '', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Dirette",
+   "azione": "live",
+   "esito": "OK",
+   "titoli": 2
+  },
+  {
+   "voce": "Replay",
+   "azione": "replay_channels",
+   "esito": "SOTTOMENU",
+   "sottovoci": 2,
+   "figli": [
+    {
+     "voce": "La7",
+     "azione": "replay_giorni",
+     "esito": "SOTTOMENU",
+     "sottovoci": 8,
+     "figli": [
+      {
+       "voce": "Oggi 30 ottobre",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 5
+      },
+      {
+       "voce": "Giovedi 29 ottobre",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 24
+      },
+      {
+       "voce": "Mercoledi 28 ottobre",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 25
+      }
+     ]
+    },
+    {
+     "voce": "La7Cinema",
+     "azione": "replay_giorni",
+     "esito": "SOTTOMENU",
+     "sottovoci": 8,
+     "figli": [
+      {
+       "voce": "Oggi 30 ottobre",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 3
+      },
+      {
+       "voce": "Giovedi 29 ottobre",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 7
+      },
+      {
+       "voce": "Mercoledi 28 ottobre",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 7
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "voce": "• Programmi TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 71
+  },
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 34
+  },
+  {
+   "voce": "• Documentari",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 16
+  },
+  {
+   "voce": "• Tg La7",
+   "azione": "episodios",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "• Coffee Tech",
+   "azione": "episodios",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 3
+  }
+ ],
+ "sezioni_riepilogo": "8 ok su 8",
+ "rete": [
+  {
+   "url": "https://www.la7play.it/api/gql/75b0227f0361abcf",
+   "status": 200,
+   "byte": 47524,
+   "secondi": 0.7,
+   "titolo_pagina": "",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://www.la7play.it/bersaglio-mobile",
+   "status": 200,
+   "byte": 100626,
+   "secondi": 0.1,
+   "titolo_pagina": "Bersaglio Mobile | La7",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://www.la7play.it/atlantide",
+   "status": 200,
+   "byte": 138656,
+   "secondi": 0.2,
+   "titolo_pagina": "Atlantide | La7",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://www.la7play.it/amarsi-un-po",
+   "status": 200,
+   "byte": 85825,
+   "secondi": 0.6,
+   "titolo_pagina": "Amarsi un po&#x27; - Istruzioni per l&#x27;uso | La7",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://www.la7play.it/dream-bike",
+   "status": 200,
+   "byte": 59730,
+   "secondi": 0.6,
+   "titolo_pagina": "Dream Bike | La7",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://www.la7play.it/speciali-ezio-mauro",
+   "status": 200,
+   "byte": 77223,
+   "secondi": 0.6,
+   "titolo_pagina": "Ezio Mauro | La7",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://www.la7play.it/green-tour",
+   "status": 200,
+   "byte": 75027,
+   "secondi": 0.6,
+   "titolo_pagina": "Green Tour | La7",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://www.la7play.it/la725anni-un-racconto-italiano",
+   "status": 200,
+   "byte": 60156,
+   "secondi": 0.4,
+   "titolo_pagina": "La725 anni - Un racconto italiano | La7",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://www.la7play.it/meteola7",
+   "status": 200,
+   "byte": 87346,
+   "secondi": 0.2,
+   "titolo_pagina": "METEO LA7 | La7",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://www.la7play.it/omnibus-meteo",
+   "status": 200,
+   "byte": 80937,
+   "secondi": 0.2,
+   "titolo_pagina": "Omnibus Meteo | La7",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://www.la7play.it/mercanti-dellanima-lai-e-il-nostro-futuro",
+   "status": 200,
+   "byte": 76000,
+   "secondi": 0.3,
+   "titolo_pagina": "Mercanti dell&#x27;anima | La7",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://www.la7play.it/ti-ci-porto-io",
+   "status": 200,
+   "byte": 89804,
+   "secondi": 0.4,
+   "titolo_pagina": "Ti ci porto io | La7",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://www.la7play.it/la-furia-e-il-frastuono",
+   "status": 200,
+   "byte": 68160,
+   "secondi": 2.1,
+   "titolo_pagina": "La furia e il frastuono | La7",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://www.la7play.it/charlie-s-angels",
+   "status": 200,
+   "byte": 56380,
+   "secondi": 2.2,
+   "titolo_pagina": "Charlie&#x27;s Angels | La7",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://www.la7play.it/la7ricorda",
+   "status": 200,
+   "byte": 71103,
+   "secondi": 2.3,
+   "titolo_pagina": "La7 Ricorda | La7",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/puntate",
+   "status": 200,
+   "byte": 187071,
+   "secondi": 0.4,
+   "titolo_pagina": "Puntate di 100 minuti | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-avidita-i-soldi-le-lobby-e-la-politica-24-06-2025-601631",
+   "status": 200,
+   "byte": 84737,
+   "secondi": 0.3,
+   "titolo_pagina": "100 minuti - AVIDITÀ I soldi, le lobby e la politica | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-27-05-2025-597971",
+   "status": 200,
+   "byte": 100461,
+   "secondi": 0.3,
+   "titolo_pagina": "100 Minuti - Senza tetto né legge - 26/05/2025 | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-immortalita-cosa-rende-immortale-il-potere-criminale-delle-mafie-in-italia-30-06-2025-602492",
+   "status": 200,
+   "byte": 86667,
+   "secondi": 0.3,
+   "titolo_pagina": "100 minuti - IMMORTALITÀ. Cosa rende immortale il potere criminale delle mafie i"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-milano-siamo-noi-17-06-2025-600774",
+   "status": 200,
+   "byte": 79491,
+   "secondi": 0.4,
+   "titolo_pagina": "100 minuti - Milano siamo noi - Puntata del 16/6/2025 | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-furbi-di-guerra-06-05-2025-594679",
+   "status": 200,
+   "byte": 87714,
+   "secondi": 0.3,
+   "titolo_pagina": "100 Minuti: Furbi di Guerra | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-american-psycho-03-06-2025-598866",
+   "status": 200,
+   "byte": 83068,
+   "secondi": 1.2,
+   "titolo_pagina": "100 minuti - AMERICAN PSYCHO | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-lo-spettro-13-05-2025-595883",
+   "status": 200,
+   "byte": 85102,
+   "secondi": 1.2,
+   "titolo_pagina": "100 minuti - LO SPETTRO - 12/5/2025 | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-il-segreto-di-messina-denaro-14-06-2025-600545",
+   "status": 200,
+   "byte": 78831,
+   "secondi": 1.5,
+   "titolo_pagina": "100 minuti - Il segreto di Messina Denaro | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465",
+   "status": 200,
+   "byte": 90078,
+   "secondi": 1.5,
+   "titolo_pagina": "100 Minuti - Senza tetto né legge | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/piazzapulita-presenta-100-minuti-united-colors-of-money-20-05-2025-596886",
+   "status": 200,
+   "byte": 100461,
+   "secondi": 1.5,
+   "titolo_pagina": "100 Minuti - United Colors of Money | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/leredita-del-re-100-minuti-autostop-puntata-del-2592024-26-09-2024-559732",
+   "status": 200,
+   "byte": 79503,
+   "secondi": 1.2,
+   "titolo_pagina": "L&#x27;Eredità del Re - 100 minuti: Autostop - Puntata del 25/9/2024 | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-11-05-2024-541760",
+   "status": 200,
+   "byte": 74784,
+   "secondi": 0.3,
+   "titolo_pagina": "100 minuti | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-perfette-mai-30-07-2024-553419",
+   "status": 200,
+   "byte": 94071,
+   "secondi": 1.6,
+   "titolo_pagina": "100 minuti - Perfette mai | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-autostop-16-07-2024-551916",
+   "status": 200,
+   "byte": 75480,
+   "secondi": 1.6,
+   "titolo_pagina": "100 minuti - Autostop | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-roma-citta-aperta-17-06-2024-536164",
+   "status": 200,
+   "byte": 89106,
+   "secondi": 1.1,
+   "titolo_pagina": "100 minuti - Roma città aperta | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-welcome-to-italy-14-05-2024-542059",
+   "status": 200,
+   "byte": 91375,
+   "secondi": 1.0,
+   "titolo_pagina": "100 minuti - Welcome to Italy | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-la-squadra-21-05-2024-543429",
+   "status": 200,
+   "byte": 77194,
+   "secondi": 1.1,
+   "titolo_pagina": "100 Minuti - La Squadra | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-perfette-mai-07-05-2024-540854",
+   "status": 200,
+   "byte": 94932,
+   "secondi": 1.2,
+   "titolo_pagina": "100 Minuti - Perfette mai | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-04-05-2024-540591",
+   "status": 200,
+   "byte": 74782,
+   "secondi": 1.2,
+   "titolo_pagina": "100 minuti | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-autostop-30-04-2024-539867",
+   "status": 200,
+   "byte": 94643,
+   "secondi": 1.3,
+   "titolo_pagina": "100 minuti - AUTOSTOP | La7"
+  },
+  {
+   "url": "https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465",
+   "status": 200,
+   "byte": 90078,
+   "secondi": 0.1,
+   "titolo_pagina": "100 Minuti - Senza tetto né legge | La7"
+  },
+  {
+   "url": "https://www.la7play.it/api/gql/69f0b39066b90b25/eyJjYW5hbGUiOiJMQTdDSU5FTUEiLCJsaW1pdCI6NH0",
+   "status": 200,
+   "byte": 3019,
+   "secondi": 0.5,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.la7play.it/api/gql/69f0b39066b90b25/eyJjYW5hbGUiOiJMQTciLCJsaW1pdCI6NH0",
+   "status": 200,
+   "byte": 3237,
+   "secondi": 0.7,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.la7play.it/dirette/la7-cinema",
+   "status": 200,
+   "byte": 132589,
+   "secondi": 0.3,
+   "titolo_pagina": "La7 Cinema in diretta | La7"
+  },
+  {
+   "url": "https://www.la7play.it/dirette/la7-cinema",
+   "status": 200,
+   "byte": 132589,
+   "secondi": 0.1,
+   "titolo_pagina": "La7 Cinema in diretta | La7"
+  },
+  {
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
+   "status": 200,
+   "byte": 867847,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 | La7"
+  },
+  {
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
+   "status": 200,
+   "byte": 867847,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 | La7"
+  },
+  {
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
+   "status": 200,
+   "byte": 867847,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 | La7"
+  },
+  {
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7",
+   "status": 200,
+   "byte": 867847,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 | La7"
+  },
+  {
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
+   "status": 200,
+   "byte": 535691,
+   "secondi": 0.4,
+   "titolo_pagina": "Guida TV LA7 Cinema | La7"
+  },
+  {
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
+   "status": 200,
+   "byte": 535691,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 Cinema | La7"
+  },
+  {
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
+   "status": 200,
+   "byte": 535691,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 Cinema | La7"
+  },
+  {
+   "url": "https://www.la7play.it/guida-tv-rivedi/la7-cinema",
+   "status": 200,
+   "byte": 535691,
+   "secondi": 0.1,
+   "titolo_pagina": "Guida TV LA7 Cinema | La7"
+  },
+  {
+   "url": "https://www.la7play.it/api/gql/75b0227f0361abcf",
+   "status": 200,
+   "byte": 47524,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.la7play.it/atlantide",
+   "status": 200,
+   "byte": 138656,
+   "secondi": 0.1,
+   "titolo_pagina": "Atlantide | La7"
+  },
+  {
+   "url": "https://www.la7play.it/bersaglio-mobile",
+   "status": 200,
+   "byte": 100626,
+   "secondi": 0.1,
+   "titolo_pagina": "Bersaglio Mobile | La7"
+  },
+  {
+   "url": "https://www.la7play.it/green-tour",
+   "status": 200,
+   "byte": 75027,
+   "secondi": 0.1,
+   "titolo_pagina": "Green Tour | La7"
+  },
+  {
+   "url": "https://www.la7play.it/amarsi-un-po",
+   "status": 200,
+   "byte": 85825,
+   "secondi": 0.2,
+   "titolo_pagina": "Amarsi un po&#x27; - Istruzioni per l&#x27;uso | La7"
+  },
+  {
+   "url": "https://www.la7play.it/la-furia-e-il-frastuono",
+   "status": 200,
+   "byte": 68160,
+   "secondi": 0.2,
+   "titolo_pagina": "La furia e il frastuono | La7"
+  },
+  {
+   "url": "https://www.la7play.it/dream-bike",
+   "status": 200,
+   "byte": 59730,
+   "secondi": 0.2,
+   "titolo_pagina": "Dream Bike | La7"
+  },
+  {
+   "url": "https://www.la7play.it/speciali-ezio-mauro",
+   "status": 200,
+   "byte": 77223,
+   "secondi": 0.2,
+   "titolo_pagina": "Ezio Mauro | La7"
+  },
+  {
+   "url": "https://www.la7play.it/charlie-s-angels",
+   "status": 200,
+   "byte": 56380,
+   "secondi": 0.2,
+   "titolo_pagina": "Charlie&#x27;s Angels | La7"
+  },
+  {
+   "url": "https://www.la7play.it/la7ricorda",
+   "status": 200,
+   "byte": 71103,
+   "secondi": 0.1,
+   "titolo_pagina": "La7 Ricorda | La7"
+  },
+  {
+   "url": "https://www.la7play.it/la725anni-un-racconto-italiano",
+   "status": 200,
+   "byte": 60156,
+   "secondi": 0.1,
+   "titolo_pagina": "La725 anni - Un racconto italiano | La7"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

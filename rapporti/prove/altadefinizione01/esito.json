@@ -1,0 +1,274 @@
+{
+ "canale": "altadefinizione01",
+ "host": "https://altadefinizione-01.autos",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 9
+  },
+  {
+   "passo": "lista \"Tutti \"",
+   "esito": "OK",
+   "voci": 24
+  },
+  {
+   "passo": "check su \"Noi un po' meglio \"",
+   "esito": "OK",
+   "voci": 2
+  }
+ ],
+ "video": [
+  {
+   "server": "vixsrc",
+   "url": "https://vixsrc.to/movie/tt38504402",
+   "finale": "https://vixsrc.to/playlist/797281.m3u8?ub=1&token=b1cdf17040deca728639ca49401ad13d&expires=1798544270&h=1&lang=it",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
+ "menu_dichiarato": [
+  "menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])",
+  "menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])",
+  "menu | ('Ultimi Aggiornati-Aggiunti {submenu}', ['', 'peliculas', 'update'])",
+  "menu | ('Generi {submenu}', ['', 'genres', 'genres', 'undefined'])",
+  "menu | ('Lettera {submenu}', ['/catalog/a', 'genres', 'orderalf', 'undefined'])",
+  "menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])",
+  "menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Tutti",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 23
+  },
+  {
+   "voce": "•• Al Cinema",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "•• Ultimi Aggiornati-Aggiunti",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 37
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 22,
+   "figli": [
+    {
+     "voce": "Azione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 29
+    },
+    {
+     "voce": "Animazione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 28
+    },
+    {
+     "voce": "Avventura",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    }
+   ]
+  },
+  {
+   "voce": "•• Lettera",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 27,
+   "figli": [
+    {
+     "voce": "0-9",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    },
+    {
+     "voce": "A",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    },
+    {
+     "voce": "B",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    }
+   ]
+  },
+  {
+   "voce": "•• Sub-ITA",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 6
+  }
+ ],
+ "sezioni_riepilogo": "8 ok su 8",
+ "rete": [
+  {
+   "url": "https://altadefinizione-01.autos/lastnews/",
+   "status": 200,
+   "byte": 132964,
+   "secondi": 0.9,
+   "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/35365-noi-un-po-meglio-streaming.html",
+   "status": 200,
+   "byte": 92715,
+   "secondi": 0.2,
+   "titolo_pagina": "Noi un po' meglio Streaming HD - Altadefinizione01",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://vixsrc.to/api/movie/tt38504402",
+   "status": 200,
+   "byte": 137,
+   "secondi": 0.3,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://vixsrc.to/embed/797281?token=468b6670b9d5a05c849b46328ee9b69a&t=WW91LCBNZSwgVXM%3D&expires=1793360280&lang=en&skin=vixsrc&canPlayFHD=1",
+   "status": 200,
+   "byte": 6592,
+   "secondi": 0.3,
+   "titolo_pagina": "797281",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/lastnews/",
+   "status": 200,
+   "byte": 132964,
+   "secondi": 0.6,
+   "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/cinema/",
+   "status": 200,
+   "byte": 157686,
+   "secondi": 0.3,
+   "titolo_pagina": "Al Cinema – Altadefinizione01",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos",
+   "status": 200,
+   "byte": 183135,
+   "secondi": 0.6,
+   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos",
+   "status": 200,
+   "byte": 183135,
+   "secondi": 0.6,
+   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/azione/",
+   "status": 200,
+   "byte": 157243,
+   "secondi": 0.3,
+   "titolo_pagina": "Azione – Altadefinizione01",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/animazione/",
+   "status": 200,
+   "byte": 158359,
+   "secondi": 0.3,
+   "titolo_pagina": "Animazione – Altadefinizione01",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/avventura/",
+   "status": 200,
+   "byte": 159201,
+   "secondi": 0.6,
+   "titolo_pagina": "Avventura – Altadefinizione01",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/catalog/a",
+   "status": 200,
+   "byte": 109633,
+   "secondi": 0.5,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/catalog/9",
+   "status": 200,
+   "byte": 108685,
+   "secondi": 0.9,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/catalog/A",
+   "status": 200,
+   "byte": 109633,
+   "secondi": 0.6,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/catalog/B",
+   "status": 200,
+   "byte": 109633,
+   "secondi": 0.9,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/sub-ita/",
+   "status": 200,
+   "byte": 156952,
+   "secondi": 0.3,
+   "titolo_pagina": "Sub-ITA &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/serie-tv/",
+   "status": 200,
+   "byte": 157607,
+   "secondi": 0.3,
+   "titolo_pagina": "Serie TV in Streaming Gratis - Altadefinizione01"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/?do=search&subaction=search&titleonly=3&story=avatar",
+   "status": 200,
+   "byte": 93655,
+   "secondi": 0.7,
+   "titolo_pagina": "Site search &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

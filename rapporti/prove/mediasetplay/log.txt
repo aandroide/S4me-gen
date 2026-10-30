@@ -1,0 +1,155 @@
+Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
+== mainlist
+   -> 25 voci
+      live | Dirette | https://mediasetinfinity.mediaset.it
+      restart | Replay | https://mediasetinfinity.mediaset.it
+      peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
+      peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
+== lista "•• Tutti i Film"
+   -> 141 voci
+      findvideos | Bullet train | https://mediasetinfinity.mediaset.it/movie/bullettrain/bullet-train_F311877201000103
+      findvideos | Transformers - La vendetta del caduto | https://mediasetinfinity.mediaset.it/movie/transformerslavendettadelcaduto/transformers-la-vendetta-
+      findvideos | Shazam! | https://mediasetinfinity.mediaset.it/movie/shazam/shazam_F309243001000102
+      findvideos | Divergent | https://mediasetinfinity.mediaset.it/movie/divergent/divergent_F305721401000102
+== findvideos su "Bullet train"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
+    res = session.post(
+          ^^^^^^^^^^^^^
+KeyError: 'response'
+
+== lista "•• Film ultimi arrivi"
+   -> 21 voci
+      findvideos | Windstorm 4 - Il vento sta cambiando | https://mediasetinfinity.mediaset.it/movie/windstorm4ilventostacambiando/windstorm-4-il-vento-sta-ca
+      findvideos | Horizon line - Brivido ad alta quota | https://mediasetinfinity.mediaset.it/movie/horizonlinebrividoadaltaquota/horizon-line-brivido-ad-alt
+      findvideos | The protegè | https://mediasetinfinity.mediaset.it/movie/theprotege/the-protege_F311440301000102
+      findvideos | The ride  (di a. ranarivelo) - The ride | https://mediasetinfinity.mediaset.it/movie/theridediaranarivelo/the-ride_F310991801000104
+== findvideos su "Windstorm 4 - Il vento sta cambiando"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
+    res = session.post(
+          ^^^^^^^^^^^^^
+KeyError: 'response'
+
+== lista "•• Film più visti del giorno"
+   -> 21 voci
+      findvideos | Spy Game | https://mediasetinfinity.mediaset.it/movie/spygame/spy-game_F011035001000102
+      findvideos | Bullet train | https://mediasetinfinity.mediaset.it/movie/bullettrain/bullet-train_F311877201000103
+      findvideos | Inga Lindstrom - Il ritorno di Ellen - Inga lindstrom - Il r | https://mediasetinfinity.mediaset.it/movie/ingalindstromilritornodiellen/inga-lindstrom-il-ritorno-d
+      findvideos | Inga Lindstrom - Il matrimonio dimenticato | https://mediasetinfinity.mediaset.it/movie/ingalindstromilmatrimoniodimenticato/inga-lindstrom-il-ma
+== findvideos su "Spy Game"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
+    res = session.post(
+          ^^^^^^^^^^^^^
+KeyError: 'response'
+
+Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (23)
+    top | ('Dirette {bold}', ['', 'live'])
+    top | ('Replay {bold}', ['', 'restart'])
+    menu | ('Tutti i Film {submenu}', ['/cinema', 'peliculas', {'uxReference': 'multipleBlockFilm'}, 'movie'])
+    menu | ('Film ultimi arrivi {submenu}', ['/cinema', 'peliculas', {'uxReference': 'filmUltimiArrivi'}, 'movie'])
+    menu | ('Film più visti del giorno {submenu}', ['/cinema', 'peliculas', {'uxReference': 'filmPiuVisti24H'}, 'movie'])
+    menu | ('Film da non perdere {submenu}', ['/cinema', 'peliculas', {'uxReference': 'filmClustering'}, 'movie'])
+    menu | ('Tutte le Serie TV {submenu}', ['/fiction', 'peliculas', {'uxReference': 'fictionSerieTvLibrary'}, 'tvshow'])
+    menu | ('Fiction e Serie Tv del momento {submenu}', ['/fiction', 'peliculas', {'uxReference': 'fictionSerieTvDelMomen
+    menu | ('Le serie di Mediaset Infinity {submenu}', ['/fiction', 'peliculas', {'uxReference': 'fictionOriginals'}, 'tv
+    menu | ('Soap del momento {submenu}', ['/cinema', 'peliculas', {'uxReference': 'fictionSerieTvParamsGenre', 'params':
+    menu | ('TV Movie italiani {submenu}', ['/fiction', 'peliculas', {'uxReference': 'tvMovieFiction'}, 'tvshow'])
+    menu | ('Animazione Made in Japan {submenu}', ['/fiction', 'peliculas', {'uxReference': 'kidsSerieAnimate'}, 'tvshow'
+    menu | ('Serie TV Piu Viste {submenu}', ['/fiction', 'peliculas', {'uxReference': 'serieTvPiuViste24H'}, 'tvshow'])
+    menu | ('Serie Turche {submenu}', ['/fiction', 'peliculas', {'uxReference': 'currentSeasonTurchia'}, 'tvshow'])
+    menu | ('Programmi TV Prima serata{ submenu}', ['/programmitv', 'peliculas', {'uxReference': 'stagioniPrimaSerata'}, 
+    menu | ('Programmi TV Daytime{ submenu}', ['/programmitv', 'peliculas', {'uxReference': 'stagioniDaytime'}, 'tvshow']
+    menu | ('Talent e reality {submenu}', ['/talent', 'peliculas', {'uxReference': 'multipleBlockProgrammiTv', 'userConte
+    menu | ('Kids Boing {submenu}', ['/kids', 'peliculas', {'uxReference': 'kidsBoing'}, 'undefined'])
+    menu | ('Kids Cartoonito {submenu}', ['/kids', 'peliculas', {'uxReference': 'kidsCartoonito'}, 'undefined'])
+    menu | ('Kids Evergreen {submenu}', ['/kids', 'peliculas', {'uxReference': 'kidsMediaset'}, 'undefined'])
+    menu | ('Tutti i Documentari {submenu}', ['/documentari', 'peliculas', {'uxReference': 'multipleBlockDocumentari'}, '
+    menu | ('Documentari più visti {submenu}', ['/documentari', 'peliculas', {'uxReference': 'documentariPiuVisti24H'}, '
+    menu | ('Film Documentari di Focus {submenu}', ['/documentari', 'peliculas', {'uxReference': 'filmDocumentari'}, 'und
+== controllo di tutte le sezioni
+   SEZIONE Dirette -> OK 46 
+   SEZIONE Replay -> OK 23 
+   SEZIONE •• Tutti i Film -> OK 96 
+   SEZIONE •• Film ultimi arrivi -> OK 10 
+   SEZIONE •• Film più visti del giorno -> OK 10 
+   SEZIONE •• Film da non perdere -> OK 20 
+   SEZIONE •• Tutte le Serie TV -> OK 6 
+   SEZIONE The Last Ship 3 -> OK 9 
+   SEZIONE I Simpson -> OK 1 
+   SEZIONE NCIS - Unità anticrimine 13 -> OK 6 
+   SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
+   SEZIONE My Sweet Lie -> OK 5 
+   SEZIONE Innocence -> OK 5 
+   SEZIONE Bitter Sweet - Ingredienti d'amore -> OK 5 
+   SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
+   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
+   SEZIONE My Sweet Lie -> OK 5 
+   SEZIONE La promessa -> OK 7 
+   SEZIONE •• Soap del momento -> SOTTOMENU  
+   SEZIONE •• TV Movie italiani -> OK 20 
+   SEZIONE Dragon Ball Daima -> OK 8 
+   SEZIONE One Piece 18 -> OK 2 
+   SEZIONE Dragon Ball Super -> OK 30 
+   SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
+   SEZIONE I Simpson -> OK 1 
+   SEZIONE The Last Ship 3 -> OK 9 
+   SEZIONE C.S.I. Scena del crimine 10 -> OK 5 
+   SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
+   SEZIONE My Sweet Lie -> OK 5 
+   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
+   SEZIONE Forbidden Fruit 4 -> OK 4 
+   SEZIONE •• Serie Turche -> SOTTOMENU  
+   SEZIONE Le Iene 2026/2027 -> OK 6 
+   SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
+   SEZIONE Il Volo - Uno per tutti -> OK 4 
+   SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
+   SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
+   SEZIONE Caduta libera 2026/2027 -> OK 4 
+   SEZIONE Amici 26 -> OK 10 
+   SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
+   SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
+   SEZIONE Amici 26 -> OK 10 
+   SEZIONE Uomini e Donne 2026/2027 -> OK 10 
+   SEZIONE •• Talent e reality -> SOTTOMENU  
+   SEZIONE Lo straordinario mondo di Gumball -> OK 10 
+   SEZIONE Teen Titans Go! -> OK 12 
+   SEZIONE Beyblade X - Terza stagione -> OK 9 
+   SEZIONE •• Kids Boing -> SOTTOMENU  
+   SEZIONE Paw Patrol -> OK 5 
+   SEZIONE Simone -> OK 10 
+   SEZIONE La casa delle bambole di Gabby -> OK 5 
+   SEZIONE •• Kids Cartoonito -> SOTTOMENU  
+   SEZIONE C'era una volta... Pollon -> OK 51 
+   SEZIONE Holly e Benji Forever -> OK 52 
+   SEZIONE Marco - Dagli Appennini alle Ande -> OK 26 
+   SEZIONE •• Kids Evergreen -> SOTTOMENU  
+   SEZIONE •• Tutti i Documentari -> OK 16 
+   SEZIONE Segnali dall'universo 2026 -> OK 6 
+   SEZIONE Enigmi alieni 13 -> OK 6 
+   SEZIONE Enigmi alieni 10 -> OK 4 
+   SEZIONE •• Documentari più visti -> SOTTOMENU  
+   SEZIONE •• Film Documentari di Focus -> OK 20 
+   SEZIONE txt70741 … -> OK 20 
+SEZIONI: 24 ok su 24
+VERDETTO: SI FERMA A: findvideos su "Bullet train"

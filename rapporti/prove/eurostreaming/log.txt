@@ -1,0 +1,114 @@
+Canale eurostreaming | indirizzo https://eurostream.fit
+== mainlist
+   -> 6 voci
+      peliculas | • Serie TV | https://eurostream.fit
+      peliculas | • Anime | https://eurostream.fit/category/anime-cartoni-animati/
+      peliculas | • Aggiornamenti | https://eurostream.fit/nuovi-ep-aggiornamento/
+      peliculas | • Archivio | https://eurostream.fit/category/serie-tv-archive/
+== lista "• Serie TV"
+   -> 19 voci
+      episodios | Grey’s Anatomy | https://eurostream.fit/grey-s-anatomy-163/
+      episodios | Signora Volpe | https://eurostream.fit/signora-volpe/
+      episodios | Oak Island e il tesoro maledetto | https://eurostream.fit/oak-island-e-il-tesoro-maledetto/
+      episodios | Matrimonio a prima vista Italia | https://eurostream.fit/matrimonio-a-prima-vista-italia/
+== episodios su "Grey’s Anatomy"
+   -> 648 voci
+      findvideos | 1x01 - Quando il Gioco si Fa Duro  | https://eurostream.fit/grey-s-anatomy-163/
+      findvideos | 1x02 - Il primo taglio è il Peggiore  | https://eurostream.fit/grey-s-anatomy-163/
+      findvideos | 1x03 - Vincitori e Vinti  | https://eurostream.fit/grey-s-anatomy-163/
+      findvideos | 1x04 - Le regole dell’Intimità  | https://eurostream.fit/grey-s-anatomy-163/
+== findvideos su "1x01 - Quando il Gioco si Fa Duro "
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
+    itemlist = support.server(item, item.other)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 1287, in server
+    itemList = servertools.find_video_items(data=str(data))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
+    data = unshortenit.findlinks(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Not un-shortened link: https://clicka.cc/delta/139roclchad5
+
+== lista "• Anime"
+   -> 19 voci
+      episodios | Daemons of the Shadow Realm | https://eurostream.fit/daemons-of-the-shadow-realm/
+      episodios | Adventure Time: Side Quests | https://eurostream.fit/adventure-time-side-quests/
+      episodios | Avatar: I Sette Rifugi | https://eurostream.fit/avatar-sette-rifugi/
+      episodios | Willy il Coyote e Beep Beep | https://eurostream.fit/willy-il-coyote-e-beep-beep/
+== episodios su "Daemons of the Shadow Realm"
+   -> 25 voci
+      findvideos | 1x01 - Asa e Yuru  | https://eurostream.fit/daemons-of-the-shadow-realm/
+      findvideos | 1x02 - Destra e Sinistra  | https://eurostream.fit/daemons-of-the-shadow-realm/
+      findvideos | 1x03 - Dera e Hana  | https://eurostream.fit/daemons-of-the-shadow-realm/
+      findvideos | 1x04 - Jin e Yuru  | https://eurostream.fit/daemons-of-the-shadow-realm/
+== findvideos su "1x01 - Asa e Yuru "
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
+    itemlist = support.server(item, item.other)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 1287, in server
+    itemList = servertools.find_video_items(data=str(data))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
+    data = unshortenit.findlinks(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47
+
+== lista "• Aggiornamenti"
+   -> 21 voci
+      episodios | 3x01 - Signora Volpe - Raccolto amaro | https://eurostream.fit/signora-volpe/
+      episodios | 13x04 - Oak Island e il tesoro maledetto - Origini medievali | https://eurostream.fit/oak-island-e-il-tesoro-maledetto/
+      episodios | 16x00 - Matrimonio a prima vista Italia - Episodio speciale: | https://eurostream.fit/matrimonio-a-prima-vista-italia/
+      episodios | 28x03 - Law & Order - Unita Vittime Speciali - Anonymity  | https://eurostream.fit/law-and-order-unita-vittime-speciali-30/
+== episodios su "3x01 - Signora Volpe - Raccolto amaro"
+   -> 8 voci
+      findvideos | 1x01 - Una zia ansiosa  | https://eurostream.fit/signora-volpe/
+      findvideos | 1x02 - Segreti e sacrifici  | https://eurostream.fit/signora-volpe/
+      findvideos | 1x03 - Tartufi e tradimento  | https://eurostream.fit/signora-volpe/
+      findvideos | 2x01 - Un debito d’onore  | https://eurostream.fit/signora-volpe/
+== findvideos su "1x01 - Una zia ansiosa "
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
+    itemlist = support.server(item, item.other)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 1287, in server
+    itemList = servertools.find_video_items(data=str(data))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
+    data = unshortenit.findlinks(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Not un-shortened link: https://clicka.cc/delta/hs1d0mlmf4fu
+
+Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (3)
+    anime | '/category/anime-cartoni-animati/'
+    mix | ('Aggiornamenti {bullet bold} {TV}', ['/nuovi-ep-aggiornamento/', 'peliculas', 'newest'])
+    mix | ('Archivio {bullet bold} {TV}', ['/category/serie-tv-archive/', 'peliculas'])
+== controllo di tutte le sezioni
+   SEZIONE • Serie TV -> OK 18 
+   SEZIONE • Anime -> OK 18 
+   SEZIONE • Aggiornamenti -> OK 20 
+   SEZIONE • Archivio -> OK 18 
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostream.fit/?s=avatar', 'status': 403, 'byte': 5913, 'titolo_pagina': 'Just a moment...'}
+SEZIONI: 4 ok su 5
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
+VERDETTO: SI FERMA A: findvideos su "1x01 - Quando il Gioco si Fa Duro "

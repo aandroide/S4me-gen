@@ -1,0 +1,39 @@
+Canale toonitalia | indirizzo https://toonitalia.xyz
+== mainlist
+   -> 7 voci
+      peliculas | Anime  | https://toonitalia.xyz/category/anime
+      peliculas | •• Anime ITA | https://toonitalia.xyz/anime-ita
+      peliculas | •• Anime Sub-ITA | https://toonitalia.xyz/contatti
+      peliculas | Film Animazione  | https://toonitalia.xyz/film-animazione
+== lista "Anime "
+   -> 21 voci
+      check | Scuola di polizia  | https://toonitalia.xyz/scuola-di-polizia/
+      check | Shaman King  | https://toonitalia.xyz/shaman-king/
+      check | Soul Eater  | https://toonitalia.xyz/soul-eater/
+      check | Sorridi piccola Anna  | https://toonitalia.xyz/sorridi-piccola-anna/
+== check su "Scuola di polizia "
+   -> 64 voci
+      findvideos | 1x01 - La banda dei clown | https://toonitalia.xyz/scuola-di-polizia/
+      findvideos | 1x02 - Il fantasma | https://toonitalia.xyz/scuola-di-polizia/
+      findvideos | 1x03 - Cani d’assalto | https://toonitalia.xyz/scuola-di-polizia/
+      findvideos | 1x04 - Poliziotti robot | https://toonitalia.xyz/scuola-di-polizia/
+== findvideos su "1x01 - La banda dei clown"
+   -> 1 voci
+      play | 1x01 - La banda dei clown | https://voe.sx/e/ntl49uc3jz9h
+== risoluzione voe https://voe.sx/e/ntl49uc3jz9h
+   -> VIDEO OK m3u8 200 
+== voci dichiarate in mainlist (5)
+    menu | ('Anime', ['/category/anime', 'peliculas', '', 'undefined'])
+    menu | ('Anime ITA {submenu}', ['/anime-ita', 'peliculas', 'list', 'undefined'])
+    menu | ('Anime Sub-ITA {submenu}', ['/contatti', 'peliculas', 'list', 'undefined'])
+    menu | ('Film Animazione', ['/film-animazione', 'peliculas', 'list', 'undefined'])
+    menu | ('Serie TV', ['/serie-tv/', 'peliculas', 'list', 'tvshow'])
+== controllo di tutte le sezioni
+   SEZIONE Anime -> OK 20 
+   SEZIONE •• Anime ITA -> OK 20 
+   SEZIONE •• Anime Sub-ITA -> OK 20 
+   SEZIONE Film Animazione -> OK 20 
+   SEZIONE Serie TV -> OK 20 
+   SEZIONE txt70741 … -> OK 11 
+SEZIONI: 6 ok su 6
+VERDETTO: ARRIVA AL VIDEO

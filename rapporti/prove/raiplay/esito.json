@@ -1,0 +1,480 @@
+{
+ "canale": "raiplay",
+ "host": "https://www.raiplay.it",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 15
+  },
+  {
+   "passo": "lista \"Film\"",
+   "esito": "OK",
+   "voci": 15
+  },
+  {
+   "passo": "menu su \"Generi\"",
+   "esito": "OK",
+   "voci": 10
+  },
+  {
+   "passo": "genres su \"Film sottotitolati\"",
+   "esito": "OK",
+   "voci": 22
+  },
+  {
+   "passo": "peliculas su \"A\"",
+   "esito": "OK",
+   "voci": 14
+  },
+  {
+   "passo": "findvideos su \"A caccia del vedovo d'oro\"",
+   "esito": "ERRORE",
+   "errore": "')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/raiplay.py\", line 261, in findvideos\n    res = requests.get(getUrl(res['first_item_path'])).json()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
+  },
+  {
+   "passo": "lista \"Serie italiane\"",
+   "esito": "OK",
+   "voci": 11
+  },
+  {
+   "passo": "menu su \"Generi serie italiane\"",
+   "esito": "OK",
+   "voci": 11
+  },
+  {
+   "passo": "genres su \"Serie sottotitolate\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "peliculas su \"A\"",
+   "esito": "OK",
+   "voci": 3
+  },
+  {
+   "passo": "findvideos su \"Abramo\"",
+   "esito": "ERRORE",
+   "errore": "r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/raiplay.py\", line 258, in findvideos\n    res = requests.get(item.video_url).json()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
+  },
+  {
+   "passo": "lista \"Serie Internazionali\"",
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "menu su \"Generi\"",
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "genres su \"Serie sottotitolate\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "peliculas su \"A\"",
+   "esito": "OK",
+   "voci": 3
+  },
+  {
+   "passo": "findvideos su \"Abramo\"",
+   "esito": "ERRORE",
+   "errore": "r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/raiplay.py\", line 258, in findvideos\n    res = requests.get(item.video_url).json()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [
+  "top | ('Dirette {bold}', ['/dirette', 'live', '/palinsesto/onAir.json'])",
+  "top | ('Replay {bold}', ['/guidatv', 'replayMenu', '/guidatv.json'])",
+  "menu | ('Film {bold}', ['/film', 'menu', '/tipologia/film/index.json'])",
+  "menu | ('Serie italiane {bold}', ['/serieitaliane', 'menu', '/tipologia/serieitaliane/index.json'])",
+  "menu | ('Serie Internazionali {bold}', ['/serieinternazionali', 'menu', '/tipologia/serieinternazionali/index.json'])",
+  "menu | ('Programmi TV{bold}', ['/programmi', 'menu', '/tipologia/programmi/index.json'])",
+  "menu | ('Documentari {bold}', ['/documentari', 'menu', '/tipologia/documentari/index.json'])",
+  "menu | ('Bambini {bold}', ['/bambini', 'menu', '/tipologia/bambini/index.json'])",
+  "menu | ('Teen {bold}', ['/teen', 'menu', '/tipologia/teen/index.json'])",
+  "menu | ('Musica e Teatro {bold}', ['/musica-e-teatro', 'menu', '/tipologia/musica-e-teatro/index.json'])",
+  "menu | ('Teche Rai {bold storia}', ['/techerai', 'menu', '/tipologia/techerai/index.json'])",
+  "menu | ('Learning {bold}', ['/learning', 'menu', '/tipologia/learning/index.json'])",
+  "menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Dirette",
+   "azione": "live",
+   "esito": "OK",
+   "titoli": 15
+  },
+  {
+   "voce": "Replay",
+   "azione": "replayMenu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 7,
+   "figli": [
+    {
+     "voce": "str15 30 str30",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 17
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 17
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
+      }
+     ]
+    },
+    {
+     "voce": "str14 29 str30",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 33
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 32
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
+      }
+     ]
+    },
+    {
+     "voce": "str13 28 str30",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 31
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 34
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "voce": "Film",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 15,
+   "figli": [
+    {
+     "voce": "Novità",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 24
+    },
+    {
+     "voce": "Da non perdere",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 23
+    },
+    {
+     "voce": "Stregati da Halloween",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 18
+    }
+   ]
+  },
+  {
+   "voce": "Serie italiane",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 11,
+   "figli": [
+    {
+     "voce": "Da non perdere",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 25
+    },
+    {
+     "voce": "Serie Original RaiPlay",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 24
+    },
+    {
+     "voce": "Serie tratte da libri",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 25
+    }
+   ]
+  },
+  {
+   "voce": "Serie Internazionali",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 7,
+   "figli": [
+    {
+     "voce": "Da non perdere",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 25
+    },
+    {
+     "voce": "Drama",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 14
+    },
+    {
+     "voce": "Serie Original RaiPlay",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 24
+    }
+   ]
+  },
+  {
+   "voce": "Programmi TV",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 13,
+   "figli": [
+    {
+     "voce": "Intrattenimento",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 26
+    },
+    {
+     "voce": "Territori e itinerari",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 32
+    },
+    {
+     "voce": "Approfondimento",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 25
+    }
+   ]
+  },
+  {
+   "voce": "Documentari",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 18,
+   "figli": [
+    {
+     "voce": "Da non perdere",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    },
+    {
+     "voce": "Docu-serie Original",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 28
+    },
+    {
+     "voce": "Documentari Original",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 24
+    }
+   ]
+  },
+  {
+   "voce": "Bambini",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 12,
+   "figli": [
+    {
+     "voce": "Da non perdere",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 28
+    },
+    {
+     "voce": "Halloween night: arrivano le tenebre!",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 17
+    },
+    {
+     "voce": "Cinema bambini",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 24
+    }
+   ]
+  },
+  {
+   "voce": "Teen",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 13,
+   "figli": [
+    {
+     "voce": "Da non perdere",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 36
+    },
+    {
+     "voce": "Next Star",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 21
+    },
+    {
+     "voce": "Un mondo di fumetti",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 15
+    }
+   ]
+  },
+  {
+   "voce": "Musica e Teatro",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 14,
+   "figli": [
+    {
+     "voce": "Da non perdere",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 22
+    },
+    {
+     "voce": "Il teatro di Eduardo",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 25
+    },
+    {
+     "voce": "Musica classica",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 24
+    }
+   ]
+  },
+  {
+   "voce": "Teche Rai",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 3,
+   "figli": [
+    {
+     "voce": "Da non perdere",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 24
+    },
+    {
+     "voce": "BiblioTeche",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 24
+    },
+    {
+     "voce": "Generi",
+     "azione": "menu",
+     "esito": "SOTTOMENU SENZA TITOLI",
+     "sottovoci": 9,
+     "figli": [
+      {
+       "voce": "Sceneggiati",
+       "azione": "genres",
+       "esito": "VUOTA",
+       "pagine": []
+      },
+      {
+       "voce": "Programmi",
+       "azione": "genres",
+       "esito": "VUOTA",
+       "pagine": []
+      },
+      {
+       "voce": "Varietà",
+       "azione": "genres",
+       "esito": "VUOTA",
+       "pagine": []
+      }
+     ],
+     "pagine": []
+    }
+   ]
+  },
+  {
+   "voce": "Learning",
+   "azione": "menu",
+   "esito": "ERRORE JSONDecodeError",
+   "pagine": []
+  },
+  {
+   "voce": "Rai Italy",
+   "azione": "menu",
+   "esito": "SOTTOMENU",
+   "sottovoci": 1,
+   "figli": [
+    {
+     "voce": "L'offerta",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 55
+    }
+   ]
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 8
+  }
+ ],
+ "sezioni_riepilogo": "13 ok su 14",
+ "rete": [],
+ "verdetto": "SI FERMA A: findvideos su \"A caccia del vedovo d'oro\""
+}

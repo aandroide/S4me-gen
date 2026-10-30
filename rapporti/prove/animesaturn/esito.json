@@ -1,0 +1,187 @@
+{
+ "canale": "animesaturn",
+ "host": "https://www.animesaturn.net",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 8
+  },
+  {
+   "passo": "lista \"Anime \"",
+   "esito": "OK",
+   "voci": 31
+  },
+  {
+   "passo": "check su \".hack//G.U. Returner\"",
+   "esito": "OK",
+   "voci": 1
+  },
+  {
+   "passo": "findvideos su \"1\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "directo",
+   "url": "https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token=Ek0iPepWuOgpDRk-7NAzeQ&expires=1793403478",
+   "finale": "https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token=Ek0iPepWuOgpDRk-7NAzeQ&expires=1793403478",
+   "esito": "VIDEO OK",
+   "dettaglio": "206 video/mp4"
+  }
+ ],
+ "menu_dichiarato": [
+  "menu | ('Anime', ['/az-list', 'peliculas', 'az'])",
+  "menu | ('ITA', ['/filter?languages=it', 'peliculas', 'filter'])",
+  "menu | ('SUB-ITA', ['/filter?languages=jp', 'peliculas', 'filter'])",
+  "menu | ('Più Votati', ['/filter?sort=best_rated', 'peliculas', 'filter'])",
+  "menu | ('In Corso', ['/ongoing', 'peliculas', 'ongoing'])",
+  "menu | ('Ultimi Episodi', ['/newest', 'peliculas', 'updated'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Anime",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "ITA",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "SUB-ITA",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "Più Votati",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "In Corso",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "Ultimi Episodi",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 7
+  }
+ ],
+ "sezioni_riepilogo": "7 ok su 7",
+ "rete": [
+  {
+   "url": "https://www.animesaturn.net/az-list",
+   "status": 200,
+   "byte": 106190,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeSaturn - Lista anime completa",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/anime/hack-g-u-returner-8PrAP",
+   "status": 200,
+   "byte": 88471,
+   "secondi": 0.6,
+   "titolo_pagina": "AnimeSaturn - .hack//G.U. Returner Streaming Sub ITA",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/anime/hack-g-u-returner-8PrAP/ep-1",
+   "status": 200,
+   "byte": 72101,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeSaturn - .hack//G.U. Returner Episodio 1 Streaming Sub ITA",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://play.saturncdn.net/embed/45138?token=f10e43b76d8304152f686dfdef88e160&expires=1793403477",
+   "status": 200,
+   "byte": 2829,
+   "secondi": 0.4,
+   "titolo_pagina": "Player",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://play.saturncdn.net/embed/45138/playlist?token=f10e43b76d8304152f686dfdef88e160&expires=1793403477",
+   "status": 200,
+   "byte": 214,
+   "secondi": 0.4,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/az-list",
+   "status": 200,
+   "byte": 106190,
+   "secondi": 0.4,
+   "titolo_pagina": "AnimeSaturn - Lista anime completa",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/filter?languages=it",
+   "status": 200,
+   "byte": 462161,
+   "secondi": 0.5,
+   "titolo_pagina": "AnimeSaturn - Filtro: it",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/filter?languages=jp",
+   "status": 200,
+   "byte": 459320,
+   "secondi": 0.7,
+   "titolo_pagina": "AnimeSaturn - Filtro: jp",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/filter?sort=best_rated",
+   "status": 200,
+   "byte": 462701,
+   "secondi": 0.7,
+   "titolo_pagina": "AnimeSaturn - Filtro anime",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/ongoing",
+   "status": 200,
+   "byte": 107426,
+   "secondi": 0.4,
+   "titolo_pagina": "AnimeSaturn - Anime in corso",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/newest",
+   "status": 200,
+   "byte": 108266,
+   "secondi": 0.8,
+   "titolo_pagina": "AnimeSaturn - Nuove aggiunte",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://www.animesaturn.net/filter?key=avatar",
+   "status": 200,
+   "byte": 431812,
+   "secondi": 0.9,
+   "titolo_pagina": "AnimeSaturn - Filtro: &quot;avatar&quot;",
+   "file": "pagine/12.html"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

@@ -1,0 +1,47 @@
+Canale cinetecadibologna | indirizzo http://cinestore.cinetecadibologna.it
+== mainlist
+   -> 7 voci
+      peliculas | • Film | http://cinestore.cinetecadibologna.it/video/alfabetico_completo
+      menu | •• Anni | http://cinestore.cinetecadibologna.it/video/epoche
+      menu | •• Registi | http://cinestore.cinetecadibologna.it/video/registi
+      menu | •• Attori | http://cinestore.cinetecadibologna.it/video/attori
+== lista "• Film"
+   -> 11 voci
+      findvideos | Exercícios de cavalaria em Torres Novas | http://cinestore.cinetecadibologna.it/video/dettaglio/3561
+      findvideos | Aus Moskaus Leben im Jahre 1918 | http://cinestore.cinetecadibologna.it/video/dettaglio/5515
+      findvideos | Residence royale à Sant'Anna di... | http://cinestore.cinetecadibologna.it/video/dettaglio/10141
+      findvideos | A. Drankoff St. Petersburg | http://cinestore.cinetecadibologna.it/video/dettaglio/35551
+== findvideos su "Exercícios de cavalaria em Torres Novas"
+   -> 2 voci
+      play | Exercícios de cavalaria em Torres Novas | http://cinestore.cinetecadibologna.it/files/targetvideo/3/8/3/3833.flv
+      add_pelicula_to_library | txt30161 %s | http://cinestore.cinetecadibologna.it/video/dettaglio/3561
+== risoluzione directo http://cinestore.cinetecadibologna.it/files/targetvideo/3/8/3/3833.flv
+   -> VIDEO OK 206 video/x-flv 
+== voci dichiarate in mainlist (5)
+    film | '/video/alfabetico_completo'
+    film | ('Anni', ['/video/epoche', 'menu'])
+    film | ('Registi', ['/video/registi', 'menu'])
+    film | ('Attori', ['/video/attori', 'menu'])
+    film | ('Percorsi Tematici', ['/percorsi/', 'menu'])
+== controllo di tutte le sezioni
+   SEZIONE • Film -> OK 10 
+   SEZIONE I primi del '900 -> OK 10 
+   SEZIONE Anni '10 -> OK 10 
+   SEZIONE '50 -> OK 10 
+   SEZIONE •• Anni -> SOTTOMENU  
+   SEZIONE Aimo, Stefano -> VUOTA   | ultima pagina: {'url': 'http://cinestore.cinetecadibologna.it/video/ricerca_film/NomePersona_Aimo, Stefano', 'status': 404, 'byte': 11576, 'titolo_pagina': 'La pagina richiesta non esiste - Cinestore'}
+   SEZIONE Alberini, Filoteo -> VUOTA   | ultima pagina: {'url': 'http://cinestore.cinetecadibologna.it/video/ricerca_film/NomePersona_Alberini, Filoteo', 'status': 404, 'byte': 11576, 'titolo_pagina': 'La pagina richiesta non esiste - Cinestore'}
+   SEZIONE Albertazzi, Franco -> VUOTA   | ultima pagina: {'url': 'http://cinestore.cinetecadibologna.it/video/ricerca_film/NomePersona_Albertazzi, Franco', 'status': 404, 'byte': 11576, 'titolo_pagina': 'La pagina richiesta non esiste - Cinestore'}
+   SEZIONE •• Registi -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'http://cinestore.cinetecadibologna.it/video/ricerca_film/NomePersona_Alberini, Filoteo', 'status': 404, 'byte': 11576, 'titolo_pagina': 'La pagina richiesta non esiste - Cinestore'}
+   SEZIONE Armelle, Suzanne -> VUOTA   | ultima pagina: {'url': 'http://cinestore.cinetecadibologna.it/video/ricerca_film/NomePersona_Armelle, Suzanne', 'status': 404, 'byte': 11576, 'titolo_pagina': 'La pagina richiesta non esiste - Cinestore'}
+   SEZIONE Arnaldi, Arnaldo -> VUOTA   | ultima pagina: {'url': 'http://cinestore.cinetecadibologna.it/video/ricerca_film/NomePersona_Arnaldi, Arnaldo', 'status': 404, 'byte': 11576, 'titolo_pagina': 'La pagina richiesta non esiste - Cinestore'}
+   SEZIONE Baccani, Ettore -> VUOTA   | ultima pagina: {'url': 'http://cinestore.cinetecadibologna.it/video/ricerca_film/NomePersona_Baccani, Ettore', 'status': 404, 'byte': 11576, 'titolo_pagina': 'La pagina richiesta non esiste - Cinestore'}
+   SEZIONE •• Attori -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'http://cinestore.cinetecadibologna.it/video/ricerca_film/NomePersona_Arnaldi, Arnaldo', 'status': 404, 'byte': 11576, 'titolo_pagina': 'La pagina richiesta non esiste - Cinestore'}
+   SEZIONE •• Percorsi Tematici -> VUOTA   | ultima pagina: {'url': 'http://cinestore.cinetecadibologna.it/percorsi/', 'status': 200, 'byte': 31610, 'titolo_pagina': 'Percorsi - Cinestore'}
+   SEZIONE •• txt70741 Film… -> VUOTA   | ultima pagina: {'url': 'http://cinestore.cinetecadibologna.it/ricerca/type_ALL/ricerca_avatar', 'status': 200, 'byte': 15369, 'titolo_pagina': 'Risultati della ricerca - Cinestore'}
+SEZIONI: 2 ok su 6
+   SEZIONE SENZA TITOLI: •• Registi | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: •• Attori | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: •• Percorsi Tematici | VUOTA
+   SEZIONE SENZA TITOLI: •• txt70741 Film… | VUOTA
+VERDETTO: ARRIVA AL VIDEO
