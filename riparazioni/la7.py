@@ -313,32 +313,50 @@ def peliculas(item):
     return itemlist
 
 
-def _immagine_programma(url):
-    # immagine dalla pagina del programma: og:image, altrimenti la scena della prima puntata
-    h = _pulisci(_scarica(url))
+def _dati_programma(it):
+    # dalla pagina del programma: descrizione, immagine (og:image senza il logo del sito, altrimenti la scena della prima puntata)
+    # e l'immagine di testata, il cui nome di file inizia con il nome del programma nell'indirizzo
+    h = _pulisci(_scarica(it.url))
+    descr = ''
+    m = re.search(r'<meta name="description" content="([^"]*)"', h)
+    if m:
+        descr = _html.unescape(m.group(1)).strip()
+    img = ''
     m = re.search(r'<meta property="og:image" content="([^"]+)"', h)
     if m and 'la7-logo-og' not in m.group(1):
-        return m.group(1)
-    m = re.search(r'(https://images\.la7play\.it/video/[^"\s\\]+/scena-\d+x\d+\.webp)', h)
-    return m.group(1) if m else ''
+        img = m.group(1)
+    else:
+        m = re.search(r'(https://images\.la7play\.it/video/[^"\s\\]+/scena-\d+x\d+\.webp)', h)
+        img = m.group(1) if m else ''
+    testata = ''
+    slug = it.url.rstrip('/').rsplit('/', 1)[-1]
+    m = re.search(r'(https://images\.la7play\.it/media/c/t\d+/%s[^/"\s\\]*\.\w+/img/1280x720\.webp)' % re.escape(slug), h)
+    testata = m.group(1) if m else ''
+    return descr, img, testata, not it.plot
 
 
 def _immagini_mancanti(itemlist):
-    # alcuni programmi non hanno immagine nell'elenco: la si prende dalla loro pagina (richieste in parallelo)
+    # programmi senza immagine o senza descrizione nell'elenco: si legge la loro pagina (richieste in parallelo)
     from concurrent.futures import ThreadPoolExecutor
-    vuoti = [it for it in itemlist if not it.thumbnail]
+    vuoti = [it for it in itemlist if not it.thumbnail or not it.plot]
     if not vuoti:
         return
     try:
         with ThreadPoolExecutor(max_workers=8) as ex:
-            immagini = list(ex.map(lambda it: _immagine_programma(it.url), vuoti))
+            dati = list(ex.map(_dati_programma, vuoti))
     except Exception as e:
-        logger.error('la7: immagini dei programmi non lette %s' % e)
+        logger.error('la7: dati dei programmi non letti %s' % e)
         return
-    for it, img in zip(vuoti, immagini):
-        if img:
+    for it, (descr, img, testata, senza_descr) in zip(vuoti, dati):
+        if descr and not it.plot:
+            it.plot = descr
+            it.infoLabels['plot'] = descr
+        if not it.thumbnail and img:
             it.thumbnail = img
             it.fanart = img
+        if senza_descr and testata:
+            it.thumbnail = testata
+            it.fanart = testata
 
 
 def episodios(item):

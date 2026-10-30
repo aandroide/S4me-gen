@@ -11,6 +11,7 @@ La parte che arriva fino al marcatore di fine viene copiata nel canale corretto 
 canale non dipende da questo file. Il resto serve solo al controllo e alla generazione.
 """
 import html as _html
+import base64
 import json
 import re
 
@@ -429,9 +430,11 @@ def _dettagli(item, itemlist, forza=False):
 
 
 def _immagini_mancanti(itemlist):
-    """Voci senza immagine nell'elenco: la si prende dalla loro pagina (og:image, escluso il logo del sito), al massimo 12 richieste."""
+    """Voci senza immagine o senza descrizione nell'elenco: si legge la loro pagina (al massimo 30 richieste in parallelo).
+    Descrizione dal meta description; immagine da og:image (escluso il logo del sito) o dalla scena;
+    per le voci senza descrizione l'immagine di testata, il cui nome di file inizia con il nome nell'indirizzo."""
     from concurrent.futures import ThreadPoolExecutor
-    vuoti = [it for it in itemlist if not it.thumbnail and it.action in ('episodios', 'findvideos') and it.url][:12]
+    vuoti = [it for it in itemlist if (not it.thumbnail or (not it.plot and it.action == 'episodios')) and it.action in ('episodios', 'findvideos') and it.url][:30]
     if not vuoti:
         return itemlist
 
@@ -439,23 +442,36 @@ def _immagini_mancanti(itemlist):
         try:
             h = _pagina(it.url).replace('\\"', '"')
         except Exception:
-            return ''
+            return '', '', ''
+        d = re.search(r'<meta name="description" content="([^"]*)"', h)
+        descr = _html.unescape(d.group(1)).strip() if d else ''
         m = re.search(r'<meta property="og:image" content="([^"]+)"', h)
         if m and 'logo' not in m.group(1).lower():
-            return m.group(1)
-        m = re.search(r'(https?://[^"\s\\]+/scena-\d+x\d+\.webp)', h)
-        return m.group(1) if m else ''
+            img = m.group(1)
+        else:
+            m = re.search(r'(https?://[^"\s\\]+/scena-\d+x\d+\.webp)', h)
+            img = m.group(1) if m else ''
+        slug = it.url.rstrip('/').rsplit('/', 1)[-1]
+        t = re.search(r'(https?://[^"\s\\]+/media/c/t\d+/%s[^/"\s\\]*\.\w+/img/1280x720\.webp)' % re.escape(slug), h) if slug else None
+        return descr, img, t.group(1) if t else ''
 
     try:
         with ThreadPoolExecutor(max_workers=8) as ex:
-            immagini = list(ex.map(leggi, vuoti))
+            dati = list(ex.map(leggi, vuoti))
     except Exception as e:
-        logger.error('immagini non lette %s' % e)
+        logger.error('dati dei titoli non letti %s' % e)
         return itemlist
-    for it, img in zip(vuoti, immagini):
-        if img:
+    for it, (descr, img, testata) in zip(vuoti, dati):
+        senza_descr = not it.plot and it.action == 'episodios'
+        if descr and senza_descr:
+            it.plot = descr
+            it.infoLabels['plot'] = descr
+        if not it.thumbnail and img:
             it.thumbnail = img
             it.fanart = img
+        if senza_descr and testata:
+            it.thumbnail = testata
+            it.fanart = testata
     return itemlist
 
 
@@ -518,12 +534,45 @@ def _da_api(codici):
     return []
 
 
-def _in_onda(url):
-    """Programma in onda adesso e relativa immagine. La pagina puo avere il flag isOnAir vecchio (cache),
-    quindi si sceglie dall'orario: l'ultimo programma del canale gia iniziato."""
-    from time import time
-    chiave = url.rstrip('/').split('/')[-1].replace('-', '').upper()
-    h = _pagina(url).replace('\\"', '"')
+def _prog_api(chiave):
+    """Palinsesto aggiornato dalla richiesta che il sito fa dopo il caricamento (la pagina puo essere in cache)."""
+    if not PALINSESTO_GQL:
+        return []
+    try:
+        var = {PALINSESTO_GQL['canale']: chiave}
+        if PALINSESTO_GQL.get('limite'):
+            var[PALINSESTO_GQL['limite']] = 4
+        t = json.dumps(var, separators=(',', ':'), sort_keys=True)
+        cod = base64.urlsafe_b64encode(t.encode('utf-8')).decode('ascii').rstrip('=')
+        j = json.loads(_pagina('%s/api/gql/%s/%s' % (host, PALINSESTO_GQL['codice'], cod)))
+    except Exception as e:
+        logger.error('palinsesto non letto %s' % e)
+        return []
+    trovati = []
+
+    def scendi(o):
+        if isinstance(o, dict):
+            if 'titolo' in o and 'timestamp' in o and 'durata' in o:
+                trovati.append(o)
+            else:
+                for v in o.values():
+                    scendi(v)
+        elif isinstance(o, list):
+            for v in o:
+                scendi(v)
+    scendi(j)
+    prog = []
+    for p in trovati:
+        try:
+            img = p.get('immagineProgramma') or p.get('immagineScena') or ''
+            prog.append((int(p['timestamp']), int(p['durata']), _html.unescape(p['titolo']).strip(), img,
+                         str(p.get('isOnAir')).lower() == 'true', p.get('ora', '')))
+        except Exception:
+            continue
+    return prog
+
+
+def _prog_pagina(h, chiave):
     prog = []
     for blocco in h.split('{"ora":"')[1:]:
         m = re.match(r'(\d{2}:\d{2})","titolo":"([^"]*)","durata":(\d+)', blocco)
@@ -533,16 +582,48 @@ def _in_onda(url):
         img = re.search(r'"immagineProgramma":"([^"]+)"', blocco) or re.search(r'"immagineScena":"([^"]+)"', blocco)
         prog.append((int(ts.group(1)), int(m.group(3)), _html.unescape(m.group(2)).strip(),
                      img.group(1) if img else '', '"isOnAir":true' in blocco, m.group(1)))
+    return prog
+
+
+def _logo_canale(h, url):
+    """Logo del canale se la sua pagina ne ha uno dedicato (file logo-<nome del canale>.<codice>.png)."""
+    slug = url.rstrip('/').split('/')[-1]
+    m = re.search(r'(/_next/static/media/logo-%s\.[^"\\]+?\.(?:png|svg|webp))' % re.escape(slug), h)
+    return host + m.group(1) if m else ''
+
+
+def _in_onda(url):
+    """Programma in onda adesso, immagine e logo del canale. Il programma si sceglie dall'orario (l'ultimo gia
+    iniziato), non dal flag isOnAir che nella pagina puo essere vecchio; a seguire il primo programma dopo."""
+    from time import time
+    chiave = url.rstrip('/').split('/')[-1].replace('-', '').upper()
+    prog = _prog_api(chiave)
+    h = ''
+    try:
+        h = _pagina(url).replace('\\"', '"')
+    except Exception:
+        pass
+    logo = _logo_canale(h, url)
+    if not prog:
+        prog = _prog_pagina(h, chiave)
     adesso = time()
     iniziati = [p for p in prog if p[0] <= adesso < p[0] + p[1] + 3600]
     scelto = max(iniziati, key=lambda p: p[0]) if iniziati else next((p for p in prog if p[4]), None)
     if not scelto:
-        return '', ''
+        return '', '', logo
     testo = scelto[2]
     dopo = [p for p in sorted(prog) if p[0] > scelto[0]]
     if dopo:
         testo += '\nA seguire: %s %s' % (dopo[0][5], dopo[0][2])
-    return testo, scelto[3]
+    return testo, scelto[3], logo
+
+
+def _logo_dirette(itemlist, loghi):
+    """Il logo ufficiale del sito sostituisce quello generico della miniatura."""
+    for it, logo in zip(itemlist, loghi):
+        if logo:
+            it.thumbnail = logo
+    return itemlist
 
 
 def canali(item):
@@ -557,15 +638,26 @@ def canali(item):
             from concurrent.futures import ThreadPoolExecutor
             with ThreadPoolExecutor(max_workers=4) as ex:
                 trame = list(ex.map(lambda it: _in_onda(it.url), itemlist))
-            for it, (t, img) in zip(itemlist, trame):
+            for it, (t, img, logo) in zip(itemlist, trame):
                 if t:
                     it.plot = t
                     it.infoLabels['plot'] = t
                 if img:
                     it.fanart = img
+            loghi = [x[2] for x in trame]
         except Exception as e:
             logger.error('palinsesto delle dirette non letto %s' % e)
-    return support.thumb(itemlist, live=True)
+            loghi = []
+    else:
+        loghi = []
+        try:
+            from concurrent.futures import ThreadPoolExecutor
+            with ThreadPoolExecutor(max_workers=4) as ex:
+                loghi = list(ex.map(lambda it: _logo_canale(_pagina(it.url).replace('\\"', '"'), it.url), itemlist))
+        except Exception as e:
+            logger.error('loghi dei canali non letti %s' % e)
+    itemlist = support.thumb(itemlist, live=True)
+    return _logo_dirette(itemlist, loghi) if loghi else itemlist
 
 
 def peliculas(item):

@@ -118,6 +118,46 @@ def trova_ricerca_ops(base, ops, rp=print):
     return None
 
 
+def trova_palinsesto_ops(base, ops, pagine_canali, rp=print):
+    """Richiesta con il palinsesto aggiornato di un canale (programmi con titolo, orario e durata).
+    pagine_canali: indirizzi delle dirette; la chiave del canale e l'ultimo pezzo dell'indirizzo in maiuscolo.
+    Restituisce {'codice','canale','limite'} oppure None."""
+    cand = [(c, n) for c, n in ops.items() if re.search(r'programmazione|palinsesto|schedule|epg|guida', n, re.I)
+            and not re.search(r'rivedi|replay|settim|giorn', n, re.I)]
+    if not cand or not pagine_canali:
+        return None
+
+    def vale(t):
+        try:
+            j = json.loads(t)
+        except Exception:
+            return 0
+
+        def conta(o):
+            if isinstance(o, dict):
+                if 'titolo' in o and 'timestamp' in o and 'durata' in o:
+                    return 1
+                return sum(conta(v) for v in o.values())
+            if isinstance(o, list):
+                return sum(conta(v) for v in o)
+            return 0
+        return conta(j)
+
+    chiave = pagine_canali[0].rstrip('/').split('/')[-1].replace('-', '').upper()
+    for c, n in cand:
+        for nome in ('canale', 'channel', 'canaleId', 'idCanale', 'slug'):
+            for limite in ('limit', None):
+                var = {nome: chiave}
+                if limite:
+                    var[limite] = 4
+                st, t = richiedi('%s/api/gql/%s/%s' % (base, c, codifica(var)), base)
+                if st == 200 and vale(t) >= 2:
+                    rp('Palinsesto aggiornato: operazione %s (%s), parametro "%s"%s, %d programmi per %s' % (
+                        n, c, nome, ' e "limit"' if limite else '', vale(t), chiave))
+                    return {'codice': c, 'canale': nome, 'limite': limite}
+    return None
+
+
 # ---------------------------------------------------------------------------
 # Esplorazione
 # ---------------------------------------------------------------------------
@@ -129,6 +169,7 @@ def esplora(s, ctx, base, args, rp, cattura, grezzo_fn, pagina_elenco):
     voci_ok, azioni, canali_azione = [], {}, {}
     liste_pagina, pagine_video, giocabili = {}, [], []
     pagine_viste = []
+    pagine_live = []
 
     for nome, url in ctx['menu']:
         h = grezzo_fn(url)
@@ -149,6 +190,7 @@ def esplora(s, ctx, base, args, rp, cattura, grezzo_fn, pagina_elenco):
                 nome, [x[0] for x in fr], 'i giorni (elenco a gruppi)' if gruppi else 'il video'))
             if not gruppi:
                 pagine_video += [base + p for _, p in fr]
+                pagine_live += [base + p for _, p in fr]
             else:
                 for _, gg in r['gruppi']:
                     for x in gg:
@@ -181,6 +223,14 @@ def esplora(s, ctx, base, args, rp, cattura, grezzo_fn, pagina_elenco):
     ctx['operazioni'] = ops
     if liste_pagina:
         ctx['elenchi_api'] = completa_liste(base, ops, liste_pagina, rp)
+
+    # palinsesto aggiornato delle dirette
+    try:
+        pal = trova_palinsesto_ops(base, ops, pagine_live, rp)
+        if pal:
+            ctx['palinsesto_gql'] = pal
+    except BaseException as ex:
+        rp('Palinsesto aggiornato non cercato: %s' % str(ex)[:100])
 
     # ricerca completa
     ric = trova_ricerca_ops(base, ops, rp)

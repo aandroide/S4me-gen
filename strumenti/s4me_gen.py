@@ -1518,8 +1518,9 @@ headers = [['Referer', host + '/']]
 
 
 def genera_menu_s4me(voci, tipo_default, azioni):
-    """Menu nella struttura che S4Me si aspetta (top, film, tvshow): cosi le icone e i titoli li assegna S4Me."""
-    top, film, serie = [], [], []
+    """Menu nella struttura che S4Me si aspetta: 'top' per Dirette e Replay, 'menu' per le sezioni (con il pallino e il grassetto).
+    Le voci aggiunte perche presenti nel sito ma non negli elenchi (per esempio un telegiornale) hanno l'icona {teen}."""
+    top, sezioni = [], []
     for nome, full in voci:
         u = urlparse(full)
         path = u.path + (('?' + u.query) if u.query else '')
@@ -1528,36 +1529,23 @@ def genera_menu_s4me(voci, tipo_default, azioni):
         if azione == 'canali':
             if re.search(r'rivedi|guida|replay', nome, re.I):
                 nome = 'Replay'
+            elif re.search(r'dirett|live', nome, re.I):
+                nome = 'Dirette'
             top.append((nome, path, azione))
-        elif re.search(r'film|movie|cinema|documentar', nome, re.I):
-            film.append((nome, path, azione, 'movie'))
+            continue
+        if re.search(r'film|movie|cinema|documentar', nome, re.I):
+            tipo = 'movie'
         else:
-            serie.append((nome, path, azione, 'tvshow'))
-
-    def gruppo(nome_var, voci_g, rx_principale):
-        if not voci_g:
-            return None
-        principale = next((v for v in voci_g if re.search(rx_principale, v[0], re.I)), None)
-        if not principale:
-            return None
-        righe = ["'%s'" % principale[1]]
-        for v in voci_g:
-            if v is not principale:
-                righe.append("('%s', ['%s', '%s', '', '%s'])" % (v[0], v[1], v[2], v[3]))
-        return '    %s = [%s]' % (nome_var, ',\n            '.join(righe))
-
-    righe_film = gruppo('film', film, r'^(film|movie)')
-    righe_serie = gruppo('tvshow', serie, r'programm|serie|tv|show')
-    if not righe_film:   # senza voce principale le voci restano nel menu in alto
-        top += [(n, p, a) for n, p, a, t in film]
-    if not righe_serie:
-        top += [(n, p, a) for n, p, a, t in serie]
+            tipo = 'tvshow'
+            if re.fullmatch(r'programmi', nome.strip(), re.I):
+                nome = 'Programmi TV'
+        icona = ' {teen}' if azione == 'episodios' else ''
+        sezioni.append("('%s {bullet bold}%s', ['%s', '%s', '', '%s'])" % (nome, icona, path, azione, tipo))
     blocchi = []
     if top:
-        blocchi.append('    top = [' + ',\n           '.join("('%s', ['%s', '%s'])" % (n, p, a) if a == 'canali' else "('%s', ['%s', '%s', '', 'tvshow'])" % (n, p, a) for n, p, a in top) + ']')
-    for b in (righe_film, righe_serie):
-        if b:
-            blocchi.append(b)
+        blocchi.append('    top = [' + ',\n           '.join("('%s {bold}', ['%s', '%s'])" % (n, p, a) for n, p, a in top) + ']')
+    if sezioni:
+        blocchi.append('    menu = [' + ',\n            '.join(sezioni) + ']')
     return '\n\n'.join(blocchi)
 
 
@@ -2089,8 +2077,10 @@ def genera_dati(nome, ctx):
     punto = cod.index("headers = [['Referer', host + '/']]\n") + len("headers = [['Referer', host + '/']]\n")
     costanti = ('ELENCHI_API = %s  # elenchi completi presi dalle richieste del sito: percorso -> codici delle richieste\n'
                 'CANALI_AZIONE = %s  # cosa apre ogni canale: findvideos (diretta) oppure peliculas (guida a giorni)\n'
+                'PALINSESTO_GQL = %s  # richiesta del sito con il palinsesto aggiornato dei canali (vuota se non trovata)\n'
                 ) % (
-        pprint.pformat(ctx.get('elenchi_api') or {}, width=110), pprint.pformat(ctx.get('canali_azione') or {}, width=110))
+        pprint.pformat(ctx.get('elenchi_api') or {}, width=110), pprint.pformat(ctx.get('canali_azione') or {}, width=110),
+        pprint.pformat(ctx.get('palinsesto_gql') or {}, width=110))
     video = ''
     if ctx.get('ricette_video'):
         video = '\n# riproduzione imparata dal sito (riproduzione.py)\n' + rip.codice_helper() + '\n' + rip.codice_canale(ctx['ricette_video']) + '\n'
