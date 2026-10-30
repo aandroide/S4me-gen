@@ -124,19 +124,23 @@ def _in_onda(url):
     h = _pulisci(_scarica(url))
     prog = []
     for blocco in h.split('{"ora":"')[1:]:
-        m = re.match(r'\d{2}:\d{2}","titolo":"([^"]*)","durata":(\d+)', blocco)
+        m = re.match(r'(\d{2}:\d{2})","titolo":"([^"]*)","durata":(\d+)', blocco)
         ts = re.search(r'"timestamp":(\d+)', blocco)
         if not m or not ts or ('guidatv/%s/' % chiave) not in blocco:
             continue
         img = re.search(r'"immagineProgramma":"([^"]+)"', blocco) or re.search(r'"immagineScena":"([^"]+)"', blocco)
-        prog.append((int(ts.group(1)), int(m.group(2)), _html.unescape(m.group(1)).strip(),
-                     img.group(1) if img else '', '"isOnAir":true' in blocco))
+        prog.append((int(ts.group(1)), int(m.group(3)), _html.unescape(m.group(2)).strip(),
+                     img.group(1) if img else '', '"isOnAir":true' in blocco, m.group(1)))
     adesso = time()
     iniziati = [p for p in prog if p[0] <= adesso < p[0] + p[1] + 3600]
-    scelto = max(iniziati) if iniziati else next((p for p in prog if p[4]), None)
+    scelto = max(iniziati, key=lambda p: p[0]) if iniziati else next((p for p in prog if p[4]), None)
     if not scelto:
         return '', ''
-    return 'In onda adesso: ' + scelto[2], scelto[3]
+    testo = scelto[2]
+    dopo = [p for p in sorted(prog) if p[0] > scelto[0]]
+    if dopo:
+        testo += '\nA seguire: %s %s' % (dopo[0][5], dopo[0][2])
+    return testo, scelto[3]
 
 
 def _dirette_sito():
@@ -165,7 +169,7 @@ def live(item):
     for it, (t, img) in zip(itemlist, onda):
         d = sito.get('la7d' if it.fulltitle == 'La7Cinema' else 'la7') or {}
         if not t and d.get('titolo'):
-            t = 'In onda adesso: ' + d['titolo'].strip()
+            t = d['titolo'].strip()
         img = img or d.get('url_locandina')
         if t:
             it.plot = t
