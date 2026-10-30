@@ -1,23 +1,19 @@
 [
  {
-  "canale": "la7",
-  "stato": "CORRETTO IN PARTE",
+  "canale": "streamingcommunity",
+  "stato": "OK",
   "dettagli": [
-   "indirizzo scritto nel canale: https://www.la7.it",
-   "il sito reindirizza a un altro indirizzo: https://www.la7play.it (in channels.json c'e https://www.la7.it)",
-   "ROTTO: replay_menu /rivedila7/0/la7 | patron non trova titoli",
-   "  campione della pagina salvato in rapporti/correzioni/la7/pagina_replay_menu_rivedila7_0_la7.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /rivedila7/0/la7",
-   "ROTTO: replay_menu /rivedila7/0/la7cinema | patron non trova titoli",
-   "  campione della pagina salvato in rapporti/correzioni/la7/pagina_replay_menu_rivedila7_0_la7cinema.html",
-   "  dati incorporati nella pagina: 41 elementi in 7 gruppi (campi: titolo, link, immagine, trama, orario)",
-   "  replay_menu: menu dei gruppi, replay: elenco del gruppo scelto (riscritte dai dati incorporati)",
-   "file corretto scritto in rapporti/correzioni/la7: 1 pagine su 2 ora trovano titoli",
-   "attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano"
+   "OK: Pagina film (sliders) | 30 titoli in props.sliders.0.titles",
+   "OK: Pagina serie TV (sliders) | 30 titoli in props.sliders.0.titles",
+   "OK: Archivio | 60 titoli in props.titles",
+   "OK: Archivio film | 60 titoli in props.titles",
+   "OK: Archivio serie TV | 60 titoli in props.titles",
+   "OK: Archivio per nome | 60 titoli in props.titles",
+   "OK: Ricerca | 60 titoli in props.titles",
+   "OK: Generi | 20 titoli in props.genres",
+   "OK: serie di esempio /it/titles/66444-il-dono-dellinganno | 1 stagioni, 10 episodi nella prima"
   ],
-  "correzione": true,
-  "host": "https://www.la7.it",
-  "nuovo_host": "https://www.la7play.it",
-  "rigenerabile": true
+  "correzione": false,
+  "host": "https://streamingcommunityz.day"
  }
 ]
