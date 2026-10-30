@@ -19,6 +19,7 @@ headers = {'User-Agent': UA, 'Referer': host + '/', 'Origin': host}
 # identificativi delle query interne del sito (/api/gql/<id>)
 GQL_PROGRAMMI = ['75b0227f0361abcf', 'f7034d55158fc906']
 GQL_RICERCA = '4da1e384f8a63808'
+GQL_PROGRAMMAZIONE = '69f0b39066b90b25'
 LIVE = [('La7', '/dirette/la7'), ('La7Cinema', '/dirette/la7-cinema')]
 RIVEDI = [('La7', '/guida-tv-rivedi/la7'), ('La7Cinema', '/guida-tv-rivedi/la7-cinema')]
 
@@ -131,13 +132,26 @@ def _logo_cinema_replay():
     return _logo_cinema(_pulisci(_scarica(host + '/dirette/la7-cinema')))
 
 
-def _in_onda(url):
-    # programma in onda adesso e relativa immagine; la pagina puo avere il flag isOnAir vecchio (cache),
-    # quindi si sceglie dall'orario: l'ultimo programma del canale gia iniziato
-    from time import time
-    chiave = url.rstrip('/').split('/')[-1].replace('-', '').upper()
-    h = _pulisci(_scarica(url))
-    logo = _logo_cinema(h)
+def _prog_api(chiave):
+    # palinsesto aggiornato dalla richiesta che usa il sito dopo il caricamento (la pagina puo essere in cache)
+    try:
+        j = json.loads(_scarica('%s/api/gql/%s/%s' % (host, GQL_PROGRAMMAZIONE, _codifica({'canale': chiave, 'limit': 4}))))
+        elenco = j['data']['guidaTvProgrammazione']['programmi'] or []
+    except Exception as e:
+        logger.error('la7: palinsesto non letto %s' % e)
+        return []
+    prog = []
+    for p in elenco:
+        try:
+            img = p.get('immagineProgramma') or p.get('immagineScena') or ''
+            prog.append((int(p['timestamp']), int(p['durata']), _html.unescape(p['titolo']).strip(), img,
+                         str(p.get('isOnAir')).lower() == 'true', p.get('ora', '')))
+        except Exception:
+            continue
+    return prog
+
+
+def _prog_pagina(h, chiave):
     prog = []
     for blocco in h.split('{"ora":"')[1:]:
         m = re.match(r'(\d{2}:\d{2})","titolo":"([^"]*)","durata":(\d+)', blocco)
@@ -147,6 +161,21 @@ def _in_onda(url):
         img = re.search(r'"immagineProgramma":"([^"]+)"', blocco) or re.search(r'"immagineScena":"([^"]+)"', blocco)
         prog.append((int(ts.group(1)), int(m.group(3)), _html.unescape(m.group(2)).strip(),
                      img.group(1) if img else '', '"isOnAir":true' in blocco, m.group(1)))
+    return prog
+
+
+def _in_onda(url):
+    # programma in corso e primo a seguire; il programma si sceglie dall'orario, non dal flag isOnAir
+    from time import time
+    chiave = url.rstrip('/').split('/')[-1].replace('-', '').upper()
+    prog = _prog_api(chiave)
+    h = ''
+    logo = ''
+    if chiave == 'LA7CINEMA' or not prog:
+        h = _pulisci(_scarica(url))
+        logo = _logo_cinema(h)
+    if not prog:
+        prog = _prog_pagina(h, chiave)
     adesso = time()
     iniziati = [p for p in prog if p[0] <= adesso < p[0] + p[1] + 3600]
     scelto = max(iniziati, key=lambda p: p[0]) if iniziati else next((p for p in prog if p[4]), None)
@@ -159,16 +188,6 @@ def _in_onda(url):
     return testo, scelto[3], logo
 
 
-def _dirette_sito():
-    # elenco delle dirette dell'app La7: titolo e locandina del programma in onda per La7 e La7d
-    try:
-        j = json.loads(httptools.downloadpage('https://www.la7.it/sites/default/files/la7_app_home_smarttv.json').data)
-        return j.get('fascia_dirette', {}) or {}
-    except Exception as e:
-        logger.error('la7: elenco delle dirette non letto %s' % e)
-        return {}
-
-
 def live(item):
     from concurrent.futures import ThreadPoolExecutor
     itemlist = []
@@ -176,7 +195,6 @@ def live(item):
         f_title = 'La7d' if nome == 'La7Cinema' else nome
         itemlist.append(item.clone(title=support.typo(nome, 'bold'), fulltitle=f_title, url=host + percorso,
                                    action='findvideos', forcethumb=True, no_return=True))
-    sito = _dirette_sito()
     try:
         with ThreadPoolExecutor(max_workers=2) as ex:
             onda = list(ex.map(lambda it: _in_onda(it.url), itemlist))
@@ -184,17 +202,11 @@ def live(item):
         logger.error('la7: palinsesto delle dirette non letto %s' % e)
         onda = [('', '', '')] * len(itemlist)
     for it, (t, img, logo) in zip(itemlist, onda):
-        d = sito.get('la7d' if it.fulltitle == 'La7d' else 'la7') or {}
-        if not t and d.get('titolo'):
-            t = d['titolo'].strip()
-        img = img or d.get('url_locandina')
         if t:
             it.plot = t
             it.infoLabels['plot'] = t
         if img:
             it.fanart = img
-        if it.fulltitle == 'La7d' and d.get('url_locandina'):
-            it.thumbnail = d['url_locandina']
     itemlist = _titolo_visibile(support.thumb(itemlist, live=True))
     for it, (t, img, logo) in zip(itemlist, onda):
         if it.fulltitle == 'La7Cinema' and logo:
