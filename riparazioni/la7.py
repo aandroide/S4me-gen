@@ -157,7 +157,8 @@ def live(item):
     from concurrent.futures import ThreadPoolExecutor
     itemlist = []
     for nome, percorso in LIVE:
-        itemlist.append(item.clone(title=support.typo(nome, 'bold'), fulltitle=nome, url=host + percorso,
+        f_title = 'La7d' if nome == 'La7Cinema' else nome
+        itemlist.append(item.clone(title=support.typo(nome, 'bold'), fulltitle=f_title, url=host + percorso,
                                    action='findvideos', forcethumb=True, no_return=True))
     sito = _dirette_sito()
     try:
@@ -167,7 +168,7 @@ def live(item):
         logger.error('la7: palinsesto delle dirette non letto %s' % e)
         onda = [('', '')] * len(itemlist)
     for it, (t, img) in zip(itemlist, onda):
-        d = sito.get('la7d' if it.fulltitle == 'La7Cinema' else 'la7') or {}
+        d = sito.get('la7d' if it.fulltitle == 'La7d' else 'la7') or {}
         if not t and d.get('titolo'):
             t = d['titolo'].strip()
         img = img or d.get('url_locandina')
@@ -182,7 +183,8 @@ def live(item):
 def replay_channels(item):
     itemlist = []
     for nome, percorso in RIVEDI:
-        itemlist.append(item.clone(title=support.typo(nome, 'bold'), fulltitle=nome, url=host + percorso,
+        f_title = 'La7d' if nome == 'La7Cinema' else nome
+        itemlist.append(item.clone(title=support.typo(nome, 'bold'), fulltitle=f_title, url=host + percorso,
                                    action='replay_giorni', forcethumb=True))
     return support.thumb(itemlist, live=True)
 
