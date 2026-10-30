@@ -12,6 +12,7 @@ canale non dipende da questo file. Il resto serve solo al controllo e alla gener
 """
 import html as _html
 import base64
+import functools
 import json
 import re
 
@@ -366,6 +367,17 @@ def funzioni_gruppi(nome_menu, azione_menu, nome_figli, azione_figli, firma):
 
 # Funzioni del canale generato per i siti che mettono i titoli nei dati della pagina (nessuna regex sull'html).
 FUNZIONI_CANALE = r'''
+def _senza_videoteca(f):
+    # i contenuti hanno i diritti a scadenza: niente "aggiungi alla videoteca" ne scarica nel menu contestuale
+    @functools.wraps(f)
+    def interno(*a, **k):
+        itemlist = f(*a, **k)
+        for it in itemlist or []:
+            it.disable_videolibrary = True
+        return itemlist
+    return interno
+
+
 def _pagina(url):
     return httptools.downloadpage(url, headers=headers).data
 
@@ -660,6 +672,7 @@ def canali(item):
     return _logo_dirette(itemlist, loghi) if loghi else itemlist
 
 
+@_senza_videoteca
 def peliculas(item):
     support.info(item)
     percorso = re.sub(r'^https?://[^/]+', '', item.url.split('?')[0]).rstrip('/')
@@ -684,6 +697,7 @@ def peliculas(item):
     return _dettagli(item, _voci(item, elenco, int(item.page or 1) if getattr(item, 'page', '') else 1, h))
 
 
+@_senza_videoteca
 def giorno(item):
     r = rileva(_pagina(item.url))
     itemlist = []
@@ -693,6 +707,7 @@ def giorno(item):
     return itemlist
 
 
+@_senza_videoteca
 def episodios(item):
     support.info(item)
     h = _pagina(item.url)
@@ -773,6 +788,7 @@ def _pagine_totali(ob):
     return 0
 
 
+@_senza_videoteca
 def search(item, text):
     support.info(text)
     q = str(getattr(item, 'search', '') or text).strip()
@@ -800,6 +816,7 @@ def search(item, text):
         return []
 
 
+@_senza_videoteca
 def search_page(item):
     return search(item, item.search)
 '''

@@ -4,6 +4,7 @@
 # ------------------------------------------------------------
 
 import base64
+import functools
 import html as _html
 import json
 import re
@@ -16,6 +17,19 @@ DRM = 'com.widevine.alpha'
 host = 'https://www.la7play.it'
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
 headers = {'User-Agent': UA, 'Referer': host + '/', 'Origin': host}
+
+
+def _senza_videoteca(f):
+    # i contenuti hanno i diritti a scadenza: niente "aggiungi alla videoteca" ne scarica nel menu contestuale
+    @functools.wraps(f)
+    def interno(*a, **k):
+        itemlist = f(*a, **k)
+        for it in itemlist or []:
+            it.disable_videolibrary = True
+        return itemlist
+    return interno
+
+
 # identificativi delle query interne del sito (/api/gql/<id>)
 GQL_PROGRAMMI = ['75b0227f0361abcf', 'f7034d55158fc906']
 GQL_RICERCA = '4da1e384f8a63808'
@@ -255,6 +269,7 @@ def _guida(h):
     return giorni
 
 
+@_senza_videoteca
 def replay_giorni(item):
     itemlist = []
     for data, programmi in reversed(_guida(_scarica(item.url))):
@@ -275,6 +290,7 @@ def replay_giorni(item):
     return itemlist
 
 
+@_senza_videoteca
 def replay(item):
     itemlist = []
     for data, programmi in _guida(_scarica(item.url)):
@@ -290,6 +306,7 @@ def replay(item):
 
 # ---------------------------------------------------------------- programmi, puntate, film
 
+@_senza_videoteca
 def peliculas(item):
     # Film e Documentari passano da qui perche S4Me mostra la vista Film solo per le liste aperte da 'peliculas'
     if item.url.rstrip('/').endswith('/film'):
@@ -359,6 +376,7 @@ def _immagini_mancanti(itemlist):
             it.fanart = testata
 
 
+@_senza_videoteca
 def episodios(item):
     url = item.url
     pagina = int(item.page or 1) if hasattr(item, 'page') and item.page else 1
@@ -429,6 +447,7 @@ def _dettagli(itemlist):
     return itemlist
 
 
+@_senza_videoteca
 def film(item):
     itemlist = []
     for f in _elementi(_scarica(host + '/film'), ('Movie',)):
@@ -441,6 +460,7 @@ def film(item):
     return _dettagli(itemlist)
 
 
+@_senza_videoteca
 def documentari(item):
     itemlist = []
     for d in _elementi(_scarica(host + '/documentari'), ('Movie', 'TVEpisode')):
@@ -459,6 +479,7 @@ def _codifica(variabili):
     return base64.urlsafe_b64encode(t.encode('utf-8')).decode('ascii').rstrip('=')
 
 
+@_senza_videoteca
 def search(item, text):
     q = str(getattr(item, 'search', '') or text).strip()
     if not q:
@@ -498,6 +519,7 @@ def search(item, text):
     return itemlist
 
 
+@_senza_videoteca
 def search_page(item):
     return search(item, item.search)
 
