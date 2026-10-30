@@ -457,6 +457,9 @@ def _immagini_mancanti(itemlist):
             return '', '', ''
         d = re.search(r'<meta name="description" content="([^"]*)"', h)
         descr = _html.unescape(d.group(1)).strip() if d else ''
+        if not descr:
+            m = re.search(r'(Prossimamente su [A-Za-z0-9]+)', re.sub(r'<[^>]+>', ' ', h))
+            descr = m.group(1) if m else ''
         m = re.search(r'<meta property="og:image" content="([^"]+)"', h)
         if m and 'logo' not in m.group(1).lower():
             img = m.group(1)

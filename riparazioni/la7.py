@@ -338,6 +338,9 @@ def _dati_programma(it):
     m = re.search(r'<meta name="description" content="([^"]*)"', h)
     if m:
         descr = _html.unescape(m.group(1)).strip()
+    if not descr:
+        m = re.search(r'(Prossimamente su [A-Za-z0-9]+)', re.sub(r'<[^>]+>', ' ', h))
+        descr = m.group(1) if m else ''
     img = ''
     m = re.search(r'<meta property="og:image" content="([^"]+)"', h)
     if m and 'la7-logo-og' not in m.group(1):
