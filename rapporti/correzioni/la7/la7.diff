@@ -1,6 +1,6 @@
 --- canali_base/la7.py
 +++ rapporti/correzioni/la7/la7.py
-@@ -11,6 +11,295 @@
+@@ -11,6 +11,296 @@
  import html
  import json
  import ssl
@@ -8,6 +8,7 @@
 +
 +# lettore dei dati incorporati nella pagina (aggiunto dal controllo dei canali)
 +import html as _html
++import base64
 +import json
 +import re
 +
@@ -296,7 +297,7 @@
  
  if sys.version_info[0] >= 3:
      from concurrent import futures
-@@ -78,29 +367,26 @@
+@@ -78,29 +368,26 @@
      return itemlist
  
  

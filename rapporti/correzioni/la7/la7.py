@@ -15,6 +15,7 @@ import ssl
 
 # lettore dei dati incorporati nella pagina (aggiunto dal controllo dei canali)
 import html as _html
+import base64
 import json
 import re
 
