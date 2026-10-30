@@ -1,6 +1,6 @@
 --- canali_base/la7.py
 +++ rapporti/correzioni/la7/la7.py
-@@ -11,6 +11,296 @@
+@@ -11,6 +11,297 @@
  import html
  import json
  import ssl
@@ -9,6 +9,7 @@
 +# lettore dei dati incorporati nella pagina (aggiunto dal controllo dei canali)
 +import html as _html
 +import base64
++import functools
 +import json
 +import re
 +
@@ -297,7 +298,7 @@
  
  if sys.version_info[0] >= 3:
      from concurrent import futures
-@@ -78,29 +368,26 @@
+@@ -78,29 +369,26 @@
      return itemlist
  
  
@@ -314,7 +315,7 @@
 -@support.scrape
 +    itemlist = []
 +    h = httptools.downloadpage(item.url).data
-+    for etichetta, elenco in _trova(h, {'titolo': 'titolo', 'link': 'pathname', 'buoni': 48, 'immagine': 'immagine_scena', 'trama': 'sinossi', 'orario': 'ora', 'gruppo': '@attributes.data', 'figli': 'programma'}):
++    for etichetta, elenco in _trova(h, {'titolo': 'titolo', 'link': 'pathname', 'buoni': 41, 'immagine': 'immagine_scena', 'trama': 'sinossi', 'orario': 'ora', 'gruppo': '@attributes.data', 'figli': 'programma'}):
 +        itemlist.append(item.clone(title=support.typo(etichetta, 'bold'), gruppo=etichetta, action='replay'))
 +    return itemlist
 +
@@ -332,7 +333,7 @@
 -
 +    itemlist = []
 +    h = httptools.downloadpage(item.url).data
-+    for etichetta, elenco in _trova(h, {'titolo': 'titolo', 'link': 'pathname', 'buoni': 48, 'immagine': 'immagine_scena', 'trama': 'sinossi', 'orario': 'ora', 'gruppo': '@attributes.data', 'figli': 'programma'}):
++    for etichetta, elenco in _trova(h, {'titolo': 'titolo', 'link': 'pathname', 'buoni': 41, 'immagine': 'immagine_scena', 'trama': 'sinossi', 'orario': 'ora', 'gruppo': '@attributes.data', 'figli': 'programma'}):
 +        if etichetta != item.gruppo:
 +            continue
 +        for r in elenco:

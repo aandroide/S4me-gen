@@ -16,6 +16,7 @@ import ssl
 # lettore dei dati incorporati nella pagina (aggiunto dal controllo dei canali)
 import html as _html
 import base64
+import functools
 import json
 import re
 
@@ -371,14 +372,14 @@ def replay_channels(item):
 def replay_menu(item):
     itemlist = []
     h = httptools.downloadpage(item.url).data
-    for etichetta, elenco in _trova(h, {'titolo': 'titolo', 'link': 'pathname', 'buoni': 48, 'immagine': 'immagine_scena', 'trama': 'sinossi', 'orario': 'ora', 'gruppo': '@attributes.data', 'figli': 'programma'}):
+    for etichetta, elenco in _trova(h, {'titolo': 'titolo', 'link': 'pathname', 'buoni': 41, 'immagine': 'immagine_scena', 'trama': 'sinossi', 'orario': 'ora', 'gruppo': '@attributes.data', 'figli': 'programma'}):
         itemlist.append(item.clone(title=support.typo(etichetta, 'bold'), gruppo=etichetta, action='replay'))
     return itemlist
 
 def replay(item):
     itemlist = []
     h = httptools.downloadpage(item.url).data
-    for etichetta, elenco in _trova(h, {'titolo': 'titolo', 'link': 'pathname', 'buoni': 48, 'immagine': 'immagine_scena', 'trama': 'sinossi', 'orario': 'ora', 'gruppo': '@attributes.data', 'figli': 'programma'}):
+    for etichetta, elenco in _trova(h, {'titolo': 'titolo', 'link': 'pathname', 'buoni': 41, 'immagine': 'immagine_scena', 'trama': 'sinossi', 'orario': 'ora', 'gruppo': '@attributes.data', 'figli': 'programma'}):
         if etichetta != item.gruppo:
             continue
         for r in elenco:
