@@ -25,15 +25,14 @@ RIVEDI = [('La7', '/guida-tv-rivedi/la7'), ('La7Cinema', '/guida-tv-rivedi/la7-c
 
 @support.menu
 def mainlist(item):
-    top = [('Dirette', ['', 'live']),
-           ('Replay', ['', 'replay_channels'])]
+    top = [('Dirette {bold}', ['', 'live']),
+           ('Replay {bold}', ['', 'replay_channels'])]
 
-    film = ['/film',
-            ('Documentari', ['/documentari', 'peliculas', '', 'movie'])]
-
-    tvshow = ['/programmi',
-              ('Tg La7 {submenu} {teen}', ['/tgla7/puntate', 'episodios', '', 'tvshow']),
-              ('Coffee Tech {submenu} {teen}', ['/coffee-tech', 'episodios', '', 'tvshow'])]
+    menu = [('Programmi TV {bullet bold}', ['/programmi', 'peliculas', '', 'tvshow']),
+            ('Film {bullet bold}', ['/film', 'peliculas', '', 'movie']),
+            ('Documentari {bullet bold}', ['/documentari', 'peliculas', '', 'movie']),
+            ('Tg La7 {bullet bold} {teen}', ['/tgla7/puntate', 'episodios', '', 'tvshow']),
+            ('Coffee Tech {bullet bold} {teen}', ['/coffee-tech', 'episodios', '', 'tvshow'])]
 
     search = ''
     return locals()
@@ -184,6 +183,8 @@ def live(item):
             it.infoLabels['plot'] = t
         if img:
             it.fanart = img
+        if it.fulltitle == 'La7d' and d.get('url_locandina'):
+            it.thumbnail = d['url_locandina']
     return _titolo_visibile(support.thumb(itemlist, live=True))
 
 
