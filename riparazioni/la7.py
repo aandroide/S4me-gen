@@ -122,12 +122,22 @@ def _titolo_visibile(itemlist):
     return itemlist
 
 
+def _logo_cinema(h):
+    m = re.search(r'(/_next/static/media/logo-la7-cinema\.[^"\\]+\.png)', h)
+    return host + m.group(1) if m else ''
+
+
+def _logo_cinema_replay():
+    return _logo_cinema(_pulisci(_scarica(host + '/dirette/la7-cinema')))
+
+
 def _in_onda(url):
     # programma in onda adesso e relativa immagine; la pagina puo avere il flag isOnAir vecchio (cache),
     # quindi si sceglie dall'orario: l'ultimo programma del canale gia iniziato
     from time import time
     chiave = url.rstrip('/').split('/')[-1].replace('-', '').upper()
     h = _pulisci(_scarica(url))
+    logo = _logo_cinema(h)
     prog = []
     for blocco in h.split('{"ora":"')[1:]:
         m = re.match(r'(\d{2}:\d{2})","titolo":"([^"]*)","durata":(\d+)', blocco)
@@ -141,12 +151,12 @@ def _in_onda(url):
     iniziati = [p for p in prog if p[0] <= adesso < p[0] + p[1] + 3600]
     scelto = max(iniziati, key=lambda p: p[0]) if iniziati else next((p for p in prog if p[4]), None)
     if not scelto:
-        return '', ''
+        return '', '', logo
     testo = scelto[2]
     dopo = [p for p in sorted(prog) if p[0] > scelto[0]]
     if dopo:
         testo += '\nA seguire: %s %s' % (dopo[0][5], dopo[0][2])
-    return testo, scelto[3]
+    return testo, scelto[3], logo
 
 
 def _dirette_sito():
@@ -172,8 +182,8 @@ def live(item):
             onda = list(ex.map(lambda it: _in_onda(it.url), itemlist))
     except Exception as e:
         logger.error('la7: palinsesto delle dirette non letto %s' % e)
-        onda = [('', '')] * len(itemlist)
-    for it, (t, img) in zip(itemlist, onda):
+        onda = [('', '', '')] * len(itemlist)
+    for it, (t, img, logo) in zip(itemlist, onda):
         d = sito.get('la7d' if it.fulltitle == 'La7d' else 'la7') or {}
         if not t and d.get('titolo'):
             t = d['titolo'].strip()
@@ -185,7 +195,11 @@ def live(item):
             it.fanart = img
         if it.fulltitle == 'La7d' and d.get('url_locandina'):
             it.thumbnail = d['url_locandina']
-    return _titolo_visibile(support.thumb(itemlist, live=True))
+    itemlist = _titolo_visibile(support.thumb(itemlist, live=True))
+    for it, (t, img, logo) in zip(itemlist, onda):
+        if it.fulltitle == 'La7Cinema' and logo:
+            it.thumbnail = logo
+    return itemlist
 
 
 def replay_channels(item):
@@ -194,7 +208,12 @@ def replay_channels(item):
         f_title = 'La7d' if nome == 'La7Cinema' else nome
         itemlist.append(item.clone(title=support.typo(nome, 'bold'), fulltitle=f_title, url=host + percorso,
                                    action='replay_giorni', forcethumb=True))
-    return _titolo_visibile(support.thumb(itemlist, live=True))
+    itemlist = _titolo_visibile(support.thumb(itemlist, live=True))
+    logo = _logo_cinema_replay()
+    for it in itemlist:
+        if it.fulltitle == 'La7Cinema' and logo:
+            it.thumbnail = logo
+    return itemlist
 
 
 GIORNI = ['lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato', 'domenica']
