@@ -117,19 +117,26 @@ def _programmi():
 # ---------------------------------------------------------------- dirette e rivedi
 
 def _in_onda(url):
-    # programma in onda adesso e relativa immagine, dal palinsesto nella pagina della diretta (che elenca tutti i canali)
+    # programma in onda adesso e relativa immagine; la pagina puo avere il flag isOnAir vecchio (cache),
+    # quindi si sceglie dall'orario: l'ultimo programma del canale gia iniziato
+    from time import time
     chiave = url.rstrip('/').split('/')[-1].replace('-', '').upper()
     h = _pulisci(_scarica(url))
+    prog = []
     for blocco in h.split('{"ora":"')[1:]:
-        if '"isOnAir":true' not in blocco or ('guidatv/%s/' % chiave) not in blocco:
+        m = re.match(r'\d{2}:\d{2}","titolo":"([^"]*)","durata":(\d+)', blocco)
+        ts = re.search(r'"timestamp":(\d+)', blocco)
+        if not m or not ts or ('guidatv/%s/' % chiave) not in blocco:
             continue
-        m = re.match(r'\d{2}:\d{2}","titolo":"([^"]*)"', blocco)
-        if not m:
-            continue
-        poster = [u for u in re.findall(r'"ssrPosterUrl":"([^"]+)"', h) if 'guidatv/%s/' % chiave in u]
         img = re.search(r'"immagineProgramma":"([^"]+)"', blocco) or re.search(r'"immagineScena":"([^"]+)"', blocco)
-        return 'In onda adesso: ' + _html.unescape(m.group(1)).strip(), poster[0] if poster else (img.group(1) if img else '')
-    return '', ''
+        prog.append((int(ts.group(1)), int(m.group(2)), _html.unescape(m.group(1)).strip(),
+                     img.group(1) if img else '', '"isOnAir":true' in blocco))
+    adesso = time()
+    iniziati = [p for p in prog if p[0] <= adesso < p[0] + p[1] + 3600]
+    scelto = max(iniziati) if iniziati else next((p for p in prog if p[4]), None)
+    if not scelto:
+        return '', ''
+    return 'In onda adesso: ' + scelto[2], scelto[3]
 
 
 def _dirette_sito():
@@ -157,7 +164,7 @@ def live(item):
         onda = [('', '')] * len(itemlist)
     for it, (t, img) in zip(itemlist, onda):
         d = sito.get('la7d' if it.fulltitle == 'La7Cinema' else 'la7') or {}
-        if d.get('titolo'):
+        if not t and d.get('titolo'):
             t = 'In onda adesso: ' + d['titolo'].strip()
         img = img or d.get('url_locandina')
         if t:
