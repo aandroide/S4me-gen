@@ -16,14 +16,14 @@ if '--host' in sys.argv:
     host = sys.argv[sys.argv.index('--host') + 1]
 ch = importlib.import_module('channels.' + nome)
 it = Item(channel=nome, action='findvideos', url=(host or ch.host) + '/it/watch/1', fulltitle='Prova')
+it.infoLabels['tmdb_id'] = tmdb
+if tipo != 'film':
+    it.infoLabels['tmdb_id_show'] = tmdb
 if tipo == 'film':
     it.contentType = 'movie'
 else:
     it.contentType = 'episode'
     it.season, it.episode = 1, 1
-it.infoLabels = {'tmdb_id': tmdb}
-if tipo != 'film':
-    it.infoLabels['tmdb_id_show'] = tmdb
 res = {'canale': nome, 'tmdb': tmdb, 'voci': [], 'esito': 'NESSUN SERVER VIXSRC'}
 try:
     voci = ch.findvideos(it)
