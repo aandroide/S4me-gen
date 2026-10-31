@@ -11,6 +11,8 @@ try:
     config.set_setting('episode_info', True)
 except Exception as e:
     print('impostazioni', e)
+_gs = config.get_setting
+config.get_setting = lambda k, *a, **kw: True if k in ('tmdb_active', 'episode_info') else _gs(k, *a, **kw)
 from core import tmdb
 print('tmdb_active =', config.get_setting('tmdb_active'))
 try:
