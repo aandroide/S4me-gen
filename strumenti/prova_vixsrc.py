@@ -42,6 +42,16 @@ if vix:
             u = str(urls[0][1]).partition('|')[0]
             r = requests.get(u, timeout=30, headers={'User-Agent': 'Mozilla/5.0', 'Referer': 'https://vixsrc.to/'})
             res['video'] = '%s %s' % (r.status_code, r.text[:20].replace('\n', ' '))
+            res['master'] = r.text[:900]
+            res['master_endlist'] = '#EXT-X-ENDLIST' in r.text
+            import re as _re
+            from urllib.parse import urljoin
+            fig = [l.strip() for l in r.text.splitlines() if l.strip() and not l.startswith('#')]
+            if fig:
+                c = requests.get(urljoin(u, fig[0]), timeout=30, headers={'User-Agent': 'Mozilla/5.0', 'Referer': 'https://vixsrc.to/'})
+                res['figlio'] = '%s %s' % (c.status_code, c.text[:400])
+                res['figlio_endlist'] = '#EXT-X-ENDLIST' in c.text
+                res['figlio_tipo'] = _re.findall(r'#EXT-X-PLAYLIST-TYPE:[A-Z]+', c.text)
             res['esito'] = 'VIDEO OK' if r.status_code == 200 and r.text.startswith('#EXTM3U') else 'RISOLTO MA NON UN VIDEO'
         else:
             res['esito'] = 'SERVER PRESENTE, NESSUN VIDEO RISOLTO'
