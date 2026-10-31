@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 4, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 22, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 5, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (3)
 
@@ -48,7 +48,14 @@ Sito: http://cinestore.cinetecadibologna.it
 - file corretto scritto in rapporti/correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli
 - attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano
 
-## ROTTO (4)
+## ROTTO (5)
+
+### accuradio
+Sito: https://www.accuradio.com
+- indirizzo scritto nel canale: https://www.accuradio.com
+- ROTTO: peliculas / | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/accuradio/pagina_peliculas_home.html
+-   nessuna regex sostitutiva trovata automaticamente in /
 
 ### cineblog001
 Sito: https://cineblog001.men
@@ -99,7 +106,7 @@ Sito: https://eurostreaming.ooo
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.ink
-- OK: peliculas /catalog/all | 18 risultati
+- OK: peliculas /catalog/all | 17 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
@@ -117,16 +124,16 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27344 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27282 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5638 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5650 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5666 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5659 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5630 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5658 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5651 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (12)
 
@@ -202,7 +209,7 @@ Sito: https://streamingita.homes
 - il sito reindirizza a un altro indirizzo: https://ww17.streamingita.homes (in channels.json c'e https://streamingita.homes)
 - riga per channels.json: "streamingita": "https://ww17.streamingita.homes",
 
-## OK (22)
+## OK (21)
 
 ### 1337x
 Sito: https://1337x.to
@@ -211,14 +218,9 @@ Sito: https://1337x.to
 - OK: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | 14 risultati
 - OK: peliculas /movie-library/1/ | 25 risultati
 
-### accuradio
-Sito: https://www.accuradio.com
-- indirizzo scritto nel canale: https://www.accuradio.com
-- OK: peliculas / | 48 risultati
-
 ### altadefinizione01
 Sito: https://altadefinizione-01.autos
-- OK: peliculas /lastnews/ | 83 risultati
+- OK: peliculas /lastnews/ | 85 risultati
 - OK: peliculas /cinema/ | 97 risultati
 - OK: peliculas /sub-ita/ | 97 risultati
 - OK: peliculas /serie-tv/ | 97 risultati
@@ -267,7 +269,7 @@ Sito: https://eurostream.fit
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10150 risultati
+- OK: peliculas /index | 3449 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -277,14 +279,14 @@ Sito: https://www.justwatch.com
 ### la7
 Sito: https://www.la7play.it
 - indirizzo scritto nel canale: https://www.la7play.it
-- OK: https://www.la7play.it/programmi | html (prima rilevazione, riferimento salvato)
-- OK: https://www.la7play.it/film | html (prima rilevazione, riferimento salvato)
-- OK: https://www.la7play.it/documentari | html (prima rilevazione, riferimento salvato)
-- OK: https://www.la7play.it/tgla7/puntate | html (prima rilevazione, riferimento salvato)
-- OK: https://www.la7play.it/coffee-tech | html (prima rilevazione, riferimento salvato)
-- OK: https://www.la7play.it/ | html (prima rilevazione, riferimento salvato)
-- OK: https://www.la7play.it/dirette/la7-cinema | html (prima rilevazione, riferimento salvato)
-- OK: https://www.la7play.it | html (prima rilevazione, riferimento salvato)
+- OK: https://www.la7play.it/programmi | html
+- OK: https://www.la7play.it/film | html
+- OK: https://www.la7play.it/documentari | html
+- OK: https://www.la7play.it/tgla7/puntate | html
+- OK: https://www.la7play.it/coffee-tech | html
+- OK: https://www.la7play.it/ | html
+- OK: https://www.la7play.it/dirette/la7-cinema | html
+- OK: https://www.la7play.it | html
 
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it
@@ -342,7 +344,7 @@ Sito: https://apibay.org
 Sito: https://toonitalia.xyz
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
 - OK: peliculas /category/anime | 400 risultati
-- OK: peliculas /anime-ita | 2768 risultati
+- OK: peliculas /anime-ita | 2770 risultati
 - attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /contatti | 822 risultati
 - attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
