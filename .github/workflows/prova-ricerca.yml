@@ -33,7 +33,7 @@ jobs:
       - name: Prova
         run: |
           mkdir -p rapporti/prove
-          PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 500 python3 -W ignore strumenti/prova_ricerca_ripetuta.py ${{ github.event.inputs.canale }} ${{ github.event.inputs.ripetizioni }} "${{ github.event.inputs.testi }}" > rapporti/prove/ricerca_log.txt 2>&1 || true
+          DIRETTO=1 PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 500 python3 -W ignore strumenti/prova_ricerca_ripetuta.py ${{ github.event.inputs.canale }} ${{ github.event.inputs.ripetizioni }} "${{ github.event.inputs.testi }}" > rapporti/prove/ricerca_log.txt 2>&1 || true
       - name: Salva
         run: |
           git config user.name aandroide

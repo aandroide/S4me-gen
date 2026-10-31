@@ -15,8 +15,13 @@ for t in testi:
         try:
             r = ch.search(Item(channel=nome, action='search'), t) or []
             esito = 'OK' if r else 'VUOTO'
+            if not r and os.environ.get('DIRETTO'):
+                try:
+                    ch.peliculas(Item(channel=nome, action='peliculas', args={'title': t}, url=ch.host))
+                except BaseException:
+                    err = traceback.format_exc(limit=4)[-500:]
             ex = ['%s | %s | %s' % (x.title[:60], x.action, x.contentType) for x in r[:6]]
-            err = ''
+            err = locals().get('err', '')
         except BaseException:
             esito, ex, err = 'ERRORE', [], traceback.format_exc(limit=3)[-300:]
         rep['prove'].append({'testo': t, 'n': i + 1, 'esito': esito, 'voci': len(r) if esito == 'OK' else 0,
