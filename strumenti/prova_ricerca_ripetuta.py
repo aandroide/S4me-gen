@@ -8,7 +8,17 @@ from core.item import Item
 nome, n = sys.argv[1], int(sys.argv[2])
 testi = [t for a in sys.argv[3:] for t in a.split('|')]
 ch = importlib.import_module('channels.' + nome)
+diag_animeunity = nome == 'animeunity'
 rep = {'canale': nome, 'host': getattr(ch, 'host', ''), 'prove': []}
+if diag_animeunity:
+    import json as _j
+    try:
+        r0 = ch.httptools.downloadpage(ch.host + '/archivio')
+        rep['archivio'] = {'codice': r0.code, 'byte': len(r0.data or ''), 'csrf': ch.csrf_token[:8] if ch.csrf_token else '', 'inizio': (r0.data or '')[:200]}
+        r1 = ch.httptools.downloadpage(ch.host + '/archivio/get-animes', headers=ch.headers, post=_j.dumps({'title': 'one piece', 'offset': 0}))
+        rep['get_animes'] = {'codice': r1.code, 'byte': len(r1.data or ''), 'inizio': (r1.data or '')[:300]}
+    except BaseException:
+        rep['diag_errore'] = traceback.format_exc(limit=3)[-400:]
 for t in testi:
     for i in range(n):
         t0 = time.time()
