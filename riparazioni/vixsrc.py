@@ -109,11 +109,10 @@ def peliculas(item):
     return itemlist
 
 
-PIATTAFORME = [('Amazon Prime Video', 119), ('Apple TV', 2), ('Apple TV+', 350), ('Chili', 40), ('Crunchyroll', 283),
-               ('Discovery+', 524), ('Disney+', 337), ('Google Play Film', 3), ('HBO Max', 384), ('Hulu', 15),
-               ('Mediaset Infinity', 359), ('MUBI', 11), ('Netflix', 8), ('NOW', 39), ('Paramount+', 531),
-               ('Plex', 538), ('Pluto TV', 300), ('RaiPlay', 222), ('Rakuten TV', 35), ('Sky Go', 29),
-               ('TIMVISION', 109), ('Tubi', 73), ('YouTube', 192)]
+PIATTAFORME = [('Amazon Prime Video', 119), ('Apple TV', 2), ('Apple TV+', 350), ('Chili', 40), ('Discovery+', 524),
+               ('Disney+', 337), ('Google Play Film', 3), ('Mediaset Infinity', 359), ('MUBI', 11), ('Netflix', 8),
+               ('NOW', 39), ('Paramount+', 531), ('Plex', 538), ('Pluto TV', 300), ('RaiPlay', 222),
+               ('Rakuten TV', 35), ('Sky Go', 29), ('TIMVISION', 109)]
 
 
 def _tmdb(percorso):
