@@ -4,12 +4,12 @@
   {
    "passo": "mainlist",
    "esito": "OK",
-   "voci": 4,
+   "voci": 8,
    "esempi": [
     "[B]•[/B] [B]Film[/B] | peliculas | tmdb=None | thumb=True | plot=False",
-    "[B]•[/B] [B]Serie TV[/B] | peliculas | tmdb=None | thumb=True | plot=False",
-    "[B]txt70741 …[/B] | search | tmdb=None | thumb=False | plot=False",
-    "[B][COLOR 0xFF65B3DA]txt60587 %s[/COLOR][/B] | channel_config | tmdb=None | thumb=True | plot=False"
+    "•• Di tendenza oggi | tendenza | tmdb=None | thumb=True | plot=False",
+    "•• Di tendenza questa settimana | tendenza | tmdb=None | thumb=True | plot=False",
+    "[B]•[/B] [B]Serie TV[/B] | peliculas | tmdb=None | thumb=True | plot=False"
    ]
   },
   {
@@ -17,10 +17,10 @@
    "esito": "OK",
    "voci": 21,
    "esempi": [
+    "[B]Pierino medico della SAUB[/B] | findvideos | tmdb=161817 | thumb=True | plot=True",
     "[B]In un mondo migliore[/B] | findvideos | tmdb=44716 | thumb=True | plot=True",
     "[B]Sacrifice[/B] | findvideos | tmdb=1284186 | thumb=True | plot=True",
-    "[B]The Parade - La Sfilata[/B] | findvideos | tmdb=81534 | thumb=True | plot=True",
-    "[B]Apocalipsis Z: Il Nuovo Mondo[/B] | findvideos | tmdb=1507696 | thumb=True | plot=True"
+    "[B]The Parade - La Sfilata[/B] | findvideos | tmdb=81534 | thumb=True | plot=True"
    ]
   },
   {
@@ -39,10 +39,10 @@
    "esito": "OK",
    "voci": 21,
    "esempi": [
+    "[B]Dedalus[/B] | findvideos | tmdb=1231163 | thumb=True | plot=True",
     "[B]Tu Yaa Main[/B] | findvideos | tmdb=1446616 | thumb=True | plot=True",
     "[B]Shaun, vita da pecora - Operazione Z.U.C.C.A.[/B] | findvideos | tmdb=1477104 | thumb=True | plot=True",
-    "[B]La timidezza delle chiome[/B] | findvideos | tmdb=1005756 | thumb=True | plot=True",
-    "[B]Contra el huracán[/B] | findvideos | tmdb=1780005 | thumb=True | plot=True"
+    "[B]La timidezza delle chiome[/B] | findvideos | tmdb=1005756 | thumb=True | plot=True"
    ]
   },
   {
@@ -50,8 +50,8 @@
    "esito": "OK",
    "voci": 2,
    "esempi": [
-    "[B]In un mondo migliore[/B] | play | tmdb=44716 | thumb=True | plot=True",
-    "[B][COLOR 0xFF65B3DA]txt30161 %s[/COLOR][/B] | add_pelicula_to_library | tmdb=44716 | thumb=True | plot=True"
+    "[B]Pierino medico della SAUB[/B] | play | tmdb=161817 | thumb=True | plot=True",
+    "[B][COLOR 0xFF65B3DA]txt30161 %s[/COLOR][/B] | add_pelicula_to_library | tmdb=161817 | thumb=True | plot=True"
    ]
   },
   {
@@ -71,6 +71,50 @@
    "voci": 1,
    "esempi": [
     "[B]1x01 - Le regole del minimarket[/B] | play | tmdb=289517 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "tendenza movie/day",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Apocalipsis Z: Il Nuovo Mondo[/B] | findvideos | tmdb=1507696 | thumb=True | plot=True",
+    "[B]Colisión[/B] | findvideos | tmdb=1571955 | thumb=True | plot=True",
+    "[B]Obsession[/B] | findvideos | tmdb=1339713 | thumb=True | plot=True",
+    "[B]Ali G: Who Iz I?[/B] | findvideos | tmdb=1727734 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "tendenza movie/week",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]The Dog Stars - Le stelle dopo la fine[/B] | findvideos | tmdb=1384216 | thumb=True | plot=True",
+    "[B]Apocalipsis Z: Il Nuovo Mondo[/B] | findvideos | tmdb=1507696 | thumb=True | plot=True",
+    "[B]Obsession[/B] | findvideos | tmdb=1339713 | thumb=True | plot=True",
+    "[B]Drive - Cuori in pista[/B] | findvideos | tmdb=1596275 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "tendenza tv/day",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Dead-End Job[/B] | episodios | tmdb=289517 | thumb=True | plot=True",
+    "[B]Nocturne[/B] | episodios | tmdb=292741 | thumb=True | plot=True",
+    "[B]Dexter: Resurrection[/B] | episodios | tmdb=259909 | thumb=True | plot=True",
+    "[B]Dark Matter[/B] | episodios | tmdb=196322 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "tendenza tv/week",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Dead-End Job[/B] | episodios | tmdb=289517 | thumb=True | plot=True",
+    "[B]Lupin[/B] | episodios | tmdb=96677 | thumb=True | plot=True",
+    "[B]Dexter: Resurrection[/B] | episodios | tmdb=259909 | thumb=True | plot=True",
+    "[B]VisionQuest[/B] | episodios | tmdb=213375 | thumb=True | plot=True"
    ]
   },
   {
@@ -166,11 +210,51 @@
   }
  ],
  "server_film": [
-  "vixsrc https://vixsrc.to/movie/44716",
-  " https://vixsrc.to/movie/44716"
+  "vixsrc https://vixsrc.to/movie/161817",
+  " https://vixsrc.to/movie/161817"
  ],
  "server_episodio": [
   "vixsrc https://vixsrc.to/tv/289517/1/1"
+ ],
+ "tendenza_movie_day": [
+  "[B]Apocalipsis Z: Il Nuovo Mondo[/B]",
+  "[B]Colisión[/B]",
+  "[B]Obsession[/B]",
+  "[B]Ali G: Who Iz I?[/B]",
+  "[B]The Dog Stars - Le stelle dopo la fine[/B]",
+  "[B]Noi un po' meglio[/B]",
+  "[B]Resident Evil[/B]",
+  "[B]Drive - Cuori in pista[/B]"
+ ],
+ "tendenza_movie_week": [
+  "[B]The Dog Stars - Le stelle dopo la fine[/B]",
+  "[B]Apocalipsis Z: Il Nuovo Mondo[/B]",
+  "[B]Obsession[/B]",
+  "[B]Drive - Cuori in pista[/B]",
+  "[B]Ali G: Who Iz I?[/B]",
+  "[B]Spider-Man: Brand New Day[/B]",
+  "[B]Odissea[/B]",
+  "[B]The Rush - Corsa contro il tempo[/B]"
+ ],
+ "tendenza_tv_day": [
+  "[B]Dead-End Job[/B]",
+  "[B]Nocturne[/B]",
+  "[B]Dexter: Resurrection[/B]",
+  "[B]Dark Matter[/B]",
+  "[B]Ghosts[/B]",
+  "[B]MobLand[/B]",
+  "[B]Lupin[/B]",
+  "[B]Carrie[/B]"
+ ],
+ "tendenza_tv_week": [
+  "[B]Dead-End Job[/B]",
+  "[B]Lupin[/B]",
+  "[B]Dexter: Resurrection[/B]",
+  "[B]VisionQuest[/B]",
+  "[B]Nocturne[/B]",
+  "[B]MobLand[/B]",
+  "[B]Carrie[/B]",
+  "[B]Dark Matter[/B]"
  ],
  "cerca_lol chi ride e fuori": [
   "[B]LOL - Chi ride è fuori[/B] | episodios | https://vixsrc.to/tv/120494",
