@@ -61,6 +61,10 @@ if ls:
             fv = passo('findvideos episodio', lambda: ch.findvideos(ep))
             if fv:
                 rep['server_episodio'] = ['%s %s' % (x.server, x.url) for x in fv]
+for t in [i for i in (menu or []) if i.action == 'tendenza']:
+    r = passo('tendenza %s' % t.args, lambda: ch.tendenza(t))
+    if r:
+        rep['tendenza_' + t.args.replace('/', '_')] = [x.title for x in r[:8]]
 passo('ricerca matrix', lambda: ch.search(Item(channel=nome, action='search'), 'matrix'))
 passo('ricerca breaking bad', lambda: ch.search(Item(channel=nome, action='search'), 'breaking bad'))
 

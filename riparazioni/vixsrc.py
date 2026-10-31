@@ -11,15 +11,19 @@ from core import support, httptools, tmdb
 from core.item import Item
 from platformcode import config, logger
 
-host = 'https://vixsrc.to'
+host = support.config.get_channel_url()
 PAGE = 20
 DURATA_CACHE = 12 * 3600
 
 
 @support.menu
 def mainlist(item):
-    film = ['']
-    tvshow = ['']
+    film = ['',
+            ('Di tendenza oggi', ['', 'tendenza', 'movie/day', 'movie']),
+            ('Di tendenza questa settimana', ['', 'tendenza', 'movie/week', 'movie'])]
+    tvshow = ['',
+              ('Di tendenza oggi', ['', 'tendenza', 'tv/day', 'tvshow']),
+              ('Di tendenza questa settimana', ['', 'tendenza', 'tv/week', 'tvshow'])]
     search = ''
     return locals()
 
@@ -94,6 +98,27 @@ def peliculas(item):
     return itemlist
 
 
+def tendenza(item):
+    # titoli di tendenza di TMDB (oggi o settimana), tenuti solo se presenti su VixSrc e nello stesso ordine
+    logger.debug()
+    tipo, periodo = (item.args or 'movie/day').split('/')
+    validi = set(_id_validi(tipo))
+    ids = []
+    for pagina in range(1, 6):
+        url = '%s/trending/%s/%s?api_key=%s&language=%s&page=%d' % (tmdb.host, tipo, periodo, tmdb.api, tmdb.def_lang, pagina)
+        try:
+            dati = tmdb.Tmdb.get_json(url)
+        except Exception:
+            logger.error('vixsrc: tendenze TMDB non disponibili')
+            break
+        for r in (dati or {}).get('results', []):
+            if r.get('id') in validi and r['id'] not in ids:
+                ids.append(r['id'])
+    if not ids:
+        return []
+    return peliculas(item.clone(ids=ids, page=0, contentType='movie' if tipo == 'movie' else 'tvshow'))
+
+
 def search(item, text):
     logger.debug(text)
     try:
@@ -156,3 +181,18 @@ def episodios(item):
 
 def findvideos(item):
     return support.server(item, data=item.url, referer=False)
+
+
+def play(item):
+    # avvio diretto da un player esterno (TMDb Helper): l'indirizzo si costruisce dall'ID TMDb
+    if item.direct:
+        from core import db
+        db['player']['itemlist'] = []
+        db.close()
+    if not (item.url or '').startswith('http'):
+        tmdb_id = item.tmdb or item.infoLabels.get('tmdb_id') or item.infoLabels.get('tmdb_id_show')
+        if item.season and item.episode:
+            item.url = '%s/tv/%s/%s/%s' % (host, tmdb_id, item.season, item.episode)
+        else:
+            item.url = '%s/movie/%s' % (host, tmdb_id)
+    return [item]
