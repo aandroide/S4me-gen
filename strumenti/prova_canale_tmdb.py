@@ -5,6 +5,19 @@ KH = os.environ.get('KH', '/tmp/kh')
 sys.path.insert(0, KH); sys.path.insert(0, os.path.join(KH, 'addon'))
 import fake  # noqa
 from core.item import Item
+from platformcode import config, logger
+try:
+    config.set_setting('tmdb_active', True)
+    config.set_setting('episode_info', True)
+except Exception as e:
+    print('impostazioni', e)
+from core import tmdb
+print('tmdb_active =', config.get_setting('tmdb_active'))
+try:
+    o = tmdb.Tmdb(id_Tmdb='603', search_type='movie')
+    print('TMDB prova 603:', o.result.get('title'))
+except BaseException:
+    traceback.print_exc()
 
 nome = sys.argv[1]
 ch = importlib.import_module('channels.' + nome)

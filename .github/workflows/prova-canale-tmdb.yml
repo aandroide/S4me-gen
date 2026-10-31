@@ -27,7 +27,7 @@ jobs:
       - name: Prova
         run: |
           mkdir -p rapporti/prove
-          PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 400 python3 -W ignore strumenti/prova_canale_tmdb.py ${{ github.event.inputs.canale }} || true
+          PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 400 python3 -W ignore strumenti/prova_canale_tmdb.py ${{ github.event.inputs.canale }} > rapporti/prove/canale_log.txt 2>&1 || true
       - name: Salva
         run: |
           git config user.name aandroide
