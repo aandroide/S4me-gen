@@ -24,6 +24,13 @@ jobs:
           c=${{ github.event.inputs.canale }}
           cp riparazioni/$c.py /tmp/kh/addon/channels/$c.py
           cp riparazioni/$c.json /tmp/kh/addon/channels/$c.json
+          python3 - <<'PY'
+          import json
+          p = '/tmp/kh/addon/channels.json'
+          d = json.load(open(p))
+          d['direct'].setdefault('vixsrc', 'https://vixsrc.to')
+          json.dump(d, open(p, 'w'), indent=4)
+          PY
       - name: Prova
         run: |
           mkdir -p rapporti/prove
