@@ -23,7 +23,6 @@ def mainlist(item):
             ('Di tendenza questa settimana', ['', 'sezione', 'trending/movie/week', 'movie']),
             ('Popolari', ['', 'sezione', 'movie/popular', 'movie']),
             ('Più votati', ['', 'sezione', 'movie/top_rated', 'movie']),
-            ('Anime', ['', 'sezione', 'discover/movie?with_keywords=210024%7C222243', 'movie']),
             ('Per piattaforma', ['', 'piattaforme', 'movie', 'movie']),
             ('Generi', ['', 'generi', 'movie', 'movie'])]
     tvshow = ['',
@@ -31,7 +30,6 @@ def mainlist(item):
               ('Di tendenza questa settimana', ['', 'sezione', 'trending/tv/week', 'tvshow']),
               ('Popolari', ['', 'sezione', 'tv/popular', 'tvshow']),
               ('Più votate', ['', 'sezione', 'tv/top_rated', 'tvshow']),
-              ('Anime', ['', 'sezione', 'discover/tv?with_keywords=210024%7C222243', 'tvshow']),
               ('Per piattaforma', ['', 'piattaforme', 'tv', 'tvshow']),
               ('Generi', ['', 'generi', 'tv', 'tvshow'])]
     search = ''
