@@ -63,6 +63,22 @@ if ls:
                 rep['server_episodio'] = ['%s %s' % (x.server, x.url) for x in fv]
 passo('ricerca matrix', lambda: ch.search(Item(channel=nome, action='search'), 'matrix'))
 passo('ricerca breaking bad', lambda: ch.search(Item(channel=nome, action='search'), 'breaking bad'))
+
+def serie_cercata(q):
+    r = ch.search(Item(channel=nome, action='search'), q) or []
+    sr = next((i for i in r if i.action == 'episodios'), None)
+    rep['cerca_' + q] = [('%s | %s | %s' % (i.title, i.action, i.url)) for i in r[:6]]
+    if not sr:
+        return
+    eps = passo('episodi di %s' % q, lambda: ch.episodios(sr))
+    for ep in [i for i in (eps or []) if i.action == 'findvideos'][:3]:
+        fv = passo('findvideos %s' % ep.title, lambda: ch.findvideos(ep))
+        rep['server_%s_%s' % (q, ep.url)] = ['%s %s' % (x.server, x.url) for x in (fv or [])]
+        rep['campi_%s' % ep.url] = dict(contentType=ep.contentType, season=ep.season, episode=ep.episode, tmdb=ep.infoLabels.get('tmdb_id'), mediatype=ep.infoLabels.get('mediatype'))
+
+
+serie_cercata('lol chi ride e fuori')
+serie_cercata('stranger things')
 os.makedirs('rapporti/prove', exist_ok=True)
 json.dump(rep, open('rapporti/prove/canale_%s.json' % nome, 'w'), indent=1, ensure_ascii=False)
 print(json.dumps(rep, indent=1, ensure_ascii=False))
