@@ -1,0 +1,52 @@
+{
+ "canale": "vixsrc",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 4,
+   "esempi": [
+    "[B]•[/B] [B]Film[/B] | peliculas | tmdb=None | thumb=True | plot=False",
+    "[B]•[/B] [B]Serie TV[/B] | peliculas | tmdb=None | thumb=True | plot=False",
+    "[B]txt70741 …[/B] | search | tmdb=None | thumb=False | plot=False",
+    "[B][COLOR 0xFF65B3DA]txt60587 %s[/COLOR][/B] | channel_config | tmdb=None | thumb=True | plot=False"
+   ]
+  },
+  {
+   "passo": "lista film",
+   "esito": "OK",
+   "voci": 1,
+   "esempi": [
+    "[B][COLOR kod]txt30992 %s >[/COLOR][/B] | peliculas | tmdb=None | thumb=True | plot=False"
+   ]
+  },
+  {
+   "passo": "lista serie",
+   "esito": "OK",
+   "voci": 1,
+   "esempi": [
+    "[B][COLOR kod]txt30992 %s >[/COLOR][/B] | peliculas | tmdb=None | thumb=True | plot=False"
+   ]
+  },
+  {
+   "passo": "film pagina 2",
+   "esito": "OK",
+   "voci": 1,
+   "esempi": [
+    "[B][COLOR kod]txt30992 %s >[/COLOR][/B] | peliculas | tmdb=None | thumb=True | plot=False"
+   ]
+  },
+  {
+   "passo": "ricerca matrix",
+   "esito": "OK",
+   "voci": 0,
+   "esempi": []
+  },
+  {
+   "passo": "ricerca breaking bad",
+   "esito": "OK",
+   "voci": 0,
+   "esempi": []
+  }
+ ]
+}
