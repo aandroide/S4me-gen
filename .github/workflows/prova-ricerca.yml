@@ -8,6 +8,9 @@ on:
       ripetizioni:
         description: "Ripetizioni per titolo"
         default: "6"
+      testi:
+        description: "Titoli separati da |"
+        default: "matrix|the batman|breaking bad"
 permissions:
   contents: write
 jobs:
@@ -18,7 +21,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install requests beautifulsoup4 lxml
+      - run: pip install requests beautifulsoup4 lxml cloudscraper
       - name: Scarica S4Me (sola lettura)
         run: |
           git clone -q --depth 1 https://github.com/stream4me/addon /tmp/kh/addon
@@ -30,7 +33,7 @@ jobs:
       - name: Prova
         run: |
           mkdir -p rapporti/prove
-          PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 500 python3 -W ignore strumenti/prova_ricerca_ripetuta.py ${{ github.event.inputs.canale }} ${{ github.event.inputs.ripetizioni }} matrix "the batman" "breaking bad" > rapporti/prove/ricerca_log.txt 2>&1 || true
+          PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 500 python3 -W ignore strumenti/prova_ricerca_ripetuta.py ${{ github.event.inputs.canale }} ${{ github.event.inputs.ripetizioni }} "${{ github.event.inputs.testi }}" > rapporti/prove/ricerca_log.txt 2>&1 || true
       - name: Salva
         run: |
           git config user.name aandroide

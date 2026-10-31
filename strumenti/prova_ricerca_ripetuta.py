@@ -6,7 +6,7 @@ sys.path.insert(0, KH); sys.path.insert(0, os.path.join(KH, 'addon'))
 import fake  # noqa
 from core.item import Item
 nome, n = sys.argv[1], int(sys.argv[2])
-testi = sys.argv[3:]
+testi = [t for a in sys.argv[3:] for t in a.split('|')]
 ch = importlib.import_module('channels.' + nome)
 rep = {'canale': nome, 'host': getattr(ch, 'host', ''), 'prove': []}
 for t in testi:
@@ -15,7 +15,7 @@ for t in testi:
         try:
             r = ch.search(Item(channel=nome, action='search'), t) or []
             esito = 'OK' if r else 'VUOTO'
-            ex = [x.title[:40] for x in r[:3]]
+            ex = ['%s | %s | %s' % (x.title[:60], x.action, x.contentType) for x in r[:6]]
             err = ''
         except BaseException:
             esito, ex, err = 'ERRORE', [], traceback.format_exc(limit=3)[-300:]
