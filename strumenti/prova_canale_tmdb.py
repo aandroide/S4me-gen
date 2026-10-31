@@ -61,10 +61,16 @@ if ls:
             fv = passo('findvideos episodio', lambda: ch.findvideos(ep))
             if fv:
                 rep['server_episodio'] = ['%s %s' % (x.server, x.url) for x in fv]
-for t in [i for i in (menu or []) if i.action == 'tendenza']:
-    r = passo('tendenza %s' % t.args, lambda: ch.tendenza(t))
-    if r:
-        rep['tendenza_' + t.args.replace('/', '_')] = [x.title for x in r[:8]]
+for t in [i for i in (menu or []) if i.action == 'sezione']:
+    r = passo('sezione %s' % t.args, lambda: ch.sezione(t))
+    rep['sez_' + t.args] = [x.title for x in (r or [])[:5]]
+for azione in ('piattaforme', 'generi'):
+    for t in [i for i in (menu or []) if i.action == azione]:
+        sub = passo('%s %s' % (azione, t.args), lambda: getattr(ch, azione)(t))
+        rep['%s_%s' % (azione, t.args)] = [x.title for x in (sub or [])]
+        for x in (sub or [])[:12]:
+            r = passo('%s > %s' % (azione, x.title), lambda: ch.sezione(x))
+            rep['voce_%s_%s_%s' % (azione, t.args, x.title)] = len(r or [])
 passo('ricerca matrix', lambda: ch.search(Item(channel=nome, action='search'), 'matrix'))
 passo('ricerca breaking bad', lambda: ch.search(Item(channel=nome, action='search'), 'breaking bad'))
 

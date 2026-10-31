@@ -19,11 +19,21 @@ DURATA_CACHE = 12 * 3600
 @support.menu
 def mainlist(item):
     film = ['',
-            ('Di tendenza oggi', ['', 'tendenza', 'movie/day', 'movie']),
-            ('Di tendenza questa settimana', ['', 'tendenza', 'movie/week', 'movie'])]
+            ('Di tendenza oggi', ['', 'sezione', 'trending/movie/day', 'movie']),
+            ('Di tendenza questa settimana', ['', 'sezione', 'trending/movie/week', 'movie']),
+            ('Popolari', ['', 'sezione', 'movie/popular', 'movie']),
+            ('Più votati', ['', 'sezione', 'movie/top_rated', 'movie']),
+            ('Anime', ['', 'sezione', 'discover/movie?with_keywords=210024%7C222243', 'movie']),
+            ('Per piattaforma', ['', 'piattaforme', 'movie', 'movie']),
+            ('Generi', ['', 'generi', 'movie', 'movie'])]
     tvshow = ['',
-              ('Di tendenza oggi', ['', 'tendenza', 'tv/day', 'tvshow']),
-              ('Di tendenza questa settimana', ['', 'tendenza', 'tv/week', 'tvshow'])]
+              ('Di tendenza oggi', ['', 'sezione', 'trending/tv/day', 'tvshow']),
+              ('Di tendenza questa settimana', ['', 'sezione', 'trending/tv/week', 'tvshow']),
+              ('Popolari', ['', 'sezione', 'tv/popular', 'tvshow']),
+              ('Più votate', ['', 'sezione', 'tv/top_rated', 'tvshow']),
+              ('Anime', ['', 'sezione', 'discover/tv?with_keywords=210024%7C222243', 'tvshow']),
+              ('Per piattaforma', ['', 'piattaforme', 'tv', 'tvshow']),
+              ('Generi', ['', 'generi', 'tv', 'tvshow'])]
     search = ''
     return locals()
 
@@ -98,25 +108,64 @@ def peliculas(item):
     return itemlist
 
 
-def tendenza(item):
-    # titoli di tendenza di TMDB (oggi o settimana), tenuti solo se presenti su VixSrc e nello stesso ordine
+PIATTAFORME = [('Netflix', 8), ('Prime Video', 119), ('Disney+', 337), ('Apple TV+', 350),
+               ('Paramount+', 531), ('NOW', 39), ('RaiPlay', 222), ('Mediaset Infinity', 359)]
+
+
+def _tmdb(percorso):
+    sep = '&' if '?' in percorso else '?'
+    return '%s/%s%sapi_key=%s&language=%s' % (tmdb.host, percorso, sep, tmdb.api, tmdb.def_lang)
+
+
+def sezione(item):
+    # elenco TMDB (tendenze, popolari, piattaforme, generi) tenuto solo per i titoli presenti su VixSrc, nell'ordine di TMDB
     logger.debug()
-    tipo, periodo = (item.args or 'movie/day').split('/')
+    percorso = item.args or 'trending/movie/day'
+    tipo = 'movie' if 'movie' in percorso.split('?')[0] else 'tv'
     validi = set(_id_validi(tipo))
     ids = []
-    for pagina in range(1, 6):
-        url = '%s/trending/%s/%s?api_key=%s&language=%s&page=%d' % (tmdb.host, tipo, periodo, tmdb.api, tmdb.def_lang, pagina)
+    for pagina in range(1, 9):
         try:
-            dati = tmdb.Tmdb.get_json(url)
+            dati = tmdb.Tmdb.get_json('%s&page=%d' % (_tmdb(percorso), pagina))
         except Exception:
-            logger.error('vixsrc: tendenze TMDB non disponibili')
+            logger.error('vixsrc: elenco TMDB non disponibile')
             break
-        for r in (dati or {}).get('results', []):
+        risultati = (dati or {}).get('results', [])
+        for r in risultati:
             if r.get('id') in validi and r['id'] not in ids:
                 ids.append(r['id'])
+        if not risultati or len(ids) >= 60:
+            break
     if not ids:
         return []
     return peliculas(item.clone(ids=ids, page=0, contentType='movie' if tipo == 'movie' else 'tvshow'))
+
+
+def piattaforme(item):
+    logger.debug()
+    tipo = item.args or 'movie'
+    itemlist = []
+    for nome, codice in PIATTAFORME:
+        percorso = 'discover/%s?watch_region=IT&with_watch_providers=%d&with_watch_monetization_types=flatrate%%7Cfree%%7Cads&sort_by=popularity.desc' % (tipo, codice)
+        itemlist.append(item.clone(title=support.typo(nome, 'bold'), action='sezione', args=percorso,
+                                   thumbnail=support.thumb(), folder=True))
+    return itemlist
+
+
+def generi(item):
+    logger.debug()
+    tipo = item.args or 'movie'
+    itemlist = []
+    try:
+        dati = tmdb.Tmdb.get_json(_tmdb('genre/%s/list' % tipo))
+    except Exception:
+        logger.error('vixsrc: generi TMDB non disponibili')
+        return itemlist
+    for g in sorted((dati or {}).get('genres', []), key=lambda x: x.get('name', '')):
+        percorso = 'discover/%s?with_genres=%s&sort_by=popularity.desc' % (tipo, g['id'])
+        itemlist.append(item.clone(title=support.typo(g['name'], 'bold'), action='sezione', args=percorso,
+                                   thumbnail=support.thumb(), folder=True))
+    return itemlist
 
 
 def search(item, text):
