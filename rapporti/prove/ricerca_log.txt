@@ -3,22 +3,24 @@
  "host": "https://www.animeunity.co",
  "prove": [
   {
-   "testo": "demon slayer",
-   "n": 1,
-   "esito": "VUOTO",
-   "voci": 0,
-   "secondi": 0.1,
-   "esempi": [],
-   "errore": "e/runner/work/S4me-gen/S4me-gen/strumenti/prova_ricerca_ripetuta.py\", line 20, in <module>\n    ch.peliculas(Item(channel=nome, action='peliculas', args={'title': t}, url=ch.host))\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 165, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
-  },
-  {
    "testo": "one piece",
    "n": 1,
    "esito": "VUOTO",
    "voci": 0,
    "secondi": 0.1,
    "esempi": [],
-   "errore": "e/runner/work/S4me-gen/S4me-gen/strumenti/prova_ricerca_ripetuta.py\", line 20, in <module>\n    ch.peliculas(Item(channel=nome, action='peliculas', args={'title': t}, url=ch.host))\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 165, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
+   "errore": "e/runner/work/S4me-gen/S4me-gen/strumenti/prova_ricerca_ripetuta.py\", line 30, in <module>\n    ch.peliculas(Item(channel=nome, action='peliculas', args={'title': t}, url=ch.host))\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 165, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
   }
- ]
+ ],
+ "archivio": {
+  "codice": 200,
+  "byte": 151193,
+  "csrf": "Q9HfFBeN",
+  "inizio": "<!DOCTYPE html>\n<html lang=\"it\" class=\"theme-dark\">\n<head>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\n        <m"
+ },
+ "get_animes": {
+  "codice": 403,
+  "byte": 8336,
+  "inizio": "<!doctype html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!-->\n<html class=\"no-js\" lang=\"en-US\">\n  "
+ }
 }
