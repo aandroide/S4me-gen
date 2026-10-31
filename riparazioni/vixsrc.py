@@ -19,17 +19,17 @@ DURATA_CACHE = 12 * 3600
 @support.menu
 def mainlist(item):
     film = ['',
-            ('Di tendenza oggi', ['', 'sezione', 'trending/movie/day', 'movie']),
-            ('Di tendenza questa settimana', ['', 'sezione', 'trending/movie/week', 'movie']),
-            ('Popolari', ['', 'sezione', 'movie/popular', 'movie']),
-            ('Più votati', ['', 'sezione', 'movie/top_rated', 'movie']),
+            ('Di tendenza oggi', ['', 'peliculas', 'trending/movie/day', 'movie']),
+            ('Di tendenza questa settimana', ['', 'peliculas', 'trending/movie/week', 'movie']),
+            ('Popolari', ['', 'peliculas', 'movie/popular', 'movie']),
+            ('Più votati', ['', 'peliculas', 'movie/top_rated', 'movie']),
             ('Per piattaforma', ['', 'piattaforme', 'movie', 'movie']),
             ('Generi', ['', 'generi', 'movie', 'movie'])]
     tvshow = ['',
-              ('Di tendenza oggi', ['', 'sezione', 'trending/tv/day', 'tvshow']),
-              ('Di tendenza questa settimana', ['', 'sezione', 'trending/tv/week', 'tvshow']),
-              ('Popolari', ['', 'sezione', 'tv/popular', 'tvshow']),
-              ('Più votate', ['', 'sezione', 'tv/top_rated', 'tvshow']),
+              ('Di tendenza oggi', ['', 'peliculas', 'trending/tv/day', 'tvshow']),
+              ('Di tendenza questa settimana', ['', 'peliculas', 'trending/tv/week', 'tvshow']),
+              ('Popolari', ['', 'peliculas', 'tv/popular', 'tvshow']),
+              ('Più votate', ['', 'peliculas', 'tv/top_rated', 'tvshow']),
               ('Per piattaforma', ['', 'piattaforme', 'tv', 'tvshow']),
               ('Generi', ['', 'generi', 'tv', 'tvshow'])]
     search = ''
@@ -92,6 +92,9 @@ def _titoli(ids, tipo, item):
 
 def peliculas(item):
     logger.debug()
+    if item.args and not item.ids:
+        # sezioni TMDB (tendenze, piattaforme, generi): la lista resta di tipo film o serie TV per la vista di Kodi
+        return sezione(item)
     tipo = 'movie' if item.contentType == 'movie' else 'tv'
     pagina = int(item.page or 0)
     if item.ids:
@@ -106,8 +109,11 @@ def peliculas(item):
     return itemlist
 
 
-PIATTAFORME = [('Netflix', 8), ('Prime Video', 119), ('Disney+', 337), ('Apple TV+', 350),
-               ('Paramount+', 531), ('NOW', 39), ('RaiPlay', 222), ('Mediaset Infinity', 359)]
+PIATTAFORME = [('Amazon Prime Video', 119), ('Apple TV', 2), ('Apple TV+', 350), ('Chili', 40), ('Crunchyroll', 283),
+               ('Discovery+', 524), ('Disney+', 337), ('Google Play Film', 3), ('HBO Max', 384), ('Hulu', 15),
+               ('Mediaset Infinity', 359), ('MUBI', 11), ('Netflix', 8), ('NOW', 39), ('Paramount+', 531),
+               ('Plex', 538), ('Pluto TV', 300), ('RaiPlay', 222), ('Rakuten TV', 35), ('Sky Go', 29),
+               ('TIMVISION', 109), ('Tubi', 73), ('YouTube', 192)]
 
 
 def _tmdb(percorso):
@@ -144,8 +150,8 @@ def piattaforme(item):
     tipo = item.args or 'movie'
     itemlist = []
     for nome, codice in PIATTAFORME:
-        percorso = 'discover/%s?watch_region=IT&with_watch_providers=%d&with_watch_monetization_types=flatrate%%7Cfree%%7Cads&sort_by=popularity.desc' % (tipo, codice)
-        itemlist.append(item.clone(title=support.typo(nome, 'bold'), action='sezione', args=percorso,
+        percorso = 'discover/%s?watch_region=IT&with_watch_providers=%d&sort_by=popularity.desc' % (tipo, codice)
+        itemlist.append(item.clone(title=support.typo(nome, 'bold'), action='peliculas', args=percorso,
                                    thumbnail=support.thumb(), folder=True))
     return itemlist
 
@@ -161,7 +167,7 @@ def generi(item):
         return itemlist
     for g in sorted((dati or {}).get('genres', []), key=lambda x: x.get('name', '')):
         percorso = 'discover/%s?with_genres=%s&sort_by=popularity.desc' % (tipo, g['id'])
-        itemlist.append(item.clone(title=support.typo(g['name'], 'bold'), action='sezione', args=percorso,
+        itemlist.append(item.clone(title=support.typo(g['name'], 'bold'), action='peliculas', args=percorso,
                                    thumbnail=support.thumb(), folder=True))
     return itemlist
 

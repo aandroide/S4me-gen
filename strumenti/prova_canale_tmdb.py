@@ -38,7 +38,7 @@ def passo(n, f):
 
 
 menu = passo('mainlist', lambda: ch.mainlist(Item(channel=nome, action='mainlist')))
-voci = [i for i in (menu or []) if i.action == 'peliculas']
+voci = [i for i in (menu or []) if i.action == 'peliculas' and not i.args]
 film = next((v for v in voci if v.contentType == 'movie'), None)
 serie = next((v for v in voci if v.contentType == 'tvshow'), None)
 lf = passo('lista film', lambda: ch.peliculas(film)) if film else None
@@ -61,15 +61,15 @@ if ls:
             fv = passo('findvideos episodio', lambda: ch.findvideos(ep))
             if fv:
                 rep['server_episodio'] = ['%s %s' % (x.server, x.url) for x in fv]
-for t in [i for i in (menu or []) if i.action == 'sezione']:
-    r = passo('sezione %s' % t.args, lambda: ch.sezione(t))
+for t in [i for i in (menu or []) if i.action == 'peliculas' and i.args]:
+    r = passo('sezione %s' % t.args, lambda: ch.peliculas(t))
     rep['sez_' + t.args] = [x.title for x in (r or [])[:5]]
 for azione in ('piattaforme', 'generi'):
     for t in [i for i in (menu or []) if i.action == azione]:
         sub = passo('%s %s' % (azione, t.args), lambda: getattr(ch, azione)(t))
         rep['%s_%s' % (azione, t.args)] = [x.title for x in (sub or [])]
-        for x in (sub or [])[:12]:
-            r = passo('%s > %s' % (azione, x.title), lambda: ch.sezione(x))
+        for x in (sub or [])[:30]:
+            r = passo('%s > %s' % (azione, x.title), lambda: ch.peliculas(x))
             rep['voce_%s_%s_%s' % (azione, t.args, x.title)] = len(r or [])
 passo('ricerca matrix', lambda: ch.search(Item(channel=nome, action='search'), 'matrix'))
 passo('ricerca breaking bad', lambda: ch.search(Item(channel=nome, action='search'), 'breaking bad'))
