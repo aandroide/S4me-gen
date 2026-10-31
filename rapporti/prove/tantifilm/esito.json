@@ -18,7 +18,7 @@
    "voci": 26
   },
   {
-   "passo": "check su \"Noi un po' meglio \"",
+   "passo": "check su \"Il regalo di compleanno \"",
    "esito": "OK",
    "voci": 2
   }
@@ -26,10 +26,26 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/38504402",
-   "finale": "http://127.0.0.1:44989/hls/38504402/master.m3u8",
-   "esito": "VIDEO OK",
-   "dettaglio": "m3u8 200"
+   "url": "https://v.vidxgo.co/38999812",
+   "nota": "il server non risponde entro 90 secondi",
+   "modulo_server": true,
+   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
+   "pagina_server": {
+    "status": 403,
+    "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+   },
+   "api_t": [
+    {
+     "referer": "https://v.vidxgo.co/38999812",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    },
+    {
+     "referer": "https://tanti-film.garden/",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    }
+   ]
   }
  ],
  "menu_dichiarato": [
@@ -89,62 +105,62 @@
    "url": "https://tanti-film.garden",
    "status": 200,
    "byte": 16470,
-   "secondi": 0.7,
+   "secondi": 0.5,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/01.html"
   },
   {
    "url": "https://tanti-film.garden/prossimamente/",
    "status": 200,
-   "byte": 71315,
-   "secondi": 0.6,
+   "byte": 71128,
+   "secondi": 0.5,
    "titolo_pagina": "Prossimamente al Cinema",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://tanti-film.garden/guarda/35365-noi-un-po-meglio-streaming-streaming-hd.html",
+   "url": "https://tanti-film.garden/guarda/35376-il-regalo-di-compleanno-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 28471,
+   "byte": 28870,
    "secondi": 0.2,
-   "titolo_pagina": "Noi un po' meglio (2026) streaming | TantiFILM",
+   "titolo_pagina": "Il regalo di compleanno (2026) streaming | TantiFILM",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://tanti-film.garden/guarda/35365-noi-un-po-meglio-streaming-streaming-hd.html",
+   "url": "https://tanti-film.garden/guarda/35376-il-regalo-di-compleanno-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 28471,
-   "secondi": 0.5,
-   "titolo_pagina": "Noi un po' meglio (2026) streaming | TantiFILM",
+   "byte": 28870,
+   "secondi": 0.4,
+   "titolo_pagina": "Il regalo di compleanno (2026) streaming | TantiFILM",
    "file": "pagine/04.html"
   },
   {
    "url": "https://tanti-film.garden",
    "status": 200,
    "byte": 16470,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/05.html"
   },
   {
    "url": "https://tanti-film.garden/animazione/",
    "status": 200,
-   "byte": 71618,
-   "secondi": 0.6,
+   "byte": 71885,
+   "secondi": 0.5,
    "titolo_pagina": "Animazione guarda Gratis | TantiFILM",
    "file": "pagine/06.html"
   },
   {
    "url": "https://tanti-film.garden/avventura/",
    "status": 200,
-   "byte": 71619,
-   "secondi": 0.3,
+   "byte": 71866,
+   "secondi": 0.2,
    "titolo_pagina": "Avventura guarda Gratis | TantiFILM",
    "file": "pagine/07.html"
   },
   {
    "url": "https://tanti-film.garden/biografico/",
    "status": 200,
-   "byte": 69621,
+   "byte": 69886,
    "secondi": 0.2,
    "titolo_pagina": "Biografico guarda Gratis | TantiFILM",
    "file": "pagine/08.html"
@@ -152,27 +168,27 @@
   {
    "url": "https://tanti-film.garden/film",
    "status": 200,
-   "byte": 89561,
-   "secondi": 0.4,
+   "byte": 89069,
+   "secondi": 0.3,
    "titolo_pagina": "Guarda Tanti Film Streaming in Italiano | TantiFILM Gratis",
    "file": "pagine/09.html"
   },
   {
    "url": "https://tanti-film.garden/serie-tv/",
    "status": 200,
-   "byte": 72552,
-   "secondi": 0.6,
+   "byte": 72020,
+   "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM",
    "file": "pagine/10.html"
   },
   {
    "url": "https://tanti-film.garden/?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 57336,
-   "secondi": 0.3,
+   "byte": 57286,
+   "secondi": 0.2,
    "titolo_pagina": "Site search &raquo; TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/11.html"
   }
  ],
- "verdetto": "ARRIVA AL VIDEO"
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
 }

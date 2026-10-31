@@ -13,12 +13,12 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"Estranei\"",
+   "passo": "episodios su \"Il nuovo esperimento carcerario di Stanf\"",
    "esito": "OK",
    "voci": 6
   },
   {
-   "passo": "findvideos su \"1x01 - Romeo e Giulietta\"",
+   "passo": "findvideos su \"1x01 - L'esperimento ha inizio\"",
    "esito": "OK",
    "voci": 1
   }
@@ -26,26 +26,10 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/37539393/1/1",
-   "nota": "il server non risponde entro 90 secondi",
-   "modulo_server": true,
-   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
-   "pagina_server": {
-    "status": 403,
-    "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-   },
-   "api_t": [
-    {
-     "referer": "https://v.vidxgo.co/37539393/1/1",
-     "status": 403,
-     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-    },
-    {
-     "referer": "https://guardaseriex.best/",
-     "status": 403,
-     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-    }
-   ]
+   "url": "https://v.vidxgo.co/46658083/1/1",
+   "finale": "http://127.0.0.1:40291/hls/tv/46658083/1/1/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
   }
  ],
  "menu_dichiarato": [
@@ -104,39 +88,39 @@
   {
    "url": "https://guardaseriex.best/serietv-streaming",
    "status": 200,
-   "byte": 100969,
+   "byte": 101276,
    "secondi": 0.8,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.best/commedia/5820-estranei-streaming.html",
+   "url": "https://guardaseriex.best/reality/5852-il-nuovo-esperimento-carcerario-di-stanford-streaming.html",
    "status": 200,
-   "byte": 63575,
-   "secondi": 0.9,
-   "titolo_pagina": "Estranei streaming - Guardaserie",
+   "byte": 62735,
+   "secondi": 0.2,
+   "titolo_pagina": "Il nuovo esperimento carcerario di Stanford streaming - Guardaserie",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt37539393?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt46658083?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
    "status": 200,
-   "byte": 1243,
+   "byte": 977,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/337757?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/335319?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 3315,
+   "byte": 2390,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/337757/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/335319/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 4569,
+   "byte": 3278,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/05.html"
@@ -144,59 +128,59 @@
   {
    "url": "https://guardaseriex.best/serietv-streaming",
    "status": 200,
-   "byte": 100969,
-   "secondi": 0.7,
+   "byte": 101276,
+   "secondi": 0.5,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/06.html"
   },
   {
    "url": "https://guardaseriex.best/serietv-popolari/",
    "status": 200,
-   "byte": 405686,
-   "secondi": 1.2,
+   "byte": 405755,
+   "secondi": 0.9,
    "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
    "file": "pagine/07.html"
   },
   {
    "url": "https://guardaseriex.best/serietv-streaming",
    "status": 200,
-   "byte": 100969,
-   "secondi": 0.7,
+   "byte": 101276,
+   "secondi": 0.3,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/08.html"
   },
   {
    "url": "https://guardaseriex.best/biografico/",
    "status": 200,
-   "byte": 221732,
-   "secondi": 0.6,
+   "byte": 221801,
+   "secondi": 0.2,
    "titolo_pagina": "Biografico streaming | Guardaserie",
    "file": "pagine/09.html"
   },
   {
    "url": "https://guardaseriex.best/commedia/",
    "status": 200,
-   "byte": 2271150,
-   "secondi": 1.1,
+   "byte": 2271250,
+   "secondi": 3.2,
    "titolo_pagina": "Commedia streaming | Guardaserie",
    "file": "pagine/10.html"
   },
   {
    "url": "https://guardaseriex.best/crime/",
    "status": 200,
-   "byte": 1265068,
-   "secondi": 0.6,
+   "byte": 1265175,
+   "secondi": 0.3,
    "titolo_pagina": "Crime streaming | Guardaserie",
    "file": "pagine/11.html"
   },
   {
    "url": "https://guardaseriex.best/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 38235,
-   "secondi": 0.2,
+   "byte": 38307,
+   "secondi": 0.6,
    "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS",
    "file": "pagine/12.html"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
+ "verdetto": "ARRIVA AL VIDEO"
 }

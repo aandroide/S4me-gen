@@ -103,7 +103,7 @@
     },
     {
      "url": "https://www.animealtadefinizione.it",
-     "status": "'NoneType' object has no attribute 'elapsed'",
+     "status": "HTTPSConnectionPool(host='www.animealtadefinizione.it', port=443): Read timed out. (read timeout=5)",
      "byte": 0,
      "titolo_pagina": ""
     }
@@ -116,7 +116,7 @@
    "pagine": [
     {
      "url": "https://www.animealtadefinizione.it/wp-admin/admin-ajax.php",
-     "status": "HTTPSConnectionPool(host='www.animealtadefinizione.it', port=443): Read timed out. (read timeout=5)",
+     "status": "'NoneType' object has no attribute 'elapsed'",
      "byte": 0,
      "titolo_pagina": ""
     },
@@ -135,7 +135,7 @@
    "url": "https://www.animealtadefinizione.it/wp-admin/admin-ajax.php",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.9,
+   "secondi": 1.3,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
@@ -183,7 +183,7 @@
    "url": "https://www.animealtadefinizione.it",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.5,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
@@ -199,7 +199,7 @@
    "url": "https://www.animealtadefinizione.it",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.5,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
@@ -213,17 +213,17 @@
   },
   {
    "url": "https://www.animealtadefinizione.it",
-   "status": "'NoneType' object has no attribute 'elapsed'",
+   "status": "HTTPSConnectionPool(host='www.animealtadefinizione.it', port=443): Read timed out. (read timeout=5)",
    "byte": 0,
-   "secondi": 0.5,
+   "secondi": 5.4,
    "titolo_pagina": "",
    "file": "pagine/11.html"
   },
   {
    "url": "https://www.animealtadefinizione.it/wp-admin/admin-ajax.php",
-   "status": "HTTPSConnectionPool(host='www.animealtadefinizione.it', port=443): Read timed out. (read timeout=5)",
+   "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 5.1,
+   "secondi": 10.0,
    "titolo_pagina": "",
    "file": "pagine/12.html"
   },

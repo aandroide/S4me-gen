@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"Geppo il folle\"",
+   "passo": "findvideos su \"Korang la terrificante bestia umana\"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,8 +21,8 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/0167956",
-   "finale": "http://127.0.0.1:39349/hls/0167956/master.m3u8",
+   "url": "https://v.vidxgo.co/0063090",
+   "finale": "http://127.0.0.1:46203/hls/0063090/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -110,23 +110,23 @@
   {
    "url": "https://altadefinizionex.vip/film/",
    "status": 200,
-   "byte": 131765,
-   "secondi": 1.3,
+   "byte": 131557,
+   "secondi": 1.4,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizionex.vip/musicale/45403-geppo-il-folle-streaming.html",
+   "url": "https://altadefinizionex.vip/horror/45412-korang-la-terrificante-bestia-umana-streaming.html",
    "status": 200,
-   "byte": 372216,
-   "secondi": 1.4,
-   "titolo_pagina": "Geppo il folle Streaming ITA - Altadefinizione",
+   "byte": 271038,
+   "secondi": 1.1,
+   "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://altadefinizionex.vip/film/",
    "status": 200,
-   "byte": 131765,
+   "byte": 131557,
    "secondi": 0.3,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/03.html"
@@ -134,15 +134,15 @@
   {
    "url": "https://altadefinizionex.vip",
    "status": 200,
-   "byte": 496054,
-   "secondi": 0.2,
+   "byte": 499505,
+   "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/04.html"
   },
   {
    "url": "https://altadefinizionex.vip/azione/film",
    "status": 200,
-   "byte": 133537,
+   "byte": 133663,
    "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/05.html"
@@ -150,8 +150,8 @@
   {
    "url": "https://altadefinizionex.vip/animazione/film",
    "status": 200,
-   "byte": 134209,
-   "secondi": 1.0,
+   "byte": 134534,
+   "secondi": 0.9,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/06.html"
   },
@@ -159,38 +159,38 @@
    "url": "https://altadefinizionex.vip/avventura/film",
    "status": 200,
    "byte": 136323,
-   "secondi": 1.0,
+   "secondi": 0.6,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/07.html"
   },
   {
    "url": "https://altadefinizionex.vip/serie-tv/",
    "status": 200,
-   "byte": 134306,
-   "secondi": 1.2,
+   "byte": 135617,
+   "secondi": 1.1,
    "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione",
    "file": "pagine/08.html"
   },
   {
    "url": "https://altadefinizionex.vip",
    "status": 200,
-   "byte": 496054,
-   "secondi": 0.2,
+   "byte": 499505,
+   "secondi": 0.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/09.html"
   },
   {
    "url": "https://altadefinizionex.vip/azione/serie-tv",
    "status": 200,
-   "byte": 137490,
-   "secondi": 1.2,
+   "byte": 137437,
+   "secondi": 0.7,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/10.html"
   },
   {
    "url": "https://altadefinizionex.vip/animazione/serie-tv",
    "status": 200,
-   "byte": 136923,
+   "byte": 136511,
    "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/11.html"
@@ -198,8 +198,8 @@
   {
    "url": "https://altadefinizionex.vip/avventura/serie-tv",
    "status": 200,
-   "byte": 137505,
-   "secondi": 1.0,
+   "byte": 137452,
+   "secondi": 1.4,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/12.html"
   },
@@ -207,7 +207,7 @@
    "url": "https://altadefinizionex.vip/archivio?search=avatar&f=all&page=1",
    "status": 200,
    "byte": 97833,
-   "secondi": 1.1,
+   "secondi": 1.0,
    "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione",
    "file": "pagine/13.html"
   }

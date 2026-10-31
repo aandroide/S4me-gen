@@ -7,16 +7,20 @@ Canale cineblog01 | indirizzo https://cb01official.uno
       menu | •• Anni | https://cb01official.uno
 == lista "• Film"
    -> 13 voci
+      findvideos | Il regalo di compleanno  | https://cb01one.stream/dead-end-job/
+      findvideos | Apocalipsis Z: Il nuovo mondo  | https://cb01one.stream/apocalipsis-z-il-nuovo-mondo-hd-2026/
+      findvideos | Colisión  | https://cb01one.stream/colision-hd-2026/
       findvideos | Sakamoto Days  | https://cb01one.stream/sakamoto-days-sub-ita-2026/
-      findvideos | Il suono di una caduta  | https://cb01one.stream/il-suono-di-una-caduta-hd-2025/
-      findvideos | Noi, un po’ meglio  | https://cb01one.stream/noi-un-po-meglio-hd-2026/
-      findvideos | Ali G: Who Iz I?  | https://cb01one.stream/ali-g-who-iz-i-hd-2026/
-== findvideos su "Sakamoto Days "
-   -> 2 voci
-      play | Sakamoto Days  | https://stayonline.pro/l/B6WxG/
-      add_pelicula_to_library | txt30161 %s | https://cb01one.stream/sakamoto-days-sub-ita-2026/
-   play del canale -> mixdrop https://m1xdrop.net/e/r66009vnumegkj
-== risoluzione mixdrop https://m1xdrop.net/e/r66009vnumegkj
+== findvideos su "Il regalo di compleanno "
+   -> 3 voci
+      play | Il regalo di compleanno  | https://stayonline.pro/l/8NKy4/
+      play | Il regalo di compleanno  | https://stayonline.pro/l/3MPZK/
+      add_pelicula_to_library | txt30161 %s | https://cb01one.stream/dead-end-job/
+   play del canale -> mixdrop https://m1xdrop.net/e/jddk97p1troo6p
+== risoluzione mixdrop https://m1xdrop.net/e/jddk97p1troo6p
+   -> VIDEO NON RAGGIUNGIBILE HTTP 403 
+   play del canale -> mixdrop https://m1xdrop.net/e/1nnovzelikq7nlg
+== risoluzione mixdrop https://m1xdrop.net/e/1nnovzelikq7nlg
    -> VIDEO NON RAGGIUNGIBILE HTTP 403 
 == voci dichiarate in mainlist (14)
     film | ('HD', ['', 'menu', 'Film HD Streaming'])

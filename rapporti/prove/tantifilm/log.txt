@@ -13,16 +13,18 @@ Canale tantifilm | indirizzo https://tanti-film.garden
       peliculas | Commedia | https://tanti-film.garden/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
-      check | Noi un po' meglio  | https://tanti-film.garden/guarda/35365-noi-un-po-meglio-streaming-streaming-hd.html
-      check | Concerto Geolier - Live Maradona 26  | https://tanti-film.garden/guarda/35356-concerto-geolier-live-maradona-26-streaming-streaming-hd.html
-      check | Ali G: Who Iz I?  | https://tanti-film.garden/guarda/35347-ali-g-who-iz-i-streaming-streaming-hd.html
-      check | Hellfire  | https://tanti-film.garden/guarda/35344-hellfire-streaming-streaming-hd.html
-== check su "Noi un po' meglio "
+      check | Il regalo di compleanno  | https://tanti-film.garden/guarda/35376-il-regalo-di-compleanno-streaming-streaming-hd.html
+      check | Killer Card  | https://tanti-film.garden/guarda/35377-killer-card-streaming-streaming-hd.html
+      check | Apocalipsis Z: Il Nuovo Mondo  | https://tanti-film.garden/guarda/35368-apocalypse-z-il-nuovo-mondo-streaming-streaming-hd.html
+      check | Colisión  | https://tanti-film.garden/guarda/35369-colision-streaming-streaming-hd.html
+== check su "Il regalo di compleanno "
    -> 2 voci
-      play | Noi un po' meglio  | https://v.vidxgo.co/38504402
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.garden/guarda/35365-noi-un-po-meglio-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/38504402
-   -> VIDEO OK m3u8 200 
+      play | Il regalo di compleanno  | https://v.vidxgo.co/38999812
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.garden/guarda/35376-il-regalo-di-compleanno-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/38999812
+   api /t/ 38999812 referer https://v.vidxgo.co/38999812 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 38999812 referer https://tanti-film.garden/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
@@ -36,4 +38,4 @@ Canale tantifilm | indirizzo https://tanti-film.garden
    SEZIONE • Serie TV -> OK 25 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 4 ok su 4
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)

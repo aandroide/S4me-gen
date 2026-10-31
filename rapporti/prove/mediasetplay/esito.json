@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 141
+   "voci": 140
   },
   {
    "passo": "findvideos su \"Bullet train\"",
@@ -20,12 +20,12 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 21
+   "voci": 20
   },
   {
-   "passo": "findvideos su \"Windstorm 4 - Il vento sta cambiando\"",
+   "passo": "findvideos su \"Zora la vampira\"",
    "esito": "ERRORE",
-   "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+   "errore": "enti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'mediaSelector'\n"
   },
   {
    "passo": "lista \"•• Film più visti del giorno\"",
@@ -114,19 +114,19 @@
    "sottovoci": 18,
    "figli": [
     {
-     "voce": "The Last Ship 3",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 9
-    },
-    {
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 1
+     "titoli": 2
     },
     {
      "voce": "NCIS - Unità anticrimine 13",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
+     "voce": "C.S.I. Scena del crimine 10",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
@@ -166,22 +166,22 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "La promessa",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 7
+    },
+    {
      "voce": "Tutto per la mia famiglia 2",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
     },
     {
-     "voce": "My Sweet Lie",
+     "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
-    },
-    {
-     "voce": "La promessa",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 7
+     "titoli": 4
     }
    ]
   },
@@ -227,19 +227,19 @@
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 1
+     "titoli": 2
+    },
+    {
+     "voce": "Law & Order: i due volti della giustizia 24",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 2
     },
     {
      "voce": "The Last Ship 3",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 9
-    },
-    {
-     "voce": "C.S.I. Scena del crimine 10",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
     }
    ]
   },
@@ -276,13 +276,13 @@
    "sottovoci": 12,
    "figli": [
     {
-     "voce": "Le Iene 2026/2027",
+     "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
     },
     {
-     "voce": "Grande Fratello VIP - Autunno 2026",
+     "voce": "Le Iene 2026/2027",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
@@ -308,16 +308,16 @@
      "titoli": 5
     },
     {
+     "voce": "Realpolitik 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 2
+    },
+    {
      "voce": "Caduta libera 2026/2027",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
-    },
-    {
-     "voce": "Amici 26",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 10
     }
    ]
   },
@@ -369,7 +369,7 @@
      "voce": "Beyblade X - Terza stagione",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 9
+     "titoli": 10
     }
    ]
   },
@@ -377,14 +377,8 @@
    "voce": "•• Kids Cartoonito",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 17,
+   "sottovoci": 15,
    "figli": [
-    {
-     "voce": "Paw Patrol",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
-    },
     {
      "voce": "Simone",
      "azione": "epmenu",
@@ -392,10 +386,16 @@
      "titoli": 10
     },
     {
-     "voce": "La casa delle bambole di Gabby",
+     "voce": "Paw Patrol",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
+    },
+    {
+     "voce": "La casa delle bambole di Gabby",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
     }
    ]
   },
@@ -403,7 +403,7 @@
    "voce": "•• Kids Evergreen",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 7,
+   "sottovoci": 8,
    "figli": [
     {
      "voce": "C'era una volta... Pollon",
@@ -421,7 +421,7 @@
      "voce": "Marco - Dagli Appennini alle Ande",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 26
+     "titoli": 23
     }
    ]
   },
@@ -429,7 +429,7 @@
    "voce": "•• Tutti i Documentari",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 16
+   "titoli": 14
   },
   {
    "voce": "•• Documentari più visti",
@@ -447,7 +447,7 @@
      "voce": "Enigmi alieni 13",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 5
     },
     {
      "voce": "Enigmi alieni 10",

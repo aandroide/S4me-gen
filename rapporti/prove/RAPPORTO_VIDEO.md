@@ -1,12 +1,8 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 11, SI FERMA AL SERVER O AL VIDEO 5, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
+Riepilogo: ARRIVA AL VIDEO 11, SI FERMA AL SERVER O AL VIDEO 6, SI FERMA PRIMA DEL VIDEO 38, SENZA ESITO 2
 
 ## ARRIVA AL VIDEO (11)
-
-### altadefinizione01
-Sito: https://altadefinizione-01.autos | verdetto: ARRIVA AL VIDEO
-- server vixsrc: VIDEO OK m3u8 200
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.vip | verdetto: ARRIVA AL VIDEO
@@ -24,43 +20,48 @@ Sito: https://www.animeworld.ac | verdetto: ARRIVA AL VIDEO
 Sito: https://casa-cinema.boats | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
-### cineblog001
-Sito: https://cineblog001.men | verdetto: ARRIVA AL VIDEO
-- server vidxgo: VIDEO OK m3u8 200
-
 ### cinetecadibologna
 Sito: http://cinestore.cinetecadibologna.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/x-flv
+
+### guardaseriecam
+Sito: https://guardaseriex.best | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
+
+### guardaserieicu
+Sito:  | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
 
 ### la7
 Sito:  | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK m3u8 206
 
+### raiplay
+Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
+- server directo: VIDEO OK 206 video/mp4
+
 ### streamingcommunity
 Sito: https://streamingcommunityz.day | verdetto: ARRIVA AL VIDEO
 - server streamingcommunityws: VIDEO OK m3u8 200
-
-### tantifilm
-Sito: https://tanti-film.garden | verdetto: ARRIVA AL VIDEO
-- server vidxgo: VIDEO OK m3u8 200
 
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
 - server voe: VIDEO OK m3u8 200
 
-## SI FERMA AL SERVER O AL VIDEO (5)
+## SI FERMA AL SERVER O AL VIDEO (6)
+
+### altadefinizione01
+Sito: https://altadefinizione-01.autos | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
+- server vixsrc: VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video
+
+### cineblog001
+Sito: https://cineblog001.men | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
 ### cineblog01
 Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
 - server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
-
-### guardaseriecam
-Sito: https://guardaseriex.best | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
-- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
-
-### guardaserieicu
-Sito:  | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
-- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
+- server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
 
 ### hd4me
 Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE
@@ -70,7 +71,11 @@ Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RI
 Sito: https://il-geniodellostreaming.ink | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
-## SI FERMA PRIMA DEL VIDEO (39)
+### tantifilm
+Sito: https://tanti-film.garden | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
+
+## SI FERMA PRIMA DEL VIDEO (38)
 
 ### 1337x
 Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
@@ -78,8 +83,8 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista ""Sized for Song" — Songs about big & lit"
-- passo "lista ""Sized for Song" — Songs about big & lit"": VUOTO 
+Sito:  | verdetto: SI FERMA A: lista "Most Popular "
+- passo "lista "Most Popular "": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -149,10 +154,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.fit | verdetto: SI FERMA A: findvideos su "1x01 - Quando il Gioco si Fa Duro "
-- passo "findvideos su "1x01 - Quando il Gioco si Fa Duro "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/139roclchad5 
+Sito: https://eurostream.fit | verdetto: SI FERMA A: findvideos su "1x01 - La Squadra "
+- passo "findvideos su "1x01 - La Squadra "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f 
 - passo "findvideos su "1x01 - Asa e Yuru "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47 
-- passo "findvideos su "1x01 - Una zia ansiosa "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/hs1d0mlmf4fu 
+- passo "findvideos su "1x01 - La Squadra "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -214,7 +219,7 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Bullet train"
 - passo "findvideos su "Bullet train"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Windstorm 4 - Il vento sta cambiando"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Zora la vampira"": ERRORE        ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'mediaSelector' 
 - passo "findvideos su "Spy Game"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
@@ -237,12 +242,6 @@ Sito: https://piratestreaming.design | verdetto: SI FERMA A: lista "• Film"
 
 ### plutotv
 Sito: https://pluto.tv/us/watch/live-tv | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
-
-### raiplay
-Sito: https://www.raiplay.it | verdetto: SI FERMA A: findvideos su "A caccia del vedovo d'oro"
-- passo "findvideos su "A caccia del vedovo d'oro"": ERRORE em_path'])).json()           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
-- passo "findvideos su "Abramo"": ERRORE equests.get(item.video_url).json()           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
-- passo "findvideos su "Abramo"": ERRORE equests.get(item.video_url).json()           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
 
 ### serietvu
 Sito: http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1 | verdetto: SI FERMA A: lista "• Serie TV"

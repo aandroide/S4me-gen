@@ -7,15 +7,16 @@ Canale streamingcommunity | indirizzo https://streamingcommunityz.day
       peliculas | • Serie TV | https://streamingcommunityz.day/it/tv-shows
 == lista "• Film"
    -> 21 voci
+      findvideos | Drive - Cuori in pista  | https://streamingcommunityz.day/it/watch/66440
+      findvideos | Street Fighter  | https://streamingcommunityz.day/it/watch/65706
       findvideos | Animals  | https://streamingcommunityz.day/it/watch/66299
       findvideos | L'amore della tua vita  | https://streamingcommunityz.day/it/watch/66325
-      findvideos | UNABOMBER  | https://streamingcommunityz.day/it/watch/66181
-      findvideos | The Love Hypothesis: Il teorema dell'amore  | https://streamingcommunityz.day/it/watch/66167
-== findvideos su "Animals "
+== findvideos su "Drive - Cuori in pista "
    -> 2 voci
-      play | Animals  | https://streamingcommunityz.day/it/iframe/66299
-      add_pelicula_to_library | txt30161 %s | https://streamingcommunityz.day/it/watch/66299
-== risoluzione streamingcommunityws https://streamingcommunityz.day/it/iframe/66299
+      play | Drive - Cuori in pista  | https://streamingcommunityz.day/it/iframe/66440
+      add_pelicula_to_library | txt30161 %s | https://streamingcommunityz.day/it/watch/66440
+   play del canale -> streamingcommunityws https://streamingcommunityz.day/it/iframe/66440
+== risoluzione streamingcommunityws https://streamingcommunityz.day/it/iframe/66440
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (15)
     film | '/it/movies'

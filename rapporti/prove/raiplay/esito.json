@@ -29,61 +29,19 @@
   },
   {
    "passo": "findvideos su \"A caccia del vedovo d'oro\"",
-   "esito": "ERRORE",
-   "errore": "')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/raiplay.py\", line 261, in findvideos\n    res = requests.get(getUrl(res['first_item_path'])).json()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
-  },
-  {
-   "passo": "lista \"Serie italiane\"",
    "esito": "OK",
-   "voci": 11
-  },
-  {
-   "passo": "menu su \"Generi serie italiane\"",
-   "esito": "OK",
-   "voci": 11
-  },
-  {
-   "passo": "genres su \"Serie sottotitolate\"",
-   "esito": "OK",
-   "voci": 21
-  },
-  {
-   "passo": "peliculas su \"A\"",
-   "esito": "OK",
-   "voci": 3
-  },
-  {
-   "passo": "findvideos su \"Abramo\"",
-   "esito": "ERRORE",
-   "errore": "r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/raiplay.py\", line 258, in findvideos\n    res = requests.get(item.video_url).json()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
-  },
-  {
-   "passo": "lista \"Serie Internazionali\"",
-   "esito": "OK",
-   "voci": 7
-  },
-  {
-   "passo": "menu su \"Generi\"",
-   "esito": "OK",
-   "voci": 7
-  },
-  {
-   "passo": "genres su \"Serie sottotitolate\"",
-   "esito": "OK",
-   "voci": 21
-  },
-  {
-   "passo": "peliculas su \"A\"",
-   "esito": "OK",
-   "voci": 3
-  },
-  {
-   "passo": "findvideos su \"Abramo\"",
-   "esito": "ERRORE",
-   "errore": "r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/raiplay.py\", line 258, in findvideos\n    res = requests.get(item.video_url).json()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
+   "voci": 1
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "directo",
+   "url": "https://download-rai-it.akamaized.net/video_no_available.mp4",
+   "finale": "https://download-rai-it.akamaized.net/video_no_available.mp4",
+   "esito": "VIDEO OK",
+   "dettaglio": "206 video/mp4"
+  }
+ ],
  "menu_dichiarato": [
   "top | ('Dirette {bold}', ['/dirette', 'live', '/palinsesto/onAir.json'])",
   "top | ('Replay {bold}', ['/guidatv', 'replayMenu', '/guidatv.json'])",
@@ -113,7 +71,7 @@
    "sottovoci": 7,
    "figli": [
     {
-     "voce": "str15 30 str30",
+     "voce": "str16 31 str30",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
      "sottovoci": 15,
@@ -122,7 +80,7 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 17
+       "titoli": 20
       },
       {
        "voce": "Rai 2",
@@ -133,8 +91,34 @@
       {
        "voce": "Rai 3",
        "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
+       "esito": "OK",
+       "titoli": 13
+      }
+     ]
+    },
+    {
+     "voce": "str15 30 str30",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 29
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 35
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 33
       }
      ]
     },
@@ -159,34 +143,8 @@
       {
        "voce": "Rai 3",
        "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      }
-     ]
-    },
-    {
-     "voce": "str13 28 str30",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
        "esito": "OK",
        "titoli": 31
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 34
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
       }
      ]
     }
@@ -202,13 +160,13 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 21
     },
     {
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 21
     },
     {
      "voce": "Stregati da Halloween",
@@ -306,7 +264,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 30
+     "titoli": 31
     },
     {
      "voce": "Docu-serie Original",
@@ -344,7 +302,7 @@
      "voce": "Cinema bambini",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 23
     }
    ]
   },
@@ -358,19 +316,19 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 36
-    },
-    {
-     "voce": "Next Star",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 21
+     "titoli": 37
     },
     {
      "voce": "Un mondo di fumetti",
      "azione": "peliculas",
      "esito": "OK",
      "titoli": 15
+    },
+    {
+     "voce": "Next Star",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 21
     }
    ]
   },
@@ -384,7 +342,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 22
+     "titoli": 23
     },
     {
      "voce": "Il teatro di Eduardo",
@@ -475,6 +433,15 @@
   }
  ],
  "sezioni_riepilogo": "13 ok su 14",
- "rete": [],
- "verdetto": "SI FERMA A: findvideos su \"A caccia del vedovo d'oro\""
+ "rete": [
+  {
+   "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
+   "status": 200,
+   "byte": 597,
+   "secondi": 1.0,
+   "titolo_pagina": "",
+   "file": "pagine/01.html"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
 }

@@ -7,16 +7,18 @@ Canale cineblog001 | indirizzo https://cineblog001.men
       genres | Generi | https://cineblog001.center
 == lista "Film"
    -> 19 voci
-      findvideos | Noi un po' meglio | https://cineblog001.men/cb01-streaming/35365-noi-un-po-meglio-streaming-cb01.html
-      findvideos | Concerto Geolier - Live Maradona 26 | https://cineblog001.men/cb01-streaming/35356-concerto-geolier-live-maradona-26-streaming-cb01.html
-      findvideos | Ali G: Who Iz I? | https://cineblog001.men/cb01-streaming/35347-ali-g-who-iz-i-streaming-cb01.html
-      findvideos | Hellfire | https://cineblog001.men/cb01-streaming/35344-hellfire-streaming-cb01.html
-== findvideos su "Noi un po' meglio"
+      findvideos | Il regalo di compleanno | https://cineblog001.men/cb01-streaming/35376-il-regalo-di-compleanno-streaming-cb01.html
+      findvideos | Killer Card | https://cineblog001.men/cb01-streaming/35377-killer-card-streaming-cb01.html
+      findvideos | Apocalipsis Z: Il Nuovo Mondo | https://cineblog001.men/cb01-streaming/35368-apocalypse-z-il-nuovo-mondo-streaming-cb01.html
+      findvideos | Colisión | https://cineblog001.men/cb01-streaming/35369-colision-streaming-cb01.html
+== findvideos su "Il regalo di compleanno"
    -> 2 voci
-      play | Noi un po' meglio | https://v.vidxgo.co/38504402
-      add_pelicula_to_library | txt30161 %s | https://cineblog001.men/cb01-streaming/35365-noi-un-po-meglio-streaming-cb01.html
-== risoluzione vidxgo https://v.vidxgo.co/38504402
-   -> VIDEO OK m3u8 200 
+      play | Il regalo di compleanno | https://v.vidxgo.co/38999812
+      add_pelicula_to_library | txt30161 %s | https://cineblog001.men/cb01-streaming/35376-il-regalo-di-compleanno-streaming-cb01.html
+== risoluzione vidxgo https://v.vidxgo.co/38999812
+   api /t/ 38999812 referer https://v.vidxgo.co/38999812 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 38999812 referer https://cineblog001.men/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (4)
     top | ('Film', ['/film/', 'peliculas', ''])
     top | ('Serie TV', ['/serie-tv/', 'peliculas', ''])
@@ -32,4 +34,4 @@ Canale cineblog001 | indirizzo https://cineblog001.men
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE txt70741 … -> OK 10 
 SEZIONI: 5 ok su 5
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)

@@ -32,17 +32,17 @@ Canale la7 | indirizzo
     menu | ('Coffee Tech {bullet bold} {teen}', ['/coffee-tech', 'episodios', '', 'tvshow'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 2 
-   SEZIONE Oggi 30 ottobre -> OK 5 
+   SEZIONE Oggi 31 ottobre -> OK 3 
+   SEZIONE Venerdi 30 ottobre -> OK 24 
    SEZIONE Giovedi 29 ottobre -> OK 24 
-   SEZIONE Mercoledi 28 ottobre -> OK 25 
    SEZIONE La7 -> SOTTOMENU  
-   SEZIONE Oggi 30 ottobre -> OK 3 
+   SEZIONE Oggi 31 ottobre -> OK 4 
+   SEZIONE Venerdi 30 ottobre -> OK 7 
    SEZIONE Giovedi 29 ottobre -> OK 7 
-   SEZIONE Mercoledi 28 ottobre -> OK 7 
    SEZIONE La7Cinema -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE • Programmi TV -> OK 71 
-   SEZIONE • Film -> OK 34 
+   SEZIONE • Film -> OK 37 
    SEZIONE • Documentari -> OK 16 
    SEZIONE • Tg La7 -> OK 20 
    SEZIONE • Coffee Tech -> OK 20 

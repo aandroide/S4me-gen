@@ -7,21 +7,19 @@ Canale guardaserieicu | indirizzo
       channel_config | txt60587 %s | 
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Estranei | https://guardaseriex.best/commedia/5820-estranei-streaming.html
-      episodios | Peccato | https://guardaseriex.best/commedia/5804-peccato-streaming.html
-      episodios | The Other Bennet Sister | https://guardaseriex.best/commedia/5791-the-other-bennet-sister-orgoglio-e-riscatto-streaming.html
       episodios | Il nuovo esperimento carcerario di Stanford | https://guardaseriex.best/reality/5852-il-nuovo-esperimento-carcerario-di-stanford-streaming.html
-== episodios su "Estranei"
+      episodios | L'isola Del Tesoro | https://guardaseriex.best/avventura/5829-l-isola-del-tesoro-streaming.html
+      episodios | Vigil - Indagine a bordo | https://guardaseriex.best/crime/1461-vigil-indagine-a-bordo.html
+      episodios | Death Valley - Un attore a caccia di indizi | https://guardaseriex.best/commedia/5845-death-valley-un-attore-a-caccia-di-indizi-streaming.html
+== episodios su "Il nuovo esperimento carcerario di Stanf"
    -> 2 voci
-      findvideos | 1x01 - Romeo e Giulietta | https://guardaseriex.best/commedia/5820-estranei-streaming.html
-      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.best/commedia/5820-estranei-streaming.html
-== findvideos su "1x01 - Romeo e Giulietta"
+      findvideos | 1x01 - L'esperimento ha inizio | https://guardaseriex.best/reality/5852-il-nuovo-esperimento-carcerario-di-stanford-streaming.html
+      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.best/reality/5852-il-nuovo-esperimento-carcerario-di-stanford-streaming.html
+== findvideos su "1x01 - L'esperimento ha inizio"
    -> 1 voci
-      play | 1x01 - Romeo e Giulietta | https://v.vidxgo.co/37539393/1/1
-== risoluzione vidxgo https://v.vidxgo.co/37539393/1/1
-   api /t/ 37539393/1/1 referer https://v.vidxgo.co/37539393/1/1 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 37539393/1/1 referer / -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+      play | 1x01 - L'esperimento ha inizio | https://v.vidxgo.co/46658083/1/1
+== risoluzione vidxgo https://v.vidxgo.co/46658083/1/1
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (2)
     tvshow | '/serietv-streaming/page/1/'
     tvshow | ('Generi', ['/serietv-streaming/page/1/', 'genres', 'genres'])
@@ -33,4 +31,4 @@ Canale guardaserieicu | indirizzo
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE •• txt70741 Serie TV… -> OK 4 
 SEZIONI: 3 ok su 3
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+VERDETTO: ARRIVA AL VIDEO

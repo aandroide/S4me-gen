@@ -10,10 +10,10 @@
   {
    "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 19
+   "voci": 18
   },
   {
-   "passo": "check su \"Irreplaceable\"",
+   "passo": "check su \"Obsess\"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,7 +21,7 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/37819415",
+   "url": "https://v.vidxgo.co/36838527",
    "nota": "il server non risponde entro 90 secondi",
    "modulo_server": true,
    "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
@@ -31,7 +31,7 @@
    },
    "api_t": [
     {
-     "referer": "https://v.vidxgo.co/37819415",
+     "referer": "https://v.vidxgo.co/36838527",
      "status": 403,
      "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
     },
@@ -54,7 +54,7 @@
    "voce": "Tutti",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 18
+   "titoli": 17
   },
   {
    "voce": "•• Generi",
@@ -92,19 +92,19 @@
      "voce": "0-9",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 18
+     "titoli": 17
     },
     {
      "voce": "A",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 18
+     "titoli": 17
     },
     {
      "voce": "B",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 18
+     "titoli": 17
     }
    ]
   },
@@ -133,31 +133,31 @@
   {
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
-   "byte": 38315,
-   "secondi": 0.7,
+   "byte": 38012,
+   "secondi": 0.8,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/film/35367-irreplaceable-streaming.html",
+   "url": "https://il-geniodellostreaming.ink/film/35379-obsess-streaming.html",
    "status": 200,
-   "byte": 30613,
+   "byte": 30493,
    "secondi": 0.2,
-   "titolo_pagina": "Irreplaceable Streaming - Serie TV - ilGenioDelloStreaming",
+   "titolo_pagina": "Obsess Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/film/35367-irreplaceable-streaming.html",
+   "url": "https://il-geniodellostreaming.ink/film/35379-obsess-streaming.html",
    "status": 200,
-   "byte": 30613,
-   "secondi": 0.6,
-   "titolo_pagina": "Irreplaceable Streaming - Serie TV - ilGenioDelloStreaming",
+   "byte": 30493,
+   "secondi": 0.2,
+   "titolo_pagina": "Obsess Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/03.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
-   "byte": 38315,
+   "byte": 38012,
    "secondi": 0.6,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/04.html"
@@ -165,15 +165,15 @@
   {
    "url": "https://il-geniodellostreaming.ink",
    "status": 200,
-   "byte": 88992,
-   "secondi": 0.6,
+   "byte": 92608,
+   "secondi": 0.5,
    "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/05.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/serie-tv/",
    "status": 200,
-   "byte": 86484,
+   "byte": 86303,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
@@ -181,56 +181,56 @@
   {
    "url": "https://il-geniodellostreaming.ink/animazione/",
    "status": 200,
-   "byte": 85703,
-   "secondi": 0.6,
+   "byte": 85728,
+   "secondi": 0.2,
    "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
    "file": "pagine/07.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/avventura/",
    "status": 200,
-   "byte": 86198,
-   "secondi": 0.6,
+   "byte": 86216,
+   "secondi": 0.2,
    "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
    "file": "pagine/08.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
-   "byte": 38315,
-   "secondi": 0.6,
+   "byte": 38012,
+   "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/09.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/catalog/0",
    "status": 200,
-   "byte": 38157,
-   "secondi": 0.6,
+   "byte": 37964,
+   "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/10.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/catalog/a",
    "status": 200,
-   "byte": 38195,
-   "secondi": 0.4,
+   "byte": 38487,
+   "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/11.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/catalog/b",
    "status": 200,
-   "byte": 38193,
-   "secondi": 0.4,
+   "byte": 38000,
+   "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/12.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/serie-tv/",
    "status": 200,
-   "byte": 86484,
-   "secondi": 0.6,
+   "byte": 86303,
+   "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/13.html"
   },
@@ -238,7 +238,7 @@
    "url": "https://il-geniodellostreaming.ink/?s=avatar",
    "status": 200,
    "byte": 34835,
-   "secondi": 2.5,
+   "secondi": 2.2,
    "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/14.html"
   }

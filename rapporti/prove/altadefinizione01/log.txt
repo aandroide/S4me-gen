@@ -6,17 +6,17 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.autos
       peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.autos
       genres | •• Generi | https://altadefinizione-01.autos
 == lista "Tutti "
-   -> 24 voci
-      check | Noi un po' meglio  | https://altadefinizione-01.autos/35365-noi-un-po-meglio-streaming.html
-      check | Concerto Geolier - Live Maradona 26  | https://altadefinizione-01.autos/35356-concerto-geolier-live-maradona-26-streaming.html
-      check | Hellfire  | https://altadefinizione-01.autos/35344-hellfire-streaming.html
-      check | One Night Only - Quando tutto è possibile  | https://altadefinizione-01.autos/35342-one-night-only-quando-tutto-e-possibile-streaming.html
-== check su "Noi un po' meglio "
+   -> 25 voci
+      check | Il regalo di compleanno  | https://altadefinizione-01.autos/35376-il-regalo-di-compleanno-streaming.html
+      check | Killer Card  | https://altadefinizione-01.autos/35377-killer-card-streaming.html
+      check | Apocalipsis Z: Il Nuovo Mondo  | https://altadefinizione-01.autos/35368-apocalypse-z-il-nuovo-mondo-streaming.html
+      check | Colisión  | https://altadefinizione-01.autos/35369-colision-streaming.html
+== check su "Il regalo di compleanno "
    -> 2 voci
-      play | Noi un po' meglio  | https://vixsrc.to/movie/tt38504402
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.autos/35365-noi-un-po-meglio-streaming.html
-== risoluzione vixsrc https://vixsrc.to/movie/tt38504402
-   -> VIDEO OK m3u8 200 
+      play | Il regalo di compleanno  | https://vixsrc.to/movie/tt38999812
+      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.autos/35376-il-regalo-di-compleanno-streaming.html
+== risoluzione vixsrc https://vixsrc.to/movie/tt38999812
+   -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
 == voci dichiarate in mainlist (7)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
     menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])
@@ -26,7 +26,7 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.autos
     menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 23 
+   SEZIONE Tutti -> OK 24 
    SEZIONE •• Al Cinema -> OK 30 
    SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 37 
    SEZIONE Azione -> OK 29 
@@ -41,4 +41,4 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.autos
    SEZIONE Serie TV -> OK 30 
    SEZIONE txt70741 … -> OK 6 
 SEZIONI: 8 ok su 8
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE

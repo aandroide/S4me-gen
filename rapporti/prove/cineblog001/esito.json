@@ -13,7 +13,7 @@
    "voci": 19
   },
   {
-   "passo": "findvideos su \"Noi un po' meglio\"",
+   "passo": "findvideos su \"Il regalo di compleanno\"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,10 +21,26 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/38504402",
-   "finale": "http://127.0.0.1:35485/hls/38504402/master.m3u8",
-   "esito": "VIDEO OK",
-   "dettaglio": "m3u8 200"
+   "url": "https://v.vidxgo.co/38999812",
+   "nota": "il server non risponde entro 90 secondi",
+   "modulo_server": true,
+   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
+   "pagina_server": {
+    "status": 403,
+    "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+   },
+   "api_t": [
+    {
+     "referer": "https://v.vidxgo.co/38999812",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    },
+    {
+     "referer": "https://cineblog001.men/",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    }
+   ]
   }
  ],
  "menu_dichiarato": [
@@ -90,438 +106,438 @@
   {
    "url": "https://cineblog001.center/film/",
    "status": 200,
-   "byte": 76168,
-   "secondi": 1.5,
+   "byte": 75694,
+   "secondi": 1.8,
    "titolo_pagina": "CineBlog01-CB01 Film in Altadefinizione",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://cineblog001.men/cb01-streaming/35365-noi-un-po-meglio-streaming-cb01.html",
+   "url": "https://cineblog001.men/cb01-streaming/35376-il-regalo-di-compleanno-streaming-cb01.html",
    "status": 200,
-   "byte": 44965,
+   "byte": 45159,
    "secondi": 0.6,
-   "titolo_pagina": "Noi un po' meglio streaming (2026) | CB01 - CINEBLOG01 | FILM STREAMING",
+   "titolo_pagina": "Il regalo di compleanno streaming (2026) | CB01 - CINEBLOG01 | FILM STREAMING",
    "file": "pagine/02.html"
   },
   {
    "url": "https://cineblog001.center/film/",
    "status": 200,
-   "byte": 76168,
-   "secondi": 0.7,
+   "byte": 75694,
+   "secondi": 0.9,
    "titolo_pagina": "CineBlog01-CB01 Film in Altadefinizione",
    "file": "pagine/03.html"
   },
   {
    "url": "https://cineblog001.center/serie-tv/",
    "status": 200,
-   "byte": 97640,
-   "secondi": 0.8,
+   "byte": 95634,
+   "secondi": 0.6,
    "titolo_pagina": "Serie TV in Streaming Gratis - CB01 - CINEBLOG01",
    "file": "pagine/04.html"
   },
   {
    "url": "https://cineblog001.center/sub-ita/",
    "status": 200,
-   "byte": 96590,
-   "secondi": 0.8,
+   "byte": 95357,
+   "secondi": 0.9,
    "titolo_pagina": "Film ",
    "file": "pagine/05.html"
   },
   {
    "url": "https://api.themoviedb.org/3/discover/movie?api_key=a1ab8b8669da03637a4b98fa39c39228&with_genres=28&sort_by=popularity.desc&language=it&include_adult=false&page=1",
    "status": 200,
-   "byte": 13806,
-   "secondi": 0.2,
+   "byte": 13778,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Hope",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Spider-Man%3A+Brand+New+Day",
    "status": 200,
-   "byte": 59944,
-   "secondi": 0.9,
+   "byte": 37910,
+   "secondi": 0.7,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Odissea",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=El+despertar",
    "status": 200,
-   "byte": 60858,
-   "secondi": 2.8,
+   "byte": 35893,
+   "secondi": 1.2,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Il+cavaliere+oscuro",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Hope",
    "status": 200,
-   "byte": 60704,
-   "secondi": 2.9,
+   "byte": 59147,
+   "secondi": 2.3,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Spider-Man%3A+Brand+New+Day",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Odissea",
    "status": 200,
-   "byte": 38749,
-   "secondi": 3.0,
+   "byte": 60061,
+   "secondi": 2.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=The+Dog+Stars+-+Le+stelle+dopo+la+fine",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Il+cavaliere+oscuro",
    "status": 200,
-   "byte": 39017,
-   "secondi": 2.3,
+   "byte": 59907,
+   "secondi": 2.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=El+despertar",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=The+Mongoose",
    "status": 200,
-   "byte": 36690,
-   "secondi": 0.8,
+   "byte": 35893,
+   "secondi": 1.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=The+Mongoose",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=The+Dog+Stars+-+Le+stelle+dopo+la+fine",
    "status": 200,
-   "byte": 36690,
-   "secondi": 1.7,
+   "byte": 38045,
+   "secondi": 2.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD",
    "file": "pagine/13.html"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Matchbox%3A+Il+film",
    "status": 200,
-   "byte": 38662,
-   "secondi": 2.8,
+   "byte": 37865,
+   "secondi": 2.3,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD",
    "file": "pagine/14.html"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Masterplan",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=The+Fix",
    "status": 200,
-   "byte": 38807,
-   "secondi": 2.8,
+   "byte": 57852,
+   "secondi": 2.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD",
    "file": "pagine/15.html"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=The+Fix",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Masterplan",
    "status": 200,
-   "byte": 58649,
-   "secondi": 3.0,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Animals",
-   "status": 200,
-   "byte": 59037,
-   "secondi": 3.1,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Street+Fighter",
-   "status": 200,
-   "byte": 43595,
-   "secondi": 2.4,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=The+Rush+-+Corsa+contro+il+tempo",
-   "status": 200,
-   "byte": 39114,
-   "secondi": 2.6,
+   "byte": 38010,
+   "secondi": 2.2,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Avengers%3A+Doomsday",
    "status": 200,
-   "byte": 38549,
-   "secondi": 2.9,
+   "byte": 37752,
+   "secondi": 2.4,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Street+Fighter",
+   "status": 200,
+   "byte": 42798,
+   "secondi": 2.3,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Animals",
+   "status": 200,
+   "byte": 58240,
+   "secondi": 2.6,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=The+Rush+-+Corsa+contro+il+tempo",
+   "status": 200,
+   "byte": 38317,
+   "secondi": 2.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Onslaught+-+Assalto+finale",
    "status": 200,
-   "byte": 36704,
-   "secondi": 1.8,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=The+Florist",
-   "status": 200,
-   "byte": 36689,
-   "secondi": 1.6,
+   "byte": 35907,
+   "secondi": 1.5,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Mutiny+-+Inverti+la+rotta",
    "status": 200,
-   "byte": 39004,
-   "secondi": 2.6,
+   "byte": 38207,
+   "secondi": 2.2,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Colony",
    "status": 200,
-   "byte": 45522,
-   "secondi": 2.8,
+   "byte": 44725,
+   "secondi": 2.3,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=I+peccatori",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=The+Florist",
    "status": 200,
-   "byte": 56711,
-   "secondi": 2.6,
+   "byte": 35892,
+   "secondi": 1.5,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Colisi%C3%B3n",
+   "status": 200,
+   "byte": 37908,
+   "secondi": 2.3,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Avengers%3A+Endgame",
    "status": 200,
-   "byte": 43779,
-   "secondi": 3.0,
+   "byte": 42982,
+   "secondi": 2.5,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://api.themoviedb.org/3/discover/movie?api_key=a1ab8b8669da03637a4b98fa39c39228&with_genres=16&sort_by=popularity.desc&language=it&include_adult=false&page=1",
    "status": 200,
-   "byte": 16263,
+   "byte": 16621,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=L%27isola+dei+ricordi",
+   "status": 200,
+   "byte": 38119,
+   "secondi": 0.6,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Wildwood+-+I+segreti+del+bosco+proibito",
    "status": 200,
-   "byte": 38798,
-   "secondi": 2.4,
+   "byte": 38001,
+   "secondi": 2.2,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Coco",
    "status": 200,
-   "byte": 58965,
-   "secondi": 2.6,
+   "byte": 58168,
+   "secondi": 2.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Nightmare+Before+Christmas",
    "status": 200,
-   "byte": 41369,
-   "secondi": 2.8,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=L%27isola+dei+ricordi",
-   "status": 200,
-   "byte": 38916,
-   "secondi": 2.9,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Taddeo+l%E2%80%99esploratore+e+la+lampada+magica",
-   "status": 200,
-   "byte": 36718,
-   "secondi": 1.6,
+   "byte": 40572,
+   "secondi": 2.5,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Coyote+vs.+Acme",
    "status": 200,
-   "byte": 38810,
-   "secondi": 2.4,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Toy+Story+5",
-   "status": 200,
-   "byte": 51005,
-   "secondi": 2.8,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Minions+%26+Monsters",
-   "status": 200,
-   "byte": 38865,
-   "secondi": 2.5,
+   "byte": 38013,
+   "secondi": 2.3,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Coraline+e+la+porta+magica",
    "status": 200,
-   "byte": 38936,
-   "secondi": 2.5,
+   "byte": 38097,
+   "secondi": 0.5,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Super+Mario+Galaxy+-+Il+film",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Taddeo+l%E2%80%99esploratore+e+la+lampada+magica",
    "status": 200,
-   "byte": 39095,
-   "secondi": 2.7,
+   "byte": 35921,
+   "secondi": 1.5,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=La+sposa+cadavere",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Toy+Story+5",
    "status": 200,
-   "byte": 50330,
-   "secondi": 2.6,
+   "byte": 50208,
+   "secondi": 2.4,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Minions+%26+Monsters",
+   "status": 200,
+   "byte": 38068,
+   "secondi": 2.3,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Avatar+Aang%3A+L%E2%80%99ultimo+dominatore+dell%E2%80%99aria",
    "status": 200,
-   "byte": 39256,
-   "secondi": 2.9,
+   "byte": 38459,
+   "secondi": 2.4,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Super+Mario+Galaxy+-+Il+film",
+   "status": 200,
+   "byte": 38298,
+   "secondi": 2.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=La+citt%C3%A0+incantata",
    "status": 200,
-   "byte": 43570,
-   "secondi": 2.5,
+   "byte": 42773,
+   "secondi": 2.3,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Demon+Slayer%3A+Il+Castello+dell%27Infinito+-+Parte+1",
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=La+sposa+cadavere",
    "status": 200,
-   "byte": 36732,
-   "secondi": 1.5,
+   "byte": 49533,
+   "secondi": 2.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Zootropolis+2",
    "status": 200,
-   "byte": 43055,
-   "secondi": 2.7,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Trolls+World+Tour",
-   "status": 200,
-   "byte": 38906,
-   "secondi": 2.9,
+   "byte": 42258,
+   "secondi": 2.2,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=La+leyenda+del+Charro+Negro",
    "status": 200,
-   "byte": 36705,
-   "secondi": 1.6,
+   "byte": 35908,
+   "secondi": 1.5,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Demon+Slayer%3A+Il+Castello+dell%27Infinito+-+Parte+1",
+   "status": 200,
+   "byte": 35935,
+   "secondi": 1.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Il+robot+selvaggio",
    "status": 200,
-   "byte": 38868,
-   "secondi": 2.7,
+   "byte": 38071,
+   "secondi": 2.4,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Zootropolis",
+   "status": 200,
+   "byte": 42256,
+   "secondi": 2.2,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Spider-Man%3A+Across+the+Spider-Verse",
+   "status": 200,
+   "byte": 38320,
+   "secondi": 2.3,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Jumpers+-+Un+salto+tra+gli+animali",
    "status": 200,
-   "byte": 39151,
-   "secondi": 2.5,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Super+Mario+Bros.+Il+Film",
-   "status": 200,
-   "byte": 39071,
-   "secondi": 2.5,
+   "byte": 38354,
+   "secondi": 2.2,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://api.themoviedb.org/3/discover/movie?api_key=a1ab8b8669da03637a4b98fa39c39228&with_genres=12&sort_by=popularity.desc&language=it&include_adult=false&page=1",
    "status": 200,
-   "byte": 16205,
+   "byte": 15937,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Odissea",
    "status": 200,
-   "byte": 60858,
-   "secondi": 0.8,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Spider-Man%3A+Brand+New+Day",
-   "status": 200,
-   "byte": 38749,
-   "secondi": 0.9,
+   "byte": 60061,
+   "secondi": 0.6,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Matchbox%3A+Il+film",
    "status": 200,
-   "byte": 38662,
-   "secondi": 0.9,
+   "byte": 37865,
+   "secondi": 0.6,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Spider-Man%3A+Brand+New+Day",
+   "status": 200,
+   "byte": 37910,
+   "secondi": 0.7,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Wildwood+-+I+segreti+del+bosco+proibito",
    "status": 200,
-   "byte": 38798,
-   "secondi": 1.0,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Coco",
-   "status": 200,
-   "byte": 58965,
-   "secondi": 0.8,
+   "byte": 38001,
+   "secondi": 0.7,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=L%27isola+dei+ricordi",
    "status": 200,
-   "byte": 38916,
-   "secondi": 0.8,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Toy+Story+5",
-   "status": 200,
-   "byte": 51005,
-   "secondi": 0.8,
+   "byte": 38119,
+   "secondi": 0.5,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Avengers%3A+Doomsday",
    "status": 200,
-   "byte": 38549,
-   "secondi": 0.8,
+   "byte": 37752,
+   "secondi": 0.6,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Coco",
+   "status": 200,
+   "byte": 58168,
+   "secondi": 0.7,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Coyote+vs.+Acme",
    "status": 200,
-   "byte": 38810,
-   "secondi": 0.7,
+   "byte": 38013,
+   "secondi": 0.5,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Toy+Story+5",
+   "status": 200,
+   "byte": 50208,
+   "secondi": 0.6,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Resident+Evil",
    "status": 200,
-   "byte": 60648,
-   "secondi": 2.9,
+   "byte": 59851,
+   "secondi": 2.3,
+   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
+  },
+  {
+   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Avengers%3A+Endgame",
+   "status": 200,
+   "byte": 42982,
+   "secondi": 0.5,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   },
   {
    "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=L%27ultima+missione%3A+Project+Hail+Mary",
    "status": 200,
-   "byte": 39132,
-   "secondi": 2.7,
-   "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
-  },
-  {
-   "url": "https://cineblog001.center/index.php?do=search&subaction=search&story=Oceania",
-   "status": 200,
-   "byte": 40759,
-   "secondi": 2.6,
+   "byte": 38335,
+   "secondi": 2.4,
    "titolo_pagina": "Site search &raquo; CINEBLOG01 - CB01 | FILM STREAMING E DOWNLOAD GRATIS HD"
   }
  ],
- "verdetto": "ARRIVA AL VIDEO"
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
 }

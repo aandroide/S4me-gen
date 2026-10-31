@@ -6,11 +6,11 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 141 voci
+   -> 140 voci
       findvideos | Bullet train | https://mediasetinfinity.mediaset.it/movie/bullettrain/bullet-train_F311877201000103
       findvideos | Transformers - La vendetta del caduto | https://mediasetinfinity.mediaset.it/movie/transformerslavendettadelcaduto/transformers-la-vendetta-
-      findvideos | Shazam! | https://mediasetinfinity.mediaset.it/movie/shazam/shazam_F309243001000102
       findvideos | Divergent | https://mediasetinfinity.mediaset.it/movie/divergent/divergent_F305721401000102
+      findvideos | 47 ronin | https://mediasetinfinity.mediaset.it/movie/47ronin/47-ronin_F303799501000102
 == findvideos su "Bullet train"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 21 voci
-      findvideos | Windstorm 4 - Il vento sta cambiando | https://mediasetinfinity.mediaset.it/movie/windstorm4ilventostacambiando/windstorm-4-il-vento-sta-ca
-      findvideos | Horizon line - Brivido ad alta quota | https://mediasetinfinity.mediaset.it/movie/horizonlinebrividoadaltaquota/horizon-line-brivido-ad-alt
-      findvideos | The protegè | https://mediasetinfinity.mediaset.it/movie/theprotege/the-protege_F311440301000102
-      findvideos | The ride  (di a. ranarivelo) - The ride | https://mediasetinfinity.mediaset.it/movie/theridediaranarivelo/the-ride_F310991801000104
-== findvideos su "Windstorm 4 - Il vento sta cambiando"
+   -> 20 voci
+      findvideos | Zora la vampira | https://mediasetinfinity.mediaset.it/movie/zoralavampira/zora-la-vampira_F010700301000101
+      findvideos | Una notte da paura | https://mediasetinfinity.mediaset.it/movie/unanottedapaura/una-notte-da-paura_F303775401000101
+      findvideos | 47 ronin | https://mediasetinfinity.mediaset.it/movie/47ronin/47-ronin_F303799501000102
+      findvideos | Il corriere  - the mule - Il corriere  - The mule | https://mediasetinfinity.mediaset.it/movie/ilcorrierethemule/il-corriere-the-mule_F309243301000102
+== findvideos su "Zora la vampira"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -41,14 +41,14 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
     res = session.post(
           ^^^^^^^^^^^^^
-KeyError: 'response'
+KeyError: 'mediaSelector'
 
 == lista "•• Film più visti del giorno"
    -> 21 voci
       findvideos | Spy Game | https://mediasetinfinity.mediaset.it/movie/spygame/spy-game_F011035001000102
-      findvideos | Bullet train | https://mediasetinfinity.mediaset.it/movie/bullettrain/bullet-train_F311877201000103
+      findvideos | The Lost City | https://mediasetinfinity.mediaset.it/movie/thelostcity/the-lost-city_F311799901000102
       findvideos | Inga Lindstrom - Il ritorno di Ellen - Inga lindstrom - Il r | https://mediasetinfinity.mediaset.it/movie/ingalindstromilritornodiellen/inga-lindstrom-il-ritorno-d
-      findvideos | Inga Lindstrom - Il matrimonio dimenticato | https://mediasetinfinity.mediaset.it/movie/ingalindstromilmatrimoniodimenticato/inga-lindstrom-il-ma
+      findvideos | Il confine dell'inganno | https://mediasetinfinity.mediaset.it/movie/ilconfinedellinganno/il-confine-dellinganno_F309212101000
 == findvideos su "Spy Game"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -95,38 +95,38 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 6 
-   SEZIONE The Last Ship 3 -> OK 9 
-   SEZIONE I Simpson -> OK 1 
+   SEZIONE I Simpson -> OK 2 
    SEZIONE NCIS - Unità anticrimine 13 -> OK 6 
+   SEZIONE C.S.I. Scena del crimine 10 -> OK 6 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Innocence -> OK 5 
    SEZIONE Bitter Sweet - Ingredienti d'amore -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
-   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
-   SEZIONE My Sweet Lie -> OK 5 
    SEZIONE La promessa -> OK 7 
+   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
+   SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
    SEZIONE Dragon Ball Daima -> OK 8 
    SEZIONE One Piece 18 -> OK 2 
    SEZIONE Dragon Ball Super -> OK 30 
    SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
-   SEZIONE I Simpson -> OK 1 
+   SEZIONE I Simpson -> OK 2 
+   SEZIONE Law & Order: i due volti della giustizia 24 -> OK 2 
    SEZIONE The Last Ship 3 -> OK 9 
-   SEZIONE C.S.I. Scena del crimine 10 -> OK 5 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE •• Serie Turche -> SOTTOMENU  
-   SEZIONE Le Iene 2026/2027 -> OK 6 
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
+   SEZIONE Le Iene 2026/2027 -> OK 6 
    SEZIONE Il Volo - Uno per tutti -> OK 4 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
+   SEZIONE Realpolitik 2026/2027 -> OK 2 
    SEZIONE Caduta libera 2026/2027 -> OK 4 
-   SEZIONE Amici 26 -> OK 10 
    SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Amici 26 -> OK 10 
@@ -134,19 +134,19 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Lo straordinario mondo di Gumball -> OK 10 
    SEZIONE Teen Titans Go! -> OK 12 
-   SEZIONE Beyblade X - Terza stagione -> OK 9 
+   SEZIONE Beyblade X - Terza stagione -> OK 10 
    SEZIONE •• Kids Boing -> SOTTOMENU  
-   SEZIONE Paw Patrol -> OK 5 
    SEZIONE Simone -> OK 10 
-   SEZIONE La casa delle bambole di Gabby -> OK 5 
+   SEZIONE Paw Patrol -> OK 5 
+   SEZIONE La casa delle bambole di Gabby -> OK 4 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
-   SEZIONE Marco - Dagli Appennini alle Ande -> OK 26 
+   SEZIONE Marco - Dagli Appennini alle Ande -> OK 23 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 16 
+   SEZIONE •• Tutti i Documentari -> OK 14 
    SEZIONE Segnali dall'universo 2026 -> OK 6 
-   SEZIONE Enigmi alieni 13 -> OK 6 
+   SEZIONE Enigmi alieni 13 -> OK 5 
    SEZIONE Enigmi alieni 10 -> OK 4 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
    SEZIONE •• Film Documentari di Focus -> OK 20 

@@ -7,23 +7,21 @@ Canale guardaseriecam | indirizzo https://guardaseriex.best
       search | •• txt70741 Serie TV… | https://guardaseriex.best/serietv-streaming
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Estranei | https://guardaseriex.best/commedia/5820-estranei-streaming.html
-      episodios | Peccato | https://guardaseriex.best/commedia/5804-peccato-streaming.html
-      episodios | The Other Bennet Sister | https://guardaseriex.best/commedia/5791-the-other-bennet-sister-orgoglio-e-riscatto-streaming.html
       episodios | Il nuovo esperimento carcerario di Stanford | https://guardaseriex.best/reality/5852-il-nuovo-esperimento-carcerario-di-stanford-streaming.html
-== episodios su "Estranei"
+      episodios | L'isola Del Tesoro | https://guardaseriex.best/avventura/5829-l-isola-del-tesoro-streaming.html
+      episodios | Vigil - Indagine a bordo | https://guardaseriex.best/crime/1461-vigil-indagine-a-bordo.html
+      episodios | Death Valley - Un attore a caccia di indizi | https://guardaseriex.best/commedia/5845-death-valley-un-attore-a-caccia-di-indizi-streaming.html
+== episodios su "Il nuovo esperimento carcerario di Stanf"
    -> 6 voci
-      findvideos | 1x01 - Romeo e Giulietta | https://v.vidxgo.co/37539393/1/1
-      findvideos | 1x02 - I soliti sospetti | https://v.vidxgo.co/37539393/1/2
-      findvideos | 1x03 - IL COLTELLO NELL' ACQUA | https://v.vidxgo.co/37539393/1/3
-      findvideos | 1x04 - PRIGIONIERI | https://v.vidxgo.co/37539393/1/4
-== findvideos su "1x01 - Romeo e Giulietta"
+      findvideos | 1x01 - L'esperimento ha inizio | https://v.vidxgo.co/46658083/1/1
+      findvideos | 1x02 - La ribellione | https://v.vidxgo.co/46658083/1/2
+      findvideos | 1x03 - Abuso di potere | https://v.vidxgo.co/46658083/1/3
+      findvideos | 1x04 - Un nuovo ordine | https://v.vidxgo.co/46658083/1/4
+== findvideos su "1x01 - L'esperimento ha inizio"
    -> 1 voci
-      play | 1x01 - Romeo e Giulietta | https://v.vidxgo.co/37539393/1/1
-== risoluzione vidxgo https://v.vidxgo.co/37539393/1/1
-   api /t/ 37539393/1/1 referer https://v.vidxgo.co/37539393/1/1 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 37539393/1/1 referer https://guardaseriex.best/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+      play | 1x01 - L'esperimento ha inizio | https://v.vidxgo.co/46658083/1/1
+== risoluzione vidxgo https://v.vidxgo.co/46658083/1/1
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (3)
     tvshow | '/serietv-streaming'
     tvshow | ('Popolari', ['/serietv-popolari/', 'peliculas', ''])
@@ -37,4 +35,4 @@ Canale guardaseriecam | indirizzo https://guardaseriex.best
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE •• txt70741 Serie TV… -> OK 4 
 SEZIONI: 4 ok su 4
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+VERDETTO: ARRIVA AL VIDEO

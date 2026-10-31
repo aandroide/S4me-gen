@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.fit
       peliculas | • Archivio | https://eurostream.fit/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Grey’s Anatomy | https://eurostream.fit/grey-s-anatomy-163/
-      episodios | Signora Volpe | https://eurostream.fit/signora-volpe/
-      episodios | Oak Island e il tesoro maledetto | https://eurostream.fit/oak-island-e-il-tesoro-maledetto/
-      episodios | Matrimonio a prima vista Italia | https://eurostream.fit/matrimonio-a-prima-vista-italia/
-== episodios su "Grey’s Anatomy"
-   -> 648 voci
-      findvideos | 1x01 - Quando il Gioco si Fa Duro  | https://eurostream.fit/grey-s-anatomy-163/
-      findvideos | 1x02 - Il primo taglio è il Peggiore  | https://eurostream.fit/grey-s-anatomy-163/
-      findvideos | 1x03 - Vincitori e Vinti  | https://eurostream.fit/grey-s-anatomy-163/
-      findvideos | 1x04 - Le regole dell’Intimità  | https://eurostream.fit/grey-s-anatomy-163/
-== findvideos su "1x01 - Quando il Gioco si Fa Duro "
+      episodios | Chicago Fire | https://eurostream.fit/chicago-fire-37/
+      episodios | Yaga | https://eurostream.fit/yaga/
+      episodios | Tulsa King | https://eurostream.fit/tulsa-king-3/
+      episodios | The Torment | https://eurostream.fit/the-torment/
+== episodios su "Chicago Fire"
+   -> 524 voci
+      findvideos | 1x01 - La Squadra  | https://eurostream.fit/chicago-fire-37/
+      findvideos | 1x02 - Grazie, Mon Amour  | https://eurostream.fit/chicago-fire-37/
+      findvideos | 1x03 - Un Atto Dovuto  | https://eurostream.fit/chicago-fire-37/
+      findvideos | 1x04 - Un Minuto  | https://eurostream.fit/chicago-fire-37/
+== findvideos su "1x01 - La Squadra "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/139roclchad5
+Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f
 
 == lista "• Anime"
    -> 19 voci
@@ -69,17 +69,17 @@ Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 3x01 - Signora Volpe - Raccolto amaro | https://eurostream.fit/signora-volpe/
-      episodios | 13x04 - Oak Island e il tesoro maledetto - Origini medievali | https://eurostream.fit/oak-island-e-il-tesoro-maledetto/
-      episodios | 16x00 - Matrimonio a prima vista Italia - Episodio speciale: | https://eurostream.fit/matrimonio-a-prima-vista-italia/
-      episodios | 28x03 - Law & Order - Unita Vittime Speciali - Anonymity  | https://eurostream.fit/law-and-order-unita-vittime-speciali-30/
-== episodios su "3x01 - Signora Volpe - Raccolto amaro"
-   -> 8 voci
-      findvideos | 1x01 - Una zia ansiosa  | https://eurostream.fit/signora-volpe/
-      findvideos | 1x02 - Segreti e sacrifici  | https://eurostream.fit/signora-volpe/
-      findvideos | 1x03 - Tartufi e tradimento  | https://eurostream.fit/signora-volpe/
-      findvideos | 2x01 - Un debito d’onore  | https://eurostream.fit/signora-volpe/
-== findvideos su "1x01 - Una zia ansiosa "
+      episodios | 15x04 - Chicago Fire - A Perfect Arson  | https://eurostream.fit/chicago-fire-37/
+      episodios | 1x03 - Yaga - Episodio 3 | https://eurostream.fit/yaga/
+      episodios | 4x03 - Tulsa King - Diffida | https://eurostream.fit/tulsa-king-3/
+      episodios | 1x05 - The Torment - Episodio 5 | https://eurostream.fit/the-torment/
+== episodios su "15x04 - Chicago Fire - A Perfect Arson "
+   -> 524 voci
+      findvideos | 1x01 - La Squadra  | https://eurostream.fit/chicago-fire-37/
+      findvideos | 1x02 - Grazie, Mon Amour  | https://eurostream.fit/chicago-fire-37/
+      findvideos | 1x03 - Un Atto Dovuto  | https://eurostream.fit/chicago-fire-37/
+      findvideos | 1x04 - Un Minuto  | https://eurostream.fit/chicago-fire-37/
+== findvideos su "1x01 - La Squadra "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/hs1d0mlmf4fu
+Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -108,7 +108,6 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
    SEZIONE • Archivio -> OK 18 
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostream.fit/?s=avatar', 'status': 403, 'byte': 5913, 'titolo_pagina': 'Just a moment...'}
-SEZIONI: 4 ok su 5
-   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: findvideos su "1x01 - Quando il Gioco si Fa Duro "
+   SEZIONE txt70741 … -> OK 11 
+SEZIONI: 5 ok su 5
+VERDETTO: SI FERMA A: findvideos su "1x01 - La Squadra "
