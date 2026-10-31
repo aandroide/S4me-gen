@@ -1,0 +1,24 @@
+{
+ "canale": "streamingcommunity",
+ "tmdb": "603",
+ "voci": [
+  "play | streamingcommunityws | https://streamingcommunityz.day/it/iframe/1",
+  "play | vixsrc | https://vixsrc.to/movie/603",
+  "add_pelicula_to_library |  | https://streamingcommunityz.day/it/watch/1"
+ ],
+ "esito": "VIDEO OK",
+ "risolto": [
+  [
+   "hls [VixSrc]",
+   "https://vixsrc.to/playlist/214325.m3u8?ub=1&token=a29df221973c5d07d433f0f8902fac92&expires=1798616546&h=1&lang=it"
+  ]
+ ],
+ "video": "200 #EXTM3U #EXT-X-MEDIA",
+ "master": "#EXTM3U\n#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"audio\",NAME=\"Italian\",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE=\"ita\",URI=\"https://vixsrc.to/playlist/214325?type=audio&rendition=ita&token=_9nbANJSwnvJWOfeibRaaQ&expires=1798616546&edge=sc-u16-01\"\n#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"audio\",NAME=\"English\",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE=\"eng\",URI=\"https://vixsrc.to/playlist/214325?type=audio&rendition=eng&token=_9nbANJSwnvJWOfeibRaaQ&expires=1798616546&edge=sc-u16-01\"\n#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID=\"subs\",NAME=\"English [CC]\",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE=\"eng\",URI=\"https://vixsrc.to/playlist/214325?type=subtitle&rendition=3-eng&token=_9nbANJSwnvJWOfeibRaaQ&expires=1798616546&edge=sc-u16-01\"\n#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID=\"subs\",NAME=\"Italian [Forced]\",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE=\"forced-ita\",URI=\"https://vixsrc.to/playlist/214325?type=subt",
+ "master_endlist": false,
+ "figlio": "200 #EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-TARGETDURATION:6\n#EXT-X-PLAYLIST-TYPE:VOD\n#EXT-X-KEY:METHOD=AES-128,URI=\"/storage/enc.key\",IV=0x43A6D967D5C17290D98322F5C8F6660B\n#EXTINF:4,\nhttps://sc-u16-01.frozenlagoon85.boats/hls/7/2/78/2789ea84-bb9b-4230-96b0-f5725b8001bc/video/480p/0000-0500.html?token=U1bWXNfVgw_kLibu4WPuMg&expires=1798616546\n#EXTINF:4,\nhttps://sc-u16-01.frozenlagoon85.boats/hls/7/2/78/2789ea",
+ "figlio_endlist": true,
+ "figlio_tipo": [
+  "#EXT-X-PLAYLIST-TYPE:VOD"
+ ]
+}
