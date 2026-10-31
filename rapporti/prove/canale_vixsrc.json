@@ -4,12 +4,12 @@
   {
    "passo": "mainlist",
    "esito": "OK",
-   "voci": 8,
+   "voci": 18,
    "esempi": [
     "[B]•[/B] [B]Film[/B] | peliculas | tmdb=None | thumb=True | plot=False",
-    "•• Di tendenza oggi | tendenza | tmdb=None | thumb=True | plot=False",
-    "•• Di tendenza questa settimana | tendenza | tmdb=None | thumb=True | plot=False",
-    "[B]•[/B] [B]Serie TV[/B] | peliculas | tmdb=None | thumb=True | plot=False"
+    "•• Di tendenza oggi | sezione | tmdb=None | thumb=True | plot=False",
+    "•• Di tendenza questa settimana | sezione | tmdb=None | thumb=True | plot=False",
+    "•• Popolari | sezione | tmdb=None | thumb=True | plot=False"
    ]
   },
   {
@@ -17,10 +17,10 @@
    "esito": "OK",
    "voci": 21,
    "esempi": [
+    "[B]A Story of Derry[/B] | findvideos | tmdb=1813355 | thumb=True | plot=True",
+    "[B]L'epopea dei Barolo Boys[/B] | findvideos | tmdb=297784 | thumb=True | plot=True",
     "[B]Pierino medico della SAUB[/B] | findvideos | tmdb=161817 | thumb=True | plot=True",
-    "[B]In un mondo migliore[/B] | findvideos | tmdb=44716 | thumb=True | plot=True",
-    "[B]Sacrifice[/B] | findvideos | tmdb=1284186 | thumb=True | plot=True",
-    "[B]The Parade - La Sfilata[/B] | findvideos | tmdb=81534 | thumb=True | plot=True"
+    "[B]In un mondo migliore[/B] | findvideos | tmdb=44716 | thumb=True | plot=True"
    ]
   },
   {
@@ -39,10 +39,10 @@
    "esito": "OK",
    "voci": 21,
    "esempi": [
+    "[B]Solo Noi. Una stagione da Double[/B] | findvideos | tmdb=1785148 | thumb=True | plot=True",
+    "[B]Igor - L'eroe romantico del calcio[/B] | findvideos | tmdb=1638819 | thumb=True | plot=True",
     "[B]Dedalus[/B] | findvideos | tmdb=1231163 | thumb=True | plot=True",
-    "[B]Tu Yaa Main[/B] | findvideos | tmdb=1446616 | thumb=True | plot=True",
-    "[B]Shaun, vita da pecora - Operazione Z.U.C.C.A.[/B] | findvideos | tmdb=1477104 | thumb=True | plot=True",
-    "[B]La timidezza delle chiome[/B] | findvideos | tmdb=1005756 | thumb=True | plot=True"
+    "[B]Tu Yaa Main[/B] | findvideos | tmdb=1446616 | thumb=True | plot=True"
    ]
   },
   {
@@ -50,8 +50,8 @@
    "esito": "OK",
    "voci": 2,
    "esempi": [
-    "[B]Pierino medico della SAUB[/B] | play | tmdb=161817 | thumb=True | plot=True",
-    "[B][COLOR 0xFF65B3DA]txt30161 %s[/COLOR][/B] | add_pelicula_to_library | tmdb=161817 | thumb=True | plot=True"
+    "[B]A Story of Derry[/B] | play | tmdb=1813355 | thumb=True | plot=True",
+    "[B][COLOR 0xFF65B3DA]txt30161 %s[/COLOR][/B] | add_pelicula_to_library | tmdb=1813355 | thumb=True | plot=True"
    ]
   },
   {
@@ -74,47 +74,585 @@
    ]
   },
   {
-   "passo": "tendenza movie/day",
+   "passo": "sezione trending/movie/day",
    "esito": "OK",
    "voci": 21,
    "esempi": [
     "[B]Apocalipsis Z: Il Nuovo Mondo[/B] | findvideos | tmdb=1507696 | thumb=True | plot=True",
     "[B]Colisión[/B] | findvideos | tmdb=1571955 | thumb=True | plot=True",
-    "[B]Obsession[/B] | findvideos | tmdb=1339713 | thumb=True | plot=True",
-    "[B]Ali G: Who Iz I?[/B] | findvideos | tmdb=1727734 | thumb=True | plot=True"
+    "[B]The Dog Stars - Le stelle dopo la fine[/B] | findvideos | tmdb=1384216 | thumb=True | plot=True",
+    "[B]Obsession[/B] | findvideos | tmdb=1339713 | thumb=True | plot=True"
    ]
   },
   {
-   "passo": "tendenza movie/week",
+   "passo": "sezione trending/movie/week",
    "esito": "OK",
    "voci": 21,
    "esempi": [
     "[B]The Dog Stars - Le stelle dopo la fine[/B] | findvideos | tmdb=1384216 | thumb=True | plot=True",
     "[B]Apocalipsis Z: Il Nuovo Mondo[/B] | findvideos | tmdb=1507696 | thumb=True | plot=True",
     "[B]Obsession[/B] | findvideos | tmdb=1339713 | thumb=True | plot=True",
-    "[B]Drive - Cuori in pista[/B] | findvideos | tmdb=1596275 | thumb=True | plot=True"
+    "[B]Colisión[/B] | findvideos | tmdb=1571955 | thumb=True | plot=True"
    ]
   },
   {
-   "passo": "tendenza tv/day",
+   "passo": "sezione movie/popular",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Il cavaliere oscuro[/B] | findvideos | tmdb=155 | thumb=True | plot=True",
+    "[B]Spider-Man: Brand New Day[/B] | findvideos | tmdb=969681 | thumb=True | plot=True",
+    "[B]Drive - Cuori in pista[/B] | findvideos | tmdb=1596275 | thumb=True | plot=True",
+    "[B]Fall 2: Deadpoint[/B] | findvideos | tmdb=1101412 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "sezione movie/top_rated",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Batman: Knightfall Part 1: Knightfall[/B] | findvideos | tmdb=1560520 | thumb=True | plot=True",
+    "[B]Avatar Aang: L’ultimo dominatore dell’aria[/B] | findvideos | tmdb=980431 | thumb=True | plot=True",
+    "[B]Swapped - Al tuo posto[/B] | findvideos | tmdb=1007757 | thumb=True | plot=True",
+    "[B]La captura[/B] | findvideos | tmdb=1621552 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "sezione discover/movie?with_keywords=210024%7C222243",
+   "esito": "OK",
+   "voci": 6,
+   "esempi": [
+    "[B]Resident Evil - L'isola della morte[/B] | findvideos | tmdb=1083862 | thumb=True | plot=True",
+    "[B]Vampire Hunter D - Bloodlust[/B] | findvideos | tmdb=15999 | thumb=True | plot=True",
+    "[B]Resident Evil - Vendetta[/B] | findvideos | tmdb=400136 | thumb=True | plot=True",
+    "[B]Animatrix[/B] | findvideos | tmdb=55931 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "sezione trending/tv/day",
    "esito": "OK",
    "voci": 21,
    "esempi": [
     "[B]Dead-End Job[/B] | episodios | tmdb=289517 | thumb=True | plot=True",
-    "[B]Nocturne[/B] | episodios | tmdb=292741 | thumb=True | plot=True",
     "[B]Dexter: Resurrection[/B] | episodios | tmdb=259909 | thumb=True | plot=True",
+    "[B]Nocturne[/B] | episodios | tmdb=292741 | thumb=True | plot=True",
     "[B]Dark Matter[/B] | episodios | tmdb=196322 | thumb=True | plot=True"
    ]
   },
   {
-   "passo": "tendenza tv/week",
+   "passo": "sezione trending/tv/week",
    "esito": "OK",
    "voci": 21,
    "esempi": [
-    "[B]Dead-End Job[/B] | episodios | tmdb=289517 | thumb=True | plot=True",
     "[B]Lupin[/B] | episodios | tmdb=96677 | thumb=True | plot=True",
-    "[B]Dexter: Resurrection[/B] | episodios | tmdb=259909 | thumb=True | plot=True",
-    "[B]VisionQuest[/B] | episodios | tmdb=213375 | thumb=True | plot=True"
+    "[B]Dead-End Job[/B] | episodios | tmdb=289517 | thumb=True | plot=True",
+    "[B]VisionQuest[/B] | episodios | tmdb=213375 | thumb=True | plot=True",
+    "[B]MobLand[/B] | episodios | tmdb=247718 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "sezione tv/popular",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Law & Order - Unità vittime speciali[/B] | episodios | tmdb=2734 | thumb=True | plot=True",
+    "[B]Criminal Minds[/B] | episodios | tmdb=4057 | thumb=True | plot=True",
+    "[B]I Griffin[/B] | episodios | tmdb=1434 | thumb=True | plot=True",
+    "[B]I Simpson[/B] | episodios | tmdb=456 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "sezione tv/top_rated",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Lezioni vere[/B] | episodios | tmdb=276161 | thumb=True | plot=True",
+    "[B]Dutton Ranch[/B] | episodios | tmdb=299167 | thumb=True | plot=True",
+    "[B]Among Us[/B] | episodios | tmdb=229544 | thumb=True | plot=True",
+    "[B]Perfect Crown[/B] | episodios | tmdb=278573 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "sezione discover/tv?with_keywords=210024%7C222243",
+   "esito": "OK",
+   "voci": 0,
+   "esempi": []
+  },
+  {
+   "passo": "piattaforme movie",
+   "esito": "OK",
+   "voci": 8,
+   "esempi": [
+    "[B]Netflix[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Prime Video[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Disney+[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Apple TV+[/B] | sezione | tmdb=None | thumb=True | plot=False"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Netflix[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Contra el huracán[/B] | findvideos | tmdb=1780005 | thumb=True | plot=True",
+    "[B]Animals[/B] | findvideos | tmdb=1236045 | thumb=True | plot=True",
+    "[B]Colisión[/B] | findvideos | tmdb=1571955 | thumb=True | plot=True",
+    "[B]Interstellar[/B] | findvideos | tmdb=157336 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Prime Video[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Il cavaliere oscuro[/B] | findvideos | tmdb=155 | thumb=True | plot=True",
+    "[B]Drive - Cuori in pista[/B] | findvideos | tmdb=1596275 | thumb=True | plot=True",
+    "[B]Apocalipsis Z: Il Nuovo Mondo[/B] | findvideos | tmdb=1507696 | thumb=True | plot=True",
+    "[B]Masterplan[/B] | findvideos | tmdb=1561726 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Disney+[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Coco[/B] | findvideos | tmdb=354912 | thumb=True | plot=True",
+    "[B]Nightmare Before Christmas[/B] | findvideos | tmdb=9479 | thumb=True | plot=True",
+    "[B]Toy Story 5[/B] | findvideos | tmdb=1084244 | thumb=True | plot=True",
+    "[B]Oceania[/B] | findvideos | tmdb=1108427 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Apple TV+[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Matchbox: Il film[/B] | findvideos | tmdb=1148365 | thumb=True | plot=True",
+    "[B]Tenzing[/B] | findvideos | tmdb=1288069 | thumb=True | plot=True",
+    "[B]F1: Il film[/B] | findvideos | tmdb=911430 | thumb=True | plot=True",
+    "[B]Spider-Man: Far from Home[/B] | findvideos | tmdb=429617 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Paramount+[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Avatar Aang: L’ultimo dominatore dell’aria[/B] | findvideos | tmdb=980431 | thumb=True | plot=True",
+    "[B]Top Gun: Maverick[/B] | findvideos | tmdb=361743 | thumb=True | plot=True",
+    "[B]Il padrino[/B] | findvideos | tmdb=238 | thumb=True | plot=True",
+    "[B]Fall[/B] | findvideos | tmdb=985939 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]NOW[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Il cavaliere oscuro[/B] | findvideos | tmdb=155 | thumb=True | plot=True",
+    "[B]Interstellar[/B] | findvideos | tmdb=157336 | thumb=True | plot=True",
+    "[B]I peccatori[/B] | findvideos | tmdb=1233413 | thumb=True | plot=True",
+    "[B]Inception[/B] | findvideos | tmdb=27205 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]RaiPlay[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]The Wolf of Wall Street[/B] | findvideos | tmdb=106646 | thumb=True | plot=True",
+    "[B]Cena con delitto - Knives Out[/B] | findvideos | tmdb=546554 | thumb=True | plot=True",
+    "[B]The Substance[/B] | findvideos | tmdb=933260 | thumb=True | plot=True",
+    "[B]Challengers[/B] | findvideos | tmdb=937287 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Mediaset Infinity[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Bullet Train[/B] | findvideos | tmdb=718930 | thumb=True | plot=True",
+    "[B]The Nice Guys[/B] | findvideos | tmdb=290250 | thumb=True | plot=True",
+    "[B]Mission: Impossible - Fallout[/B] | findvideos | tmdb=353081 | thumb=True | plot=True",
+    "[B]Noi siamo infinito[/B] | findvideos | tmdb=84892 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme tv",
+   "esito": "OK",
+   "voci": 8,
+   "esempi": [
+    "[B]Netflix[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Prime Video[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Disney+[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Apple TV+[/B] | sezione | tmdb=None | thumb=True | plot=False"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Netflix[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Law & Order - Unità vittime speciali[/B] | episodios | tmdb=2734 | thumb=True | plot=True",
+    "[B]The Office (US)[/B] | episodios | tmdb=2316 | thumb=True | plot=True",
+    "[B]The Vampire Diaries[/B] | episodios | tmdb=18165 | thumb=True | plot=True",
+    "[B]Dr. House - Medical Division[/B] | episodios | tmdb=1408 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Prime Video[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Law & Order - Unità vittime speciali[/B] | episodios | tmdb=2734 | thumb=True | plot=True",
+    "[B]Supernatural[/B] | episodios | tmdb=1622 | thumb=True | plot=True",
+    "[B]The Mentalist[/B] | episodios | tmdb=5920 | thumb=True | plot=True",
+    "[B]L'estate nei tuoi occhi[/B] | episodios | tmdb=194766 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Disney+[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Law & Order - Unità vittime speciali[/B] | episodios | tmdb=2734 | thumb=True | plot=True",
+    "[B]Criminal Minds[/B] | episodios | tmdb=4057 | thumb=True | plot=True",
+    "[B]I Griffin[/B] | episodios | tmdb=1434 | thumb=True | plot=True",
+    "[B]I Simpson[/B] | episodios | tmdb=456 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Apple TV+[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Slow Horses[/B] | episodios | tmdb=95480 | thumb=True | plot=True",
+    "[B]Ted Lasso[/B] | episodios | tmdb=97546 | thumb=True | plot=True",
+    "[B]Silo[/B] | episodios | tmdb=125988 | thumb=True | plot=True",
+    "[B]Nocturne[/B] | episodios | tmdb=292741 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Paramount+[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Criminal Minds[/B] | episodios | tmdb=4057 | thumb=True | plot=True",
+    "[B]MobLand[/B] | episodios | tmdb=247718 | thumb=True | plot=True",
+    "[B]NCIS - Unità anticrimine[/B] | episodios | tmdb=4614 | thumb=True | plot=True",
+    "[B]Tulsa King[/B] | episodios | tmdb=153312 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]NOW[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Law & Order - Unità vittime speciali[/B] | episodios | tmdb=2734 | thumb=True | plot=True",
+    "[B]The Office (US)[/B] | episodios | tmdb=2316 | thumb=True | plot=True",
+    "[B]Dr. House - Medical Division[/B] | episodios | tmdb=1408 | thumb=True | plot=True",
+    "[B]True Detective[/B] | episodios | tmdb=46648 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]RaiPlay[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Criminal Minds[/B] | episodios | tmdb=4057 | thumb=True | plot=True",
+    "[B]Baywatch[/B] | episodios | tmdb=4386 | thumb=True | plot=True",
+    "[B]NCIS - Unità anticrimine[/B] | episodios | tmdb=4614 | thumb=True | plot=True",
+    "[B]S.W.A.T.[/B] | episodios | tmdb=71790 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "piattaforme > [B]Mediaset Infinity[/B]",
+   "esito": "OK",
+   "voci": 2,
+   "esempi": [
+    "[B]I Cesaroni[/B] | episodios | tmdb=41280 | thumb=True | plot=True",
+    "[B]Bitter Sweet - Ingredienti d'amore[/B] | episodios | tmdb=73506 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi movie",
+   "esito": "OK",
+   "voci": 19,
+   "esempi": [
+    "[B]Animazione[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Avventura[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Azione[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Commedia[/B] | sezione | tmdb=None | thumb=True | plot=False"
+   ]
+  },
+  {
+   "passo": "generi > [B]Animazione[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Coco[/B] | findvideos | tmdb=354912 | thumb=True | plot=True",
+    "[B]Nightmare Before Christmas[/B] | findvideos | tmdb=9479 | thumb=True | plot=True",
+    "[B]Coyote vs. Acme[/B] | findvideos | tmdb=1204680 | thumb=True | plot=True",
+    "[B]Toy Story 5[/B] | findvideos | tmdb=1084244 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Avventura[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Spider-Man: Brand New Day[/B] | findvideos | tmdb=969681 | thumb=True | plot=True",
+    "[B]Odissea[/B] | findvideos | tmdb=1368337 | thumb=True | plot=True",
+    "[B]Matchbox: Il film[/B] | findvideos | tmdb=1148365 | thumb=True | plot=True",
+    "[B]Coco[/B] | findvideos | tmdb=354912 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Azione[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Il cavaliere oscuro[/B] | findvideos | tmdb=155 | thumb=True | plot=True",
+    "[B]Spider-Man: Brand New Day[/B] | findvideos | tmdb=969681 | thumb=True | plot=True",
+    "[B]Odissea[/B] | findvideos | tmdb=1368337 | thumb=True | plot=True",
+    "[B]The Dog Stars - Le stelle dopo la fine[/B] | findvideos | tmdb=1384216 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Commedia[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Matchbox: Il film[/B] | findvideos | tmdb=1148365 | thumb=True | plot=True",
+    "[B]Coyote vs. Acme[/B] | findvideos | tmdb=1204680 | thumb=True | plot=True",
+    "[B]Ali G: Who Iz I?[/B] | findvideos | tmdb=1727734 | thumb=True | plot=True",
+    "[B]Amori & incantesimi 2[/B] | findvideos | tmdb=1302904 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Crime[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Il cavaliere oscuro[/B] | findvideos | tmdb=155 | thumb=True | plot=True",
+    "[B]Animals[/B] | findvideos | tmdb=1236045 | thumb=True | plot=True",
+    "[B]Colisión[/B] | findvideos | tmdb=1571955 | thumb=True | plot=True",
+    "[B]Le ali della libertà[/B] | findvideos | tmdb=278 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Documentario[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Finding Harry - L'arte dietro la magia[/B] | findvideos | tmdb=1662432 | thumb=True | plot=True",
+    "[B]Jackass: Best and Last[/B] | findvideos | tmdb=1612018 | thumb=True | plot=True",
+    "[B]La vita straordinaria di Ibelin[/B] | findvideos | tmdb=1167027 | thumb=True | plot=True",
+    "[B]Harry Potter 20° anniversario - Ritorno a Hogwarts[/B] | findvideos | tmdb=899082 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Dramma[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Contra el huracán[/B] | findvideos | tmdb=1780005 | thumb=True | plot=True",
+    "[B]Animals[/B] | findvideos | tmdb=1236045 | thumb=True | plot=True",
+    "[B]Colisión[/B] | findvideos | tmdb=1571955 | thumb=True | plot=True",
+    "[B]Digger[/B] | findvideos | tmdb=1248832 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Famiglia[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Coco[/B] | findvideos | tmdb=354912 | thumb=True | plot=True",
+    "[B]Nightmare Before Christmas[/B] | findvideos | tmdb=9479 | thumb=True | plot=True",
+    "[B]Coyote vs. Acme[/B] | findvideos | tmdb=1204680 | thumb=True | plot=True",
+    "[B]Toy Story 5[/B] | findvideos | tmdb=1084244 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Fantascienza[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Spider-Man: Brand New Day[/B] | findvideos | tmdb=969681 | thumb=True | plot=True",
+    "[B]The Dog Stars - Le stelle dopo la fine[/B] | findvideos | tmdb=1384216 | thumb=True | plot=True",
+    "[B]Resident Evil[/B] | findvideos | tmdb=1423191 | thumb=True | plot=True",
+    "[B]La guerra dei mondi[/B] | findvideos | tmdb=755898 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Fantasy[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Odissea[/B] | findvideos | tmdb=1368337 | thumb=True | plot=True",
+    "[B]Pinocchio: Unstrung[/B] | findvideos | tmdb=1232569 | thumb=True | plot=True",
+    "[B]Nightmare Before Christmas[/B] | findvideos | tmdb=9479 | thumb=True | plot=True",
+    "[B]Amori & incantesimi 2[/B] | findvideos | tmdb=1302904 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Guerra[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Oppenheimer[/B] | findvideos | tmdb=872585 | thumb=True | plot=True",
+    "[B]Fury[/B] | findvideos | tmdb=228150 | thumb=True | plot=True",
+    "[B]Schindler's List[/B] | findvideos | tmdb=424 | thumb=True | plot=True",
+    "[B]The Imitation Game[/B] | findvideos | tmdb=205596 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Horror[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Pinocchio: Unstrung[/B] | findvideos | tmdb=1232569 | thumb=True | plot=True",
+    "[B]Insidious - Fuori dall’Altrove[/B] | findvideos | tmdb=1291595 | thumb=True | plot=True",
+    "[B]Apocalipsis Z: Il Nuovo Mondo[/B] | findvideos | tmdb=1507696 | thumb=True | plot=True",
+    "[B]Resident Evil[/B] | findvideos | tmdb=1423191 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi tv",
+   "esito": "OK",
+   "voci": 16,
+   "esempi": [
+    "[B]Action & Adventure[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Animazione[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Commedia[/B] | sezione | tmdb=None | thumb=True | plot=False",
+    "[B]Crime[/B] | sezione | tmdb=None | thumb=True | plot=False"
+   ]
+  },
+  {
+   "passo": "generi > [B]Action & Adventure[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Vikings[/B] | episodios | tmdb=44217 | thumb=True | plot=True",
+    "[B]The 100[/B] | episodios | tmdb=48866 | thumb=True | plot=True",
+    "[B]Marco e Star contro le forze del male[/B] | episodios | tmdb=61923 | thumb=True | plot=True",
+    "[B]Baywatch[/B] | episodios | tmdb=4386 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Animazione[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]I Griffin[/B] | episodios | tmdb=1434 | thumb=True | plot=True",
+    "[B]I Simpson[/B] | episodios | tmdb=456 | thumb=True | plot=True",
+    "[B]Wakfu[/B] | episodios | tmdb=64414 | thumb=True | plot=True",
+    "[B]Marco e Star contro le forze del male[/B] | episodios | tmdb=61923 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Commedia[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]I Griffin[/B] | episodios | tmdb=1434 | thumb=True | plot=True",
+    "[B]I Simpson[/B] | episodios | tmdb=456 | thumb=True | plot=True",
+    "[B]The Office (US)[/B] | episodios | tmdb=2316 | thumb=True | plot=True",
+    "[B]How I Met Your Mother[/B] | episodios | tmdb=1100 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Crime[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Law & Order - Unità vittime speciali[/B] | episodios | tmdb=2734 | thumb=True | plot=True",
+    "[B]Criminal Minds[/B] | episodios | tmdb=4057 | thumb=True | plot=True",
+    "[B]The Mentalist[/B] | episodios | tmdb=5920 | thumb=True | plot=True",
+    "[B]The 100[/B] | episodios | tmdb=48866 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Documentario[/B]",
+   "esito": "OK",
+   "voci": 10,
+   "esempi": [
+    "[B]Unsolved Mysteries[/B] | episodios | tmdb=105177 | thumb=True | plot=True",
+    "[B]Ladies First: la storia delle donne nell'hip hop[/B] | episodios | tmdb=231331 | thumb=True | plot=True",
+    "[B]Last Chance U[/B] | episodios | tmdb=67027 | thumb=True | plot=True",
+    "[B]Marvel Studios Legends[/B] | episodios | tmdb=114695 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Dramma[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Law & Order - Unità vittime speciali[/B] | episodios | tmdb=2734 | thumb=True | plot=True",
+    "[B]Criminal Minds[/B] | episodios | tmdb=4057 | thumb=True | plot=True",
+    "[B]Supernatural[/B] | episodios | tmdb=1622 | thumb=True | plot=True",
+    "[B]Grey's Anatomy[/B] | episodios | tmdb=1416 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Famiglia[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Marco e Star contro le forze del male[/B] | episodios | tmdb=61923 | thumb=True | plot=True",
+    "[B]Avatar: I sette rifugi[/B] | episodios | tmdb=284833 | thumb=True | plot=True",
+    "[B]Teen Titans Go![/B] | episodios | tmdb=45140 | thumb=True | plot=True",
+    "[B]Young Sheldon[/B] | episodios | tmdb=71728 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Kids[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Miraculous - Le storie di Ladybug e Chat Noir[/B] | episodios | tmdb=65334 | thumb=True | plot=True",
+    "[B]LEGO Ninjago: Masters of Spinjitzu[/B] | episodios | tmdb=38693 | thumb=True | plot=True",
+    "[B]Peppa Pig[/B] | episodios | tmdb=12225 | thumb=True | plot=True",
+    "[B]Sesamo apriti![/B] | episodios | tmdb=502 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Mistero[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Law & Order - Unità vittime speciali[/B] | episodios | tmdb=2734 | thumb=True | plot=True",
+    "[B]Criminal Minds[/B] | episodios | tmdb=4057 | thumb=True | plot=True",
+    "[B]Supernatural[/B] | episodios | tmdb=1622 | thumb=True | plot=True",
+    "[B]The Mentalist[/B] | episodios | tmdb=5920 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]News[/B]",
+   "esito": "OK",
+   "voci": 0,
+   "esempi": []
+  },
+  {
+   "passo": "generi > [B]Reality[/B]",
+   "esito": "OK",
+   "voci": 5,
+   "esempi": [
+    "[B]Al passo con i Kardashian[/B] | episodios | tmdb=14814 | thumb=True | plot=True",
+    "[B]La febbre dell'oro[/B] | episodios | tmdb=34634 | thumb=True | plot=True",
+    "[B]The Real Housewives of Atlanta[/B] | episodios | tmdb=17380 | thumb=True | plot=True",
+    "[B]La fattoria Clarkson[/B] | episodios | tmdb=117648 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "generi > [B]Sci-Fi & Fantasy[/B]",
+   "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Supernatural[/B] | episodios | tmdb=1622 | thumb=True | plot=True",
+    "[B]The Vampire Diaries[/B] | episodios | tmdb=18165 | thumb=True | plot=True",
+    "[B]The Flash[/B] | episodios | tmdb=60735 | thumb=True | plot=True",
+    "[B]The 100[/B] | episodios | tmdb=48866 | thumb=True | plot=True"
    ]
   },
   {
@@ -210,52 +748,175 @@
   }
  ],
  "server_film": [
-  "vixsrc https://vixsrc.to/movie/161817",
-  " https://vixsrc.to/movie/161817"
+  "vixsrc https://vixsrc.to/movie/1813355",
+  " https://vixsrc.to/movie/1813355"
  ],
  "server_episodio": [
   "vixsrc https://vixsrc.to/tv/289517/1/1"
  ],
- "tendenza_movie_day": [
+ "sez_trending/movie/day": [
   "[B]Apocalipsis Z: Il Nuovo Mondo[/B]",
   "[B]Colisión[/B]",
-  "[B]Obsession[/B]",
-  "[B]Ali G: Who Iz I?[/B]",
   "[B]The Dog Stars - Le stelle dopo la fine[/B]",
-  "[B]Noi un po' meglio[/B]",
-  "[B]Resident Evil[/B]",
-  "[B]Drive - Cuori in pista[/B]"
+  "[B]Obsession[/B]",
+  "[B]Ali G: Who Iz I?[/B]"
  ],
- "tendenza_movie_week": [
+ "sez_trending/movie/week": [
   "[B]The Dog Stars - Le stelle dopo la fine[/B]",
   "[B]Apocalipsis Z: Il Nuovo Mondo[/B]",
   "[B]Obsession[/B]",
-  "[B]Drive - Cuori in pista[/B]",
-  "[B]Ali G: Who Iz I?[/B]",
+  "[B]Colisión[/B]",
+  "[B]Spider-Man: Brand New Day[/B]"
+ ],
+ "sez_movie/popular": [
+  "[B]Il cavaliere oscuro[/B]",
   "[B]Spider-Man: Brand New Day[/B]",
-  "[B]Odissea[/B]",
-  "[B]The Rush - Corsa contro il tempo[/B]"
+  "[B]Drive - Cuori in pista[/B]",
+  "[B]Fall 2: Deadpoint[/B]",
+  "[B]Odissea[/B]"
  ],
- "tendenza_tv_day": [
+ "sez_movie/top_rated": [
+  "[B]Batman: Knightfall Part 1: Knightfall[/B]",
+  "[B]Avatar Aang: L’ultimo dominatore dell’aria[/B]",
+  "[B]Swapped - Al tuo posto[/B]",
+  "[B]La captura[/B]",
+  "[B]Le ali della libertà[/B]"
+ ],
+ "sez_discover/movie?with_keywords=210024%7C222243": [
+  "[B]Resident Evil - L'isola della morte[/B]",
+  "[B]Vampire Hunter D - Bloodlust[/B]",
+  "[B]Resident Evil - Vendetta[/B]",
+  "[B]Animatrix[/B]",
+  "[B]Resident Evil: Degeneration[/B]"
+ ],
+ "sez_trending/tv/day": [
   "[B]Dead-End Job[/B]",
-  "[B]Nocturne[/B]",
   "[B]Dexter: Resurrection[/B]",
+  "[B]Nocturne[/B]",
   "[B]Dark Matter[/B]",
-  "[B]Ghosts[/B]",
-  "[B]MobLand[/B]",
-  "[B]Lupin[/B]",
-  "[B]Carrie[/B]"
+  "[B]MobLand[/B]"
  ],
- "tendenza_tv_week": [
-  "[B]Dead-End Job[/B]",
+ "sez_trending/tv/week": [
   "[B]Lupin[/B]",
-  "[B]Dexter: Resurrection[/B]",
+  "[B]Dead-End Job[/B]",
   "[B]VisionQuest[/B]",
-  "[B]Nocturne[/B]",
   "[B]MobLand[/B]",
-  "[B]Carrie[/B]",
   "[B]Dark Matter[/B]"
  ],
+ "sez_tv/popular": [
+  "[B]Law & Order - Unità vittime speciali[/B]",
+  "[B]Criminal Minds[/B]",
+  "[B]I Griffin[/B]",
+  "[B]I Simpson[/B]",
+  "[B]Supernatural[/B]"
+ ],
+ "sez_tv/top_rated": [
+  "[B]Lezioni vere[/B]",
+  "[B]Dutton Ranch[/B]",
+  "[B]Among Us[/B]",
+  "[B]Perfect Crown[/B]",
+  "[B]Breaking Bad[/B]"
+ ],
+ "sez_discover/tv?with_keywords=210024%7C222243": [],
+ "piattaforme_movie": [
+  "[B]Netflix[/B]",
+  "[B]Prime Video[/B]",
+  "[B]Disney+[/B]",
+  "[B]Apple TV+[/B]",
+  "[B]Paramount+[/B]",
+  "[B]NOW[/B]",
+  "[B]RaiPlay[/B]",
+  "[B]Mediaset Infinity[/B]"
+ ],
+ "voce_piattaforme_movie_[B]Netflix[/B]": 21,
+ "voce_piattaforme_movie_[B]Prime Video[/B]": 21,
+ "voce_piattaforme_movie_[B]Disney+[/B]": 21,
+ "voce_piattaforme_movie_[B]Apple TV+[/B]": 21,
+ "voce_piattaforme_movie_[B]Paramount+[/B]": 21,
+ "voce_piattaforme_movie_[B]NOW[/B]": 21,
+ "voce_piattaforme_movie_[B]RaiPlay[/B]": 21,
+ "voce_piattaforme_movie_[B]Mediaset Infinity[/B]": 21,
+ "piattaforme_tv": [
+  "[B]Netflix[/B]",
+  "[B]Prime Video[/B]",
+  "[B]Disney+[/B]",
+  "[B]Apple TV+[/B]",
+  "[B]Paramount+[/B]",
+  "[B]NOW[/B]",
+  "[B]RaiPlay[/B]",
+  "[B]Mediaset Infinity[/B]"
+ ],
+ "voce_piattaforme_tv_[B]Netflix[/B]": 21,
+ "voce_piattaforme_tv_[B]Prime Video[/B]": 21,
+ "voce_piattaforme_tv_[B]Disney+[/B]": 21,
+ "voce_piattaforme_tv_[B]Apple TV+[/B]": 21,
+ "voce_piattaforme_tv_[B]Paramount+[/B]": 21,
+ "voce_piattaforme_tv_[B]NOW[/B]": 21,
+ "voce_piattaforme_tv_[B]RaiPlay[/B]": 21,
+ "voce_piattaforme_tv_[B]Mediaset Infinity[/B]": 2,
+ "generi_movie": [
+  "[B]Animazione[/B]",
+  "[B]Avventura[/B]",
+  "[B]Azione[/B]",
+  "[B]Commedia[/B]",
+  "[B]Crime[/B]",
+  "[B]Documentario[/B]",
+  "[B]Dramma[/B]",
+  "[B]Famiglia[/B]",
+  "[B]Fantascienza[/B]",
+  "[B]Fantasy[/B]",
+  "[B]Guerra[/B]",
+  "[B]Horror[/B]",
+  "[B]Mistero[/B]",
+  "[B]Musica[/B]",
+  "[B]Romance[/B]",
+  "[B]Storia[/B]",
+  "[B]Thriller[/B]",
+  "[B]Western[/B]",
+  "[B]televisione film[/B]"
+ ],
+ "voce_generi_movie_[B]Animazione[/B]": 21,
+ "voce_generi_movie_[B]Avventura[/B]": 21,
+ "voce_generi_movie_[B]Azione[/B]": 21,
+ "voce_generi_movie_[B]Commedia[/B]": 21,
+ "voce_generi_movie_[B]Crime[/B]": 21,
+ "voce_generi_movie_[B]Documentario[/B]": 21,
+ "voce_generi_movie_[B]Dramma[/B]": 21,
+ "voce_generi_movie_[B]Famiglia[/B]": 21,
+ "voce_generi_movie_[B]Fantascienza[/B]": 21,
+ "voce_generi_movie_[B]Fantasy[/B]": 21,
+ "voce_generi_movie_[B]Guerra[/B]": 21,
+ "voce_generi_movie_[B]Horror[/B]": 21,
+ "generi_tv": [
+  "[B]Action & Adventure[/B]",
+  "[B]Animazione[/B]",
+  "[B]Commedia[/B]",
+  "[B]Crime[/B]",
+  "[B]Documentario[/B]",
+  "[B]Dramma[/B]",
+  "[B]Famiglia[/B]",
+  "[B]Kids[/B]",
+  "[B]Mistero[/B]",
+  "[B]News[/B]",
+  "[B]Reality[/B]",
+  "[B]Sci-Fi & Fantasy[/B]",
+  "[B]Soap[/B]",
+  "[B]Talk[/B]",
+  "[B]War & Politics[/B]",
+  "[B]Western[/B]"
+ ],
+ "voce_generi_tv_[B]Action & Adventure[/B]": 21,
+ "voce_generi_tv_[B]Animazione[/B]": 21,
+ "voce_generi_tv_[B]Commedia[/B]": 21,
+ "voce_generi_tv_[B]Crime[/B]": 21,
+ "voce_generi_tv_[B]Documentario[/B]": 10,
+ "voce_generi_tv_[B]Dramma[/B]": 21,
+ "voce_generi_tv_[B]Famiglia[/B]": 21,
+ "voce_generi_tv_[B]Kids[/B]": 21,
+ "voce_generi_tv_[B]Mistero[/B]": 21,
+ "voce_generi_tv_[B]News[/B]": 0,
+ "voce_generi_tv_[B]Reality[/B]": 5,
+ "voce_generi_tv_[B]Sci-Fi & Fantasy[/B]": 21,
  "cerca_lol chi ride e fuori": [
   "[B]LOL - Chi ride è fuori[/B] | episodios | https://vixsrc.to/tv/120494",
   "[B]LOL: Chi ride è fuori[/B] | episodios | https://vixsrc.to/tv/224504",
