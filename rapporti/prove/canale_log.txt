@@ -95,6 +95,76 @@ TMDB prova 603: Matrix
     "[B]Breaking Bad[/B] | episodios | tmdb=1396 | thumb=True | plot=True",
     "[B]Troppo cattivi: Pronti all'azione![/B] | episodios | tmdb=302540 | thumb=True | plot=True"
    ]
+  },
+  {
+   "passo": "episodi di lol chi ride e fuori",
+   "esito": "OK",
+   "voci": 39,
+   "esempi": [
+    "[B]1x01 - Episodio 1[/B] | findvideos | tmdb=120494 | thumb=True | plot=True",
+    "[B]1x02 - Episodio 2[/B] | findvideos | tmdb=120494 | thumb=True | plot=True",
+    "[B]1x03 - Episodio 3[/B] | findvideos | tmdb=120494 | thumb=True | plot=True",
+    "[B]1x04 - Episodio 4[/B] | findvideos | tmdb=120494 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "findvideos [B]1x01 - Episodio 1[/B]",
+   "esito": "OK",
+   "voci": 1,
+   "esempi": [
+    "[B]1x01 - Episodio 1[/B] | play | tmdb=120494 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "findvideos [B]1x02 - Episodio 2[/B]",
+   "esito": "OK",
+   "voci": 1,
+   "esempi": [
+    "[B]1x02 - Episodio 2[/B] | play | tmdb=120494 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "findvideos [B]1x03 - Episodio 3[/B]",
+   "esito": "OK",
+   "voci": 1,
+   "esempi": [
+    "[B]1x03 - Episodio 3[/B] | play | tmdb=120494 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "episodi di stranger things",
+   "esito": "OK",
+   "voci": 43,
+   "esempi": [
+    "[B]1x01 - Capitolo primo: La scomparsa di Will Byers[/B] | findvideos | tmdb=66732 | thumb=True | plot=True",
+    "[B]1x02 - Capitolo due: La stramba di Maple Street[/B] | findvideos | tmdb=66732 | thumb=True | plot=True",
+    "[B]1x03 - Capitolo tre: Luci natalizie[/B] | findvideos | tmdb=66732 | thumb=True | plot=True",
+    "[B]1x04 - Capitolo quattro: Il corpo[/B] | findvideos | tmdb=66732 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "findvideos [B]1x01 - Capitolo primo: La scomparsa di Will Byers[/B]",
+   "esito": "OK",
+   "voci": 1,
+   "esempi": [
+    "[B]1x01 - Capitolo primo: La scomparsa di Will Byers[/B] | play | tmdb=66732 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "findvideos [B]1x02 - Capitolo due: La stramba di Maple Street[/B]",
+   "esito": "OK",
+   "voci": 1,
+   "esempi": [
+    "[B]1x02 - Capitolo due: La stramba di Maple Street[/B] | play | tmdb=66732 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "findvideos [B]1x03 - Capitolo tre: Luci natalizie[/B]",
+   "esito": "OK",
+   "voci": 1,
+   "esempi": [
+    "[B]1x03 - Capitolo tre: Luci natalizie[/B] | play | tmdb=66732 | thumb=True | plot=True"
+   ]
   }
  ],
  "server_film": [
@@ -103,5 +173,77 @@ TMDB prova 603: Matrix
  ],
  "server_episodio": [
   "vixsrc https://vixsrc.to/tv/289517/1/1"
- ]
+ ],
+ "cerca_lol chi ride e fuori": [
+  "[B]LOL - Chi ride è fuori[/B] | episodios | https://vixsrc.to/tv/120494",
+  "[B]LOL: Chi ride è fuori[/B] | episodios | https://vixsrc.to/tv/224504",
+  "[B]LOL: Chi ride è fuori Canada[/B] | episodios | https://vixsrc.to/tv/157082",
+  "[B]LOL: Chi ride è fuori - Halloween Special[/B] | episodios | https://vixsrc.to/tv/339718"
+ ],
+ "server_lol chi ride e fuori_https://vixsrc.to/tv/120494/1/1": [
+  "vixsrc https://vixsrc.to/tv/120494/1/1"
+ ],
+ "campi_https://vixsrc.to/tv/120494/1/1": {
+  "contentType": "episode",
+  "season": 1,
+  "episode": 1,
+  "tmdb": "120494",
+  "mediatype": "episode"
+ },
+ "server_lol chi ride e fuori_https://vixsrc.to/tv/120494/1/2": [
+  "vixsrc https://vixsrc.to/tv/120494/1/2"
+ ],
+ "campi_https://vixsrc.to/tv/120494/1/2": {
+  "contentType": "episode",
+  "season": 1,
+  "episode": 2,
+  "tmdb": "120494",
+  "mediatype": "episode"
+ },
+ "server_lol chi ride e fuori_https://vixsrc.to/tv/120494/1/3": [
+  "vixsrc https://vixsrc.to/tv/120494/1/3"
+ ],
+ "campi_https://vixsrc.to/tv/120494/1/3": {
+  "contentType": "episode",
+  "season": 1,
+  "episode": 3,
+  "tmdb": "120494",
+  "mediatype": "episode"
+ },
+ "cerca_stranger things": [
+  "[B]Stranger Things The First Shadow: dietro le quinte[/B] | findvideos | https://vixsrc.to/movie/1455575",
+  "[B]Un'ultima avventura: Stranger Things 5: dietro le quinte[/B] | findvideos | https://vixsrc.to/movie/1610413",
+  "[B]Stranger Things[/B] | episodios | https://vixsrc.to/tv/66732",
+  "[B]Stranger Things: Storie dal 1985[/B] | episodios | https://vixsrc.to/tv/224263"
+ ],
+ "server_stranger things_https://vixsrc.to/tv/66732/1/1": [
+  "vixsrc https://vixsrc.to/tv/66732/1/1"
+ ],
+ "campi_https://vixsrc.to/tv/66732/1/1": {
+  "contentType": "episode",
+  "season": 1,
+  "episode": 1,
+  "tmdb": "66732",
+  "mediatype": "episode"
+ },
+ "server_stranger things_https://vixsrc.to/tv/66732/1/2": [
+  "vixsrc https://vixsrc.to/tv/66732/1/2"
+ ],
+ "campi_https://vixsrc.to/tv/66732/1/2": {
+  "contentType": "episode",
+  "season": 1,
+  "episode": 2,
+  "tmdb": "66732",
+  "mediatype": "episode"
+ },
+ "server_stranger things_https://vixsrc.to/tv/66732/1/3": [
+  "vixsrc https://vixsrc.to/tv/66732/1/3"
+ ],
+ "campi_https://vixsrc.to/tv/66732/1/3": {
+  "contentType": "episode",
+  "season": 1,
+  "episode": 3,
+  "tmdb": "66732",
+  "mediatype": "episode"
+ }
 }
