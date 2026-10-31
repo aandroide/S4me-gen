@@ -1,4 +1,4 @@
-tmdb_active = None
+tmdb_active = True
 TMDB prova 603: Matrix
 {
  "canale": "vixsrc",
@@ -17,38 +17,91 @@ TMDB prova 603: Matrix
   {
    "passo": "lista film",
    "esito": "OK",
-   "voci": 1,
+   "voci": 21,
    "esempi": [
-    "[B][COLOR kod]txt30992 %s >[/COLOR][/B] | peliculas | tmdb=None | thumb=True | plot=False"
+    "[B]In un mondo migliore[/B] | findvideos | tmdb=44716 | thumb=True | plot=True",
+    "[B]Sacrifice[/B] | findvideos | tmdb=1284186 | thumb=True | plot=True",
+    "[B]The Parade - La Sfilata[/B] | findvideos | tmdb=81534 | thumb=True | plot=True",
+    "[B]Apocalipsis Z: Il Nuovo Mondo[/B] | findvideos | tmdb=1507696 | thumb=True | plot=True"
    ]
   },
   {
    "passo": "lista serie",
    "esito": "OK",
-   "voci": 1,
+   "voci": 21,
    "esempi": [
-    "[B][COLOR kod]txt30992 %s >[/COLOR][/B] | peliculas | tmdb=None | thumb=True | plot=False"
+    "[B]Dead-End Job[/B] | episodios | tmdb=289517 | thumb=True | plot=True",
+    "[B]Nocturne[/B] | episodios | tmdb=292741 | thumb=True | plot=True",
+    "[B]Irreplaceable[/B] | episodios | tmdb=297982 | thumb=True | plot=True",
+    "[B]Il dono dell’inganno[/B] | episodios | tmdb=334700 | thumb=True | plot=True"
    ]
   },
   {
    "passo": "film pagina 2",
    "esito": "OK",
+   "voci": 21,
+   "esempi": [
+    "[B]Tu Yaa Main[/B] | findvideos | tmdb=1446616 | thumb=True | plot=True",
+    "[B]Shaun, vita da pecora - Operazione Z.U.C.C.A.[/B] | findvideos | tmdb=1477104 | thumb=True | plot=True",
+    "[B]La timidezza delle chiome[/B] | findvideos | tmdb=1005756 | thumb=True | plot=True",
+    "[B]Contra el huracán[/B] | findvideos | tmdb=1780005 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "findvideos film",
+   "esito": "OK",
+   "voci": 2,
+   "esempi": [
+    "[B]In un mondo migliore[/B] | play | tmdb=44716 | thumb=True | plot=True",
+    "[B][COLOR 0xFF65B3DA]txt30161 %s[/COLOR][/B] | add_pelicula_to_library | tmdb=44716 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "episodi di \"Dead-End Job\"",
+   "esito": "OK",
+   "voci": 9,
+   "esempi": [
+    "[B]1x01 - Le regole del minimarket[/B] | findvideos | tmdb=289517 | thumb=True | plot=True",
+    "[B]1x02 - A spasso con un Pierrot[/B] | findvideos | tmdb=289517 | thumb=True | plot=True",
+    "[B]1x03 - Il vlog del lattaio[/B] | findvideos | tmdb=289517 | thumb=True | plot=True",
+    "[B]1x04 - Cinema delle illusioni di mezzanotte[/B] | findvideos | tmdb=289517 | thumb=True | plot=True"
+   ]
+  },
+  {
+   "passo": "findvideos episodio",
+   "esito": "OK",
    "voci": 1,
    "esempi": [
-    "[B][COLOR kod]txt30992 %s >[/COLOR][/B] | peliculas | tmdb=None | thumb=True | plot=False"
+    "[B]1x01 - Le regole del minimarket[/B] | play | tmdb=289517 | thumb=True | plot=True"
    ]
   },
   {
    "passo": "ricerca matrix",
    "esito": "OK",
-   "voci": 0,
-   "esempi": []
+   "voci": 4,
+   "esempi": [
+    "[B]Matrix[/B] | findvideos | tmdb=603 | thumb=True | plot=True",
+    "[B]Matrix Reloaded[/B] | findvideos | tmdb=604 | thumb=True | plot=True",
+    "[B]Matrix Revolutions[/B] | findvideos | tmdb=605 | thumb=True | plot=True",
+    "[B]Matrix Resurrections[/B] | findvideos | tmdb=624860 | thumb=True | plot=True"
+   ]
   },
   {
    "passo": "ricerca breaking bad",
    "esito": "OK",
-   "voci": 0,
-   "esempi": []
+   "voci": 3,
+   "esempi": [
+    "[B]El Camino: Il film di Breaking Bad[/B] | findvideos | tmdb=559969 | thumb=True | plot=True",
+    "[B]Breaking Bad[/B] | episodios | tmdb=1396 | thumb=True | plot=True",
+    "[B]Troppo cattivi: Pronti all'azione![/B] | episodios | tmdb=302540 | thumb=True | plot=True"
+   ]
   }
+ ],
+ "server_film": [
+  "vixsrc https://vixsrc.to/movie/44716",
+  " https://vixsrc.to/movie/44716"
+ ],
+ "server_episodio": [
+  "vixsrc https://vixsrc.to/tv/289517/1/1"
  ]
 }
