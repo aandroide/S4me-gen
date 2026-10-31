@@ -1,21 +1,23 @@
 {
  "canale": "streamingcommunity",
- "tmdb": "603",
+ "tmdb": "339718",
  "voci": [
   "play | streamingcommunityws | https://streamingcommunityz.day/it/iframe/1",
-  "play | vixsrc | https://vixsrc.to/tv/603/1/1"
+  "play | vixsrc | https://vixsrc.to/tv/339718/1/1"
  ],
- "esito": "RISOLTO MA NON UN VIDEO",
+ "esito": "VIDEO OK",
  "risolto": [
   [
-   "embed [VixSrc]",
-   "https://vixsrc.to/tv/603/1/1"
+   "hls [VixSrc]",
+   "https://vixsrc.to/playlist/796428.m3u8?ub=1&token=0eda7bc7143ce9d009ba63864809faf5&expires=1798616631&h=1&lang=it"
   ]
  ],
- "video": "200 <!DOCTYPE html><html",
- "master": "<!DOCTYPE html><html lang=\"en\" class=\"dark\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/css/263d0a54e253f564.css\" data-precedence=\"next\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack-154a6996cfe0f933.js\"/><script src=\"/_next/static/chunks/4bd1b696-c023c6e3521b1417.js\" async=\"\"></script><script src=\"/_next/static/chunks/255-47484af636b98715.js\" async=\"\"></script><script src=\"/_next/static/chunks/main-app-2ecc3bf42ae2d122.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/tv/layout-03dfb8fb72cce03e.js\" async=\"\"></script><script src=\"/_next/static/chunks/125-46def724761c07b5.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/tv/%5Bid%5D/%5Bs%5D/%5Be%5D/page-1073452cbd788767.js\" async=\"\"></script><meta name=\"next-size-adjust\" content=\"\"/",
+ "video": "200 #EXTM3U #EXT-X-MEDIA",
+ "master": "#EXTM3U\n#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID=\"subs\",NAME=\"Italian [CC]\",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE=\"ita\",URI=\"https://vixsrc.to/playlist/796428?type=subtitle&rendition=ita-2&token=ZlCyr6hBZnvlBVACxFBFJQ&expires=1798616631&edge=sc-u20-01\"\n#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID=\"subs\",NAME=\"English\",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE=\"eng\",URI=\"https://vixsrc.to/playlist/796428?type=subtitle&rendition=eng-3&token=ZlCyr6hBZnvlBVACxFBFJQ&expires=1798616631&edge=sc-u20-01\"\n#EXT-X-STREAM-INF:BANDWIDTH=4500000,CODECS=\"avc1.640028,mp4a.40.2\",RESOLUTION=1920x1080,SUBTITLES=\"subs\"\nhttps://vixsrc.to/playlist/796428?type=video&rendition=1080p&token=jTktS4MfeDeMBxii70G_pw&expires=1798616631&edge=sc-u20-01\n#EXT-X-STREAM-INF:BANDWIDTH=1800000,CODECS=\"avc1.64001f,mp4a.40.2\",RESOLUTION=1280x720,SUBTITLES=\"subs\"\nhttps://vixsrc.to/playlist/796428?type=video&rendition=720p&token=0r2M",
  "master_endlist": false,
- "figlio": "404 <!DOCTYPE html><!--HzB5Wwce0bLGp3w_TOpmY--><html lang=\"en\" class=\"dark\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"preload\" href=\"/_next/static/media/22a5144ee8d83bca-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/7d4881bb7e1bf84d-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/wo",
- "figlio_endlist": false,
- "figlio_tipo": []
+ "figlio": "200 #EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-TARGETDURATION:8\n#EXT-X-PLAYLIST-TYPE:VOD\n#EXT-X-KEY:METHOD=AES-128,URI=\"/storage/enc.key\",IV=0x43A6D967D5C17290D98322F5C8F6660B\n#EXTINF:8,\nhttps://sc-u20-01.quickcanyon11.boats/hls/40/e/ac/eac9a7dd-e181-4c7f-8522-8953aeebefa4/video/1080p/0000-6725.html?token=jTktS4MfeDeMBxii70G_pw&expires=1798616631\n#EXTINF:8,\nhttps://sc-u20-01.quickcanyon11.boats/hls/40/e/ac/eac9a",
+ "figlio_endlist": true,
+ "figlio_tipo": [
+  "#EXT-X-PLAYLIST-TYPE:VOD"
+ ]
 }
