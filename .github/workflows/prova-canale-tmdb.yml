@@ -1,0 +1,42 @@
+name: Prova canale con TMDB
+on:
+  workflow_dispatch:
+    inputs:
+      canale:
+        description: "Canale in riparazioni/"
+        default: "vixsrc"
+permissions:
+  contents: write
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4 lxml
+      - name: Scarica S4Me (sola lettura)
+        run: |
+          git clone -q --depth 1 https://github.com/stream4me/addon /tmp/kh/addon
+          cp strumenti/test/kodi_finto/fake.py /tmp/kh/fake.py
+          mkdir -p /tmp/kh/prof
+          c=${{ github.event.inputs.canale }}
+          cp riparazioni/$c.py /tmp/kh/addon/channels/$c.py
+          cp riparazioni/$c.json /tmp/kh/addon/channels/$c.json
+      - name: Prova
+        run: |
+          mkdir -p rapporti/prove
+          PYTHONPATH=/tmp/kh:/tmp/kh/addon timeout 400 python3 -W ignore strumenti/prova_canale_tmdb.py ${{ github.event.inputs.canale }} || true
+      - name: Salva
+        run: |
+          git config user.name aandroide
+          git config user.email aandroide@users.noreply.github.com
+          for i in 1 2 3; do
+            git fetch -q origin ${{ github.ref_name }}
+            git reset -q origin/${{ github.ref_name }}
+            git add rapporti/prove
+            git commit -q -m "Prova del canale con TMDB" || break
+            git push -q origin HEAD:${{ github.ref_name }} && break
+            sleep 5
+          done
