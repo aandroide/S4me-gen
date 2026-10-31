@@ -219,6 +219,13 @@ def episodios(item):
     return itemlist
 
 
+def vixsrc_host():
+    try:
+        return support.config.get_channel_url(name='vixsrc')
+    except Exception:
+        return 'https://vixsrc.to'
+
+
 def findvideos(item):
     support.callAds('https://thaudray.com/5/3523301', host)
 
@@ -229,9 +236,9 @@ def findvideos(item):
     data = ''
     if tmdb_id:
         if item.contentType == 'movie':
-            data = 'https://vixsrc.to/movie/%s' % tmdb_id
+            data = '%s/movie/%s' % (vixsrc_host(), tmdb_id)
         elif item.season and item.episode:
-            data = 'https://vixsrc.to/tv/%s/%s/%s' % (tmdb_id, item.season, item.episode)
+            data = '%s/tv/%s/%s/%s' % (vixsrc_host(), tmdb_id, item.season, item.episode)
     return support.server(item, data=data, itemlist=itemlist, referer=False)
 
 
