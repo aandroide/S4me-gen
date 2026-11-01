@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 5, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 4, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 5, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 5, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (3)
 
@@ -26,7 +26,7 @@ Sito: https://guardaseriex.cyou
 Sito: https://tanti-film.garden
 - ROTTO: peliculas /film | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_film.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 34 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 35 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html
 -   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
@@ -124,16 +124,16 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27282 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27278 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5630 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5658 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5651 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5650 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5670 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5663 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (12)
 
@@ -185,7 +185,7 @@ Sito: http://ww25.mondoserietv.club
 Sito: https://piratestreaming.design
 - il nome del sito non esiste piu (DNS) (https://piratestreaming.design)
 
-## NON VERIFICATO (4)
+## NON VERIFICATO (5)
 
 ### animeunity
 Sito: https://www.animeunity.co
@@ -209,6 +209,10 @@ Sito: https://streamingita.homes
 - il sito reindirizza a un altro indirizzo: https://ww17.streamingita.homes (in channels.json c'e https://streamingita.homes)
 - riga per channels.json: "streamingita": "https://ww17.streamingita.homes",
 
+### vixsrc
+Sito: https://vixsrc.to
+- nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
+
 ## OK (21)
 
 ### 1337x
@@ -220,10 +224,10 @@ Sito: https://1337x.to
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.autos
-- OK: peliculas /lastnews/ | 85 risultati
-- OK: peliculas /cinema/ | 97 risultati
-- OK: peliculas /sub-ita/ | 97 risultati
-- OK: peliculas /serie-tv/ | 97 risultati
+- OK: peliculas /lastnews/ | 84 risultati
+- OK: peliculas /cinema/ | 96 risultati
+- OK: peliculas /sub-ita/ | 96 risultati
+- OK: peliculas /serie-tv/ | 96 risultati
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.vip
@@ -241,7 +245,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 79 risultati
+- OK: peliculas /updated | 78 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -269,7 +273,7 @@ Sito: https://eurostream.fit
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 3449 risultati
+- OK: peliculas /index | 10086 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -344,7 +348,7 @@ Sito: https://apibay.org
 Sito: https://toonitalia.xyz
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
 - OK: peliculas /category/anime | 400 risultati
-- OK: peliculas /anime-ita | 2770 risultati
+- OK: peliculas /anime-ita | 2772 risultati
 - attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /contatti | 822 risultati
 - attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
