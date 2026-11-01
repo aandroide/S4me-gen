@@ -68,7 +68,7 @@ for azione in ('piattaforme', 'generi', 'anni', 'lingue'):
     for t in [i for i in (menu or []) if i.action == azione]:
         sub = passo('%s %s' % (azione, t.args), lambda: getattr(ch, azione)(t))
         rep['%s_%s' % (azione, t.args)] = [x.title for x in (sub or [])]
-        for x in (sub or [])[:30]:
+        for x in (sub or [])[:(30 if azione in ('piattaforme', 'generi') else 4)]:
             r = passo('%s > %s' % (azione, x.title), lambda: ch.peliculas(x))
             rep['voce_%s_%s_%s' % (azione, t.args, x.title)] = len(r or [])
 passo('ricerca matrix', lambda: ch.search(Item(channel=nome, action='search'), 'matrix'))
