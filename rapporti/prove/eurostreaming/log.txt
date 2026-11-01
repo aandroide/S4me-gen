@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.fit
       peliculas | • Archivio | https://eurostream.fit/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Chicago Fire | https://eurostream.fit/chicago-fire-37/
-      episodios | Yaga | https://eurostream.fit/yaga/
-      episodios | Tulsa King | https://eurostream.fit/tulsa-king-3/
-      episodios | The Torment | https://eurostream.fit/the-torment/
-== episodios su "Chicago Fire"
-   -> 524 voci
-      findvideos | 1x01 - La Squadra  | https://eurostream.fit/chicago-fire-37/
-      findvideos | 1x02 - Grazie, Mon Amour  | https://eurostream.fit/chicago-fire-37/
-      findvideos | 1x03 - Un Atto Dovuto  | https://eurostream.fit/chicago-fire-37/
-      findvideos | 1x04 - Un Minuto  | https://eurostream.fit/chicago-fire-37/
-== findvideos su "1x01 - La Squadra "
+      episodios | Un amore diverso dal tuo | https://eurostream.fit/un-amore-diverso-dal-tuo/
+      episodios | L’isola Del Tesoro | https://eurostream.fit/lisola-del-tesoro/
+      episodios | S.W.A.T. Exiles | https://eurostream.fit/s-w-t-exiles/
+      episodios | Memoriæ | https://eurostream.fit/memoriae/
+== episodios su "Un amore diverso dal tuo"
+   -> 27 voci
+      findvideos | 1x01 - Dieci anni insieme: è un matrimonio o un addio?  | https://eurostream.fit/un-amore-diverso-dal-tuo/
+      findvideos | 1x02 - Riusciremo mai a diventare estranei?  | https://eurostream.fit/un-amore-diverso-dal-tuo/
+      findvideos | 1x03 - Riusciremo mai a trovare la scintilla?  | https://eurostream.fit/un-amore-diverso-dal-tuo/
+      findvideos | 1x04 - Sogniamo ancora lo stesso futuro?  | https://eurostream.fit/un-amore-diverso-dal-tuo/
+== findvideos su "1x01 - Dieci anni insieme: è un matrimon"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f
+Exception: Not un-shortened link: https://clicka.cc/delta/w6av0qvitwab
 
 == lista "• Anime"
    -> 19 voci
@@ -69,17 +69,17 @@ Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 15x04 - Chicago Fire - A Perfect Arson  | https://eurostream.fit/chicago-fire-37/
-      episodios | 1x03 - Yaga - Episodio 3 | https://eurostream.fit/yaga/
-      episodios | 4x03 - Tulsa King - Diffida | https://eurostream.fit/tulsa-king-3/
-      episodios | 1x05 - The Torment - Episodio 5 | https://eurostream.fit/the-torment/
-== episodios su "15x04 - Chicago Fire - A Perfect Arson "
-   -> 524 voci
-      findvideos | 1x01 - La Squadra  | https://eurostream.fit/chicago-fire-37/
-      findvideos | 1x02 - Grazie, Mon Amour  | https://eurostream.fit/chicago-fire-37/
-      findvideos | 1x03 - Un Atto Dovuto  | https://eurostream.fit/chicago-fire-37/
-      findvideos | 1x04 - Un Minuto  | https://eurostream.fit/chicago-fire-37/
-== findvideos su "1x01 - La Squadra "
+      episodios | 1x13 - Un amore diverso dal tuo - Chi avremo accanto tra die | https://eurostream.fit/un-amore-diverso-dal-tuo/
+      episodios | 1x04 - L'isola Del Tesoro (2026) - Capitolo 4: Saint Domingu | https://eurostream.fit/lisola-del-tesoro/
+      episodios | 1x01 - S.W.A.T. Exiles - Una nuova famiglia , 1x02 Via Liber | https://eurostream.fit/s-w-t-exiles/
+      episodios | 1x01 - Memoriæ - Episodio 1 , 1x12 Episodio 12 | https://eurostream.fit/memoriae/
+== episodios su "1x13 - Un amore diverso dal tuo - Chi av"
+   -> 27 voci
+      findvideos | 1x01 - Dieci anni insieme: è un matrimonio o un addio?  | https://eurostream.fit/un-amore-diverso-dal-tuo/
+      findvideos | 1x02 - Riusciremo mai a diventare estranei?  | https://eurostream.fit/un-amore-diverso-dal-tuo/
+      findvideos | 1x03 - Riusciremo mai a trovare la scintilla?  | https://eurostream.fit/un-amore-diverso-dal-tuo/
+      findvideos | 1x04 - Sogniamo ancora lo stesso futuro?  | https://eurostream.fit/un-amore-diverso-dal-tuo/
+== findvideos su "1x01 - Dieci anni insieme: è un matrimon"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f
+Exception: Not un-shortened link: https://clicka.cc/mix/w0lqrsjt
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -110,4 +110,4 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - La Squadra "
+VERDETTO: SI FERMA A: findvideos su "1x01 - Dieci anni insieme: è un matrimon"

@@ -7,16 +7,16 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.ink
       peliculas | Serie Tv  | https://il-geniodellostreaming.ink/serie-tv/
 == lista "Tutti "
    -> 18 voci
+      check | Memoriæ | https://il-geniodellostreaming.ink/film/35390-memoriae-streaming.html
+      check | Thomas & Friends: Really Helpful Engines | https://il-geniodellostreaming.ink/film/35384-thomas-friends-really-helpful-engines-streaming.html
+      check | A Story of Derry | https://il-geniodellostreaming.ink/film/35383-a-story-of-derry-streaming.html
       check | Obsess | https://il-geniodellostreaming.ink/film/35379-obsess-streaming.html
-      check | Killer Card | https://il-geniodellostreaming.ink/film/35377-killer-card-streaming.html
-      check | Scambio di bugie | https://il-geniodellostreaming.ink/film/35375-scambio-di-bugie-streaming.html
-      check | Helluva Boss | https://il-geniodellostreaming.ink/film/27904-helluva-boss-streaming.html
-== check su "Obsess"
+== check su "Memoriæ"
    -> 1 voci
-      play | Obsess | https://v.vidxgo.co/36838527
-== risoluzione vidxgo https://v.vidxgo.co/36838527
-   api /t/ 36838527 referer https://v.vidxgo.co/36838527 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 36838527 referer https://il-geniodellostreaming.ink/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+      play | Memoriæ | https://v.vidxgo.co/39391133
+== risoluzione vidxgo https://v.vidxgo.co/39391133
+   api /t/ 39391133 referer https://v.vidxgo.co/39391133 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 39391133 referer https://il-geniodellostreaming.ink/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (4)
     menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])

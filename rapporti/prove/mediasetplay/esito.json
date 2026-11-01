@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 140
+   "voci": 130
   },
   {
    "passo": "findvideos su \"Bullet train\"",
@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 20
+   "voci": 21
   },
   {
-   "passo": "findvideos su \"Zora la vampira\"",
+   "passo": "findvideos su \"Lucignolo\"",
    "esito": "ERRORE",
    "errore": "enti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'mediaSelector'\n"
   },
@@ -33,7 +33,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"Spy Game\"",
+   "passo": "findvideos su \"The place\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   }
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 96
+   "titoli": 76
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -105,7 +105,7 @@
    "voce": "•• Tutte le Serie TV",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 6
+   "titoli": 5
   },
   {
    "voce": "•• Fiction e Serie Tv del momento",
@@ -114,19 +114,19 @@
    "sottovoci": 18,
    "figli": [
     {
-     "voce": "I Simpson",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 2
-    },
-    {
-     "voce": "NCIS - Unità anticrimine 13",
+     "voce": "Will & Grace 4",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
     },
     {
-     "voce": "C.S.I. Scena del crimine 10",
+     "voce": "I Simpson",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
+    },
+    {
+     "voce": "NCIS - Unità anticrimine 13",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
@@ -140,6 +140,12 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Segreti di famiglia 3",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    },
+    {
      "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
@@ -147,12 +153,6 @@
     },
     {
      "voce": "Innocence",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
-    },
-    {
-     "voce": "Bitter Sweet - Ingredienti d'amore",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
@@ -166,6 +166,12 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Segreti di famiglia 3",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    },
+    {
      "voce": "La promessa",
      "azione": "epmenu",
      "esito": "OK",
@@ -173,12 +179,6 @@
     },
     {
      "voce": "Tutto per la mia famiglia 2",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
-    },
-    {
-     "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
@@ -194,28 +194,8 @@
   {
    "voce": "•• Animazione Made in Japan",
    "azione": "peliculas",
-   "esito": "SOTTOMENU",
-   "sottovoci": 20,
-   "figli": [
-    {
-     "voce": "Dragon Ball Daima",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 8
-    },
-    {
-     "voce": "One Piece 18",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 2
-    },
-    {
-     "voce": "Dragon Ball Super",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 30
-    }
-   ]
+   "esito": "OK",
+   "titoli": 1
   },
   {
    "voce": "•• Serie TV Piu Viste",
@@ -224,22 +204,22 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "The Last Ship 3",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 9
+    },
+    {
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 3
     },
     {
      "voce": "Law & Order: i due volti della giustizia 24",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 2
-    },
-    {
-     "voce": "The Last Ship 3",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 9
     }
    ]
   },
@@ -250,16 +230,16 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "My Sweet Lie",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
-    },
-    {
      "voce": "Tutto per la mia famiglia 2",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
+    },
+    {
+     "voce": "My Sweet Lie",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
     },
     {
      "voce": "Forbidden Fruit 4",
@@ -276,6 +256,12 @@
    "sottovoci": 12,
    "figli": [
     {
+     "voce": "Tu Si Que Vales 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
      "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
@@ -286,12 +272,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
-    },
-    {
-     "voce": "Il Volo - Uno per tutti",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
     }
    ]
   },
@@ -328,6 +308,12 @@
    "sottovoci": 100,
    "figli": [
     {
+     "voce": "Tu Si Que Vales 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
      "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
@@ -335,12 +321,6 @@
     },
     {
      "voce": "Amici 26",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 10
-    },
-    {
-     "voce": "Uomini e Donne 2026/2027",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
@@ -363,7 +343,7 @@
      "voce": "Teen Titans Go!",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 12
+     "titoli": 10
     },
     {
      "voce": "Beyblade X - Terza stagione",
@@ -421,7 +401,7 @@
      "voce": "Marco - Dagli Appennini alle Ande",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 20
     }
    ]
   },
@@ -429,7 +409,7 @@
    "voce": "•• Tutti i Documentari",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 14
+   "titoli": 12
   },
   {
    "voce": "•• Documentari più visti",
@@ -437,12 +417,6 @@
    "esito": "SOTTOMENU",
    "sottovoci": 20,
    "figli": [
-    {
-     "voce": "Segnali dall'universo 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 6
-    },
     {
      "voce": "Enigmi alieni 13",
      "azione": "epmenu",
@@ -454,6 +428,12 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
+    },
+    {
+     "voce": "Parco nazionale di Donana - Eden spagnolo",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 2
     }
    ]
   },

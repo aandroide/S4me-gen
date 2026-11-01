@@ -50,36 +50,36 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 20 
-   SEZIONE Rai 2 -> OK 17 
-   SEZIONE Rai 3 -> OK 13 
+   SEZIONE Rai 1 -> OK 19 
+   SEZIONE Rai 2 -> ERRORE JSONDecodeError
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE str17 01 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 35 
+   SEZIONE Rai 2 -> OK 33 
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
    SEZIONE str16 31 str30 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 29 
    SEZIONE Rai 2 -> OK 35 
-   SEZIONE Rai 3 -> OK 33 
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
    SEZIONE str15 30 str30 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 33 
-   SEZIONE Rai 2 -> OK 32 
-   SEZIONE Rai 3 -> OK 31 
-   SEZIONE str14 29 str30 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE Novità -> OK 21 
    SEZIONE Da non perdere -> OK 21 
    SEZIONE Stregati da Halloween -> OK 18 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 25 
-   SEZIONE Serie Original RaiPlay -> OK 24 
+   SEZIONE Serie Original RaiPlay -> OK 23 
    SEZIONE Serie tratte da libri -> OK 25 
    SEZIONE Serie italiane -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 25 
    SEZIONE Drama -> OK 14 
-   SEZIONE Serie Original RaiPlay -> OK 24 
+   SEZIONE Serie Original RaiPlay -> OK 23 
    SEZIONE Serie Internazionali -> SOTTOMENU  
    SEZIONE Intrattenimento -> OK 26 
    SEZIONE Territori e itinerari -> OK 32 
    SEZIONE Approfondimento -> OK 25 
    SEZIONE Programmi TV -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 31 
+   SEZIONE Da non perdere -> OK 30 
    SEZIONE Docu-serie Original -> OK 28 
    SEZIONE Documentari Original -> OK 24 
    SEZIONE Documentari -> SOTTOMENU  
@@ -87,7 +87,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Halloween night: arrivano le tenebre! -> OK 17 
    SEZIONE Cinema bambini -> OK 23 
    SEZIONE Bambini -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 37 
+   SEZIONE Da non perdere -> OK 36 
    SEZIONE Un mondo di fumetti -> OK 15 
    SEZIONE Next Star -> OK 21 
    SEZIONE Teen -> SOTTOMENU  

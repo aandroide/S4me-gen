@@ -13,18 +13,16 @@ Canale tantifilm | indirizzo https://tanti-film.garden
       peliculas | Commedia | https://tanti-film.garden/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
+      check | Thomas & Friends: Really Helpful Engines  | https://tanti-film.garden/guarda/35384-thomas-friends-really-helpful-engines-streaming-streaming-hd.
+      check | A Story of Derry  | https://tanti-film.garden/guarda/35383-a-story-of-derry-streaming-streaming-hd.html
       check | Il regalo di compleanno  | https://tanti-film.garden/guarda/35376-il-regalo-di-compleanno-streaming-streaming-hd.html
       check | Killer Card  | https://tanti-film.garden/guarda/35377-killer-card-streaming-streaming-hd.html
-      check | Apocalipsis Z: Il Nuovo Mondo  | https://tanti-film.garden/guarda/35368-apocalypse-z-il-nuovo-mondo-streaming-streaming-hd.html
-      check | Colisión  | https://tanti-film.garden/guarda/35369-colision-streaming-streaming-hd.html
-== check su "Il regalo di compleanno "
+== check su "Thomas & Friends: Really Helpful Engines"
    -> 2 voci
-      play | Il regalo di compleanno  | https://v.vidxgo.co/38999812
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.garden/guarda/35376-il-regalo-di-compleanno-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/38999812
-   api /t/ 38999812 referer https://v.vidxgo.co/38999812 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 38999812 referer https://tanti-film.garden/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+      play | Thomas & Friends: Really Helpful Engines  | https://v.vidxgo.co/41007422
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.garden/guarda/35384-thomas-friends-really-helpful-engines-streaming-streaming-hd.
+== risoluzione vidxgo https://v.vidxgo.co/41007422
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
@@ -34,8 +32,8 @@ Canale tantifilm | indirizzo https://tanti-film.garden
    SEZIONE Avventura -> OK 25 
    SEZIONE Biografico -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
-   SEZIONE • Film -> OK 34 
+   SEZIONE • Film -> OK 35 
    SEZIONE • Serie TV -> OK 25 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 4 ok su 4
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+VERDETTO: ARRIVA AL VIDEO

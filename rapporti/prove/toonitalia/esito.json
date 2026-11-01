@@ -13,12 +13,27 @@
    "voci": 21
   },
   {
-   "passo": "check su \"Scuola di polizia \"",
+   "passo": "check su \"Space Dandy \"",
    "esito": "OK",
-   "voci": 64
+   "voci": 27
   },
   {
-   "passo": "findvideos su \"1x01 - La banda dei clown\"",
+   "passo": "findvideos su \"01 - Vivi seguendo la corrente!\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Anime ITA\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "check su \".hack//Sign \"",
+   "esito": "OK",
+   "voci": 29
+  },
+  {
+   "passo": "findvideos su \"01 - Gioco di Ruolo\"",
    "esito": "OK",
    "voci": 1
   }
@@ -26,8 +41,8 @@
  "video": [
   {
    "server": "voe",
-   "url": "https://voe.sx/e/ntl49uc3jz9h",
-   "finale": "https://ugc-cdn-caching-n3lwmd5hbnobft1obu.cloudwindow-route.com/engine/hls2/01/09773/ntl49uc3jz9h_,n,.urlset/master.m3u8?t=AKNA5tqBW5bqv3XBs4u5ohj3MI87FKQzWWNse9hKXv0&s=1793445100&e=14400&f=48868532&",
+   "url": "https://voe.sx/e/hig6dbajibee",
+   "finale": "https://ugc-cdn-caching-n3fzsi5gnge0gpz5cp.cloudwindow-route.com/engine/hls2/01/10578/hig6dbajibee_,l,.urlset/master.m3u8?t=k1aOAyAc5zDkxOfe-s9HUO8cDFzW2SKvU_5ZNPS2gNE&s=1793534781&e=14400&f=52891900&",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -80,151 +95,179 @@
  "sezioni_riepilogo": "6 ok su 6",
  "rete": [
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/anime",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anime",
    "status": 200,
-   "byte": 324631,
-   "secondi": 3.5,
+   "byte": 326467,
+   "secondi": 3.8,
    "titolo_pagina": "Anime Archivi - TOONITALIA",
    "file": "pagine/01.html"
   },
   {
    "url": "https://toonitalia.xyz/category/anime",
    "status": 200,
-   "byte": 324631,
-   "secondi": 3.7,
+   "byte": 326467,
+   "secondi": 3.9,
    "titolo_pagina": "Anime Archivi - TOONITALIA",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/scuola-di-polizia/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/space-dandy/",
    "status": 200,
-   "byte": 112751,
-   "secondi": 2.2,
-   "titolo_pagina": "Scuola di polizia streaming e download episodi Ita Toonitalia anime",
+   "byte": 100099,
+   "secondi": 2.4,
+   "titolo_pagina": "Space Dandy streaming e download episodi Ita Toonitalia anime",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://toonitalia.xyz/scuola-di-polizia/",
+   "url": "https://toonitalia.xyz/space-dandy/",
    "status": 200,
-   "byte": 112751,
-   "secondi": 2.3,
-   "titolo_pagina": "Scuola di polizia streaming e download episodi Ita Toonitalia anime",
+   "byte": 100099,
+   "secondi": 2.5,
+   "titolo_pagina": "Space Dandy streaming e download episodi Ita Toonitalia anime",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://voe.sx/e/ntl49uc3jz9h",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/anime-ita",
    "status": 200,
-   "byte": 745,
-   "secondi": 0.7,
-   "titolo_pagina": "Redirecting...",
+   "byte": 220127,
+   "secondi": 3.9,
+   "titolo_pagina": "Anime Ita",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://shanelocaldog.com/e/ntl49uc3jz9h",
+   "url": "https://toonitalia.xyz/anime-ita",
    "status": 200,
-   "byte": 126871,
-   "secondi": 0.6,
-   "titolo_pagina": "Guardi Scuola Di Polizia - 1x01 - La Banda Dei Clown.mp4 - VOE | Content Deliver",
+   "byte": 220127,
+   "secondi": 4.0,
+   "titolo_pagina": "Anime Ita",
    "file": "pagine/06.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/hack-sign/",
+   "status": 200,
+   "byte": 104317,
+   "secondi": 2.4,
+   "titolo_pagina": ".hack//Sign streaming e download episodi Ita Toonitalia anime",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://toonitalia.xyz/hack-sign/",
+   "status": 200,
+   "byte": 104317,
+   "secondi": 2.5,
+   "titolo_pagina": ".hack//Sign streaming e download episodi Ita Toonitalia anime",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://voe.sx/e/hig6dbajibee",
+   "status": 200,
+   "byte": 745,
+   "secondi": 0.5,
+   "titolo_pagina": "Redirecting...",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://shanelocaldog.com/e/hig6dbajibee",
+   "status": 200,
+   "byte": 126563,
+   "secondi": 0.8,
+   "titolo_pagina": "Guardi HackSign_Ep_01_ITA.mp4 - VOE | Content Delivery Network (CDN) & Video Clo",
+   "file": "pagine/10.html"
   },
   {
    "url": "https://voe.sx/js/loader.a40897e.js",
    "status": 200,
    "byte": 86050,
-   "secondi": 0.6,
+   "secondi": 0.8,
    "titolo_pagina": "",
-   "file": "pagine/07.html"
+   "file": "pagine/11.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anime",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/anime",
    "status": 200,
-   "byte": 325853,
-   "secondi": 3.4,
+   "byte": 327267,
+   "secondi": 3.8,
    "titolo_pagina": "Anime Archivi - TOONITALIA",
-   "file": "pagine/08.html"
+   "file": "pagine/12.html"
   },
   {
    "url": "https://toonitalia.xyz/category/anime",
    "status": 200,
-   "byte": 325853,
-   "secondi": 3.5,
+   "byte": 327267,
+   "secondi": 3.9,
    "titolo_pagina": "Anime Archivi - TOONITALIA",
-   "file": "pagine/09.html"
+   "file": "pagine/13.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/anime-ita",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/anime-ita",
    "status": 200,
-   "byte": 219965,
-   "secondi": 3.6,
+   "byte": 220270,
+   "secondi": 3.9,
    "titolo_pagina": "Anime Ita",
-   "file": "pagine/10.html"
+   "file": "pagine/14.html"
   },
   {
    "url": "https://toonitalia.xyz/anime-ita",
    "status": 200,
-   "byte": 219965,
-   "secondi": 3.7,
+   "byte": 220270,
+   "secondi": 4.0,
    "titolo_pagina": "Anime Ita",
-   "file": "pagine/11.html"
+   "file": "pagine/15.html"
   },
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/contatti",
    "status": 200,
-   "byte": 129384,
-   "secondi": 3.0,
-   "titolo_pagina": "Anime Sub-Ita",
-   "file": "pagine/12.html"
+   "byte": 129778,
+   "secondi": 3.5,
+   "titolo_pagina": "Anime Sub-Ita"
   },
   {
    "url": "https://toonitalia.xyz/contatti",
    "status": 200,
-   "byte": 129384,
-   "secondi": 3.0,
-   "titolo_pagina": "Anime Sub-Ita",
-   "file": "pagine/13.html"
+   "byte": 129778,
+   "secondi": 3.5,
+   "titolo_pagina": "Anime Sub-Ita"
   },
   {
    "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/film-animazione",
    "status": 200,
-   "byte": 173039,
-   "secondi": 3.1,
-   "titolo_pagina": "Film Animazione",
-   "file": "pagine/14.html"
+   "byte": 172430,
+   "secondi": 3.4,
+   "titolo_pagina": "Film Animazione"
   },
   {
    "url": "https://toonitalia.xyz/film-animazione",
    "status": 200,
-   "byte": 173039,
-   "secondi": 3.1,
-   "titolo_pagina": "Film Animazione",
-   "file": "pagine/15.html"
+   "byte": 172430,
+   "secondi": 3.5,
+   "titolo_pagina": "Film Animazione"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serie-tv/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serie-tv/",
    "status": 200,
-   "byte": 124576,
-   "secondi": 2.3,
+   "byte": 124535,
+   "secondi": 2.5,
    "titolo_pagina": "Serie Tv"
   },
   {
    "url": "https://toonitalia.xyz/serie-tv/",
    "status": 200,
-   "byte": 124576,
-   "secondi": 2.3,
+   "byte": 124535,
+   "secondi": 2.5,
    "titolo_pagina": "Serie Tv"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/?s=avatar",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/?s=avatar",
    "status": 200,
-   "byte": 112482,
-   "secondi": 2.3,
+   "byte": 113128,
+   "secondi": 2.5,
    "titolo_pagina": "Hai cercato avatar - TOONITALIA"
   },
   {
    "url": "https://toonitalia.xyz/?s=avatar",
    "status": 200,
-   "byte": 112482,
-   "secondi": 2.3,
+   "byte": 113128,
+   "secondi": 2.6,
    "titolo_pagina": "Hai cercato avatar - TOONITALIA"
   }
  ],

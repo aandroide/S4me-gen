@@ -13,7 +13,7 @@
    "voci": 18
   },
   {
-   "passo": "check su \"Obsess\"",
+   "passo": "check su \"Memoriæ\"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,7 +21,7 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/36838527",
+   "url": "https://v.vidxgo.co/39391133",
    "nota": "il server non risponde entro 90 secondi",
    "modulo_server": true,
    "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
@@ -31,7 +31,7 @@
    },
    "api_t": [
     {
-     "referer": "https://v.vidxgo.co/36838527",
+     "referer": "https://v.vidxgo.co/39391133",
      "status": 403,
      "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
     },
@@ -133,55 +133,55 @@
   {
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
-   "byte": 38012,
+   "byte": 37956,
    "secondi": 0.8,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/film/35379-obsess-streaming.html",
+   "url": "https://il-geniodellostreaming.ink/film/35390-memoriae-streaming.html",
    "status": 200,
-   "byte": 30493,
+   "byte": 29669,
    "secondi": 0.2,
-   "titolo_pagina": "Obsess Streaming - Serie TV - ilGenioDelloStreaming",
+   "titolo_pagina": "Memoriæ Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.ink/film/35379-obsess-streaming.html",
+   "url": "https://il-geniodellostreaming.ink/film/35390-memoriae-streaming.html",
    "status": 200,
-   "byte": 30493,
-   "secondi": 0.2,
-   "titolo_pagina": "Obsess Streaming - Serie TV - ilGenioDelloStreaming",
+   "byte": 29669,
+   "secondi": 0.7,
+   "titolo_pagina": "Memoriæ Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/03.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
-   "byte": 38012,
-   "secondi": 0.6,
+   "byte": 37956,
+   "secondi": 0.7,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/04.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink",
    "status": 200,
-   "byte": 92608,
-   "secondi": 0.5,
+   "byte": 94768,
+   "secondi": 0.7,
    "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/05.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/serie-tv/",
    "status": 200,
-   "byte": 86303,
-   "secondi": 0.2,
+   "byte": 85769,
+   "secondi": 0.7,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/animazione/",
    "status": 200,
-   "byte": 85728,
+   "byte": 85708,
    "secondi": 0.2,
    "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
    "file": "pagine/07.html"
@@ -190,46 +190,46 @@
    "url": "https://il-geniodellostreaming.ink/avventura/",
    "status": 200,
    "byte": 86216,
-   "secondi": 0.2,
+   "secondi": 0.7,
    "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
    "file": "pagine/08.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/catalog/all",
    "status": 200,
-   "byte": 38012,
-   "secondi": 0.3,
+   "byte": 37956,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/09.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/catalog/0",
    "status": 200,
-   "byte": 37964,
-   "secondi": 0.3,
+   "byte": 38220,
+   "secondi": 0.8,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/10.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/catalog/a",
    "status": 200,
-   "byte": 38487,
-   "secondi": 0.3,
+   "byte": 37836,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/11.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/catalog/b",
    "status": 200,
-   "byte": 38000,
-   "secondi": 0.3,
+   "byte": 37834,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/12.html"
   },
   {
    "url": "https://il-geniodellostreaming.ink/serie-tv/",
    "status": 200,
-   "byte": 86303,
+   "byte": 85769,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/13.html"
@@ -238,7 +238,7 @@
    "url": "https://il-geniodellostreaming.ink/?s=avatar",
    "status": 200,
    "byte": 34835,
-   "secondi": 2.2,
+   "secondi": 2.5,
    "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/14.html"
   }
