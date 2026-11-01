@@ -64,7 +64,7 @@ if ls:
 for t in [i for i in (menu or []) if i.action == 'peliculas' and i.args]:
     r = passo('sezione %s' % t.args, lambda: ch.peliculas(t))
     rep['sez_' + t.args] = [x.title for x in (r or [])[:5]]
-for azione in ('piattaforme', 'generi'):
+for azione in ('piattaforme', 'generi', 'anni', 'lingue'):
     for t in [i for i in (menu or []) if i.action == azione]:
         sub = passo('%s %s' % (azione, t.args), lambda: getattr(ch, azione)(t))
         rep['%s_%s' % (azione, t.args)] = [x.title for x in (sub or [])]

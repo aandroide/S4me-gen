@@ -23,15 +23,21 @@ def mainlist(item):
             ('Di tendenza questa settimana', ['', 'peliculas', 'trending/movie/week', 'movie']),
             ('Popolari', ['', 'peliculas', 'movie/popular', 'movie']),
             ('Più votati', ['', 'peliculas', 'movie/top_rated', 'movie']),
+            ('Ultime uscite', ['', 'peliculas', 'discover/movie?sort_by=primary_release_date.desc&primary_release_date.lte={oggi}&vote_count.gte=5', 'movie']),
             ('Per piattaforma', ['', 'piattaforme', 'movie', 'movie']),
-            ('Generi', ['', 'generi', 'movie', 'movie'])]
+            ('Generi', ['', 'generi', 'movie', 'movie']),
+            ('Per anno', ['', 'anni', 'movie', 'movie']),
+            ('Per lingua', ['', 'lingue', 'movie', 'movie'])]
     tvshow = ['',
               ('Di tendenza oggi', ['', 'peliculas', 'trending/tv/day', 'tvshow']),
               ('Di tendenza questa settimana', ['', 'peliculas', 'trending/tv/week', 'tvshow']),
               ('Popolari', ['', 'peliculas', 'tv/popular', 'tvshow']),
               ('Più votate', ['', 'peliculas', 'tv/top_rated', 'tvshow']),
+              ('Ultime uscite', ['', 'peliculas', 'discover/tv?sort_by=first_air_date.desc&first_air_date.lte={oggi}&vote_count.gte=5', 'tvshow']),
               ('Per piattaforma', ['', 'piattaforme', 'tv', 'tvshow']),
-              ('Generi', ['', 'generi', 'tv', 'tvshow'])]
+              ('Generi', ['', 'generi', 'tv', 'tvshow']),
+              ('Per anno', ['', 'anni', 'tv', 'tvshow']),
+              ('Per lingua', ['', 'lingue', 'tv', 'tvshow'])]
     search = ''
     return locals()
 
@@ -123,7 +129,7 @@ def _tmdb(percorso):
 def sezione(item):
     # elenco TMDB (tendenze, popolari, piattaforme, generi) tenuto solo per i titoli presenti su VixSrc, nell'ordine di TMDB
     logger.debug()
-    percorso = item.args or 'trending/movie/day'
+    percorso = (item.args or 'trending/movie/day').replace('{oggi}', time.strftime('%Y-%m-%d'))
     tipo = 'movie' if 'movie' in percorso.split('?')[0] else 'tv'
     validi = set(_id_validi(tipo))
     ids = []
@@ -167,6 +173,34 @@ def generi(item):
     for g in sorted((dati or {}).get('genres', []), key=lambda x: x.get('name', '')):
         percorso = 'discover/%s?with_genres=%s&sort_by=popularity.desc' % (tipo, g['id'])
         itemlist.append(item.clone(title=support.typo(g['name'], 'bold'), action='peliculas', args=percorso,
+                                   thumbnail=support.thumb(), folder=True))
+    return itemlist
+
+
+LINGUE = [('Italiano', 'it'), ('Inglese', 'en'), ('Giapponese', 'ja'), ('Coreano', 'ko'), ('Francese', 'fr'),
+          ('Spagnolo', 'es'), ('Tedesco', 'de'), ('Cinese', 'zh'), ('Hindi', 'hi'), ('Turco', 'tr'),
+          ('Portoghese', 'pt'), ('Russo', 'ru'), ('Svedese', 'sv'), ('Danese', 'da'), ('Polacco', 'pl')]
+
+
+def anni(item):
+    logger.debug()
+    tipo = item.args or 'movie'
+    campo = 'primary_release_year' if tipo == 'movie' else 'first_air_date_year'
+    itemlist = []
+    for anno in range(int(time.strftime('%Y')), 2005, -1):
+        percorso = 'discover/%s?%s=%d&sort_by=popularity.desc' % (tipo, campo, anno)
+        itemlist.append(item.clone(title=support.typo(str(anno), 'bold'), action='peliculas', args=percorso,
+                                   thumbnail=support.thumb(), folder=True))
+    return itemlist
+
+
+def lingue(item):
+    logger.debug()
+    tipo = item.args or 'movie'
+    itemlist = []
+    for nome, codice in LINGUE:
+        percorso = 'discover/%s?with_original_language=%s&sort_by=popularity.desc' % (tipo, codice)
+        itemlist.append(item.clone(title=support.typo(nome, 'bold'), action='peliculas', args=percorso,
                                    thumbnail=support.thumb(), folder=True))
     return itemlist
 
