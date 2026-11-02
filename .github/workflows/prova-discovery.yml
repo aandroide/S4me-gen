@@ -1,0 +1,29 @@
+name: Prova Discovery
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - name: Prova
+        run: python3 strumenti/prova_discovery.py || true
+      - name: Salva
+        run: |
+          git config user.name aandroide
+          git config user.email aandroide@users.noreply.github.com
+          for i in 1 2 3; do
+            git fetch -q origin ${{ github.ref_name }}
+            git reset -q origin/${{ github.ref_name }}
+            git add rapporti/prove/discoveryplus
+            git commit -q -m "Prova Discovery" || break
+            git push -q origin HEAD:${{ github.ref_name }} && break
+            sleep 3
+          done
