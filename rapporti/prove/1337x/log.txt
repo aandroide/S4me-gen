@@ -1,0 +1,30 @@
+Canale 1337x | indirizzo 
+== mainlist
+   -> 5 voci
+      peliculas | • Film ITA | https://1337x.to/movie-lib-sort/all/it/popularity/desc/all/1/
+      peliculas | •• Film | https://1337x.to/movie-library/1/
+      az | • Serie TV | https://1337x.to/series-library/
+      search | txt70741 … | https://1337x.to
+== lista "• Film ITA"
+   -> 0 voci
+== lista "•• Film"
+   -> 0 voci
+Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (3)
+    menu | ('Film ITA {bullet bold}', ['/movie-lib-sort/all/it/popularity/desc/all/1/', 'peliculas', '', 'movie'])
+    menu | ('Film {submenu}', ['/movie-library/1/', 'peliculas', 'filter', 'movie'])
+    menu | ('Serie TV {bullet bold}', ['/series-library/', 'az', '', 'tvshow'])
+== controllo di tutte le sezioni
+   SEZIONE • Film ITA -> VUOTA   | ultima pagina: {'url': 'https://1337x.to/movie-lib-sort/all/it/popularity/desc/all/1/', 'status': 403, 'byte': 5997, 'titolo_pagina': 'Just a moment...'}
+   SEZIONE •• Film -> VUOTA   | ultima pagina: {'url': 'https://1337x.to/movie-lib-sort/all/all/score/desc/all/1/', 'status': 403, 'byte': 5964, 'titolo_pagina': 'Just a moment...'}
+   SEZIONE 1-9 -> VUOTA   | ultima pagina: {'url': 'https://1337x.to/series-library/num/1/', 'status': 403, 'byte': 5885, 'titolo_pagina': 'Just a moment...'}
+   SEZIONE A -> VUOTA   | ultima pagina: {'url': 'https://1337x.to/series-library/a/1/', 'status': 403, 'byte': 5879, 'titolo_pagina': 'Just a moment...'}
+   SEZIONE B -> VUOTA   | ultima pagina: {'url': 'https://1337x.to/series-library/b/1/', 'status': 403, 'byte': 5879, 'titolo_pagina': 'Just a moment...'}
+   SEZIONE • Serie TV -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://quiet-base-584a.ifewfijdqwji.workers.dev/series-library/a/1/', 'status': 403, 'byte': 5879, 'titolo_pagina': 'Just a moment...'}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://1337x.to/search/avatar/1/', 'status': 403, 'byte': 5862, 'titolo_pagina': 'Just a moment...'}
+SEZIONI: 0 ok su 4
+   SEZIONE SENZA TITOLI: • Film ITA | VUOTA
+   SEZIONE SENZA TITOLI: •• Film | VUOTA
+   SEZIONE SENZA TITOLI: • Serie TV | SOTTOMENU SENZA TITOLI
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
+VERDETTO: SI FERMA A: lista "• Film ITA"

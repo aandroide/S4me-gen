@@ -1,0 +1,186 @@
+{
+ "canale": "guardaseriecam",
+ "host": "https://guardaseriex.best",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 5
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
+   "esito": "OK",
+   "voci": 19
+  },
+  {
+   "passo": "episodios su \"Phony\"",
+   "esito": "OK",
+   "voci": 8
+  },
+  {
+   "passo": "findvideos su \"1x01 - Episodio pilota\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/21952924/1/1",
+   "finale": "http://127.0.0.1:43615/hls/tv/21952924/1/1/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
+ "menu_dichiarato": [
+  "tvshow | '/serietv-streaming'",
+  "tvshow | ('Popolari', ['/serietv-popolari/', 'peliculas', ''])",
+  "tvshow | ('Generi', ['/serietv-streaming', 'genres', 'genres'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 18
+  },
+  {
+   "voce": "•• Popolari",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 258
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 33,
+   "figli": [
+    {
+     "voce": "Biografico",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 134
+    },
+    {
+     "voce": "Commedia",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 1583
+    },
+    {
+     "voce": "Crime",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 876
+    }
+   ]
+  },
+  {
+   "voce": "•• txt70741 Serie TV…",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 4
+  }
+ ],
+ "sezioni_riepilogo": "4 ok su 4",
+ "rete": [
+  {
+   "url": "https://guardaseriex.best/serietv-streaming",
+   "status": 200,
+   "byte": 99981,
+   "secondi": 0.4,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://guardaseriex.best/commedia/5850-phony-streaming.html",
+   "status": 200,
+   "byte": 64187,
+   "secondi": 0.3,
+   "titolo_pagina": "Phony streaming - Guardaserie",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/find/tt21952924?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
+   "status": 200,
+   "byte": 872,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/275139?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 2865,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/275139/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 10114,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://guardaseriex.best/serietv-streaming",
+   "status": 200,
+   "byte": 99981,
+   "secondi": 0.4,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://guardaseriex.best/serietv-popolari/",
+   "status": 200,
+   "byte": 405680,
+   "secondi": 0.4,
+   "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://guardaseriex.best/serietv-streaming",
+   "status": 200,
+   "byte": 99981,
+   "secondi": 0.6,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://guardaseriex.best/biografico/",
+   "status": 200,
+   "byte": 221726,
+   "secondi": 0.7,
+   "titolo_pagina": "Biografico streaming | Guardaserie",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://guardaseriex.best/commedia/",
+   "status": 200,
+   "byte": 2271084,
+   "secondi": 0.5,
+   "titolo_pagina": "Commedia streaming | Guardaserie",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://guardaseriex.best/crime/",
+   "status": 200,
+   "byte": 1265036,
+   "secondi": 1.9,
+   "titolo_pagina": "Crime streaming | Guardaserie",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://guardaseriex.best/index.php?story=avatar&do=search&subaction=search",
+   "status": 200,
+   "byte": 38229,
+   "secondi": 0.2,
+   "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS",
+   "file": "pagine/12.html"
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

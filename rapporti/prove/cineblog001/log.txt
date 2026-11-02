@@ -1,0 +1,35 @@
+Canale cineblog001 | indirizzo https://cineblog001.men
+== mainlist
+   -> 6 voci
+      peliculas | Film | https://cineblog001.center/film/
+      peliculas | Serie TV | https://cineblog001.center/serie-tv/
+      peliculas | Sub-ITA | https://cineblog001.center/sub-ita/
+      genres | Generi | https://cineblog001.center
+== lista "Film"
+   -> 19 voci
+      findvideos | L'incredibile storia della signora del terzo piano | https://cineblog001.men/cb01-streaming/35394-l-incredibile-storia-della-signora-del-terzo-piano-stre
+      findvideos | Thomas & Friends: Really Helpful Engines | https://cineblog001.men/cb01-streaming/35384-thomas-friends-really-helpful-engines-streaming-cb01.ht
+      findvideos | A Story of Derry | https://cineblog001.men/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html
+      findvideos | Il regalo di compleanno | https://cineblog001.men/cb01-streaming/35376-il-regalo-di-compleanno-streaming-cb01.html
+== findvideos su "L'incredibile storia della signora del t"
+   -> 2 voci
+      play | L'incredibile storia della signora del terzo piano | https://v.vidxgo.co/4716644
+      add_pelicula_to_library | txt30161 %s | https://cineblog001.men/cb01-streaming/35394-l-incredibile-storia-della-signora-del-terzo-piano-stre
+== risoluzione vidxgo https://v.vidxgo.co/4716644
+   -> VIDEO OK m3u8 200 
+== voci dichiarate in mainlist (4)
+    top | ('Film', ['/film/', 'peliculas', ''])
+    top | ('Serie TV', ['/serie-tv/', 'peliculas', ''])
+    top | ('Sub-ITA', ['/sub-ita/', 'peliculas', ''])
+    top | ('Generi', ['', 'genres', ''])
+== controllo di tutte le sezioni
+   SEZIONE Film -> OK 18 
+   SEZIONE Serie TV -> OK 18 
+   SEZIONE Sub-ITA -> OK 18 
+   SEZIONE Azione -> OK 16 
+   SEZIONE Animazione -> OK 17 
+   SEZIONE Avventura -> OK 20 
+   SEZIONE Generi -> SOTTOMENU  
+   SEZIONE txt70741 … -> OK 10 
+SEZIONI: 5 ok su 5
+VERDETTO: ARRIVA AL VIDEO

@@ -1,0 +1,274 @@
+{
+ "canale": "altadefinizione01",
+ "host": "https://altadefinizione-01.autos",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 9
+  },
+  {
+   "passo": "lista \"Tutti \"",
+   "esito": "OK",
+   "voci": 24
+  },
+  {
+   "passo": "check su \"L'incredibile storia della signora del t\"",
+   "esito": "OK",
+   "voci": 2
+  }
+ ],
+ "video": [
+  {
+   "server": "vixsrc",
+   "url": "https://vixsrc.to/movie/tt4716644",
+   "finale": "https://vixsrc.to/movie/tt4716644",
+   "esito": "VIDEO NON RAGGIUNGIBILE",
+   "dettaglio": "200 text/html; charset=utf-8 non sembra un video"
+  }
+ ],
+ "menu_dichiarato": [
+  "menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])",
+  "menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])",
+  "menu | ('Ultimi Aggiornati-Aggiunti {submenu}', ['', 'peliculas', 'update'])",
+  "menu | ('Generi {submenu}', ['', 'genres', 'genres', 'undefined'])",
+  "menu | ('Lettera {submenu}', ['/catalog/a', 'genres', 'orderalf', 'undefined'])",
+  "menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])",
+  "menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Tutti",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 23
+  },
+  {
+   "voce": "•• Al Cinema",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "•• Ultimi Aggiornati-Aggiunti",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 35
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 22,
+   "figli": [
+    {
+     "voce": "Azione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 29
+    },
+    {
+     "voce": "Animazione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 27
+    },
+    {
+     "voce": "Avventura",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    }
+   ]
+  },
+  {
+   "voce": "•• Lettera",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 27,
+   "figli": [
+    {
+     "voce": "0-9",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    },
+    {
+     "voce": "A",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    },
+    {
+     "voce": "B",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    }
+   ]
+  },
+  {
+   "voce": "•• Sub-ITA",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 30
+  },
+  {
+   "voce": "Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 29
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 6
+  }
+ ],
+ "sezioni_riepilogo": "8 ok su 8",
+ "rete": [
+  {
+   "url": "https://altadefinizione-01.autos/lastnews/",
+   "status": 200,
+   "byte": 132793,
+   "secondi": 0.6,
+   "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/35394-l-incredibile-storia-della-signora-del-terzo-piano-streaming.html",
+   "status": 200,
+   "byte": 92582,
+   "secondi": 0.3,
+   "titolo_pagina": "L'incredibile storia della signora del terzo piano Streaming HD - Altadefinizion",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://vixsrc.to/api/movie/tt4716644",
+   "status": 404,
+   "byte": 6953,
+   "secondi": 0.3,
+   "titolo_pagina": "Not Found",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://vixsrc.to/movie/tt4716644",
+   "status": 200,
+   "byte": 7858,
+   "secondi": 0.2,
+   "titolo_pagina": "VixSrc",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/lastnews/",
+   "status": 200,
+   "byte": 132793,
+   "secondi": 0.3,
+   "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/cinema/",
+   "status": 200,
+   "byte": 156844,
+   "secondi": 0.5,
+   "titolo_pagina": "Al Cinema – Altadefinizione01",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos",
+   "status": 200,
+   "byte": 181688,
+   "secondi": 0.3,
+   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos",
+   "status": 200,
+   "byte": 181688,
+   "secondi": 0.3,
+   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/azione/",
+   "status": 200,
+   "byte": 156901,
+   "secondi": 0.3,
+   "titolo_pagina": "Azione – Altadefinizione01",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/animazione/",
+   "status": 200,
+   "byte": 157993,
+   "secondi": 0.3,
+   "titolo_pagina": "Animazione – Altadefinizione01",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/avventura/",
+   "status": 200,
+   "byte": 158459,
+   "secondi": 0.3,
+   "titolo_pagina": "Avventura – Altadefinizione01",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/catalog/a",
+   "status": 200,
+   "byte": 107935,
+   "secondi": 0.4,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/catalog/9",
+   "status": 200,
+   "byte": 106987,
+   "secondi": 0.4,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/catalog/A",
+   "status": 200,
+   "byte": 107935,
+   "secondi": 0.4,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/catalog/B",
+   "status": 200,
+   "byte": 107935,
+   "secondi": 0.4,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/sub-ita/",
+   "status": 200,
+   "byte": 156275,
+   "secondi": 0.5,
+   "titolo_pagina": "Sub-ITA &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/serie-tv/",
+   "status": 200,
+   "byte": 155781,
+   "secondi": 0.3,
+   "titolo_pagina": "Serie TV in Streaming Gratis - Altadefinizione01"
+  },
+  {
+   "url": "https://altadefinizione-01.autos/?do=search&subaction=search&titleonly=3&story=avatar",
+   "status": 200,
+   "byte": 92982,
+   "secondi": 0.7,
+   "titolo_pagina": "Site search &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
+  }
+ ],
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
+}

@@ -1,0 +1,28 @@
+Canale vixsrc | indirizzo https://vixsrc.to
+== mainlist
+   -> 4 voci
+      peliculas | • Film | https://vixsrc.to
+      peliculas | • Serie TV | https://vixsrc.to
+      search | txt70741 … | https://vixsrc.to
+      channel_config | txt60587 %s | 
+== lista "• Film"
+   -> 1 voci
+      peliculas | txt30992 %s > | https://vixsrc.to
+   la lista non ha titoli: c e solo la pagina successiva
+== lista "• Serie TV"
+   -> 1 voci
+      peliculas | txt30992 %s > | https://vixsrc.to
+   la lista non ha titoli: c e solo la pagina successiva
+Nessuna voce da riprodurre trovata
+== voci dichiarate in mainlist (2)
+    film | ''
+    tvshow | ''
+== controllo di tutte le sezioni
+   SEZIONE • Film -> VUOTA   | ultima pagina: {'url': 'https://vixsrc.to/api/list/movie?lang=it', 'status': 200, 'byte': 580109, 'titolo_pagina': ''}
+   SEZIONE • Serie TV -> VUOTA   | ultima pagina: {'url': 'https://vixsrc.to/api/list/tv?lang=it', 'status': 200, 'byte': 203561, 'titolo_pagina': ''}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://api.themoviedb.org/3/search/movie?api_key=a1ab8b8669da03637a4b98fa39c39228&query=avatar&language=it&include_adult=False&page=1', 'status': 200, 'byte': 9683, 'titolo_pagina': ''}
+SEZIONI: 0 ok su 3
+   SEZIONE SENZA TITOLI: • Film | VUOTA
+   SEZIONE SENZA TITOLI: • Serie TV | VUOTA
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
+VERDETTO: SI FERMA A: ultimo passo, nessuna voce da riprodurre

@@ -1,0 +1,338 @@
+{
+ "canale": "streamingcommunity",
+ "host": "https://streamingcommunityz.day",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 17
+  },
+  {
+   "passo": "lista \"• Film\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "findvideos su \"Drive - Cuori in pista \"",
+   "esito": "OK",
+   "voci": 2
+  }
+ ],
+ "video": [
+  {
+   "server": "streamingcommunityws",
+   "url": "https://streamingcommunityz.day/it/iframe/66440",
+   "finale": "https://vixcloud.cc/playlist/797176?token=03bedf26e70b37e51601020298641c76&expires=1798811374&asn=",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
+ "menu_dichiarato": [
+  "film | '/it/movies'",
+  "film | ('Aggiunti di recente', ['/it/movies', 'peliculas', 1])",
+  "film | ('Top 10 film di oggi', ['/it/movies', 'peliculas', 2])",
+  "tvshow | '/it/tv-shows'",
+  "tvshow | ('Aggiunti di recente', ['/it/tv-shows', 'peliculas', 1])",
+  "tvshow | ('Top 10 serie TV di oggi', ['/it/tv-shows', 'peliculas', 2])",
+  "generi | ('Generi', ['', 'genres'])",
+  "menu | ('Archivio', ['/it/archive', 'peliculas', -1])",
+  "menu | ('Archivio Film {submenu}', ['/it/archive?type=movie', 'peliculas', -1])",
+  "menu | ('Archivio Serie TV {submenu}', ['/it/archive?type=tv', 'peliculas', -1])",
+  "menu | ('Archivio per data aggiornamento {submenu}', ['/it/archive?sort=last_air_date', 'peliculas', -1])",
+  "menu | ('Archivio per data aggiunta {submenu}', ['/it/archive?sort=created_at', 'peliculas', -1])",
+  "menu | ('Archivio per valutazione {submenu}', ['/it/archive?sort=score', 'peliculas', -1])",
+  "menu | ('Archivio per numero visioni {submenu}', ['/it/archive?sort=views', 'peliculas', -1])",
+  "menu | ('Archivio per nome {submenu}', ['/it/archive?sort=name', 'peliculas', -1])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Film",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Aggiunti di recente",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Top 10 film di oggi",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 10
+  },
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Aggiunti di recente",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Top 10 serie TV di oggi",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 10
+  },
+  {
+   "voce": "Generi",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 26,
+   "figli": [
+    {
+     "voce": "Azione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    },
+    {
+     "voce": "Action & Adventure",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    },
+    {
+     "voce": "Avventura",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    }
+   ]
+  },
+  {
+   "voce": "Archivio",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Archivio Film",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Archivio Serie TV",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Archivio per data aggiornamento",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Archivio per data aggiunta",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Archivio per valutazione",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Archivio per numero visioni",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "•• Archivio per nome",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 20
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "OK",
+   "titoli": 10
+  }
+ ],
+ "sezioni_riepilogo": "16 ok su 16",
+ "rete": [
+  {
+   "url": "https://streamingcommunityz.day/it/movies",
+   "status": 200,
+   "byte": 303755,
+   "secondi": 0.8,
+   "titolo_pagina": "",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/iframe/66440",
+   "status": 200,
+   "byte": 1794,
+   "secondi": 0.5,
+   "titolo_pagina": "",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://vixcloud.cc/embed/797176?token=4e24c813647caa1fa81c108494262eca&t=RHJpdmUgLSBDdW9yaSBpbiBwaXN0YQ%3D%3D&referer=1&expires=1793627384&lang=it&scz=1",
+   "status": 200,
+   "byte": 6632,
+   "secondi": 0.3,
+   "titolo_pagina": "797176",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/movies",
+   "status": 200,
+   "byte": 303757,
+   "secondi": 0.6,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/movies",
+   "status": 200,
+   "byte": 303757,
+   "secondi": 0.7,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/movies",
+   "status": 200,
+   "byte": 303757,
+   "secondi": 0.8,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/tv-shows",
+   "status": 200,
+   "byte": 324595,
+   "secondi": 0.6,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/tv-shows",
+   "status": 200,
+   "byte": 324597,
+   "secondi": 0.6,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/tv-shows",
+   "status": 200,
+   "byte": 324597,
+   "secondi": 0.7,
+   "titolo_pagina": "",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day",
+   "status": 200,
+   "byte": 324445,
+   "secondi": 0.7,
+   "titolo_pagina": "",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive?genre[]=4",
+   "status": 200,
+   "byte": 229558,
+   "secondi": 0.8,
+   "titolo_pagina": "",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive?genre[]=13",
+   "status": 200,
+   "byte": 239162,
+   "secondi": 0.9,
+   "titolo_pagina": "",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive?genre[]=11",
+   "status": 200,
+   "byte": 241657,
+   "secondi": 0.8,
+   "titolo_pagina": "",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive",
+   "status": 200,
+   "byte": 221730,
+   "secondi": 0.6,
+   "titolo_pagina": "",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive?type=movie",
+   "status": 200,
+   "byte": 226916,
+   "secondi": 0.7,
+   "titolo_pagina": "",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive?type=tv",
+   "status": 200,
+   "byte": 219243,
+   "secondi": 0.7,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive?sort=last_air_date",
+   "status": 200,
+   "byte": 242517,
+   "secondi": 0.7,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive?sort=created_at",
+   "status": 200,
+   "byte": 224680,
+   "secondi": 0.6,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive?sort=score",
+   "status": 200,
+   "byte": 259313,
+   "secondi": 0.7,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive?sort=views",
+   "status": 200,
+   "byte": 285645,
+   "secondi": 0.9,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/archive?sort=name",
+   "status": 200,
+   "byte": 268625,
+   "secondi": 0.7,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://streamingcommunityz.day/it/search?q=avatar",
+   "status": 200,
+   "byte": 83717,
+   "secondi": 0.6,
+   "titolo_pagina": ""
+  }
+ ],
+ "verdetto": "ARRIVA AL VIDEO"
+}

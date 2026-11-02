@@ -1,0 +1,190 @@
+{
+ "canale": "guardaserieclick",
+ "host": "",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  },
+  {
+   "passo": "lista \"•• Aggiornamenti\"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  },
+  {
+   "passo": "lista \"•• Generi\"",
+   "esito": "ERRORE",
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+  }
+ ],
+ "video": [],
+ "menu_dichiarato": [
+  "tvshow | ''",
+  "tvshow | ('Aggiornamenti', ['', 'peliculas', 'update'])",
+  "tvshow | ('Generi', ['', 'genres', 'genres'])",
+  "tvshow | ('News Sub-ITA', ['', 'peliculas', 'ined'])",
+  "tvshow | ('Anime/Cartoni', ['/category/animazione/', 'peliculas', 'genres'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "• Serie TV",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Aggiornamenti",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "genres",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• News Sub-ITA",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• Anime/Cartoni",
+   "azione": "peliculas",
+   "esito": "ERRORE WebErrorException",
+   "pagine": [
+    {
+     "url": "/category/animazione/",
+     "status": "Invalid URL '/category/animazione/': No scheme supplied. Perhaps you meant http:///category/animazione/?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  },
+  {
+   "voce": "•• txt70741 Serie TV…",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "/?s=avatar",
+     "status": "Invalid URL '/?s=avatar': No scheme supplied. Perhaps you meant http:///?s=avatar?",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "0 ok su 6",
+ "rete": [
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "/category/animazione/",
+   "status": "Invalid URL '/category/animazione/': No scheme supplied. Perhaps you meant http:///category/animazione/?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "/?s=avatar",
+   "status": "Invalid URL '/?s=avatar': No scheme supplied. Perhaps you meant http:///?s=avatar?",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/09.html"
+  }
+ ],
+ "verdetto": "SI FERMA A: lista \"• Serie TV\""
+}
