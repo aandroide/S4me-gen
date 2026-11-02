@@ -2,6 +2,6 @@
 GET 200 https://prod-realmservice.mercury.dnitv.com/realm-config/www.discoveryplus.com%2Fit%2Fepg
   chiavi ['environment', 'authDomain', 'domain', 'brandId', 'realm', 'pathRegex', 'mainTerritoryCode', 'siteLookupKey'] domain= eu1-prod-direct.discoveryplus.com
 == 2 token
-GET 502 https://eu1-prod-direct.discoveryplus.com/token?deviceId=4f7dd3245f6d4193b112038e7950fe61&realm=dplay&shortlived=true
+GET 502 https://eu1-prod-direct.discoveryplus.com/token?deviceId=866de17d3aa9480cb6ab3064cfdd431a&realm=dplay&shortlived=true
   non json: <html> <head><title>502 Bad Gateway</title></head> <body> <center><h1>502 Bad Gateway</h1></center> </body> </html> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padd
   token NON letto: 'NoneType' object is not subscriptable None
