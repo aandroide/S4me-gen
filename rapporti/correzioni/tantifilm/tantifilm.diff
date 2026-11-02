@@ -1,0 +1,11 @@
+--- canali_base/tantifilm.py
++++ rapporti/correzioni/tantifilm/tantifilm.py
+@@ -62,7 +62,7 @@
+             patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \((?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?class="se_num">(?P<quality>.*?)</span>'
+         else:
+             patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \((?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate"> <p> )(?P<quality>.*?)(?:</span>| </p>)'
+-        patronBlock = r'<div id="dle-content">(?P<block>.*?)<!-- main_col -->'
++        patronBlock = ''
+ 
+     return locals()
+ 
