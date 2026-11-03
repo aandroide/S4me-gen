@@ -13,11 +13,11 @@ Canale la7 | indirizzo
       episodios | Barbero Risponde | https://www.la7play.it/barbero-risponde
 == episodios su "100 minuti"
    -> 21 voci
-      findvideos | 100 Minuti - Senza tetto né legge | https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465
-      findvideos | 100 minuti - IMMORTALITÀ. Cosa rende immortale il potere cri | https://www.la7play.it/100minuti/rivedila7/100-minuti-immortalita-cosa-rende-immortale-il-potere-cri
-      findvideos | 100 minuti - AVIDITÀ I soldi, le lobby e la politica | https://www.la7play.it/100minuti/rivedila7/100-minuti-avidita-i-soldi-le-lobby-e-la-politica-24-06-2
-      findvideos | 100 minuti - Milano siamo noi - Puntata del 16/6/2025 | https://www.la7play.it/100minuti/rivedila7/100-minuti-milano-siamo-noi-17-06-2025-600774
-== findvideos su "100 Minuti - Senza tetto né legge"
+      findvideos | Senza tetto né legge - Puntata del 18/7/2025 | https://www.la7play.it/100minuti/rivedila7/100-minuti-senza-tetto-ne-legge-19-07-2025-604465
+      findvideos | Immortalità. Cosa rende immortale il potere criminale delle  | https://www.la7play.it/100minuti/rivedila7/100-minuti-immortalita-cosa-rende-immortale-il-potere-cri
+      findvideos | Avidità. I soldi, le lobby e la politica - Puntata del 23/6/ | https://www.la7play.it/100minuti/rivedila7/100-minuti-avidita-i-soldi-le-lobby-e-la-politica-24-06-2
+      findvideos | Milano siamo noi - Puntata del 16/6/2025 | https://www.la7play.it/100minuti/rivedila7/100-minuti-milano-siamo-noi-17-06-2025-600774
+== findvideos su "Senza tetto né legge - Puntata del 18/7/"
    -> 1 voci
       play | Direct | https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/cont
 == risoluzione directo https://awsvodpkg.iltrovatore.it/local/hls/,//content/entry/data/0/679/0_f0rztze5_0_lp8pw7tm_1,/cont
@@ -32,13 +32,13 @@ Canale la7 | indirizzo
     menu | ('Coffee Tech {bullet bold} {teen}', ['/coffee-tech', 'episodios', '', 'tvshow'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 2 
-   SEZIONE Oggi 2 novembre -> OK 5 
+   SEZIONE Oggi 3 novembre -> OK 5 
+   SEZIONE Lunedi 2 novembre -> OK 29 
    SEZIONE Domenica 1 novembre -> OK 22 
-   SEZIONE Sabato 31 ottobre -> OK 22 
    SEZIONE La7 -> SOTTOMENU  
-   SEZIONE Oggi 2 novembre -> OK 4 
+   SEZIONE Oggi 3 novembre -> OK 3 
+   SEZIONE Lunedi 2 novembre -> OK 9 
    SEZIONE Domenica 1 novembre -> OK 10 
-   SEZIONE Sabato 31 ottobre -> OK 5 
    SEZIONE La7Cinema -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE • Programmi TV -> OK 71 

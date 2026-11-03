@@ -13,12 +13,12 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"Phony\"",
+   "passo": "episodios su \"Magic Knight Rayearth\"",
    "esito": "OK",
    "voci": 2
   },
   {
-   "passo": "findvideos su \"1x01 - Episodio pilota\"",
+   "passo": "findvideos su \"1x01\"",
    "esito": "OK",
    "voci": 1
   }
@@ -26,8 +26,8 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/21952924/1/1",
-   "finale": "http://127.0.0.1:42925/hls/tv/21952924/1/1/master.m3u8",
+   "url": "https://v.vidxgo.co/32813343/1/1",
+   "finale": "http://127.0.0.1:41195/hls/tv/32813343/1/1/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -59,13 +59,13 @@
      "voce": "Commedia",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 1518
+     "titoli": 1519
     },
     {
      "voce": "Crime",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 844
+     "titoli": 845
     }
    ]
   },
@@ -81,39 +81,39 @@
   {
    "url": "https://guardaseriex.cyou/serietv-streaming/page/1/",
    "status": 200,
-   "byte": 99981,
+   "byte": 99960,
    "secondi": 1.4,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.best/commedia/5850-phony-streaming.html",
+   "url": "https://guardaseriex.art/animazione/5863-magic-knight-rayearth-streaming.html",
    "status": 200,
-   "byte": 64187,
+   "byte": 64621,
    "secondi": 0.3,
-   "titolo_pagina": "Phony streaming - Guardaserie",
+   "titolo_pagina": "Magic Knight Rayearth streaming - Guardaserie",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt21952924?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt32813343?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
    "status": 200,
-   "byte": 872,
+   "byte": 489,
    "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/275139/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/303272/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 10114,
-   "secondi": 0.1,
+   "byte": 9289,
+   "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://guardaseriex.cyou/serietv-streaming/page/1/",
    "status": 200,
-   "byte": 99981,
+   "byte": 99960,
    "secondi": 0.7,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/05.html"
@@ -121,40 +121,40 @@
   {
    "url": "https://guardaseriex.cyou/serietv-streaming/page/1/",
    "status": 200,
-   "byte": 99981,
-   "secondi": 0.7,
+   "byte": 99960,
+   "secondi": 1.0,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://guardaseriex.best/biografico/",
+   "url": "https://guardaseriex.art/biografico/",
    "status": 200,
-   "byte": 221726,
-   "secondi": 0.3,
+   "byte": 221419,
+   "secondi": 0.7,
    "titolo_pagina": "Biografico streaming | Guardaserie",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://guardaseriex.best/commedia/",
+   "url": "https://guardaseriex.art/commedia/",
    "status": 200,
-   "byte": 2271084,
-   "secondi": 0.8,
+   "byte": 2267863,
+   "secondi": 0.7,
    "titolo_pagina": "Commedia streaming | Guardaserie",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://guardaseriex.best/crime/",
+   "url": "https://guardaseriex.art/crime/",
    "status": 200,
-   "byte": 1265036,
-   "secondi": 0.7,
+   "byte": 1263227,
+   "secondi": 2.0,
    "titolo_pagina": "Crime streaming | Guardaserie",
    "file": "pagine/09.html"
   },
   {
    "url": "https://guardaseriex.cyou/index.php?do=search&subaction=search&story=avatar",
    "status": 200,
-   "byte": 38229,
-   "secondi": 0.6,
+   "byte": 38183,
+   "secondi": 1.0,
    "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS",
    "file": "pagine/10.html"
   }

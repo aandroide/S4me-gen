@@ -29,7 +29,7 @@
      "voce": "Music Banners",
      "azione": "radio",
      "esito": "OK",
-     "titoli": 1
+     "titoli": 2
     },
     {
      "voce": "TuneIn Exclusive Music Stations",
@@ -41,7 +41,7 @@
      "voce": "Ascolta le festività",
      "azione": "radio",
      "esito": "OK",
-     "titoli": 11
+     "titoli": 13
     }
    ]
   },
@@ -55,7 +55,7 @@
      "voce": "Recommender Test Row 3",
      "azione": "radio",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 5
     },
     {
      "voce": "Critica sportiva non-stop",
@@ -77,7 +77,7 @@
         {
          "url": "https://api.radiotime.com/categories/c1736013?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BU7XAQAAAAAA",
          "status": 200,
-         "byte": 68822,
+         "byte": 68818,
          "titolo_pagina": ""
         }
        ]
@@ -90,7 +90,7 @@
         {
          "url": "https://api.radiotime.com/categories/c403161?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgADAAMAW1sMFnsGAAEHDJTh9QUMlOH1Ba78AQAAAAAA",
          "status": 200,
-         "byte": 26203,
+         "byte": 26199,
          "titolo_pagina": ""
         }
        ]
@@ -103,7 +103,7 @@
         {
          "url": "https://api.radiotime.com/categories/c16230079?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BVDXAQAAAAAA",
          "status": 200,
-         "byte": 41865,
+         "byte": 41861,
          "titolo_pagina": ""
         }
        ]
@@ -113,19 +113,19 @@
       {
        "url": "https://api.radiotime.com/categories/c1736013?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BU7XAQAAAAAA",
        "status": 200,
-       "byte": 68822,
+       "byte": 68818,
        "titolo_pagina": ""
       },
       {
        "url": "https://api.radiotime.com/categories/c403161?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgADAAMAW1sMFnsGAAEHDJTh9QUMlOH1Ba78AQAAAAAA",
        "status": 200,
-       "byte": 26203,
+       "byte": 26199,
        "titolo_pagina": ""
       },
       {
        "url": "https://api.radiotime.com/categories/c16230079?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BVDXAQAAAAAA",
        "status": 200,
-       "byte": 41865,
+       "byte": 41861,
        "titolo_pagina": ""
       }
      ]
@@ -164,7 +164,7 @@
         {
          "url": "https://api.radiotime.com/categories/c100001521?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQAEAAQAW1sMQuIAAAEHDKHx9QUMofH1BScRAgAAAAAA",
          "status": 200,
-         "byte": 149261,
+         "byte": 151297,
          "titolo_pagina": ""
         }
        ]
@@ -177,7 +177,7 @@
         {
          "url": "https://api.radiotime.com/categories/c100002931?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgAEAAQAW1sMQuIAAAEHDKHx9QUMofH1BT0RAgAAAAAA",
          "status": 200,
-         "byte": 49489,
+         "byte": 49243,
          "titolo_pagina": ""
         }
        ]
@@ -220,12 +220,12 @@
       {
        "voce": "iHeart Podcasts",
        "azione": "radio",
-       "esito": "VUOTA",
+       "esito": "ERRORE AttributeError",
        "pagine": [
         {
          "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
-         "status": 200,
-         "byte": 1749020,
+         "status": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 468, in _make_request\n    six.raise_from(e, None)\n  File \"<string>\", line 3, in raise_from\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 463, in _make_request\n    httplib_response = conn.getresponse()\n                       ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 1478, in getresponse\n    response.begin()\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 343, in begin\n    version, status, reason = self._read_status()\n                              ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 304, in _read_status\n    line = str(self.fp.readline(_MAXLINE + 1), \"iso-8859-1\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/socket.py\", line 720, in readinto\n    return self._sock.recv_into(b)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py\", line 1264, in recv_into\n    return self.read(nbytes, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 802, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 552, in increment\n    raise six.reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/packages/six.py\", line 770, in reraise\n    raise value\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 716, in urlopen\n    httplib_response = self._make_request(\n                       ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 470, in _make_request\n    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 358, in _raise_timeout\n    raise ReadTimeoutError(\nurllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.radiotime.com', port=443): Read timed out. (read timeout=5)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 645, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 275, in send\n    raise e\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 259, in send\n    return super(CipherSuiteAdapter, self).send(request, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 742, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.radiotime.com', port=443): Read timed out. (read timeout=5)\n",
+         "byte": 0,
          "titolo_pagina": ""
         }
        ]
@@ -240,8 +240,8 @@
       },
       {
        "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
-       "status": 200,
-       "byte": 1749020,
+       "status": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 468, in _make_request\n    six.raise_from(e, None)\n  File \"<string>\", line 3, in raise_from\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 463, in _make_request\n    httplib_response = conn.getresponse()\n                       ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 1478, in getresponse\n    response.begin()\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 343, in begin\n    version, status, reason = self._read_status()\n                              ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 304, in _read_status\n    line = str(self.fp.readline(_MAXLINE + 1), \"iso-8859-1\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/socket.py\", line 720, in readinto\n    return self._sock.recv_into(b)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py\", line 1264, in recv_into\n    return self.read(nbytes, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 802, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 552, in increment\n    raise six.reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/packages/six.py\", line 770, in reraise\n    raise value\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 716, in urlopen\n    httplib_response = self._make_request(\n                       ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 470, in _make_request\n    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 358, in _raise_timeout\n    raise ReadTimeoutError(\nurllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.radiotime.com', port=443): Read timed out. (read timeout=5)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 645, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 275, in send\n    raise e\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 259, in send\n    return super(CipherSuiteAdapter, self).send(request, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 742, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.radiotime.com', port=443): Read timed out. (read timeout=5)\n",
+       "byte": 0,
        "titolo_pagina": ""
       }
      ]
@@ -385,7 +385,7 @@
     {
      "url": "http://api.radiotime.com/categories/c100000088?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
      "status": 200,
-     "byte": 278481,
+     "byte": 276224,
      "titolo_pagina": ""
     },
     {
@@ -396,8 +396,8 @@
     },
     {
      "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
-     "status": 200,
-     "byte": 1749020,
+     "status": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 468, in _make_request\n    six.raise_from(e, None)\n  File \"<string>\", line 3, in raise_from\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 463, in _make_request\n    httplib_response = conn.getresponse()\n                       ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 1478, in getresponse\n    response.begin()\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 343, in begin\n    version, status, reason = self._read_status()\n                              ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 304, in _read_status\n    line = str(self.fp.readline(_MAXLINE + 1), \"iso-8859-1\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/socket.py\", line 720, in readinto\n    return self._sock.recv_into(b)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py\", line 1264, in recv_into\n    return self.read(nbytes, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 802, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 552, in increment\n    raise six.reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/packages/six.py\", line 770, in reraise\n    raise value\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 716, in urlopen\n    httplib_response = self._make_request(\n                       ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 470, in _make_request\n    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 358, in _raise_timeout\n    raise ReadTimeoutError(\nurllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.radiotime.com', port=443): Read timed out. (read timeout=5)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 645, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 275, in send\n    raise e\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 259, in send\n    return super(CipherSuiteAdapter, self).send(request, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 742, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.radiotime.com', port=443): Read timed out. (read timeout=5)\n",
+     "byte": 0,
      "titolo_pagina": ""
     }
    ]
@@ -537,7 +537,7 @@
         {
          "url": "https://api.radiotime.com/categories/r101215?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAEAAQABAAEAEhIAAQcAAA",
          "status": 200,
-         "byte": 108474,
+         "byte": 108667,
          "titolo_pagina": ""
         }
        ]
@@ -550,7 +550,7 @@
         {
          "url": "https://api.radiotime.com/categories/r101216?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAIAAgABAAEAEhIAAQcAAA",
          "status": 200,
-         "byte": 93999,
+         "byte": 94106,
          "titolo_pagina": ""
         }
        ]
@@ -563,7 +563,7 @@
         {
          "url": "https://api.radiotime.com/categories/r100297?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAMAAwABAAEAEhIAAQcAAA",
          "status": 200,
-         "byte": 65636,
+         "byte": 65609,
          "titolo_pagina": ""
         }
        ]
@@ -573,19 +573,19 @@
       {
        "url": "https://api.radiotime.com/categories/r101215?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAEAAQABAAEAEhIAAQcAAA",
        "status": 200,
-       "byte": 108474,
+       "byte": 108667,
        "titolo_pagina": ""
       },
       {
        "url": "https://api.radiotime.com/categories/r101216?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAIAAgABAAEAEhIAAQcAAA",
        "status": 200,
-       "byte": 93999,
+       "byte": 94106,
        "titolo_pagina": ""
       },
       {
        "url": "https://api.radiotime.com/categories/r100297?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAMAAwABAAEAEhIAAQcAAA",
        "status": 200,
-       "byte": 65636,
+       "byte": 65609,
        "titolo_pagina": ""
       }
      ]
@@ -602,13 +602,13 @@
    "voce": "• Lingua",
    "azione": "radio",
    "esito": "SOTTOMENU",
-   "sottovoci": 100,
+   "sottovoci": 99,
    "figli": [
     {
      "voce": "Aborigeno",
      "azione": "radio",
      "esito": "OK",
-     "titoli": 20
+     "titoli": 19
     },
     {
      "voce": "Afrikaans",
@@ -627,32 +627,93 @@
   {
    "voce": "txt70741 …",
    "azione": "radio",
-   "esito": "OK",
-   "titoli": 1
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 24,
+   "figli": [
+    {
+     "voce": "Analysing Avatar",
+     "azione": "radio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Avatar Meher Baba",
+     "azione": "radio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Shiva Shambho Iberoamerica",
+     "azione": "radio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "",
+       "status": "",
+       "byte": 0,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
+   "pagine": [
+    {
+     "url": "http://api.radiotime.com/profiles?fullTextSearch=true&query=avatar&formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
+     "status": 200,
+     "byte": 38929,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "",
+     "status": "",
+     "byte": 0,
+     "titolo_pagina": ""
+    }
+   ]
   }
  ],
- "sezioni_riepilogo": "7 ok su 8",
+ "sezioni_riepilogo": "6 ok su 8",
  "rete": [
   {
    "url": "http://api.radiotime.com/categories/music?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 345123,
-   "secondi": 0.4,
+   "byte": 351835,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
    "url": "http://api.radiotime.com/categories/sports?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 295752,
-   "secondi": 0.3,
+   "byte": 297485,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://api.radiotime.com/categories/c1736013?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BU7XAQAAAAAA",
    "status": 200,
-   "byte": 68822,
+   "byte": 68818,
    "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/03.html"
@@ -660,40 +721,40 @@
   {
    "url": "https://api.radiotime.com/categories/c403161?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgADAAMAW1sMFnsGAAEHDJTh9QUMlOH1Ba78AQAAAAAA",
    "status": 200,
-   "byte": 26203,
-   "secondi": 0.3,
+   "byte": 26199,
+   "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://api.radiotime.com/categories/c16230079?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BVDXAQAAAAAA",
    "status": 200,
-   "byte": 41865,
-   "secondi": 0.2,
+   "byte": 41861,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
    "url": "http://api.radiotime.com/categories/c57922?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 135180,
-   "secondi": 0.3,
+   "byte": 135005,
+   "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
    "url": "https://api.radiotime.com/categories/c100001521?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQAEAAQAW1sMQuIAAAEHDKHx9QUMofH1BScRAgAAAAAA",
    "status": 200,
-   "byte": 149261,
-   "secondi": 0.4,
+   "byte": 151297,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
    "url": "https://api.radiotime.com/categories/c100002931?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgAEAAQAW1sMQuIAAAEHDKHx9QUMofH1BT0RAgAAAAAA",
    "status": 200,
-   "byte": 49489,
-   "secondi": 0.2,
+   "byte": 49243,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   },
@@ -701,15 +762,15 @@
    "url": "https://api.radiotime.com/categories/g237?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwAEAAQAW1sMQuIAAAEHDKHx9QUMofH1BSURAgAAAAAA",
    "status": 200,
    "byte": 2527,
-   "secondi": 0.2,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
   {
    "url": "http://api.radiotime.com/categories/c100000088?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 278481,
-   "secondi": 0.2,
+   "byte": 276224,
+   "secondi": 0.8,
    "titolo_pagina": "",
    "file": "pagine/10.html"
   },
@@ -717,15 +778,15 @@
    "url": "https://api.radiotime.com/categories/c100035580?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BaR_AgAAAAAA",
    "status": 200,
    "byte": 113637,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/11.html"
   },
   {
    "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
-   "status": 200,
-   "byte": 1749020,
-   "secondi": 2.0,
+   "status": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 468, in _make_request\n    six.raise_from(e, None)\n  File \"<string>\", line 3, in raise_from\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 463, in _make_request\n    httplib_response = conn.getresponse()\n                       ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 1478, in getresponse\n    response.begin()\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 343, in begin\n    version, status, reason = self._read_status()\n                              ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 304, in _read_status\n    line = str(self.fp.readline(_MAXLINE + 1), \"iso-8859-1\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/socket.py\", line 720, in readinto\n    return self._sock.recv_into(b)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py\", line 1264, in recv_into\n    return self.read(nbytes, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 802, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 552, in increment\n    raise six.reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/packages/six.py\", line 770, in reraise\n    raise value\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 716, in urlopen\n    httplib_response = self._make_request(\n                       ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 470, in _make_request\n    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 358, in _raise_timeout\n    raise ReadTimeoutError(\nurllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.radiotime.com', port=443): Read timed out. (read timeout=5)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 645, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 275, in send\n    raise e\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 259, in send\n    return super(CipherSuiteAdapter, self).send(request, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 742, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.radiotime.com', port=443): Read timed out. (read timeout=5)\n",
+   "byte": 0,
+   "secondi": 5.0,
    "titolo_pagina": "",
    "file": "pagine/12.html"
   },
@@ -778,28 +839,28 @@
    "url": "http://api.radiotime.com/categories/c100006408?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
    "byte": 64189,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/g4535?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQABAAEAW1sMCPr1BQEHDCT69QUMJPr1BXhQAgAAAAAA",
    "status": 200,
    "byte": 58,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/g4532?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMCPr1BQEHDCT69QUMJPr1BYhRAgAAAAAA",
    "status": 200,
    "byte": 2169,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/g4505?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwMAAwABAAEAW1sMCPr1BQEHDCT69QUMJPr1BXpQAgAAAAAA",
    "status": 200,
    "byte": 64,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
@@ -826,64 +887,85 @@
   {
    "url": "http://api.radiotime.com/categories/regions?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 42636,
+   "byte": 42684,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/r101215?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAEAAQABAAEAEhIAAQcAAA",
    "status": 200,
-   "byte": 108474,
-   "secondi": 0.2,
+   "byte": 108667,
+   "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/r101216?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAIAAgABAAEAEhIAAQcAAA",
    "status": 200,
-   "byte": 93999,
-   "secondi": 0.2,
+   "byte": 94106,
+   "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/r100297?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAMAAwABAAEAEhIAAQcAAA",
    "status": 200,
-   "byte": 65636,
-   "secondi": 0.2,
+   "byte": 65609,
+   "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "http://api.radiotime.com/categories/languages?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 67129,
-   "secondi": 0.1,
+   "byte": 66454,
+   "secondi": 0.0,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/languages?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&filter=l169&viewModel=False&itemToken=BgcHAAEAAQABAAEAExMAAQcTUgAAABNSAAAA",
    "status": 200,
-   "byte": 33778,
-   "secondi": 0.2,
+   "byte": 33960,
+   "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/languages?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&filter=l191&viewModel=False&itemToken=BgcHAAIAAgABAAEAExMAAQcTUgAAABNSAAAA",
    "status": 200,
-   "byte": 33997,
-   "secondi": 0.2,
+   "byte": 34412,
+   "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/languages?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&filter=l226&viewModel=False&itemToken=BgcHAAMAAwABAAEAExMAAQcTUgAAABNSAAAA",
    "status": 200,
-   "byte": 34493,
-   "secondi": 0.2,
+   "byte": 34611,
+   "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "http://api.radiotime.com/profiles?fullTextSearch=true&query=avatar&formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 40763,
-   "secondi": 0.5,
+   "byte": 38929,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "",
+   "status": "",
+   "byte": 0,
+   "secondi": 0.0,
    "titolo_pagina": ""
   }
  ],

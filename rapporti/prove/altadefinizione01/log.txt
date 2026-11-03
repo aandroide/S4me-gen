@@ -1,21 +1,21 @@
-Canale altadefinizione01 | indirizzo https://altadefinizione-01.autos
+Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
 == mainlist
    -> 9 voci
-      peliculas | Tutti  | https://altadefinizione-01.autos/lastnews/
-      peliculas | •• Al Cinema | https://altadefinizione-01.autos/cinema/
-      peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.autos
-      genres | •• Generi | https://altadefinizione-01.autos
+      peliculas | Tutti  | https://altadefinizione-01.best/lastnews/
+      peliculas | •• Al Cinema | https://altadefinizione-01.best/cinema/
+      peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.best
+      genres | •• Generi | https://altadefinizione-01.best
 == lista "Tutti "
-   -> 24 voci
-      check | L'incredibile storia della signora del terzo piano  | https://altadefinizione-01.autos/35394-l-incredibile-storia-della-signora-del-terzo-piano-streaming.
-      check | Il regalo di compleanno  | https://altadefinizione-01.autos/35376-il-regalo-di-compleanno-streaming.html
-      check | Killer Card  | https://altadefinizione-01.autos/35377-killer-card-streaming.html
-      check | Apocalisse Z: Il nuovo mondo  | https://altadefinizione-01.autos/35368-apocalypse-z-il-nuovo-mondo-streaming.html
-== check su "L'incredibile storia della signora del t"
+   -> 23 voci
+      check | Il passato di mio padre  | https://altadefinizione-01.best/35410-il-passato-di-mio-padre-streaming.html
+      check | L'oro rubato  | https://altadefinizione-01.best/35409-l-oro-rubato-streaming.html
+      check | L'incredibile storia della signora del terzo piano  | https://altadefinizione-01.best/35394-l-incredibile-storia-della-signora-del-terzo-piano-streaming.h
+      check | Il regalo di compleanno  | https://altadefinizione-01.best/35376-il-regalo-di-compleanno-streaming.html
+== check su "Il passato di mio padre "
    -> 2 voci
-      play | L'incredibile storia della signora del terzo piano  | https://vixsrc.to/movie/tt4716644
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.autos/35394-l-incredibile-storia-della-signora-del-terzo-piano-streaming.
-== risoluzione vixsrc https://vixsrc.to/movie/tt4716644
+      play | Il passato di mio padre  | https://vixsrc.to/movie/tt36364892
+      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35410-il-passato-di-mio-padre-streaming.html
+== risoluzione vixsrc https://vixsrc.to/movie/tt36364892
    -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
 == voci dichiarate in mainlist (7)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
@@ -26,9 +26,9 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.autos
     menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 23 
+   SEZIONE Tutti -> OK 22 
    SEZIONE •• Al Cinema -> OK 30 
-   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 35 
+   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 34 
    SEZIONE Azione -> OK 29 
    SEZIONE Animazione -> OK 27 
    SEZIONE Avventura -> OK 30 

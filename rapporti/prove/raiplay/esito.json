@@ -71,6 +71,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str12 03 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 20
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 18
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 15
+      }
+     ]
+    },
+    {
      "voce": "str11 02 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -79,20 +105,20 @@
       {
        "voce": "Rai 1",
        "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
+       "esito": "OK",
+       "titoli": 35
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 16
+       "titoli": 31
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 15
+       "titoli": 30
       }
      ]
     },
@@ -121,33 +147,6 @@
        "pagine": []
       }
      ]
-    },
-    {
-     "voce": "str16 31 str30",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU SENZA TITOLI",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      }
-     ],
-     "pagine": []
     }
    ]
   },
@@ -161,13 +160,13 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 21
+     "titoli": 22
     },
     {
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 27
     },
     {
      "voce": "Dal libro al film",
@@ -271,7 +270,7 @@
      "voce": "Docu-serie Original",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 28
+     "titoli": 29
     },
     {
      "voce": "Documentari Original",
@@ -311,7 +310,7 @@
    "voce": "Teen",
    "azione": "menu",
    "esito": "SOTTOMENU",
-   "sottovoci": 14,
+   "sottovoci": 13,
    "figli": [
     {
      "voce": "Da non perdere",
@@ -320,16 +319,16 @@
      "titoli": 36
     },
     {
-     "voce": "Non solo 'punte'...",
+     "voce": "Un mondo di fumetti",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 14
+     "titoli": 15
     },
     {
-     "voce": "Trigger - Sotto la pelle",
+     "voce": "Next Star",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 31
+     "titoli": 21
     }
    ]
   },
@@ -343,7 +342,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 23
     },
     {
      "voce": "Il teatro di Eduardo",
@@ -439,7 +438,7 @@
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
    "byte": 597,
-   "secondi": 0.4,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }

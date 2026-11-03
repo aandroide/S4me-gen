@@ -32,7 +32,7 @@
     {
      "url": "https://vixsrc.to/api/list/movie?lang=it",
      "status": 200,
-     "byte": 580109,
+     "byte": 580549,
      "titolo_pagina": ""
     }
    ]
@@ -45,7 +45,7 @@
     {
      "url": "https://vixsrc.to/api/list/tv?lang=it",
      "status": 200,
-     "byte": 203561,
+     "byte": 203601,
      "titolo_pagina": ""
     }
    ]
@@ -58,7 +58,7 @@
     {
      "url": "https://vixsrc.to/api/list/movie?lang=it",
      "status": 200,
-     "byte": 580109,
+     "byte": 580549,
      "titolo_pagina": ""
     },
     {
@@ -81,40 +81,40 @@
   {
    "url": "https://vixsrc.to/api/list/movie?lang=it",
    "status": 200,
-   "byte": 580109,
-   "secondi": 0.6,
+   "byte": 580549,
+   "secondi": 0.9,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
    "url": "https://vixsrc.to/api/list/tv?lang=it",
    "status": 200,
-   "byte": 203561,
-   "secondi": 0.5,
+   "byte": 203601,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://vixsrc.to/api/list/movie?lang=it",
    "status": 200,
-   "byte": 580109,
-   "secondi": 0.6,
+   "byte": 580549,
+   "secondi": 1.0,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
    "url": "https://vixsrc.to/api/list/tv?lang=it",
    "status": 200,
-   "byte": 203561,
-   "secondi": 0.5,
+   "byte": 203601,
+   "secondi": 0.8,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://vixsrc.to/api/list/movie?lang=it",
    "status": 200,
-   "byte": 580109,
-   "secondi": 0.6,
+   "byte": 580549,
+   "secondi": 1.1,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
@@ -138,15 +138,15 @@
    "url": "https://api.themoviedb.org/3/movie/19995/release_dates?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
    "byte": 17918,
-   "secondi": 0.0,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
    "url": "https://vixsrc.to/api/list/tv?lang=it",
    "status": 200,
-   "byte": 203561,
-   "secondi": 0.5,
+   "byte": 203601,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
@@ -161,7 +161,7 @@
   {
    "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=avatar&language=it&include_adult=False&page=1",
    "status": 200,
-   "byte": 9291,
+   "byte": 9286,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/11.html"

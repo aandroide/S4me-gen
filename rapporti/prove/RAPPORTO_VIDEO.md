@@ -1,11 +1,11 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 13, SI FERMA AL SERVER O AL VIDEO 3, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 3
+Riepilogo: ARRIVA AL VIDEO 13, SI FERMA AL SERVER O AL VIDEO 4, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
 
 ## ARRIVA AL VIDEO (13)
 
 ### altadefinizioneclick
-Sito: https://altadefinizionex.vip | verdetto: ARRIVA AL VIDEO
+Sito: https://altadefinizionex.bar | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
 ### animesaturn
@@ -17,11 +17,11 @@ Sito: https://www.animeworld.ac | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
 
 ### casacinema
-Sito: https://casa-cinema.boats | verdetto: ARRIVA AL VIDEO
+Sito: https://casa-cinema.top | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
 ### cineblog001
-Sito: https://cineblog001.men | verdetto: ARRIVA AL VIDEO
+Sito: https://cineblog001.party | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
 ### cinetecadibologna
@@ -29,7 +29,7 @@ Sito: http://cinestore.cinetecadibologna.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/x-flv
 
 ### guardaseriecam
-Sito: https://guardaseriex.best | verdetto: ARRIVA AL VIDEO
+Sito: https://guardaseriex.art | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
 ### guardaserieicu
@@ -45,11 +45,11 @@ Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
 
 ### streamingcommunity
-Sito: https://streamingcommunityz.day | verdetto: ARRIVA AL VIDEO
+Sito: https://streamingcommunityz.boo | verdetto: ARRIVA AL VIDEO
 - server streamingcommunityws: VIDEO OK m3u8 200
 
 ### tantifilm
-Sito: https://tanti-film.garden | verdetto: ARRIVA AL VIDEO
+Sito: https://tanti-film.ink | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
 ### toonitalia
@@ -57,20 +57,24 @@ Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
 - passo "findvideos su "01 - Vivi seguendo la corrente!"": VUOTO 
 - server voe: VIDEO OK m3u8 200
 
-## SI FERMA AL SERVER O AL VIDEO (3)
+## SI FERMA AL SERVER O AL VIDEO (4)
 
 ### altadefinizione01
-Sito: https://altadefinizione-01.autos | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
+Sito: https://altadefinizione-01.best | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
 - server vixsrc: VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video
 
 ### cineblog01
 Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
 - server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
-- server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
+- server mixdrop: SERVER NON RISOLVE 
 
 ### hd4me
 Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE
 - server mega: SERVER NON RISOLVE 
+
+### ilgeniodellostreaming_cam
+Sito: https://il-geniodellostreaming.rest | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
 ## SI FERMA PRIMA DEL VIDEO (39)
 
@@ -80,10 +84,9 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista "Most Popular "
-- passo "lista "Most Popular "": VUOTO 
-- passo "lista ""Best of CCM 2026" — The year's best lik"": VUOTO 
-- passo "lista "Workday Motivation "": VUOTO 
+Sito:  | verdetto: SI FERMA A: lista ""Justice, Liberty & Independence" — Song"
+- passo "lista ""Justice, Liberty & Independence" — Song"": VUOTO 
+- passo "lista ""Best of 2026" channels "": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -153,10 +156,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.fit | verdetto: SI FERMA A: findvideos su "1x01 - Le regole del minimarket "
-- passo "findvideos su "1x01 - Le regole del minimarket "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/9qeuln56 
-- passo "findvideos su "1x01 - Asa e Yuru "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/0d9arej2 
-- passo "findvideos su "1x01 - Le regole del minimarket "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/9qeuln56 
+Sito: https://eurostream.fit | verdetto: SI FERMA A: findvideos su "1x01 - Pilot "
+- passo "findvideos su "1x01 - Pilot "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/t53295rmkm4e 
+- passo "findvideos su "1x01 - Asa e Yuru "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47 
+- passo "findvideos su "1x01 - Pilot "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/t53295rmkm4e 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -218,7 +221,7 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Bullet train"
 - passo "findvideos su "Bullet train"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Maigret e la finestra aperta"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Pier Paolo Pasolini - Maestro Corsaro"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
@@ -250,9 +253,9 @@ Sito: http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1 | verd
 
 ### streamingita
 Sito: https://streamingita.homes | verdetto: SI FERMA A: lista "Generi"
-- passo "lista "Generi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
-- passo "lista "Anno"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
-- passo "lista "• Film"": ERRORE line 38, in peliculas     return support.dooplay_peliculas(item, mixed)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ platformcode.logger.WebErrorException 
+- passo "lista "Generi"": VUOTO 
+- passo "lista "Anno"": VUOTO 
+- passo "lista "• Film"": VUOTO 
 
 ### streamtime
 Sito:  | verdetto: SI FERMA A: lista "• Film"
@@ -279,6 +282,6 @@ Sito:  | verdetto: SI FERMA A: lista "Visibile solo dall'Italia"
 Sito:  | verdetto: SI FERMA A: mainlist
 - passo "mainlist": ERRORE annel=nome, action='mainlist')))                                      ^^^^^^^^^^^ AttributeError: module 'channels.youtube_channel' has no attribute 'mainlist' 
 
-## SENZA ESITO (3)
+## SENZA ESITO (2)
 
-Il tempo e finito prima di concludere: discoveryplus ilgeniodellostreaming_cam paramount
+Il tempo e finito prima di concludere: discoveryplus paramount

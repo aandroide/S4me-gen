@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 131
+   "voci": 132
   },
   {
    "passo": "findvideos su \"Bullet train\"",
@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 20
+   "voci": 21
   },
   {
-   "passo": "findvideos su \"Maigret e la finestra aperta\"",
+   "passo": "findvideos su \"Pier Paolo Pasolini - Maestro Corsaro\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 75
+   "titoli": 78
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -111,25 +111,25 @@
    "voce": "•• Fiction e Serie Tv del momento",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 17,
+   "sottovoci": 18,
    "figli": [
+    {
+     "voce": "Viola come il mare - Terza stagione",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
+    },
     {
      "voce": "The Last Ship 3",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 11
+     "titoli": 13
     },
     {
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
-    },
-    {
-     "voce": "NCIS - Unità anticrimine 13",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 7
+     "titoli": 5
     }
    ]
   },
@@ -172,16 +172,16 @@
      "titoli": 3
     },
     {
-     "voce": "Racconto di una notte",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
-    },
-    {
      "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
+    },
+    {
+     "voce": "La promessa",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 7
     }
    ]
   },
@@ -194,8 +194,28 @@
   {
    "voce": "•• Animazione Made in Japan",
    "azione": "peliculas",
-   "esito": "OK",
-   "titoli": 1
+   "esito": "SOTTOMENU",
+   "sottovoci": 20,
+   "figli": [
+    {
+     "voce": "Dragon Ball Daima",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 8
+    },
+    {
+     "voce": "Captain Tsubasa",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 38
+    },
+    {
+     "voce": "Dragon Ball Super",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 30
+    }
+   ]
   },
   {
    "voce": "•• Serie TV Piu Viste",
@@ -207,7 +227,7 @@
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 5
     },
     {
      "voce": "C.S.I. Scena del crimine 10",
@@ -282,22 +302,22 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Ore 11",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 3
-    },
-    {
-     "voce": "Bravo e con gusto 2",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 2
-    },
-    {
      "voce": "La ruota della fortuna 2025/2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
+    },
+    {
+     "voce": "Caduta libera 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
+     "voce": "Amici 26",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 10
     }
    ]
   },
@@ -320,10 +340,10 @@
      "titoli": 10
     },
     {
-     "voce": "Tu Si Que Vales 2026",
+     "voce": "Uomini e Donne 2026/2027",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 10
     }
    ]
   },
@@ -346,7 +366,7 @@
      "titoli": 10
     },
     {
-     "voce": "Beyblade X - Terza stagione",
+     "voce": "Craig",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
@@ -409,7 +429,7 @@
    "voce": "•• Tutti i Documentari",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 13
+   "titoli": 12
   },
   {
    "voce": "•• Documentari più visti",
@@ -427,13 +447,13 @@
      "voce": "Enigmi alieni 13",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 4
     },
     {
      "voce": "Enigmi alieni 10",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 5
     }
    ]
   },

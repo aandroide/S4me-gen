@@ -50,21 +50,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> ERRORE JSONDecodeError
-   SEZIONE Rai 2 -> OK 16 
+   SEZIONE Rai 1 -> OK 20 
+   SEZIONE Rai 2 -> OK 18 
    SEZIONE Rai 3 -> OK 15 
+   SEZIONE str12 03 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 35 
+   SEZIONE Rai 2 -> OK 31 
+   SEZIONE Rai 3 -> OK 30 
    SEZIONE str11 02 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 33 
    SEZIONE Rai 2 -> ERRORE JSONDecodeError
    SEZIONE Rai 3 -> ERRORE JSONDecodeError
    SEZIONE str17 01 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> ERRORE JSONDecodeError
-   SEZIONE Rai 2 -> ERRORE JSONDecodeError
-   SEZIONE Rai 3 -> ERRORE JSONDecodeError
-   SEZIONE str16 31 str30 -> SOTTOMENU SENZA TITOLI  
    SEZIONE Replay -> SOTTOMENU  
-   SEZIONE Novità -> OK 21 
-   SEZIONE Da non perdere -> OK 23 
+   SEZIONE Novità -> OK 22 
+   SEZIONE Da non perdere -> OK 27 
    SEZIONE Dal libro al film -> OK 22 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 25 
@@ -80,7 +80,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Approfondimento -> OK 25 
    SEZIONE Programmi TV -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 30 
-   SEZIONE Docu-serie Original -> OK 28 
+   SEZIONE Docu-serie Original -> OK 29 
    SEZIONE Documentari Original -> OK 24 
    SEZIONE Documentari -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 27 
@@ -88,10 +88,10 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Esclusive RaiPlay Bambini -> OK 34 
    SEZIONE Bambini -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 36 
-   SEZIONE Non solo 'punte'... -> OK 14 
-   SEZIONE Trigger - Sotto la pelle -> OK 31 
+   SEZIONE Un mondo di fumetti -> OK 15 
+   SEZIONE Next Star -> OK 21 
    SEZIONE Teen -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Da non perdere -> OK 23 
    SEZIONE Il teatro di Eduardo -> OK 25 
    SEZIONE Musica classica -> OK 24 
    SEZIONE Musica e Teatro -> SOTTOMENU  

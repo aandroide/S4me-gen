@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.fit
       peliculas | • Archivio | https://eurostream.fit/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Dead-End Job | https://eurostream.fit/dead-end-job/
+      episodios | R.J. Decker | https://eurostream.fit/r-j-decker/
+      episodios | Tell Me You Love Me - Il sesso. La vita | https://eurostream.fit/tell-love-il-sesso-la-vita/
+      episodios | Forbidden Fruit | https://eurostream.fit/forbidden-fruit/
       episodios | CIA | https://eurostream.fit/cia-2026/
-      episodios | 100 Days of Deception | https://eurostream.fit/100-days-deception/
-      episodios | Youth | https://eurostream.fit/youth/
-== episodios su "Dead-End Job"
-   -> 17 voci
-      findvideos | 1x01 - Le regole del minimarket  | https://eurostream.fit/dead-end-job/
-      findvideos | 1x02 - A spasso con un Pierrot  | https://eurostream.fit/dead-end-job/
-      findvideos | 1x03 - Il vlog del lattaio  | https://eurostream.fit/dead-end-job/
-      findvideos | 1x04 - Cinema delle illusioni di mezzanotte  | https://eurostream.fit/dead-end-job/
-== findvideos su "1x01 - Le regole del minimarket "
+== episodios su "R.J. Decker"
+   -> 27 voci
+      findvideos | 1x01 - Pilot  | https://eurostream.fit/r-j-decker/
+      findvideos | 1x02 - Chili di clem in sacchi da 5 chili  | https://eurostream.fit/r-j-decker/
+      findvideos | 1x03 - Il danno provocato dall’ago  | https://eurostream.fit/r-j-decker/
+      findvideos | 1x04 - In Vanity Veritas  | https://eurostream.fit/r-j-decker/
+== findvideos su "1x01 - Pilot "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/9qeuln56
+Exception: Not un-shortened link: https://clicka.cc/delta/t53295rmkm4e
 
 == lista "• Anime"
    -> 19 voci
@@ -65,21 +65,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/0d9arej2
+Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47
 
 == lista "• Aggiornamenti"
    -> 21 voci
+      episodios | 2x07 - R.J. Decker - Before You Accuse Me  | https://eurostream.fit/r-j-decker/
+      episodios | 4x147 - Forbidden Fruit - Episodio 147 | https://eurostream.fit/forbidden-fruit/
       episodios | 1x01 - Dead-End Job - Le regole del minimarket , 1x08 L'ulti | https://eurostream.fit/dead-end-job/
       episodios | 1x08 - Youth - Agente dell'anno | https://eurostream.fit/youth/
-      episodios | 4x01 - The Gilded Age - Suonano le campane | https://eurostream.fit/the-gilded-age-5/
-      episodios | 1x20 - Sheriff Country - Messico | https://eurostream.fit/sheriff-country/
-== episodios su "1x01 - Dead-End Job - Le regole del mini"
-   -> 17 voci
-      findvideos | 1x01 - Le regole del minimarket  | https://eurostream.fit/dead-end-job/
-      findvideos | 1x02 - A spasso con un Pierrot  | https://eurostream.fit/dead-end-job/
-      findvideos | 1x03 - Il vlog del lattaio  | https://eurostream.fit/dead-end-job/
-      findvideos | 1x04 - Cinema delle illusioni di mezzanotte  | https://eurostream.fit/dead-end-job/
-== findvideos su "1x01 - Le regole del minimarket "
+== episodios su "2x07 - R.J. Decker - Before You Accuse M"
+   -> 27 voci
+      findvideos | 1x01 - Pilot  | https://eurostream.fit/r-j-decker/
+      findvideos | 1x02 - Chili di clem in sacchi da 5 chili  | https://eurostream.fit/r-j-decker/
+      findvideos | 1x03 - Il danno provocato dall’ago  | https://eurostream.fit/r-j-decker/
+      findvideos | 1x04 - In Vanity Veritas  | https://eurostream.fit/r-j-decker/
+== findvideos su "1x01 - Pilot "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/9qeuln56
+Exception: Not un-shortened link: https://clicka.cc/delta/t53295rmkm4e
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -110,4 +110,4 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - Le regole del minimarket "
+VERDETTO: SI FERMA A: findvideos su "1x01 - Pilot "

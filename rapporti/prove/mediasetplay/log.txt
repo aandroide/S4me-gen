@@ -6,7 +6,7 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 131 voci
+   -> 132 voci
       findvideos | Bullet train | https://mediasetinfinity.mediaset.it/movie/bullettrain/bullet-train_F311877201000103
       findvideos | Divergent | https://mediasetinfinity.mediaset.it/movie/divergent/divergent_F305721401000102
       findvideos | Peppermint - L'angelo della vendetta | https://mediasetinfinity.mediaset.it/movie/peppermintlangelodellavendetta/peppermint-langelo-della-v
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 20 voci
-      findvideos | Maigret e la finestra aperta | https://mediasetinfinity.mediaset.it/movie/maigretelafinestraaperta/maigret-e-la-finestra-aperta_F01
-      findvideos | Un'estate da ricordare  (di m. wood) - Un'estate da ricordar | https://mediasetinfinity.mediaset.it/movie/unestatedaricordaredimwood/unestate-da-ricordare_F3097498
-      findvideos | Peppermint - L'angelo della vendetta | https://mediasetinfinity.mediaset.it/movie/peppermintlangelodellavendetta/peppermint-langelo-della-v
-      findvideos | Il principe e il pirata | https://mediasetinfinity.mediaset.it/movie/ilprincipeeilpirata/il-principe-e-il-pirata_F011037801000
-== findvideos su "Maigret e la finestra aperta"
+   -> 21 voci
+      findvideos | Pier Paolo Pasolini - Maestro Corsaro | https://mediasetinfinity.mediaset.it/movie/pierpaolopasolinimaestrocorsaro/pier-paolo-pasolini-maest
+      findvideos | Testamento d'amore | https://mediasetinfinity.mediaset.it/movie/testamentodamore/testamento-damore_F311459601000104
+      findvideos | Cuori ribelli | https://mediasetinfinity.mediaset.it/movie/cuoriribelli/cuori-ribelli_F005706401000103
+      findvideos | Il ricco, il povero e il maggiordomo | https://mediasetinfinity.mediaset.it/movie/ilriccoilpoveroeilmaggiordomo/il-ricco-il-povero-e-il-mag
+== findvideos su "Pier Paolo Pasolini - Maestro Corsaro"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -90,26 +90,29 @@ Nessuna voce da riprodurre trovata
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 46 
    SEZIONE Replay -> OK 23 
-   SEZIONE •• Tutti i Film -> OK 75 
+   SEZIONE •• Tutti i Film -> OK 78 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
-   SEZIONE The Last Ship 3 -> OK 11 
-   SEZIONE I Simpson -> OK 4 
-   SEZIONE NCIS - Unità anticrimine 13 -> OK 7 
+   SEZIONE Viola come il mare - Terza stagione -> OK 3 
+   SEZIONE The Last Ship 3 -> OK 13 
+   SEZIONE I Simpson -> OK 5 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Segreti di famiglia 3 -> OK 5 
    SEZIONE Innocence -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
    SEZIONE Tempesta d'amore -> OK 3 
-   SEZIONE Racconto di una notte -> OK 4 
    SEZIONE My Sweet Lie -> OK 5 
+   SEZIONE La promessa -> OK 7 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
-   SEZIONE •• Animazione Made in Japan -> OK 1 
-   SEZIONE I Simpson -> OK 4 
+   SEZIONE Dragon Ball Daima -> OK 8 
+   SEZIONE Captain Tsubasa -> OK 38 
+   SEZIONE Dragon Ball Super -> OK 30 
+   SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
+   SEZIONE I Simpson -> OK 5 
    SEZIONE C.S.I. Scena del crimine 10 -> OK 7 
    SEZIONE NCIS - Unità anticrimine 13 -> OK 7 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
@@ -121,17 +124,17 @@ Nessuna voce da riprodurre trovata
    SEZIONE Le Iene presentano: Inside Autunno 2026 -> OK 2 
    SEZIONE Tu Si Que Vales 2026 -> OK 6 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
-   SEZIONE Ore 11 -> OK 3 
-   SEZIONE Bravo e con gusto 2 -> OK 2 
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
+   SEZIONE Caduta libera 2026/2027 -> OK 4 
+   SEZIONE Amici 26 -> OK 10 
    SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Amici 26 -> OK 10 
-   SEZIONE Tu Si Que Vales 2026 -> OK 6 
+   SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Lo straordinario mondo di Gumball -> OK 10 
    SEZIONE Teen Titans Go! -> OK 10 
-   SEZIONE Beyblade X - Terza stagione -> OK 10 
+   SEZIONE Craig -> OK 10 
    SEZIONE •• Kids Boing -> SOTTOMENU  
    SEZIONE Simone -> OK 10 
    SEZIONE Paw Patrol -> OK 5 
@@ -141,10 +144,10 @@ Nessuna voce da riprodurre trovata
    SEZIONE Holly e Benji Forever -> OK 52 
    SEZIONE I pinguini di Madagascar -> OK 4 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 13 
+   SEZIONE •• Tutti i Documentari -> OK 12 
    SEZIONE Parco nazionale di Donana - Eden spagnolo -> OK 2 
-   SEZIONE Enigmi alieni 13 -> OK 5 
-   SEZIONE Enigmi alieni 10 -> OK 4 
+   SEZIONE Enigmi alieni 13 -> OK 4 
+   SEZIONE Enigmi alieni 10 -> OK 5 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
    SEZIONE •• Film Documentari di Focus -> OK 20 
    SEZIONE txt70741 … -> OK 20 

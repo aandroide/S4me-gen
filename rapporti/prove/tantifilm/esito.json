@@ -1,6 +1,6 @@
 {
  "canale": "tantifilm",
- "host": "https://tanti-film.garden",
+ "host": "https://tanti-film.ink",
  "passi": [
   {
    "passo": "mainlist",
@@ -18,7 +18,7 @@
    "voci": 25
   },
   {
-   "passo": "check su \"L'incredibile storia della signora del t\"",
+   "passo": "check su \"Il passato di mio padre \"",
    "esito": "OK",
    "voci": 2
   }
@@ -26,8 +26,8 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/4716644",
-   "finale": "http://127.0.0.1:42471/hls/4716644/master.m3u8",
+   "url": "https://v.vidxgo.co/36364892",
+   "finale": "http://127.0.0.1:37511/hls/36364892/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -86,90 +86,90 @@
  "sezioni_riepilogo": "4 ok su 4",
  "rete": [
   {
-   "url": "https://tanti-film.garden",
+   "url": "https://tanti-film.ink",
    "status": 200,
-   "byte": 16470,
+   "byte": 16337,
    "secondi": 0.2,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://tanti-film.garden/prossimamente/",
+   "url": "https://tanti-film.ink/prossimamente/",
    "status": 200,
-   "byte": 71423,
+   "byte": 70841,
    "secondi": 0.2,
    "titolo_pagina": "Prossimamente al Cinema",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://tanti-film.garden/guarda/35394-l-incredibile-storia-della-signora-del-terzo-piano-streaming-streaming-hd.html",
+   "url": "https://tanti-film.ink/guarda/35410-il-passato-di-mio-padre-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 29158,
+   "byte": 27357,
    "secondi": 0.2,
-   "titolo_pagina": "L'incredibile storia della signora del terzo piano (-0001) streaming | TantiFILM",
+   "titolo_pagina": "Il passato di mio padre (2026) streaming | TantiFILM",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://tanti-film.garden/guarda/35394-l-incredibile-storia-della-signora-del-terzo-piano-streaming-streaming-hd.html",
+   "url": "https://tanti-film.ink/guarda/35410-il-passato-di-mio-padre-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 29158,
+   "byte": 27357,
    "secondi": 0.2,
-   "titolo_pagina": "L'incredibile storia della signora del terzo piano (-0001) streaming | TantiFILM",
+   "titolo_pagina": "Il passato di mio padre (2026) streaming | TantiFILM",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://tanti-film.garden",
+   "url": "https://tanti-film.ink",
    "status": 200,
-   "byte": 16470,
-   "secondi": 0.2,
+   "byte": 16337,
+   "secondi": 0.3,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://tanti-film.garden/animazione/",
+   "url": "https://tanti-film.ink/animazione/",
    "status": 200,
-   "byte": 72321,
+   "byte": 71739,
    "secondi": 0.2,
    "titolo_pagina": "Animazione guarda Gratis | TantiFILM",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://tanti-film.garden/avventura/",
+   "url": "https://tanti-film.ink/avventura/",
    "status": 200,
-   "byte": 72161,
+   "byte": 71594,
    "secondi": 0.2,
    "titolo_pagina": "Avventura guarda Gratis | TantiFILM",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://tanti-film.garden/biografico/",
+   "url": "https://tanti-film.ink/biografico/",
    "status": 200,
-   "byte": 70158,
+   "byte": 69168,
    "secondi": 0.2,
    "titolo_pagina": "Biografico guarda Gratis | TantiFILM",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://tanti-film.garden/film",
+   "url": "https://tanti-film.ink/film",
    "status": 200,
-   "byte": 90516,
-   "secondi": 0.3,
+   "byte": 89099,
+   "secondi": 0.4,
    "titolo_pagina": "Guarda Tanti Film Streaming in Italiano | TantiFILM Gratis",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://tanti-film.garden/serie-tv/",
+   "url": "https://tanti-film.ink/serie-tv/",
    "status": 200,
-   "byte": 71722,
+   "byte": 69883,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://tanti-film.garden/?story=avatar&do=search&subaction=search",
+   "url": "https://tanti-film.ink/?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 57284,
-   "secondi": 0.2,
+   "byte": 56779,
+   "secondi": 0.3,
    "titolo_pagina": "Site search &raquo; TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/11.html"
   }
