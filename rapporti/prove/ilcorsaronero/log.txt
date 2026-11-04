@@ -6,41 +6,11 @@ Canale ilcorsaronero | indirizzo https://ilcorsaronero.link
       peliculas | Animazione  | https://ilcorsaronero.link/cat/animazione
       peliculas | Documentari  | https://ilcorsaronero.link/cat/altro/documentari
 == lista "Film"
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
-    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
-                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
-    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
-platformcode.logger.WebErrorException
-
+   -> 0 voci
 == lista "Serie TV "
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
-    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
-                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
-    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
-platformcode.logger.WebErrorException
-
+   -> 0 voci
 == lista "Animazione "
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
-    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
-                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
-    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
-platformcode.logger.WebErrorException
-
+   -> 0 voci
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (7)
     menu | ('Film {film}', ['/cat/film', 'peliculas', [0, 'movie', True], 'undefined'])
@@ -51,21 +21,21 @@ Nessuna voce da riprodurre trovata
     menu | ('Video Musica', ['/cat/musica/video-musicali', 'peliculas', [0, 'music', False], 'undefined'])
     menu | ('Videocorsi', ['/cat/altro/videocorsi', 'peliculas', [0, 'music', False], 'undefined'])
 == controllo di tutte le sezioni
-   SEZIONE Film -> ERRORE WebErrorException
-   SEZIONE Serie TV -> ERRORE WebErrorException
-   SEZIONE Animazione -> ERRORE WebErrorException
-   SEZIONE Documentari -> ERRORE WebErrorException
-   SEZIONE Programmi TV -> ERRORE WebErrorException
-   SEZIONE Video Musica -> ERRORE WebErrorException
-   SEZIONE Videocorsi -> ERRORE WebErrorException
-   SEZIONE txt70741 … -> ERRORE NameError
+   SEZIONE Film -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/film', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Serie TV -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/serie-tv', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Animazione -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/animazione', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Documentari -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/altro/documentari', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Programmi TV -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/altro/programmi-tv', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Video Musica -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/musica/video-musicali', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Videocorsi -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/altro/videocorsi', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/search?q=avatar', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
 SEZIONI: 0 ok su 8
-   SEZIONE SENZA TITOLI: Film | ERRORE WebErrorException
-   SEZIONE SENZA TITOLI: Serie TV | ERRORE WebErrorException
-   SEZIONE SENZA TITOLI: Animazione | ERRORE WebErrorException
-   SEZIONE SENZA TITOLI: Documentari | ERRORE WebErrorException
-   SEZIONE SENZA TITOLI: Programmi TV | ERRORE WebErrorException
-   SEZIONE SENZA TITOLI: Video Musica | ERRORE WebErrorException
-   SEZIONE SENZA TITOLI: Videocorsi | ERRORE WebErrorException
-   SEZIONE SENZA TITOLI: txt70741 … | ERRORE NameError
+   SEZIONE SENZA TITOLI: Film | VUOTA
+   SEZIONE SENZA TITOLI: Serie TV | VUOTA
+   SEZIONE SENZA TITOLI: Animazione | VUOTA
+   SEZIONE SENZA TITOLI: Documentari | VUOTA
+   SEZIONE SENZA TITOLI: Programmi TV | VUOTA
+   SEZIONE SENZA TITOLI: Video Musica | VUOTA
+   SEZIONE SENZA TITOLI: Videocorsi | VUOTA
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
 VERDETTO: SI FERMA A: lista "Film"

@@ -18,7 +18,7 @@
    "voci": 25
   },
   {
-   "passo": "check su \"Il passato di mio padre \"",
+   "passo": "check su \"Un cucciolo per Natale \"",
    "esito": "OK",
    "voci": 2
   }
@@ -26,10 +26,26 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/36364892",
-   "finale": "http://127.0.0.1:37511/hls/36364892/master.m3u8",
-   "esito": "VIDEO OK",
-   "dettaglio": "m3u8 200"
+   "url": "https://v.vidxgo.co/38515310",
+   "nota": "il server non risponde entro 90 secondi",
+   "modulo_server": true,
+   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
+   "pagina_server": {
+    "status": 403,
+    "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+   },
+   "api_t": [
+    {
+     "referer": "https://v.vidxgo.co/38515310",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    },
+    {
+     "referer": "https://tanti-film.ink/",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    }
+   ]
   }
  ],
  "menu_dichiarato": [
@@ -68,7 +84,7 @@
    "voce": "• Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 33
+   "titoli": 31
   },
   {
    "voce": "• Serie TV",
@@ -96,39 +112,39 @@
   {
    "url": "https://tanti-film.ink/prossimamente/",
    "status": 200,
-   "byte": 70841,
+   "byte": 70707,
    "secondi": 0.2,
    "titolo_pagina": "Prossimamente al Cinema",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://tanti-film.ink/guarda/35410-il-passato-di-mio-padre-streaming-streaming-hd.html",
+   "url": "https://tanti-film.ink/guarda/35421-un-cucciolo-per-natale-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 27357,
+   "byte": 28369,
    "secondi": 0.2,
-   "titolo_pagina": "Il passato di mio padre (2026) streaming | TantiFILM",
+   "titolo_pagina": "Un cucciolo per Natale (2026) streaming | TantiFILM",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://tanti-film.ink/guarda/35410-il-passato-di-mio-padre-streaming-streaming-hd.html",
+   "url": "https://tanti-film.ink/guarda/35421-un-cucciolo-per-natale-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 27357,
+   "byte": 28369,
    "secondi": 0.2,
-   "titolo_pagina": "Il passato di mio padre (2026) streaming | TantiFILM",
+   "titolo_pagina": "Un cucciolo per Natale (2026) streaming | TantiFILM",
    "file": "pagine/04.html"
   },
   {
    "url": "https://tanti-film.ink",
    "status": 200,
    "byte": 16337,
-   "secondi": 0.3,
+   "secondi": 0.1,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/05.html"
   },
   {
    "url": "https://tanti-film.ink/animazione/",
    "status": 200,
-   "byte": 71739,
+   "byte": 71211,
    "secondi": 0.2,
    "titolo_pagina": "Animazione guarda Gratis | TantiFILM",
    "file": "pagine/06.html"
@@ -136,15 +152,15 @@
   {
    "url": "https://tanti-film.ink/avventura/",
    "status": 200,
-   "byte": 71594,
-   "secondi": 0.2,
+   "byte": 71040,
+   "secondi": 0.1,
    "titolo_pagina": "Avventura guarda Gratis | TantiFILM",
    "file": "pagine/07.html"
   },
   {
    "url": "https://tanti-film.ink/biografico/",
    "status": 200,
-   "byte": 69168,
+   "byte": 69438,
    "secondi": 0.2,
    "titolo_pagina": "Biografico guarda Gratis | TantiFILM",
    "file": "pagine/08.html"
@@ -152,27 +168,27 @@
   {
    "url": "https://tanti-film.ink/film",
    "status": 200,
-   "byte": 89099,
-   "secondi": 0.4,
+   "byte": 89297,
+   "secondi": 0.2,
    "titolo_pagina": "Guarda Tanti Film Streaming in Italiano | TantiFILM Gratis",
    "file": "pagine/09.html"
   },
   {
    "url": "https://tanti-film.ink/serie-tv/",
    "status": 200,
-   "byte": 69883,
-   "secondi": 0.2,
+   "byte": 70640,
+   "secondi": 0.4,
    "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM",
    "file": "pagine/10.html"
   },
   {
    "url": "https://tanti-film.ink/?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 56779,
-   "secondi": 0.3,
+   "byte": 56776,
+   "secondi": 0.2,
    "titolo_pagina": "Site search &raquo; TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/11.html"
   }
  ],
- "verdetto": "ARRIVA AL VIDEO"
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
 }

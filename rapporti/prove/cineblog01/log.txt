@@ -7,20 +7,21 @@ Canale cineblog01 | indirizzo https://cb01official.uno
       menu | •• Anni | https://cb01official.uno
 == lista "• Film"
    -> 13 voci
+      findvideos | Un cucciolo per Natale  | https://cb01one.org/un-cucciolo-per-natale-hd-2026/
+      findvideos | The Mongoose  | https://cb01one.org/the-mongoose-hd-2026/
       findvideos | La mia migliore amica  | https://cb01one.org/la-mia-migliore-amica-hd-2026/
       findvideos | L’oro rubato  | https://cb01one.org/loro-rubato-hd-2026/
-      findvideos | Clayface | https://cb01one.org/clayface-2026/
-      findvideos | Verity  | https://cb01one.org/verity-hd-2026/
-== findvideos su "La mia migliore amica "
+== findvideos su "Un cucciolo per Natale "
    -> 3 voci
-      play | La mia migliore amica  | https://stayonline.pro/l/zxJ03/
-      play | La mia migliore amica  | https://stayonline.pro/l/Vk7pk/
-      add_pelicula_to_library | txt30161 %s | https://cb01one.org/la-mia-migliore-amica-hd-2026/
-   play del canale -> mixdrop https://m1xdrop.net/e/oww9ze16hxzqpn
-== risoluzione mixdrop https://m1xdrop.net/e/oww9ze16hxzqpn
+      play | Un cucciolo per Natale  | https://stayonline.pro/l/GJ1gB/
+      play | Un cucciolo per Natale  | https://stayonline.pro/l/q4QB2/
+      add_pelicula_to_library | txt30161 %s | https://cb01one.org/un-cucciolo-per-natale-hd-2026/
+   play del canale -> mixdrop https://m1xdrop.net/e/033jq963uv78kl
+== risoluzione mixdrop https://m1xdrop.net/e/033jq963uv78kl
    -> VIDEO NON RAGGIUNGIBILE HTTP 403 
-== risoluzione mixdrop https://stayonline.pro/l/Vk7pk/
-   -> SERVER NON RISOLVE  
+   play del canale -> mixdrop https://m1xdrop.net/e/9wwq3qm4a3zprml
+== risoluzione mixdrop https://m1xdrop.net/e/9wwq3qm4a3zprml
+   -> VIDEO NON RAGGIUNGIBILE HTTP 403 
 == voci dichiarate in mainlist (14)
     film | ('HD', ['', 'menu', 'Film HD Streaming'])
     film | ('Genere', ['', 'menu', 'Film per Genere'])

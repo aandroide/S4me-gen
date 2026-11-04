@@ -36,10 +36,10 @@
  "video": [
   {
    "server": "directo",
-   "url": "https://download-rai-it.akamaized.net/video_no_available.mp4",
-   "finale": "https://download-rai-it.akamaized.net/video_no_available.mp4",
+   "url": "https://vod8-rai-it.akamaized.net/podcastcdn/teche_root/Catalogo_Italia_HD_multiaudio/HFZssSlash6hEv2Fl5uEXnDOCKNQeeqqEEqualeeqqEEqual_,1200,1800,2400/playlist.m3u8?hdnea=st=1793798181~exp=1793798331~",
+   "finale": "https://vod8-rai-it.akamaized.net/podcastcdn/teche_root/Catalogo_Italia_HD_multiaudio/HFZssSlash6hEv2Fl5uEXnDOCKNQeeqqEEqualeeqqEEqual_,1200,1800,2400/playlist.m3u8?hdnea=st=1793798181~exp=1793798331~",
    "esito": "VIDEO OK",
-   "dettaglio": "206 video/mp4"
+   "dettaglio": "m3u8 206"
   }
  ],
  "menu_dichiarato": [
@@ -71,6 +71,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str13 04 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 23
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 17
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 11
+      }
+     ]
+    },
+    {
      "voce": "str12 03 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -80,19 +106,19 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 20
+       "titoli": 30
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 18
+       "titoli": 33
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
-       "esito": "OK",
-       "titoli": 15
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
       }
      ]
     },
@@ -117,32 +143,6 @@
       {
        "voce": "Rai 3",
        "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      }
-     ]
-    },
-    {
-     "voce": "str17 01 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 33
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
        "esito": "ERRORE JSONDecodeError",
        "pagine": []
       }
@@ -160,7 +160,7 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 22
+     "titoli": 23
     },
     {
      "voce": "Da non perdere",
@@ -264,7 +264,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 30
+     "titoli": 31
     },
     {
      "voce": "Docu-serie Original",
@@ -276,7 +276,7 @@
      "voce": "Documentari Original",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 25
     }
    ]
   },
@@ -342,7 +342,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     },
     {
      "voce": "Il teatro di Eduardo",
@@ -354,7 +354,7 @@
      "voce": "Musica classica",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 25
     }
    ]
   },
@@ -437,8 +437,8 @@
   {
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
-   "byte": 597,
-   "secondi": 0.7,
+   "byte": 1457,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }

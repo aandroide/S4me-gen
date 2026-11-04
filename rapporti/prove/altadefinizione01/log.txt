@@ -7,16 +7,16 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
       genres | •• Generi | https://altadefinizione-01.best
 == lista "Tutti "
    -> 23 voci
-      check | Il passato di mio padre  | https://altadefinizione-01.best/35410-il-passato-di-mio-padre-streaming.html
-      check | L'oro rubato  | https://altadefinizione-01.best/35409-l-oro-rubato-streaming.html
-      check | L'incredibile storia della signora del terzo piano  | https://altadefinizione-01.best/35394-l-incredibile-storia-della-signora-del-terzo-piano-streaming.h
-      check | Il regalo di compleanno  | https://altadefinizione-01.best/35376-il-regalo-di-compleanno-streaming.html
-== check su "Il passato di mio padre "
+      check | Un cucciolo per Natale  | https://altadefinizione-01.best/35421-un-cucciolo-per-natale-streaming.html
+      check | Ninho: il prezzo della fama  | https://altadefinizione-01.best/35422-ninho-il-prezzo-della-fama-streaming.html
+      check | Angelo Pintus in Nabana  | https://altadefinizione-01.best/35417-nabana-angelo-pintus-streaming.html
+      check | Marta e Gianluca - Io e Gianlu  | https://altadefinizione-01.best/35418-marta-e-gianluca-io-e-gianlu-streaming.html
+== check su "Un cucciolo per Natale "
    -> 2 voci
-      play | Il passato di mio padre  | https://vixsrc.to/movie/tt36364892
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35410-il-passato-di-mio-padre-streaming.html
-== risoluzione vixsrc https://vixsrc.to/movie/tt36364892
-   -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
+      play | Un cucciolo per Natale  | https://vixsrc.to/movie/tt38515310
+      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35421-un-cucciolo-per-natale-streaming.html
+== risoluzione vixsrc https://vixsrc.to/movie/tt38515310
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (7)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
     menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])
@@ -41,4 +41,4 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
    SEZIONE Serie TV -> OK 29 
    SEZIONE txt70741 … -> OK 6 
 SEZIONI: 8 ok su 8
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
+VERDETTO: ARRIVA AL VIDEO

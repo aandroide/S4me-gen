@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"Notte di tenebre\"",
+   "passo": "findvideos su \"La gang degli svitati\"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,8 +21,8 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/0110875",
-   "finale": "http://127.0.0.1:43791/hls/0110875/master.m3u8",
+   "url": "https://v.vidxgo.co/0089177",
+   "finale": "http://127.0.0.1:34913/hls/0089177/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -110,23 +110,23 @@
   {
    "url": "https://altadefinizionex.bar/film/",
    "status": 200,
-   "byte": 132278,
-   "secondi": 0.8,
+   "byte": 131612,
+   "secondi": 0.6,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizionex.bar/thriller/45454-notte-di-tenebre-streaming.html",
+   "url": "https://altadefinizionex.bar/azione/45462-la-gang-degli-svitati-streaming.html",
    "status": 200,
-   "byte": 284866,
-   "secondi": 1.1,
+   "byte": 279357,
+   "secondi": 1.0,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://altadefinizionex.bar/film/",
    "status": 200,
-   "byte": 132278,
+   "byte": 131612,
    "secondi": 0.3,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/03.html"
@@ -134,15 +134,15 @@
   {
    "url": "https://altadefinizionex.bar",
    "status": 200,
-   "byte": 508024,
-   "secondi": 0.1,
+   "byte": 506701,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/04.html"
   },
   {
    "url": "https://altadefinizionex.bar/azione/film",
    "status": 200,
-   "byte": 133511,
+   "byte": 133106,
    "secondi": 0.9,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/05.html"
@@ -150,64 +150,64 @@
   {
    "url": "https://altadefinizionex.bar/animazione/film",
    "status": 200,
-   "byte": 135063,
-   "secondi": 1.1,
+   "byte": 134654,
+   "secondi": 0.9,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/06.html"
   },
   {
    "url": "https://altadefinizionex.bar/avventura/film",
    "status": 200,
-   "byte": 135897,
-   "secondi": 1.2,
+   "byte": 134997,
+   "secondi": 0.9,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/07.html"
   },
   {
    "url": "https://altadefinizionex.bar/serie-tv/",
    "status": 200,
-   "byte": 137018,
-   "secondi": 1.8,
+   "byte": 136187,
+   "secondi": 0.5,
    "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione",
    "file": "pagine/08.html"
   },
   {
    "url": "https://altadefinizionex.bar",
    "status": 200,
-   "byte": 508024,
-   "secondi": 0.1,
+   "byte": 506701,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/09.html"
   },
   {
    "url": "https://altadefinizionex.bar/azione/serie-tv",
    "status": 200,
-   "byte": 137857,
-   "secondi": 1.2,
+   "byte": 136665,
+   "secondi": 0.7,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/10.html"
   },
   {
    "url": "https://altadefinizionex.bar/animazione/serie-tv",
    "status": 200,
-   "byte": 136689,
-   "secondi": 1.2,
+   "byte": 136112,
+   "secondi": 0.9,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/11.html"
   },
   {
    "url": "https://altadefinizionex.bar/avventura/serie-tv",
    "status": 200,
-   "byte": 137743,
-   "secondi": 1.1,
+   "byte": 137171,
+   "secondi": 0.9,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/12.html"
   },
   {
    "url": "https://altadefinizionex.bar/archivio?search=avatar&f=all&page=1",
    "status": 200,
-   "byte": 97888,
-   "secondi": 1.2,
+   "byte": 96870,
+   "secondi": 0.8,
    "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione",
    "file": "pagine/13.html"
   }

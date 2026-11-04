@@ -13,16 +13,18 @@ Canale tantifilm | indirizzo https://tanti-film.ink
       peliculas | Commedia | https://tanti-film.ink/commedia/
 == peliculas su "Prossimamente"
    -> 25 voci
-      check | Il passato di mio padre  | https://tanti-film.ink/guarda/35410-il-passato-di-mio-padre-streaming-streaming-hd.html
-      check | La mia migliore amica  | https://tanti-film.ink/guarda/35407-la-mia-miglior-amica-streaming-streaming-hd.html
-      check | L'oro rubato  | https://tanti-film.ink/guarda/35409-l-oro-rubato-streaming-streaming-hd.html
-      check | L'incredibile storia della signora del terzo piano (-0001) s | https://tanti-film.ink/guarda/35394-l-incredibile-storia-della-signora-del-terzo-piano-streaming-str
-== check su "Il passato di mio padre "
+      check | Un cucciolo per Natale  | https://tanti-film.ink/guarda/35421-un-cucciolo-per-natale-streaming-streaming-hd.html
+      check | Ninho: il prezzo della fama  | https://tanti-film.ink/guarda/35422-ninho-il-prezzo-della-fama-streaming-streaming-hd.html
+      check | Angelo Pintus in Nabana  | https://tanti-film.ink/guarda/35417-nabana-angelo-pintus-streaming-streaming-hd.html
+      check | Marta e Gianluca - Io e Gianlu (-0001) streaming' rel='bookm | https://tanti-film.ink/guarda/35418-marta-e-gianluca-io-e-gianlu-streaming-streaming-hd.html
+== check su "Un cucciolo per Natale "
    -> 2 voci
-      play | Il passato di mio padre  | https://v.vidxgo.co/36364892
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.ink/guarda/35410-il-passato-di-mio-padre-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/36364892
-   -> VIDEO OK m3u8 200 
+      play | Un cucciolo per Natale  | https://v.vidxgo.co/38515310
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.ink/guarda/35421-un-cucciolo-per-natale-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/38515310
+   api /t/ 38515310 referer https://v.vidxgo.co/38515310 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 38515310 referer https://tanti-film.ink/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
@@ -32,8 +34,8 @@ Canale tantifilm | indirizzo https://tanti-film.ink
    SEZIONE Avventura -> OK 24 
    SEZIONE Biografico -> OK 19 
    SEZIONE Generi -> SOTTOMENU  
-   SEZIONE • Film -> OK 33 
+   SEZIONE • Film -> OK 31 
    SEZIONE • Serie TV -> OK 25 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 4 ok su 4
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)

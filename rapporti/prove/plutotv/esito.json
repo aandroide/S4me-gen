@@ -1,6 +1,6 @@
 {
  "canale": "plutotv",
- "host": "https://pluto.tv/us/watch/live-tv",
+ "host": "https://pluto.tv/ca/watch/live-tv",
  "passi": [
   {
    "passo": "mainlist",
@@ -18,7 +18,7 @@
    "voce": "Dirette",
    "azione": "live",
    "esito": "OK",
-   "titoli": 467
+   "titoli": 468
   },
   {
    "voce": "Categorie",
@@ -50,47 +50,47 @@
    "voce": "txt70741 …",
    "azione": "search",
    "esito": "OK",
-   "titoli": 79
+   "titoli": 62
   }
  ],
  "sezioni_riepilogo": "3 ok su 3",
  "rete": [
   {
-   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=8ac8a396-ccfa-4584-8ae8-10a8a0377558&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
+   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=12f9d93f-9496-4bfa-9dfa-d6b467383b23&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
    "status": 200,
-   "byte": 18049,
-   "secondi": 0.2,
+   "byte": 15902,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://api.pluto.tv/v2/channels?start=2026-11-03T13:00:00Z&stop=2026-11-03T17:00:00Z&sid=167bcbb4-d787-11f1-9a2a-000d3a314a96&deviceId=8ac8a396-ccfa-4584-8ae8-10a8a0377558",
+   "url": "https://api.pluto.tv/v2/channels?start=2026-11-04T13:00:00Z&stop=2026-11-04T17:00:00Z&sid=ea3f36d2-d851-11f1-9a2a-70a8a58f6b64&deviceId=12f9d93f-9496-4bfa-9dfa-d6b467383b23",
    "status": 200,
-   "byte": 7995295,
-   "secondi": 0.8,
+   "byte": 8066037,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.pluto.tv/v2/channels.json?sid=167bcbb4-d787-11f1-9a2a-000d3a314a96&deviceId=8ac8a396-ccfa-4584-8ae8-10a8a0377558",
+   "url": "https://api.pluto.tv/v2/channels.json?sid=ea3f36d2-d851-11f1-9a2a-70a8a58f6b64&deviceId=12f9d93f-9496-4bfa-9dfa-d6b467383b23",
    "status": 200,
-   "byte": 1157017,
-   "secondi": 0.4,
+   "byte": 1159159,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=167bcbb4-d787-11f1-9a2a-000d3a314a96&deviceId=8ac8a396-ccfa-4584-8ae8-10a8a0377558",
+   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=ea3f36d2-d851-11f1-9a2a-70a8a58f6b64&deviceId=12f9d93f-9496-4bfa-9dfa-d6b467383b23",
    "status": 200,
-   "byte": 13771137,
-   "secondi": 1.1,
+   "byte": 13768671,
+   "secondi": 0.8,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://service-media-search.clusters.pluto.tv/v1/search?q=avatar&limit=100",
    "status": 200,
-   "byte": 18800,
+   "byte": 11813,
    "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/05.html"

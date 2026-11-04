@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"La mia migliore amica \"",
+   "passo": "findvideos su \"Un cucciolo per Natale \"",
    "esito": "OK",
    "voci": 3
   }
@@ -21,20 +21,17 @@
  "video": [
   {
    "server": "mixdrop",
-   "url": "https://m1xdrop.net/e/oww9ze16hxzqpn",
-   "finale": "http://usx2f826m.mxcontent.net/v2/oww9ze16hxzqpn.mp4?s=alXkFJ5m_RXwUPdLSlkMaQ&e=1793732593&_t=1793720622",
+   "url": "https://m1xdrop.net/e/033jq963uv78kl",
+   "finale": "http://592lvpizh.mxcontent.net/v2/033jq963uv78kl.mp4?s=XvVCuMRYOsJo2MvR8F6Afw&e=1793819715&_t=1793806177",
    "esito": "VIDEO NON RAGGIUNGIBILE",
    "dettaglio": "HTTP 403"
   },
   {
    "server": "mixdrop",
-   "url": "https://stayonline.pro/l/Vk7pk/",
-   "modulo_server": true,
-   "esito": "SERVER NON RISOLVE",
-   "pagina_server": {
-    "status": 200,
-    "inizio": "<!DOCTYPE html>\n<html lang=\"en\">\n\n    <head>\n\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <meta name=\"robots\" content=\"noindex, nofollow\">\n        <title>La mia migli"
-   }
+   "url": "https://m1xdrop.net/e/9wwq3qm4a3zprml",
+   "finale": "http://q2dgt5pce.mxcontent.net/v2/9wwq3qm4a3zprml.mp4?s=b3lNruztkH7tLGmcOIsIKA&e=1793819718&_t=1793802883",
+   "esito": "VIDEO NON RAGGIUNGIBILE",
+   "dettaglio": "HTTP 403"
   }
  ],
  "menu_dichiarato": [
@@ -302,29 +299,29 @@
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 539830,
-   "secondi": 1.0,
+   "byte": 540301,
+   "secondi": 1.1,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://cb01one.org/la-mia-migliore-amica-hd-2026/",
+   "url": "https://cb01one.org/un-cucciolo-per-natale-hd-2026/",
    "status": 200,
-   "byte": 306440,
-   "secondi": 1.0,
-   "titolo_pagina": "La mia migliore amica [HD] (2026) Streaming - FILM GRATIS by CB01 OFFICIAL",
+   "byte": 306701,
+   "secondi": 0.2,
+   "titolo_pagina": "Un cucciolo per Natale [HD] (2026) Streaming - FILM GRATIS by CB01 OFFICIAL",
    "file": "pagine/02.html"
   },
   {
    "url": "https://stayonline.pro/ajax/linkView.php",
    "status": 200,
    "byte": 108,
-   "secondi": 1.9,
+   "secondi": 1.5,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://m1xdrop.net/f/oww9ze16hxzqpn",
+   "url": "https://m1xdrop.net/f/033jq963uv78kl",
    "status": 302,
    "byte": 510,
    "secondi": 0.1,
@@ -332,50 +329,50 @@
    "file": "pagine/04.html"
   },
   {
-   "url": "https://m1xdrop.net/e/oww9ze16hxzqpn",
+   "url": "https://m1xdrop.net/e/033jq963uv78kl",
    "status": 200,
-   "byte": 78643,
-   "secondi": 0.5,
+   "byte": 78640,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
    "url": "https://stayonline.pro/ajax/linkView.php",
-   "status": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 468, in _make_request\n    six.raise_from(e, None)\n  File \"<string>\", line 3, in raise_from\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 463, in _make_request\n    httplib_response = conn.getresponse()\n                       ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 1478, in getresponse\n    response.begin()\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 343, in begin\n    version, status, reason = self._read_status()\n                              ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py\", line 304, in _read_status\n    line = str(self.fp.readline(_MAXLINE + 1), \"iso-8859-1\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/socket.py\", line 720, in readinto\n    return self._sock.recv_into(b)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py\", line 1264, in recv_into\n    return self.read(nbytes, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 802, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 552, in increment\n    raise six.reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/packages/six.py\", line 770, in reraise\n    raise value\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 716, in urlopen\n    httplib_response = self._make_request(\n                       ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 470, in _make_request\n    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 358, in _raise_timeout\n    raise ReadTimeoutError(\nurllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='stayonline.pro', port=443): Read timed out. (read timeout=5)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 370, in downloadpage\n    req = session.post(url, data=payload, allow_redirects=False,\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 577, in post\n    return self.request('POST', url, data=data, json=json, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 645, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 275, in send\n    raise e\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 259, in send\n    return super(CipherSuiteAdapter, self).send(request, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py\", line 742, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='stayonline.pro', port=443): Read timed out. (read timeout=5)\n",
-   "byte": 0,
-   "secondi": 5.1,
+   "status": 200,
+   "byte": 109,
+   "secondi": 1.2,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "",
-   "status": "",
-   "byte": 0,
-   "secondi": 0.0,
-   "titolo_pagina": "",
+   "url": "https://m1xdrop.net/f/9wwq3qm4a3zprml",
+   "status": 302,
+   "byte": 510,
+   "secondi": 0.1,
+   "titolo_pagina": "302 Found",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://stayonline.pro/l/Vk7pk/",
+   "url": "https://m1xdrop.net/e/9wwq3qm4a3zprml",
    "status": 200,
-   "byte": 8005,
-   "secondi": 4.4,
-   "titolo_pagina": "La mia migliore amica [HD] (2026) WEBDL 1080p.mp4 | Mixdrop.ag | StayOnline.PRO",
+   "byte": 78642,
+   "secondi": 0.4,
+   "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 539830,
-   "secondi": 1.0,
+   "byte": 540301,
+   "secondi": 0.8,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/09.html"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 539830,
-   "secondi": 1.0,
+   "byte": 540301,
+   "secondi": 0.8,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/10.html"
   },
@@ -383,7 +380,7 @@
    "url": "https://cb01official.uno/category/film-hd-streaming/animazione-hd/",
    "status": 200,
    "byte": 302772,
-   "secondi": 0.5,
+   "secondi": 0.7,
    "titolo_pagina": "Animazione HD - CB01 OFFICIAL - FILM GRATIS by cb01",
    "file": "pagine/11.html"
   },
@@ -391,7 +388,7 @@
    "url": "https://cb01official.uno/category/film-hd-streaming/avventura-hd/",
    "status": 200,
    "byte": 295399,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "Avventura HD - CB01 OFFICIAL - FILM GRATIS by cb01",
    "file": "pagine/12.html"
   },
@@ -399,15 +396,15 @@
    "url": "https://cb01official.uno/category/film-hd-streaming/azione-hd/",
    "status": 200,
    "byte": 302211,
-   "secondi": 0.4,
+   "secondi": 0.7,
    "titolo_pagina": "Azione HD - CB01 OFFICIAL - FILM GRATIS by cb01",
    "file": "pagine/13.html"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 539830,
-   "secondi": 0.5,
+   "byte": 540301,
+   "secondi": 0.8,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/14.html"
   },
@@ -415,7 +412,7 @@
    "url": "https://cb01official.uno/category/animazione/",
    "status": 200,
    "byte": 304041,
-   "secondi": 0.3,
+   "secondi": 0.4,
    "titolo_pagina": "Animazione - CB01 OFFICIAL - FILM GRATIS by cb01",
    "file": "pagine/15.html"
   },
@@ -430,41 +427,41 @@
    "url": "https://cb01official.uno/category/azione/",
    "status": 200,
    "byte": 303456,
-   "secondi": 0.9,
+   "secondi": 0.4,
    "titolo_pagina": "Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 539830,
-   "secondi": 1.0,
+   "byte": 540301,
+   "secondi": 0.5,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
   },
   {
    "url": "https://cb01official.uno/category/anno-2026/",
    "status": 200,
    "byte": 291300,
-   "secondi": 0.5,
+   "secondi": 0.7,
    "titolo_pagina": "2026 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/anno-2025/",
    "status": 200,
    "byte": 292958,
-   "secondi": 0.5,
+   "secondi": 0.7,
    "titolo_pagina": "2025 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/anno-2024/",
    "status": 200,
    "byte": 293821,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "2024 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 539830,
+   "byte": 540301,
    "secondi": 0.5,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
   },
@@ -492,99 +489,99 @@
   {
    "url": "https://cb01official.uno/ultimi-100-film-aggiunti/",
    "status": 200,
-   "byte": 325642,
-   "secondi": 0.6,
+   "byte": 325743,
+   "secondi": 0.5,
    "titolo_pagina": "Ultimi 100 film aggiunti - FILM GRATIS by CB01 OFFICIAL"
   },
   {
    "url": "https://cb01official.uno/category/film-popolari/",
    "status": 200,
    "byte": 315908,
-   "secondi": 0.6,
+   "secondi": 0.9,
    "titolo_pagina": "Film Popolari - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/nazione/italia/",
    "status": 200,
    "byte": 342029,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "Italia - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/search/avatar",
    "status": 200,
-   "byte": 266816,
-   "secondi": 1.1,
+   "byte": 267105,
+   "secondi": 0.4,
    "titolo_pagina": "Hai cercato avatar - CB01 OFFICIAL - FILM"
   },
   {
    "url": "https://cb01official.uno/serietv/",
    "status": 200,
-   "byte": 349242,
-   "secondi": 0.3,
+   "byte": 349544,
+   "secondi": 0.5,
    "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
   },
   {
    "url": "https://cb01official.uno/serietv/",
    "status": 200,
-   "byte": 349242,
-   "secondi": 0.6,
+   "byte": 349544,
+   "secondi": 0.5,
    "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
   },
   {
    "url": "https://cb01official.uno/serietv/category/numero/",
    "status": 200,
    "byte": 246512,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "# - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/category/a/",
    "status": 200,
    "byte": 249147,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "A - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/category/b/",
    "status": 200,
    "byte": 248101,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "B - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/",
    "status": 200,
-   "byte": 349242,
-   "secondi": 0.8,
+   "byte": 349544,
+   "secondi": 0.5,
    "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
   },
   {
    "url": "https://cb01official.uno/serietv/category/animazione/",
    "status": 200,
    "byte": 255617,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "Animazione - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/category/avventura/",
    "status": 200,
    "byte": 249970,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "Avventura - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/category/azione/",
    "status": 200,
    "byte": 250421,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "Azione - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/",
    "status": 200,
-   "byte": 349242,
-   "secondi": 0.7,
+   "byte": 349544,
+   "secondi": 0.6,
    "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
   },
   {
@@ -598,42 +595,42 @@
    "url": "https://cb01official.uno/serietv/category/2025/",
    "status": 200,
    "byte": 249297,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "2025 - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/category/2024/",
    "status": 200,
    "byte": 249178,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "2024 - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/ultime-100-serie-tv-aggiunte/",
    "status": 200,
-   "byte": 297397,
-   "secondi": 0.4,
+   "byte": 297435,
+   "secondi": 0.5,
    "titolo_pagina": "ULTIME 100 SERIE-TV AGGIUNTE - SERIE TV GRATIS by CB01 OFFICIAL"
   },
   {
    "url": "https://cb01official.uno/serietv/search/avatar",
    "status": 200,
-   "byte": 220136,
-   "secondi": 0.9,
+   "byte": 220020,
+   "secondi": 0.4,
    "titolo_pagina": "Hai cercato avatar - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/category/documentario/",
    "status": 200,
    "byte": 294184,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "Documentario - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/hd-alta-definizione/documentario-hd/",
    "status": 200,
    "byte": 292969,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "Documentario HD - CB01 OFFICIAL - FILM GRATIS by cb01"
   }
  ],

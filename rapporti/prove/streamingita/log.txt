@@ -18,15 +18,15 @@ Nessuna voce da riprodurre trovata
     top | ('Anno', ['/film', 'menu', 'releases'])
     tvshow | '/tv'
 == controllo di tutte le sezioni
-   SEZIONE Generi -> ERRORE WebErrorException
-   SEZIONE Anno -> ERRORE WebErrorException
+   SEZIONE Generi -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/film', 'status': 200, 'byte': 27584, 'titolo_pagina': ''}
+   SEZIONE Anno -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/film', 'status': 200, 'byte': 27596, 'titolo_pagina': ''}
    SEZIONE • Film -> ERRORE WebErrorException
-   SEZIONE • Serie TV -> ERRORE WebErrorException
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/?s=avatar', 'status': "'NoneType' object has no attribute 'elapsed'", 'byte': 0, 'titolo_pagina': ''}
+   SEZIONE • Serie TV -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/tv', 'status': 200, 'byte': 27214, 'titolo_pagina': ''}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/?s=avatar', 'status': 200, 'byte': 27377, 'titolo_pagina': ''}
 SEZIONI: 0 ok su 5
-   SEZIONE SENZA TITOLI: Generi | ERRORE WebErrorException
-   SEZIONE SENZA TITOLI: Anno | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: Generi | VUOTA
+   SEZIONE SENZA TITOLI: Anno | VUOTA
    SEZIONE SENZA TITOLI: • Film | ERRORE WebErrorException
-   SEZIONE SENZA TITOLI: • Serie TV | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: • Serie TV | VUOTA
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA
 VERDETTO: SI FERMA A: lista "Generi"

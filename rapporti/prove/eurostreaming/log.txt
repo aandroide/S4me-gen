@@ -1,23 +1,23 @@
-Canale eurostreaming | indirizzo https://eurostream.fit
+Canale eurostreaming | indirizzo https://eurostream.one
 == mainlist
    -> 6 voci
-      peliculas | • Serie TV | https://eurostream.fit
-      peliculas | • Anime | https://eurostream.fit/category/anime-cartoni-animati/
-      peliculas | • Aggiornamenti | https://eurostream.fit/nuovi-ep-aggiornamento/
-      peliculas | • Archivio | https://eurostream.fit/category/serie-tv-archive/
+      peliculas | • Serie TV | https://eurostream.one
+      peliculas | • Anime | https://eurostream.one/category/anime-cartoni-animati/
+      peliculas | • Aggiornamenti | https://eurostream.one/nuovi-ep-aggiornamento/
+      peliculas | • Archivio | https://eurostream.one/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | R.J. Decker | https://eurostream.fit/r-j-decker/
-      episodios | Tell Me You Love Me - Il sesso. La vita | https://eurostream.fit/tell-love-il-sesso-la-vita/
-      episodios | Forbidden Fruit | https://eurostream.fit/forbidden-fruit/
-      episodios | CIA | https://eurostream.fit/cia-2026/
-== episodios su "R.J. Decker"
-   -> 27 voci
-      findvideos | 1x01 - Pilot  | https://eurostream.fit/r-j-decker/
-      findvideos | 1x02 - Chili di clem in sacchi da 5 chili  | https://eurostream.fit/r-j-decker/
-      findvideos | 1x03 - Il danno provocato dall’ago  | https://eurostream.fit/r-j-decker/
-      findvideos | 1x04 - In Vanity Veritas  | https://eurostream.fit/r-j-decker/
-== findvideos su "1x01 - Pilot "
+      episodios | VisionQuest | https://eurostream.one/visionquest/
+      episodios | Taken: Natalee Holloway | https://eurostream.one/taken-natalee-holloway/
+      episodios | Stick | https://eurostream.one/stick-2025/
+      episodios | Small Prophets | https://eurostream.one/small-prophets/
+== episodios su "VisionQuest"
+   -> 15 voci
+      findvideos | 1x01 - Senza legami  | https://eurostream.one/visionquest/
+      findvideos | 1x02 - Teseo  | https://eurostream.one/visionquest/
+      findvideos | 1x03 - Reboot  | https://eurostream.one/visionquest/
+      findvideos | 1x04 - Malware  | https://eurostream.one/visionquest/
+== findvideos su "1x01 - Senza legami "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,20 +34,20 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/t53295rmkm4e
+Exception: Not un-shortened link: https://clicka.cc/mix/bad09plj
 
 == lista "• Anime"
    -> 19 voci
-      episodios | Daemons of the Shadow Realm | https://eurostream.fit/daemons-of-the-shadow-realm/
-      episodios | Adventure Time: Side Quests | https://eurostream.fit/adventure-time-side-quests/
-      episodios | Avatar: I Sette Rifugi | https://eurostream.fit/avatar-sette-rifugi/
-      episodios | Willy il Coyote e Beep Beep | https://eurostream.fit/willy-il-coyote-e-beep-beep/
+      episodios | Daemons of the Shadow Realm | https://eurostream.one/daemons-of-the-shadow-realm/
+      episodios | Adventure Time: Side Quests | https://eurostream.one/adventure-time-side-quests/
+      episodios | Avatar: I Sette Rifugi | https://eurostream.one/avatar-sette-rifugi/
+      episodios | Willy il Coyote e Beep Beep | https://eurostream.one/willy-il-coyote-e-beep-beep/
 == episodios su "Daemons of the Shadow Realm"
    -> 25 voci
-      findvideos | 1x01 - Asa e Yuru  | https://eurostream.fit/daemons-of-the-shadow-realm/
-      findvideos | 1x02 - Destra e Sinistra  | https://eurostream.fit/daemons-of-the-shadow-realm/
-      findvideos | 1x03 - Dera e Hana  | https://eurostream.fit/daemons-of-the-shadow-realm/
-      findvideos | 1x04 - Jin e Yuru  | https://eurostream.fit/daemons-of-the-shadow-realm/
+      findvideos | 1x01 - Asa e Yuru  | https://eurostream.one/daemons-of-the-shadow-realm/
+      findvideos | 1x02 - Destra e Sinistra  | https://eurostream.one/daemons-of-the-shadow-realm/
+      findvideos | 1x03 - Dera e Hana  | https://eurostream.one/daemons-of-the-shadow-realm/
+      findvideos | 1x04 - Jin e Yuru  | https://eurostream.one/daemons-of-the-shadow-realm/
 == findvideos su "1x01 - Asa e Yuru "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -65,21 +65,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47
+Exception: Not un-shortened link: https://clicka.cc/mix/0d9arej2
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 2x07 - R.J. Decker - Before You Accuse Me  | https://eurostream.fit/r-j-decker/
-      episodios | 4x147 - Forbidden Fruit - Episodio 147 | https://eurostream.fit/forbidden-fruit/
-      episodios | 1x01 - Dead-End Job - Le regole del minimarket , 1x08 L'ulti | https://eurostream.fit/dead-end-job/
-      episodios | 1x08 - Youth - Agente dell'anno | https://eurostream.fit/youth/
-== episodios su "2x07 - R.J. Decker - Before You Accuse M"
-   -> 27 voci
-      findvideos | 1x01 - Pilot  | https://eurostream.fit/r-j-decker/
-      findvideos | 1x02 - Chili di clem in sacchi da 5 chili  | https://eurostream.fit/r-j-decker/
-      findvideos | 1x03 - Il danno provocato dall’ago  | https://eurostream.fit/r-j-decker/
-      findvideos | 1x04 - In Vanity Veritas  | https://eurostream.fit/r-j-decker/
-== findvideos su "1x01 - Pilot "
+      episodios | 1x07 - VisionQuest - Sacrificio | https://eurostream.one/visionquest/
+      episodios | 1x01 - Taken: Natalee Holloway - Natalee è scomparsa , 1x02  | https://eurostream.one/taken-natalee-holloway/
+      episodios | 2x01 - Stick (2025) - Il richiamo delle sirene del golf , 2x | https://eurostream.one/stick-2025/
+      episodios | 1x06 - Small Prophets - Il canto del saggio | https://eurostream.one/small-prophets/
+== episodios su "1x07 - VisionQuest - Sacrificio"
+   -> 15 voci
+      findvideos | 1x01 - Senza legami  | https://eurostream.one/visionquest/
+      findvideos | 1x02 - Teseo  | https://eurostream.one/visionquest/
+      findvideos | 1x03 - Reboot  | https://eurostream.one/visionquest/
+      findvideos | 1x04 - Malware  | https://eurostream.one/visionquest/
+== findvideos su "1x01 - Senza legami "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/t53295rmkm4e
+Exception: Not un-shortened link: https://clicka.cc/mix/bad09plj
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -110,4 +110,4 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - Pilot "
+VERDETTO: SI FERMA A: findvideos su "1x01 - Senza legami "

@@ -7,16 +7,13 @@ Canale hd4me | indirizzo https://hd4me.net
       channel_config | txt60587 %s | 
 == lista "• Film"
    -> 11 voci
-      findvideos | Amami | posts/55244.json
-      findvideos | Il piacere | posts/55242.json
-      findvideos | The Good Doctor S02 18.7 GB | posts/55239.json
-      findvideos | Giovani, belle… probabilmente ricche | posts/55237.json
-== findvideos su "Amami"
-   -> 2 voci
-      play | Amami | https://mega.nz/#!39gjDSxS!AU8mdOu_Lq9oHGjcGk0wVxJCG8hXkZbYzrjG_Ia_908
-      add_pelicula_to_library | txt30161 %s | posts/55244.json
-== risoluzione mega https://mega.nz/#!39gjDSxS!AU8mdOu_Lq9oHGjcGk0wVxJCG8hXkZbYzrjG_Ia_908
-   -> SERVER NON RISOLVE  
+      findvideos | The Walking Dead S07 21.6 GB | posts/55256.json
+      findvideos | Sfrattato cerca casa equo canone | posts/55254.json
+      findvideos | Assassination Tango | posts/55252.json
+      findvideos | La signora di Wall Street | posts/55250.json
+== findvideos su "The Walking Dead S07 21.6 GB"
+   -> 0 voci
+Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (2)
     film | '/index'
     film | ('Genere', ['', 'genre', 'genre'])
@@ -28,4 +25,4 @@ Canale hd4me | indirizzo https://hd4me.net
    SEZIONE •• Genere -> SOTTOMENU  
    SEZIONE txt70741 … -> OK 1 
 SEZIONI: 3 ok su 3
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE
+VERDETTO: SI FERMA A: findvideos su "The Walking Dead S07 21.6 GB"

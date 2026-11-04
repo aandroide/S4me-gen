@@ -13,23 +13,12 @@
    "voci": 11
   },
   {
-   "passo": "findvideos su \"Amami\"",
-   "esito": "OK",
-   "voci": 2
+   "passo": "findvideos su \"The Walking Dead S07 21.6 GB\"",
+   "esito": "VUOTO",
+   "voci": 0
   }
  ],
- "video": [
-  {
-   "server": "mega",
-   "url": "https://mega.nz/#!39gjDSxS!AU8mdOu_Lq9oHGjcGk0wVxJCG8hXkZbYzrjG_Ia_908",
-   "modulo_server": true,
-   "esito": "SERVER NON RISOLVE",
-   "pagina_server": {
-    "status": 200,
-    "inizio": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<title>MEGA</title>\n<meta name=\"description\" content=\"MEGA provides free cloud storage with convenient and powerful always-on privacy. Claim your free 20GB now\" />\n<meta property=\"og:title\" content=\"MEGA\" />\n<meta property=\"og:descri"
-   }
-  }
- ],
+ "video": [],
  "menu_dichiarato": [
   "film | '/index'",
   "film | ('Genere', ['', 'genre', 'genre'])"
@@ -79,83 +68,67 @@
   {
    "url": "https://hd4me.net/wp-content/themes/mytheme/cache/nav.json",
    "status": 200,
-   "byte": 18484,
-   "secondi": 0.6,
+   "byte": 18593,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/index/page-1.json?v=1793427468",
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/index/page-1.json?v=1793771824",
    "status": 200,
-   "byte": 10163,
-   "secondi": 0.1,
+   "byte": 9944,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/posts/55244.json?v=1793427468",
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/posts/55256.json?v=1793771824",
    "status": 200,
-   "byte": 2084,
-   "secondi": 0.5,
+   "byte": 2334,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://g.api.mega.co.nz/cs?id=3250984242",
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/index/page-1.json?v=1793771824",
    "status": 200,
-   "byte": 585,
-   "secondi": 0.8,
+   "byte": 9944,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://g.api.mega.co.nz/cs?id=1230061459",
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/genere/animazione/page-1.json?v=1793771824",
    "status": 200,
-   "byte": 585,
-   "secondi": 0.5,
+   "byte": 10593,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/index/page-1.json?v=1793427468",
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/disney.json?v=1793771824",
    "status": 200,
-   "byte": 10163,
-   "secondi": 0.0,
+   "byte": 63809,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/genere/animazione/page-1.json?v=1793427468",
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/categoria/pixar/page-1.json?v=1793771824",
    "status": 200,
-   "byte": 10593,
-   "secondi": 0.5,
+   "byte": 11328,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/disney.json?v=1793427468",
+   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/posts_data.json?v=1793771824",
    "status": 200,
-   "byte": 63809,
-   "secondi": 0.6,
-   "titolo_pagina": "",
-   "file": "pagine/08.html"
-  },
-  {
-   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/categoria/pixar/page-1.json?v=1793427468",
-   "status": 200,
-   "byte": 11328,
-   "secondi": 0.5,
-   "titolo_pagina": "",
-   "file": "pagine/09.html"
-  },
-  {
-   "url": "https://hd4me.net/wp-content/themes/mytheme/cache/posts_data.json?v=1793427468",
-   "status": 200,
-   "byte": 1446618,
+   "byte": 1447667,
    "secondi": 0.3,
    "titolo_pagina": "",
-   "file": "pagine/10.html"
+   "file": "pagine/08.html"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE"
+ "verdetto": "SI FERMA A: findvideos su \"The Walking Dead S07 21.6 GB\""
 }

@@ -10,10 +10,10 @@
   {
    "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 17
+   "voci": 12
   },
   {
-   "passo": "check su \"L'ultimo piatto\"",
+   "passo": "check su \"Un cucciolo per Natale\"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,7 +21,7 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/49692512",
+   "url": "https://v.vidxgo.co/38515310",
    "nota": "il server non risponde entro 90 secondi",
    "modulo_server": true,
    "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
@@ -31,7 +31,7 @@
    },
    "api_t": [
     {
-     "referer": "https://v.vidxgo.co/49692512",
+     "referer": "https://v.vidxgo.co/38515310",
      "status": 403,
      "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
     },
@@ -54,7 +54,7 @@
    "voce": "Tutti",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 16
+   "titoli": 11
   },
   {
    "voce": "•• Generi",
@@ -92,19 +92,19 @@
      "voce": "0-9",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 16
+     "titoli": 12
     },
     {
      "voce": "A",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 16
+     "titoli": 12
     },
     {
      "voce": "B",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 16
+     "titoli": 12
     }
    ]
   },
@@ -134,63 +134,63 @@
    "url": "https://il-geniodellostreaming.rest/catalog/all",
    "status": 200,
    "byte": 37924,
-   "secondi": 0.7,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/film/35414-l-ultimo-piatto-streaming.html",
+   "url": "https://il-geniodellostreaming.rest/film/35421-un-cucciolo-per-natale-streaming.html",
    "status": 200,
-   "byte": 31007,
+   "byte": 30178,
    "secondi": 0.2,
-   "titolo_pagina": "L'ultimo piatto Streaming - Serie TV - ilGenioDelloStreaming",
+   "titolo_pagina": "Un cucciolo per Natale Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/film/35414-l-ultimo-piatto-streaming.html",
+   "url": "https://il-geniodellostreaming.rest/film/35421-un-cucciolo-per-natale-streaming.html",
    "status": 200,
-   "byte": 31007,
+   "byte": 30178,
    "secondi": 0.2,
-   "titolo_pagina": "L'ultimo piatto Streaming - Serie TV - ilGenioDelloStreaming",
+   "titolo_pagina": "Un cucciolo per Natale Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/03.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/all",
    "status": 200,
    "byte": 37924,
-   "secondi": 1.4,
+   "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/04.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest",
    "status": 200,
-   "byte": 89821,
-   "secondi": 0.7,
+   "byte": 87303,
+   "secondi": 0.2,
    "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/05.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/serie-tv/",
    "status": 200,
-   "byte": 85201,
-   "secondi": 0.6,
+   "byte": 85089,
+   "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/animazione/",
    "status": 200,
-   "byte": 85306,
-   "secondi": 0.2,
+   "byte": 85800,
+   "secondi": 0.1,
    "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
    "file": "pagine/07.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/avventura/",
    "status": 200,
-   "byte": 86328,
-   "secondi": 0.2,
+   "byte": 86313,
+   "secondi": 0.4,
    "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
    "file": "pagine/08.html"
   },
@@ -198,14 +198,14 @@
    "url": "https://il-geniodellostreaming.rest/catalog/all",
    "status": 200,
    "byte": 37924,
-   "secondi": 1.8,
+   "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/09.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/0",
    "status": 200,
-   "byte": 37764,
+   "byte": 38371,
    "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/10.html"
@@ -213,24 +213,24 @@
   {
    "url": "https://il-geniodellostreaming.rest/catalog/a",
    "status": 200,
-   "byte": 38294,
-   "secondi": 0.7,
+   "byte": 38409,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/11.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/b",
    "status": 200,
-   "byte": 37800,
-   "secondi": 0.4,
+   "byte": 37915,
+   "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/12.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/serie-tv/",
    "status": 200,
-   "byte": 85201,
-   "secondi": 0.6,
+   "byte": 85089,
+   "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/13.html"
   },
@@ -238,7 +238,7 @@
    "url": "https://il-geniodellostreaming.rest/?s=avatar",
    "status": 200,
    "byte": 34900,
-   "secondi": 2.2,
+   "secondi": 2.1,
    "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/14.html"
   }
