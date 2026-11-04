@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 5, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 12, NON VERIFICATO 5, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 6, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 11, NON VERIFICATO 5, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (3)
 
@@ -26,10 +26,10 @@ Sito: https://guardaseriex.cyou
 Sito: https://tanti-film.ink
 - ROTTO: peliculas /film | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_film.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 33 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 31 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 23 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 24 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
 
 ## CORRETTO IN PARTE (1)
@@ -48,7 +48,7 @@ Sito: http://cinestore.cinetecadibologna.it
 - file corretto scritto in rapporti/correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli
 - attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano
 
-## ROTTO (5)
+## ROTTO (6)
 
 ### accuradio
 Sito: https://www.accuradio.com
@@ -104,9 +104,24 @@ Sito: https://eurostreaming.ooo
 -   nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi/
 - riga per channels.json: "eurostreaming_actor": "https://guardaseriex.art",
 
+### ilcorsaronero
+Sito: https://ilcorsaronero.link
+- ROTTO: peliculas /cat/film | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/ilcorsaronero/pagina_peliculas_cat_film.html
+-   nessuna regex sostitutiva trovata automaticamente in /cat/film
+- ROTTO: peliculas /cat/serie-tv | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/ilcorsaronero/pagina_peliculas_cat_serie_tv.html
+-   nessuna regex sostitutiva trovata automaticamente in /cat/serie-tv
+- ROTTO: peliculas /cat/animazione | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/ilcorsaronero/pagina_peliculas_cat_animazione.html
+-   nessuna regex sostitutiva trovata automaticamente in /cat/animazione
+- ROTTO: peliculas /cat/altro/documentari | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/ilcorsaronero/pagina_peliculas_cat_altro_documentari.html
+-   nessuna regex sostitutiva trovata automaticamente in /cat/altro/documentari
+
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.rest
-- OK: peliculas /catalog/all | 16 risultati
+- OK: peliculas /catalog/all | 11 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
@@ -124,7 +139,7 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27321 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27322 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
@@ -135,7 +150,7 @@ Sito: https://cinemalibero.cafe
 - peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
 - peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
-## IRRAGGIUNGIBILE (12)
+## IRRAGGIUNGIBILE (11)
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live
@@ -164,10 +179,6 @@ Sito: https://filmpertuttiiii.nuovo.live
 ### filmstreaming
 Sito: https://film-streaming-ita.cam
 - il nome del sito non esiste piu (DNS) (https://film-streaming-ita.cam)
-
-### ilcorsaronero
-Sito: https://ilcorsaronero.link
-- il sito non risponde (tempo scaduto) (https://ilcorsaronero.link)
 
 ### italiafilm
 Sito: https://italia-film.lifestyle
@@ -245,7 +256,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 78 risultati
+- OK: peliculas /updated | 80 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -263,9 +274,9 @@ Sito: https://www.discoveryplus.com
 - OK: https://eu1-prod-direct.discoveryplus.com | html
 
 ### eurostreaming
-Sito: https://eurostream.fit
+Sito: https://eurostream.one
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
-- peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.fit/?p=23012, controllo quella
+- peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.one/?p=23012, controllo quella
 - OK: peliculas /aggiornamento-episodi-nuovi/ | 92 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
@@ -273,7 +284,7 @@ Sito: https://eurostream.fit
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10135 risultati
+- OK: peliculas /index | 10234 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -338,7 +349,7 @@ Sito: https://streamingcommunityz.boo
 - OK: Archivio per nome | 60 titoli in props.titles
 - OK: Ricerca | 60 titoli in props.titles
 - OK: Generi | 20 titoli in props.genres
-- OK: serie di esempio /it/titles/66459-dead-end-job | 1 stagioni, 8 episodi nella prima
+- OK: serie di esempio /it/titles/66489-bass-x-machina | 1 stagioni, 6 episodi nella prima
 
 ### thepiratebay
 Sito: https://apibay.org
