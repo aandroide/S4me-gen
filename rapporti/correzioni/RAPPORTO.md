@@ -121,7 +121,7 @@ Sito: https://ilcorsaronero.link
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.rest
-- OK: peliculas /catalog/all | 11 risultati
+- OK: peliculas /catalog/all | 16 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
@@ -139,15 +139,15 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27322 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27391 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5638 byte): non e un cambio di struttura
 - peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5646 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5666 byte): non e un cambio di struttura
 - peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (11)
@@ -235,14 +235,14 @@ Sito: https://1337x.to
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best
-- OK: peliculas /lastnews/ | 78 risultati
-- OK: peliculas /cinema/ | 94 risultati
-- OK: peliculas /sub-ita/ | 94 risultati
-- OK: peliculas /serie-tv/ | 92 risultati
+- OK: peliculas /lastnews/ | 83 risultati
+- OK: peliculas /cinema/ | 97 risultati
+- OK: peliculas /sub-ita/ | 97 risultati
+- OK: peliculas /serie-tv/ | 97 risultati
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.bar
-- OK: peliculas /film/ | 29 risultati
+- OK: peliculas /film/ | 30 risultati
 - OK: peliculas /serie-tv/ | 30 risultati
 
 ### animesaturn
@@ -256,7 +256,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 80 risultati
+- OK: peliculas /updated | 79 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -277,14 +277,14 @@ Sito: https://www.discoveryplus.com
 Sito: https://eurostream.one
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.one/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 92 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 94 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
 
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10234 risultati
+- OK: peliculas /index | 10112 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -328,7 +328,7 @@ Sito: https://pluto.tv
 
 ### raiplay
 Sito: https://www.raiplay.it
-- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
+- attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.tech_datetime_en
 - OK: https://www.raiplay.it/dirette | html
 - OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
 - OK: https://www.raiplay.it/guidatv | html
@@ -349,7 +349,7 @@ Sito: https://streamingcommunityz.boo
 - OK: Archivio per nome | 60 titoli in props.titles
 - OK: Ricerca | 60 titoli in props.titles
 - OK: Generi | 20 titoli in props.genres
-- OK: serie di esempio /it/titles/66489-bass-x-machina | 1 stagioni, 6 episodi nella prima
+- OK: serie di esempio /it/titles/66502-the-greatest | 1 stagioni, 8 episodi nella prima
 
 ### thepiratebay
 Sito: https://apibay.org
