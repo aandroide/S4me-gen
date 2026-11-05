@@ -7,27 +7,27 @@ Canale guardaserieicu | indirizzo
       channel_config | txt60587 %s | 
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Scambio di bugie | https://guardaseriex.art/dramma/5870-scambio-di-bugie-streaming.html
-      episodios | YAGA | https://guardaseriex.art/dramma/5856-yaga-streaming.html
-      episodios | Peccato | https://guardaseriex.art/commedia/5804-peccato-streaming.html
-      episodios | R.J. Decker | https://guardaseriex.art/crime/5502-rj-decker-streaming.html
-== episodios su "Scambio di bugie"
+      episodios | Obsess | https://guardaseriex.art/mistero/5871-obsess-streaming.html
+      episodios | Paolo | https://guardaseriex.art/dramma/5789-paolo-streaming.html
+      episodios | 4 Blocks Zero | https://guardaseriex.art/dramma/5787-4-blocks-zero-streaming.html
+      episodios | Memoriæ | https://guardaseriex.art/5873-memoriae-streaming.html
+== episodios su "Obsess"
    -> 2 voci
-      findvideos | 1x01 | https://guardaseriex.art/dramma/5870-scambio-di-bugie-streaming.html
-      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.art/dramma/5870-scambio-di-bugie-streaming.html
+      findvideos | 1x01 | https://guardaseriex.art/mistero/5871-obsess-streaming.html
+      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.art/mistero/5871-obsess-streaming.html
 == findvideos su "1x01"
    -> 1 voci
-      play | 1x01 | https://v.vidxgo.co/42767924/1/1
-== risoluzione vidxgo https://v.vidxgo.co/42767924/1/1
+      play | 1x01 | https://v.vidxgo.co/36838527/1/1
+== risoluzione vidxgo https://v.vidxgo.co/36838527/1/1
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (2)
     tvshow | '/serietv-streaming/page/1/'
     tvshow | ('Generi', ['/serietv-streaming/page/1/', 'genres', 'genres'])
 == controllo di tutte le sezioni
    SEZIONE • Serie TV -> OK 18 
-   SEZIONE Biografico -> OK 126 
-   SEZIONE Commedia -> OK 1520 
-   SEZIONE Crime -> OK 845 
+   SEZIONE Biografico -> OK 127 
+   SEZIONE Commedia -> OK 1521 
+   SEZIONE Crime -> OK 846 
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE •• txt70741 Serie TV… -> OK 4 
 SEZIONI: 3 ok su 3

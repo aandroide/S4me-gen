@@ -12,27 +12,27 @@ Canale tantifilm | indirizzo https://tanti-film.ink
       peliculas | Biografico | https://tanti-film.ink/biografico/
       peliculas | Commedia | https://tanti-film.ink/commedia/
 == peliculas su "Prossimamente"
-   -> 25 voci
+   -> 26 voci
+      check | Your Mother Your Mother Your Mother  | https://tanti-film.ink/guarda/35435-your-mother-your-mother-your-mother-streaming-streaming-hd.html
+      check | The Mongoose  | https://tanti-film.ink/guarda/35433-the-mongoose-streaming-streaming-hd.html
       check | Un cucciolo per Natale  | https://tanti-film.ink/guarda/35421-un-cucciolo-per-natale-streaming-streaming-hd.html
       check | Ninho: il prezzo della fama  | https://tanti-film.ink/guarda/35422-ninho-il-prezzo-della-fama-streaming-streaming-hd.html
-      check | Angelo Pintus in Nabana  | https://tanti-film.ink/guarda/35417-nabana-angelo-pintus-streaming-streaming-hd.html
-      check | Marta e Gianluca - Io e Gianlu (-0001) streaming' rel='bookm | https://tanti-film.ink/guarda/35418-marta-e-gianluca-io-e-gianlu-streaming-streaming-hd.html
-== check su "Un cucciolo per Natale "
+== check su "Your Mother Your Mother Your Mother "
    -> 2 voci
-      play | Un cucciolo per Natale  | https://v.vidxgo.co/38515310
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.ink/guarda/35421-un-cucciolo-per-natale-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/38515310
-   api /t/ 38515310 referer https://v.vidxgo.co/38515310 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 38515310 referer https://tanti-film.ink/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+      play | Your Mother Your Mother Your Mother  | https://v.vidxgo.co/35856037
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.ink/guarda/35435-your-mother-your-mother-your-mother-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/35856037
+   api /t/ 35856037 referer https://v.vidxgo.co/35856037 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 35856037 referer https://tanti-film.ink/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
     tvshow | '/serie-tv/'
 == controllo di tutte le sezioni
-   SEZIONE Animazione -> OK 24 
-   SEZIONE Avventura -> OK 24 
-   SEZIONE Biografico -> OK 19 
+   SEZIONE Animazione -> OK 25 
+   SEZIONE Avventura -> OK 25 
+   SEZIONE Biografico -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE • Film -> OK 31 
    SEZIONE • Serie TV -> OK 25 

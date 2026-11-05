@@ -10,20 +10,20 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 133
+   "voci": 131
   },
   {
-   "passo": "findvideos su \"L'uomo d'acciaio\"",
+   "passo": "findvideos su \"Die hard - Un buon giorno per morire\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 21
+   "voci": 20
   },
   {
-   "passo": "findvideos su \"L'uomo d'acciaio\"",
+   "passo": "findvideos su \"Ca ira il fiume della rivolta\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 78
+   "titoli": 77
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -123,13 +123,13 @@
      "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 7
     },
     {
-     "voce": "The Last Ship 3",
+     "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 13
+     "titoli": 5
     }
    ]
   },
@@ -210,10 +210,10 @@
      "titoli": 10
     },
     {
-     "voce": "Captain Tsubasa",
+     "voce": "One Piece 18",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 41
+     "titoli": 2
     }
    ]
   },
@@ -236,7 +236,7 @@
      "titoli": 13
     },
     {
-     "voce": "NCIS - Unità anticrimine 13",
+     "voce": "C.S.I. Scena del crimine 10",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 7
@@ -250,10 +250,10 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Racconto di una notte",
+     "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 5
     },
     {
      "voce": "Tutto per la mia famiglia 2",
@@ -380,22 +380,22 @@
    "sottovoci": 15,
    "figli": [
     {
-     "voce": "Simone",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 10
-    },
-    {
      "voce": "La casa delle bambole di Gabby",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 8
     },
     {
      "voce": "Paw Patrol",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
+    },
+    {
+     "voce": "Grizzy e i Lemming",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 9
     }
    ]
   },
@@ -429,7 +429,7 @@
    "voce": "•• Tutti i Documentari",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 13
+   "titoli": 15
   },
   {
    "voce": "•• Documentari più visti",
@@ -444,16 +444,16 @@
      "titoli": 2
     },
     {
-     "voce": "Vietato entrare! - I luoghi più segreti del mondo",
+     "voce": "Enigmi alieni 10",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 7
     },
     {
-     "voce": "Lo sapevi che? 2024",
+     "voce": "Enigmi alieni 13",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 25
+     "titoli": 2
     }
    ]
   },
@@ -472,5 +472,5 @@
  ],
  "sezioni_riepilogo": "24 ok su 24",
  "rete": [],
- "verdetto": "SI FERMA A: findvideos su \"L'uomo d'acciaio\""
+ "verdetto": "SI FERMA A: findvideos su \"Die hard - Un buon giorno per morire\""
 }

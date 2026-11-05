@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.one
       peliculas | • Archivio | https://eurostream.one/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | VisionQuest | https://eurostream.one/visionquest/
-      episodios | Taken: Natalee Holloway | https://eurostream.one/taken-natalee-holloway/
-      episodios | Stick | https://eurostream.one/stick-2025/
-      episodios | Small Prophets | https://eurostream.one/small-prophets/
-== episodios su "VisionQuest"
-   -> 15 voci
-      findvideos | 1x01 - Senza legami  | https://eurostream.one/visionquest/
-      findvideos | 1x02 - Teseo  | https://eurostream.one/visionquest/
-      findvideos | 1x03 - Reboot  | https://eurostream.one/visionquest/
-      findvideos | 1x04 - Malware  | https://eurostream.one/visionquest/
-== findvideos su "1x01 - Senza legami "
+      episodios | R.J. Decker | https://eurostream.one/r-j-decker/
+      episodios | NCIS - Unità anticrimine | https://eurostream.one/ncis-6/
+      episodios | Merry Berry Love | https://eurostream.one/merry-berry-love/
+      episodios | American Horror Story | https://eurostream.one/american-horror-story-23/
+== episodios su "R.J. Decker"
+   -> 28 voci
+      findvideos | 1x01 - Pilot  | https://eurostream.one/r-j-decker/
+      findvideos | 1x02 - Chili di clem in sacchi da 5 chili  | https://eurostream.one/r-j-decker/
+      findvideos | 1x03 - Il danno provocato dall’ago  | https://eurostream.one/r-j-decker/
+      findvideos | 1x04 - In Vanity Veritas  | https://eurostream.one/r-j-decker/
+== findvideos su "1x01 - Pilot "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/bad09plj
+Exception: Not un-shortened link: https://clicka.cc/mix/9yfjuztk
 
 == lista "• Anime"
    -> 19 voci
@@ -65,21 +65,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/0d9arej2
+Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 1x07 - VisionQuest - Sacrificio | https://eurostream.one/visionquest/
-      episodios | 1x01 - Taken: Natalee Holloway - Natalee è scomparsa , 1x02  | https://eurostream.one/taken-natalee-holloway/
-      episodios | 2x01 - Stick (2025) - Il richiamo delle sirene del golf , 2x | https://eurostream.one/stick-2025/
-      episodios | 1x06 - Small Prophets - Il canto del saggio | https://eurostream.one/small-prophets/
-== episodios su "1x07 - VisionQuest - Sacrificio"
-   -> 15 voci
-      findvideos | 1x01 - Senza legami  | https://eurostream.one/visionquest/
-      findvideos | 1x02 - Teseo  | https://eurostream.one/visionquest/
-      findvideos | 1x03 - Reboot  | https://eurostream.one/visionquest/
-      findvideos | 1x04 - Malware  | https://eurostream.one/visionquest/
-== findvideos su "1x01 - Senza legami "
+      episodios | 2x02 - R.J. Decker - Manos: Le mani del destino | https://eurostream.one/r-j-decker/
+      episodios | 24x04 - NCIS - Unità anticrimine - Like and Subscribe  | https://eurostream.one/ncis-6/
+      episodios | 1x05 - Merry Berry Love - Episodio 5 | https://eurostream.one/merry-berry-love/
+      episodios | 13x13 - American Horror Story - Un divertimento diabolico ,  | https://eurostream.one/american-horror-story-23/
+== episodios su "2x02 - R.J. Decker - Manos: Le mani del "
+   -> 28 voci
+      findvideos | 1x01 - Pilot  | https://eurostream.one/r-j-decker/
+      findvideos | 1x02 - Chili di clem in sacchi da 5 chili  | https://eurostream.one/r-j-decker/
+      findvideos | 1x03 - Il danno provocato dall’ago  | https://eurostream.one/r-j-decker/
+      findvideos | 1x04 - In Vanity Veritas  | https://eurostream.one/r-j-decker/
+== findvideos su "1x01 - Pilot "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/bad09plj
+Exception: Not un-shortened link: https://clicka.cc/mix/9yfjuztk
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -108,6 +108,7 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
    SEZIONE • Archivio -> OK 18 
-   SEZIONE txt70741 … -> OK 11 
-SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - Senza legami "
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostream.one/?s=avatar', 'status': 403, 'byte': 5913, 'titolo_pagina': 'Just a moment...'}
+SEZIONI: 4 ok su 5
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
+VERDETTO: SI FERMA A: findvideos su "1x01 - Pilot "

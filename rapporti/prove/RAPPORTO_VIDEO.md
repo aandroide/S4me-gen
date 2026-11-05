@@ -42,7 +42,7 @@ Sito:  | verdetto: ARRIVA AL VIDEO
 
 ### raiplay
 Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
-- server directo: VIDEO OK m3u8 206
+- server directo: VIDEO OK 206 video/mp4
 
 ### streamingcommunity
 Sito: https://streamingcommunityz.boo | verdetto: ARRIVA AL VIDEO
@@ -50,7 +50,7 @@ Sito: https://streamingcommunityz.boo | verdetto: ARRIVA AL VIDEO
 
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
-- passo "findvideos su "01 - Vivi seguendo la corrente!"": VUOTO 
+- server rpmshare: SERVER NON RISOLVE 
 - server voe: VIDEO OK m3u8 200
 
 ## SI FERMA AL SERVER O AL VIDEO (4)
@@ -80,9 +80,9 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista ""Alternative Now!: Best of 2026" — 2026 "
-- passo "lista ""Alternative Now!: Best of 2026" — 2026 "": VUOTO 
-- passo "lista ""Best of 2026" channels "": VUOTO 
+Sito:  | verdetto: SI FERMA A: lista "Most Popular "
+- passo "lista "Most Popular "": VUOTO 
+- passo "lista "Throwback Thursday: 1991 "": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -152,10 +152,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.one | verdetto: SI FERMA A: findvideos su "1x01 - Senza legami "
-- passo "findvideos su "1x01 - Senza legami "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/bad09plj 
-- passo "findvideos su "1x01 - Asa e Yuru "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/0d9arej2 
-- passo "findvideos su "1x01 - Senza legami "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/bad09plj 
+Sito: https://eurostream.one | verdetto: SI FERMA A: findvideos su "1x01 - Pilot "
+- passo "findvideos su "1x01 - Pilot "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/9yfjuztk 
+- passo "findvideos su "1x01 - Asa e Yuru "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47 
+- passo "findvideos su "1x01 - Pilot "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/9yfjuztk 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -219,9 +219,9 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Serie TV"": VUOTO 
 
 ### mediasetplay
-Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "L'uomo d'acciaio"
-- passo "findvideos su "L'uomo d'acciaio"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "L'uomo d'acciaio"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Die hard - Un buon giorno per morire"
+- passo "findvideos su "Die hard - Un buon giorno per morire"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Ca ira il fiume della rivolta"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
@@ -243,7 +243,7 @@ Sito: https://piratestreaming.design | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Anime"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### plutotv
-Sito: https://pluto.tv/ca/watch/live-tv | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
+Sito: https://pluto.tv/us/watch/live-tv | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
 
 ### serietvu
 Sito: http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1 | verdetto: SI FERMA A: lista "• Serie TV"

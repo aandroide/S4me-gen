@@ -13,7 +13,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"Drive - Cuori in pista \"",
+   "passo": "findvideos su \"A Story of Derry \"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,8 +21,8 @@
  "video": [
   {
    "server": "streamingcommunityws",
-   "url": "https://streamingcommunityz.boo/it/iframe/66440",
-   "finale": "https://vixcloud.cc/playlist/797176?token=4cf72418b55712267f5808f0eb631e63&expires=1798982203&asn=",
+   "url": "https://streamingcommunityz.boo/it/iframe/66468",
+   "finale": "https://vixcloud.cc/playlist/797779?token=5319317a597d4aabd8965782a41f5cf5&expires=1799069398&asn=",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -167,31 +167,31 @@
   {
    "url": "https://streamingcommunityz.boo/it/movies",
    "status": 200,
-   "byte": 298915,
-   "secondi": 0.6,
+   "byte": 300733,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://streamingcommunityz.boo/it/iframe/66440",
+   "url": "https://streamingcommunityz.boo/it/iframe/66468",
    "status": 200,
-   "byte": 1794,
+   "byte": 1786,
    "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://vixcloud.cc/embed/797176?token=2cd219e8e4e02818eeab45585b1994c0&t=RHJpdmUgLSBDdW9yaSBpbiBwaXN0YQ%3D%3D&referer=1&expires=1793798213&lang=it&scz=1",
+   "url": "https://vixcloud.cc/embed/797779?token=e4593c9d1f97974cc72d36c28c371544&t=QSBTdG9yeSBvZiBEZXJyeQ%3D%3D&referer=1&expires=1793885408&lang=it&scz=1",
    "status": 200,
    "byte": 6632,
-   "secondi": 0.3,
-   "titolo_pagina": "797176",
+   "secondi": 0.4,
+   "titolo_pagina": "797779",
    "file": "pagine/03.html"
   },
   {
    "url": "https://streamingcommunityz.boo/it/movies",
    "status": 200,
-   "byte": 298915,
+   "byte": 300733,
    "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/04.html"
@@ -199,7 +199,7 @@
   {
    "url": "https://streamingcommunityz.boo/it/movies",
    "status": 200,
-   "byte": 298915,
+   "byte": 300733,
    "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/05.html"
@@ -207,31 +207,31 @@
   {
    "url": "https://streamingcommunityz.boo/it/movies",
    "status": 200,
-   "byte": 298915,
-   "secondi": 0.5,
+   "byte": 300733,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
    "url": "https://streamingcommunityz.boo/it/tv-shows",
    "status": 200,
-   "byte": 323735,
-   "secondi": 0.4,
+   "byte": 325722,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
    "url": "https://streamingcommunityz.boo/it/tv-shows",
    "status": 200,
-   "byte": 323735,
-   "secondi": 0.5,
+   "byte": 325722,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
    "url": "https://streamingcommunityz.boo/it/tv-shows",
    "status": 200,
-   "byte": 323735,
+   "byte": 325722,
    "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/09.html"
@@ -239,15 +239,15 @@
   {
    "url": "https://streamingcommunityz.boo",
    "status": 200,
-   "byte": 322215,
-   "secondi": 0.5,
+   "byte": 321780,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/10.html"
   },
   {
    "url": "https://streamingcommunityz.boo/it/archive?genre[]=4",
    "status": 200,
-   "byte": 230380,
+   "byte": 230539,
    "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/11.html"
@@ -255,7 +255,7 @@
   {
    "url": "https://streamingcommunityz.boo/it/archive?genre[]=13",
    "status": 200,
-   "byte": 237944,
+   "byte": 237962,
    "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/12.html"
@@ -264,22 +264,22 @@
    "url": "https://streamingcommunityz.boo/it/archive?genre[]=11",
    "status": 200,
    "byte": 241657,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/13.html"
   },
   {
    "url": "https://streamingcommunityz.boo/it/archive",
    "status": 200,
-   "byte": 221754,
-   "secondi": 0.6,
+   "byte": 221973,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/14.html"
   },
   {
    "url": "https://streamingcommunityz.boo/it/archive?type=movie",
    "status": 200,
-   "byte": 225868,
+   "byte": 226134,
    "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/15.html"
@@ -287,28 +287,28 @@
   {
    "url": "https://streamingcommunityz.boo/it/archive?type=tv",
    "status": 200,
-   "byte": 219212,
-   "secondi": 0.5,
+   "byte": 219422,
+   "secondi": 0.4,
    "titolo_pagina": ""
   },
   {
    "url": "https://streamingcommunityz.boo/it/archive?sort=last_air_date",
    "status": 200,
-   "byte": 243649,
-   "secondi": 0.4,
+   "byte": 243874,
+   "secondi": 0.5,
    "titolo_pagina": ""
   },
   {
    "url": "https://streamingcommunityz.boo/it/archive?sort=created_at",
    "status": 200,
-   "byte": 224626,
+   "byte": 225934,
    "secondi": 0.4,
    "titolo_pagina": ""
   },
   {
    "url": "https://streamingcommunityz.boo/it/archive?sort=score",
    "status": 200,
-   "byte": 257619,
+   "byte": 256455,
    "secondi": 0.5,
    "titolo_pagina": ""
   },
@@ -316,7 +316,7 @@
    "url": "https://streamingcommunityz.boo/it/archive?sort=views",
    "status": 200,
    "byte": 285645,
-   "secondi": 0.7,
+   "secondi": 0.6,
    "titolo_pagina": ""
   },
   {

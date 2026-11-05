@@ -10,10 +10,10 @@
   {
    "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 23
+   "voci": 24
   },
   {
-   "passo": "check su \"Un cucciolo per Natale \"",
+   "passo": "check su \"Your Mother Your Mother Your Mother \"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,8 +21,8 @@
  "video": [
   {
    "server": "vixsrc",
-   "url": "https://vixsrc.to/movie/tt38515310",
-   "finale": "https://vixsrc.to/playlist/798583.m3u8?ub=1&token=a5b63ade43814daa09200fde58610543&expires=1798982079&h=1&lang=it",
+   "url": "https://vixsrc.to/movie/tt35856037",
+   "finale": "https://vixsrc.to/playlist/798639.m3u8?ub=1&token=da62b0c325c7e333fef2f308edd12222&expires=1799069276&h=1&lang=it",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -41,7 +41,7 @@
    "voce": "Tutti",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 22
+   "titoli": 23
   },
   {
    "voce": "•• Al Cinema",
@@ -53,7 +53,7 @@
    "voce": "•• Ultimi Aggiornati-Aggiunti",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 34
+   "titoli": 37
   },
   {
    "voce": "•• Generi",
@@ -117,7 +117,7 @@
    "voce": "Serie TV",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 29
+   "titoli": 30
   },
   {
    "voce": "txt70741 …",
@@ -131,39 +131,39 @@
   {
    "url": "https://altadefinizione-01.best/lastnews/",
    "status": 200,
-   "byte": 132255,
-   "secondi": 0.3,
+   "byte": 132909,
+   "secondi": 0.5,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizione-01.best/35421-un-cucciolo-per-natale-streaming.html",
+   "url": "https://altadefinizione-01.best/35435-your-mother-your-mother-your-mother-streaming.html",
    "status": 200,
-   "byte": 91802,
-   "secondi": 0.3,
-   "titolo_pagina": "Un cucciolo per Natale Streaming HD - Altadefinizione01",
+   "byte": 92784,
+   "secondi": 0.5,
+   "titolo_pagina": "Your Mother Your Mother Your Mother Streaming HD - Altadefinizione01",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://vixsrc.to/api/movie/tt38515310",
+   "url": "https://vixsrc.to/api/movie/tt35856037",
    "status": 200,
-   "byte": 159,
+   "byte": 169,
    "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://vixsrc.to/embed/798583?token=f0fcbac310be0a9f44bc35dba38d5e02&t=QSBEb2cncyBQZXJmZWN0IENocmlzdG1hcw%3D%3D&expires=1793798088&lang=en&skin=vixsrc&canPlayFHD=1",
+   "url": "https://vixsrc.to/embed/798639?token=ac0f73ae470b3ea0176c8773e6ff691e&t=WW91ciBNb3RoZXIgWW91ciBNb3RoZXIgWW91ciBNb3RoZXI%3D&expires=1793885285&lang=en&skin=vixsrc&canPlayFHD=1",
    "status": 200,
-   "byte": 6591,
-   "secondi": 0.2,
-   "titolo_pagina": "798583",
+   "byte": 6590,
+   "secondi": 0.3,
+   "titolo_pagina": "798639",
    "file": "pagine/04.html"
   },
   {
    "url": "https://altadefinizione-01.best/lastnews/",
    "status": 200,
-   "byte": 132255,
+   "byte": 132909,
    "secondi": 0.3,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/05.html"
@@ -171,31 +171,31 @@
   {
    "url": "https://altadefinizione-01.best/cinema/",
    "status": 200,
-   "byte": 156113,
-   "secondi": 0.5,
+   "byte": 156489,
+   "secondi": 0.6,
    "titolo_pagina": "Al Cinema – Altadefinizione01",
    "file": "pagine/06.html"
   },
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 180469,
-   "secondi": 0.4,
+   "byte": 181537,
+   "secondi": 0.5,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/07.html"
   },
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 180469,
-   "secondi": 0.3,
+   "byte": 181537,
+   "secondi": 0.5,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/08.html"
   },
   {
    "url": "https://altadefinizione-01.best/azione/",
    "status": 200,
-   "byte": 155796,
+   "byte": 156020,
    "secondi": 0.3,
    "titolo_pagina": "Azione – Altadefinizione01",
    "file": "pagine/09.html"
@@ -203,7 +203,7 @@
   {
    "url": "https://altadefinizione-01.best/animazione/",
    "status": 200,
-   "byte": 157252,
+   "byte": 157767,
    "secondi": 0.3,
    "titolo_pagina": "Animazione – Altadefinizione01",
    "file": "pagine/10.html"
@@ -211,31 +211,31 @@
   {
    "url": "https://altadefinizione-01.best/avventura/",
    "status": 200,
-   "byte": 157556,
-   "secondi": 0.4,
+   "byte": 158071,
+   "secondi": 0.3,
    "titolo_pagina": "Avventura – Altadefinizione01",
    "file": "pagine/11.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/a",
    "status": 200,
-   "byte": 106933,
-   "secondi": 0.4,
+   "byte": 107646,
+   "secondi": 0.6,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/12.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/9",
    "status": 200,
-   "byte": 105999,
-   "secondi": 0.7,
+   "byte": 106709,
+   "secondi": 0.6,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/13.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/A",
    "status": 200,
-   "byte": 106936,
+   "byte": 107646,
    "secondi": 0.5,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/14.html"
@@ -243,30 +243,30 @@
   {
    "url": "https://altadefinizione-01.best/catalog/B",
    "status": 200,
-   "byte": 106936,
-   "secondi": 0.5,
+   "byte": 107646,
+   "secondi": 0.6,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/15.html"
   },
   {
    "url": "https://altadefinizione-01.best/sub-ita/",
    "status": 200,
-   "byte": 155465,
+   "byte": 155980,
    "secondi": 0.3,
    "titolo_pagina": "Sub-ITA &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   },
   {
    "url": "https://altadefinizione-01.best/serie-tv/",
    "status": 200,
-   "byte": 154252,
+   "byte": 154849,
    "secondi": 0.3,
    "titolo_pagina": "Serie TV in Streaming Gratis - Altadefinizione01"
   },
   {
    "url": "https://altadefinizione-01.best/?do=search&subaction=search&titleonly=3&story=avatar",
    "status": 200,
-   "byte": 92329,
-   "secondi": 0.6,
+   "byte": 92844,
+   "secondi": 0.7,
    "titolo_pagina": "Site search &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   }
  ],

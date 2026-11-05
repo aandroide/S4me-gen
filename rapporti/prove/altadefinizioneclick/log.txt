@@ -7,15 +7,15 @@ Canale altadefinizioneclick | indirizzo https://altadefinizionex.bar
       genres | •• Generi | https://altadefinizionex.bar/serie-tv/
 == lista "• Film"
    -> 13 voci
-      findvideos | La gang degli svitati | https://altadefinizionex.bar/azione/45462-la-gang-degli-svitati-streaming.html
-      findvideos | Arresti familiari | https://altadefinizionex.bar/commedia/45461-arresti-familiari-streaming.html
-      findvideos | Angelo Pintus in Nabana | https://altadefinizionex.bar/commedia/45460-angelo-pintus-in-nabana-streaming.html
-      findvideos | Cielo sulla palude | https://altadefinizionex.bar/drammatico/45459-cielo-sulla-palude-streaming.html
-== findvideos su "La gang degli svitati"
+      findvideos | Hungarian Rhapsody: Queen Live in Budapest | https://altadefinizionex.bar/musicale/45472-hungarian-rhapsody-queen-live-in-budapest-streaming.html
+      findvideos | Chi vuole sposare un astronauta? | https://altadefinizionex.bar/commedia/45471-chi-vuole-sposare-un-astronauta-streaming.html
+      findvideos | 7 cadaveri per Scotland Yard | https://altadefinizionex.bar/horror/45469-7-cadaveri-per-scotland-yard-streaming.html
+      findvideos | Plainclothes | https://altadefinizionex.bar/drammatico/45468-plainclothes-streaming.html
+== findvideos su "Hungarian Rhapsody: Queen Live in Budape"
    -> 2 voci
-      play | La gang degli svitati | https://v.vidxgo.co/0089177
-      add_pelicula_to_library | txt30161 %s | https://altadefinizionex.bar/azione/45462-la-gang-degli-svitati-streaming.html
-== risoluzione vidxgo https://v.vidxgo.co/0089177
+      play | Hungarian Rhapsody: Queen Live in Budapest | https://v.vidxgo.co/0093427
+      add_pelicula_to_library | txt30161 %s | https://altadefinizionex.bar/musicale/45472-hungarian-rhapsody-queen-live-in-budapest-streaming.html
+== risoluzione vidxgo https://v.vidxgo.co/0093427
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (4)
     film | '/film/'
@@ -24,14 +24,14 @@ Canale altadefinizioneclick | indirizzo https://altadefinizionex.bar
     tvshow | ('Generi', ['/serie-tv/', 'genres', 'genres'])
 == controllo di tutte le sezioni
    SEZIONE • Film -> OK 12 
+   SEZIONE Cinema -> OK 12 
    SEZIONE Azione -> OK 12 
    SEZIONE Animazione -> OK 12 
-   SEZIONE Avventura -> OK 12 
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE • Serie TV -> OK 12 
+   SEZIONE Cinema -> OK 12 
    SEZIONE Azione -> OK 12 
    SEZIONE Animazione -> OK 12 
-   SEZIONE Avventura -> OK 12 
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5

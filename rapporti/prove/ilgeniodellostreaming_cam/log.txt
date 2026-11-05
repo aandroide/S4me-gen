@@ -6,17 +6,17 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.rest
       genres | •• Per Lettera | https://il-geniodellostreaming.rest/catalog/all
       peliculas | Serie Tv  | https://il-geniodellostreaming.rest/serie-tv/
 == lista "Tutti "
-   -> 12 voci
+   -> 17 voci
+      check | L’imperatrice risposata | https://il-geniodellostreaming.rest/film/35437-l-imperatrice-risposata-streaming.html
+      check | Your Mother Your Mother Your Mother | https://il-geniodellostreaming.rest/film/35435-your-mother-your-mother-your-mother-streaming.html
+      check | The Mongoose | https://il-geniodellostreaming.rest/film/35433-the-mongoose-streaming.html
       check | Un cucciolo per Natale | https://il-geniodellostreaming.rest/film/35421-un-cucciolo-per-natale-streaming.html
-      check | Bass X Machina | https://il-geniodellostreaming.rest/film/35415-bass-x-machina-streaming.html
-      check | L'ultimo piatto | https://il-geniodellostreaming.rest/film/35414-l-ultimo-piatto-streaming.html
-      check | Il passato di mio padre | https://il-geniodellostreaming.rest/film/35410-il-passato-di-mio-padre-streaming.html
-== check su "Un cucciolo per Natale"
+== check su "L’imperatrice risposata"
    -> 1 voci
-      play | Un cucciolo per Natale | https://v.vidxgo.co/38515310
-== risoluzione vidxgo https://v.vidxgo.co/38515310
-   api /t/ 38515310 referer https://v.vidxgo.co/38515310 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 38515310 referer https://il-geniodellostreaming.rest/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+      play | L’imperatrice risposata | https://v.vidxgo.co/39325975
+== risoluzione vidxgo https://v.vidxgo.co/39325975
+   api /t/ 39325975 referer https://v.vidxgo.co/39325975 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 39325975 referer https://il-geniodellostreaming.rest/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (4)
     menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])
@@ -24,14 +24,14 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.rest
     menu | ('Per Lettera {submenu}', ['/catalog/all', 'genres', 'template-az', 'undefined'])
     menu | ('Serie Tv', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 11 
+   SEZIONE Tutti -> OK 16 
    SEZIONE Serie TV -> OK 19 
    SEZIONE Animazione -> OK 20 
    SEZIONE Avventura -> OK 20 
    SEZIONE •• Generi -> SOTTOMENU  
-   SEZIONE 0-9 -> OK 12 
-   SEZIONE A -> OK 12 
-   SEZIONE B -> OK 12 
+   SEZIONE 0-9 -> OK 16 
+   SEZIONE A -> OK 16 
+   SEZIONE B -> OK 16 
    SEZIONE •• Per Lettera -> SOTTOMENU  
    SEZIONE Serie Tv -> OK 19 
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://il-geniodellostreaming.rest/?s=avatar', 'status': 200, 'byte': 34900, 'titolo_pagina': 'Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis'}

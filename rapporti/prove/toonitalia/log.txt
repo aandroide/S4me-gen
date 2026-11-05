@@ -7,34 +7,23 @@ Canale toonitalia | indirizzo https://toonitalia.xyz
       peliculas | Film Animazione  | https://toonitalia.xyz/film-animazione
 == lista "Anime "
    -> 21 voci
+      check | Transformers: EarthSpark  | https://toonitalia.xyz/transformers-earthspark/
       check | Space Dandy  | https://toonitalia.xyz/space-dandy/
       check | Sui monti con Annette  | https://toonitalia.xyz/sui-monti-con-annette/
       check | Scuola di polizia  | https://toonitalia.xyz/scuola-di-polizia/
-      check | Shaman King  | https://toonitalia.xyz/shaman-king/
-== check su "Space Dandy "
-   -> 27 voci
-      findvideos | 01 - Vivi seguendo la corrente! | https://toonitalia.xyz/space-dandy/
-      findvideos | 02 - Alla ricerca del ramen spaziale delle illusioni | https://toonitalia.xyz/space-dandy/
-      findvideos | 03 - A volte anche gli imbroglioni vengono imbrogliati | https://toonitalia.xyz/space-dandy/
-      findvideos | 04 - Ci sono momenti in cui neanche la morte ti ammazza | https://toonitalia.xyz/space-dandy/
-== findvideos su "01 - Vivi seguendo la corrente!"
-   -> 0 voci
-== lista "•• Anime ITA"
-   -> 21 voci
-      check | .hack//Sign  | https://toonitalia.xyz/hack-sign/
-      check | 3x3 occhi  | https://toonitalia.xyz/3x3-occhi/
-      check | 44 Gatti  | https://toonitalia.xyz/44-gatti/
-      check | 5 Centimetri al Secondo  | https://toonitalia.xyz/5-centimetri-al-secondo/
-== check su ".hack//Sign "
-   -> 29 voci
-      findvideos | 01 - Gioco di Ruolo | https://toonitalia.xyz/hack-sign/
-      findvideos | 02 - Il guardiano | https://toonitalia.xyz/hack-sign/
-      findvideos | 03 - Dicerie | https://toonitalia.xyz/hack-sign/
-      findvideos | 04 - Ricercato | https://toonitalia.xyz/hack-sign/
-== findvideos su "01 - Gioco di Ruolo"
-   -> 1 voci
-      play | 01 - Gioco di Ruolo | https://voe.sx/e/hig6dbajibee
-== risoluzione voe https://voe.sx/e/hig6dbajibee
+== check su "Transformers: EarthSpark "
+   -> 47 voci
+      findvideos | 1x01 - Eredità segreta - parte 1 | https://toonitalia.xyz/transformers-earthspark/
+      findvideos | 1x02 - Eredità segreta - parte 2 | https://toonitalia.xyz/transformers-earthspark/
+      findvideos | 1x03 - Muuu-tamento | https://toonitalia.xyz/transformers-earthspark/
+      findvideos | 1x04 - Le regole della casa | https://toonitalia.xyz/transformers-earthspark/
+== findvideos su "1x01 - Eredità segreta - parte 1"
+   -> 2 voci
+      play | 1x01 - Eredità segreta - parte 1 | https://toonitalia.rpmplay.xyz/#zbpvnk
+      play | 1x01 - Eredità segreta - parte 1 | https://voe.sx/e/3hatbpudxccy
+== risoluzione rpmshare https://toonitalia.rpmplay.xyz/#zbpvnk
+   -> SERVER NON RISOLVE  
+== risoluzione voe https://voe.sx/e/3hatbpudxccy
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (5)
     menu | ('Anime', ['/category/anime', 'peliculas', '', 'undefined'])

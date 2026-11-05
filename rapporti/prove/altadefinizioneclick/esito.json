@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"La gang degli svitati\"",
+   "passo": "findvideos su \"Hungarian Rhapsody: Queen Live in Budape\"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,8 +21,8 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/0089177",
-   "finale": "http://127.0.0.1:34913/hls/0089177/master.m3u8",
+   "url": "https://v.vidxgo.co/0093427",
+   "finale": "http://127.0.0.1:33483/hls/0093427/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -44,8 +44,14 @@
    "voce": "•• Generi",
    "azione": "genres",
    "esito": "SOTTOMENU",
-   "sottovoci": 29,
+   "sottovoci": 30,
    "figli": [
+    {
+     "voce": "Cinema",
+     "azione": "peliculas_genere",
+     "esito": "OK",
+     "titoli": 12
+    },
     {
      "voce": "Azione",
      "azione": "peliculas_genere",
@@ -54,12 +60,6 @@
     },
     {
      "voce": "Animazione",
-     "azione": "peliculas_genere",
-     "esito": "OK",
-     "titoli": 12
-    },
-    {
-     "voce": "Avventura",
      "azione": "peliculas_genere",
      "esito": "OK",
      "titoli": 12
@@ -76,8 +76,14 @@
    "voce": "•• Generi",
    "azione": "genres",
    "esito": "SOTTOMENU",
-   "sottovoci": 29,
+   "sottovoci": 30,
    "figli": [
+    {
+     "voce": "Cinema",
+     "azione": "peliculas_genere",
+     "esito": "OK",
+     "titoli": 12
+    },
     {
      "voce": "Azione",
      "azione": "peliculas_genere",
@@ -86,12 +92,6 @@
     },
     {
      "voce": "Animazione",
-     "azione": "peliculas_genere",
-     "esito": "OK",
-     "titoli": 12
-    },
-    {
-     "voce": "Avventura",
      "azione": "peliculas_genere",
      "esito": "OK",
      "titoli": 12
@@ -110,106 +110,122 @@
   {
    "url": "https://altadefinizionex.bar/film/",
    "status": 200,
-   "byte": 131612,
+   "byte": 131605,
    "secondi": 0.6,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizionex.bar/azione/45462-la-gang-degli-svitati-streaming.html",
+   "url": "https://altadefinizionex.bar/musicale/45472-hungarian-rhapsody-queen-live-in-budapest-streaming.html",
    "status": 200,
-   "byte": 279357,
-   "secondi": 1.0,
-   "titolo_pagina": "",
+   "byte": 256417,
+   "secondi": 0.9,
+   "titolo_pagina": "Hungarian Rhapsody: Queen Live in Budapest Streaming ITA - Altadefinizione",
    "file": "pagine/02.html"
   },
   {
    "url": "https://altadefinizionex.bar/film/",
    "status": 200,
-   "byte": 131612,
-   "secondi": 0.3,
+   "byte": 131605,
+   "secondi": 0.5,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/03.html"
   },
   {
    "url": "https://altadefinizionex.bar",
    "status": 200,
-   "byte": 506701,
-   "secondi": 0.2,
+   "byte": 512292,
+   "secondi": 0.6,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://altadefinizionex.bar/azione/film",
-   "status": 200,
-   "byte": 133106,
-   "secondi": 0.9,
+   "url": "https://altadefinizionex.bar/cinema/film",
+   "status": 404,
+   "byte": 33514,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://altadefinizionex.bar/animazione/film",
+   "url": "https://altadefinizionex.bar/cinema/",
    "status": 200,
-   "byte": 134654,
-   "secondi": 0.9,
-   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
+   "byte": 72888,
+   "secondi": 0.5,
+   "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://altadefinizionex.bar/avventura/film",
+   "url": "https://altadefinizionex.bar/azione/film",
    "status": 200,
-   "byte": 134997,
-   "secondi": 0.9,
+   "byte": 133439,
+   "secondi": 0.6,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/07.html"
   },
   {
+   "url": "https://altadefinizionex.bar/animazione/film",
+   "status": 200,
+   "byte": 134995,
+   "secondi": 0.3,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
+   "file": "pagine/08.html"
+  },
+  {
    "url": "https://altadefinizionex.bar/serie-tv/",
    "status": 200,
-   "byte": 136187,
+   "byte": 136090,
    "secondi": 0.5,
    "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione",
-   "file": "pagine/08.html"
+   "file": "pagine/09.html"
   },
   {
    "url": "https://altadefinizionex.bar",
    "status": 200,
-   "byte": 506701,
-   "secondi": 0.2,
-   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
-   "file": "pagine/09.html"
-  },
-  {
-   "url": "https://altadefinizionex.bar/azione/serie-tv",
-   "status": 200,
-   "byte": 136665,
-   "secondi": 0.7,
+   "byte": 512292,
+   "secondi": 0.6,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://altadefinizionex.bar/animazione/serie-tv",
-   "status": 200,
-   "byte": 136112,
-   "secondi": 0.9,
+   "url": "https://altadefinizionex.bar/cinema/serie-tv",
+   "status": 404,
+   "byte": 33522,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://altadefinizionex.bar/avventura/serie-tv",
+   "url": "https://altadefinizionex.bar/cinema/",
    "status": 200,
-   "byte": 137171,
-   "secondi": 0.9,
-   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
+   "byte": 72888,
+   "secondi": 0.5,
+   "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/12.html"
+  },
+  {
+   "url": "https://altadefinizionex.bar/azione/serie-tv",
+   "status": 200,
+   "byte": 137198,
+   "secondi": 0.6,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://altadefinizionex.bar/animazione/serie-tv",
+   "status": 200,
+   "byte": 136210,
+   "secondi": 0.7,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
+   "file": "pagine/14.html"
   },
   {
    "url": "https://altadefinizionex.bar/archivio?search=avatar&f=all&page=1",
    "status": 200,
-   "byte": 96870,
-   "secondi": 0.8,
+   "byte": 97193,
+   "secondi": 0.6,
    "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione",
-   "file": "pagine/13.html"
+   "file": "pagine/15.html"
   }
  ],
  "verdetto": "ARRIVA AL VIDEO"

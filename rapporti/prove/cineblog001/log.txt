@@ -7,17 +7,17 @@ Canale cineblog001 | indirizzo https://cineblog001.party
       genres | Generi | https://cineblog001.center
 == lista "Film"
    -> 19 voci
+      findvideos | Your Mother Your Mother Your Mother | https://cineblog001.party/cb01-streaming/35435-your-mother-your-mother-your-mother-streaming-cb01.ht
+      findvideos | The Mongoose | https://cineblog001.party/cb01-streaming/35433-the-mongoose-streaming-cb01.html
       findvideos | Un cucciolo per Natale | https://cineblog001.party/cb01-streaming/35421-un-cucciolo-per-natale-streaming-cb01.html
       findvideos | Ninho: il prezzo della fama | https://cineblog001.party/cb01-streaming/35422-ninho-il-prezzo-della-fama-streaming-cb01.html
-      findvideos | Angelo Pintus in Nabana | https://cineblog001.party/cb01-streaming/35417-nabana-angelo-pintus-streaming-cb01.html
-      findvideos | Marta e Gianluca - Io e Gianlu | https://cineblog001.party/cb01-streaming/35418-marta-e-gianluca-io-e-gianlu-streaming-cb01.html
-== findvideos su "Un cucciolo per Natale"
+== findvideos su "Your Mother Your Mother Your Mother"
    -> 2 voci
-      play | Un cucciolo per Natale | https://v.vidxgo.co/38515310
-      add_pelicula_to_library | txt30161 %s | https://cineblog001.party/cb01-streaming/35421-un-cucciolo-per-natale-streaming-cb01.html
-== risoluzione vidxgo https://v.vidxgo.co/38515310
-   api /t/ 38515310 referer https://v.vidxgo.co/38515310 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 38515310 referer https://cineblog001.party/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+      play | Your Mother Your Mother Your Mother | https://v.vidxgo.co/35856037
+      add_pelicula_to_library | txt30161 %s | https://cineblog001.party/cb01-streaming/35435-your-mother-your-mother-your-mother-streaming-cb01.ht
+== risoluzione vidxgo https://v.vidxgo.co/35856037
+   api /t/ 35856037 referer https://v.vidxgo.co/35856037 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 35856037 referer https://cineblog001.party/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (4)
     top | ('Film', ['/film/', 'peliculas', ''])
@@ -29,7 +29,7 @@ Canale cineblog001 | indirizzo https://cineblog001.party
    SEZIONE Serie TV -> OK 18 
    SEZIONE Sub-ITA -> OK 18 
    SEZIONE Azione -> OK 16 
-   SEZIONE Animazione -> OK 17 
+   SEZIONE Animazione -> OK 16 
    SEZIONE Avventura -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE txt70741 … -> OK 10 

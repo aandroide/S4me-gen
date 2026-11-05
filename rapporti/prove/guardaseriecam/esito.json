@@ -13,7 +13,7 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"Scambio di bugie\"",
+   "passo": "episodios su \"Obsess\"",
    "esito": "OK",
    "voci": 4
   },
@@ -26,8 +26,8 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/42767924/1/1",
-   "finale": "http://127.0.0.1:38039/hls/tv/42767924/1/1/master.m3u8",
+   "url": "https://v.vidxgo.co/36838527/1/1",
+   "finale": "http://127.0.0.1:39475/hls/tv/36838527/1/1/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -88,39 +88,39 @@
   {
    "url": "https://guardaseriex.art/serietv-streaming",
    "status": 200,
-   "byte": 99201,
-   "secondi": 0.4,
+   "byte": 100049,
+   "secondi": 0.9,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.art/dramma/5870-scambio-di-bugie-streaming.html",
+   "url": "https://guardaseriex.art/mistero/5871-obsess-streaming.html",
    "status": 200,
-   "byte": 63559,
-   "secondi": 0.4,
-   "titolo_pagina": "Scambio di bugie streaming - Guardaserie",
+   "byte": 63809,
+   "secondi": 0.6,
+   "titolo_pagina": "Obsess streaming - Guardaserie",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt42767924?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt36838527?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
    "status": 200,
-   "byte": 664,
-   "secondi": 0.1,
+   "byte": 619,
+   "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/336240?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/311853?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 2054,
-   "secondi": 0.0,
+   "byte": 1939,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/336240/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/311853/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 2158,
+   "byte": 2119,
    "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/05.html"
@@ -128,7 +128,7 @@
   {
    "url": "https://guardaseriex.art/serietv-streaming",
    "status": 200,
-   "byte": 99201,
+   "byte": 100049,
    "secondi": 0.4,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/06.html"
@@ -136,15 +136,15 @@
   {
    "url": "https://guardaseriex.art/serietv-popolari/",
    "status": 200,
-   "byte": 405108,
-   "secondi": 0.8,
+   "byte": 405089,
+   "secondi": 1.1,
    "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
    "file": "pagine/07.html"
   },
   {
    "url": "https://guardaseriex.art/serietv-streaming",
    "status": 200,
-   "byte": 99201,
+   "byte": 100049,
    "secondi": 0.4,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/08.html"
@@ -152,32 +152,32 @@
   {
    "url": "https://guardaseriex.art/biografico/",
    "status": 200,
-   "byte": 221405,
-   "secondi": 0.6,
+   "byte": 221371,
+   "secondi": 0.5,
    "titolo_pagina": "Biografico streaming | Guardaserie",
    "file": "pagine/09.html"
   },
   {
    "url": "https://guardaseriex.art/commedia/",
    "status": 200,
-   "byte": 2267822,
-   "secondi": 0.8,
+   "byte": 2267923,
+   "secondi": 3.0,
    "titolo_pagina": "Commedia streaming | Guardaserie",
    "file": "pagine/10.html"
   },
   {
    "url": "https://guardaseriex.art/crime/",
    "status": 200,
-   "byte": 1263642,
-   "secondi": 0.4,
+   "byte": 1263224,
+   "secondi": 0.6,
    "titolo_pagina": "Crime streaming | Guardaserie",
    "file": "pagine/11.html"
   },
   {
    "url": "https://guardaseriex.art/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 38172,
-   "secondi": 0.1,
+   "byte": 38153,
+   "secondi": 0.6,
    "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS",
    "file": "pagine/12.html"
   }

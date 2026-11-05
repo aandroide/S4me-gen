@@ -7,16 +7,16 @@ Canale streamingcommunity | indirizzo https://streamingcommunityz.boo
       peliculas | • Serie TV | https://streamingcommunityz.boo/it/tv-shows
 == lista "• Film"
    -> 21 voci
+      findvideos | A Story of Derry  | https://streamingcommunityz.boo/it/watch/66468
       findvideos | Drive - Cuori in pista  | https://streamingcommunityz.boo/it/watch/66440
       findvideos | Clayface  | https://streamingcommunityz.boo/it/watch/65705
       findvideos | Street Fighter  | https://streamingcommunityz.boo/it/watch/65706
-      findvideos | Animals  | https://streamingcommunityz.boo/it/watch/66299
-== findvideos su "Drive - Cuori in pista "
+== findvideos su "A Story of Derry "
    -> 2 voci
-      play | Drive - Cuori in pista  | https://streamingcommunityz.boo/it/iframe/66440
-      add_pelicula_to_library | txt30161 %s | https://streamingcommunityz.boo/it/watch/66440
-   play del canale -> streamingcommunityws https://streamingcommunityz.boo/it/iframe/66440
-== risoluzione streamingcommunityws https://streamingcommunityz.boo/it/iframe/66440
+      play | A Story of Derry  | https://streamingcommunityz.boo/it/iframe/66468
+      add_pelicula_to_library | txt30161 %s | https://streamingcommunityz.boo/it/watch/66468
+   play del canale -> streamingcommunityws https://streamingcommunityz.boo/it/iframe/66468
+== risoluzione streamingcommunityws https://streamingcommunityz.boo/it/iframe/66468
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (15)
     film | '/it/movies'

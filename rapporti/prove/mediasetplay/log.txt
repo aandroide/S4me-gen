@@ -6,12 +6,12 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 133 voci
+   -> 131 voci
+      findvideos | Die hard - Un buon giorno per morire | https://mediasetinfinity.mediaset.it/movie/diehardunbuongiornopermorire/die-hard-un-buon-giorno-per-
       findvideos | L'uomo d'acciaio | https://mediasetinfinity.mediaset.it/movie/luomodacciaio/luomo-dacciaio_F303733201000102
-      findvideos | Bullet train | https://mediasetinfinity.mediaset.it/movie/bullettrain/bullet-train_F311877201000103
       findvideos | Divergent | https://mediasetinfinity.mediaset.it/movie/divergent/divergent_F305721401000102
       findvideos | Peppermint - L'angelo della vendetta | https://mediasetinfinity.mediaset.it/movie/peppermintlangelodellavendetta/peppermint-langelo-della-v
-== findvideos su "L'uomo d'acciaio"
+== findvideos su "Die hard - Un buon giorno per morire"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 21 voci
-      findvideos | L'uomo d'acciaio | https://mediasetinfinity.mediaset.it/movie/luomodacciaio/luomo-dacciaio_F303733201000102
-      findvideos | Andiamo a quel paese | https://mediasetinfinity.mediaset.it/movie/andiamoaquelpaese/andiamo-a-quel-paese_F306207001000101
-      findvideos | Inga Lindström - Il segreto del castello | https://mediasetinfinity.mediaset.it/movie/ingalindstromilsegretodelcastello/inga-lindstrom-il-segre
-      findvideos | Pier Paolo Pasolini - Maestro Corsaro | https://mediasetinfinity.mediaset.it/movie/pierpaolopasolinimaestrocorsaro/pier-paolo-pasolini-maest
-== findvideos su "L'uomo d'acciaio"
+   -> 20 voci
+      findvideos | Ca ira il fiume della rivolta | https://mediasetinfinity.mediaset.it/movie/cairailfiumedellarivolta/ca-ira-il-fiume-della-rivolta_F0
+      findvideos | Sotto il vestito niente - L'ultima sfilata | https://mediasetinfinity.mediaset.it/movie/sottoilvestitonientelultimasfilata/sotto-il-vestito-nient
+      findvideos | Chi lavora e' perduto (in capo al mondo) - Chi lavora è perd | https://mediasetinfinity.mediaset.it/movie/chilavoraeperdutoincapoalmondo/chi-lavora-e-perduto-in-ca
+      findvideos | Red sparrow - Red Sparrow | https://mediasetinfinity.mediaset.it/movie/redsparrow/red-sparrow_F308152601000102
+== findvideos su "Ca ira il fiume della rivolta"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -46,8 +46,8 @@ KeyError: 'response'
 == lista "•• Film più visti del giorno"
    -> 21 voci
       findvideos | The place | https://mediasetinfinity.mediaset.it/movie/theplace/the-place_F306383601000101
-      findvideos | Maigret e la finestra aperta | https://mediasetinfinity.mediaset.it/movie/maigretelafinestraaperta/maigret-e-la-finestra-aperta_F01
-      findvideos | Un'estate da ricordare  (di m. wood) - Un'estate da ricordar | https://mediasetinfinity.mediaset.it/movie/unestatedaricordaredimwood/unestate-da-ricordare_F3097498
+      findvideos | Testamento d'amore | https://mediasetinfinity.mediaset.it/movie/testamentodamore/testamento-damore_F311459601000104
+      findvideos | Cuori ribelli | https://mediasetinfinity.mediaset.it/movie/cuoriribelli/cuori-ribelli_F005706401000103
       findvideos | Peppermint - L'angelo della vendetta | https://mediasetinfinity.mediaset.it/movie/peppermintlangelodellavendetta/peppermint-langelo-della-v
 == findvideos su "The place"
 Traceback (most recent call last):
@@ -90,14 +90,14 @@ Nessuna voce da riprodurre trovata
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 46 
    SEZIONE Replay -> OK 23 
-   SEZIONE •• Tutti i Film -> OK 78 
+   SEZIONE •• Tutti i Film -> OK 77 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE Law & Order: Unità speciale 15 -> OK 5 
-   SEZIONE The Last Ship 3 -> OK 13 
+   SEZIONE Law & Order: Unità speciale 15 -> OK 7 
+   SEZIONE I Simpson -> OK 5 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Segreti di famiglia 3 -> OK 5 
@@ -110,13 +110,13 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• TV Movie italiani -> OK 20 
    SEZIONE Dragon Ball Super -> OK 27 
    SEZIONE Dragon Ball Daima -> OK 10 
-   SEZIONE Captain Tsubasa -> OK 41 
+   SEZIONE One Piece 18 -> OK 2 
    SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
    SEZIONE I Simpson -> OK 5 
    SEZIONE The Last Ship 3 -> OK 13 
-   SEZIONE NCIS - Unità anticrimine 13 -> OK 7 
+   SEZIONE C.S.I. Scena del crimine 10 -> OK 7 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
-   SEZIONE Racconto di una notte -> OK 4 
+   SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE •• Serie Turche -> SOTTOMENU  
@@ -136,20 +136,20 @@ Nessuna voce da riprodurre trovata
    SEZIONE Teen Titans Go! -> OK 10 
    SEZIONE Adventure Time -> OK 2 
    SEZIONE •• Kids Boing -> SOTTOMENU  
-   SEZIONE Simone -> OK 10 
-   SEZIONE La casa delle bambole di Gabby -> OK 7 
+   SEZIONE La casa delle bambole di Gabby -> OK 8 
    SEZIONE Paw Patrol -> OK 4 
+   SEZIONE Grizzy e i Lemming -> OK 9 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
    SEZIONE I pinguini di Madagascar -> OK 4 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 13 
+   SEZIONE •• Tutti i Documentari -> OK 15 
    SEZIONE Parco nazionale di Donana - Eden spagnolo -> OK 2 
-   SEZIONE Vietato entrare! - I luoghi più segreti del mondo -> OK 4 
-   SEZIONE Lo sapevi che? 2024 -> OK 25 
+   SEZIONE Enigmi alieni 10 -> OK 7 
+   SEZIONE Enigmi alieni 13 -> OK 2 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
    SEZIONE •• Film Documentari di Focus -> OK 20 
    SEZIONE txt70741 … -> OK 20 
 SEZIONI: 24 ok su 24
-VERDETTO: SI FERMA A: findvideos su "L'uomo d'acciaio"
+VERDETTO: SI FERMA A: findvideos su "Die hard - Un buon giorno per morire"
