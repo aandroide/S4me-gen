@@ -6,17 +6,17 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.rest
       genres | •• Per Lettera | https://il-geniodellostreaming.rest/catalog/all
       peliculas | Serie Tv  | https://il-geniodellostreaming.rest/serie-tv/
 == lista "Tutti "
-   -> 17 voci
-      check | L’imperatrice risposata | https://il-geniodellostreaming.rest/film/35437-l-imperatrice-risposata-streaming.html
+   -> 16 voci
+      check | Super Troopers 3 | https://il-geniodellostreaming.rest/film/35447-super-troopers-3-streaming.html
+      check | One Year to Live, Buy a Man | https://il-geniodellostreaming.rest/film/35444-one-year-to-live-buy-a-man-streaming.html
+      check | Furto di lusso: la banda degli orologi rubati | https://il-geniodellostreaming.rest/film/35442-furto-di-lusso-la-banda-degli-orologi-rubati-streamin
       check | Your Mother Your Mother Your Mother | https://il-geniodellostreaming.rest/film/35435-your-mother-your-mother-your-mother-streaming.html
-      check | The Mongoose | https://il-geniodellostreaming.rest/film/35433-the-mongoose-streaming.html
-      check | Un cucciolo per Natale | https://il-geniodellostreaming.rest/film/35421-un-cucciolo-per-natale-streaming.html
-== check su "L’imperatrice risposata"
+== check su "Super Troopers 3"
    -> 1 voci
-      play | L’imperatrice risposata | https://v.vidxgo.co/39325975
-== risoluzione vidxgo https://v.vidxgo.co/39325975
-   api /t/ 39325975 referer https://v.vidxgo.co/39325975 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 39325975 referer https://il-geniodellostreaming.rest/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+      play | Super Troopers 3 | https://v.vidxgo.co/8820258
+== risoluzione vidxgo https://v.vidxgo.co/8820258
+   api /t/ 8820258 referer https://v.vidxgo.co/8820258 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 8820258 referer https://il-geniodellostreaming.rest/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (4)
     menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])
@@ -24,16 +24,16 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.rest
     menu | ('Per Lettera {submenu}', ['/catalog/all', 'genres', 'template-az', 'undefined'])
     menu | ('Serie Tv', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 16 
-   SEZIONE Serie TV -> OK 19 
+   SEZIONE Tutti -> OK 15 
+   SEZIONE Serie TV -> OK 18 
    SEZIONE Animazione -> OK 20 
    SEZIONE Avventura -> OK 20 
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE 0-9 -> OK 16 
    SEZIONE A -> OK 16 
-   SEZIONE B -> OK 16 
+   SEZIONE B -> OK 15 
    SEZIONE •• Per Lettera -> SOTTOMENU  
-   SEZIONE Serie Tv -> OK 19 
+   SEZIONE Serie Tv -> OK 18 
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://il-geniodellostreaming.rest/?s=avatar', 'status': 200, 'byte': 34900, 'titolo_pagina': 'Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis'}
 SEZIONI: 4 ok su 5
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA

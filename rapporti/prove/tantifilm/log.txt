@@ -13,17 +13,17 @@ Canale tantifilm | indirizzo https://tanti-film.ink
       peliculas | Commedia | https://tanti-film.ink/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
+      check | Super Troopers 3  | https://tanti-film.ink/guarda/35447-super-troopers-3-streaming-streaming-hd.html
+      check | One Year to Live, Buy a Man  | https://tanti-film.ink/guarda/35444-one-year-to-live-buy-a-man-streaming-streaming-hd.html
+      check | Furto di lusso: la banda degli orologi rubati  | https://tanti-film.ink/guarda/35442-furto-di-lusso-la-banda-degli-orologi-rubati-streaming-streaming
       check | Your Mother Your Mother Your Mother  | https://tanti-film.ink/guarda/35435-your-mother-your-mother-your-mother-streaming-streaming-hd.html
-      check | The Mongoose  | https://tanti-film.ink/guarda/35433-the-mongoose-streaming-streaming-hd.html
-      check | Un cucciolo per Natale  | https://tanti-film.ink/guarda/35421-un-cucciolo-per-natale-streaming-streaming-hd.html
-      check | Ninho: il prezzo della fama  | https://tanti-film.ink/guarda/35422-ninho-il-prezzo-della-fama-streaming-streaming-hd.html
-== check su "Your Mother Your Mother Your Mother "
+== check su "Super Troopers 3 "
    -> 2 voci
-      play | Your Mother Your Mother Your Mother  | https://v.vidxgo.co/35856037
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.ink/guarda/35435-your-mother-your-mother-your-mother-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/35856037
-   api /t/ 35856037 referer https://v.vidxgo.co/35856037 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 35856037 referer https://tanti-film.ink/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+      play | Super Troopers 3  | https://v.vidxgo.co/8820258
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.ink/guarda/35447-super-troopers-3-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/8820258
+   api /t/ 8820258 referer https://v.vidxgo.co/8820258 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 8820258 referer https://tanti-film.ink/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])

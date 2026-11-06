@@ -18,7 +18,7 @@
    "voci": 26
   },
   {
-   "passo": "check su \"Your Mother Your Mother Your Mother \"",
+   "passo": "check su \"Super Troopers 3 \"",
    "esito": "OK",
    "voci": 2
   }
@@ -26,7 +26,7 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/35856037",
+   "url": "https://v.vidxgo.co/8820258",
    "nota": "il server non risponde entro 90 secondi",
    "modulo_server": true,
    "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
@@ -36,7 +36,7 @@
    },
    "api_t": [
     {
-     "referer": "https://v.vidxgo.co/35856037",
+     "referer": "https://v.vidxgo.co/8820258",
      "status": 403,
      "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
     },
@@ -105,87 +105,87 @@
    "url": "https://tanti-film.ink",
    "status": 200,
    "byte": 16337,
-   "secondi": 0.4,
+   "secondi": 0.8,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/01.html"
   },
   {
    "url": "https://tanti-film.ink/prossimamente/",
    "status": 200,
-   "byte": 70666,
-   "secondi": 0.2,
+   "byte": 70695,
+   "secondi": 0.7,
    "titolo_pagina": "Prossimamente al Cinema",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://tanti-film.ink/guarda/35435-your-mother-your-mother-your-mother-streaming-streaming-hd.html",
+   "url": "https://tanti-film.ink/guarda/35447-super-troopers-3-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 28694,
+   "byte": 28333,
    "secondi": 0.2,
-   "titolo_pagina": "Your Mother Your Mother Your Mother (2026) streaming | TantiFILM",
+   "titolo_pagina": "Super Troopers 3 (2026) streaming | TantiFILM",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://tanti-film.ink/guarda/35435-your-mother-your-mother-your-mother-streaming-streaming-hd.html",
+   "url": "https://tanti-film.ink/guarda/35447-super-troopers-3-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 28694,
-   "secondi": 0.2,
-   "titolo_pagina": "Your Mother Your Mother Your Mother (2026) streaming | TantiFILM",
+   "byte": 28333,
+   "secondi": 0.5,
+   "titolo_pagina": "Super Troopers 3 (2026) streaming | TantiFILM",
    "file": "pagine/04.html"
   },
   {
    "url": "https://tanti-film.ink",
    "status": 200,
    "byte": 16337,
-   "secondi": 0.2,
+   "secondi": 0.5,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/05.html"
   },
   {
    "url": "https://tanti-film.ink/animazione/",
    "status": 200,
-   "byte": 71578,
-   "secondi": 0.2,
+   "byte": 71203,
+   "secondi": 0.7,
    "titolo_pagina": "Animazione guarda Gratis | TantiFILM",
    "file": "pagine/06.html"
   },
   {
    "url": "https://tanti-film.ink/avventura/",
    "status": 200,
-   "byte": 71400,
-   "secondi": 0.2,
+   "byte": 70991,
+   "secondi": 0.7,
    "titolo_pagina": "Avventura guarda Gratis | TantiFILM",
    "file": "pagine/07.html"
   },
   {
    "url": "https://tanti-film.ink/biografico/",
    "status": 200,
-   "byte": 69397,
-   "secondi": 0.2,
+   "byte": 69426,
+   "secondi": 0.7,
    "titolo_pagina": "Biografico guarda Gratis | TantiFILM",
    "file": "pagine/08.html"
   },
   {
    "url": "https://tanti-film.ink/film",
    "status": 200,
-   "byte": 88549,
-   "secondi": 0.3,
+   "byte": 89148,
+   "secondi": 3.1,
    "titolo_pagina": "Guarda Tanti Film Streaming in Italiano | TantiFILM Gratis",
    "file": "pagine/09.html"
   },
   {
    "url": "https://tanti-film.ink/serie-tv/",
    "status": 200,
-   "byte": 70987,
-   "secondi": 0.2,
+   "byte": 70488,
+   "secondi": 0.7,
    "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM",
    "file": "pagine/10.html"
   },
   {
    "url": "https://tanti-film.ink/?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 56779,
-   "secondi": 0.2,
+   "byte": 56759,
+   "secondi": 0.3,
    "titolo_pagina": "Site search &raquo; TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/11.html"
   }

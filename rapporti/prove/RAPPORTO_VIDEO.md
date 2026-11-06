@@ -1,8 +1,8 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 12, SI FERMA AL SERVER O AL VIDEO 4, SI FERMA PRIMA DEL VIDEO 40, SENZA ESITO 2
+Riepilogo: ARRIVA AL VIDEO 10, SI FERMA AL SERVER O AL VIDEO 7, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
 
-## ARRIVA AL VIDEO (12)
+## ARRIVA AL VIDEO (10)
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best | verdetto: ARRIVA AL VIDEO
@@ -28,14 +28,6 @@ Sito: https://casa-cinema.top | verdetto: ARRIVA AL VIDEO
 Sito: http://cinestore.cinetecadibologna.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/x-flv
 
-### guardaseriecam
-Sito: https://guardaseriex.art | verdetto: ARRIVA AL VIDEO
-- server vidxgo: VIDEO OK m3u8 200
-
-### guardaserieicu
-Sito:  | verdetto: ARRIVA AL VIDEO
-- server vidxgo: VIDEO OK m3u8 200
-
 ### la7
 Sito:  | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK m3u8 206
@@ -50,10 +42,9 @@ Sito: https://streamingcommunityz.boo | verdetto: ARRIVA AL VIDEO
 
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
-- server rpmshare: SERVER NON RISOLVE 
 - server voe: VIDEO OK m3u8 200
 
-## SI FERMA AL SERVER O AL VIDEO (4)
+## SI FERMA AL SERVER O AL VIDEO (7)
 
 ### cineblog001
 Sito: https://cineblog001.party | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
@@ -64,6 +55,18 @@ Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO 
 - server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
 - server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
 
+### guardaseriecam
+Sito: https://guardaseriex.art | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
+
+### guardaserieicu
+Sito:  | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
+
+### hd4me
+Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE
+- server mega: SERVER NON RISOLVE 
+
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.rest | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
@@ -72,7 +75,7 @@ Sito: https://il-geniodellostreaming.rest | verdetto: SI FERMA AL SERVER O AL VI
 Sito: https://tanti-film.ink | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
-## SI FERMA PRIMA DEL VIDEO (40)
+## SI FERMA PRIMA DEL VIDEO (39)
 
 ### 1337x
 Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
@@ -80,9 +83,8 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista "Most Popular "
-- passo "lista "Most Popular "": VUOTO 
-- passo "lista "Throwback Thursday: 1991 "": VUOTO 
+Sito:  | verdetto: SI FERMA A: lista "Quitting Time channels "
+- passo "lista "Quitting Time channels "": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -152,10 +154,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.one | verdetto: SI FERMA A: findvideos su "1x01 - Pilot "
-- passo "findvideos su "1x01 - Pilot "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/9yfjuztk 
+Sito: https://eurostream.one | verdetto: SI FERMA A: findvideos su "1x01 - Il sogno "
+- passo "findvideos su "1x01 - Il sogno "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/a4vf6jim 
 - passo "findvideos su "1x01 - Asa e Yuru "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47 
-- passo "findvideos su "1x01 - Pilot "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/9yfjuztk 
+- passo "findvideos su "1x01 - Il sogno "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/vao58mlsf219 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -180,10 +182,6 @@ Sito:  | verdetto: SI FERMA A: lista "• Serie TV"
 - passo "lista "• Serie TV"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• Aggiornamenti"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• Generi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
-
-### hd4me
-Sito: https://hd4me.net | verdetto: SI FERMA A: findvideos su "The Walking Dead S07 21.6 GB"
-- passo "findvideos su "The Walking Dead S07 21.6 GB"": VUOTO 
 
 ### ilcorsaronero
 Sito: https://ilcorsaronero.link | verdetto: SI FERMA A: lista "Film"
@@ -221,7 +219,7 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Die hard - Un buon giorno per morire"
 - passo "findvideos su "Die hard - Un buon giorno per morire"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Ca ira il fiume della rivolta"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Killer per caso"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
@@ -253,9 +251,9 @@ Sito: http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1 | verd
 
 ### streamingita
 Sito: https://streamingita.homes | verdetto: SI FERMA A: lista "Generi"
-- passo "lista "Generi"": VUOTO 
-- passo "lista "Anno"": VUOTO 
-- passo "lista "• Film"": VUOTO 
+- passo "lista "Generi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+- passo "lista "Anno"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+- passo "lista "• Film"": ERRORE line 38, in peliculas     return support.dooplay_peliculas(item, mixed)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ platformcode.logger.WebErrorException 
 
 ### streamtime
 Sito:  | verdetto: SI FERMA A: lista "• Film"

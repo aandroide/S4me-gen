@@ -7,19 +7,21 @@ Canale guardaserieicu | indirizzo
       channel_config | txt60587 %s | 
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Obsess | https://guardaseriex.art/mistero/5871-obsess-streaming.html
-      episodios | Paolo | https://guardaseriex.art/dramma/5789-paolo-streaming.html
-      episodios | 4 Blocks Zero | https://guardaseriex.art/dramma/5787-4-blocks-zero-streaming.html
-      episodios | Memoriæ | https://guardaseriex.art/5873-memoriae-streaming.html
-== episodios su "Obsess"
+      episodios | Estranei | https://guardaseriex.art/commedia/5820-estranei-streaming.html
+      episodios | Don Dracula | https://guardaseriex.art/animazione/5874-don-dracula-streaming.html
+      episodios | L'isola Del Tesoro | https://guardaseriex.art/avventura/5829-l-isola-del-tesoro-streaming.html
+      episodios | Le indagini di Roy Grace | https://guardaseriex.art/crime/1293-grace.html
+== episodios su "Estranei"
    -> 2 voci
-      findvideos | 1x01 | https://guardaseriex.art/mistero/5871-obsess-streaming.html
-      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.art/mistero/5871-obsess-streaming.html
-== findvideos su "1x01"
+      findvideos | 1x01 - Romeo e Giulietta | https://guardaseriex.art/commedia/5820-estranei-streaming.html
+      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.art/commedia/5820-estranei-streaming.html
+== findvideos su "1x01 - Romeo e Giulietta"
    -> 1 voci
-      play | 1x01 | https://v.vidxgo.co/36838527/1/1
-== risoluzione vidxgo https://v.vidxgo.co/36838527/1/1
-   -> VIDEO OK m3u8 200 
+      play | 1x01 - Romeo e Giulietta | https://v.vidxgo.co/37539393/1/1
+== risoluzione vidxgo https://v.vidxgo.co/37539393/1/1
+   api /t/ 37539393/1/1 referer https://v.vidxgo.co/37539393/1/1 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 37539393/1/1 referer / -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (2)
     tvshow | '/serietv-streaming/page/1/'
     tvshow | ('Generi', ['/serietv-streaming/page/1/', 'genres', 'genres'])
@@ -27,8 +29,8 @@ Canale guardaserieicu | indirizzo
    SEZIONE • Serie TV -> OK 18 
    SEZIONE Biografico -> OK 127 
    SEZIONE Commedia -> OK 1521 
-   SEZIONE Crime -> OK 846 
+   SEZIONE Crime -> OK 847 
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE •• txt70741 Serie TV… -> OK 4 
 SEZIONI: 3 ok su 3
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)

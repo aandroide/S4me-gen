@@ -6,7 +6,7 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 131 voci
+   -> 133 voci
       findvideos | Die hard - Un buon giorno per morire | https://mediasetinfinity.mediaset.it/movie/diehardunbuongiornopermorire/die-hard-un-buon-giorno-per-
       findvideos | L'uomo d'acciaio | https://mediasetinfinity.mediaset.it/movie/luomodacciaio/luomo-dacciaio_F303733201000102
       findvideos | Divergent | https://mediasetinfinity.mediaset.it/movie/divergent/divergent_F305721401000102
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 20 voci
-      findvideos | Ca ira il fiume della rivolta | https://mediasetinfinity.mediaset.it/movie/cairailfiumedellarivolta/ca-ira-il-fiume-della-rivolta_F0
-      findvideos | Sotto il vestito niente - L'ultima sfilata | https://mediasetinfinity.mediaset.it/movie/sottoilvestitonientelultimasfilata/sotto-il-vestito-nient
-      findvideos | Chi lavora e' perduto (in capo al mondo) - Chi lavora è perd | https://mediasetinfinity.mediaset.it/movie/chilavoraeperdutoincapoalmondo/chi-lavora-e-perduto-in-ca
-      findvideos | Red sparrow - Red Sparrow | https://mediasetinfinity.mediaset.it/movie/redsparrow/red-sparrow_F308152601000102
-== findvideos su "Ca ira il fiume della rivolta"
+   -> 21 voci
+      findvideos | Killer per caso | https://mediasetinfinity.mediaset.it/movie/killerpercaso/killer-per-caso_F007737901000101
+      findvideos | Never back down - Mai arrendersi | https://mediasetinfinity.mediaset.it/movie/neverbackdownmaiarrendersi/never-back-down-mai-arrendersi
+      findvideos | Windstorm 5 - Uniti per sempre | https://mediasetinfinity.mediaset.it/movie/windstorm5/windstorm-5-uniti-per-sempre_F310742701000102
+      findvideos | Inga Lindstrom - Cuore contro ragione | https://mediasetinfinity.mediaset.it/movie/ingalindstromcuorecontroragione/inga-lindstrom-cuore-cont
+== findvideos su "Killer per caso"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -46,9 +46,9 @@ KeyError: 'response'
 == lista "•• Film più visti del giorno"
    -> 21 voci
       findvideos | The place | https://mediasetinfinity.mediaset.it/movie/theplace/the-place_F306383601000101
-      findvideos | Testamento d'amore | https://mediasetinfinity.mediaset.it/movie/testamentodamore/testamento-damore_F311459601000104
-      findvideos | Cuori ribelli | https://mediasetinfinity.mediaset.it/movie/cuoriribelli/cuori-ribelli_F005706401000103
-      findvideos | Peppermint - L'angelo della vendetta | https://mediasetinfinity.mediaset.it/movie/peppermintlangelodellavendetta/peppermint-langelo-della-v
+      findvideos | L'uomo d'acciaio | https://mediasetinfinity.mediaset.it/movie/luomodacciaio/luomo-dacciaio_F303733201000102
+      findvideos | Inga Lindström - Il segreto del castello | https://mediasetinfinity.mediaset.it/movie/ingalindstromilsegretodelcastello/inga-lindstrom-il-segre
+      findvideos | Andiamo a quel paese | https://mediasetinfinity.mediaset.it/movie/andiamoaquelpaese/andiamo-a-quel-paese_F306207001000101
 == findvideos su "The place"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -96,7 +96,7 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE Law & Order: Unità speciale 15 -> OK 7 
+   SEZIONE Law & Order: Unità speciale 15 -> OK 9 
    SEZIONE I Simpson -> OK 5 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
@@ -104,25 +104,25 @@ Nessuna voce da riprodurre trovata
    SEZIONE Innocence -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
    SEZIONE Tempesta d'amore -> OK 3 
+   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE My Sweet Lie -> OK 5 
-   SEZIONE La promessa -> OK 7 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
-   SEZIONE Dragon Ball Super -> OK 27 
    SEZIONE Dragon Ball Daima -> OK 10 
    SEZIONE One Piece 18 -> OK 2 
+   SEZIONE Dragon Ball Super -> OK 27 
    SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
    SEZIONE I Simpson -> OK 5 
    SEZIONE The Last Ship 3 -> OK 13 
-   SEZIONE C.S.I. Scena del crimine 10 -> OK 7 
+   SEZIONE NCIS - Unità anticrimine 13 -> OK 7 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE •• Serie Turche -> SOTTOMENU  
+   SEZIONE Le Iene 2026/2027 -> OK 6 
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Zelig 30 - Autunno 2026 -> OK 4 
-   SEZIONE Le Iene presentano: Inside Autunno 2026 -> OK 2 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
    SEZIONE Ore 11 -> OK 3 
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
@@ -133,21 +133,21 @@ Nessuna voce da riprodurre trovata
    SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Lo straordinario mondo di Gumball -> OK 10 
-   SEZIONE Teen Titans Go! -> OK 10 
    SEZIONE Adventure Time -> OK 2 
+   SEZIONE Teen Titans Go! -> OK 10 
    SEZIONE •• Kids Boing -> SOTTOMENU  
    SEZIONE La casa delle bambole di Gabby -> OK 8 
-   SEZIONE Paw Patrol -> OK 4 
-   SEZIONE Grizzy e i Lemming -> OK 9 
+   SEZIONE Simone -> OK 10 
+   SEZIONE Paw Patrol -> OK 5 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
-   SEZIONE I pinguini di Madagascar -> OK 4 
+   SEZIONE I pinguini di Madagascar -> OK 2 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 15 
+   SEZIONE •• Tutti i Documentari -> OK 14 
    SEZIONE Parco nazionale di Donana - Eden spagnolo -> OK 2 
-   SEZIONE Enigmi alieni 10 -> OK 7 
-   SEZIONE Enigmi alieni 13 -> OK 2 
+   SEZIONE Enigmi alieni 10 -> OK 8 
+   SEZIONE Enigmi alieni 13 -> OK 1 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
    SEZIONE •• Film Documentari di Focus -> OK 20 
    SEZIONE txt70741 … -> OK 20 

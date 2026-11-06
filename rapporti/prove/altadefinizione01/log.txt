@@ -6,16 +6,16 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
       peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.best
       genres | •• Generi | https://altadefinizione-01.best
 == lista "Tutti "
-   -> 24 voci
+   -> 25 voci
+      check | Super Troopers 3  | https://altadefinizione-01.best/35447-super-troopers-3-streaming.html
+      check | One Year to Live, Buy a Man  | https://altadefinizione-01.best/35444-one-year-to-live-buy-a-man-streaming.html
+      check | Furto di lusso: la banda degli orologi rubati  | https://altadefinizione-01.best/35442-furto-di-lusso-la-banda-degli-orologi-rubati-streaming.html
       check | Your Mother Your Mother Your Mother  | https://altadefinizione-01.best/35435-your-mother-your-mother-your-mother-streaming.html
-      check | The Mongoose  | https://altadefinizione-01.best/35433-the-mongoose-streaming.html
-      check | Un cucciolo per Natale  | https://altadefinizione-01.best/35421-un-cucciolo-per-natale-streaming.html
-      check | Ninho: il prezzo della fama  | https://altadefinizione-01.best/35422-ninho-il-prezzo-della-fama-streaming.html
-== check su "Your Mother Your Mother Your Mother "
+== check su "Super Troopers 3 "
    -> 2 voci
-      play | Your Mother Your Mother Your Mother  | https://vixsrc.to/movie/tt35856037
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35435-your-mother-your-mother-your-mother-streaming.html
-== risoluzione vixsrc https://vixsrc.to/movie/tt35856037
+      play | Super Troopers 3  | https://vixsrc.to/movie/tt8820258
+      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35447-super-troopers-3-streaming.html
+== risoluzione vixsrc https://vixsrc.to/movie/tt8820258
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (7)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
@@ -26,9 +26,9 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
     menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 23 
+   SEZIONE Tutti -> OK 24 
    SEZIONE •• Al Cinema -> OK 30 
-   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 37 
+   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 36 
    SEZIONE Azione -> OK 29 
    SEZIONE Animazione -> OK 27 
    SEZIONE Avventura -> OK 30 

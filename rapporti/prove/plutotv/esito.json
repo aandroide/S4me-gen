@@ -18,7 +18,7 @@
    "voce": "Dirette",
    "azione": "live",
    "esito": "OK",
-   "titoli": 466
+   "titoli": 465
   },
   {
    "voce": "Categorie",
@@ -50,48 +50,48 @@
    "voce": "txt70741 …",
    "azione": "search",
    "esito": "OK",
-   "titoli": 67
+   "titoli": 33
   }
  ],
  "sezioni_riepilogo": "3 ok su 3",
  "rete": [
   {
-   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=68d5c6ea-25ad-4e97-9eb9-c590d8af2709&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
+   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=473892e7-ebd2-471e-b526-7bd93478850d&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
    "status": 200,
-   "byte": 15969,
-   "secondi": 0.2,
+   "byte": 20539,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://api.pluto.tv/v2/channels?start=2026-11-05T13:00:00Z&stop=2026-11-05T17:00:00Z&sid=f2085468-d91c-11f1-9a2a-0022488f54d4&deviceId=68d5c6ea-25ad-4e97-9eb9-c590d8af2709",
+   "url": "https://api.pluto.tv/v2/channels?start=2026-11-06T13:00:00Z&stop=2026-11-06T17:00:00Z&sid=ec06b556-d9e3-11f1-ae73-e4fade4701b0&deviceId=473892e7-ebd2-471e-b526-7bd93478850d",
    "status": 200,
-   "byte": 7993551,
-   "secondi": 0.4,
+   "byte": 8007103,
+   "secondi": 0.8,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.pluto.tv/v2/channels.json?sid=f2085468-d91c-11f1-9a2a-0022488f54d4&deviceId=68d5c6ea-25ad-4e97-9eb9-c590d8af2709",
+   "url": "https://api.pluto.tv/v2/channels.json?sid=ec06b556-d9e3-11f1-ae73-e4fade4701b0&deviceId=473892e7-ebd2-471e-b526-7bd93478850d",
    "status": 200,
-   "byte": 1154363,
-   "secondi": 0.2,
+   "byte": 1152354,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=f2085468-d91c-11f1-9a2a-0022488f54d4&deviceId=68d5c6ea-25ad-4e97-9eb9-c590d8af2709",
+   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=ec06b556-d9e3-11f1-ae73-e4fade4701b0&deviceId=473892e7-ebd2-471e-b526-7bd93478850d",
    "status": 200,
-   "byte": 13770388,
-   "secondi": 1.0,
+   "byte": 13777266,
+   "secondi": 1.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://service-media-search.clusters.pluto.tv/v1/search?q=avatar&limit=100",
    "status": 200,
-   "byte": 15364,
-   "secondi": 0.5,
+   "byte": 9254,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   }

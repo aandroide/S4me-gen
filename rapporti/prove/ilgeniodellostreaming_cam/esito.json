@@ -10,10 +10,10 @@
   {
    "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 17
+   "voci": 16
   },
   {
-   "passo": "check su \"L’imperatrice risposata\"",
+   "passo": "check su \"Super Troopers 3\"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,7 +21,7 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/39325975",
+   "url": "https://v.vidxgo.co/8820258",
    "nota": "il server non risponde entro 90 secondi",
    "modulo_server": true,
    "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
@@ -31,7 +31,7 @@
    },
    "api_t": [
     {
-     "referer": "https://v.vidxgo.co/39325975",
+     "referer": "https://v.vidxgo.co/8820258",
      "status": 403,
      "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
     },
@@ -54,7 +54,7 @@
    "voce": "Tutti",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 16
+   "titoli": 15
   },
   {
    "voce": "•• Generi",
@@ -66,7 +66,7 @@
      "voce": "Serie TV",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 19
+     "titoli": 18
     },
     {
      "voce": "Animazione",
@@ -104,7 +104,7 @@
      "voce": "B",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 16
+     "titoli": 15
     }
    ]
   },
@@ -112,7 +112,7 @@
    "voce": "Serie Tv",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 19
+   "titoli": 18
   },
   {
    "voce": "txt70741 …",
@@ -133,55 +133,55 @@
   {
    "url": "https://il-geniodellostreaming.rest/catalog/all",
    "status": 200,
-   "byte": 38224,
-   "secondi": 0.3,
+   "byte": 37634,
+   "secondi": 0.8,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/film/35437-l-imperatrice-risposata-streaming.html",
+   "url": "https://il-geniodellostreaming.rest/film/35447-super-troopers-3-streaming.html",
    "status": 200,
-   "byte": 31196,
-   "secondi": 0.2,
-   "titolo_pagina": "L’imperatrice risposata Streaming - Serie TV - ilGenioDelloStreaming",
+   "byte": 30066,
+   "secondi": 0.5,
+   "titolo_pagina": "Super Troopers 3 Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/film/35437-l-imperatrice-risposata-streaming.html",
+   "url": "https://il-geniodellostreaming.rest/film/35447-super-troopers-3-streaming.html",
    "status": 200,
-   "byte": 31196,
-   "secondi": 0.2,
-   "titolo_pagina": "L’imperatrice risposata Streaming - Serie TV - ilGenioDelloStreaming",
+   "byte": 30066,
+   "secondi": 0.7,
+   "titolo_pagina": "Super Troopers 3 Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/03.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/all",
    "status": 200,
-   "byte": 38224,
-   "secondi": 0.3,
+   "byte": 37634,
+   "secondi": 0.7,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/04.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest",
    "status": 200,
-   "byte": 91916,
-   "secondi": 0.2,
+   "byte": 96177,
+   "secondi": 0.7,
    "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/05.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/serie-tv/",
    "status": 200,
-   "byte": 85329,
-   "secondi": 0.5,
+   "byte": 84596,
+   "secondi": 0.7,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/animazione/",
    "status": 200,
-   "byte": 85800,
+   "byte": 85305,
    "secondi": 0.2,
    "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
    "file": "pagine/07.html"
@@ -197,39 +197,39 @@
   {
    "url": "https://il-geniodellostreaming.rest/catalog/all",
    "status": 200,
-   "byte": 38224,
-   "secondi": 0.3,
+   "byte": 37634,
+   "secondi": 0.7,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/09.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/0",
    "status": 200,
-   "byte": 38556,
-   "secondi": 0.4,
+   "byte": 37751,
+   "secondi": 0.8,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/10.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/a",
    "status": 200,
-   "byte": 38102,
-   "secondi": 0.3,
+   "byte": 38281,
+   "secondi": 0.5,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/11.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/b",
    "status": 200,
-   "byte": 38592,
-   "secondi": 0.3,
+   "byte": 38114,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/12.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/serie-tv/",
    "status": 200,
-   "byte": 85329,
+   "byte": 84596,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/13.html"
@@ -238,7 +238,7 @@
    "url": "https://il-geniodellostreaming.rest/?s=avatar",
    "status": 200,
    "byte": 34900,
-   "secondi": 2.1,
+   "secondi": 2.2,
    "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/14.html"
   }

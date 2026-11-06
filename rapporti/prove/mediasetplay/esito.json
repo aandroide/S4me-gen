@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 131
+   "voci": 133
   },
   {
    "passo": "findvideos su \"Die hard - Un buon giorno per morire\"",
@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 20
+   "voci": 21
   },
   {
-   "passo": "findvideos su \"Ca ira il fiume della rivolta\"",
+   "passo": "findvideos su \"Killer per caso\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -123,7 +123,7 @@
      "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 9
     },
     {
      "voce": "I Simpson",
@@ -172,16 +172,16 @@
      "titoli": 3
     },
     {
+     "voce": "Tutto per la mia famiglia 2",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
      "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
-    },
-    {
-     "voce": "La promessa",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 7
     }
    ]
   },
@@ -198,12 +198,6 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Dragon Ball Super",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 27
-    },
-    {
      "voce": "Dragon Ball Daima",
      "azione": "epmenu",
      "esito": "OK",
@@ -214,6 +208,12 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 2
+    },
+    {
+     "voce": "Dragon Ball Super",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 27
     }
    ]
   },
@@ -236,7 +236,7 @@
      "titoli": 13
     },
     {
-     "voce": "C.S.I. Scena del crimine 10",
+     "voce": "NCIS - Unità anticrimine 13",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 7
@@ -276,6 +276,12 @@
    "sottovoci": 12,
    "figli": [
     {
+     "voce": "Le Iene 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
      "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
@@ -286,12 +292,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
-    },
-    {
-     "voce": "Le Iene presentano: Inside Autunno 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 2
     }
    ]
   },
@@ -360,16 +360,16 @@
      "titoli": 10
     },
     {
-     "voce": "Teen Titans Go!",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 10
-    },
-    {
      "voce": "Adventure Time",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 2
+    },
+    {
+     "voce": "Teen Titans Go!",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 10
     }
    ]
   },
@@ -386,16 +386,16 @@
      "titoli": 8
     },
     {
+     "voce": "Simone",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 10
+    },
+    {
      "voce": "Paw Patrol",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
-    },
-    {
-     "voce": "Grizzy e i Lemming",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 9
+     "titoli": 5
     }
    ]
   },
@@ -421,7 +421,7 @@
      "voce": "I pinguini di Madagascar",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 2
     }
    ]
   },
@@ -429,7 +429,7 @@
    "voce": "•• Tutti i Documentari",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 15
+   "titoli": 14
   },
   {
    "voce": "•• Documentari più visti",
@@ -447,13 +447,13 @@
      "voce": "Enigmi alieni 10",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 8
     },
     {
      "voce": "Enigmi alieni 13",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 1
     }
    ]
   },

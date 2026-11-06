@@ -7,17 +7,15 @@ Canale eurostreaming | indirizzo https://eurostream.one
       peliculas | • Archivio | https://eurostream.one/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | R.J. Decker | https://eurostream.one/r-j-decker/
-      episodios | NCIS - Unità anticrimine | https://eurostream.one/ncis-6/
-      episodios | Merry Berry Love | https://eurostream.one/merry-berry-love/
-      episodios | American Horror Story | https://eurostream.one/american-horror-story-23/
-== episodios su "R.J. Decker"
-   -> 28 voci
-      findvideos | 1x01 - Pilot  | https://eurostream.one/r-j-decker/
-      findvideos | 1x02 - Chili di clem in sacchi da 5 chili  | https://eurostream.one/r-j-decker/
-      findvideos | 1x03 - Il danno provocato dall’ago  | https://eurostream.one/r-j-decker/
-      findvideos | 1x04 - In Vanity Veritas  | https://eurostream.one/r-j-decker/
-== findvideos su "1x01 - Pilot "
+      episodios | Melania Rea | https://eurostream.one/melania-rea/
+      episodios | Yaga | https://eurostream.one/yaga/
+      episodios | Campus Drivers | https://eurostream.one/campus-drivers/
+      episodios | Phony | https://eurostream.one/phony/
+== episodios su "Melania Rea"
+   -> 2 voci
+      findvideos | 1x01 - Il sogno  | https://eurostream.one/melania-rea/
+      add_serie_to_library | txt30161 %s | https://eurostream.one/melania-rea/
+== findvideos su "1x01 - Il sogno "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +32,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/9yfjuztk
+Exception: Not un-shortened link: https://clicka.cc/mix/a4vf6jim
 
 == lista "• Anime"
    -> 19 voci
@@ -69,17 +67,15 @@ Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 2x02 - R.J. Decker - Manos: Le mani del destino | https://eurostream.one/r-j-decker/
-      episodios | 24x04 - NCIS - Unità anticrimine - Like and Subscribe  | https://eurostream.one/ncis-6/
-      episodios | 1x05 - Merry Berry Love - Episodio 5 | https://eurostream.one/merry-berry-love/
-      episodios | 13x13 - American Horror Story - Un divertimento diabolico ,  | https://eurostream.one/american-horror-story-23/
-== episodios su "2x02 - R.J. Decker - Manos: Le mani del "
-   -> 28 voci
-      findvideos | 1x01 - Pilot  | https://eurostream.one/r-j-decker/
-      findvideos | 1x02 - Chili di clem in sacchi da 5 chili  | https://eurostream.one/r-j-decker/
-      findvideos | 1x03 - Il danno provocato dall’ago  | https://eurostream.one/r-j-decker/
-      findvideos | 1x04 - In Vanity Veritas  | https://eurostream.one/r-j-decker/
-== findvideos su "1x01 - Pilot "
+      episodios | 1x01 - Melania Rea - Il sogno | https://eurostream.one/melania-rea/
+      episodios | 1x04 - Yaga - Danza con il Diavolo | https://eurostream.one/yaga/
+      episodios | 1x01 - Campus Drivers - Cuore spezzato , 1x06 Supermad | https://eurostream.one/campus-drivers/
+      episodios | 1x04 - Phony - Vibes Are Rancid  | https://eurostream.one/phony/
+== episodios su "1x01 - Melania Rea - Il sogno"
+   -> 2 voci
+      findvideos | 1x01 - Il sogno  | https://eurostream.one/melania-rea/
+      add_serie_to_library | txt30161 %s | https://eurostream.one/melania-rea/
+== findvideos su "1x01 - Il sogno "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +92,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/9yfjuztk
+Exception: Not un-shortened link: https://clicka.cc/delta/vao58mlsf219
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -108,7 +104,6 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
    SEZIONE • Archivio -> OK 18 
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostream.one/?s=avatar', 'status': 403, 'byte': 5913, 'titolo_pagina': 'Just a moment...'}
-SEZIONI: 4 ok su 5
-   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: findvideos su "1x01 - Pilot "
+   SEZIONE txt70741 … -> OK 11 
+SEZIONI: 5 ok su 5
+VERDETTO: SI FERMA A: findvideos su "1x01 - Il sogno "

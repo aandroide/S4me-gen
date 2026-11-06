@@ -25,7 +25,7 @@
   {
    "passo": "peliculas su \"A\"",
    "esito": "OK",
-   "voci": 14
+   "voci": 13
   },
   {
    "passo": "findvideos su \"A caccia del vedovo d'oro\"",
@@ -71,6 +71,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str15 06 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 18
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 20
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 13
+      }
+     ]
+    },
+    {
      "voce": "str14 05 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -80,19 +106,19 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 23
+       "titoli": 36
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 16
+       "titoli": 30
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
+       "esito": "OK",
+       "titoli": 31
       }
      ]
     },
@@ -117,34 +143,8 @@
       {
        "voce": "Rai 3",
        "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      }
-     ]
-    },
-    {
-     "voce": "str12 03 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
        "esito": "OK",
-       "titoli": 30
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 33
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
+       "titoli": 29
       }
      ]
     }
@@ -160,19 +160,19 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 21
     },
     {
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 25
+     "titoli": 21
     },
     {
      "voce": "Dal libro al film",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 22
+     "titoli": 24
     }
    ]
   },
@@ -264,7 +264,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 30
+     "titoli": 29
     },
     {
      "voce": "Docu-serie Original",
@@ -276,7 +276,7 @@
      "voce": "Documentari Original",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 25
+     "titoli": 24
     }
    ]
   },
@@ -290,7 +290,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 27
+     "titoli": 28
     },
     {
      "voce": "Cinema bambini",
@@ -299,10 +299,10 @@
      "titoli": 24
     },
     {
-     "voce": "Esclusive RaiPlay Bambini",
+     "voce": "Solo  Corti!",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 34
+     "titoli": 20
     }
    ]
   },
@@ -421,7 +421,7 @@
      "voce": "L'offerta",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 55
+     "titoli": 45
     }
    ]
   },
@@ -438,7 +438,7 @@
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
    "byte": 597,
-   "secondi": 0.5,
+   "secondi": 0.9,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }

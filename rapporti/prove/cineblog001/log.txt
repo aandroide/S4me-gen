@@ -7,17 +7,17 @@ Canale cineblog001 | indirizzo https://cineblog001.party
       genres | Generi | https://cineblog001.center
 == lista "Film"
    -> 19 voci
+      findvideos | Super Troopers 3 | https://cineblog001.party/cb01-streaming/35447-super-troopers-3-streaming-cb01.html
+      findvideos | One Year to Live, Buy a Man | https://cineblog001.party/cb01-streaming/35444-one-year-to-live-buy-a-man-streaming-cb01.html
+      findvideos | Furto di lusso: la banda degli orologi rubati | https://cineblog001.party/cb01-streaming/35442-furto-di-lusso-la-banda-degli-orologi-rubati-streamin
       findvideos | Your Mother Your Mother Your Mother | https://cineblog001.party/cb01-streaming/35435-your-mother-your-mother-your-mother-streaming-cb01.ht
-      findvideos | The Mongoose | https://cineblog001.party/cb01-streaming/35433-the-mongoose-streaming-cb01.html
-      findvideos | Un cucciolo per Natale | https://cineblog001.party/cb01-streaming/35421-un-cucciolo-per-natale-streaming-cb01.html
-      findvideos | Ninho: il prezzo della fama | https://cineblog001.party/cb01-streaming/35422-ninho-il-prezzo-della-fama-streaming-cb01.html
-== findvideos su "Your Mother Your Mother Your Mother"
+== findvideos su "Super Troopers 3"
    -> 2 voci
-      play | Your Mother Your Mother Your Mother | https://v.vidxgo.co/35856037
-      add_pelicula_to_library | txt30161 %s | https://cineblog001.party/cb01-streaming/35435-your-mother-your-mother-your-mother-streaming-cb01.ht
-== risoluzione vidxgo https://v.vidxgo.co/35856037
-   api /t/ 35856037 referer https://v.vidxgo.co/35856037 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 35856037 referer https://cineblog001.party/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+      play | Super Troopers 3 | https://v.vidxgo.co/8820258
+      add_pelicula_to_library | txt30161 %s | https://cineblog001.party/cb01-streaming/35447-super-troopers-3-streaming-cb01.html
+== risoluzione vidxgo https://v.vidxgo.co/8820258
+   api /t/ 8820258 referer https://v.vidxgo.co/8820258 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 8820258 referer https://cineblog001.party/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (4)
     top | ('Film', ['/film/', 'peliculas', ''])
@@ -28,9 +28,9 @@ Canale cineblog001 | indirizzo https://cineblog001.party
    SEZIONE Film -> OK 18 
    SEZIONE Serie TV -> OK 18 
    SEZIONE Sub-ITA -> OK 18 
-   SEZIONE Azione -> OK 16 
+   SEZIONE Azione -> OK 15 
    SEZIONE Animazione -> OK 16 
-   SEZIONE Avventura -> OK 20 
+   SEZIONE Avventura -> OK 18 
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE txt70741 … -> OK 10 
 SEZIONI: 5 ok su 5
