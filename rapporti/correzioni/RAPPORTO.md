@@ -29,7 +29,7 @@ Sito: https://tanti-film.ink
 -   patronBlock rimosso: senza blocco le regex dei titoli trovano 31 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 24 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
 
 ## CORRETTO IN PARTE (1)
@@ -121,7 +121,7 @@ Sito: https://ilcorsaronero.link
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.rest
-- OK: peliculas /catalog/all | 16 risultati
+- OK: peliculas /catalog/all | 15 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
@@ -139,7 +139,7 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27391 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27329 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
@@ -235,15 +235,15 @@ Sito: https://1337x.to
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best
-- OK: peliculas /lastnews/ | 83 risultati
-- OK: peliculas /cinema/ | 97 risultati
-- OK: peliculas /sub-ita/ | 97 risultati
-- OK: peliculas /serie-tv/ | 97 risultati
+- OK: peliculas /lastnews/ | 84 risultati
+- OK: peliculas /cinema/ | 96 risultati
+- OK: peliculas /sub-ita/ | 96 risultati
+- OK: peliculas /serie-tv/ | 96 risultati
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.bar
 - OK: peliculas /film/ | 30 risultati
-- OK: peliculas /serie-tv/ | 30 risultati
+- OK: peliculas /serie-tv/ | 29 risultati
 
 ### animesaturn
 Sito: https://www.animesaturn.net
@@ -277,14 +277,14 @@ Sito: https://www.discoveryplus.com
 Sito: https://eurostream.one
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.one/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 94 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 96 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
 
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10112 risultati
+- OK: peliculas /index | 3531 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -328,7 +328,7 @@ Sito: https://pluto.tv
 
 ### raiplay
 Sito: https://www.raiplay.it
-- attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.tech_datetime_en
+- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
 - OK: https://www.raiplay.it/dirette | html
 - OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
 - OK: https://www.raiplay.it/guidatv | html
@@ -359,7 +359,7 @@ Sito: https://apibay.org
 Sito: https://toonitalia.xyz
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
 - OK: peliculas /category/anime | 400 risultati
-- OK: peliculas /anime-ita | 2772 risultati
+- OK: peliculas /anime-ita | 2782 risultati
 - attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /contatti | 822 risultati
 - attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
