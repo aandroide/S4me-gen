@@ -1,0 +1,28 @@
+name: Controlla framework
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'riparazioni/**'
+      - 'strumenti/framework.py'
+      - 'strumenti/controlla_framework.py'
+permissions:
+  contents: read
+jobs:
+  framework:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prove del controllo
+        run: python3 strumenti/test/test_framework.py
+      - name: Canale e server verificati su Kodi (devono essere puliti)
+        run: python3 strumenti/controlla_framework.py riparazioni/altadefinizione01.py riparazioni/server
+      - name: Altre riparazioni (informativo)
+        continue-on-error: true
+        run: python3 strumenti/controlla_framework.py riparazioni
+      - name: Canali ufficiali (solo informativo)
+        continue-on-error: true
+        run: python3 strumenti/controlla_framework.py canali_base --solo-errori

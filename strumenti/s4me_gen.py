@@ -1562,6 +1562,19 @@ def genera_menu(voci, tipo_default, azioni=None):
     return '\n'.join(righe)
 
 
+def framework_rapporto(py):
+    """Righe per il rapporto: il canale scritto segue il framework di S4Me? (strumenti/framework.py)"""
+    try:
+        import framework
+        pb = framework.controlla_codice(py, 'canale')
+    except Exception as e:
+        return ['FRAMEWORK: controllo non riuscito (%s)' % e]
+    if not pb:
+        return ['FRAMEWORK: nessuna violazione delle regole di strumenti/REGOLE_FRAMEWORK.md.']
+    return ['FRAMEWORK: %d punti da controllare (regole in strumenti/REGOLE_FRAMEWORK.md):' % len(pb)] + \
+        ['  ' + r for r in framework.formatta(pb)]
+
+
 def genera_html(nome, ctx):
     cod = HEADER.replace('__NOME__', nome)
     menu = (genera_menu_s4me(ctx['menu'], ctx['tipo'], ctx['azioni_menu']) if ctx.get('azioni_menu') else
@@ -1623,7 +1636,8 @@ __PATRONB__    if '(?P<episode>' in patron and '(?P<season>' not in patron and n
 
     def itemlistHook(itemlist):
         # S4Me scrive il titolo dell'episodio solo nelle info, non nell'etichetta: lo aggiungo accanto a 1x01
-        if config.get_setting('episode_info') and itemlist and itemlist[0].season:
+        if config.get_setting('episode_info') and itemlist and itemlist[0].season \
+                and not support.stackCheck(['add_tvshow', 'get_newest']):
             try:
                 tmdb.set_infoLabels_itemlist(itemlist, seekTmdb=True)
             except Exception:
@@ -3664,6 +3678,7 @@ def usa_profilo(prof, url, args):
         rp('Tutti i controlli superati: la struttura del sito e quella che il canale si aspetta')
     os.makedirs(args.out, exist_ok=True)
     py = open(os.path.join(PROFILI_DIR, prof['_nome'] + '.py'), encoding='utf-8').read()
+    rapporto += framework_rapporto(py)
     open(os.path.join(args.out, id_ + '.py'), 'w', encoding='utf-8').write(py)
     open(os.path.join(args.out, id_ + '.json'), 'w', encoding='utf-8').write(
         genera_json(id_, nome, 'movie', tipi={k: [] for k in prof.get('categorie', ['movie', 'tvshow'])}))
@@ -3725,6 +3740,7 @@ def main():
             ctx['patron'] = r'<a [^>]*?href="(?P<url>[^"]+)"[^>]*>.*?<img [^>]*?src="(?P<thumb>[^"]+)".*?(?P<title>[^<]+)<'
             rapporto.append('TODO: regex patron non generata, scritta una regex di esempio da adattare.')
         py = genera_html(nome, ctx)
+    rapporto += framework_rapporto(py)
     mancano = []
     if not ctx.get('manifest') and not ctx.get('ricette_video') and not (ctx.get('player') and ctx['player'].get('video')):
         mancano.append('riproduzione (nessun manifest rilevato: findvideos generico con support.server)')

@@ -15,6 +15,7 @@ Strumenti per tenere in ordine i canali di S4Me (Stream4me). Non scrive mai nell
 ## Le Action (Actions su GitHub)
 
 - **Controlla canali** (ogni giorno alle 5:23, anche a mano): aggiorna indirizzi e canali da S4Me, prova le regex sui siti veri, scrive `rapporti/correzioni/` e poi prova ogni canale fino al video in `rapporti/prove/`.
+- **Controlla framework** (a ogni modifica di `riparazioni/`, anche a mano): verifica che canali e server seguano le regole di `strumenti/REGOLE_FRAMEWORK.md`. Il generatore aggiunge la stessa verifica nel rapporto di ogni canale che scrive.
 - **Prova canale fino al video**: prova uno o piu canali (e una voce di menu) fino al flusso video.
 - **Scarica pagine di un sito**: salva html, frame e richieste di rete in `rapporti/pagine/`.
 - **Scarica file di un sito**: scarica file o pagine dal runner e li committa in `file_scaricati/` (da cancellare dopo l'uso).
