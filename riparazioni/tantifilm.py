@@ -51,7 +51,8 @@ def search(item, text):
         return []
 
 @support.scrape
-def peliculas(item):
+def _elenco(item):
+    actLike = 'peliculas'
     action = 'check'
     # la pagina non distingue piu film e serie nell'elenco (non c'e piu se_num): il tipo si ricava dal percorso.
     # In ricerca resta undefined (TMDB cerca in entrambi); altrove con undefined i titoli senza scheda TMDB
@@ -67,8 +68,8 @@ def peliculas(item):
     else:
         patronNext = r'<b class="nextpostslink">.*?<a href="([^"]+)">'
         if 'serie-tv' in item.url:
-            # solo schede con se_num (stagioni): le schede con calitate sono film e restano fuori dal menu serie
-            patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>[^"]*?) \(-?(?P<year>\d{4})[^"]+"(?:(?!mediaWrap).)*?<img[^s]+src="(?P<thumb>[^"]+)"(?:(?!mediaWrap).)*?class="se_num">(?P<quality>.*?)</span>'
+            # la pagina non distingue piu le serie (se_num e sparito): l'elenco ha anche film, tolti dopo con TMDB
+            patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>[^"]*?) \(-?(?P<year>\d{4})[^"]+"(?:(?!mediaWrap).)*?<img[^s]+src="(?P<thumb>[^"]+)"(?:(?!mediaWrap).)*?(?:class="se_num">|class="calitate">\s*<p>\s*)(?P<quality>.*?)(?:</span>|\s*</p>)'
         else:
             patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \(-?(?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate"> <p> )(?P<quality>.*?)(?:</span>| </p>)'
         patronBlock = r'<div id="main_col">(?P<block>.*?)<!-- main_col -->'
@@ -80,6 +81,14 @@ def peliculas(item):
         return item
 
     return locals()
+
+def peliculas(item):
+    lista = _elenco(item)
+    if 'serie-tv' in (item.url or '') and item.args != 'search':
+        # nel menu serie restano le schede che TMDB riconosce come serie (i film non hanno scheda tv)
+        lista = [x for x in lista if x.action != 'check' or (x.infoLabels or {}).get('tmdb_id')]
+    return lista
+
 
 def episodios(item):
     # la pagina della serie non elenca piu gli episodi: contiene solo il lettore vidxgo, che si apre con l'id IMDb.
