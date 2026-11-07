@@ -170,7 +170,8 @@ for vm in voci_menu:
     if r and any(x.action == 'play' for x in r):
         finale = r
         break
-if finale:
+def _riproduci(finale, tipo):
+    """Risolve i server dei primi link e controlla che il video parta. tipo: film o serie."""
     giocabili = [x for x in finale if x.action == 'play']
     giocabili = [x for x in giocabili if 'youtube' not in (x.url or '') and x.server != 'youtube'] or giocabili
     for pl in giocabili[:3]:
@@ -184,7 +185,7 @@ if finale:
             except BaseException:
                 rp('   play del canale in errore:', traceback.format_exc(limit=2)[-200:])
         rp('== risoluzione', pl.server, (pl.url or '')[:100])
-        info = {'server': pl.server, 'url': (pl.url or '')[:200]}
+        info = {'server': pl.server, 'url': (pl.url or '')[:200], 'tipo': tipo}
         try:
             if pl.server == 'directo':
                 finali = [['directo', pl.url]]
@@ -245,6 +246,10 @@ if finale:
         pass
         rp('   ->', info['esito'], info.get('dettaglio', ''), info.get('nota', ''))
         esito['video'].append(info)
+
+
+if finale:
+    _riproduci(finale, 'film')
 else:
     rp('Nessuna voce da riprodurre trovata')
 # ---- controllo di TUTTE le sezioni del menu (non solo la prima): ognuna deve mostrare dei titoli ----
@@ -254,6 +259,26 @@ def _pulisci(t):
 
 _AZ_TITOLI = ('findvideos', 'episodios', 'check', 'play', 'season', 'seasons', 'episode', 'get_video_url', 'live')
 _AZ_MENU = ('peliculas', 'list', 'genres', 'menu', 'submenu', 'newest', 'search_menu', 'categorias', 'category', 'az', 'lista')
+
+
+def _qualita(r):
+    """Problemi che si vedono in Kodi anche se la lista non e vuota: titoli rotti e icone a cartella."""
+    pb = []
+    titoli = [x for x in r if x.action in _AZ_TITOLI]
+    for x in titoli:
+        t = _pulisci(x.title)
+        if len(t) > 120 or re.search(r"[<>]|rel=|src=|width=|class=", t):
+            pb.append('titolo rovinato: %s' % t[:70])
+        tipo = getattr(x, 'contentType', '') or (x.infoLabels or {}).get('mediatype', '')
+        if tipo in ('', 'undefined') and x.action != 'play':
+            pb.append('tipo undefined, in Kodi appare come cartella: %s' % t[:50])
+        if not (x.url or '').strip():
+            pb.append('titolo senza indirizzo: %s' % t[:50])
+    for x in r:
+        if re.search(r'\s>$', _pulisci(x.title)) and getattr(x, 'contentType', '') in ('', 'undefined'):
+            pb.append('il tasto Successivo ha tipo undefined e appare come cartella')
+            break
+    return pb[:6]
 
 
 def _prova_sezione(voce, livello=0):
@@ -268,10 +293,13 @@ def _prova_sezione(voce, livello=0):
         rp('   SEZIONE', nome_v, '-> ERRORE', type(ex).__name__)
         return {'voce': nome_v, 'azione': voce.action, 'esito': 'ERRORE %s' % type(ex).__name__,
                 'pagine': [{k: z.get(k) for k in ('url', 'status', 'byte', 'titolo_pagina')} for z in rete[_n0:][:3]]}
+    problemi = _qualita(r or [])
     r = [x for x in (r or []) if not re.search(r'\s>$', _pulisci(x.title)) and x.action not in ('addToLibrary', 'add_pelicula_to_library', 'add_serie_to_library', 'channel_config', 'search')]
     titoli = [x for x in r if x.action in _AZ_TITOLI]
     figli = [x for x in r if x.action not in _AZ_TITOLI]  # qualsiasi altra azione e una sottovoce (es. peliculas_genere, programmi, rubrica)
     out = {'voce': nome_v, 'azione': voce.action}
+    if problemi:
+        out['problemi'] = problemi
     if titoli:
         out['esito'] = 'OK'
         out['titoli'] = len(titoli)
@@ -286,6 +314,8 @@ def _prova_sezione(voce, livello=0):
     if out['esito'] in ('VUOTA', 'SOTTOMENU SENZA TITOLI') or out['esito'].startswith('ERRORE'):
         out['pagine'] = [{k: z.get(k) for k in ('url', 'status', 'byte', 'titolo_pagina')} for z in rete[_n0:][:3]]
     rp('   SEZIONE', nome_v, '->', out['esito'], out.get('titoli', ''), (' | ultima pagina: %s' % out['pagine'][-1]) if out.get('pagine') else '')
+    for pb in out.get('problemi', []):
+        rp('      PROBLEMA:', pb)
     return out
 
 

@@ -114,7 +114,7 @@ def episodios(item):
             itemlist.append(item.clone(action='findvideos', title=titolo, contentType='episode', contentSeason=s,
                                        contentEpisodeNumber=e, season=s, episode=e,
                                        plot=ep.get('overview') or item.plot,
-                                       url='https://v.vidxgo.co/%s/%s/%s' % (imdb, s, e), server='vidxgo', data=''))
+                                       url='https://v.vidxgo.co/%s/%s/%s' % (imdb, s, e), data=""))
     support.check_trakt(itemlist)
     support.videolibrary(itemlist, item)
     return itemlist
@@ -126,7 +126,8 @@ def check(item):
     if 'sub' in check.lower():
         item.contentLanguage = 'Sub-ITA'
     logger.debug("CHECK : ", check)
-    if 'serie' in check.lower():
+    # il tipo arriva dall'elenco (percorso serie-tv); la categoria in pagina non sempre dice serie
+    if item.contentType == 'tvshow' or 'serie' in check.lower() or 'serie-tv' in (item.url or ''):
         item.contentType = 'tvshow'
         return episodios(item)
     else:

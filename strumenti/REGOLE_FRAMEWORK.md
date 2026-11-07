@@ -42,3 +42,5 @@ F14 non si controlla in automatico: si guarda leggendo il canale.
 ## Come si arriva a queste regole
 
 Ogni regola ha un caso vero dietro: altadefinizione01 e i server vidxgo e vixsrc, provati su Kodi per Windows e Android. Quando se ne trova un'altra si aggiunge in `strumenti/framework.py`, si scrive qui il motivo e si aggiunge un caso in `strumenti/test/test_framework.py`.
+
+F14 (errore): in episodios non impostare server sugli episodi. Con l'azione check il launcher scambia la lista per link e avvia la riproduzione del primo episodio invece di aprire il menu. Il server si imposta in findvideos.

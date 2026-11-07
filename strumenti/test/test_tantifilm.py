@@ -81,6 +81,10 @@ if lista and lista[0].url != 'https://v.vidxgo.co/35926686/1/1':
 if chiamate != ['trakt', 'videoteca']:
     fallite.append('mancano check_trakt e videolibrary: %s' % chiamate)
 
+# gli episodi con server impostato fanno partire la riproduzione al posto del menu (azione check)
+if any(getattr(i, 'server', '') for i in lista):
+    fallite.append('gli episodi non devono avere server: Kodi avvia la riproduzione invece di mostrare il menu')
+
 # l'episodio si apre direttamente su vidxgo, senza scaricare di nuovo la pagina
 res = ns['findvideos'](lista[0])
 if not res or res[0].server != 'vidxgo':

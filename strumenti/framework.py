@@ -188,6 +188,18 @@ def controlla_canale(testo):
         add(AVVISO, 'F13', 1, 'il canale chiama funzioni di prova del server (probe, episodes_api): una richiesta '
                               'per stagione alla prima apertura puo sembrare traffico anomalo. Lascia che sia '
                               'test_video_exists a scartare i link mancanti, alla riproduzione')
+    # F14 episodi con server impostato: con l'azione check Kodi li prende per link e avvia la riproduzione
+    ep = funz.get('episodios')
+    if ep is not None and re.search(r"action\s*=\s*['\"]check['\"]", testo):
+        for n in ast.walk(ep):
+            if isinstance(n, ast.Call) and _nome_chiamata(n).endswith('clone'):
+                kw = {k.arg: k.value for k in n.keywords if k.arg}
+                a = kw.get('action')
+                if 'server' in kw and isinstance(a, ast.Constant) and a.value == 'findvideos':
+                    add(ERRORE, 'F14', n.lineno, "episodios mette server negli episodi: con l'azione check la lista "
+                        "viene scambiata per link e parte la riproduzione al posto del menu. Il server si imposta in findvideos")
+                    break
+
     return problemi
 
 
