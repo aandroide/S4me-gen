@@ -20,6 +20,7 @@ jobs:
         run: |
           python3 strumenti/test/test_framework.py
           python3 strumenti/test/test_tmdb_core.py
+          python3 strumenti/test/test_tantifilm.py
       - name: Riparazioni (nessun ERRORE ammesso)
         run: python3 strumenti/controlla_framework.py riparazioni --solo-errori
       - name: Canali ufficiali (solo informativo)

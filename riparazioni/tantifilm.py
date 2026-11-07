@@ -53,25 +53,72 @@ def search(item, text):
 @support.scrape
 def peliculas(item):
     action = 'check'
-    item.contentType = 'undefined'
+    # la pagina non distingue piu film e serie nell'elenco (non c'e piu se_num): il tipo si ricava dal percorso.
+    # In ricerca resta undefined (TMDB cerca in entrambi); altrove con undefined i titoli senza scheda TMDB
+    # e il tasto Successivo verrebbero mostrati come cartelle
     if item.args == 'search':
-        patron = r'<div class="film.*?<a href="(?P<url>[^"]+)" title="(?P<title>.*?) \((?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="calitate"> <p>)(?P<quality>.*?)(?:</p>)'
+        item.contentType = 'undefined'
+    elif 'serie-tv' in item.url:
+        item.contentType = 'tvshow'
+    else:
+        item.contentType = 'movie'
+    if item.args == 'search':
+        patron = r'<div class="film.*?<a href="(?P<url>[^"]+)" title="(?P<title>.*?) \(-?(?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="calitate"> <p>)(?P<quality>.*?)(?:</p>)'
     else:
         patronNext = r'<b class="nextpostslink">.*?<a href="([^"]+)">'
         if 'serie-tv' in item.url:
-            patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \((?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate">\s*<p>\s*)(?P<quality>.*?)(?:</span>|\s*</p>)'
+            patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \(-?(?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate">\s*<p>\s*)(?P<quality>.*?)(?:</span>|\s*</p>)'
         else:
-            patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \((?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate"> <p> )(?P<quality>.*?)(?:</span>| </p>)'
+            patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \(-?(?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate"> <p> )(?P<quality>.*?)(?:</span>| </p>)'
         patronBlock = r'<div id="main_col">(?P<block>.*?)<!-- main_col -->'
 
+    def itemHook(item):
+        # titoli senza anno sul sito escono come (-0001)
+        if str(item.infoLabels.get('year', '')) in ('0001', '1'):
+            item.infoLabels['year'] = ''
+        return item
+
     return locals()
 
-@support.scrape
 def episodios(item):
-    item.quality = ''
-    patron = r'data-num="(?P<season>.*?)x(?P<episode>.*?)" data-title="(?P<title>.+?)(?:: (?P<plot>.*?))?">.*?<div class="mirrors"(?P<server_links>.*?)<!---'
-    action = 'findvideos'
-    return locals()
+    # la pagina della serie non elenca piu gli episodi: contiene solo il lettore vidxgo, che si apre con l'id IMDb.
+    # Stagioni ed episodi si leggono da TMDB (core: cache, limite di richieste e nuovi tentativi gia gestiti)
+    from core import tmdb
+    data = getattr(item, 'data', '') or support.match(item.url, headers=headers).data
+    imdb = support.match(data, patron=r"""var\s+imdb\s*=\s*['"]tt(\d+)""").match
+    if not imdb:
+        imdb = support.match(data, patron=r"/uploads/[^\"' ]*?/tt(\d{6,9})\.").match
+    if not imdb:
+        return []
+    try:
+        tmdb_id = tmdb.Tmdb(external_id='tt' + imdb, external_source='imdb_id', search_type='tv').get_id()
+        if not tmdb_id:
+            return []
+        serie = tmdb.Tmdb(id_Tmdb=tmdb_id, search_type='tv')
+        stagioni = [st.get('season_number') for st in serie.get_list_episodes()]
+    except Exception:
+        logger.error('TMDB non raggiungibile per tt' + imdb)
+        return []
+    itemlist = []
+    for s in stagioni:
+        if not s:
+            continue
+        try:
+            dettaglio = serie.get_season(s) or {}
+        except Exception:
+            continue
+        for ep in dettaglio.get('episodes', []) or []:
+            e = ep.get('episode_number')
+            nome = ep.get('name') or ''
+            titolo = '%sx%02d' % (s, e) + (' - ' + nome if nome else '')
+            itemlist.append(item.clone(action='findvideos', title=titolo, contentType='episode', contentSeason=s,
+                                       contentEpisodeNumber=e, season=s, episode=e,
+                                       plot=ep.get('overview') or item.plot,
+                                       url='https://v.vidxgo.co/%s/%s/%s' % (imdb, s, e), server='vidxgo', data=''))
+    support.check_trakt(itemlist)
+    support.videolibrary(itemlist, item)
+    return itemlist
+
 
 def check(item):
     item.data = support.match(item.url, headers=headers).data
@@ -89,6 +136,10 @@ def check(item):
 
 
 def findvideos(item):
+    # episodio con indirizzo vidxgo gia pronto (costruito in episodios)
+    if 'vidxgo.co/' in (item.url or ''):
+        return support.server(item, itemlist=[item.clone(action='play', title='vidxgo', server='vidxgo')])
+
     if item.server_links:
         return support.server(item, data = item.server_links)
 
