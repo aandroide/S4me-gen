@@ -20,7 +20,7 @@
   {
    "passo": "peliculas su \"Action\"",
    "esito": "ERRORE",
-   "errore": "                                                                          ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 165, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
+   "errore": "                                                                          ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 205, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
   },
   {
    "passo": "lista \"•• Film\"",
@@ -35,7 +35,7 @@
   {
    "passo": "peliculas su \"Action\"",
    "esito": "ERRORE",
-   "errore": "                                                                          ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 165, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
+   "errore": "                                                                          ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 205, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
   },
   {
    "passo": "lista \"•• TV\"",
@@ -50,7 +50,7 @@
   {
    "passo": "peliculas su \"Action\"",
    "esito": "ERRORE",
-   "errore": "                                                                          ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 165, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
+   "errore": "                                                                          ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 205, in peliculas\n    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'records'\n"
   }
  ],
  "video": [],
@@ -489,10 +489,10 @@
  "sezioni_riepilogo": "1 ok su 8",
  "rete": [
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/archivio",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/archivio",
    "status": 200,
    "byte": 94367,
-   "secondi": 0.8,
+   "secondi": 0.7,
    "titolo_pagina": "AnimeUnity ~ Archivio",
    "file": "pagine/01.html"
   },
@@ -500,7 +500,7 @@
    "url": "https://www.animeunity.co/archivio",
    "status": 200,
    "byte": 94367,
-   "secondi": 0.9,
+   "secondi": 0.8,
    "titolo_pagina": "AnimeUnity ~ Archivio",
    "file": "pagine/02.html"
   },
@@ -529,9 +529,9 @@
    "file": "pagine/05.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
    "status": 200,
-   "byte": 192031,
+   "byte": 193133,
    "secondi": 0.6,
    "titolo_pagina": "AnimeUnity ~ Streaming &amp; Download di Anime in SUB ITA/ITA",
    "file": "pagine/06.html"
@@ -539,8 +539,8 @@
   {
    "url": "https://www.animeunity.co",
    "status": 200,
-   "byte": 192031,
-   "secondi": 0.6,
+   "byte": 193133,
+   "secondi": 0.7,
    "titolo_pagina": "AnimeUnity ~ Streaming &amp; Download di Anime in SUB ITA/ITA",
    "file": "pagine/07.html"
   },
@@ -612,7 +612,7 @@
    "url": "https://www.animeunity.co/archivio/get-animes",
    "status": 403,
    "byte": 8253,
-   "secondi": 0.1,
+   "secondi": 0.0,
    "titolo_pagina": "Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime"
   },
   {
@@ -675,7 +675,7 @@
    "url": "https://www.animeunity.co/archivio/get-animes",
    "status": 403,
    "byte": 8253,
-   "secondi": 0.1,
+   "secondi": 0.0,
    "titolo_pagina": "Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime"
   },
   {

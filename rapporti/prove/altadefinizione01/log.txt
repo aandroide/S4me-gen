@@ -6,17 +6,17 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
       peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.best
       genres | •• Generi | https://altadefinizione-01.best
 == lista "Tutti "
-   -> 25 voci
+   -> 26 voci
+      check | Blue Film  | https://altadefinizione-01.best/35456-blue-streaming.html
+      check | Possible Love  | https://altadefinizione-01.best/35448-possible-love-streaming.html
       check | Super Troopers 3  | https://altadefinizione-01.best/35447-super-troopers-3-streaming.html
       check | One Year to Live, Buy a Man  | https://altadefinizione-01.best/35444-one-year-to-live-buy-a-man-streaming.html
-      check | Furto di lusso: la banda degli orologi rubati  | https://altadefinizione-01.best/35442-furto-di-lusso-la-banda-degli-orologi-rubati-streaming.html
-      check | Your Mother Your Mother Your Mother  | https://altadefinizione-01.best/35435-your-mother-your-mother-your-mother-streaming.html
-== check su "Super Troopers 3 "
+== check su "Blue Film "
    -> 2 voci
-      play | Super Troopers 3  | https://vixsrc.to/movie/tt8820258
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35447-super-troopers-3-streaming.html
-== risoluzione vixsrc https://vixsrc.to/movie/tt8820258
-   -> VIDEO OK m3u8 200 
+      play | Blue Film  | https://vixsrc.to/movie/tt34915693
+      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35456-blue-streaming.html
+== risoluzione vixsrc https://vixsrc.to/movie/tt34915693
+   -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
 == voci dichiarate in mainlist (7)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
     menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])
@@ -26,7 +26,7 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
     menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 24 
+   SEZIONE Tutti -> OK 25 
    SEZIONE •• Al Cinema -> OK 30 
    SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 36 
    SEZIONE Azione -> OK 29 
@@ -41,4 +41,4 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
    SEZIONE Serie TV -> OK 30 
    SEZIONE txt70741 … -> OK 6 
 SEZIONI: 8 ok su 8
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE

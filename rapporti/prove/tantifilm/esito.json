@@ -18,7 +18,7 @@
    "voci": 26
   },
   {
-   "passo": "check su \"Super Troopers 3 \"",
+   "passo": "check su \"Blue Film \"",
    "esito": "OK",
    "voci": 2
   }
@@ -26,26 +26,10 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/8820258",
-   "nota": "il server non risponde entro 90 secondi",
-   "modulo_server": true,
-   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
-   "pagina_server": {
-    "status": 403,
-    "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-   },
-   "api_t": [
-    {
-     "referer": "https://v.vidxgo.co/8820258",
-     "status": 403,
-     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-    },
-    {
-     "referer": "https://tanti-film.ink/",
-     "status": 403,
-     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-    }
-   ]
+   "url": "https://v.vidxgo.co/34915693",
+   "finale": "http://127.0.0.1:42281/hls/34915693/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
   }
  ],
  "menu_dichiarato": [
@@ -84,7 +68,7 @@
    "voce": "• Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 31
+   "titoli": 32
   },
   {
    "voce": "• Serie TV",
@@ -105,90 +89,90 @@
    "url": "https://tanti-film.ink",
    "status": 200,
    "byte": 16337,
-   "secondi": 0.8,
+   "secondi": 0.5,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/01.html"
   },
   {
    "url": "https://tanti-film.ink/prossimamente/",
    "status": 200,
-   "byte": 70695,
-   "secondi": 0.7,
+   "byte": 70374,
+   "secondi": 0.3,
    "titolo_pagina": "Prossimamente al Cinema",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://tanti-film.ink/guarda/35447-super-troopers-3-streaming-streaming-hd.html",
+   "url": "https://tanti-film.ink/guarda/35456-blue-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 28333,
+   "byte": 26717,
    "secondi": 0.2,
-   "titolo_pagina": "Super Troopers 3 (2026) streaming | TantiFILM",
+   "titolo_pagina": "Blue Film (2026) streaming | TantiFILM",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://tanti-film.ink/guarda/35447-super-troopers-3-streaming-streaming-hd.html",
+   "url": "https://tanti-film.ink/guarda/35456-blue-streaming-streaming-hd.html",
    "status": 200,
-   "byte": 28333,
-   "secondi": 0.5,
-   "titolo_pagina": "Super Troopers 3 (2026) streaming | TantiFILM",
+   "byte": 26717,
+   "secondi": 0.2,
+   "titolo_pagina": "Blue Film (2026) streaming | TantiFILM",
    "file": "pagine/04.html"
   },
   {
    "url": "https://tanti-film.ink",
    "status": 200,
    "byte": 16337,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/05.html"
   },
   {
    "url": "https://tanti-film.ink/animazione/",
    "status": 200,
-   "byte": 71203,
-   "secondi": 0.7,
+   "byte": 71288,
+   "secondi": 0.2,
    "titolo_pagina": "Animazione guarda Gratis | TantiFILM",
    "file": "pagine/06.html"
   },
   {
    "url": "https://tanti-film.ink/avventura/",
    "status": 200,
-   "byte": 70991,
-   "secondi": 0.7,
+   "byte": 70705,
+   "secondi": 0.2,
    "titolo_pagina": "Avventura guarda Gratis | TantiFILM",
    "file": "pagine/07.html"
   },
   {
    "url": "https://tanti-film.ink/biografico/",
    "status": 200,
-   "byte": 69426,
-   "secondi": 0.7,
+   "byte": 68695,
+   "secondi": 0.2,
    "titolo_pagina": "Biografico guarda Gratis | TantiFILM",
    "file": "pagine/08.html"
   },
   {
    "url": "https://tanti-film.ink/film",
    "status": 200,
-   "byte": 89148,
-   "secondi": 3.1,
+   "byte": 88160,
+   "secondi": 0.4,
    "titolo_pagina": "Guarda Tanti Film Streaming in Italiano | TantiFILM Gratis",
    "file": "pagine/09.html"
   },
   {
    "url": "https://tanti-film.ink/serie-tv/",
    "status": 200,
-   "byte": 70488,
-   "secondi": 0.7,
+   "byte": 69371,
+   "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM",
    "file": "pagine/10.html"
   },
   {
    "url": "https://tanti-film.ink/?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 56759,
-   "secondi": 0.3,
+   "byte": 56695,
+   "secondi": 0.2,
    "titolo_pagina": "Site search &raquo; TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/11.html"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
+ "verdetto": "ARRIVA AL VIDEO"
 }

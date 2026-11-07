@@ -7,23 +7,21 @@ Canale guardaseriecam | indirizzo https://guardaseriex.art
       search | •• txt70741 Serie TV… | https://guardaseriex.art/serietv-streaming
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Estranei | https://guardaseriex.art/commedia/5820-estranei-streaming.html
-      episodios | Don Dracula | https://guardaseriex.art/animazione/5874-don-dracula-streaming.html
-      episodios | L'isola Del Tesoro | https://guardaseriex.art/avventura/5829-l-isola-del-tesoro-streaming.html
-      episodios | Le indagini di Roy Grace | https://guardaseriex.art/crime/1293-grace.html
-== episodios su "Estranei"
-   -> 8 voci
-      findvideos | 1x01 - Romeo e Giulietta | https://v.vidxgo.co/37539393/1/1
-      findvideos | 1x02 - I soliti sospetti | https://v.vidxgo.co/37539393/1/2
-      findvideos | 1x03 - IL COLTELLO NELL' ACQUA | https://v.vidxgo.co/37539393/1/3
-      findvideos | 1x04 - PRIGIONIERI | https://v.vidxgo.co/37539393/1/4
-== findvideos su "1x01 - Romeo e Giulietta"
+      episodios | L'ultimo piatto | https://guardaseriex.art/dramma/5877-l-ultimo-piatto-streaming.html
+      episodios | The Other Bennet Sister | https://guardaseriex.art/commedia/5791-the-other-bennet-sister-orgoglio-e-riscatto-streaming.html
+      episodios | I Griffin | https://guardaseriex.art/animazione/2048-i-griffin.html
+      episodios | The Greatest | https://guardaseriex.art/dramma/5882-the-greatest-streaming.html
+== episodios su "L'ultimo piatto"
+   -> 12 voci
+      findvideos | 1x01 - Episodio 1 | https://v.vidxgo.co/49692512/1/1
+      findvideos | 1x02 - Episodio 2 | https://v.vidxgo.co/49692512/1/2
+      findvideos | 1x03 - Episodio 3 | https://v.vidxgo.co/49692512/1/3
+      findvideos | 1x04 - Episodio 4 | https://v.vidxgo.co/49692512/1/4
+== findvideos su "1x01 - Episodio 1"
    -> 1 voci
-      play | 1x01 - Romeo e Giulietta | https://v.vidxgo.co/37539393/1/1
-== risoluzione vidxgo https://v.vidxgo.co/37539393/1/1
-   api /t/ 37539393/1/1 referer https://v.vidxgo.co/37539393/1/1 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 37539393/1/1 referer https://guardaseriex.art/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+      play | 1x01 - Episodio 1 | https://v.vidxgo.co/49692512/1/1
+== risoluzione vidxgo https://v.vidxgo.co/49692512/1/1
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (3)
     tvshow | '/serietv-streaming'
     tvshow | ('Popolari', ['/serietv-popolari/', 'peliculas', ''])
@@ -37,4 +35,4 @@ Canale guardaseriecam | indirizzo https://guardaseriex.art
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE •• txt70741 Serie TV… -> OK 4 
 SEZIONI: 4 ok su 4
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+VERDETTO: ARRIVA AL VIDEO
