@@ -69,6 +69,9 @@ deve('undefined senza contentType', CANALE_BUONO.replace(
     'canale', presenti=('F03',))
 # TMDB diretto, thread, probe
 deve('tmdb diretto', CANALE_BUONO + "\nU = 'https://api.themoviedb.org/3/tv/1'\n", 'canale', presenti=('F08',))
+deve('tmdb via core', CANALE_BUONO + "\nU = 'https://api.themoviedb.org/3/tv/1'\ndef g(u):\n    return core_tmdb.Tmdb.get_json(u)\n",
+     'canale', assenti=('F10',))
+assert not [c for c in fw.controlla_codice(CANALE_BUONO + "\nU = 'https://api.themoviedb.org/3/tv/1'\ndef g(u):\n    return core_tmdb.Tmdb.get_json(u)\n", 'canale') if c[0] == fw.ERRORE and c[1] == 'F08']
 deve('thread', CANALE_BUONO + "\nimport threading\nthreading.Thread(target=print).start()\n", 'canale', presenti=('F10',))
 deve('probe', CANALE_BUONO + "\ndef x(v):\n    return v.probe('a')\n", 'canale', presenti=('F13',))
 deve('titolo TMDB non in etichetta', CANALE_BUONO.replace("            if it.infoLabels.get('title'):\n                it.title = '1x01 - ' + it.infoLabels['title']\n", '            pass\n'),

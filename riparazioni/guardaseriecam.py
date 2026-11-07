@@ -56,31 +56,30 @@ def peliculas(item):
 def episodios(item):
     # la pagina della serie contiene solo un selettore scritto in JavaScript (12 stagioni x 24 episodi finti):
     # stagioni ed episodi veri si leggono da TMDB con l'id IMDb, il lettore e vidxgo
-    import json
-    from core import httptools
+    from core import tmdb
     data = support.match(item).data
     imdb = support.match(data, patron=r"var imdb = 'tt(\d+)'").match
     if not imdb:
         return []
-    api = 'https://api.themoviedb.org/3'
-    key = 'a1ab8b8669da03637a4b98fa39c39228'
+    # core tmdb: cache, limite di richieste e nuovi tentativi sono gia gestiti
     try:
-        trovato = json.loads(httptools.downloadpage('%s/find/tt%s?api_key=%s&external_source=imdb_id&language=it' % (api, imdb, key)).data or '{}')
-        tmdb_id = trovato['tv_results'][0]['id']
-        serie = json.loads(httptools.downloadpage('%s/tv/%s?api_key=%s&language=it' % (api, tmdb_id, key)).data or '{}')
+        tmdb_id = tmdb.Tmdb(external_id='tt' + imdb, external_source='imdb_id', search_type='tv').get_id()
+        if not tmdb_id:
+            return []
+        serie = tmdb.Tmdb(id_Tmdb=tmdb_id, search_type='tv')
+        stagioni = [st.get('season_number') for st in serie.get_list_episodes()]
     except Exception:
         logger.error('TMDB non raggiungibile per tt' + imdb)
         return []
     itemlist = []
-    for stagione in serie.get('seasons', []):
-        s = stagione.get('season_number')
+    for s in stagioni:
         if not s:
             continue
         try:
-            dettaglio = json.loads(httptools.downloadpage('%s/tv/%s/season/%s?api_key=%s&language=it' % (api, tmdb_id, s, key)).data or '{}')
+            dettaglio = serie.get_season(s) or {}
         except Exception:
             continue
-        for ep in dettaglio.get('episodes', []):
+        for ep in dettaglio.get('episodes', []) or []:
             e = ep.get('episode_number')
             nome = ep.get('name') or ''
             titolo = '%sx%02d' % (s, e) + (' - ' + nome if nome else '')

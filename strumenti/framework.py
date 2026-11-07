@@ -129,10 +129,16 @@ def controlla_canale(testo):
             add(AVVISO, 'F07', ep.lineno, 'episodios scritta a mano senza support.videolibrary(itemlist, item)')
 
     # F08 niente chiamate dirette a TMDB e niente rete fuori da httptools
+    # l'URL scritto nel canale va bene se la richiesta passa da Tmdb.get_json del core (cache e limiti)
+    passa_dal_core = bool(re.search(r'Tmdb\.get_json\(', testo))
     for i, riga in enumerate(testo.splitlines(), 1):
-        if re.search(r'api\.themoviedb\.org', riga):
-            add(ERRORE, 'F08', i, "richiesta diretta all'API di TMDB nel canale: usa support.tmdb o core.tmdb "
-                                   "(cache, limite di richieste e nuovi tentativi gia gestiti)")
+        if re.search(r'api\.themoviedb\.org', riga) and not riga.lstrip().startswith('#'):
+            if passa_dal_core:
+                add(AVVISO, 'F08', i, "URL di TMDB scritto nel canale: la richiesta passa da Tmdb.get_json del core, "
+                                       "meglio usare get_season, get_list_episodes o set_infoLabels_itemlist")
+            else:
+                add(ERRORE, 'F08', i, "richiesta diretta all'API di TMDB nel canale: usa support.tmdb o core.tmdb "
+                                       "(cache, limite di richieste e nuovi tentativi gia gestiti)")
     for n in ast.walk(albero):
         if isinstance(n, (ast.Import, ast.ImportFrom)):
             nomi = [a.name for a in n.names] if isinstance(n, ast.Import) else [n.module or '']

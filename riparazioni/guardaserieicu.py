@@ -178,9 +178,6 @@ def _token_from_data(item, data):
     return token
 
 
-TMDB_API = 'https://api.themoviedb.org/3'
-TMDB_KEY = 'a1ab8b8669da03637a4b98fa39c39228'
-TMDB_LANG = 'it'
 
 TMDB_ID_CACHE = {}
 SEASON_TITLES = {}
@@ -194,11 +191,11 @@ def _tmdb_id_from_token(token):
         if token.startswith('tm'):
             tmdb_id = int(token[2:])
         else:
-            url = '%s/find/tt%s?api_key=%s&external_source=imdb_id&language=%s' % (
-                TMDB_API, token, TMDB_KEY, TMDB_LANG)
-            j = json.loads(httptools.downloadpage(url).data or '{}')
-            if j.get('tv_results'):
-                tmdb_id = j['tv_results'][0]['id']
+            # core tmdb: cache, limite di richieste e nuovi tentativi sono gia gestiti
+            from core import tmdb
+            trovato = tmdb.Tmdb(external_id='tt' + token, external_source='imdb_id',
+                                search_type='tv').get_id()
+            tmdb_id = int(trovato) if trovato else False
     except Exception:
         logger.error(traceback.format_exc())
     TMDB_ID_CACHE[token] = tmdb_id
@@ -212,9 +209,9 @@ def _season_titles(tmdb_id, s):
         return SEASON_TITLES[key]
     out = {}
     try:
-        url = '%s/tv/%d/season/%d?api_key=%s&language=%s' % (
-            TMDB_API, tmdb_id, s, TMDB_KEY, TMDB_LANG)
-        for ep in json.loads(httptools.downloadpage(url).data or '{}').get('episodes', []):
+        from core import tmdb
+        stagione = tmdb.Tmdb(id_Tmdb=str(tmdb_id), search_type='tv').get_season(s) or {}
+        for ep in stagione.get('episodes', []) or []:
             n, name = ep.get('episode_number'), (ep.get('name') or '').strip()
             if n is not None and name and not re.match(r'^(episodio|episode)\s*\d+$', name, re.I):
                 out[int(n)] = name
