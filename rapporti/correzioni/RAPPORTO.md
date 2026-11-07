@@ -26,10 +26,10 @@ Sito: https://guardaseriex.cyou
 Sito: https://tanti-film.ink
 - ROTTO: peliculas /film | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_film.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 31 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 32 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 24 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
 
 ## CORRETTO IN PARTE (1)
@@ -121,7 +121,7 @@ Sito: https://ilcorsaronero.link
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.rest
-- OK: peliculas /catalog/all | 15 risultati
+- OK: peliculas /catalog/all | 16 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
@@ -139,7 +139,7 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27329 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27363 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
@@ -235,7 +235,7 @@ Sito: https://1337x.to
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best
-- OK: peliculas /lastnews/ | 84 risultati
+- OK: peliculas /lastnews/ | 86 risultati
 - OK: peliculas /cinema/ | 96 risultati
 - OK: peliculas /sub-ita/ | 96 risultati
 - OK: peliculas /serie-tv/ | 96 risultati
@@ -284,7 +284,7 @@ Sito: https://eurostream.one
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 3531 risultati
+- OK: peliculas /index | 3449 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -349,7 +349,7 @@ Sito: https://streamingcommunityz.boo
 - OK: Archivio per nome | 60 titoli in props.titles
 - OK: Ricerca | 60 titoli in props.titles
 - OK: Generi | 20 titoli in props.genres
-- OK: serie di esempio /it/titles/66502-the-greatest | 1 stagioni, 8 episodi nella prima
+- OK: serie di esempio /it/titles/66521-campus-drivers | 1 stagioni, 6 episodi nella prima
 
 ### thepiratebay
 Sito: https://apibay.org

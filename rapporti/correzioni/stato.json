@@ -36,7 +36,7 @@
   "canale": "altadefinizione01",
   "stato": "OK",
   "dettagli": [
-   "OK: peliculas /lastnews/ | 84 risultati",
+   "OK: peliculas /lastnews/ | 86 risultati",
    "OK: peliculas /cinema/ | 96 risultati",
    "OK: peliculas /sub-ita/ | 96 risultati",
    "OK: peliculas /serie-tv/ | 96 risultati"
@@ -193,19 +193,19 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
-      "title": "Tulsa King",
-      "url": "https://cineblog001.party/cb01-streaming/27279-tulsa-king-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-11/tulsa-king_1732014592.jpg"
-     },
-     {
-      "title": "Helluva Boss",
-      "url": "https://cineblog001.party/cb01-streaming/27904-helluva-boss-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg"
+      "title": "Campus Drivers",
+      "url": "https://cineblog001.party/cb01-streaming/35454-campus-drivers-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg"
      },
      {
       "title": "A Story of Derry",
       "url": "https://cineblog001.party/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
+     },
+     {
+      "title": "Black Doves",
+      "url": "https://cineblog001.party/cb01-streaming/28300-black-doves-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
      }
     ],
     "perse": []
@@ -216,19 +216,19 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
-      "title": "Tulsa King",
-      "url": "https://cineblog001.party/cb01-streaming/27279-tulsa-king-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-11/tulsa-king_1732014592.jpg"
-     },
-     {
-      "title": "Helluva Boss",
-      "url": "https://cineblog001.party/cb01-streaming/27904-helluva-boss-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg"
+      "title": "Campus Drivers",
+      "url": "https://cineblog001.party/cb01-streaming/35454-campus-drivers-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg"
      },
      {
       "title": "A Story of Derry",
       "url": "https://cineblog001.party/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
+     },
+     {
+      "title": "Black Doves",
+      "url": "https://cineblog001.party/cb01-streaming/28300-black-doves-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
      }
     ],
     "perse": []
@@ -239,19 +239,19 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
-      "title": "Tulsa King",
-      "url": "https://cineblog001.party/cb01-streaming/27279-tulsa-king-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-11/tulsa-king_1732014592.jpg"
-     },
-     {
-      "title": "Helluva Boss",
-      "url": "https://cineblog001.party/cb01-streaming/27904-helluva-boss-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg"
+      "title": "Campus Drivers",
+      "url": "https://cineblog001.party/cb01-streaming/35454-campus-drivers-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg"
      },
      {
       "title": "A Story of Derry",
       "url": "https://cineblog001.party/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
+     },
+     {
+      "title": "Black Doves",
+      "url": "https://cineblog001.party/cb01-streaming/28300-black-doves-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
      }
     ],
     "perse": []
@@ -375,21 +375,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/le-bizzarre-avventure-di-jojo-steel-ball-run-ita.tblVT/U5YO0aT6lv",
-      "thumb": "https://img.animeworld.ac/locandine/tblVT.jpg",
-      "title": "Le Bizzarre Avventure di JoJo: Steel Ball Run",
-      "lang": "ITA"
-     },
-     {
-      "url": "/play/le-bizzarre-avventure-di-jojo-steel-ball-run.Wtwgu/xcjly07gmG",
-      "thumb": "https://img.animeworld.ac/locandine/Wtwgu.jpg",
-      "title": "Le Bizzarre Avventure di JoJo: Steel Ball Run",
+      "url": "/play/the-vermilion-mask.03dMB/cFFMS7DGAu",
+      "thumb": "https://img.animeworld.ac/locandine/03dMB.jpg",
+      "title": "The Vermilion Mask",
       "lang": null
      },
      {
-      "url": "/play/my-girlfriends-friend.JZBR4/Xi849eOeAs",
-      "thumb": "https://img.animeworld.ac/locandine/JZBR4.jpg",
-      "title": "My Girlfriend&#x27;s Friend",
+      "url": "/play/rilakkuma.UDw7r/vUIz8E52Ku",
+      "thumb": "https://img.animeworld.ac/locandine/UDw7r.png",
+      "title": "Rilakkuma",
+      "lang": null
+     },
+     {
+      "url": "/play/keroro-gunsou.qpFOr/wxm8wShnLJ",
+      "thumb": "https://img.animeworld.ac/locandine/qpFOr.png",
+      "title": "Keroro Gunsou☆",
       "lang": null
      }
     ],
@@ -404,21 +404,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/le-bizzarre-avventure-di-jojo-steel-ball-run-ita.tblVT/U5YO0aT6lv",
-      "thumb": "https://img.animeworld.ac/locandine/tblVT.jpg",
-      "title": "Le Bizzarre Avventure di JoJo: Steel Ball Run",
-      "lang": "ITA"
-     },
-     {
-      "url": "/play/le-bizzarre-avventure-di-jojo-steel-ball-run.Wtwgu/xcjly07gmG",
-      "thumb": "https://img.animeworld.ac/locandine/Wtwgu.jpg",
-      "title": "Le Bizzarre Avventure di JoJo: Steel Ball Run",
+      "url": "/play/the-vermilion-mask.03dMB/cFFMS7DGAu",
+      "thumb": "https://img.animeworld.ac/locandine/03dMB.jpg",
+      "title": "The Vermilion Mask",
       "lang": null
      },
      {
-      "url": "/play/my-girlfriends-friend.JZBR4/Xi849eOeAs",
-      "thumb": "https://img.animeworld.ac/locandine/JZBR4.jpg",
-      "title": "My Girlfriend&#x27;s Friend",
+      "url": "/play/rilakkuma.UDw7r/vUIz8E52Ku",
+      "thumb": "https://img.animeworld.ac/locandine/UDw7r.png",
+      "title": "Rilakkuma",
+      "lang": null
+     },
+     {
+      "url": "/play/keroro-gunsou.qpFOr/wxm8wShnLJ",
+      "thumb": "https://img.animeworld.ac/locandine/qpFOr.png",
+      "title": "Keroro Gunsou☆",
       "lang": null
      }
     ],
@@ -433,21 +433,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/le-bizzarre-avventure-di-jojo-steel-ball-run-ita.tblVT/U5YO0aT6lv",
-      "thumb": "https://img.animeworld.ac/locandine/tblVT.jpg",
-      "title": "Le Bizzarre Avventure di JoJo: Steel Ball Run",
-      "lang": "ITA"
-     },
-     {
-      "url": "/play/le-bizzarre-avventure-di-jojo-steel-ball-run.Wtwgu/xcjly07gmG",
-      "thumb": "https://img.animeworld.ac/locandine/Wtwgu.jpg",
-      "title": "Le Bizzarre Avventure di JoJo: Steel Ball Run",
+      "url": "/play/the-vermilion-mask.03dMB/cFFMS7DGAu",
+      "thumb": "https://img.animeworld.ac/locandine/03dMB.jpg",
+      "title": "The Vermilion Mask",
       "lang": null
      },
      {
-      "url": "/play/my-girlfriends-friend.JZBR4/Xi849eOeAs",
-      "thumb": "https://img.animeworld.ac/locandine/JZBR4.jpg",
-      "title": "My Girlfriend&#x27;s Friend",
+      "url": "/play/rilakkuma.UDw7r/vUIz8E52Ku",
+      "thumb": "https://img.animeworld.ac/locandine/UDw7r.png",
+      "title": "Rilakkuma",
+      "lang": null
+     },
+     {
+      "url": "/play/keroro-gunsou.qpFOr/wxm8wShnLJ",
+      "thumb": "https://img.animeworld.ac/locandine/qpFOr.png",
+      "title": "Keroro Gunsou☆",
       "lang": null
      }
     ],
@@ -462,21 +462,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/le-bizzarre-avventure-di-jojo-steel-ball-run-ita.tblVT/U5YO0aT6lv",
-      "thumb": "https://img.animeworld.ac/locandine/tblVT.jpg",
-      "title": "Le Bizzarre Avventure di JoJo: Steel Ball Run",
-      "lang": "ITA"
-     },
-     {
-      "url": "/play/le-bizzarre-avventure-di-jojo-steel-ball-run.Wtwgu/xcjly07gmG",
-      "thumb": "https://img.animeworld.ac/locandine/Wtwgu.jpg",
-      "title": "Le Bizzarre Avventure di JoJo: Steel Ball Run",
+      "url": "/play/the-vermilion-mask.03dMB/cFFMS7DGAu",
+      "thumb": "https://img.animeworld.ac/locandine/03dMB.jpg",
+      "title": "The Vermilion Mask",
       "lang": null
      },
      {
-      "url": "/play/my-girlfriends-friend.JZBR4/Xi849eOeAs",
-      "thumb": "https://img.animeworld.ac/locandine/JZBR4.jpg",
-      "title": "My Girlfriend&#x27;s Friend",
+      "url": "/play/rilakkuma.UDw7r/vUIz8E52Ku",
+      "thumb": "https://img.animeworld.ac/locandine/UDw7r.png",
+      "title": "Rilakkuma",
+      "lang": null
+     },
+     {
+      "url": "/play/keroro-gunsou.qpFOr/wxm8wShnLJ",
+      "thumb": "https://img.animeworld.ac/locandine/qpFOr.png",
+      "title": "Keroro Gunsou☆",
       "lang": null
      }
     ],
@@ -524,24 +524,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.art/animazione/663-south-park-3.html",
-      "thumb": "/uploads/immagini/tt0121955.webp",
-      "year": "1997",
-      "title": "South Park",
-      "lang": null
-     },
-     {
-      "url": "https://guardaseriex.art/animazione/5874-don-dracula-streaming.html",
-      "thumb": "/uploads/immagini/tt1196478.webp",
-      "year": "1982",
-      "title": "Don Dracula",
-      "lang": null
-     },
-     {
       "url": "https://guardaseriex.art/animazione/2048-i-griffin.html",
       "thumb": "/uploads/immagini/tt0182576.webp",
       "year": "1999",
       "title": "I Griffin",
+      "lang": null
+     },
+     {
+      "url": "https://guardaseriex.art/animazione/5878-puffin-rock-streaming.html",
+      "thumb": "/uploads/immagini/tt3590338.webp",
+      "year": "2015",
+      "title": "Puffin Rock",
+      "lang": null
+     },
+     {
+      "url": "https://guardaseriex.art/animazione/5879-bass-x-machina-streaming.html",
+      "thumb": "/uploads/immagini/tt39957390.webp",
+      "year": "2026",
+      "title": "Bass X Machina",
       "lang": null
      }
     ],
@@ -588,24 +588,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.art/commedia/5820-estranei-streaming.html",
-      "thumb": "/uploads/immagini/tt37539393.webp",
+      "url": "https://guardaseriex.art/dramma/5877-l-ultimo-piatto-streaming.html",
+      "thumb": "/uploads/immagini/tt49692512.webp",
       "year": "2026",
-      "title": "Estranei",
+      "title": "L&#039;ultimo piatto",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.art/animazione/5874-don-dracula-streaming.html",
-      "thumb": "/uploads/immagini/tt1196478.webp",
-      "year": "1982",
-      "title": "Don Dracula",
+      "url": "https://guardaseriex.art/commedia/5791-the-other-bennet-sister-orgoglio-e-riscatto-streaming.html",
+      "thumb": "/uploads/immagini/tt37022512.webp",
+      "year": "2026",
+      "title": "The Other Bennet Sister",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.art/avventura/5829-l-isola-del-tesoro-streaming.html",
-      "thumb": "/uploads/immagini/tt40385667.webp",
-      "year": "2026",
-      "title": "L&#039;isola Del Tesoro",
+      "url": "https://guardaseriex.art/animazione/2048-i-griffin.html",
+      "thumb": "/uploads/immagini/tt0182576.webp",
+      "year": "1999",
+      "title": "I Griffin",
       "lang": null
      }
     ],
@@ -645,24 +645,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.art/commedia/5820-estranei-streaming.html",
-      "thumb": "/uploads/immagini/tt37539393.webp",
+      "url": "https://guardaseriex.art/dramma/5877-l-ultimo-piatto-streaming.html",
+      "thumb": "/uploads/immagini/tt49692512.webp",
       "year": "2026",
-      "title": "Estranei",
+      "title": "L&#039;ultimo piatto",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.art/animazione/5874-don-dracula-streaming.html",
-      "thumb": "/uploads/immagini/tt1196478.webp",
-      "year": "1982",
-      "title": "Don Dracula",
+      "url": "https://guardaseriex.art/commedia/5791-the-other-bennet-sister-orgoglio-e-riscatto-streaming.html",
+      "thumb": "/uploads/immagini/tt37022512.webp",
+      "year": "2026",
+      "title": "The Other Bennet Sister",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.art/avventura/5829-l-isola-del-tesoro-streaming.html",
-      "thumb": "/uploads/immagini/tt40385667.webp",
-      "year": "2026",
-      "title": "L&#039;isola Del Tesoro",
+      "url": "https://guardaseriex.art/animazione/2048-i-griffin.html",
+      "thumb": "/uploads/immagini/tt0182576.webp",
+      "year": "1999",
+      "title": "I Griffin",
       "lang": null
      }
     ],
@@ -683,7 +683,7 @@
   "stato": "OK",
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /index | 3531 risultati"
+   "OK: peliculas /index | 3449 risultati"
   ],
   "correzione": false,
   "host": "https://hd4me.net"
@@ -721,7 +721,7 @@
   "canale": "ilgeniodellostreaming_cam",
   "stato": "ROTTO",
   "dettagli": [
-   "OK: peliculas /catalog/all | 15 risultati",
+   "OK: peliculas /catalog/all | 16 risultati",
    "ROTTO: peliculas /serie-tv/ | patron non trova titoli",
    "  campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html",
    "  regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating",
@@ -736,23 +736,23 @@
     "patron": "<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<h3[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?",
     "esempi": [
      {
-      "url": "https://il-geniodellostreaming.rest/film/35437-l-imperatrice-risposata-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt39325975.jpg",
-      "title": "L’imperatrice risposata",
+      "url": "https://il-geniodellostreaming.rest/film/35458-awkwafina-una-chef-improbabile-streaming.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt38992068.jpg",
+      "title": "Awkwafina: Una chef improbabile",
       "lang": null,
       "year": "2026"
      },
      {
-      "url": "https://il-geniodellostreaming.rest/film/35423-anestesia-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt38681812.jpg",
-      "title": "Anestesia",
+      "url": "https://il-geniodellostreaming.rest/film/35454-campus-drivers-streaming.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg",
+      "title": "Campus Drivers",
       "lang": null,
       "year": "2026"
      },
      {
-      "url": "https://il-geniodellostreaming.rest/film/35424-taken-il-caso-natalee-holloway-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt43681696.jpg",
-      "title": "Taken: il caso Natalee Holloway",
+      "url": "https://il-geniodellostreaming.rest/film/35370-dead-end-job-streaming.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg",
+      "title": "Dead-End Job",
       "lang": null,
       "year": "2026"
      }
@@ -909,7 +909,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27329 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27363 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -926,7 +926,7 @@
    "OK: Archivio per nome | 60 titoli in props.titles",
    "OK: Ricerca | 60 titoli in props.titles",
    "OK: Generi | 20 titoli in props.genres",
-   "OK: serie di esempio /it/titles/66502-the-greatest | 1 stagioni, 8 episodi nella prima"
+   "OK: serie di esempio /it/titles/66521-campus-drivers | 1 stagioni, 6 episodi nella prima"
   ],
   "correzione": false,
   "host": "https://streamingcommunityz.boo"
@@ -956,10 +956,10 @@
   "dettagli": [
    "ROTTO: peliculas /film | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_film.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 31 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 32 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 24 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli"
   ],
   "correzione": true,
