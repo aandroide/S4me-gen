@@ -5,24 +5,15 @@ Canale tantifilm | indirizzo https://tanti-film.ink
       peliculas | • Film | https://tanti-film.ink/film
       peliculas | • Serie TV | https://tanti-film.ink/serie-tv/
       search | txt70741 … | https://tanti-film.ink
-== lista "Generi"
-   -> 40 voci
-      peliculas | Animazione | https://tanti-film.ink/animazione/
-      peliculas | Avventura | https://tanti-film.ink/avventura/
-      peliculas | Biografico | https://tanti-film.ink/biografico/
-      peliculas | Commedia | https://tanti-film.ink/commedia/
-== peliculas su "Prossimamente"
+== lista "• Serie TV"
    -> 26 voci
-      check | Blue Film  | https://tanti-film.ink/guarda/35456-blue-streaming-streaming-hd.html
-      check | Ice Cream Man  | https://tanti-film.ink/guarda/35450-ice-cream-man-streaming-streaming-hd.html
-      check | Possible Love  | https://tanti-film.ink/guarda/35448-possible-love-streaming-streaming-hd.html
-      check | Super Troopers 3  | https://tanti-film.ink/guarda/35447-super-troopers-3-streaming-streaming-hd.html
-== check su "Blue Film "
-   -> 2 voci
-      play | Blue Film  | https://v.vidxgo.co/34915693
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.ink/guarda/35456-blue-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/34915693
-   -> VIDEO OK m3u8 200 
+      check | Può solo andar peggio  | https://tanti-film.ink/guarda/35468-puo-solo-andar-peggio-streaming-streaming-hd.html
+      check | Awkwafina: Una chef improbabile  | https://tanti-film.ink/guarda/35458-awkwafina-una-chef-improbabile-streaming-streaming-hd.html
+      check | Campus Drivers  | https://tanti-film.ink/guarda/35454-campus-drivers-streaming-streaming-hd.html
+      check | Dead-End Job  | https://tanti-film.ink/guarda/35370-dead-end-job-streaming-streaming-hd.html
+== check su "Può solo andar peggio "
+   -> 0 voci
+Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
@@ -36,4 +27,4 @@ Canale tantifilm | indirizzo https://tanti-film.ink
    SEZIONE • Serie TV -> OK 25 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 4 ok su 4
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA A: check su "Può solo andar peggio "

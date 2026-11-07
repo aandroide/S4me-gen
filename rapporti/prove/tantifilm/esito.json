@@ -8,30 +8,17 @@
    "voci": 5
   },
   {
-   "passo": "lista \"Generi\"",
-   "esito": "OK",
-   "voci": 40
-  },
-  {
-   "passo": "peliculas su \"Prossimamente\"",
+   "passo": "lista \"• Serie TV\"",
    "esito": "OK",
    "voci": 26
   },
   {
-   "passo": "check su \"Blue Film \"",
-   "esito": "OK",
-   "voci": 2
+   "passo": "check su \"Può solo andar peggio \"",
+   "esito": "VUOTO",
+   "voci": 0
   }
  ],
- "video": [
-  {
-   "server": "vidxgo",
-   "url": "https://v.vidxgo.co/34915693",
-   "finale": "http://127.0.0.1:42281/hls/34915693/master.m3u8",
-   "esito": "VIDEO OK",
-   "dettaglio": "m3u8 200"
-  }
- ],
+ "video": [],
  "menu_dichiarato": [
   "top | ('Generi', ['', 'genres'])",
   "film | '/film'",
@@ -86,93 +73,85 @@
  "sezioni_riepilogo": "4 ok su 4",
  "rete": [
   {
+   "url": "https://tanti-film.ink/serie-tv/",
+   "status": 200,
+   "byte": 71163,
+   "secondi": 0.6,
+   "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://tanti-film.ink/guarda/35468-puo-solo-andar-peggio-streaming-streaming-hd.html",
+   "status": 200,
+   "byte": 26990,
+   "secondi": 0.2,
+   "titolo_pagina": "Può solo andar peggio Streaming - Serie TV - TantiFILM",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://tanti-film.ink/guarda/35468-puo-solo-andar-peggio-streaming-streaming-hd.html",
+   "status": 200,
+   "byte": 26990,
+   "secondi": 0.2,
+   "titolo_pagina": "Può solo andar peggio Streaming - Serie TV - TantiFILM",
+   "file": "pagine/03.html"
+  },
+  {
    "url": "https://tanti-film.ink",
    "status": 200,
    "byte": 16337,
    "secondi": 0.5,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
-   "file": "pagine/01.html"
-  },
-  {
-   "url": "https://tanti-film.ink/prossimamente/",
-   "status": 200,
-   "byte": 70374,
-   "secondi": 0.3,
-   "titolo_pagina": "Prossimamente al Cinema",
-   "file": "pagine/02.html"
-  },
-  {
-   "url": "https://tanti-film.ink/guarda/35456-blue-streaming-streaming-hd.html",
-   "status": 200,
-   "byte": 26717,
-   "secondi": 0.2,
-   "titolo_pagina": "Blue Film (2026) streaming | TantiFILM",
-   "file": "pagine/03.html"
-  },
-  {
-   "url": "https://tanti-film.ink/guarda/35456-blue-streaming-streaming-hd.html",
-   "status": 200,
-   "byte": 26717,
-   "secondi": 0.2,
-   "titolo_pagina": "Blue Film (2026) streaming | TantiFILM",
    "file": "pagine/04.html"
-  },
-  {
-   "url": "https://tanti-film.ink",
-   "status": 200,
-   "byte": 16337,
-   "secondi": 0.4,
-   "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
-   "file": "pagine/05.html"
   },
   {
    "url": "https://tanti-film.ink/animazione/",
    "status": 200,
-   "byte": 71288,
+   "byte": 70882,
    "secondi": 0.2,
    "titolo_pagina": "Animazione guarda Gratis | TantiFILM",
-   "file": "pagine/06.html"
+   "file": "pagine/05.html"
   },
   {
    "url": "https://tanti-film.ink/avventura/",
    "status": 200,
-   "byte": 70705,
+   "byte": 70600,
    "secondi": 0.2,
    "titolo_pagina": "Avventura guarda Gratis | TantiFILM",
-   "file": "pagine/07.html"
+   "file": "pagine/06.html"
   },
   {
    "url": "https://tanti-film.ink/biografico/",
    "status": 200,
-   "byte": 68695,
+   "byte": 69105,
    "secondi": 0.2,
    "titolo_pagina": "Biografico guarda Gratis | TantiFILM",
-   "file": "pagine/08.html"
+   "file": "pagine/07.html"
   },
   {
    "url": "https://tanti-film.ink/film",
    "status": 200,
-   "byte": 88160,
+   "byte": 88428,
    "secondi": 0.4,
    "titolo_pagina": "Guarda Tanti Film Streaming in Italiano | TantiFILM Gratis",
-   "file": "pagine/09.html"
+   "file": "pagine/08.html"
   },
   {
    "url": "https://tanti-film.ink/serie-tv/",
    "status": 200,
-   "byte": 69371,
+   "byte": 71163,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM",
-   "file": "pagine/10.html"
+   "file": "pagine/09.html"
   },
   {
    "url": "https://tanti-film.ink/?story=avatar&do=search&subaction=search",
    "status": 200,
    "byte": 56695,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Site search &raquo; TantiFilm (2026) - Guarda Film Streaming con Tanti film",
-   "file": "pagine/11.html"
+   "file": "pagine/10.html"
   }
  ],
- "verdetto": "ARRIVA AL VIDEO"
+ "verdetto": "SI FERMA A: check su \"Può solo andar peggio \""
 }
