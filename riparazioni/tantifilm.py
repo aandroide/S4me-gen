@@ -67,7 +67,8 @@ def peliculas(item):
     else:
         patronNext = r'<b class="nextpostslink">.*?<a href="([^"]+)">'
         if 'serie-tv' in item.url:
-            patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \(-?(?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate">\s*<p>\s*)(?P<quality>.*?)(?:</span>|\s*</p>)'
+            # solo schede con se_num (stagioni): le schede con calitate sono film e restano fuori dal menu serie
+            patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>[^"]*?) \(-?(?P<year>\d{4})[^"]+"(?:(?!mediaWrap).)*?<img[^s]+src="(?P<thumb>[^"]+)"(?:(?!mediaWrap).)*?class="se_num">(?P<quality>.*?)</span>'
         else:
             patron = r'<div class="mediaWrap mediaWrapAlt"> <a href="(?P<url>[^"]+)" title="(?P<title>.*?) \(-?(?P<year>\d{4})[^"]+".*?<img[^s]+src="(?P<thumb>[^"]+)".*?(?:class="se_num">|class="calitate"> <p> )(?P<quality>.*?)(?:</span>| </p>)'
         patronBlock = r'<div id="main_col">(?P<block>.*?)<!-- main_col -->'
@@ -111,8 +112,12 @@ def episodios(item):
             e = ep.get('episode_number')
             nome = ep.get('name') or ''
             titolo = '%sx%02d' % (s, e) + (' - ' + nome if nome else '')
+            info = dict(getattr(item, 'infoLabels', None) or {})
+            info.update({'mediatype': 'episode', 'season': s, 'episode': e, 'title': nome or titolo,
+                         'tvshowtitle': info.get('tvshowtitle') or getattr(item, 'fulltitle', '') or getattr(item, 'contentSerieName', '') or '',
+                         'plot': ep.get('overview') or info.get('plot', ''), 'aired': ep.get('air_date') or ''})
             itemlist.append(item.clone(action='findvideos', title=titolo, contentType='episode', contentSeason=s,
-                                       contentEpisodeNumber=e, season=s, episode=e,
+                                       contentEpisodeNumber=e, season=s, episode=e, infoLabels=info,
                                        plot=ep.get('overview') or item.plot,
                                        url='https://v.vidxgo.co/%s/%s/%s' % (imdb, s, e), data=""))
     support.check_trakt(itemlist)
