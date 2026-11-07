@@ -14,11 +14,24 @@
   },
   {
    "passo": "check su \"Può solo andar peggio \"",
-   "esito": "VUOTO",
-   "voci": 0
+   "esito": "OK",
+   "voci": 7
+  },
+  {
+   "passo": "findvideos su \"1x01 - Episodio 1\"",
+   "esito": "OK",
+   "voci": 1
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/35926686/1/1",
+   "finale": "http://127.0.0.1:33527/hls/tv/35926686/1/1/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
  "menu_dichiarato": [
   "top | ('Generi', ['', 'genres'])",
   "film | '/film'",
@@ -55,7 +68,7 @@
    "voce": "• Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 32
+   "titoli": 35
   },
   {
    "voce": "• Serie TV",
@@ -84,25 +97,81 @@
    "url": "https://tanti-film.ink/guarda/35468-puo-solo-andar-peggio-streaming-streaming-hd.html",
    "status": 200,
    "byte": 26990,
-   "secondi": 0.2,
+   "secondi": 0.5,
    "titolo_pagina": "Può solo andar peggio Streaming - Serie TV - TantiFILM",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://tanti-film.ink/guarda/35468-puo-solo-andar-peggio-streaming-streaming-hd.html",
+   "url": "https://api.themoviedb.org/3/genre/tv/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 26990,
-   "secondi": 0.2,
-   "titolo_pagina": "Può solo andar peggio Streaming - Serie TV - TantiFILM",
+   "byte": 495,
+   "secondi": 0.1,
+   "titolo_pagina": "",
    "file": "pagine/03.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/find/tt35926686?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 492,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/334470/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "status": 200,
+   "byte": 76,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/334470?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
+   "status": 200,
+   "byte": 6685,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/334470/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "status": 200,
+   "byte": 76,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/334470?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 1816,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/334470/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 2355,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/334470/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
+   "status": 200,
+   "byte": 4956,
+   "secondi": 0.1,
+   "titolo_pagina": "",
+   "file": "pagine/10.html"
   },
   {
    "url": "https://tanti-film.ink",
    "status": 200,
    "byte": 16337,
-   "secondi": 0.5,
+   "secondi": 0.2,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
-   "file": "pagine/04.html"
+   "file": "pagine/11.html"
   },
   {
    "url": "https://tanti-film.ink/animazione/",
@@ -110,7 +179,7 @@
    "byte": 70882,
    "secondi": 0.2,
    "titolo_pagina": "Animazione guarda Gratis | TantiFILM",
-   "file": "pagine/05.html"
+   "file": "pagine/12.html"
   },
   {
    "url": "https://tanti-film.ink/avventura/",
@@ -118,7 +187,7 @@
    "byte": 70600,
    "secondi": 0.2,
    "titolo_pagina": "Avventura guarda Gratis | TantiFILM",
-   "file": "pagine/06.html"
+   "file": "pagine/13.html"
   },
   {
    "url": "https://tanti-film.ink/biografico/",
@@ -126,7 +195,7 @@
    "byte": 69105,
    "secondi": 0.2,
    "titolo_pagina": "Biografico guarda Gratis | TantiFILM",
-   "file": "pagine/07.html"
+   "file": "pagine/14.html"
   },
   {
    "url": "https://tanti-film.ink/film",
@@ -134,24 +203,22 @@
    "byte": 88428,
    "secondi": 0.4,
    "titolo_pagina": "Guarda Tanti Film Streaming in Italiano | TantiFILM Gratis",
-   "file": "pagine/08.html"
+   "file": "pagine/15.html"
   },
   {
    "url": "https://tanti-film.ink/serie-tv/",
    "status": 200,
    "byte": 71163,
    "secondi": 0.2,
-   "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM",
-   "file": "pagine/09.html"
+   "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM"
   },
   {
    "url": "https://tanti-film.ink/?story=avatar&do=search&subaction=search",
    "status": 200,
    "byte": 56695,
-   "secondi": 0.3,
-   "titolo_pagina": "Site search &raquo; TantiFilm (2026) - Guarda Film Streaming con Tanti film",
-   "file": "pagine/10.html"
+   "secondi": 0.2,
+   "titolo_pagina": "Site search &raquo; TantiFilm (2026) - Guarda Film Streaming con Tanti film"
   }
  ],
- "verdetto": "SI FERMA A: check su \"Può solo andar peggio \""
+ "verdetto": "ARRIVA AL VIDEO"
 }
