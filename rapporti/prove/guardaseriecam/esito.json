@@ -27,7 +27,7 @@
   {
    "server": "vidxgo",
    "url": "https://v.vidxgo.co/49692512/1/1",
-   "finale": "http://127.0.0.1:33023/hls/tv/49692512/1/1/master.m3u8",
+   "finale": "http://127.0.0.1:39913/hls/tv/49692512/1/1/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -89,7 +89,7 @@
    "url": "https://guardaseriex.art/serietv-streaming",
    "status": 200,
    "byte": 99831,
-   "secondi": 0.7,
+   "secondi": 0.5,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
@@ -97,49 +97,73 @@
    "url": "https://guardaseriex.art/dramma/5877-l-ultimo-piatto-streaming.html",
    "status": 200,
    "byte": 63449,
-   "secondi": 0.5,
+   "secondi": 0.2,
    "titolo_pagina": "L'ultimo piatto streaming - Guardaserie",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt49692512?api_key=a1ab8b8669da03637a4b98fa39c39228&external_source=imdb_id&language=it",
+   "url": "https://api.themoviedb.org/3/genre/tv/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 882,
-   "secondi": 0.1,
+   "byte": 495,
+   "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/03.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/find/tt49692512?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 882,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/316702/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "status": 200,
+   "byte": 291,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/316702?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
+   "status": 200,
+   "byte": 10589,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/316702/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "status": 200,
+   "byte": 291,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
   },
   {
    "url": "https://api.themoviedb.org/3/tv/316702?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
    "byte": 2584,
-   "secondi": 0.1,
+   "secondi": 0.0,
    "titolo_pagina": "",
-   "file": "pagine/04.html"
+   "file": "pagine/08.html"
   },
   {
    "url": "https://api.themoviedb.org/3/tv/316702/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
    "byte": 4211,
-   "secondi": 0.1,
+   "secondi": 0.0,
    "titolo_pagina": "",
-   "file": "pagine/05.html"
+   "file": "pagine/09.html"
   },
   {
-   "url": "https://guardaseriex.art/serietv-streaming",
+   "url": "https://api.themoviedb.org/3/tv/316702/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
    "status": 200,
-   "byte": 99831,
-   "secondi": 0.4,
-   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
-   "file": "pagine/06.html"
-  },
-  {
-   "url": "https://guardaseriex.art/serietv-popolari/",
-   "status": 200,
-   "byte": 405111,
-   "secondi": 0.9,
-   "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
-   "file": "pagine/07.html"
+   "byte": 7786,
+   "secondi": 0.0,
+   "titolo_pagina": "",
+   "file": "pagine/10.html"
   },
   {
    "url": "https://guardaseriex.art/serietv-streaming",
@@ -147,15 +171,31 @@
    "byte": 99831,
    "secondi": 0.3,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
-   "file": "pagine/08.html"
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://guardaseriex.art/serietv-popolari/",
+   "status": 200,
+   "byte": 405111,
+   "secondi": 0.5,
+   "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://guardaseriex.art/serietv-streaming",
+   "status": 200,
+   "byte": 99831,
+   "secondi": 0.3,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
+   "file": "pagine/13.html"
   },
   {
    "url": "https://guardaseriex.art/biografico/",
    "status": 200,
    "byte": 221393,
-   "secondi": 0.6,
+   "secondi": 0.2,
    "titolo_pagina": "Biografico streaming | Guardaserie",
-   "file": "pagine/09.html"
+   "file": "pagine/14.html"
   },
   {
    "url": "https://guardaseriex.art/commedia/",
@@ -163,23 +203,21 @@
    "byte": 2267985,
    "secondi": 0.5,
    "titolo_pagina": "Commedia streaming | Guardaserie",
-   "file": "pagine/10.html"
+   "file": "pagine/15.html"
   },
   {
    "url": "https://guardaseriex.art/crime/",
    "status": 200,
    "byte": 1263295,
-   "secondi": 0.6,
-   "titolo_pagina": "Crime streaming | Guardaserie",
-   "file": "pagine/11.html"
+   "secondi": 0.4,
+   "titolo_pagina": "Crime streaming | Guardaserie"
   },
   {
    "url": "https://guardaseriex.art/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
    "byte": 38172,
-   "secondi": 0.7,
-   "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS",
-   "file": "pagine/12.html"
+   "secondi": 0.2,
+   "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS"
   }
  ],
  "verdetto": "ARRIVA AL VIDEO"

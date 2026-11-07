@@ -5,7 +5,7 @@
   {
    "passo": "mainlist",
    "esito": "OK",
-   "voci": 9
+   "voci": 10
   },
   {
    "passo": "lista \"Tutti \"",
@@ -15,10 +15,17 @@
   {
    "passo": "check su \"Blue Film \"",
    "esito": "OK",
-   "voci": 2
+   "voci": 3
   }
  ],
  "video": [
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/34915693",
+   "finale": "http://127.0.0.1:34135/hls/34915693/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  },
   {
    "server": "vixsrc",
    "url": "https://vixsrc.to/movie/tt34915693",
@@ -33,6 +40,7 @@
   "menu | ('Ultimi Aggiornati-Aggiunti {submenu}', ['', 'peliculas', 'update'])",
   "menu | ('Generi {submenu}', ['', 'genres', 'genres', 'undefined'])",
   "menu | ('Lettera {submenu}', ['/catalog/a', 'genres', 'orderalf', 'undefined'])",
+  "menu | ('Anni {submenu}', ['', 'genres', 'years', 'undefined'])",
   "menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])",
   "menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])"
  ],
@@ -108,6 +116,73 @@
    ]
   },
   {
+   "voce": "•• Anni",
+   "azione": "genres",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 76,
+   "figli": [
+    {
+     "voce": "2026",
+     "azione": "peliculas",
+     "esito": "VUOTA",
+     "pagine": [
+      {
+       "url": "https://altadefinizione-01.best/find/2026/",
+       "status": 404,
+       "byte": 764,
+       "titolo_pagina": "404 | Not Found"
+      }
+     ]
+    },
+    {
+     "voce": "2025",
+     "azione": "peliculas",
+     "esito": "VUOTA",
+     "pagine": [
+      {
+       "url": "https://altadefinizione-01.best/find/2025/",
+       "status": 404,
+       "byte": 764,
+       "titolo_pagina": "404 | Not Found"
+      }
+     ]
+    },
+    {
+     "voce": "2024",
+     "azione": "peliculas",
+     "esito": "VUOTA",
+     "pagine": [
+      {
+       "url": "https://altadefinizione-01.best/find/2024/",
+       "status": 404,
+       "byte": 764,
+       "titolo_pagina": "404 | Not Found"
+      }
+     ]
+    }
+   ],
+   "pagine": [
+    {
+     "url": "https://altadefinizione-01.best",
+     "status": 200,
+     "byte": 181111,
+     "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
+    },
+    {
+     "url": "https://altadefinizione-01.best/find/2026/",
+     "status": 404,
+     "byte": 764,
+     "titolo_pagina": "404 | Not Found"
+    },
+    {
+     "url": "https://altadefinizione-01.best/find/2025/",
+     "status": 404,
+     "byte": 764,
+     "titolo_pagina": "404 | Not Found"
+    }
+   ]
+  },
+  {
    "voce": "•• Sub-ITA",
    "azione": "peliculas",
    "esito": "OK",
@@ -126,13 +201,13 @@
    "titoli": 6
   }
  ],
- "sezioni_riepilogo": "8 ok su 8",
+ "sezioni_riepilogo": "8 ok su 9",
  "rete": [
   {
    "url": "https://altadefinizione-01.best/lastnews/",
    "status": 200,
    "byte": 132853,
-   "secondi": 0.7,
+   "secondi": 0.3,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/01.html"
   },
@@ -140,7 +215,7 @@
    "url": "https://altadefinizione-01.best/35456-blue-streaming.html",
    "status": 200,
    "byte": 90348,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "Blue Film Streaming HD - Altadefinizione01",
    "file": "pagine/02.html"
   },
@@ -148,7 +223,7 @@
    "url": "https://vixsrc.to/api/movie/tt34915693",
    "status": 404,
    "byte": 6953,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Not Found",
    "file": "pagine/03.html"
   },
@@ -156,7 +231,7 @@
    "url": "https://vixsrc.to/movie/tt34915693",
    "status": 200,
    "byte": 7862,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "VixSrc",
    "file": "pagine/04.html"
   },
@@ -164,7 +239,7 @@
    "url": "https://altadefinizione-01.best/lastnews/",
    "status": 200,
    "byte": 132853,
-   "secondi": 0.5,
+   "secondi": 0.2,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/05.html"
   },
@@ -172,7 +247,7 @@
    "url": "https://altadefinizione-01.best/cinema/",
    "status": 200,
    "byte": 156433,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Al Cinema – Altadefinizione01",
    "file": "pagine/06.html"
   },
@@ -180,7 +255,7 @@
    "url": "https://altadefinizione-01.best",
    "status": 200,
    "byte": 181111,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/07.html"
   },
@@ -188,7 +263,7 @@
    "url": "https://altadefinizione-01.best",
    "status": 200,
    "byte": 181111,
-   "secondi": 0.3,
+   "secondi": 0.4,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/08.html"
   },
@@ -204,7 +279,7 @@
    "url": "https://altadefinizione-01.best/animazione/",
    "status": 200,
    "byte": 157864,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Animazione – Altadefinizione01",
    "file": "pagine/10.html"
   },
@@ -220,7 +295,7 @@
    "url": "https://altadefinizione-01.best/catalog/a",
    "status": 200,
    "byte": 107801,
-   "secondi": 0.5,
+   "secondi": 0.2,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/12.html"
   },
@@ -228,7 +303,7 @@
    "url": "https://altadefinizione-01.best/catalog/9",
    "status": 200,
    "byte": 106864,
-   "secondi": 0.6,
+   "secondi": 0.3,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/13.html"
   },
@@ -236,7 +311,7 @@
    "url": "https://altadefinizione-01.best/catalog/A",
    "status": 200,
    "byte": 107801,
-   "secondi": 0.5,
+   "secondi": 0.3,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/14.html"
   },
@@ -249,26 +324,54 @@
    "file": "pagine/15.html"
   },
   {
+   "url": "https://altadefinizione-01.best",
+   "status": 200,
+   "byte": 181111,
+   "secondi": 0.3,
+   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
+  },
+  {
+   "url": "https://altadefinizione-01.best/find/2026/",
+   "status": 404,
+   "byte": 764,
+   "secondi": 0.2,
+   "titolo_pagina": "404 | Not Found"
+  },
+  {
+   "url": "https://altadefinizione-01.best/find/2025/",
+   "status": 404,
+   "byte": 764,
+   "secondi": 0.2,
+   "titolo_pagina": "404 | Not Found"
+  },
+  {
+   "url": "https://altadefinizione-01.best/find/2024/",
+   "status": 404,
+   "byte": 764,
+   "secondi": 0.2,
+   "titolo_pagina": "404 | Not Found"
+  },
+  {
    "url": "https://altadefinizione-01.best/sub-ita/",
    "status": 200,
    "byte": 156077,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "Sub-ITA &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   },
   {
    "url": "https://altadefinizione-01.best/serie-tv/",
    "status": 200,
    "byte": 154602,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Serie TV in Streaming Gratis - Altadefinizione01"
   },
   {
    "url": "https://altadefinizione-01.best/?do=search&subaction=search&titleonly=3&story=avatar",
    "status": 200,
    "byte": 92941,
-   "secondi": 0.7,
+   "secondi": 0.6,
    "titolo_pagina": "Site search &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
+ "verdetto": "ARRIVA AL VIDEO"
 }
