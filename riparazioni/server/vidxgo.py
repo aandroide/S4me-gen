@@ -1601,8 +1601,8 @@ def _get_video_url_impl(page_url, gen):
                 # 403 o 404 sulla pagina del lettore: il titolo non e ancora caricato su vidxgo
                 if re.search(r'returned (403|404|410)', str(e)):
                     try:
-                        import xbmcgui
-                        xbmcgui.Dialog().notification('vidxgo', 'Contenuto non disponibile su vidxgo', xbmcgui.NOTIFICATION_INFO, 5000)
+                        from platformcode import platformtools
+                        platformtools.dialog_notification('vidxgo', 'Contenuto non disponibile su vidxgo')
                     except Exception:
                         pass
 
