@@ -67,7 +67,7 @@ support = types.SimpleNamespace(
 logger = types.SimpleNamespace(error=lambda *a: None, info=lambda *a: None, debug=lambda *a: None)
 
 albero = ast.parse(open(CANALE, encoding='utf-8').read())
-fn = [n for n in albero.body if isinstance(n, ast.FunctionDef) and n.name in ('episodios', 'findvideos')]
+fn = [n for n in albero.body if isinstance(n, ast.FunctionDef) and n.name in ('_imdb', 'episodios', 'findvideos')]
 ns = {'support': support, 'logger': logger, 're': re, 'headers': [], 'player_iframe': r'<iframe.*?src="([^"]+)"'}
 exec(compile(ast.Module(body=fn, type_ignores=[]), 'tantifilm', 'exec'), ns)
 
@@ -89,6 +89,11 @@ if any(getattr(i, 'server', '') for i in lista):
 res = ns['findvideos'](lista[0])
 if not res or res[0].server != 'vidxgo':
     fallite.append('findvideos su episodio: %s' % res)
+
+# film senza script imdb: il codice sta solo nel nome della locandina
+film = '<html><img src="/uploads/thumb/203x293-0-70/2026-11/tt37803364.jpg"><p>Drammatico</p></html>'
+if ns['_imdb'](film) != '37803364':
+    fallite.append('imdb dalla locandina non letto')
 
 # senza imdb nella pagina non ci sono episodi e non va in errore
 if ns['episodios'](Item(data='<html></html>', url='u')) != []:

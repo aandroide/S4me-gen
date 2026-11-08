@@ -82,6 +82,18 @@ def _elenco(item):
 
     return locals()
 
+def _imdb(data):
+    """Codice IMDb della scheda (senza tt): dallo script, dal nome della locandina o da un tt qualsiasi nella pagina."""
+    for patron in (r"""var\s+imdb\s*=\s*['"]tt(\d+)""",
+                   r"""uploads/[^"' ]*?tt(\d{6,9})\.""",
+                   r"""imdb[^"'<>\n]{0,40}['"/=:]\s*tt(\d{6,9})""",
+                   r"""\btt(\d{7,9})\b"""):
+        m = support.match(data, patron=patron).match
+        if m:
+            return m
+    return ''
+
+
 def peliculas(item):
     lista = _elenco(item)
     if 'serie-tv' in (item.url or '') and item.args != 'search':
@@ -95,9 +107,7 @@ def episodios(item):
     # Stagioni ed episodi si leggono da TMDB (core: cache, limite di richieste e nuovi tentativi gia gestiti)
     from core import tmdb
     data = getattr(item, 'data', '') or support.match(item.url, headers=headers).data
-    imdb = support.match(data, patron=r"""var\s+imdb\s*=\s*['"]tt(\d+)""").match
-    if not imdb:
-        imdb = support.match(data, patron=r"/uploads/[^\"' ]*?/tt(\d{6,9})\.").match
+    imdb = _imdb(data)
     if not imdb:
         return []
     try:
@@ -161,9 +171,7 @@ def findvideos(item):
     data = support.match(item.url).data
     itemlist = []
     # il lettore del sito e vidxgo: l'indirizzo si costruisce con l'id IMDb (o TMDB) scritto nello script
-    imdb = support.match(data, patron=r"""var\s+imdb\s*=\s*['"]tt(\d+)""").match
-    if not imdb:
-        imdb = support.match(data, patron=r"/uploads/[^\"' ]*?/tt(\d{6,9})\.").match
+    imdb = _imdb(data)
     if imdb:
         chiave = imdb
     else:
