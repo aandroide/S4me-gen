@@ -1,0 +1,774 @@
+{
+ "url": "https://tanti-film.ink/serie-tv/",
+ "finale": "https://tanti-film.ink/serie-tv/",
+ "frames": [
+  {
+   "url": "https://tanti-film.ink/serie-tv/",
+   "name": ""
+  }
+ ],
+ "rete": [
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/css/style.css?v=14",
+   "status": 200,
+   "tipo": "stylesheet",
+   "ct": "text/css"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/css/common.css?v=2",
+   "status": 200,
+   "tipo": "stylesheet",
+   "ct": "text/css"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/css/responsive.css?v=4",
+   "status": 200,
+   "tipo": "stylesheet",
+   "ct": "text/css"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/css/engine.css?v=2",
+   "status": 200,
+   "tipo": "stylesheet",
+   "ct": "text/css"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/css/jquery.bxslider.css",
+   "status": 200,
+   "tipo": "stylesheet",
+   "ct": "text/css"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/css/reset.css",
+   "status": 200,
+   "tipo": "stylesheet",
+   "ct": "text/css"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/css/basic.css?3",
+   "status": 200,
+   "tipo": "stylesheet",
+   "ct": "text/css"
+  },
+  {
+   "url": "https://tanti-film.ink/public/js/jquery.js?v=5a54e",
+   "status": 200,
+   "tipo": "script",
+   "ct": "application/javascript",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/serie-tv/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "accept-language": "it-IT",
+    "sec-ch-ua-mobile": "?0"
+   },
+   "intestazioni_risposta": {
+    "content-encoding": "gzip",
+    "cf-cache-status": "HIT",
+    "etag": "W/\"6a3d948d-14e4a\"",
+    "age": "35899",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Dn8J93wXjR3DXXzsUm5kumALTBkJ75pFQ54F34EL8ra%2FD%2FigFMhVeXLudLhw6Y6aNEt9%2F3Qz4o30s%2FVglWvl1lcxCYn3tcPB9s09iEMVS%2FmKDdtbWFAgZJ8Jc%2B8mvMZUYw%3D%3D\"}]}",
+    "expires": "Sun, 08 Nov 2026 01:37:42 GMT",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "date": "Sun, 08 Nov 2026 00:11:17 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Thu, 25 Jun 2026 20:50:21 GMT",
+    "vary": "Accept-Encoding",
+    "x-cache-status": "HIT",
+    "cache-control": "max-age=43200",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-ray": "a5705c0acee0e8fd-DFW",
+    "server": "cloudflare"
+   }
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt37803364.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/serie-tv/",
+   "status": 200,
+   "tipo": "document",
+   "ct": "text/html; charset=utf-8",
+   "intestazioni_richiesta": {
+    "accept-language": "it-IT",
+    "upgrade-insecure-requests": "1",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+   },
+   "intestazioni_risposta": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-store, no-cache, must-revalidate",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5705c5c3e792cd6-DFW",
+    "content-encoding": "zstd",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sun, 08 Nov 2026 00:11:30 GMT",
+    "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+    "last-modified": "Sun, 08 Nov 2026 06:03:21 +0300 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "pragma": "no-cache",
+    "priority": "u=0,i",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=saqMcv%2BcYIZop0IznqzpDAcwdVbYNMD%2F5qbIlmgiQj737pARl52HyBMXU5S2tUejOHJbbSwcwpCEWkVB5XLRbFAiGC%2Bp9YFWxyFWBDRbq%2FwODbGsjIO8ey1Y1INrAZ4XYg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "server-timing": "cfCacheStatus;desc=\"DYNAMIC\"\ncfEdge;dur=6,cfOrigin;dur=120\ncfExtPri",
+    "vary": "Accept-Encoding",
+    "x-cache-status": "STALE\nHIT"
+   },
+   "corpo": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"it-IT\">\n<head>\n<title>Serie TV in Streaming Gratis - TantiFILM</title>\n<meta charset=\"utf-8\">\n<meta name=\"description\" content=\"Jo e Raissa, amiche fin dall’infanzia, dopo essersi diplomate sono ormai pronte a intraprendere strade diverse nella vita. Durante la loro ultima notte insieme, le due ragazze si imbattono in un misterioso portale che le trasporta sull’isola fantastica di Nakali, un luogo popolato da creature\">\n<meta name=\"keywords\" content=\"Raissa, Nakali, creature, sempre, dovranno, amiche, dall’infanzia, essersi, diplomate, ormai, pronte, intraprendere, strade, diverse, nella, Durante, ultima, notte, insieme, ragazze\">\n<meta name=\"generator\" content=\"DataLife Engine (https://dle-news.ru)\">\n<link rel=\"canonical\" href=\"https://tanti-film.ink/serie-tv/\">\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Serie TV &raquo; TantiFilm (2026) - Guarda Film Streaming con Tanti film RSS Dzen\" href=\"https://tanti-film.ink/serie-tv/rssdzen.xml\">\n<link rel=\"preconnect\" href=\"https://tanti-film.ink/\" fetchpriority=\"high\">\n<meta property=\"twitter:card\" content=\"summary\">\n<meta property=\"twitter:title\" content=\"Serie TV in Streaming Gratis - TantiFILM\">\n<meta property=\"twitter:description\" content=\"Jo e Raissa, amiche fin dall’infanzia, dopo essersi diplomate sono ormai pronte a intraprendere strade diverse nella vita. Durante la loro ultima notte insieme, le due ragazze si imbattono in un misterioso portale che le trasporta sull’isola fantastica di Nakali, un luogo popolato da creature\">\n<meta property=\"og:type\" content=\"article\">\n<meta property=\"og:site_name\" content=\"TantiFilm (2026) - Guarda Film Streaming con Tanti film\">\n<meta property=\"og:title\" content=\"Serie TV in Streaming Gratis - TantiFILM\">\n<meta property=\"og:description\" content=\"Jo e Raissa, amiche fin dall’infanzia, dopo essersi diplomate sono ormai pronte a intraprendere strade diverse nella vita. Durante la loro ultima notte insieme, le due ragazze si imbattono in un misterioso portale che le trasporta sull’isola fantastica di Nakali, un luogo popolato da creature\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" />\n<link rel=\"shortcut icon\" href=\"/templates/tantifilm/images/favicon.ico\"/>\n<link rel=\"stylesheet\" href=\"/templates/tantifilm/css/style.css?v=14\" type=\"text/css\" media=\"all\" />\n<link rel=\"stylesheet\" href=\"/templates/tantifilm/css/common.css?v=2\" type=\"text/css\"/>\n<link rel=\"stylesheet\" href=\"/templates/tantifilm/css/responsive.css?v=4\" type=\"text/css\"/>\n<link rel=\"stylesheet\" href=\"/templates/tantifilm/css/engine.css?v=2\" type=\"text/css\"/>\n<link rel=\"stylesheet\" href=\"/templates/tantifilm/css/jquery.bxslider.css\"/>\n<meta name=\"google-site-verification\" content=\"lPE5khL9h4jijkWn2xYwP25M0dNb1o1rLWi0UkV_Es0\" />\n<meta name=\"google-site-verification\" content=\"EDNG7nRMMGXbKNXZPVI5_C1Y8nl5LTqSA5DzdxcDyUY\" />\n<meta name=\"google-site-verification\" content=\"fod4YMNmCz73WzfRhtNzido4Dgh6Kisv3603LfA64eg\" />\n<meta name=\"google-site-verification\" content=\"vl8WTea1cDZJpoPkosjKDni6WVNp0QQePjCsfHIL2LA\" />\n<meta name=\"google-site-verification\" content=\"AcwgJJYqxQoZTMpiNCUMVe0thQPRXcfJY5mUnKAUk9Y\" />\n<meta name=\"google-site-verification\" content=\"va0IEAMLX4zuHfAEOhv4SP-Z8wlDlI4zf3FmJ3FZVzA\" />\n<meta name=\"google-site-verification\" content=\"C9uDwwGR7bonc_zcShGFJqS3flqutHHuEqxvwtMmH9w\" />\n<meta name=\"google-site-verification\" content=\"aJjKERU24iW4D3EPzA99TGdtm-Cd-995ivVYvt0LfTw\" />\n<meta name=\"google-site-verification\" content=\"3vrDG03pCQUasUeBQugF1aiDxKjXZhgZ8jslxbbIzr0\" />\n<meta name=\"google-site-verification\" content=\"fAc7M5xj9umH-IYlYaMQ3YGW5XBqBwVXCPXBFfRDa0I\" />\n<meta name=\"google-site-verification\" content=\"I-Roy8r7ptr65CAfw3PVWQl7Z1O0FQYSVsf8Z1j7nCA\" />\n<meta name=\"google-site-verification\" content=\"rK1n8oYC-SYze8vVHCOtd_6EU2S_XBIgPWplz1O55gU\" />\n<meta name=\"google-site-verification\" content=\"AVnfd_L6iQunrx0xEs4ZAOHmg66BGDwlL3-m7-zeyj8\" />\n<meta name=\"google-site-verification\" content=\"GJABqbMgoyJMTyGFMPd2AeoRWjLGzNXNF9TP4pxKWDA\" />\n<meta name=\"google-site-verification\" content=\"IMy9tFsutEPyK4mwlTdeK4CxKKrLYWeL9yuTbRZHTtY\" />\n<meta name=\"google-site-verification\" content=\"a5pZxZy_3b3Axmzrtp26PsqHnW6JjNRV4p6B84YT_CQ\" />\n\n<script src=\"/public/js/jquery.js?v=5a54e\"></script>\n<script src=\"/public/js/jqueryui.js?v=5a54e\" defer></script>\n<script src=\"/public/js/dle_js.js?v=5a54e\" defer></script>\n<script>(function(s){s.dataset.zone='11683186',s.src='https://llvpn.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>\n</head>\n<body class=\"page-template-default page\">\n<div id=\"pg_wrap\">\n  <div id=\"header\" class=\"clearfix noprint\">\n    <div class=\"container clearfix\">\n      <div class=\"logo\"><a href=\"/\" title=\"tantifilm - film streaming\" rel=\"home\"></a></div>\n      <nav id=\"ddmenu\">\n        <button id=\"menue-icon\" class=\"menu-icon\" data-toggle=\"collapse\" data-target=\"#menu\">MENU</button>\n        <div class=\"collapse menu-collapse\" id=\"menu\">\n        <div class=\"main_navi clearfix\">\n          <div class=\"menu-main-menu-container\">\n            <ul id=\"menu-main-menu\" class=\"menu\">\n              <li ><a href=\"/\">Home</a></li>\n              <li ><a href=\"/film/\">Film</a></li>\n              <li><a href=\"/serie-tv/\">Serie tv</a></li>\n            </ul>\n          </div>\n        </div>\n        </div>\n      </nav>\n    </div>\n    <!-- container -->\n  </div>\n  <!-- header-->\n  <div class=\"bottom-header\">\n    <div class=\"wrap\">\n      <div class=\"shearch\">\n        <form id=\"searchform\" class=\"clearfix\" action=\"\" name=\"searchform\" method=\"get\">\n          <input type=\"text\" value=\"\" id=\"story\" name=\"story\" class=\"text\" placeholder=\"Cerca qualsiasi film!\" />\n          <input type=\"submit\" id=\"searchsubmit\" value=\"Cerca\"/>\n          <input type=\"hidden\" name=\"do\" value=\"search\" />\n          <input type=\"hidden\" name=\"subaction\" value=\"search\" />\n        </form>\n      </div>\n    </div>\n  </div>\n  \n  <div id=\"featuredArea\" class=\"clearfix\">\n  <div class=\"wrap\"> \n    <script type=\"text/javascript\" src=\"/templates/tantifilm/js/swiper.min.js\"></script>\n    <link rel=\"stylesheet\" href=\"/templates/tantifilm/css/swiper.css?v=2\" type=\"text/css\" media=\"all\" />\n    <div class=\"swiper-container\">\n      <div class=\"swiper-wrapper\">\n        \n        <div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/35454-campus-drivers-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg\" alt=\"Campus Drivers (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/35370-dead-end-job-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg\" alt=\"Dead-End Job (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/35383-a-story-of-derry-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg\" alt=\"A Story of Derry (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/28300-black-doves-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg\" alt=\"Black Doves (2024 - In Lavorazione) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/27279-tulsa-king-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2024-11/tulsa-king_1732014592.jpg\" alt=\"Tulsa King (2022 - In Lavorazione) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/27904-helluva-boss-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg\" alt=\"Helluva Boss (2020) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/35343-drive-cuori-in-pista-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-10/tt37180686.jpg\" alt=\"Drive - Cuori in pista (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/35174-visionquest-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-10/tt23112594.jpg\" alt=\"VisionQuest (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/27037-the-terminal-list-2022-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2024-11/the-terminal-list-2022_1732014451.jpg\" alt=\"The Terminal List (2022) (2022 - In Lavorazione) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/33473-insidious-fuori-dall-altrove-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-08/tt32393988.jpg\" alt=\"Insidious - Fuori dall’Altrove (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/35134-nord-sud-ovest-est-la-leggendaria-storia-degli-883-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-10/tt42026819.jpg\" alt=\"Nord Sud Ovest Est: La leggendaria storia degli 883 (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/35110-carrie-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-10/tt11540908.jpg\" alt=\"Carrie (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/33122-marshals-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-03/marshals-streaming_1772500141.jpg\" alt=\"Marshals (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/30123-mobland-hd-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2025-05/1747208111_mobland-streaming-ita.jpg\" alt=\"MobLand (2025 - In Lavorazione) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/34833-neagley-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-09/tt33539520.jpg\" alt=\"Neagley (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/34858-the-love-hypothesis-il-teorema-dell-amore-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-09/tt22526100.jpg\" alt=\"The Love Hypothesis: Il teorema dell&#039;amore (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/34813-minerva-la-scuola-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-09/tt28765828.jpg\" alt=\"Minerva - La scuola (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/34912-physical-italia-da-100-a-1-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-09/tt37694172.jpg\" alt=\"Physical Italia - da 100 a 1 (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/34917-crew-girl-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-09/tt38218082.jpg\" alt=\"Crew Girl (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/34862-io-te-soli-contro-tutti-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-09/tt43617372.jpg\" alt=\"Io+Te - Soli contro tutti (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/34807-marfil-gli-opposti-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-09/tt36073210.jpg\" alt=\"Marfil - gli opposti (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/34786-coyote-vs-acme-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-08/tt1756855.jpg\" alt=\"Coyote vs. Acme (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/27730-the-gentlemen-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2024-11/the-gentlemen_1732014715.jpg\" alt=\"The Gentlemen (2024 - In Lavorazione) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/34610-lanterns-streaming-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2026-08/tt26545992.jpg\" alt=\"Lanterns (2026) streaming\" />\n    </center>\n    </a> </div>\n</div>\n<div class=\"swiper-slide\">\n  <div class=\"newslide\"><a href=\"https://tanti-film.ink/guarda/27795-dark-matter-streaming-hd.html\">\n    <center>\n      <img src=\"/uploads/thumb/203x293-0-70/2024-11/dark-matter_1732014718.jpg\" alt=\"Dark Matter (2024 - In Lavorazione) streaming\" />\n    </center>\n    </a> </div>\n</div>\n\n        \n        \n        \n      </div>\n      <div class=\"swiper-navigation\">\n        <div class=\"swiper-pages\"></div>\n      </div>\n    </div>\n    <script>\n    var swiper = new Swiper('.swiper-container', {\n      slidesPerView: 5,\n      spaceBetween: 12,\n\t\t\tslidesPerGroup: 5,\n      pagination: {\n        el: '.swiper-pages',\n        clickable: true,\n      },\n      breakpoints: {\n        700: {\n          slidesPerView: 4,\n\t\t\t\t\tslidesPerGroup: 4\n        },\n\t\t\t\t460: {\n          slidesPerView: 3,\n\t\t\t\t\tslidesPerGroup: 3\n        }\n      }\n    });\n  </script> \n  </div>\n</div>\n\n  \n  <div id=\"floatswrap\" class=\"smallftfl clearfix\" >\n    <div class=\"container clearfix\">\n      \n      \n      <div class=\"sidebar page_sidebar noprint\">\n  <div class=\"padding\">\n    <div id=\"wpwm_genres_widget-3\" class=\"widget widget_wpwm_genres_widget\">\n      <div class=\"widgetPadding clearfix\">\n        <ul id=\"cat_mob\">\n          <li><a href=\"https://tanti-film.ink/serie-tv/\">Serie TV</a></li><li><a href=\"https://tanti-film.ink/animazione/\">Animazione</a></li><li><a href=\"https://tanti-film.ink/avventura/\">Avventura</a></li><li><a href=\"https://tanti-film.ink/biografico/\">Biografico</a></li><li><a href=\"https://tanti-film.ink/commedia/\">Commedia</a></li><li><a href=\"https://tanti-film.ink/crime/\">Crime</a></li><li><a href=\"https://tanti-film.ink/documentario/\">Documentario</a></li><li><a href=\"https://tanti-film.ink/drammatico/\">Drammatico</a></li><li><a href=\"https://tanti-film.ink/erotico/\">Erotico</a></li><li><a href=\"https://tanti-film.ink/famiglia/\">Famiglia</a></li><li><a href=\"https://tanti-film.ink/fantascienza/\">Fantascienza</a></li><li><a href=\"https://tanti-film.ink/fantasy/\">Fantasy</a></li><li><a href=\"https://tanti-film.ink/fantastico/\">Fantastico</a></li><li><a href=\"https://tanti-film.ink/intrattenimento/\">Intrattenimento</a></li><li><a href=\"https://tanti-film.ink/giallo/\">Giallo</a></li><li><a href=\"https://tanti-film.ink/guerra/\">Guerra</a></li><li><a href=\"https://tanti-film.ink/azione/\">Azione</a></li><li><a href=\"https://tanti-film.ink/horror/\">Horror</a></li><li><a href=\"https://tanti-film.ink/musical/\">Musical</a></li><li><a href=\"https://tanti-film.ink/mistero/\">Mistero</a></li><li><a href=\"https://tanti-film.ink/miniserie-tv/\">Miniserie-tv</a></li><li><a href=\"https://tanti-film.ink/poliziesco/\">Poliziesco</a></li><li><a href=\"https://tanti-film.ink/musicale/\">Musicale</a></li><li><a href=\"https://tanti-film.ink/romantico/\">Romantico</a></li><li><a href=\"https://tanti-film.ink/reality/\">Reality</a></li><li><a href=\"https://tanti-film.ink/sitcom/\">Sitcom</a></li><li><a href=\"https://tanti-film.ink/storico-streaming/\">Storico</a></li><li><a href=\"https://tanti-film.ink/soap-opera/\">Soap opera</a></li><li><a href=\"https://tanti-film.ink/spionaggio/\">Spionaggio</a></li><li><a href=\"https://tanti-film.ink/sentimentale/\">Sentimentale</a></li><li><a href=\"https://tanti-film.ink/sportivo/\">Sportivo</a></li><li><a href=\"https://tanti-film.ink/talk-show/\">Talk Show</a></li><li><a href=\"https://tanti-film.ink/thriller/\">Thriller</a></li><li><a href=\"https://tanti-film.ink/tv-show/\">Tv Show</a></li><li><a href=\"https://tanti-film.ink/talent-show/\">Talent Show</a></li><li><a href=\"https://tanti-film.ink/western/\">Western</a></li><li><a href=\"https://tanti-film.ink/cinema/\">Cinema</a></li><li><a href=\"https://tanti-film.ink/film-natalizi-streaming/\">Film Natalizi</a></li><li><a href=\"https://tanti-film.ink/sub-ita/\">Sub-ITA</a></li><li><a href=\"https://tanti-film.ink/netflix-streaming/\">Netflix</a></li><li><a href=\"https://tanti-film.ink/prossimamente/\">Prossimamente</a></li> \n        </ul>\n        <div id=\"sel_cat\">\n          <select class=\"select_join\" onchange=\"location.href = this.value\" size=\"1\" name=\"linkIole2\">\n            <option  value=\"#\">Categorie Film</option>\n            \n<option  value='https://tanti-film.ink/serie-tv/'><a href='https://tanti-film.ink/serie-tv/'>Serie TV</a></option><option  value='https://tanti-film.ink/animazione/'><a href='https://tanti-film.ink/animazione/'>Animazione</a></option><option  value='https://tanti-film.ink/avventura/'><a href='https://tanti-film.ink/avventura/'>Avventura</a></option><option  value='https://tanti-film.ink/biografico/'><a href='https://tanti-film.ink/biografico/'>Biografico</a></option><option  value='https://tanti-film.ink/commedia/'><a href='https://tanti-film.ink/commedia/'>Commedia</a></option><option  value='https://tanti-film.ink/crime/'><a href='https://tanti-film.ink/crime/'>Crime</a></option><option  value='https://tanti-film.ink/documentario/'><a href='https://tanti-film.ink/documentario/'>Documentario</a></option><option  value='https://tanti-film.ink/drammatico/'><a href='https://tanti-film.ink/drammatico/'>Drammatico</a></option><option  value='https://tanti-film.ink/erotico/'><a href='https://tanti-film.ink/erotico/'>Erotico</a></option><option  value='https://tanti-film.ink/famiglia/'><a href='https://tanti-film.ink/famiglia/'>Famiglia</a></option><option  value='https://tanti-film.ink/fantascienza/'><a href='https://tanti-film.ink/fantascienza/'>Fantascienza</a></option><option  value='https://tanti-film.ink/fantasy/'><a href='https://tanti-film.ink/fantasy/'>Fantasy</a></option><option  value='https://tanti-film.ink/fantastico/'><a href='https://tanti-film.ink/fantastico/'>Fantastico</a></option><option  value='https://tanti-film.ink/intrattenimento/'><a href='https://tanti-film.ink/intrattenimento/'>Intrattenimento</a></option><option  value='https://tanti-film.ink/giallo/'><a href='https://tanti-film.ink/giallo/'>Giallo</a></option><option  value='https://tanti-film.ink/guerra/'><a href='https://tanti-film.ink/guerra/'>Guerra</a></option><option  value='https://tanti-film.ink/azione/'><a href='https://tanti-film.ink/azione/'>Azione</a></option><option  value='https://tanti-film.ink/horror/'><a href='https://tanti-film.ink/horror/'>Horror</a></option><option  value='https://tanti-film.ink/musical/'><a href='https://tanti-film.ink/musical/'>Musical</a></option><option  value='https://tanti-film.ink/mistero/'><a href='https://tanti-film.ink/mistero/'>Mistero</a></option><option  value='https://tanti-film.ink/miniserie-tv/'><a href='https://tanti-film.ink/miniserie-tv/'>Miniserie-tv</a></option><option  value='https://tanti-film.ink/poliziesco/'><a href='https://tanti-film.ink/poliziesco/'>Poliziesco</a></option><option  value='https://tanti-film.ink/musicale/'><a href='https://tanti-film.ink/musicale/'>Musicale</a></option><option  value='https://tanti-film.ink/romantico/'><a href='https://tanti-film.ink/romantico/'>Romantico</a></option><option  value='https://tanti-film.ink/reality/'><a href='https://tanti-film.ink/reality/'>Reality</a></option><option  value='https://tanti-film.ink/sitcom/'><a href='https://tanti-film.ink/sitcom/'>Sitcom</a></option><option  value='https://tanti-film.ink/storico-streaming/'><a href='https://tanti-film.ink/storico-streaming/'>Storico</a></option><option  value='https://tanti-film.ink/soap-opera/'><a href='https://tanti-film.ink/soap-opera/'>Soap opera</a></option><option  value='https://tanti-film.ink/spionaggio/'><a href='https://tanti-film.ink/spionaggio/'>Spionaggio</a></option><option  value='https://tanti-film.ink/sentimentale/'><a href='https://tanti-film.ink/sentimentale/'>Sentimentale</a></option><option  value='https://tanti-film.ink/sportivo/'><a href='https://tanti-film.ink/sportivo/'>Sportivo</a></option><option  value='https://tanti-film.ink/talk-show/'><a href='https://tanti-film.ink/talk-show/'>Talk Show</a></option><option  value='https://tanti-film.ink/thriller/'><a href='https://tanti-film.ink/thriller/'>Thriller</a></option><option  value='https://tanti-film.ink/tv-show/'><a href='https://tanti-film.ink/tv-show/'>Tv Show</a></option><option  value='https://tanti-film.ink/talent-show/'><a href='https://tanti-film.ink/talent-show/'>Talent Show</a></option><option  value='https://tanti-film.ink/western/'><a href='https://tanti-film.ink/western/'>Western</a></option><option  value='https://tanti-film.ink/cinema/'><a href='https://tanti-film.ink/cinema/'>Cinema</a></option><option  value='https://tanti-film.ink/film-natalizi-streaming/'><a href='https://tanti-film.ink/film-natalizi-streaming/'>Film Natalizi</a></option><option  value='https://tanti-film.ink/sub-ita/'><a href='https://tanti-film.ink/sub-ita/'>Sub-ITA</a></option><option  value='https://tanti-film.ink/netflix-streaming/'><a href='https://tanti-film.ink/netflix-streaming/'>Netflix</a></option><option  value='https://tanti-film.ink/prossimamente/'><a href='https://tanti-film.ink/prossimamente/'>Prossimamente</a></option> \n          </select>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- padding -->\n</div>\n<!-- page_sidebar -->\n<div id=\"main_col\">\n\n  <div class=\"title-film-left\">\n        <h2 class=\"page-title\">Ultimi Aggiornati su tantifilm</h2>\n  </div>\n  <div class=\"top_movies\">\n    \n    \n    <div class=\"mediaPanesAlt media3\" id=\"post-35468\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35468-puo-solo-andar-peggio-streaming-streaming-hd.html\" title=\"Può solo andar peggio (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt35926686.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35468-puo-solo-andar-peggio-streaming-streaming-hd.html\" title=\"Può solo andar peggio (2026) streaming\" rel=\"bookmark\">\n      <p>Può solo andar peggio (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35468'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35468'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35468'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35468'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35468'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35468'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35458\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35458-awkwafina-una-chef-improbabile-streaming-streaming-hd.html\" title=\"Awkwafina: Una chef improbabile (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt38992068.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35458-awkwafina-una-chef-improbabile-streaming-streaming-hd.html\" title=\"Awkwafina: Una chef improbabile (2026) streaming\" rel=\"bookmark\">\n      <p>Awkwafina: Una chef improbabile (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35458'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35458'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35458'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35458'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35458'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35458'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35454\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35454-campus-drivers-streaming-streaming-hd.html\" title=\"Campus Drivers (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35454-campus-drivers-streaming-streaming-hd.html\" title=\"Campus Drivers (2026) streaming\" rel=\"bookmark\">\n      <p>Campus Drivers (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35454'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35454'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35454'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35454'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35454'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35454'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35370\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35370-dead-end-job-streaming-streaming-hd.html\" title=\"Dead-End Job (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35370-dead-end-job-streaming-streaming-hd.html\" title=\"Dead-End Job (2026) streaming\" rel=\"bookmark\">\n      <p>Dead-End Job (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35370'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35370'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35370'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35370'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35370'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35370'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35455\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35455-melania-rea-streaming-streaming-hd.html\" title=\"Melania Rea (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt45114341.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35455-melania-rea-streaming-streaming-hd.html\" title=\"Melania Rea (2026) streaming\" rel=\"bookmark\">\n      <p>Melania Rea (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35455'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35455'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35455'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35455'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35455'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35455'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n\n    \n\t</div>\n  <div style=\"clear:both\">\n\n  </div>\n\n\n  \n  <h1 class=\"page-title\">{page_title}</h1>\n  <br>\n  <div class=\"mediaPanesAlt media3\" id=\"post-35469\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35469-l-isola-dei-ricordi-streaming-streaming-hd.html\" title=\"L&#039;isola dei ricordi (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-09/tt36583977.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35469-l-isola-dei-ricordi-streaming-streaming-hd.html\" title=\"L&#039;isola dei ricordi (2026) streaming\" rel=\"bookmark\">\n      <p>L&#039;isola dei ricordi (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35469'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35469'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35469'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35469'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35469'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35469'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35468\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35468-puo-solo-andar-peggio-streaming-streaming-hd.html\" title=\"Può solo andar peggio (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt35926686.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35468-puo-solo-andar-peggio-streaming-streaming-hd.html\" title=\"Può solo andar peggio (2026) streaming\" rel=\"bookmark\">\n      <p>Può solo andar peggio (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35468'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35468'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35468'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35468'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35468'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35468'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35458\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35458-awkwafina-una-chef-improbabile-streaming-streaming-hd.html\" title=\"Awkwafina: Una chef improbabile (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt38992068.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35458-awkwafina-una-chef-improbabile-streaming-streaming-hd.html\" title=\"Awkwafina: Una chef improbabile (2026) streaming\" rel=\"bookmark\">\n      <p>Awkwafina: Una chef improbabile (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35458'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35458'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35458'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35458'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35458'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35458'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35456\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35456-blue-streaming-streaming-hd.html\" title=\"Blue Film (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt34915693.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35456-blue-streaming-streaming-hd.html\" title=\"Blue Film (2026) streaming\" rel=\"bookmark\">\n      <p>Blue Film (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35456'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35456'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35456'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35456'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35456'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35456'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35454\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35454-campus-drivers-streaming-streaming-hd.html\" title=\"Campus Drivers (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35454-campus-drivers-streaming-streaming-hd.html\" title=\"Campus Drivers (2026) streaming\" rel=\"bookmark\">\n      <p>Campus Drivers (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35454'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35454'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35454'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35454'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35454'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35454'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35370\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35370-dead-end-job-streaming-streaming-hd.html\" title=\"Dead-End Job (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35370-dead-end-job-streaming-streaming-hd.html\" title=\"Dead-End Job (2026) streaming\" rel=\"bookmark\">\n      <p>Dead-End Job (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35370'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35370'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35370'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35370'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35370'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35370'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35455\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35455-melania-rea-streaming-streaming-hd.html\" title=\"Melania Rea (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt45114341.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35455-melania-rea-streaming-streaming-hd.html\" title=\"Melania Rea (2026) streaming\" rel=\"bookmark\">\n      <p>Melania Rea (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35455'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35455'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35455'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35455'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35455'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35455'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35453\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35453-palacio-sotto-assedio-streaming-streaming-hd.html\" title=\"Palacio - Sotto assedio (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt37762350.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35453-palacio-sotto-assedio-streaming-streaming-hd.html\" title=\"Palacio - Sotto assedio (2026) streaming\" rel=\"bookmark\">\n      <p>Palacio - Sotto assedio (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35453'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35453'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35453'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35453'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35453'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35453'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35450\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35450-ice-cream-man-streaming-streaming-hd.html\" title=\"Ice Cream Man (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt36893729.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35450-ice-cream-man-streaming-streaming-hd.html\" title=\"Ice Cream Man (2026) streaming\" rel=\"bookmark\">\n      <p>Ice Cream Man (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35450'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35450'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35450'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35450'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35450'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35450'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35448\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35448-possible-love-streaming-streaming-hd.html\" title=\"Possible Love (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt37803364.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35448-possible-love-streaming-streaming-hd.html\" title=\"Possible Love (2026) streaming\" rel=\"bookmark\">\n      <p>Possible Love (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35448'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35448'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35448'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35448'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35448'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35448'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35447\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35447-super-troopers-3-streaming-streaming-hd.html\" title=\"Super Troopers 3 (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt8820258.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35447-super-troopers-3-streaming-streaming-hd.html\" title=\"Super Troopers 3 (2026) streaming\" rel=\"bookmark\">\n      <p>Super Troopers 3 (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35447'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:60%;\">60</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35447'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35447'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35447'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35447'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35447'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35444\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35444-one-year-to-live-buy-a-man-streaming-streaming-hd.html\" title=\"One Year to Live, Buy a Man (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt39400541.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35444-one-year-to-live-buy-a-man-streaming-streaming-hd.html\" title=\"One Year to Live, Buy a Man (2026) streaming\" rel=\"bookmark\">\n      <p>One Year to Live, Buy a Man (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35444'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35444'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35444'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35444'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35444'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35444'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35442\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35442-furto-di-lusso-la-banda-degli-orologi-rubati-streaming-streaming-hd.html\" title=\"Furto di lusso: la banda degli orologi rubati (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-01/furto-di-lusso-la-banda-degli-orologi-rubati.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35442-furto-di-lusso-la-banda-degli-orologi-rubati-streaming-streaming-hd.html\" title=\"Furto di lusso: la banda degli orologi rubati (2026) streaming\" rel=\"bookmark\">\n      <p>Furto di lusso: la banda degli orologi rubati (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35442'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35442'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35442'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35442'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35442'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35442'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35437\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35437-l-imperatrice-risposata-streaming-streaming-hd.html\" title=\"L’imperatrice risposata (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt39325975.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35437-l-imperatrice-risposata-streaming-streaming-hd.html\" title=\"L’imperatrice risposata (2026) streaming\" rel=\"bookmark\">\n      <p>L’imperatrice risposata (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35437'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35437'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35437'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35437'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35437'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35437'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35435\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35435-your-mother-your-mother-your-mother-streaming-streaming-hd.html\" title=\"Your Mother Your Mother Your Mother (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-09/tt35856037.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35435-your-mother-your-mother-your-mother-streaming-streaming-hd.html\" title=\"Your Mother Your Mother Your Mother (2026) streaming\" rel=\"bookmark\">\n      <p>Your Mother Your Mother Your Mother (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35435'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35435'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35435'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35435'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35435'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35435'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35433\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35433-the-mongoose-streaming-streaming-hd.html\" title=\"The Mongoose (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-10/tt13611778.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35433-the-mongoose-streaming-streaming-hd.html\" title=\"The Mongoose (2026) streaming\" rel=\"bookmark\">\n      <p>The Mongoose (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35433'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35433'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35433'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35433'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35433'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35433'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35421\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35421-un-cucciolo-per-natale-streaming-streaming-hd.html\" title=\"Un cucciolo per Natale (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt38515310.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35421-un-cucciolo-per-natale-streaming-streaming-hd.html\" title=\"Un cucciolo per Natale (2026) streaming\" rel=\"bookmark\">\n      <p>Un cucciolo per Natale (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35421'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35421'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35421'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35421'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35421'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35421'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35422\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35422-ninho-il-prezzo-della-fama-streaming-streaming-hd.html\" title=\"Ninho: il prezzo della fama (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-01/tt49895708.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35422-ninho-il-prezzo-della-fama-streaming-streaming-hd.html\" title=\"Ninho: il prezzo della fama (2026) streaming\" rel=\"bookmark\">\n      <p>Ninho: il prezzo della fama (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35422'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35422'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35422'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35422'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35422'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35422'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35423\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35423-anestesia-streaming-streaming-hd.html\" title=\"Anestesia (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt38681812.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35423-anestesia-streaming-streaming-hd.html\" title=\"Anestesia (2026) streaming\" rel=\"bookmark\">\n      <p>Anestesia (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35423'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35423'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35423'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35423'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35423'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35423'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"mediaPanesAlt media3\" id=\"post-35424\">\n  <div class=\"mediaWrap mediaWrapAlt\"> <a href=\"https://tanti-film.ink/guarda/35424-taken-il-caso-natalee-holloway-streaming-streaming-hd.html\" title=\"Taken: il caso Natalee Holloway (2026) streaming\" rel=\"bookmark\"> <img width=\"111\" height=\"164\" src=\"/uploads/thumb/203x293-0-70/2026-11/tt43681696.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"\" /> </a>\n    <div class=\"title-film\"> <a href=\"https://tanti-film.ink/guarda/35424-taken-il-caso-natalee-holloway-streaming-streaming-hd.html\" title=\"Taken: il caso Natalee Holloway (2026) streaming\" rel=\"bookmark\">\n      <p>Taken: il caso Natalee Holloway (2026) streaming</p>\n      </a> </div>\n    <div class=\"footnotes footnotesAlt clearfix\">\n      <div class=\"raiting\">\n        <div class=\"calitate\">\n          <p> HD </p>\n        </div>\n        <div class=\"star-rating\"> <div data-ratig-layer-id='35424'>\n\t<div class=\"rating\">\n\t\t<ul class=\"unit-rating\">\n\t\t<li class=\"current-rating\" style=\"width:0%;\">0</li>\n\t\t<li><a href=\"#\" title=\"Useless\" class=\"r1-unit\" onclick=\"doRate('1', '35424'); return false;\">1</a></li>\n\t\t<li><a href=\"#\" title=\"Poor\" class=\"r2-unit\" onclick=\"doRate('2', '35424'); return false;\">2</a></li>\n\t\t<li><a href=\"#\" title=\"Fair\" class=\"r3-unit\" onclick=\"doRate('3', '35424'); return false;\">3</a></li>\n\t\t<li><a href=\"#\" title=\"Good\" class=\"r4-unit\" onclick=\"doRate('4', '35424'); return false;\">4</a></li>\n\t\t<li><a href=\"#\" title=\"Excellent\" class=\"r5-unit\" onclick=\"doRate('5', '35424'); return false;\">5</a></li>\n\t\t</ul>\n\t</div>\n</div> </div>\n      </div>\n    </div>\n    <!-- footnotes -->\n  </div>\n  <!-- mediaWrap -->\n</div>\n<!-- mediaPanes -->\n<div class=\"wp-pagenavi\"><b class=\"previouspostslink\"><span>« Prima</span></b> <span>1</span> <a href=\"?story=true&do=search&subaction=search\">2</a> <a href=\"?story=true&do=search&subaction=search\">3</a> <span class=\"nav_ext\">...</span> <a href=\"\">1596</a> <b class=\"nextpostslink\"><a href=\"?story=true&do=search&subaction=search\">Ultima »</a></b> </div>\n\n  <div class=\"clearfix\"></div>\n  <br />\n</div>\n<!-- main_col -->\n\n      \n      \n    </div>\n    <!-- container -->\n  </div>\n  <!-- floatswrap-->\n</div>\n<!-- pg_wrap -->\n<div id=\"footer\" class=\"smallft clearfix noprint\">\n  <div class=\"footer-wrap\">\n    <div id=\"text-4\">\n      <div class=\"textwidget\">\n        <div class=\"left-f\"> <a href=\"/\"><img title=\"tantifilm - film streaming\" src=\"/templates/tantifilm/images/logo2.png\"></a>\n          <p>Guarda Film Streaming su Tantifilm</p>\n        </div>\n      </div>\n    </div>\n    <div class=\"center-f\">\n      <h3>Navigazione</h3>\n      <div id=\"nav_menu-2\">\n        <div class=\"menu-footer-menu-container\">\n          <ul id=\"menu-footer-menu\" class=\"menu\">\n            <li><a href=\"/\">Home</a></li>\n            <li><a href=\"/film/\">Film</a></li>\n            <li><a href=\"/serie-tv/\" >Serie TV</a></li>\n            <div style=\"display: none\"><li><a href=\"https://streaming-community.menu/\">StreamingCommunity</a></li>\n<li><a href=\"https://guardaseriex.art/\">Guardaserie</a></li>\n<li><a href=\"https://altadefinizione-01.best/\">Altadefinizione01</a></li>\n          </ul>\n        </div>\n      </div>\n      <div id=\"nav_menu-4\">\n        <div class=\"menu-footer-menu-1-container\">\n          <ul id=\"menu-footer-menu-1\" class=\"menu\">\n            <li><a href=\"#\">Contattaci</a></li>\n            <li><a href=\"#\">Supporto</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <div id=\"text-3\">\n      <div class=\"textwidget\">\n        <div class=\"right-f\">\n          <div class=\"social-f\"> <a href=\"#\">Facebook</a> <a href=\"#\">Twitter</a> </div>\n          <p> <a href=\"/\"> <span class=\"bb-b\">Film streaming su Tantifilm</span> </a> </p>\n          <p> </p>\n          <div class=\"bt\"></div>\n        </div>\n      </div>\n    </div>\n    <div class=\"bt\"></div>\n  </div>\n</div>\n<div style=\"display: none\"><!--LiveInternet counter--><a href=\"//www.liveinternet.ru/click\"\ntarget=\"_blank\"><img id=\"licnt92B7\" width=\"88\" height=\"31\" style=\"border:0\"\ntitle=\"LiveInternet: è indicato il numero di visioni è visitatori per 24 ore\"\nsrc=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7\"\nalt=\"\"/></a><script>(function(d,s){d.getElementById(\"licnt92B7\").src=\n\"//counter.yadro.ru/hit?t52.6;r\"+escape(d.referrer)+\n((typeof(s)==\"undefined\")?\"\":\";s\"+s.width+\"*\"+s.height+\"*\"+\n(s.colorDepth?s.colorDepth:s.pixelDepth))+\";u\"+escape(d.URL)+\n\";h\"+escape(d.title.substring(0,150))+\";\"+Math.random()})\n(document,screen)</script><!--/LiveInternet-->\n</div>\n<script>\n<!--\nvar dle_root       = '/';\nvar dle_admin      = '';\nvar dle_login_hash = 'ec311bdf0e3cfb2f46b7ada4e6f4668074974bf8';\nvar dle_group      = 5;\nvar dle_skin       = 'tantifilm';\nvar dle_wysiwyg    = 1;\nvar dle_pm_wysiwyg = 1;\nvar dle_min_search = '2';\nvar dle_act_lang   = [\"Yes\", \"Cancel\", \"Enter\", \"Cancel\", \"Save\", \"Delete\", \"Loading. Please, wait...\", \"Copy\", \"Copied!\"];\nvar menu_short     = 'Quick edit';\nvar menu_full      = 'Full edit';\nvar menu_profile   = 'View profile';\nvar menu_send      = 'Send message';\nvar menu_uedit     = 'Admin Center';\nvar dle_info       = 'Information';\nvar dle_confirm    = 'Confirm';\nvar dle_prompt     = 'Enter the information';\nvar dle_req_field  = [\"Fill the name field\", \"Fill the message field\", \"Fill the field with the subject of the message\"];\nvar dle_del_agree  = 'Are you sure you want to delete it? This action cannot be undone';\nvar dle_spam_agree = 'Are you sure you want to mark the user as a spammer? This will remove all his comments';\nvar dle_c_title    = 'Send a complaint';\nvar dle_complaint  = 'Enter the text of your complaint to the Administration:';\nvar dle_mail       = 'Your e-mail:';\nvar dle_big_text   = 'Highlighted section of text is too large.';\nvar dle_orfo_title = 'Enter a comment to the detected error on the page for Administration ';\nvar dle_p_send     = 'Send';\nvar dle_p_send_ok  = 'Notification has been sent successfully ';\nvar dle_save_ok    = 'Changes are saved successfully. Refresh the page?';\nvar dle_reply_title= 'Reply to the comment';\nvar dle_tree_comm  = '0';\nvar dle_del_news   = 'Delete article';\nvar dle_sub_agree  = 'Do you really want to subscribe to this article’s comments?';\nvar dle_unsub_agree  = 'Do you really want to unsubscribe from comments on this publication?';\nvar dle_captcha_type  = '0';\nvar dle_share_interesting  = [\"Share a link to the selected text\", \"Twitter\", \"Facebook\", \"Вконтакте\", \"Direct Link:\", \"Right-click and select «Copy Link»\"];\nvar DLEPlayerLang     = {prev: 'Previous',next: 'Next',play: 'Play',pause: 'Pause',mute: 'Mute', unmute: 'Unmute', settings: 'Settings', enterFullscreen: 'Enable full screen mode', exitFullscreen: 'Disable full screen mode', speed: 'Speed', normal: 'Normal', quality: 'Quality', pip: 'PiP mode'};\nvar DLEGalleryLang    = {CLOSE: 'Close (Esc)', NEXT: 'Next Image', PREV: 'Previous image', ERROR: 'Warning! An error was detected', IMAGE_ERROR: 'Failed to load image', TOGGLE_AUTOPLAY: 'Watch slideshow (space) ', TOGGLE_SLIDESHOW: 'Watch slideshow (space) ', TOGGLE_FULLSCREEN: 'Full-screen mode', TOGGLE_THUMBS: 'Turn on / Turn off thumbnails', TOGGLE_FULL: 'Increase / Reduce', ITERATEZOOM: 'Increase / Reduce', DOWNLOAD: 'Download image' };\nvar DLEGalleryMode    = 0;\nvar DLELazyMode       = 0;\nvar allow_dle_delete_news   = false;\n\n//-->\n</script>\n<script type=\"text/javascript\" src=\"/templates/tantifilm/js/jquery.bxslider.min.js\"></script>\n<script type=\"text/javascript\" src=\"/templates/tantifilm/js/bbspoiler.js\"></script>\n<script type=\"text/javascript\" src=\"/templates/tantifilm/js/jquery.form.min.js\"></script>\n<script type=\"text/javascript\" src=\"/templates/tantifilm/js/bootstrap.min.js\"></script>\n<script type=\"text/javascript\" src=\"/templates/tantifilm/js/script.js\"></script>\n<script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092\" integrity=\"sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==\" data-cf-beacon='{\"version\":\"2024.11.0\",\"token\":\"5dec186d1bc14e10b0f2c0787afb9089\",\"r\":1,\"spa\":2}' crossorigin=\"anonymous\"></script>\n</body>\n</html>\n"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/js/jquery.bxslider.min.js",
+   "status": 200,
+   "tipo": "script",
+   "ct": "application/javascript",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/serie-tv/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "accept-language": "it-IT",
+    "sec-ch-ua-mobile": "?0"
+   },
+   "intestazioni_risposta": {
+    "content-encoding": "gzip",
+    "cf-cache-status": "REVALIDATED",
+    "etag": "W/\"5ef6ee14-4b9f\"",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VkRNbKAKPNvz3lfokzo4qRZg9m1N2sfRWMRQZEphLeg1GCdPg3QgfT7gA6ZlZvggYCYVqpj%2B6%2BJrbikKn3ByEMgz8rxwlLahs9mB9cpy2yLJKrzrh5xkjXqd8bXwFf6Z0w%3D%3D\"}]}",
+    "expires": "Sun, 08 Nov 2026 11:49:55 GMT",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "cfExtPri",
+    "date": "Sun, 08 Nov 2026 00:11:18 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Sat, 27 Jun 2020 06:58:28 GMT",
+    "vary": "Accept-Encoding",
+    "priority": "u=2,i=?0",
+    "x-cache-status": "HIT",
+    "cache-control": "max-age=43200",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-ray": "a5705c0b5af92cd6-DFW",
+    "server": "cloudflare"
+   }
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/images/logo2.png",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/js/bbspoiler.js",
+   "status": 200,
+   "tipo": "script",
+   "ct": "application/javascript",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/serie-tv/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "accept-language": "it-IT",
+    "sec-ch-ua-mobile": "?0"
+   },
+   "intestazioni_risposta": {
+    "content-encoding": "zstd",
+    "cf-cache-status": "HIT",
+    "etag": "W/\"5ef6ee12-2fd\"",
+    "age": "29707",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=7eNv2u6x9onR5mE0VoBkMAnp00e4E3x89KLoCh9V%2BRwPQWxqcAB9lJlyliJCUxXEUHdjYuU3aLpaUhQVeP0T%2FCLKDkajCWx5nmZR1fnwqfVQz5BD7Dxdw5YWRvh%2BKuDPRQ%3D%3D\"}]}",
+    "expires": "Sun, 08 Nov 2026 03:16:17 GMT",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "cfExtPri",
+    "date": "Sun, 08 Nov 2026 00:11:18 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Sat, 27 Jun 2020 06:58:26 GMT",
+    "priority": "u=2,i=?0",
+    "x-cache-status": "HIT",
+    "cache-control": "max-age=43200",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-ray": "a5705c0d6b452cd6-DFW",
+    "server": "cloudflare"
+   }
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/js/bootstrap.min.js",
+   "status": 200,
+   "tipo": "script",
+   "ct": "application/javascript",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/serie-tv/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "accept-language": "it-IT",
+    "sec-ch-ua-mobile": "?0"
+   },
+   "intestazioni_risposta": {
+    "content-encoding": "gzip",
+    "cf-cache-status": "HIT",
+    "etag": "W/\"5ef6ee14-1a0b\"",
+    "age": "8658",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=oyX6vdRgrJsdGUE86ZeQQv2WU7SCCYLSu8PtQPXawrHGvJH%2FRGgUQnlqUBIp%2FyUUc6Je%2BSS7Xa%2FNEP3mYQjCtlEvpagkyGQKe1M4Nsxe%2FxLXLvHzIFuC12MP1FAKoaZn%2Fg%3D%3D\"}]}",
+    "expires": "Sun, 08 Nov 2026 09:26:00 GMT",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "cfExtPri",
+    "date": "Sun, 08 Nov 2026 00:11:18 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Sat, 27 Jun 2020 06:58:28 GMT",
+    "vary": "Accept-Encoding",
+    "priority": "u=2,i=?0",
+    "x-cache-status": "HIT",
+    "cache-control": "max-age=43200",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-ray": "a5705c0d6b432cd6-DFW",
+    "server": "cloudflare"
+   }
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/js/jquery.form.min.js",
+   "status": 200,
+   "tipo": "script",
+   "ct": "application/javascript",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/serie-tv/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "accept-language": "it-IT",
+    "sec-ch-ua-mobile": "?0"
+   },
+   "intestazioni_risposta": {
+    "content-encoding": "gzip",
+    "cf-cache-status": "HIT",
+    "etag": "W/\"5ef6ee14-396d\"",
+    "age": "8658",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=R%2Fsf13E35vgGJSToK91eLsalpGC1JyJsDWyjjcIAApkWuHHkvZLrHxR16l8OPcU2R5DLEU7J916ZtYsmQDRbCC3IXrQ4m%2FzPPx2TIMhXe8d87D5WduaoDONJRxhJt3M5tw%3D%3D\"}]}",
+    "expires": "Sun, 08 Nov 2026 09:08:52 GMT",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "cfExtPri",
+    "date": "Sun, 08 Nov 2026 00:11:17 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Sat, 27 Jun 2020 06:58:28 GMT",
+    "vary": "Accept-Encoding",
+    "priority": "u=2,i=?0",
+    "x-cache-status": "HIT",
+    "cache-control": "max-age=43200",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-ray": "a5705c0d6b442cd6-DFW",
+    "server": "cloudflare"
+   }
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/images/bg-body.png",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/images/logo.png?v=2",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/images/lupa.png",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/images/bg-slider.png",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/js/script.js",
+   "status": 200,
+   "tipo": "script",
+   "ct": "application/javascript",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/serie-tv/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "accept-language": "it-IT",
+    "sec-ch-ua-mobile": "?0"
+   },
+   "intestazioni_risposta": {
+    "content-encoding": "zstd",
+    "cf-cache-status": "HIT",
+    "etag": "W/\"5ef6ee14-c2\"",
+    "age": "29707",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pNrOZly3q%2B46gfuIwAGPsOAPAzu6a9s%2BFrFvMjl2ZrkysNZL3b9J%2F%2BdTf6GcrTefkweGWBtjw2P4gzAIs6f80C2l2p8LJ8TKzK13gwoFuK7uPerEMH2yaCQscJUO7%2BpLLw%3D%3D\"}]}",
+    "expires": "Sun, 08 Nov 2026 03:16:16 GMT",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "cfExtPri",
+    "date": "Sun, 08 Nov 2026 00:11:18 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Sat, 27 Jun 2020 06:58:28 GMT",
+    "priority": "u=2,i=?0",
+    "x-cache-status": "HIT",
+    "cache-control": "max-age=43200",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-ray": "a5705c0d6b462cd6-DFW",
+    "server": "cloudflare"
+   }
+  },
+  {
+   "url": "https://tanti-film.ink/public/js/jqueryui.js?v=5a54e",
+   "status": 200,
+   "tipo": "script",
+   "ct": "application/javascript",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/serie-tv/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "accept-language": "it-IT",
+    "sec-ch-ua-mobile": "?0"
+   },
+   "intestazioni_risposta": {
+    "content-encoding": "gzip",
+    "cf-cache-status": "HIT",
+    "etag": "W/\"6a3d948e-200a6\"",
+    "age": "29707",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=yVlkb5o4kvHZzx0mP1QfYEoh2O%2FI6hgqlyskMTc6GwHJFxpWwPcoIBvbFkJh190KuSYqlhToCPja7ucCXhtmFKAnFSr3h9g0%2BtJOJ4aqmzVBD3jiSTP%2BKbuHoaIPn7DpCQ%3D%3D\"}]}",
+    "expires": "Sun, 08 Nov 2026 03:55:52 GMT",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "cfExtPri",
+    "date": "Sun, 08 Nov 2026 00:11:18 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Thu, 25 Jun 2026 20:50:22 GMT",
+    "vary": "Accept-Encoding",
+    "priority": "u=3,i=?0",
+    "x-cache-status": "HIT",
+    "cache-control": "max-age=43200",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-ray": "a5705c0d6b482cd6-DFW",
+    "server": "cloudflare"
+   }
+  },
+  {
+   "url": "https://tanti-film.ink/public/js/dle_js.js?v=5a54e",
+   "status": 200,
+   "tipo": "script",
+   "ct": "application/javascript",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/serie-tv/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "accept-language": "it-IT",
+    "sec-ch-ua-mobile": "?0"
+   },
+   "intestazioni_risposta": {
+    "content-encoding": "gzip",
+    "cf-cache-status": "HIT",
+    "etag": "W/\"6a3d948d-d497\"",
+    "age": "29707",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=a1fAMu3PAy6FSD5vWE2%2F7Av8BOlnAH2QwlyX6y1JccaSiZ2Jfz4eEx2JT0Y%2BYPCShMSKBfCtPP9H3%2BlmFc6acmo8eGrrMLBHZIQWkw71ay2V%2B%2FISlHVh4Dn2zG4qVFJZtw%3D%3D\"}]}",
+    "expires": "Sun, 08 Nov 2026 03:55:54 GMT",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "cfExtPri",
+    "date": "Sun, 08 Nov 2026 00:11:17 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Thu, 25 Jun 2026 20:50:21 GMT",
+    "vary": "Accept-Encoding",
+    "priority": "u=3,i=?0",
+    "x-cache-status": "HIT",
+    "cache-control": "max-age=43200",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-ray": "a5705c0d6b472cd6-DFW",
+    "server": "cloudflare"
+   }
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/js/swiper.min.js",
+   "status": 200,
+   "tipo": "script",
+   "ct": "application/javascript",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/serie-tv/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "accept-language": "it-IT",
+    "sec-ch-ua-mobile": "?0"
+   },
+   "intestazioni_risposta": {
+    "content-encoding": "gzip",
+    "cf-cache-status": "HIT",
+    "etag": "W/\"5ef6ee14-1b0a7\"",
+    "age": "35846",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gF640tCZbApWrXf22lpQKXCe%2BKvrS%2Fb1WSvOt0T4jp9uXoU0dmJNkdrQHY9BkoucFVo2dXIyOjBtlYWfiYVPT63KT9Fu50wPhcvwGws24XtXo9A3WtWYgyygcCV8a7rUsw%3D%3D\"}]}",
+    "expires": "Sun, 08 Nov 2026 01:20:46 GMT",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "cfExtPri",
+    "date": "Sun, 08 Nov 2026 00:11:30 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Sat, 27 Jun 2020 06:58:28 GMT",
+    "vary": "Accept-Encoding",
+    "priority": "u=1,i=?0",
+    "x-cache-status": "HIT",
+    "strict-transport-security": "max-age=31536000",
+    "cache-control": "max-age=43200",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-ray": "a5705c5d3e8f2cd6-DFW",
+    "server": "cloudflare"
+   }
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-10/tt37180686.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-10/tt23112594.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2024-11/tulsa-king_1732014592.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2024-11/the-terminal-list-2022_1732014451.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-03/marshals-streaming_1772500141.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-09/tt22526100.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-08/tt32393988.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-09/tt43617372.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-10/tt11540908.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-09/tt36583977.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2024-11/the-gentlemen_1732014715.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-08/tt26545992.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-10/tt42026819.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt37762350.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt35926686.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-09/tt37694172.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt36893729.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-10/tt10691770.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt8820258.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt39400541.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-10/tt13611778.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-08/tt1756855.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt45114341.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-09/tt28765828.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-09/tt38218082.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/css/swiper.css?v=2",
+   "status": 200,
+   "tipo": "stylesheet",
+   "ct": "text/css"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-09/tt36073210.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt34915693.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-01/furto-di-lusso-la-banda-degli-orologi-rubati.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt39325975.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt38515310.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2024-11/dark-matter_1732014718.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-01/tt49895708.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt38681812.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt43681696.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-11/tt38992068.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-09/tt33539520.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2025-05/1747208111_mobland-streaming-ita.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/uploads/thumb/203x293-0-70/2026-09/tt35856037.jpg",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/jpeg"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/images/border.png",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/images/point.png",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/images/facebook-f.png",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/images/twiter-f.png",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://tanti-film.ink/templates/tantifilm/dleimages/rating.png",
+   "status": 200,
+   "tipo": "image",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://tanti-film.ink/cdn-cgi/rum?",
+   "status": 204,
+   "tipo": "xhr",
+   "ct": "text/plain",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/serie-tv/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "content-type": "application/json",
+    "sec-ch-ua-mobile": "?0",
+    "accept-language": "it-IT"
+   },
+   "intestazioni_risposta": {
+    "access-control-max-age": "86400",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=QSBSohD%2FkHpsSL5O3Q8HGaHECbYao9R3X5osa%2FHtoGxpA4ArxAHupPATyoPiU%2BpAoIW27NzbT%2Bxk7yv38%2FPcXqik3VQ3c7PziYyIA%2F0naYqsjPYdFfR60GMK1KeIzT6%2BPg%3D%3D\"}]}",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-methods": "POST,OPTIONS",
+    "cf-ray": "a5705c5edeec2cd6-DFW",
+    "access-control-allow-origin": "https://tanti-film.ink",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "cfExtPri",
+    "date": "Sun, 08 Nov 2026 00:11:31 GMT",
+    "content-type": "text/plain",
+    "vary": "Origin",
+    "server": "cloudflare",
+    "priority": "u=1,i"
+   }
+  },
+  {
+   "url": "https://luugy.com/5/11683186/?oo=1&js_build=iclick-v1.1979.0&userId=0803e8fd63bc41def2e32d17612c93cf&fsa=3&dmn=llvpn.com&tt=2&ix=0&tspl=192&cslt=0",
+   "status": 204,
+   "tipo": "xhr",
+   "ct": "",
+   "intestazioni_richiesta": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://tanti-film.ink/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "content-type": "text/plain;charset=UTF-8",
+    "sec-ch-ua-mobile": "?0",
+    "accept-language": "it-IT"
+   },
+   "intestazioni_risposta": {
+    "access-control-max-age": "86400",
+    "cache-control": "no-transform, no-store, no-cache, must-revalidate, max-age=0, no-store, no-cache, must-revalidate, max-age=0",
+    "timing-allow-origin": "*",
+    "accept-ch": "Sec-CH-UA, Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+    "pragma": "no-cache, no-cache",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-methods": "GET, POST, OPTIONS",
+    "expires": "Tue, 11 Jan 1994 10:00:00 GMT, Mon, 26 Jul 1997 05:00:00 GMT",
+    "access-control-allow-origin": "https://tanti-film.ink",
+    "date": "Sun, 08 Nov 2026 00:11:30 GMT",
+    "server": "nginx",
+    "access-control-allow-headers": "Accept, Content-Type, Content-Length, Accept-Encoding, baggage, sentry-trace, favicon"
+   }
+  }
+ ]
+}
