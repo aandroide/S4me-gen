@@ -3,6 +3,8 @@
 # Canale per Tantifilm
 # ------------------------------------------------------------
 
+import re
+
 from core import support
 from core.item import Item
 from platformcode import logger
@@ -94,11 +96,31 @@ def _imdb(data):
     return ''
 
 
+def _e_serie(x):
+    """True se la scheda e una serie: TMDB cerca il codice IMDb scritto nel nome della locandina tra le serie tv."""
+    from core import tmdb
+    if x.action != 'check':
+        return True  # tasto Successivo e simili
+    m = re.search(r'/(tt\d{6,9})\.', getattr(x, 'thumbnail', '') or '')
+    if not m:
+        return bool((x.infoLabels or {}).get('tmdb_id'))
+    try:
+        return bool(tmdb.Tmdb(external_id=m.group(1), external_source='imdb_id', search_type='tv').get_id())
+    except Exception:
+        return bool((x.infoLabels or {}).get('tmdb_id'))
+
+
 def peliculas(item):
     lista = _elenco(item)
+    # la pagina ripete alcune schede in due blocchi
+    viste = set()
+    lista = [x for x in lista if not (x.url in viste or viste.add(x.url))]
     if 'serie-tv' in (item.url or '') and item.args != 'search':
-        # nel menu serie restano le schede che TMDB riconosce come serie (i film non hanno scheda tv)
-        lista = [x for x in lista if x.action != 'check' or (x.infoLabels or {}).get('tmdb_id')]
+        # il sito mette anche dei film nell'elenco serie e non li distingue: restano le schede che TMDB conosce come serie
+        from concurrent.futures import ThreadPoolExecutor
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            esito = list(pool.map(_e_serie, lista))
+        lista = [x for x, ok in zip(lista, esito) if ok]
     return lista
 
 
@@ -150,8 +172,8 @@ def check(item):
     if 'sub' in check.lower():
         item.contentLanguage = 'Sub-ITA'
     logger.debug("CHECK : ", check)
-    # il tipo arriva dall'elenco (percorso serie-tv); la categoria in pagina non sempre dice serie
-    if item.contentType == 'tvshow' or 'serie' in check.lower() or 'serie-tv' in (item.url or ''):
+    # decide la pagina: la categoria dice Serie TV solo per le serie (l'elenco serie contiene anche film)
+    if 'serie' in check.lower():
         item.contentType = 'tvshow'
         return episodios(item)
     else:
