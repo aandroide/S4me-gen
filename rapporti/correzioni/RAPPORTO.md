@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 6, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 11, NON VERIFICATO 5, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 6, DOMINIO PARCHEGGIATO 4, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 10, NON VERIFICATO 5, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (3)
 
@@ -29,7 +29,7 @@ Sito: https://tanti-film.ink
 -   patronBlock rimosso: senza blocco le regex dei titoli trovano 32 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 24 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
 
 ## CORRETTO IN PARTE (1)
@@ -97,7 +97,7 @@ Sito: https://eurostreaming.ooo
 - il sito reindirizza a un altro indirizzo: https://guardaseriex.art (in channels.json c'e https://eurostreaming.ooo)
 - ROTTO: peliculas /animazione/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/eurostreaming_actor/pagina_peliculas_animazione.html
--   regex proposta: 1040 titoli su 343 card | gruppi persi: episode, title2
+-   regex proposta: 1040 titoli su 344 card | gruppi persi: episode, title2
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/eurostreaming_actor/pagina_peliculas_aggiornamento_episodi.html
@@ -121,17 +121,21 @@ Sito: https://ilcorsaronero.link
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.rest
-- OK: peliculas /catalog/all | 16 risultati
+- OK: peliculas /catalog/all | 17 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
 -   non applicata al file: la funzione ha piu varianti di regex
 
-## DOMINIO PARCHEGGIATO (3)
+## DOMINIO PARCHEGGIATO (4)
 
 ### animealtadefinizione
 Sito: https://www.domainname.de
 - la home di https://www.domainname.de sembra un dominio in vendita o vuoto | motivo: frase "Domainname.de" | link: 23 | dimensione: 25306 | titolo: Buy & sell domains safely | Domainname.de
+
+### dinostreaming
+Sito: https://dinostreaming.it
+- la home di https://dinostreaming.it sembra un dominio in vendita o vuoto | motivo: pagina quasi vuota | link: 0 | dimensione: 1588 | titolo: nessuno
 
 ### lordchannel
 Sito: https://lordchannel.net
@@ -139,18 +143,18 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27363 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27308 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5638 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5646 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5666 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5651 byte): non e un cambio di struttura
 
-## IRRAGGIUNGIBILE (11)
+## IRRAGGIUNGIBILE (10)
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live
@@ -167,10 +171,6 @@ Sito: https://www.animeforce.it
 ### cb01anime
 Sito: https://cb01new.one
 - il nome del sito non esiste piu (DNS) (https://cb01new.one)
-
-### dinostreaming
-Sito: https://dinostreaming.it
-- il nome del sito non esiste piu (DNS) (https://dinostreaming.it)
 
 ### filmpertutti
 Sito: https://filmpertuttiiii.nuovo.live
@@ -235,10 +235,10 @@ Sito: https://1337x.to
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best
-- OK: peliculas /lastnews/ | 86 risultati
-- OK: peliculas /cinema/ | 96 risultati
-- OK: peliculas /sub-ita/ | 96 risultati
-- OK: peliculas /serie-tv/ | 96 risultati
+- OK: peliculas /lastnews/ | 85 risultati
+- OK: peliculas /cinema/ | 95 risultati
+- OK: peliculas /sub-ita/ | 95 risultati
+- OK: peliculas /serie-tv/ | 93 risultati
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.bar
@@ -256,7 +256,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 79 risultati
+- OK: peliculas /updated | 78 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -277,7 +277,7 @@ Sito: https://www.discoveryplus.com
 Sito: https://eurostream.one
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.one/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 96 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 95 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
 
