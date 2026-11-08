@@ -7,18 +7,18 @@ Canale guardaserieicu | indirizzo
       channel_config | txt60587 %s | 
 == lista "• Serie TV"
    -> 19 voci
-      episodios | L'ultimo piatto | https://guardaseriex.art/dramma/5877-l-ultimo-piatto-streaming.html
-      episodios | The Other Bennet Sister | https://guardaseriex.art/commedia/5791-the-other-bennet-sister-orgoglio-e-riscatto-streaming.html
-      episodios | I Griffin | https://guardaseriex.art/animazione/2048-i-griffin.html
       episodios | The Greatest | https://guardaseriex.art/dramma/5882-the-greatest-streaming.html
-== episodios su "L'ultimo piatto"
+      episodios | Anestesia | https://guardaseriex.art/dramma/5880-anestesia-streaming.html
+      episodios | Amore sotto copertura | https://guardaseriex.art/avventura/5848-amore-sotto-copertura-streaming.html
+      episodios | Taken: il caso Natalee Holloway | https://guardaseriex.art/documentario/5881-taken-il-caso-natalee-holloway-streaming.html
+== episodios su "The Greatest"
    -> 2 voci
-      findvideos | 1x01 | https://guardaseriex.art/dramma/5877-l-ultimo-piatto-streaming.html
-      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.art/dramma/5877-l-ultimo-piatto-streaming.html
-== findvideos su "1x01"
+      findvideos | 1x01 - L'oro non basta | https://guardaseriex.art/dramma/5882-the-greatest-streaming.html
+      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.art/dramma/5882-the-greatest-streaming.html
+== findvideos su "1x01 - L'oro non basta"
    -> 1 voci
-      play | 1x01 | https://v.vidxgo.co/49692512/1/1
-== risoluzione vidxgo https://v.vidxgo.co/49692512/1/1
+      play | 1x01 - L'oro non basta | https://v.vidxgo.co/15715850/1/1
+== risoluzione vidxgo https://v.vidxgo.co/15715850/1/1
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (2)
     tvshow | '/serietv-streaming/page/1/'

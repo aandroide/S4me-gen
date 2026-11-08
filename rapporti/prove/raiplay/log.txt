@@ -24,7 +24,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
       peliculas | C | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
       peliculas | D | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
 == peliculas su "A"
-   -> 13 voci
+   -> 12 voci
       findvideos | A caccia del vedovo d'oro | https://www.raiplay.it/programmi/acacciadelvedovodoro
       findvideos | A mano disarmata | https://www.raiplay.it/programmi/amanodisarmata
       findvideos | A un passo dalla verità | https://www.raiplay.it/programmi/aunpassodallaverita
@@ -50,21 +50,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 21 
-   SEZIONE Rai 2 -> OK 17 
-   SEZIONE Rai 3 -> OK 15 
+   SEZIONE Rai 1 -> OK 19 
+   SEZIONE Rai 2 -> OK 20 
+   SEZIONE Rai 3 -> OK 13 
+   SEZIONE str17 08 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 35 
+   SEZIONE Rai 2 -> OK 32 
+   SEZIONE Rai 3 -> OK 31 
    SEZIONE str16 07 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 29 
    SEZIONE Rai 2 -> ERRORE JSONDecodeError
    SEZIONE Rai 3 -> OK 31 
    SEZIONE str15 06 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 36 
-   SEZIONE Rai 2 -> OK 30 
-   SEZIONE Rai 3 -> OK 31 
-   SEZIONE str14 05 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
-   SEZIONE Novità -> OK 22 
-   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Novità -> OK 23 
+   SEZIONE Da non perdere -> OK 25 
    SEZIONE Dal libro al film -> OK 24 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 25 
@@ -79,7 +79,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Territori e itinerari -> OK 32 
    SEZIONE Approfondimento -> OK 25 
    SEZIONE Programmi TV -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 29 
+   SEZIONE Da non perdere -> OK 30 
    SEZIONE Docu-serie Original -> OK 29 
    SEZIONE Documentari Original -> OK 24 
    SEZIONE Documentari -> SOTTOMENU  
@@ -91,7 +91,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Un mondo di fumetti -> OK 15 
    SEZIONE Next Star -> OK 21 
    SEZIONE Teen -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 23 
+   SEZIONE Da non perdere -> OK 24 
    SEZIONE Il teatro di Eduardo -> OK 25 
    SEZIONE Musica classica -> OK 25 
    SEZIONE Musica e Teatro -> SOTTOMENU  
@@ -106,6 +106,12 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE L'offerta -> OK 45 
    SEZIONE Rai Italy -> SOTTOMENU  
    SEZIONE txt70741 … -> OK 8 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Avatars
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: To be
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Fumbleland
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Pupi Avati. Che cinema la vita!
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Cicatrici
 SEZIONI: 13 ok su 14
    SEZIONE SENZA TITOLI: Learning | ERRORE JSONDecodeError
 VERDETTO: ARRIVA AL VIDEO

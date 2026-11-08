@@ -5,34 +5,41 @@ Canale tantifilm | indirizzo https://tanti-film.ink
       peliculas | • Film | https://tanti-film.ink/film
       peliculas | • Serie TV | https://tanti-film.ink/serie-tv/
       search | txt70741 … | https://tanti-film.ink
-== lista "• Serie TV"
+== lista "Generi"
+   -> 40 voci
+      peliculas | Animazione | https://tanti-film.ink/animazione/
+      peliculas | Avventura | https://tanti-film.ink/avventura/
+      peliculas | Biografico | https://tanti-film.ink/biografico/
+      peliculas | Commedia | https://tanti-film.ink/commedia/
+== peliculas su "Prossimamente"
    -> 26 voci
-      check | Può solo andar peggio  | https://tanti-film.ink/guarda/35468-puo-solo-andar-peggio-streaming-streaming-hd.html
-      check | Awkwafina: Una chef improbabile  | https://tanti-film.ink/guarda/35458-awkwafina-una-chef-improbabile-streaming-streaming-hd.html
-      check | Campus Drivers  | https://tanti-film.ink/guarda/35454-campus-drivers-streaming-streaming-hd.html
-      check | Dead-End Job  | https://tanti-film.ink/guarda/35370-dead-end-job-streaming-streaming-hd.html
-== check su "Può solo andar peggio "
-   -> 7 voci
-      findvideos | 1x01 - Episodio 1 | https://v.vidxgo.co/35926686/1/1
-      findvideos | 1x02 - Episodio 2 | https://v.vidxgo.co/35926686/1/2
-      findvideos | 1x03 - Episodio 3 | https://v.vidxgo.co/35926686/1/3
-      findvideos | 1x04 - Episodio 4 | https://v.vidxgo.co/35926686/1/4
-== findvideos su "1x01 - Episodio 1"
-   -> 1 voci
-      play | 1x01 - Episodio 1 | https://v.vidxgo.co/35926686/1/1
-== risoluzione vidxgo https://v.vidxgo.co/35926686/1/1
+      check | L'isola dei ricordi  | https://tanti-film.ink/guarda/35469-l-isola-dei-ricordi-streaming-streaming-hd.html
+      check | Blue Film  | https://tanti-film.ink/guarda/35456-blue-streaming-streaming-hd.html
+      check | Ice Cream Man  | https://tanti-film.ink/guarda/35450-ice-cream-man-streaming-streaming-hd.html
+      check | Possible Love  | https://tanti-film.ink/guarda/35448-possible-love-streaming-streaming-hd.html
+== check su "L'isola dei ricordi "
+   -> 2 voci
+      play | L'isola dei ricordi  | https://v.vidxgo.co/36583977
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.ink/guarda/35469-l-isola-dei-ricordi-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/36583977
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
     tvshow | '/serie-tv/'
 == controllo di tutte le sezioni
-   SEZIONE Animazione -> OK 25 
-   SEZIONE Avventura -> OK 25 
+   SEZIONE Animazione -> OK 24 
+   SEZIONE Avventura -> OK 24 
    SEZIONE Biografico -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
-   SEZIONE • Film -> OK 35 
-   SEZIONE • Serie TV -> OK 25 
+   SEZIONE • Film -> OK 20 
+   SEZIONE • Serie TV -> OK 9 
    SEZIONE txt70741 … -> OK 11 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Wizards
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar: I sette rifugi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar - La leggenda di Aang
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: L'ultimo dominatore dell'aria
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar Aang: L’ultimo dominatore dell’aria
 SEZIONI: 4 ok su 4
 VERDETTO: ARRIVA AL VIDEO

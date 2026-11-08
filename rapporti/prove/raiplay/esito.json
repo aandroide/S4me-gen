@@ -25,7 +25,7 @@
   {
    "passo": "peliculas su \"A\"",
    "esito": "OK",
-   "voci": 13
+   "voci": 12
   },
   {
    "passo": "findvideos su \"A caccia del vedovo d'oro\"",
@@ -37,6 +37,7 @@
   {
    "server": "directo",
    "url": "https://download-rai-it.akamaized.net/video_no_available.mp4",
+   "tipo": "film",
    "finale": "https://download-rai-it.akamaized.net/video_no_available.mp4",
    "esito": "VIDEO OK",
    "dettaglio": "206 video/mp4"
@@ -71,6 +72,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str17 08 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 19
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 20
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 13
+      }
+     ]
+    },
+    {
      "voce": "str16 07 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -80,19 +107,19 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 21
+       "titoli": 35
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 17
+       "titoli": 32
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 15
+       "titoli": 31
       }
      ]
     },
@@ -121,32 +148,6 @@
        "titoli": 31
       }
      ]
-    },
-    {
-     "voce": "str14 05 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 36
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 31
-      }
-     ]
     }
    ]
   },
@@ -160,13 +161,13 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 22
+     "titoli": 23
     },
     {
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 25
     },
     {
      "voce": "Dal libro al film",
@@ -264,7 +265,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 29
+     "titoli": 30
     },
     {
      "voce": "Docu-serie Original",
@@ -342,7 +343,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     },
     {
      "voce": "Il teatro di Eduardo",
@@ -428,6 +429,14 @@
   {
    "voce": "txt70741 …",
    "azione": "search",
+   "problemi": [
+    "tipo undefined, in Kodi appare come cartella: The Avatars",
+    "tipo undefined, in Kodi appare come cartella: To be",
+    "tipo undefined, in Kodi appare come cartella: Fumbleland",
+    "tipo undefined, in Kodi appare come cartella: Pupi Avati. Che cinema la vita!",
+    "tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream",
+    "tipo undefined, in Kodi appare come cartella: Cicatrici"
+   ],
    "esito": "OK",
    "titoli": 8
   }
@@ -438,7 +447,7 @@
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
    "byte": 597,
-   "secondi": 0.9,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }

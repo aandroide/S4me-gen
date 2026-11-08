@@ -1,8 +1,13 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 13, SI FERMA AL SERVER O AL VIDEO 4, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
+Riepilogo: ARRIVA AL VIDEO 15, SI FERMA AL SERVER O AL VIDEO 2, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
 
-## ARRIVA AL VIDEO (13)
+## ARRIVA AL VIDEO (15)
+
+### altadefinizione01
+Sito: https://altadefinizione-01.best | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
+- server vixsrc: VIDEO OK m3u8 200
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.bar | verdetto: ARRIVA AL VIDEO
@@ -36,6 +41,10 @@ Sito: https://guardaseriex.art | verdetto: ARRIVA AL VIDEO
 Sito:  | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
+### ilgeniodellostreaming_cam
+Sito: https://il-geniodellostreaming.rest | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
+
 ### la7
 Sito:  | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK m3u8 206
@@ -54,13 +63,9 @@ Sito: https://tanti-film.ink | verdetto: ARRIVA AL VIDEO
 
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
-- server voe: VIDEO OK m3u8 200
+- server voe: VIDEO OK m3u8 206
 
-## SI FERMA AL SERVER O AL VIDEO (4)
-
-### altadefinizione01
-Sito: https://altadefinizione-01.best | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
-- server vixsrc: VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video
+## SI FERMA AL SERVER O AL VIDEO (2)
 
 ### cineblog01
 Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
@@ -70,10 +75,6 @@ Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO 
 ### hd4me
 Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE
 - server mega: SERVER NON RISOLVE 
-
-### ilgeniodellostreaming_cam
-Sito: https://il-geniodellostreaming.rest | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
-- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
 ## SI FERMA PRIMA DEL VIDEO (39)
 
@@ -85,8 +86,7 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 ### accuradio
 Sito:  | verdetto: SI FERMA A: lista "Most Popular "
 - passo "lista "Most Popular "": VUOTO 
-- passo "lista ""Best of Latin Music 2026" — Pop, Reggae"": VUOTO 
-- passo "lista "Fun '70s Oldies "": VUOTO 
+- passo "lista ""Adult Rock: Best of 2026" — '26 top pic"": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -144,10 +144,8 @@ Sito: https://cinemalibero.cafe | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "•• Generi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### dinostreaming
-Sito: https://dinostreaming.it | verdetto: SI FERMA A: lista "• Film"
-- passo "lista "• Film"": ERRORE kh/addon/core/support.py", line 522, in wrapper     args = func(*args)            ^^^^^^^^^^^ TypeError: '>' not supported between instances of 'str' and 'int' 
-- passo "lista "•• Film al cinema"": ERRORE kh/addon/core/support.py", line 522, in wrapper     args = func(*args)            ^^^^^^^^^^^ TypeError: '>' not supported between instances of 'str' and 'int' 
-- passo "lista "•• Generi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+Sito: https://dinostreaming.it | verdetto: SI FERMA A: lista "•• Generi"
+- passo "lista "•• Generi"": VUOTO 
 
 ### dreamsub
 Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
@@ -156,10 +154,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.one | verdetto: SI FERMA A: findvideos su "1x01 - Episodio 01 "
-- passo "findvideos su "1x01 - Episodio 01 "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/427aps5q0sew 
-- passo "findvideos su "1x01 - Asa e Yuru "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47 
-- passo "findvideos su "1x01 - Episodio 01 "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/427aps5q0sew 
+Sito: https://eurostream.one | verdetto: SI FERMA A: findvideos su "1x01 - The Code "
+- passo "findvideos su "1x01 - The Code "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/8ehnmyta 
+- passo "findvideos su "1x01 - Asa e Yuru "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/0d9arej2 
+- passo "findvideos su "1x01 - Bruciateli tutti fino alla f*ttut"": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/4q8vxuoy 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -221,7 +219,7 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Die hard - Un buon giorno per morire"
 - passo "findvideos su "Die hard - Un buon giorno per morire"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Harry Potter e la pietra filosofale"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Rosamunde Pilcher: ti troverò"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo

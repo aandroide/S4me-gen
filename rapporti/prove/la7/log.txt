@@ -32,20 +32,25 @@ Canale la7 | indirizzo
     menu | ('Coffee Tech {bullet bold} {teen}', ['/coffee-tech', 'episodios', '', 'tvshow'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 2 
-   SEZIONE Oggi 7 novembre -> OK 4 
+   SEZIONE Oggi 8 novembre -> OK 8 
+   SEZIONE Sabato 7 novembre -> OK 22 
    SEZIONE Venerdi 6 novembre -> OK 24 
-   SEZIONE Giovedi 5 novembre -> OK 28 
    SEZIONE La7 -> SOTTOMENU  
-   SEZIONE Oggi 7 novembre -> OK 3 
+   SEZIONE Oggi 8 novembre -> OK 2 
+   SEZIONE Sabato 7 novembre -> OK 8 
    SEZIONE Venerdi 6 novembre -> OK 5 
-   SEZIONE Giovedi 5 novembre -> OK 9 
    SEZIONE La7Cinema -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE • Programmi TV -> OK 71 
-   SEZIONE • Film -> OK 42 
+   SEZIONE • Film -> OK 40 
    SEZIONE • Documentari -> OK 17 
    SEZIONE • Tg La7 -> OK 20 
+      PROBLEMA: titolo rovinato: txt30992 %s >
    SEZIONE • Coffee Tech -> OK 20 
+      PROBLEMA: titolo rovinato: txt30992 %s >
    SEZIONE txt70741 … -> OK 3 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: La radiologia del futuro è già qui (Le parole dell
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Grillo e l’avatar di Conte: "Dal vivo è meno incat
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Le è dispiaciuto che Schlein e Conte non siano ven
 SEZIONI: 8 ok su 8
 VERDETTO: ARRIVA AL VIDEO

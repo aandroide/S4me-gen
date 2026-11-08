@@ -7,15 +7,15 @@ Canale altadefinizioneclick | indirizzo https://altadefinizionex.bar
       genres | •• Generi | https://altadefinizionex.bar/serie-tv/
 == lista "• Film"
    -> 13 voci
-      findvideos | Rage Against The Machine: Live At Finsbury Park | https://altadefinizionex.bar/musicale/45495-rage-against-the-machine-live-at-finsbury-park-streaming
-      findvideos | Hawaii | https://altadefinizionex.bar/commedia/45494-hawaii-streaming.html
-      findvideos | Poliziotto, solitudine e rabbia | https://altadefinizionex.bar/crime/45493-poliziotto-solitudine-e-rabbia-streaming.html
-      findvideos | Novo | https://altadefinizionex.bar/drammatico/45492-novo-streaming.html
-== findvideos su "Rage Against The Machine: Live At Finsbu"
+      findvideos | 1917 | https://altadefinizionex.bar/guerra/11159-1917-streaming.html
+      findvideos | Sonora: L'autostrada del diavolo | https://altadefinizionex.bar/drammatico/45499-sonora-lautostrada-del-diavolo-streaming.html
+      findvideos | Two Hands | https://altadefinizionex.bar/commedia/33091-two-hands-streaming.html
+      findvideos | Craig: Il Film | https://altadefinizionex.bar/animazione/45498-craig-il-film-streaming.html
+== findvideos su "1917"
    -> 2 voci
-      play | Rage Against The Machine: Live At Finsbury Park | https://v.vidxgo.co/1691155
-      add_pelicula_to_library | txt30161 %s | https://altadefinizionex.bar/musicale/45495-rage-against-the-machine-live-at-finsbury-park-streaming
-== risoluzione vidxgo https://v.vidxgo.co/1691155
+      play | 1917 | https://v.vidxgo.co/8579674
+      add_pelicula_to_library | txt30161 %s | https://altadefinizionex.bar/guerra/11159-1917-streaming.html
+== risoluzione vidxgo https://v.vidxgo.co/8579674
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (4)
     film | '/film/'
@@ -34,5 +34,11 @@ Canale altadefinizioneclick | indirizzo https://altadefinizionex.bar
    SEZIONE Animazione -> OK 12 
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE txt70741 … -> OK 11 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar Aang: l’ultimo dominatore dell’aria
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar: Fuoco e Cenere
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar: Una Nuova Era - Lo speciale
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar: La via dell'acqua
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Anatar
 SEZIONI: 5 ok su 5
 VERDETTO: ARRIVA AL VIDEO

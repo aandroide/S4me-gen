@@ -7,15 +7,15 @@ Canale cineblog001 | indirizzo https://cineblog001.party
       genres | Generi | https://cineblog001.center
 == lista "Film"
    -> 19 voci
+      findvideos | L'isola dei ricordi | https://cineblog001.party/cb01-streaming/35469-l-isola-dei-ricordi-streaming-cb01.html
       findvideos | Blue Film | https://cineblog001.party/cb01-streaming/35456-blue-streaming-cb01.html
       findvideos | Ice Cream Man | https://cineblog001.party/cb01-streaming/35450-ice-cream-man-streaming-cb01.html
       findvideos | Possible Love | https://cineblog001.party/cb01-streaming/35448-possible-love-streaming-cb01.html
-      findvideos | Super Troopers 3 | https://cineblog001.party/cb01-streaming/35447-super-troopers-3-streaming-cb01.html
-== findvideos su "Blue Film"
+== findvideos su "L'isola dei ricordi"
    -> 2 voci
-      play | Blue Film | https://v.vidxgo.co/34915693
-      add_pelicula_to_library | txt30161 %s | https://cineblog001.party/cb01-streaming/35456-blue-streaming-cb01.html
-== risoluzione vidxgo https://v.vidxgo.co/34915693
+      play | L'isola dei ricordi | https://v.vidxgo.co/36583977
+      add_pelicula_to_library | txt30161 %s | https://cineblog001.party/cb01-streaming/35469-l-isola-dei-ricordi-streaming-cb01.html
+== risoluzione vidxgo https://v.vidxgo.co/36583977
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (4)
     top | ('Film', ['/film/', 'peliculas', ''])
@@ -26,7 +26,7 @@ Canale cineblog001 | indirizzo https://cineblog001.party
    SEZIONE Film -> OK 18 
    SEZIONE Serie TV -> OK 18 
    SEZIONE Sub-ITA -> OK 18 
-   SEZIONE Azione -> OK 16 
+   SEZIONE Azione -> OK 15 
    SEZIONE Animazione -> OK 15 
    SEZIONE Avventura -> OK 17 
    SEZIONE Generi -> SOTTOMENU  

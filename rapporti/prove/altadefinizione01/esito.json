@@ -13,7 +13,7 @@
    "voci": 26
   },
   {
-   "passo": "check su \"Blue Film \"",
+   "passo": "check su \"L'isola dei ricordi \"",
    "esito": "OK",
    "voci": 3
   }
@@ -21,17 +21,19 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/34915693",
-   "finale": "http://127.0.0.1:34135/hls/34915693/master.m3u8",
+   "url": "https://v.vidxgo.co/36583977",
+   "tipo": "film",
+   "finale": "http://127.0.0.1:39027/hls/36583977/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   },
   {
    "server": "vixsrc",
-   "url": "https://vixsrc.to/movie/tt34915693",
-   "finale": "https://vixsrc.to/movie/tt34915693",
-   "esito": "VIDEO NON RAGGIUNGIBILE",
-   "dettaglio": "200 text/html; charset=utf-8 non sembra un video"
+   "url": "https://vixsrc.to/movie/tt36583977",
+   "tipo": "film",
+   "finale": "https://vixsrc.to/playlist/799381.m3u8?ub=1&token=f72ba0b068db658af972acb8171662a3&expires=1799323787&h=1&lang=it",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
   }
  ],
  "menu_dichiarato": [
@@ -61,7 +63,7 @@
    "voce": "•• Ultimi Aggiornati-Aggiunti",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 36
+   "titoli": 35
   },
   {
    "voce": "•• Generi",
@@ -165,7 +167,7 @@
     {
      "url": "https://altadefinizione-01.best",
      "status": 200,
-     "byte": 181111,
+     "byte": 181477,
      "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
     },
     {
@@ -192,7 +194,7 @@
    "voce": "Serie TV",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 30
+   "titoli": 29
   },
   {
    "voce": "txt70741 …",
@@ -206,55 +208,55 @@
   {
    "url": "https://altadefinizione-01.best/lastnews/",
    "status": 200,
-   "byte": 132853,
-   "secondi": 0.3,
+   "byte": 133058,
+   "secondi": 0.4,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizione-01.best/35456-blue-streaming.html",
+   "url": "https://altadefinizione-01.best/35469-l-isola-dei-ricordi-streaming.html",
    "status": 200,
-   "byte": 90348,
-   "secondi": 0.4,
-   "titolo_pagina": "Blue Film Streaming HD - Altadefinizione01",
+   "byte": 96127,
+   "secondi": 0.2,
+   "titolo_pagina": "L'isola dei ricordi Streaming HD - Altadefinizione01",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://vixsrc.to/api/movie/tt34915693",
-   "status": 404,
-   "byte": 6953,
-   "secondi": 0.2,
-   "titolo_pagina": "Not Found",
+   "url": "https://vixsrc.to/api/movie/tt36583977",
+   "status": 200,
+   "byte": 147,
+   "secondi": 0.3,
+   "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://vixsrc.to/movie/tt34915693",
+   "url": "https://vixsrc.to/embed/799381?token=7e1508ab416e02d96bda4ac042f82285&t=Rm9yZ290dGVuIElzbGFuZA%3D%3D&expires=1794139797&lang=en&skin=vixsrc&canPlayFHD=1",
    "status": 200,
-   "byte": 7862,
+   "byte": 6592,
    "secondi": 0.2,
-   "titolo_pagina": "VixSrc",
+   "titolo_pagina": "799381",
    "file": "pagine/04.html"
   },
   {
    "url": "https://altadefinizione-01.best/lastnews/",
    "status": 200,
-   "byte": 132853,
-   "secondi": 0.2,
+   "byte": 133058,
+   "secondi": 0.4,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/05.html"
   },
   {
    "url": "https://altadefinizione-01.best/cinema/",
    "status": 200,
-   "byte": 156433,
-   "secondi": 0.2,
+   "byte": 156582,
+   "secondi": 0.4,
    "titolo_pagina": "Al Cinema – Altadefinizione01",
    "file": "pagine/06.html"
   },
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 181111,
+   "byte": 181477,
    "secondi": 0.2,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/07.html"
@@ -262,31 +264,31 @@
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 181111,
-   "secondi": 0.4,
+   "byte": 181477,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/08.html"
   },
   {
    "url": "https://altadefinizione-01.best/azione/",
    "status": 200,
-   "byte": 156148,
-   "secondi": 0.2,
+   "byte": 156297,
+   "secondi": 0.1,
    "titolo_pagina": "Azione – Altadefinizione01",
    "file": "pagine/09.html"
   },
   {
    "url": "https://altadefinizione-01.best/animazione/",
    "status": 200,
-   "byte": 157864,
-   "secondi": 0.2,
+   "byte": 157962,
+   "secondi": 0.4,
    "titolo_pagina": "Animazione – Altadefinizione01",
    "file": "pagine/10.html"
   },
   {
    "url": "https://altadefinizione-01.best/avventura/",
    "status": 200,
-   "byte": 158168,
+   "byte": 158324,
    "secondi": 0.2,
    "titolo_pagina": "Avventura – Altadefinizione01",
    "file": "pagine/11.html"
@@ -294,39 +296,39 @@
   {
    "url": "https://altadefinizione-01.best/catalog/a",
    "status": 200,
-   "byte": 107801,
-   "secondi": 0.2,
+   "byte": 107935,
+   "secondi": 0.4,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/12.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/9",
    "status": 200,
-   "byte": 106864,
-   "secondi": 0.3,
+   "byte": 106998,
+   "secondi": 0.5,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/13.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/A",
    "status": 200,
-   "byte": 107801,
-   "secondi": 0.3,
+   "byte": 107935,
+   "secondi": 0.5,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/14.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/B",
    "status": 200,
-   "byte": 107801,
-   "secondi": 0.5,
+   "byte": 107935,
+   "secondi": 0.4,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/15.html"
   },
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 181111,
+   "byte": 181477,
    "secondi": 0.3,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
   },
@@ -334,14 +336,14 @@
    "url": "https://altadefinizione-01.best/find/2026/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "404 | Not Found"
   },
   {
    "url": "https://altadefinizione-01.best/find/2025/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "404 | Not Found"
   },
   {
@@ -354,21 +356,21 @@
   {
    "url": "https://altadefinizione-01.best/sub-ita/",
    "status": 200,
-   "byte": 156077,
-   "secondi": 0.4,
+   "byte": 156226,
+   "secondi": 0.3,
    "titolo_pagina": "Sub-ITA &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   },
   {
    "url": "https://altadefinizione-01.best/serie-tv/",
    "status": 200,
-   "byte": 154602,
-   "secondi": 0.3,
+   "byte": 154962,
+   "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - Altadefinizione01"
   },
   {
    "url": "https://altadefinizione-01.best/?do=search&subaction=search&titleonly=3&story=avatar",
    "status": 200,
-   "byte": 92941,
+   "byte": 93090,
    "secondi": 0.6,
    "titolo_pagina": "Site search &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   }

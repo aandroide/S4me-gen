@@ -26,8 +26,9 @@
  "video": [
   {
    "server": "directo",
-   "url": "https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token=Tacx5-V6RJDIToA9yp4Mag&expires=1794095866",
-   "finale": "https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token=Tacx5-V6RJDIToA9yp4Mag&expires=1794095866",
+   "url": "https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token=1jjo-vzHamPDFeynhEjB1w&expires=1794182992",
+   "tipo": "film",
+   "finale": "https://srv35.yuenchi.streampeaker.org/DDL/ANIME/HackGUReturner/HackGUReturner_OVA_SUB_ITA.mp4?token=1jjo-vzHamPDFeynhEjB1w&expires=1794182992",
    "esito": "VIDEO OK",
    "dettaglio": "206 video/mp4"
   }
@@ -90,7 +91,7 @@
    "url": "https://www.animesaturn.net/az-list",
    "status": 200,
    "byte": 106469,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "AnimeSaturn - Lista anime completa",
    "file": "pagine/01.html"
   },
@@ -98,7 +99,7 @@
    "url": "https://www.animesaturn.net/anime/hack-g-u-returner-8PrAP",
    "status": 200,
    "byte": 88471,
-   "secondi": 0.5,
+   "secondi": 0.3,
    "titolo_pagina": "AnimeSaturn - .hack//G.U. Returner Streaming Sub ITA",
    "file": "pagine/02.html"
   },
@@ -106,23 +107,23 @@
    "url": "https://www.animesaturn.net/anime/hack-g-u-returner-8PrAP/ep-1",
    "status": 200,
    "byte": 72101,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "AnimeSaturn - .hack//G.U. Returner Episodio 1 Streaming Sub ITA",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://play.saturncdn.net/embed/45138?token=80a1e98b296d0c8936733cc00ede5284&expires=1794095865",
+   "url": "https://play.saturncdn.net/embed/45138?token=142ead99603b38ce2b9878d3b506d514&expires=1794182992",
    "status": 200,
    "byte": 2829,
-   "secondi": 0.4,
+   "secondi": 0.2,
    "titolo_pagina": "Player",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://play.saturncdn.net/embed/45138/playlist?token=80a1e98b296d0c8936733cc00ede5284&expires=1794095865",
+   "url": "https://play.saturncdn.net/embed/45138/playlist?token=142ead99603b38ce2b9878d3b506d514&expires=1794182992",
    "status": 200,
    "byte": 214,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
@@ -130,7 +131,7 @@
    "url": "https://www.animesaturn.net/az-list",
    "status": 200,
    "byte": 106469,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "AnimeSaturn - Lista anime completa",
    "file": "pagine/06.html"
   },
@@ -154,7 +155,7 @@
    "url": "https://www.animesaturn.net/filter?sort=best_rated",
    "status": 200,
    "byte": 462801,
-   "secondi": 0.3,
+   "secondi": 0.4,
    "titolo_pagina": "AnimeSaturn - Filtro anime",
    "file": "pagine/09.html"
   },
@@ -162,7 +163,7 @@
    "url": "https://www.animesaturn.net/ongoing",
    "status": 200,
    "byte": 107661,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "AnimeSaturn - Anime in corso",
    "file": "pagine/10.html"
   },
@@ -170,7 +171,7 @@
    "url": "https://www.animesaturn.net/newest",
    "status": 200,
    "byte": 108627,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "AnimeSaturn - Nuove aggiunte",
    "file": "pagine/11.html"
   },
@@ -178,7 +179,7 @@
    "url": "https://www.animesaturn.net/filter?key=avatar",
    "status": 200,
    "byte": 431812,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "AnimeSaturn - Filtro: &quot;avatar&quot;",
    "file": "pagine/12.html"
   }

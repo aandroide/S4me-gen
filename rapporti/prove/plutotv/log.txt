@@ -10,11 +10,17 @@ Nessuna voce da riprodurre trovata
     top | ('Dirette {bold}', ['/it/live-tv/', 'live'])
     menu | ('Categorie', ['', 'category'])
 == controllo di tutte le sezioni
-   SEZIONE Dirette -> OK 465 
+   SEZIONE Dirette -> OK 468 
    SEZIONE '00s Movies -> OK 20 
    SEZIONE '70s Movies -> OK 20 
    SEZIONE '80s Movies -> OK 20 
    SEZIONE Categorie -> SOTTOMENU  
-   SEZIONE txt70741 … -> OK 67 
+   SEZIONE txt70741 … -> OK 56 
+      PROBLEMA: titolo senza indirizzo: Hunan: The Other World of Avatar
+      PROBLEMA: titolo senza indirizzo: Gamera 3: Revenge of Iris
+      PROBLEMA: titolo senza indirizzo: Cool World
+      PROBLEMA: titolo senza indirizzo: Social Animals
+      PROBLEMA: titolo senza indirizzo: MST3K: Gamera
+      PROBLEMA: titolo senza indirizzo: Quackerz
 SEZIONI: 3 ok su 3
 VERDETTO: SI FERMA A: ultimo passo, nessuna voce da riprodurre

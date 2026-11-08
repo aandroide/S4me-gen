@@ -6,35 +6,75 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.rest
       genres | •• Per Lettera | https://il-geniodellostreaming.rest/catalog/all
       peliculas | Serie Tv  | https://il-geniodellostreaming.rest/serie-tv/
 == lista "Tutti "
-   -> 17 voci
+   -> 18 voci
+      check | L'isola dei ricordi | https://il-geniodellostreaming.rest/film/35469-l-isola-dei-ricordi-streaming.html
+      check | Può solo andar peggio | https://il-geniodellostreaming.rest/film/35468-puo-solo-andar-peggio-streaming.html
       check | Awkwafina: Una chef improbabile | https://il-geniodellostreaming.rest/film/35458-awkwafina-una-chef-improbabile-streaming.html
       check | Blue Film | https://il-geniodellostreaming.rest/film/35456-blue-streaming.html
-      check | Campus Drivers | https://il-geniodellostreaming.rest/film/35454-campus-drivers-streaming.html
-      check | Dead-End Job | https://il-geniodellostreaming.rest/film/35370-dead-end-job-streaming.html
-== check su "Awkwafina: Una chef improbabile"
+== check su "L'isola dei ricordi"
    -> 1 voci
-      play | Awkwafina: Una chef improbabile | https://v.vidxgo.co/38992068
-== risoluzione vidxgo https://v.vidxgo.co/38992068
-   api /t/ 38992068 referer https://v.vidxgo.co/38992068 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 38992068 referer https://il-geniodellostreaming.rest/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+      play | L'isola dei ricordi | https://v.vidxgo.co/36583977
+== risoluzione vidxgo https://v.vidxgo.co/36583977
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (4)
     menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])
     menu | ('Generi {submenu}', ['', 'genres', 'genres', 'undefined'])
     menu | ('Per Lettera {submenu}', ['/catalog/all', 'genres', 'template-az', 'undefined'])
     menu | ('Serie Tv', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 16 
+   SEZIONE Tutti -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Blue Film
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Campus Drivers
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Dead-End Job
    SEZIONE Serie TV -> OK 18 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Campus Drivers
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Dead-End Job
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Melania Rea
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Palacio - Sotto assedio
    SEZIONE Animazione -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Bass X Machina
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Helluva Boss
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Thomas & Friends: Really Helpful Engines
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Magic Knight Rayearth
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Shaun, vita da pecora - Operazione Z.U.C.C.A.
    SEZIONE Avventura -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Magic Knight Rayearth
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Organize Isler: Money Trap
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Tamerlano - L'ultimo conquistatore
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Amore sotto copertura
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Narnia - Il nipote del mago
    SEZIONE •• Generi -> SOTTOMENU  
-   SEZIONE 0-9 -> OK 16 
-   SEZIONE A -> OK 16 
-   SEZIONE B -> OK 16 
+   SEZIONE 0-9 -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Blue Film
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Campus Drivers
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Dead-End Job
+   SEZIONE A -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Blue Film
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Campus Drivers
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Dead-End Job
+   SEZIONE B -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Blue Film
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Campus Drivers
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Dead-End Job
    SEZIONE •• Per Lettera -> SOTTOMENU  
    SEZIONE Serie Tv -> OK 18 
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://il-geniodellostreaming.rest/?s=avatar', 'status': 200, 'byte': 34900, 'titolo_pagina': 'Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis'}
 SEZIONI: 4 ok su 5
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+VERDETTO: ARRIVA AL VIDEO

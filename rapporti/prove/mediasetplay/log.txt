@@ -6,11 +6,11 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 134 voci
+   -> 131 voci
       findvideos | Die hard - Un buon giorno per morire | https://mediasetinfinity.mediaset.it/movie/diehardunbuongiornopermorire/die-hard-un-buon-giorno-per-
       findvideos | L'uomo d'acciaio | https://mediasetinfinity.mediaset.it/movie/luomodacciaio/luomo-dacciaio_F303733201000102
       findvideos | Divergent | https://mediasetinfinity.mediaset.it/movie/divergent/divergent_F305721401000102
-      findvideos | Invasion - Sotto attacco | https://mediasetinfinity.mediaset.it/movie/invasionsottoattacco/invasion-sotto-attacco_F313249901000
+      findvideos | 3 days to kill | https://mediasetinfinity.mediaset.it/movie/3daystokill/3-days-to-kill_F305950301000102
 == findvideos su "Die hard - Un buon giorno per morire"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -26,11 +26,11 @@ KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
    -> 21 voci
-      findvideos | Harry Potter e la pietra filosofale | https://mediasetinfinity.mediaset.it/movie/harrypotterelapietrafilosofale/harry-potter-e-la-pietra-f
-      findvideos | Invasion - Sotto attacco | https://mediasetinfinity.mediaset.it/movie/invasionsottoattacco/invasion-sotto-attacco_F313249901000
-      findvideos | The Watchers - Loro ti guardano | https://mediasetinfinity.mediaset.it/movie/thewatcherslorotiguardano/the-watchers-loro-ti-guardano_F
-      findvideos | Vacanze ai Caraibi | https://mediasetinfinity.mediaset.it/movie/vacanzeaicaraibi/vacanze-ai-caraibi_F306965601000101
-== findvideos su "Harry Potter e la pietra filosofale"
+      findvideos | Rosamunde Pilcher: ti troverò | https://mediasetinfinity.mediaset.it/movie/rosamundepilchertitrovero/rosamunde-pilcher-ti-trovero_F3
+      findvideos | La signora in giallo: Vagone letto con omicidio | https://mediasetinfinity.mediaset.it/movie/lasignoraingiallovagonelettoconomicidio/la-signora-in-gia
+      findvideos | 3 days to kill | https://mediasetinfinity.mediaset.it/movie/3daystokill/3-days-to-kill_F305950301000102
+      findvideos | Animali fantastici e dove trovarli | https://mediasetinfinity.mediaset.it/movie/animalifantasticiedovetrovarli/animali-fantastici-e-dove-
+== findvideos su "Rosamunde Pilcher: ti troverò"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -90,13 +90,13 @@ Nessuna voce da riprodurre trovata
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 46 
    SEZIONE Replay -> OK 23 
-   SEZIONE •• Tutti i Film -> OK 76 
+   SEZIONE •• Tutti i Film -> OK 75 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 1 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 2 
    SEZIONE Will & Grace 4 -> OK 6 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
@@ -104,52 +104,56 @@ Nessuna voce da riprodurre trovata
    SEZIONE Innocence -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
    SEZIONE La promessa -> OK 7 
-   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE Forbidden Fruit 4 -> OK 4 
+   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
-   SEZIONE Dragon Ball Daima -> OK 8 
-   SEZIONE One Piece 18 -> OK 2 
    SEZIONE Dragon Ball Super -> OK 30 
+   SEZIONE Dragon Ball Daima -> OK 8 
+   SEZIONE Captain Tsubasa -> OK 49 
    SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
-   SEZIONE I Simpson -> OK 5 
-   SEZIONE Law & Order: i due volti della giustizia 24 -> OK 2 
-   SEZIONE C.S.I. Scena del crimine 10 -> OK 7 
+   SEZIONE I Simpson -> OK 6 
+   SEZIONE NCIS: Los Angeles 6 -> OK 5 
+   SEZIONE Law & Order: Unità speciale 15 -> OK 9 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE •• Serie Turche -> SOTTOMENU  
+   SEZIONE Tu Si Que Vales 2026 -> OK 6 
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Le Iene 2026/2027 -> OK 6 
-   SEZIONE Zelig 30 - Autunno 2026 -> OK 4 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
+   SEZIONE Realpolitik 2026/2027 -> OK 2 
    SEZIONE Caduta libera 2026/2027 -> OK 4 
-   SEZIONE Amici 26 -> OK 10 
    SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
+   SEZIONE Tu Si Que Vales 2026 -> OK 6 
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Amici 26 -> OK 10 
-   SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE •• Talent e reality -> SOTTOMENU  
-   SEZIONE Lo straordinario mondo di Gumball -> OK 14 
-   SEZIONE Adventure Time -> OK 2 
+   SEZIONE Lo straordinario mondo di Gumball -> OK 9 
    SEZIONE Teen Titans Go! -> OK 10 
+   SEZIONE Adventure Time -> OK 2 
    SEZIONE •• Kids Boing -> SOTTOMENU  
-   SEZIONE La casa delle bambole di Gabby -> OK 7 
-   SEZIONE Simone -> OK 10 
-   SEZIONE Paw Patrol -> OK 7 
+      PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
+   SEZIONE Simone -> OK 5 
+   SEZIONE Paw Patrol -> OK 5 
+   SEZIONE La casa delle bambole di Gabby -> OK 5 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
-   SEZIONE I pinguini di Madagascar -> OK 2 
+   SEZIONE I pinguini di Madagascar -> OK 4 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 13 
+   SEZIONE •• Tutti i Documentari -> OK 12 
+      PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Enigmi alieni 10 -> OK 8 
    SEZIONE Parco nazionale di Donana - Eden spagnolo -> OK 2 
-   SEZIONE Lo sapevi che? 2024 -> OK 25 
+   SEZIONE Universo ai raggi X 5 -> OK 8 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
+      PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE •• Film Documentari di Focus -> OK 20 
+      PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE txt70741 … -> OK 20 
 SEZIONI: 24 ok su 24
 VERDETTO: SI FERMA A: findvideos su "Die hard - Un buon giorno per morire"

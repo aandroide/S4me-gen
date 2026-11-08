@@ -22,9 +22,10 @@
   {
    "server": "voe",
    "url": "https://voe.sx/e/pvjxstt9hq8m",
-   "finale": "https://ugc-cdn-caching-n3ucy3bpppbbkfws2y.cloudwindow-route.com/engine/hls2/01/18278/pvjxstt9hq8m_,l,.urlset/master.m3u8?t=3QIx4E-TtfskGlT2tB7PYvQP0spQlz7S_GwblTGdZyM&s=1794052783&e=14400&f=91391253&",
+   "tipo": "film",
+   "finale": "https://ugc-cdn-caching-n3jo0ypj9axwcwsi4h.cloudwindow-route.com/engine/hls2-c/01/18278/pvjxstt9hq8m_,l,.urlset/master.m3u8?t=lwBauqdGN5fEYg69TAiFCTalZujQWyaJMXwH4y9w27Y&s=1794139905&e=14400&f=9139125",
    "esito": "VIDEO OK",
-   "dettaglio": "m3u8 200"
+   "dettaglio": "m3u8 206"
   }
  ],
  "menu_dichiarato": [
@@ -38,24 +39,56 @@
   {
    "voce": "Anime",
    "azione": "peliculas",
+   "problemi": [
+    "tipo undefined, in Kodi appare come cartella: Winx Club - Battaglia per Magix",
+    "tipo undefined, in Kodi appare come cartella: Winx Club - Il destino di Bloom",
+    "tipo undefined, in Kodi appare come cartella: Winx Club - La Fenice d’ombra",
+    "tipo undefined, in Kodi appare come cartella: Winx Club - La Vendetta delle Trix",
+    "tipo undefined, in Kodi appare come cartella: Due spicci",
+    "tipo undefined, in Kodi appare come cartella: Transformers: EarthSpark"
+   ],
    "esito": "OK",
    "titoli": 20
   },
   {
    "voce": "•• Anime ITA",
    "azione": "peliculas",
+   "problemi": [
+    "tipo undefined, in Kodi appare come cartella: .hack//Sign",
+    "tipo undefined, in Kodi appare come cartella: 3x3 occhi",
+    "tipo undefined, in Kodi appare come cartella: 44 Gatti",
+    "tipo undefined, in Kodi appare come cartella: 5 Centimetri al Secondo",
+    "tipo undefined, in Kodi appare come cartella: 7 Seeds",
+    "tipo undefined, in Kodi appare come cartella: 80 sogni per viaggiare"
+   ],
    "esito": "OK",
    "titoli": 20
   },
   {
    "voce": "•• Anime Sub-ITA",
    "azione": "peliculas",
+   "problemi": [
+    "tipo undefined, in Kodi appare come cartella: .hack//Legend of the Twilight",
+    "tipo undefined, in Kodi appare come cartella: .hack//Quantum",
+    "tipo undefined, in Kodi appare come cartella: .hack//Roots",
+    "tipo undefined, in Kodi appare come cartella: 009-1 - Zero Zero Nain Wan",
+    "tipo undefined, in Kodi appare come cartella: 07-Ghost",
+    "tipo undefined, in Kodi appare come cartella: 100-man no Inochi no Ue ni Ore wa Tatte Iru"
+   ],
    "esito": "OK",
    "titoli": 20
   },
   {
    "voce": "Film Animazione",
    "azione": "peliculas",
+   "problemi": [
+    "tipo undefined, in Kodi appare come cartella: 10 Lives - Un gatto fortunato",
+    "tipo undefined, in Kodi appare come cartella: 200% lupo",
+    "tipo undefined, in Kodi appare come cartella: A Bug’s Life - Megaminimondo",
+    "tipo undefined, in Kodi appare come cartella: A Christmas Carol",
+    "tipo undefined, in Kodi appare come cartella: A Muppet Christmas - Lettere a Babbo Natale",
+    "tipo undefined, in Kodi appare come cartella: A Scanner Darkly - Un oscuro scrutare"
+   ],
    "esito": "OK",
    "titoli": 20
   },
@@ -68,6 +101,14 @@
   {
    "voce": "txt70741 …",
    "azione": "search",
+   "problemi": [
+    "tipo undefined, in Kodi appare come cartella: Avatar - La leggenda di Aang",
+    "tipo undefined, in Kodi appare come cartella: Avatar - La leggenda di Aang - Serie Tv",
+    "tipo undefined, in Kodi appare come cartella: That Time I Got Reincarnated as a Slime",
+    "tipo undefined, in Kodi appare come cartella: Star Blazers",
+    "tipo undefined, in Kodi appare come cartella: Belle",
+    "tipo undefined, in Kodi appare come cartella: Eroi a meta’"
+   ],
    "esito": "OK",
    "titoli": 11
   }
@@ -77,39 +118,39 @@
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anime",
    "status": 200,
-   "byte": 328285,
-   "secondi": 3.6,
+   "byte": 329069,
+   "secondi": 3.5,
    "titolo_pagina": "Anime Archivi - TOONITALIA",
    "file": "pagine/01.html"
   },
   {
    "url": "https://toonitalia.xyz/category/anime",
    "status": 200,
-   "byte": 328285,
-   "secondi": 3.7,
+   "byte": 329069,
+   "secondi": 3.5,
    "titolo_pagina": "Anime Archivi - TOONITALIA",
    "file": "pagine/02.html"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/winx-club-battaglia-per-magix/",
    "status": 200,
-   "byte": 94310,
-   "secondi": 2.2,
+   "byte": 94683,
+   "secondi": 2.3,
    "titolo_pagina": "Winx Club - Battaglia per Magix streaming e download Ita Toonitalia",
    "file": "pagine/03.html"
   },
   {
    "url": "https://toonitalia.xyz/winx-club-battaglia-per-magix/",
    "status": 200,
-   "byte": 94310,
-   "secondi": 2.3,
+   "byte": 94683,
+   "secondi": 2.4,
    "titolo_pagina": "Winx Club - Battaglia per Magix streaming e download Ita Toonitalia",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/winx-club-battaglia-per-magix/",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/winx-club-battaglia-per-magix/",
    "status": 200,
-   "byte": 94734,
+   "byte": 95180,
    "secondi": 2.2,
    "titolo_pagina": "Winx Club - Battaglia per Magix streaming e download Ita Toonitalia",
    "file": "pagine/05.html"
@@ -117,8 +158,8 @@
   {
    "url": "https://toonitalia.xyz/winx-club-battaglia-per-magix/",
    "status": 200,
-   "byte": 94734,
-   "secondi": 2.3,
+   "byte": 95180,
+   "secondi": 2.2,
    "titolo_pagina": "Winx Club - Battaglia per Magix streaming e download Ita Toonitalia",
    "file": "pagine/06.html"
   },
@@ -126,15 +167,15 @@
    "url": "https://voe.sx/e/pvjxstt9hq8m",
    "status": 200,
    "byte": 755,
-   "secondi": 0.4,
+   "secondi": 0.6,
    "titolo_pagina": "Redirecting...",
    "file": "pagine/07.html"
   },
   {
    "url": "https://shannoncoldalready.com/e/pvjxstt9hq8m",
    "status": 200,
-   "byte": 126940,
-   "secondi": 0.7,
+   "byte": 126947,
+   "secondi": 0.5,
    "titolo_pagina": "Guardi Winx Club - Battaglia per Magix.mp4 - VOE | Content Delivery Network (CDN",
    "file": "pagine/08.html"
   },
@@ -142,30 +183,30 @@
    "url": "https://voe.sx/js/loader.a40897e.js",
    "status": 200,
    "byte": 86050,
-   "secondi": 1.0,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/anime",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anime",
    "status": 200,
-   "byte": 329926,
-   "secondi": 3.3,
+   "byte": 329251,
+   "secondi": 3.4,
    "titolo_pagina": "Anime Archivi - TOONITALIA",
    "file": "pagine/10.html"
   },
   {
    "url": "https://toonitalia.xyz/category/anime",
    "status": 200,
-   "byte": 329926,
-   "secondi": 3.4,
+   "byte": 329251,
+   "secondi": 3.5,
    "titolo_pagina": "Anime Archivi - TOONITALIA",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/anime-ita",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/anime-ita",
    "status": 200,
-   "byte": 220702,
+   "byte": 220844,
    "secondi": 3.4,
    "titolo_pagina": "Anime Ita",
    "file": "pagine/12.html"
@@ -173,67 +214,67 @@
   {
    "url": "https://toonitalia.xyz/anime-ita",
    "status": 200,
-   "byte": 220702,
+   "byte": 220844,
    "secondi": 3.5,
    "titolo_pagina": "Anime Ita",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/contatti",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/contatti",
    "status": 200,
-   "byte": 129593,
-   "secondi": 3.1,
+   "byte": 129914,
+   "secondi": 2.9,
    "titolo_pagina": "Anime Sub-Ita",
    "file": "pagine/14.html"
   },
   {
    "url": "https://toonitalia.xyz/contatti",
    "status": 200,
-   "byte": 129593,
-   "secondi": 3.2,
+   "byte": 129914,
+   "secondi": 3.0,
    "titolo_pagina": "Anime Sub-Ita",
    "file": "pagine/15.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/film-animazione",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/film-animazione",
    "status": 200,
-   "byte": 173810,
-   "secondi": 3.1,
+   "byte": 172835,
+   "secondi": 3.2,
    "titolo_pagina": "Film Animazione"
   },
   {
    "url": "https://toonitalia.xyz/film-animazione",
    "status": 200,
-   "byte": 173810,
+   "byte": 172835,
    "secondi": 3.2,
    "titolo_pagina": "Film Animazione"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serie-tv/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serie-tv/",
    "status": 200,
-   "byte": 124731,
-   "secondi": 2.2,
+   "byte": 125193,
+   "secondi": 2.3,
    "titolo_pagina": "Serie Tv"
   },
   {
    "url": "https://toonitalia.xyz/serie-tv/",
    "status": 200,
-   "byte": 124731,
-   "secondi": 2.3,
+   "byte": 125193,
+   "secondi": 2.4,
    "titolo_pagina": "Serie Tv"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/?s=avatar",
    "status": 200,
-   "byte": 113067,
-   "secondi": 2.4,
+   "byte": 113611,
+   "secondi": 2.2,
    "titolo_pagina": "Hai cercato avatar - TOONITALIA"
   },
   {
    "url": "https://toonitalia.xyz/?s=avatar",
    "status": 200,
-   "byte": 113067,
-   "secondi": 2.4,
+   "byte": 113611,
+   "secondi": 2.3,
    "titolo_pagina": "Hai cercato avatar - TOONITALIA"
   }
  ],

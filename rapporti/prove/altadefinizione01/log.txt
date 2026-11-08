@@ -7,19 +7,19 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
       genres | •• Generi | https://altadefinizione-01.best
 == lista "Tutti "
    -> 26 voci
+      check | L'isola dei ricordi  | https://altadefinizione-01.best/35469-l-isola-dei-ricordi-streaming.html
       check | Blue Film  | https://altadefinizione-01.best/35456-blue-streaming.html
       check | Possible Love  | https://altadefinizione-01.best/35448-possible-love-streaming.html
       check | Super Troopers 3  | https://altadefinizione-01.best/35447-super-troopers-3-streaming.html
-      check | One Year to Live, Buy a Man  | https://altadefinizione-01.best/35444-one-year-to-live-buy-a-man-streaming.html
-== check su "Blue Film "
+== check su "L'isola dei ricordi "
    -> 3 voci
-      play | Blue Film  | https://v.vidxgo.co/34915693
-      play | Blue Film  | https://vixsrc.to/movie/tt34915693
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35456-blue-streaming.html
-== risoluzione vidxgo https://v.vidxgo.co/34915693
+      play | L'isola dei ricordi  | https://v.vidxgo.co/36583977
+      play | L'isola dei ricordi  | https://vixsrc.to/movie/tt36583977
+      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35469-l-isola-dei-ricordi-streaming.html
+== risoluzione vidxgo https://v.vidxgo.co/36583977
    -> VIDEO OK m3u8 200 
-== risoluzione vixsrc https://vixsrc.to/movie/tt34915693
-   -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
+== risoluzione vixsrc https://vixsrc.to/movie/tt36583977
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (8)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
     menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])
@@ -32,7 +32,7 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
 == controllo di tutte le sezioni
    SEZIONE Tutti -> OK 25 
    SEZIONE •• Al Cinema -> OK 30 
-   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 36 
+   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 35 
    SEZIONE Azione -> OK 29 
    SEZIONE Animazione -> OK 27 
    SEZIONE Avventura -> OK 30 
@@ -46,7 +46,7 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
    SEZIONE 2024 -> VUOTA   | ultima pagina: {'url': 'https://altadefinizione-01.best/find/2024/', 'status': 404, 'byte': 764, 'titolo_pagina': '404 | Not Found'}
    SEZIONE •• Anni -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://altadefinizione-01.best/find/2025/', 'status': 404, 'byte': 764, 'titolo_pagina': '404 | Not Found'}
    SEZIONE •• Sub-ITA -> OK 30 
-   SEZIONE Serie TV -> OK 30 
+   SEZIONE Serie TV -> OK 29 
    SEZIONE txt70741 … -> OK 6 
 SEZIONI: 8 ok su 9
    SEZIONE SENZA TITOLI: •• Anni | SOTTOMENU SENZA TITOLI

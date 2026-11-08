@@ -15,7 +15,7 @@ Canale toonitalia | indirizzo https://toonitalia.xyz
    -> 1 voci
       play | Winx Club - Battaglia per Magix  | https://voe.sx/e/pvjxstt9hq8m
 == risoluzione voe https://voe.sx/e/pvjxstt9hq8m
-   -> VIDEO OK m3u8 200 
+   -> VIDEO OK m3u8 206 
 == voci dichiarate in mainlist (5)
     menu | ('Anime', ['/category/anime', 'peliculas', '', 'undefined'])
     menu | ('Anime ITA {submenu}', ['/anime-ita', 'peliculas', 'list', 'undefined'])
@@ -24,10 +24,40 @@ Canale toonitalia | indirizzo https://toonitalia.xyz
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', 'list', 'tvshow'])
 == controllo di tutte le sezioni
    SEZIONE Anime -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Winx Club - Battaglia per Magix
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Winx Club - Il destino di Bloom
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Winx Club - La Fenice d’ombra
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Winx Club - La Vendetta delle Trix
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Due spicci
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Transformers: EarthSpark
    SEZIONE •• Anime ITA -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: .hack//Sign
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 3x3 occhi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 44 Gatti
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 5 Centimetri al Secondo
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 7 Seeds
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 80 sogni per viaggiare
    SEZIONE •• Anime Sub-ITA -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: .hack//Legend of the Twilight
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: .hack//Quantum
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: .hack//Roots
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 009-1 - Zero Zero Nain Wan
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 07-Ghost
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 100-man no Inochi no Ue ni Ore wa Tatte Iru
    SEZIONE Film Animazione -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 10 Lives - Un gatto fortunato
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 200% lupo
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: A Bug’s Life - Megaminimondo
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: A Christmas Carol
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: A Muppet Christmas - Lettere a Babbo Natale
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: A Scanner Darkly - Un oscuro scrutare
    SEZIONE Serie TV -> OK 20 
    SEZIONE txt70741 … -> OK 11 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar - La leggenda di Aang
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar - La leggenda di Aang - Serie Tv
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: That Time I Got Reincarnated as a Slime
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Star Blazers
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Belle
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Eroi a meta’
 SEZIONI: 6 ok su 6
 VERDETTO: ARRIVA AL VIDEO

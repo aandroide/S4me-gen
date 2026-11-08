@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.one
       peliculas | • Archivio | https://eurostream.one/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | The Assassin | https://eurostream.one/the-assassin/
-      episodios | Kill Jackie | https://eurostream.one/kill-jackie/
-      episodios | Grey’s Anatomy | https://eurostream.one/grey-s-anatomy-163/
-      episodios | Georgie & Mandy’s First Marriage | https://eurostream.one/georgie-mandys-first-marriage/
-== episodios su "The Assassin"
-   -> 14 voci
-      findvideos | 1x01 - Episodio 01  | https://eurostream.one/the-assassin/
-      findvideos | 1x02 - Episodio 02  | https://eurostream.one/the-assassin/
-      findvideos | 1x03 - Episodio 03  | https://eurostream.one/the-assassin/
-      findvideos | 1x04 - Episodio 4  | https://eurostream.one/the-assassin/
-== findvideos su "1x01 - Episodio 01 "
+      episodios | Blue Lights | https://eurostream.one/blue-lights-2023/
+      episodios | The Kardashians | https://eurostream.one/the-kardashians-2022-o/
+      episodios | Law & Order - Unita Vittime Speciali | https://eurostream.one/law-and-order-unita-vittime-speciali-30/
+      episodios | Scrubs | https://eurostream.one/scrubs-2026/
+== episodios su "Blue Lights"
+   -> 25 voci
+      findvideos | 1x01 - The Code  | https://eurostream.one/blue-lights-2023/
+      findvideos | 1x02 - Bad Batch  | https://eurostream.one/blue-lights-2023/
+      findvideos | 1x03 - The Fear  | https://eurostream.one/blue-lights-2023/
+      findvideos | 1x04 - Full Moon Fever  | https://eurostream.one/blue-lights-2023/
+== findvideos su "1x01 - The Code "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,12 +34,12 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/427aps5q0sew
+Exception: Not un-shortened link: https://clicka.cc/tv/8ehnmyta
 
 == lista "• Anime"
    -> 19 voci
       episodios | Daemons of the Shadow Realm | https://eurostream.one/daemons-of-the-shadow-realm/
-      episodios | Adventure Time: Side Quests | https://eurostream.one/adventure-time-side-quests/
+      episodios | Adventure Time: Missioni leggendarie | https://eurostream.one/adventure-time-side-quests/
       episodios | Avatar: I Sette Rifugi | https://eurostream.one/avatar-sette-rifugi/
       episodios | Willy il Coyote e Beep Beep | https://eurostream.one/willy-il-coyote-e-beep-beep/
 == episodios su "Daemons of the Shadow Realm"
@@ -65,21 +65,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47
+Exception: Not un-shortened link: https://clicka.cc/mix/0d9arej2
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 2x01 - The Assassin - Episode 1  | https://eurostream.one/the-assassin/
-      episodios | 1x01 - Kill Jackie - Burning Down The House  | https://eurostream.one/kill-jackie/
-      episodios | 23x04 - Grey's Anatomy - Love on the Brain  | https://eurostream.one/grey-s-anatomy-163/
-      episodios | 3x05 - Georgie & Mandy's First Marriage - A Snotty Attitude  | https://eurostream.one/georgie-mandys-first-marriage/
-== episodios su "2x01 - The Assassin - Episode 1 "
-   -> 14 voci
-      findvideos | 1x01 - Episodio 01  | https://eurostream.one/the-assassin/
-      findvideos | 1x02 - Episodio 02  | https://eurostream.one/the-assassin/
-      findvideos | 1x03 - Episodio 03  | https://eurostream.one/the-assassin/
-      findvideos | 1x04 - Episodio 4  | https://eurostream.one/the-assassin/
-== findvideos su "1x01 - Episodio 01 "
+      episodios | 8x05 - The Kardashians (2022) - Non provatelo a casa | https://eurostream.one/the-kardashians-2022-o/
+      episodios | 28x04 - Law & Order - Unita Vittime Speciali - Arcana  | https://eurostream.one/law-and-order-unita-vittime-speciali-30/
+      episodios | 2x07 - Scrubs (2026) - My Story  | https://eurostream.one/scrubs-2026/
+      episodios | 1x01 - Adventure Time: Missioni leggendarie - Sfida all ulti | https://eurostream.one/adventure-time-side-quests/
+== episodios su "8x05 - The Kardashians (2022) - Non prov"
+   -> 132 voci
+      findvideos | 1x01 - Bruciateli tutti fino alla f*ttuta terra  | https://eurostream.one/the-kardashians-2022-o/
+      findvideos | 1x02 - Qualcuno l’ha registrato?  | https://eurostream.one/the-kardashians-2022-o/
+      findvideos | 1x03 - In diretta da New York  | https://eurostream.one/the-kardashians-2022-o/
+      findvideos | 1x04 - Celebriamo il sesso  | https://eurostream.one/the-kardashians-2022-o/
+== findvideos su "1x01 - Bruciateli tutti fino alla f*ttut"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/427aps5q0sew
+Exception: Not un-shortened link: https://clicka.cc/tv/4q8vxuoy
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -111,4 +111,4 @@ Nessuna voce da riprodurre trovata
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostream.one/?s=avatar', 'status': 403, 'byte': 5913, 'titolo_pagina': 'Just a moment...'}
 SEZIONI: 4 ok su 5
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: findvideos su "1x01 - Episodio 01 "
+VERDETTO: SI FERMA A: findvideos su "1x01 - The Code "
