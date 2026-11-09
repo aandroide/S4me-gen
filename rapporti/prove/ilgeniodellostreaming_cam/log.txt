@@ -6,29 +6,31 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.rest
       genres | •• Per Lettera | https://il-geniodellostreaming.rest/catalog/all
       peliculas | Serie Tv  | https://il-geniodellostreaming.rest/serie-tv/
 == lista "Tutti "
-   -> 18 voci
+   -> 20 voci
+      check | Un buon avvocato | https://il-geniodellostreaming.rest/film/35473-un-buon-avvocato-streaming.html
       check | L'isola dei ricordi | https://il-geniodellostreaming.rest/film/35469-l-isola-dei-ricordi-streaming.html
       check | Può solo andar peggio | https://il-geniodellostreaming.rest/film/35468-puo-solo-andar-peggio-streaming.html
       check | Awkwafina: Una chef improbabile | https://il-geniodellostreaming.rest/film/35458-awkwafina-una-chef-improbabile-streaming.html
-      check | Blue Film | https://il-geniodellostreaming.rest/film/35456-blue-streaming.html
-== check su "L'isola dei ricordi"
+== check su "Un buon avvocato"
    -> 1 voci
-      play | L'isola dei ricordi | https://v.vidxgo.co/36583977
-== risoluzione vidxgo https://v.vidxgo.co/36583977
-   -> VIDEO OK m3u8 200 
+      play | Un buon avvocato | https://v.vidxgo.co/39453578
+== risoluzione vidxgo https://v.vidxgo.co/39453578
+   api /t/ 39453578 referer https://v.vidxgo.co/39453578 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 39453578 referer https://il-geniodellostreaming.rest/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (4)
     menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])
     menu | ('Generi {submenu}', ['', 'genres', 'genres', 'undefined'])
     menu | ('Per Lettera {submenu}', ['/catalog/all', 'genres', 'template-az', 'undefined'])
     menu | ('Serie Tv', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 17 
+   SEZIONE Tutti -> OK 19 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Un buon avvocato
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Blue Film
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Campus Drivers
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Dead-End Job
    SEZIONE Serie TV -> OK 18 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
@@ -51,30 +53,30 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.rest
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Amore sotto copertura
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Narnia - Il nipote del mago
    SEZIONE •• Generi -> SOTTOMENU  
-   SEZIONE 0-9 -> OK 17 
+   SEZIONE 0-9 -> OK 19 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Serial Killer Connection
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Un buon avvocato
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Blue Film
+   SEZIONE A -> OK 19 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Un buon avvocato
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Blue Film
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Campus Drivers
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Dead-End Job
-   SEZIONE A -> OK 17 
+   SEZIONE B -> OK 19 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Serial Killer Connection
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Un buon avvocato
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Blue Film
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Campus Drivers
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Dead-End Job
-   SEZIONE B -> OK 17 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Blue Film
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Campus Drivers
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Dead-End Job
    SEZIONE •• Per Lettera -> SOTTOMENU  
    SEZIONE Serie Tv -> OK 18 
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://il-geniodellostreaming.rest/?s=avatar', 'status': 200, 'byte': 34900, 'titolo_pagina': 'Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis'}
 SEZIONI: 4 ok su 5
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)

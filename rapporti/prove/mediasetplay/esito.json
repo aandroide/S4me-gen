@@ -23,7 +23,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"Rosamunde Pilcher: ti troverò\"",
+   "passo": "findvideos su \"Lost river\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -33,7 +33,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"The place\"",
+   "passo": "findvideos su \"Harry Potter e la pietra filosofale\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   }
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 75
+   "titoli": 73
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -123,13 +123,13 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 3
     },
     {
-     "voce": "Will & Grace 4",
+     "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 11
     }
    ]
   },
@@ -166,22 +166,22 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "La promessa",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 7
-    },
-    {
      "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
     },
     {
-     "voce": "Tutto per la mia famiglia 2",
+     "voce": "Beautiful",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 5
+    },
+    {
+     "voce": "Tempesta d'amore",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
     }
    ]
   },
@@ -201,19 +201,19 @@
      "voce": "Dragon Ball Super",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 30
-    },
-    {
-     "voce": "Dragon Ball Daima",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 8
+     "titoli": 27
     },
     {
      "voce": "Captain Tsubasa",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 49
+    },
+    {
+     "voce": "Dragon Ball Daima",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 8
     }
    ]
   },
@@ -227,19 +227,19 @@
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
-    },
-    {
-     "voce": "NCIS: Los Angeles 6",
-     "azione": "epmenu",
-     "esito": "OK",
      "titoli": 5
     },
     {
      "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 9
+     "titoli": 11
+    },
+    {
+     "voce": "C.S.I. Scena del crimine 10",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 8
     }
    ]
   },
@@ -256,16 +256,16 @@
      "titoli": 4
     },
     {
-     "voce": "My Sweet Lie",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
-    },
-    {
      "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
+    },
+    {
+     "voce": "Love is in the air",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 7
     }
    ]
   },
@@ -276,13 +276,13 @@
    "sottovoci": 11,
    "figli": [
     {
-     "voce": "Tu Si Que Vales 2026",
+     "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
     },
     {
-     "voce": "Grande Fratello VIP - Autunno 2026",
+     "voce": "Tu Si Que Vales 2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
@@ -302,6 +302,12 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Ore 11",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
+    },
+    {
      "voce": "La ruota della fortuna 2025/2026",
      "azione": "epmenu",
      "esito": "OK",
@@ -312,12 +318,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 2
-    },
-    {
-     "voce": "Caduta libera 2026/2027",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
     }
    ]
   },
@@ -327,12 +327,6 @@
    "esito": "SOTTOMENU",
    "sottovoci": 100,
    "figli": [
-    {
-     "voce": "Tu Si Que Vales 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 6
-    },
     {
      "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
@@ -344,6 +338,12 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
+    },
+    {
+     "voce": "Tu Si Que Vales 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
     }
    ]
   },
@@ -363,16 +363,16 @@
      "titoli": 9
     },
     {
-     "voce": "Teen Titans Go!",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 10
-    },
-    {
      "voce": "Adventure Time",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 2
+    },
+    {
+     "voce": "Looney Tunes Cartoons",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
     }
    ]
   },
@@ -380,7 +380,7 @@
    "voce": "•• Kids Cartoonito",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 15,
+   "sottovoci": 14,
    "figli": [
     {
      "voce": "Simone",
@@ -435,7 +435,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 12
+   "titoli": 13
   },
   {
    "voce": "•• Documentari più visti",
@@ -459,10 +459,10 @@
      "titoli": 2
     },
     {
-     "voce": "Universo ai raggi X 5",
+     "voce": "Lo sapevi che? 2024",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 8
+     "titoli": 25
     }
    ]
   },

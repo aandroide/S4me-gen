@@ -32,7 +32,7 @@
     {
      "url": "https://vixsrc.to/api/list/movie?lang=it",
      "status": 200,
-     "byte": 582418,
+     "byte": 582545,
      "titolo_pagina": ""
     }
    ]
@@ -58,7 +58,7 @@
     {
      "url": "https://vixsrc.to/api/list/movie?lang=it",
      "status": 200,
-     "byte": 582418,
+     "byte": 582545,
      "titolo_pagina": ""
     },
     {
@@ -70,7 +70,7 @@
     {
      "url": "https://api.themoviedb.org/3/search/movie?api_key=a1ab8b8669da03637a4b98fa39c39228&query=avatar&language=it&include_adult=False&page=1",
      "status": 200,
-     "byte": 9023,
+     "byte": 9017,
      "titolo_pagina": ""
     }
    ]
@@ -81,8 +81,8 @@
   {
    "url": "https://vixsrc.to/api/list/movie?lang=it",
    "status": 200,
-   "byte": 582418,
-   "secondi": 0.6,
+   "byte": 582545,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
@@ -90,15 +90,15 @@
    "url": "https://vixsrc.to/api/list/tv?lang=it",
    "status": 200,
    "byte": 204449,
-   "secondi": 0.5,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://vixsrc.to/api/list/movie?lang=it",
    "status": 200,
-   "byte": 582418,
-   "secondi": 0.6,
+   "byte": 582545,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
@@ -106,15 +106,15 @@
    "url": "https://vixsrc.to/api/list/tv?lang=it",
    "status": 200,
    "byte": 204449,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://vixsrc.to/api/list/movie?lang=it",
    "status": 200,
-   "byte": 582418,
-   "secondi": 0.5,
+   "byte": 582545,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
@@ -122,15 +122,15 @@
    "url": "https://api.themoviedb.org/3/genre/movie/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
    "byte": 562,
-   "secondi": 0.0,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
    "url": "https://api.themoviedb.org/3/search/movie?api_key=a1ab8b8669da03637a4b98fa39c39228&query=avatar&language=it&include_adult=False&page=1",
    "status": 200,
-   "byte": 9023,
-   "secondi": 0.0,
+   "byte": 9017,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
@@ -146,7 +146,7 @@
    "url": "https://vixsrc.to/api/list/tv?lang=it",
    "status": 200,
    "byte": 204449,
-   "secondi": 0.5,
+   "secondi": 0.8,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
@@ -161,8 +161,8 @@
   {
    "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=avatar&language=it&include_adult=False&page=1",
    "status": 200,
-   "byte": 9285,
-   "secondi": 0.0,
+   "byte": 9287,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/11.html"
   },
@@ -170,7 +170,7 @@
    "url": "https://api.themoviedb.org/3/tv/211029/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
    "byte": 26,
-   "secondi": 0.0,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/12.html"
   }

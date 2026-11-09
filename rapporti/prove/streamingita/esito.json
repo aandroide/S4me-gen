@@ -19,8 +19,8 @@
   },
   {
    "passo": "lista \"• Film\"",
-   "esito": "VUOTO",
-   "voci": 0
+   "esito": "ERRORE",
+   "errore": "\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/channels/streamingita.py\", line 38, in peliculas\n    return support.dooplay_peliculas(item, mixed)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nplatformcode.logger.WebErrorException\n"
   }
  ],
  "video": [],
@@ -39,7 +39,7 @@
     {
      "url": "https://streamingita.homes/film",
      "status": 200,
-     "byte": 27453,
+     "byte": 27620,
      "titolo_pagina": ""
     }
    ]
@@ -52,7 +52,7 @@
     {
      "url": "https://streamingita.homes/film",
      "status": 200,
-     "byte": 27539,
+     "byte": 27578,
      "titolo_pagina": ""
     }
    ]
@@ -65,7 +65,7 @@
     {
      "url": "https://streamingita.homes/film",
      "status": 200,
-     "byte": 27389,
+     "byte": 27354,
      "titolo_pagina": ""
     }
    ]
@@ -78,7 +78,7 @@
     {
      "url": "https://streamingita.homes/tv",
      "status": 200,
-     "byte": 27363,
+     "byte": 27466,
      "titolo_pagina": ""
     }
    ]
@@ -91,7 +91,7 @@
     {
      "url": "https://streamingita.homes/?s=avatar",
      "status": 200,
-     "byte": 27464,
+     "byte": 27377,
      "titolo_pagina": ""
     }
    ]
@@ -102,64 +102,64 @@
   {
    "url": "https://streamingita.homes/film",
    "status": 200,
-   "byte": 27595,
-   "secondi": 3.5,
+   "byte": 27380,
+   "secondi": 6.5,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
    "url": "https://streamingita.homes/film",
    "status": 200,
-   "byte": 27641,
-   "secondi": 0.9,
+   "byte": 27850,
+   "secondi": 7.4,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://streamingita.homes/film",
-   "status": 200,
-   "byte": 27341,
-   "secondi": 0.9,
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 10.6,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
    "url": "https://streamingita.homes/film",
    "status": 200,
-   "byte": 27453,
-   "secondi": 0.9,
+   "byte": 27620,
+   "secondi": 1.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://streamingita.homes/film",
    "status": 200,
-   "byte": 27539,
-   "secondi": 3.6,
+   "byte": 27578,
+   "secondi": 0.9,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
    "url": "https://streamingita.homes/film",
    "status": 200,
-   "byte": 27389,
-   "secondi": 0.9,
+   "byte": 27354,
+   "secondi": 4.2,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
    "url": "https://streamingita.homes/tv",
    "status": 200,
-   "byte": 27363,
-   "secondi": 1.0,
+   "byte": 27466,
+   "secondi": 1.6,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
    "url": "https://streamingita.homes/?s=avatar",
    "status": 200,
-   "byte": 27464,
-   "secondi": 2.9,
+   "byte": 27377,
+   "secondi": 2.2,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   }

@@ -51,17 +51,17 @@ Canale raiplay | indirizzo https://www.raiplay.it
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
    SEZIONE Rai 1 -> OK 19 
-   SEZIONE Rai 2 -> OK 20 
-   SEZIONE Rai 3 -> OK 13 
-   SEZIONE str17 08 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 35 
-   SEZIONE Rai 2 -> OK 32 
-   SEZIONE Rai 3 -> OK 31 
-   SEZIONE str16 07 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 29 
+   SEZIONE Rai 2 -> OK 18 
+   SEZIONE Rai 3 -> OK 15 
+   SEZIONE str11 09 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 32 
    SEZIONE Rai 2 -> ERRORE JSONDecodeError
-   SEZIONE Rai 3 -> OK 31 
-   SEZIONE str15 06 str31 -> SOTTOMENU  
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE str17 08 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> ERRORE JSONDecodeError
+   SEZIONE Rai 2 -> ERRORE JSONDecodeError
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE str16 07 str31 -> SOTTOMENU SENZA TITOLI  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE Novità -> OK 23 
    SEZIONE Da non perdere -> OK 25 
@@ -79,12 +79,12 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Territori e itinerari -> OK 32 
    SEZIONE Approfondimento -> OK 25 
    SEZIONE Programmi TV -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 30 
+   SEZIONE Da non perdere -> OK 31 
    SEZIONE Docu-serie Original -> OK 29 
-   SEZIONE Documentari Original -> OK 24 
+   SEZIONE Documentari Original -> OK 25 
    SEZIONE Documentari -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 28 
-   SEZIONE Cinema bambini -> OK 23 
+   SEZIONE Cinema bambini -> OK 24 
    SEZIONE Solo  Corti! -> OK 20 
    SEZIONE Bambini -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 36 

@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"1917\"",
+   "passo": "findvideos su \"Porzûs\"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,9 +21,9 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/8579674",
+   "url": "https://v.vidxgo.co/0125464",
    "tipo": "film",
-   "finale": "http://127.0.0.1:33443/hls/8579674/master.m3u8",
+   "finale": "http://127.0.0.1:35547/hls/0125464/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -119,23 +119,23 @@
   {
    "url": "https://altadefinizionex.bar/film/",
    "status": 200,
-   "byte": 131816,
-   "secondi": 0.6,
+   "byte": 132025,
+   "secondi": 1.6,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizionex.bar/guerra/11159-1917-streaming.html",
+   "url": "https://altadefinizionex.bar/guerra/45500-porzus-streaming.html",
    "status": 200,
-   "byte": 492011,
-   "secondi": 0.9,
+   "byte": 374109,
+   "secondi": 1.3,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://altadefinizionex.bar/film/",
    "status": 200,
-   "byte": 131816,
+   "byte": 132025,
    "secondi": 0.3,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/03.html"
@@ -143,7 +143,7 @@
   {
    "url": "https://altadefinizionex.bar",
    "status": 200,
-   "byte": 505270,
+   "byte": 510783,
    "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/04.html"
@@ -152,7 +152,7 @@
    "url": "https://altadefinizionex.bar/cinema/film",
    "status": 404,
    "byte": 33644,
-   "secondi": 0.5,
+   "secondi": 0.6,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/05.html"
   },
@@ -160,7 +160,7 @@
    "url": "https://altadefinizionex.bar/cinema/",
    "status": 200,
    "byte": 73081,
-   "secondi": 1.3,
+   "secondi": 0.6,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/06.html"
   },
@@ -168,7 +168,7 @@
    "url": "https://altadefinizionex.bar/azione/film",
    "status": 200,
    "byte": 133367,
-   "secondi": 0.9,
+   "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/07.html"
   },
@@ -176,23 +176,23 @@
    "url": "https://altadefinizionex.bar/animazione/film",
    "status": 200,
    "byte": 135518,
-   "secondi": 0.9,
+   "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/08.html"
   },
   {
    "url": "https://altadefinizionex.bar/serie-tv/",
    "status": 200,
-   "byte": 135776,
-   "secondi": 0.5,
+   "byte": 134943,
+   "secondi": 1.1,
    "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione",
    "file": "pagine/09.html"
   },
   {
    "url": "https://altadefinizionex.bar",
    "status": 200,
-   "byte": 505270,
-   "secondi": 0.1,
+   "byte": 510783,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/10.html"
   },
@@ -200,7 +200,7 @@
    "url": "https://altadefinizionex.bar/cinema/serie-tv",
    "status": 404,
    "byte": 33652,
-   "secondi": 0.5,
+   "secondi": 0.6,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/11.html"
   },
@@ -208,14 +208,14 @@
    "url": "https://altadefinizionex.bar/cinema/",
    "status": 200,
    "byte": 73081,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/12.html"
   },
   {
    "url": "https://altadefinizionex.bar/azione/serie-tv",
    "status": 200,
-   "byte": 136879,
+   "byte": 136878,
    "secondi": 0.9,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/13.html"
@@ -223,16 +223,16 @@
   {
    "url": "https://altadefinizionex.bar/animazione/serie-tv",
    "status": 200,
-   "byte": 136061,
-   "secondi": 0.9,
+   "byte": 136060,
+   "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/14.html"
   },
   {
    "url": "https://altadefinizionex.bar/archivio?search=avatar&f=all&page=1",
    "status": 200,
-   "byte": 96895,
-   "secondi": 0.8,
+   "byte": 97386,
+   "secondi": 1.0,
    "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione",
    "file": "pagine/15.html"
   }

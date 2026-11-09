@@ -13,7 +13,7 @@
    "voci": 26
   },
   {
-   "passo": "check su \"L'isola dei ricordi \"",
+   "passo": "check su \"Un buon avvocato \"",
    "esito": "OK",
    "voci": 3
   }
@@ -21,17 +21,33 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/36583977",
+   "url": "https://v.vidxgo.co/39453578",
    "tipo": "film",
-   "finale": "http://127.0.0.1:39027/hls/36583977/master.m3u8",
-   "esito": "VIDEO OK",
-   "dettaglio": "m3u8 200"
+   "nota": "il server non risponde entro 90 secondi",
+   "modulo_server": true,
+   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
+   "pagina_server": {
+    "status": 403,
+    "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+   },
+   "api_t": [
+    {
+     "referer": "https://v.vidxgo.co/39453578",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    },
+    {
+     "referer": "https://altadefinizione-01.best/",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    }
+   ]
   },
   {
    "server": "vixsrc",
-   "url": "https://vixsrc.to/movie/tt36583977",
+   "url": "https://vixsrc.to/movie/tt39453578",
    "tipo": "film",
-   "finale": "https://vixsrc.to/playlist/799381.m3u8?ub=1&token=f72ba0b068db658af972acb8171662a3&expires=1799323787&h=1&lang=it",
+   "finale": "https://vixsrc.to/playlist/799573.m3u8?ub=1&token=0d67218273bbfe7a58062acfc1815486&expires=1799417503&h=1&lang=it",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -63,7 +79,7 @@
    "voce": "•• Ultimi Aggiornati-Aggiunti",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 35
+   "titoli": 36
   },
   {
    "voce": "•• Generi",
@@ -167,7 +183,7 @@
     {
      "url": "https://altadefinizione-01.best",
      "status": 200,
-     "byte": 181477,
+     "byte": 181631,
      "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
     },
     {
@@ -194,7 +210,7 @@
    "voce": "Serie TV",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 29
+   "titoli": 30
   },
   {
    "voce": "txt70741 …",
@@ -208,170 +224,170 @@
   {
    "url": "https://altadefinizione-01.best/lastnews/",
    "status": 200,
-   "byte": 133058,
-   "secondi": 0.4,
+   "byte": 132969,
+   "secondi": 0.6,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizione-01.best/35469-l-isola-dei-ricordi-streaming.html",
+   "url": "https://altadefinizione-01.best/35473-un-buon-avvocato-streaming.html",
    "status": 200,
-   "byte": 96127,
-   "secondi": 0.2,
-   "titolo_pagina": "L'isola dei ricordi Streaming HD - Altadefinizione01",
+   "byte": 94459,
+   "secondi": 0.5,
+   "titolo_pagina": "Un buon avvocato Streaming HD - Altadefinizione01",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://vixsrc.to/api/movie/tt36583977",
+   "url": "https://vixsrc.to/api/movie/tt39453578",
    "status": 200,
-   "byte": 147,
+   "byte": 139,
    "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://vixsrc.to/embed/799381?token=7e1508ab416e02d96bda4ac042f82285&t=Rm9yZ290dGVuIElzbGFuZA%3D%3D&expires=1794139797&lang=en&skin=vixsrc&canPlayFHD=1",
+   "url": "https://vixsrc.to/embed/799573?token=aa612edef8be299748035ba44565e611&t=VGhlIEdvb2QgTGF3eWVy&expires=1794233513&lang=en&skin=vixsrc&canPlayFHD=1",
    "status": 200,
-   "byte": 6592,
-   "secondi": 0.2,
-   "titolo_pagina": "799381",
+   "byte": 6591,
+   "secondi": 0.3,
+   "titolo_pagina": "799573",
    "file": "pagine/04.html"
   },
   {
    "url": "https://altadefinizione-01.best/lastnews/",
    "status": 200,
-   "byte": 133058,
-   "secondi": 0.4,
+   "byte": 132969,
+   "secondi": 0.5,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/05.html"
   },
   {
    "url": "https://altadefinizione-01.best/cinema/",
    "status": 200,
-   "byte": 156582,
-   "secondi": 0.4,
+   "byte": 156689,
+   "secondi": 0.3,
    "titolo_pagina": "Al Cinema – Altadefinizione01",
    "file": "pagine/06.html"
   },
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 181477,
-   "secondi": 0.2,
+   "byte": 181631,
+   "secondi": 0.6,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/07.html"
   },
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 181477,
-   "secondi": 0.3,
+   "byte": 181631,
+   "secondi": 0.5,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/08.html"
   },
   {
    "url": "https://altadefinizione-01.best/azione/",
    "status": 200,
-   "byte": 156297,
-   "secondi": 0.1,
+   "byte": 156268,
+   "secondi": 2.1,
    "titolo_pagina": "Azione – Altadefinizione01",
    "file": "pagine/09.html"
   },
   {
    "url": "https://altadefinizione-01.best/animazione/",
    "status": 200,
-   "byte": 157962,
-   "secondi": 0.4,
+   "byte": 157959,
+   "secondi": 0.6,
    "titolo_pagina": "Animazione – Altadefinizione01",
    "file": "pagine/10.html"
   },
   {
    "url": "https://altadefinizione-01.best/avventura/",
    "status": 200,
-   "byte": 158324,
-   "secondi": 0.2,
+   "byte": 158321,
+   "secondi": 0.3,
    "titolo_pagina": "Avventura – Altadefinizione01",
    "file": "pagine/11.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/a",
    "status": 200,
-   "byte": 107935,
-   "secondi": 0.4,
+   "byte": 107944,
+   "secondi": 0.9,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/12.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/9",
    "status": 200,
-   "byte": 106998,
-   "secondi": 0.5,
+   "byte": 107176,
+   "secondi": 0.6,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/13.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/A",
    "status": 200,
-   "byte": 107935,
-   "secondi": 0.5,
+   "byte": 108113,
+   "secondi": 0.6,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/14.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/B",
    "status": 200,
-   "byte": 107935,
-   "secondi": 0.4,
+   "byte": 108113,
+   "secondi": 0.6,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/15.html"
   },
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 181477,
-   "secondi": 0.3,
+   "byte": 181631,
+   "secondi": 0.4,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
   },
   {
    "url": "https://altadefinizione-01.best/find/2026/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "404 | Not Found"
   },
   {
    "url": "https://altadefinizione-01.best/find/2025/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "404 | Not Found"
   },
   {
    "url": "https://altadefinizione-01.best/find/2024/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "404 | Not Found"
   },
   {
    "url": "https://altadefinizione-01.best/sub-ita/",
    "status": 200,
-   "byte": 156226,
-   "secondi": 0.3,
+   "byte": 156223,
+   "secondi": 0.5,
    "titolo_pagina": "Sub-ITA &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   },
   {
    "url": "https://altadefinizione-01.best/serie-tv/",
    "status": 200,
-   "byte": 154962,
-   "secondi": 0.2,
+   "byte": 154668,
+   "secondi": 0.3,
    "titolo_pagina": "Serie TV in Streaming Gratis - Altadefinizione01"
   },
   {
    "url": "https://altadefinizione-01.best/?do=search&subaction=search&titleonly=3&story=avatar",
    "status": 200,
-   "byte": 93090,
-   "secondi": 0.6,
+   "byte": 93087,
+   "secondi": 0.9,
    "titolo_pagina": "Site search &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   }
  ],

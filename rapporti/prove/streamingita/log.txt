@@ -10,7 +10,20 @@ Canale streamingita | indirizzo https://streamingita.homes
 == lista "Anno"
    -> 0 voci
 == lista "• Film"
-   -> 0 voci
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/channels/streamingita.py", line 38, in peliculas
+    return support.dooplay_peliculas(item, mixed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
+
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (4)
     film | '/film'
@@ -18,11 +31,11 @@ Nessuna voce da riprodurre trovata
     top | ('Anno', ['/film', 'menu', 'releases'])
     tvshow | '/tv'
 == controllo di tutte le sezioni
-   SEZIONE Generi -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/film', 'status': 200, 'byte': 27453, 'titolo_pagina': ''}
-   SEZIONE Anno -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/film', 'status': 200, 'byte': 27539, 'titolo_pagina': ''}
-   SEZIONE • Film -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/film', 'status': 200, 'byte': 27389, 'titolo_pagina': ''}
-   SEZIONE • Serie TV -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/tv', 'status': 200, 'byte': 27363, 'titolo_pagina': ''}
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/?s=avatar', 'status': 200, 'byte': 27464, 'titolo_pagina': ''}
+   SEZIONE Generi -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/film', 'status': 200, 'byte': 27620, 'titolo_pagina': ''}
+   SEZIONE Anno -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/film', 'status': 200, 'byte': 27578, 'titolo_pagina': ''}
+   SEZIONE • Film -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/film', 'status': 200, 'byte': 27354, 'titolo_pagina': ''}
+   SEZIONE • Serie TV -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/tv', 'status': 200, 'byte': 27466, 'titolo_pagina': ''}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://streamingita.homes/?s=avatar', 'status': 200, 'byte': 27377, 'titolo_pagina': ''}
 SEZIONI: 0 ok su 5
    SEZIONE SENZA TITOLI: Generi | VUOTA
    SEZIONE SENZA TITOLI: Anno | VUOTA

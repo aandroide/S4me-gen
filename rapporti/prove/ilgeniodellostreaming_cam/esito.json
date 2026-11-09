@@ -10,10 +10,10 @@
   {
    "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 18
+   "voci": 20
   },
   {
-   "passo": "check su \"L'isola dei ricordi\"",
+   "passo": "check su \"Un buon avvocato\"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,11 +21,27 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/36583977",
+   "url": "https://v.vidxgo.co/39453578",
    "tipo": "film",
-   "finale": "http://127.0.0.1:44813/hls/36583977/master.m3u8",
-   "esito": "VIDEO OK",
-   "dettaglio": "m3u8 200"
+   "nota": "il server non risponde entro 90 secondi",
+   "modulo_server": true,
+   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
+   "pagina_server": {
+    "status": 403,
+    "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+   },
+   "api_t": [
+    {
+     "referer": "https://v.vidxgo.co/39453578",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    },
+    {
+     "referer": "https://il-geniodellostreaming.rest/",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    }
+   ]
   }
  ],
  "menu_dichiarato": [
@@ -39,15 +55,15 @@
    "voce": "Tutti",
    "azione": "peliculas",
    "problemi": [
+    "tipo undefined, in Kodi appare come cartella: Un buon avvocato",
     "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
     "tipo undefined, in Kodi appare come cartella: Può solo andar peggio",
     "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile",
     "tipo undefined, in Kodi appare come cartella: Blue Film",
-    "tipo undefined, in Kodi appare come cartella: Campus Drivers",
-    "tipo undefined, in Kodi appare come cartella: Dead-End Job"
+    "tipo undefined, in Kodi appare come cartella: Campus Drivers"
    ],
    "esito": "OK",
-   "titoli": 17
+   "titoli": 19
   },
   {
    "voce": "•• Generi",
@@ -109,43 +125,43 @@
      "voce": "0-9",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: The Serial Killer Connection",
+      "tipo undefined, in Kodi appare come cartella: Un buon avvocato",
       "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
       "tipo undefined, in Kodi appare come cartella: Può solo andar peggio",
       "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile",
-      "tipo undefined, in Kodi appare come cartella: Blue Film",
-      "tipo undefined, in Kodi appare come cartella: Campus Drivers",
-      "tipo undefined, in Kodi appare come cartella: Dead-End Job"
+      "tipo undefined, in Kodi appare come cartella: Blue Film"
      ],
      "esito": "OK",
-     "titoli": 17
+     "titoli": 19
     },
     {
      "voce": "A",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Un buon avvocato",
       "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
       "tipo undefined, in Kodi appare come cartella: Può solo andar peggio",
       "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile",
       "tipo undefined, in Kodi appare come cartella: Blue Film",
-      "tipo undefined, in Kodi appare come cartella: Campus Drivers",
-      "tipo undefined, in Kodi appare come cartella: Dead-End Job"
+      "tipo undefined, in Kodi appare come cartella: Campus Drivers"
      ],
      "esito": "OK",
-     "titoli": 17
+     "titoli": 19
     },
     {
      "voce": "B",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: The Serial Killer Connection",
+      "tipo undefined, in Kodi appare come cartella: Un buon avvocato",
       "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
       "tipo undefined, in Kodi appare come cartella: Può solo andar peggio",
       "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile",
-      "tipo undefined, in Kodi appare come cartella: Blue Film",
-      "tipo undefined, in Kodi appare come cartella: Campus Drivers",
-      "tipo undefined, in Kodi appare come cartella: Dead-End Job"
+      "tipo undefined, in Kodi appare come cartella: Blue Film"
      ],
      "esito": "OK",
-     "titoli": 17
+     "titoli": 19
     }
    ]
   },
@@ -174,55 +190,55 @@
   {
    "url": "https://il-geniodellostreaming.rest/catalog/all",
    "status": 200,
-   "byte": 38016,
+   "byte": 37900,
    "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/film/35469-l-isola-dei-ricordi-streaming.html",
+   "url": "https://il-geniodellostreaming.rest/film/35473-un-buon-avvocato-streaming.html",
    "status": 200,
-   "byte": 34288,
-   "secondi": 0.1,
-   "titolo_pagina": "L'isola dei ricordi Streaming HD Gratis - ilGenioDelloStreaming",
+   "byte": 32826,
+   "secondi": 0.2,
+   "titolo_pagina": "Un buon avvocato Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/film/35469-l-isola-dei-ricordi-streaming.html",
+   "url": "https://il-geniodellostreaming.rest/film/35473-un-buon-avvocato-streaming.html",
    "status": 200,
-   "byte": 34288,
+   "byte": 32826,
    "secondi": 0.2,
-   "titolo_pagina": "L'isola dei ricordi Streaming HD Gratis - ilGenioDelloStreaming",
+   "titolo_pagina": "Un buon avvocato Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/03.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/all",
    "status": 200,
-   "byte": 38016,
-   "secondi": 0.3,
+   "byte": 37900,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/04.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest",
    "status": 200,
-   "byte": 92960,
-   "secondi": 0.1,
+   "byte": 85037,
+   "secondi": 0.2,
    "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/05.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/serie-tv/",
    "status": 200,
-   "byte": 84411,
-   "secondi": 0.1,
+   "byte": 84187,
+   "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/animazione/",
    "status": 200,
-   "byte": 85730,
+   "byte": 85231,
    "secondi": 0.2,
    "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
    "file": "pagine/07.html"
@@ -230,47 +246,47 @@
   {
    "url": "https://il-geniodellostreaming.rest/avventura/",
    "status": 200,
-   "byte": 86204,
-   "secondi": 0.1,
+   "byte": 85712,
+   "secondi": 0.2,
    "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
    "file": "pagine/08.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/all",
    "status": 200,
-   "byte": 38016,
-   "secondi": 0.2,
+   "byte": 37900,
+   "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/09.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/0",
    "status": 200,
-   "byte": 38460,
-   "secondi": 0.3,
+   "byte": 38426,
+   "secondi": 0.5,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/10.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/a",
    "status": 200,
-   "byte": 38498,
-   "secondi": 0.3,
+   "byte": 37890,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/11.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/catalog/b",
    "status": 200,
-   "byte": 38004,
-   "secondi": 0.3,
+   "byte": 38462,
+   "secondi": 0.5,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/12.html"
   },
   {
    "url": "https://il-geniodellostreaming.rest/serie-tv/",
    "status": 200,
-   "byte": 84411,
+   "byte": 84187,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/13.html"
@@ -279,10 +295,10 @@
    "url": "https://il-geniodellostreaming.rest/?s=avatar",
    "status": 200,
    "byte": 34900,
-   "secondi": 2.2,
+   "secondi": 2.3,
    "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/14.html"
   }
  ],
- "verdetto": "ARRIVA AL VIDEO"
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
 }

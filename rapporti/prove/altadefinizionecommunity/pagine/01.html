@@ -115,6 +115,11 @@
          Grello 6030: la cache del CDN di altapremium.tv tiene dal 16/10 un 301
          di /favicon.ico verso se stesso (ciclo): l'icona 48x48 ha un percorso
          suo, /favicon.ico resta per chi lo chiede senza link. -->
+    <!-- Grello 6685: alcuni nodi del CDN di altapremium.tv tengono in cache un 301 verso
+         se stesso anche per /favicon.png, /icona-48.ico e /icon-192.png (dal 19 e 23/10):
+         lì nessun file è scaricabile e la scheda mostra il globo. L'icona 32x32 è inline
+         (stessi byte di public/favicon.png), così non dipende dalla cache del CDN. -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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" />
     <link rel="icon" href="/icona-48.ico" sizes="48x48" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
@@ -319,7 +324,7 @@
         el.classList.add('screen-' + bp);
       })();
     </script>
-    <script type="module" crossorigin src="/assets/index-DWIVVaNT.js"></script>
+    <script type="module" crossorigin src="/assets/index-DegCHDX3.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-preact-C4sQgyYV.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-icons-DZiTduIo.js">
     <link rel="stylesheet" crossorigin href="/assets/index-B5S6gOwk.css">
@@ -330,7 +335,7 @@
             if (location.pathname !== '/' || /altaregistrazione/.test(location.hostname)) return;
             var probe = document.createElement('link');
             if (!probe.relList || !probe.relList.supports('modulepreload')) return;
-            ["assets/Home-C9Xx4r-2.js","assets/vendor-preact-C4sQgyYV.js","assets/PersonalSections-CHxZUYFo.js","assets/index-DWIVVaNT.js","assets/vendor-icons-DZiTduIo.js","assets/Badge-BCBFq4xR.js","assets/Carousel-_bigwfbG.js","assets/prefetchPreview-Dc7aK6P0.js","assets/clicLink-CEjDQp2W.js","assets/cardLayout-CPmdS6DL.js","assets/playbackAction-Tjz-vckC.js","assets/facets-C04EA4W8.js","assets/responsiveImages-Cd29yJtR.js","assets/ContentCard-DE07YJAd.js","assets/CardBadge-5zze8WoB.js","assets/cwRemoval-DnZ6q_Ou.js","assets/SkeletonLoader-DnZbb-o5.js","assets/useWatchtimesRevalidate-CSa-Yu1f.js","assets/useRotellaOrizzontale-CE39I_iU.js"].forEach(function (file) {
+            ["assets/Home-DW2Do7Uk.js","assets/vendor-preact-C4sQgyYV.js","assets/PersonalSections-DW8e3CGL.js","assets/index-DegCHDX3.js","assets/vendor-icons-DZiTduIo.js","assets/Badge-BCBFq4xR.js","assets/Carousel-BwOhITTm.js","assets/prefetchPreview-B8jIUuaq.js","assets/clicLink-CEjDQp2W.js","assets/cardLayout-ClJV4yz_.js","assets/playbackAction-E-OwWOZO.js","assets/facets-CfTDaV0n.js","assets/responsiveImages-Cd29yJtR.js","assets/ContentCard-DhXWPVeF.js","assets/CardBadge-5zze8WoB.js","assets/cwRemoval-CxYMm3LG.js","assets/SkeletonLoader-DnZbb-o5.js","assets/useWatchtimesRevalidate-fv2QJ0Al.js","assets/useRotellaOrizzontale-CE39I_iU.js"].forEach(function (file) {
               var href = '/' + file;
               if (document.querySelector('link[rel="modulepreload"][href="' + href + '"]')) return;
               var link = document.createElement('link');
@@ -353,7 +358,7 @@
     <style>@keyframes tfboot{to{transform:rotate(360deg)}}</style>
     <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
     <script nomodule crossorigin id="vite-legacy-polyfill" src="/assets/polyfills-legacy-CKSpZkv2.js"></script>
-    <script nomodule crossorigin id="vite-legacy-entry" data-src="/assets/index-legacy-C-eoTgTT.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="/assets/index-legacy-E68t1DJc.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"387fd2a3371e4afa8ec2d4722c8d6360","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
