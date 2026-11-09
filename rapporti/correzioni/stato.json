@@ -13,12 +13,10 @@
  },
  {
   "canale": "accuradio",
-  "stato": "ROTTO",
+  "stato": "OK",
   "dettagli": [
    "indirizzo scritto nel canale: https://www.accuradio.com",
-   "ROTTO: peliculas / | patron non trova titoli",
-   "  campione della pagina salvato in rapporti/correzioni/accuradio/pagina_peliculas_home.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /"
+   "OK: peliculas / | 48 risultati"
   ],
   "correzione": false,
   "host": "https://www.accuradio.com"
@@ -36,10 +34,10 @@
   "canale": "altadefinizione01",
   "stato": "OK",
   "dettagli": [
-   "OK: peliculas /lastnews/ | 85 risultati",
-   "OK: peliculas /cinema/ | 95 risultati",
-   "OK: peliculas /sub-ita/ | 95 risultati",
-   "OK: peliculas /serie-tv/ | 93 risultati"
+   "OK: peliculas /lastnews/ | 86 risultati",
+   "OK: peliculas /cinema/ | 96 risultati",
+   "OK: peliculas /sub-ita/ | 96 risultati",
+   "OK: peliculas /serie-tv/ | 96 risultati"
   ],
   "correzione": false,
   "host": "https://altadefinizione-01.best"
@@ -49,7 +47,7 @@
   "stato": "OK",
   "dettagli": [
    "OK: peliculas /film/ | 30 risultati",
-   "OK: peliculas /serie-tv/ | 29 risultati"
+   "OK: peliculas /serie-tv/ | 30 risultati"
   ],
   "correzione": false,
   "host": "https://altadefinizionex.bar"
@@ -193,11 +191,6 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
-      "title": "Campus Drivers",
-      "url": "https://cineblog001.party/cb01-streaming/35454-campus-drivers-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg"
-     },
-     {
       "title": "Dead-End Job",
       "url": "https://cineblog001.party/cb01-streaming/35370-dead-end-job-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg"
@@ -206,6 +199,11 @@
       "title": "A Story of Derry",
       "url": "https://cineblog001.party/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
+     },
+     {
+      "title": "Black Doves",
+      "url": "https://cineblog001.party/cb01-streaming/28300-black-doves-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
      }
     ],
     "perse": []
@@ -216,11 +214,6 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
-      "title": "Campus Drivers",
-      "url": "https://cineblog001.party/cb01-streaming/35454-campus-drivers-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg"
-     },
-     {
       "title": "Dead-End Job",
       "url": "https://cineblog001.party/cb01-streaming/35370-dead-end-job-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg"
@@ -229,6 +222,11 @@
       "title": "A Story of Derry",
       "url": "https://cineblog001.party/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
+     },
+     {
+      "title": "Black Doves",
+      "url": "https://cineblog001.party/cb01-streaming/28300-black-doves-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
      }
     ],
     "perse": []
@@ -239,11 +237,6 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
-      "title": "Campus Drivers",
-      "url": "https://cineblog001.party/cb01-streaming/35454-campus-drivers-streaming-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt39943756.jpg"
-     },
-     {
       "title": "Dead-End Job",
       "url": "https://cineblog001.party/cb01-streaming/35370-dead-end-job-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg"
@@ -252,6 +245,11 @@
       "title": "A Story of Derry",
       "url": "https://cineblog001.party/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
+     },
+     {
+      "title": "Black Doves",
+      "url": "https://cineblog001.party/cb01-streaming/28300-black-doves-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
      }
     ],
     "perse": []
@@ -274,7 +272,7 @@
    "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5634 byte): non e un cambio di struttura",
    "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5642 byte): non e un cambio di struttura",
    "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5662 byte): non e un cambio di struttura",
-   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5651 byte): non e un cambio di struttura"
+   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5655 byte): non e un cambio di struttura"
   ],
   "correzione": false,
   "host": "https://cinemalibero.cafe"
@@ -375,21 +373,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/ao-ashi-2.RaLLQ/AyFjGxLdfD",
-      "thumb": "https://img.animeworld.ac/locandine/RaLLQ.jpg",
-      "title": "Ao Ashi 2",
+      "url": "/play/kuroko-no-basket-movie-2-winter-cup-namida-no-saki-e-ita.3JQEm/jxgZQV",
+      "thumb": "https://img.animeworld.ac/locandine/-mQNZ.jpg",
+      "title": "Kuroko no Basket Movie 2: Winter Cup - Namida no Saki e",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/FyrUaDb72n",
+      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
+      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
       "lang": null
      },
      {
-      "url": "/play/ace-of-diamond-act-ii-2-part-2.2LM67/KdcXBxfmUe",
-      "thumb": "https://img.animeworld.ac/locandine/2LM67.png?0",
-      "title": "Ace of Diamond Act II 2 Part 2",
-      "lang": null
-     },
-     {
-      "url": "/play/mission-yozakura-family-2-part-2.tiNG2/i5AtGkIwPo",
-      "thumb": "https://img.animeworld.ac/locandine/tiNG2.jpg",
-      "title": "Mission: Yozakura Family 2 Part 2",
+      "url": "/play/star-detective-precure.quYaR/m8b0Wj6Qy9",
+      "thumb": "https://img.animeworld.ac/locandine/quYaR.jpg",
+      "title": "Star Detective Pretty Cure!",
       "lang": null
      }
     ],
@@ -404,21 +402,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/ao-ashi-2.RaLLQ/AyFjGxLdfD",
-      "thumb": "https://img.animeworld.ac/locandine/RaLLQ.jpg",
-      "title": "Ao Ashi 2",
+      "url": "/play/kuroko-no-basket-movie-2-winter-cup-namida-no-saki-e-ita.3JQEm/jxgZQV",
+      "thumb": "https://img.animeworld.ac/locandine/-mQNZ.jpg",
+      "title": "Kuroko no Basket Movie 2: Winter Cup - Namida no Saki e",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/FyrUaDb72n",
+      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
+      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
       "lang": null
      },
      {
-      "url": "/play/ace-of-diamond-act-ii-2-part-2.2LM67/KdcXBxfmUe",
-      "thumb": "https://img.animeworld.ac/locandine/2LM67.png?0",
-      "title": "Ace of Diamond Act II 2 Part 2",
-      "lang": null
-     },
-     {
-      "url": "/play/mission-yozakura-family-2-part-2.tiNG2/i5AtGkIwPo",
-      "thumb": "https://img.animeworld.ac/locandine/tiNG2.jpg",
-      "title": "Mission: Yozakura Family 2 Part 2",
+      "url": "/play/star-detective-precure.quYaR/m8b0Wj6Qy9",
+      "thumb": "https://img.animeworld.ac/locandine/quYaR.jpg",
+      "title": "Star Detective Pretty Cure!",
       "lang": null
      }
     ],
@@ -433,21 +431,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/ao-ashi-2.RaLLQ/AyFjGxLdfD",
-      "thumb": "https://img.animeworld.ac/locandine/RaLLQ.jpg",
-      "title": "Ao Ashi 2",
+      "url": "/play/kuroko-no-basket-movie-2-winter-cup-namida-no-saki-e-ita.3JQEm/jxgZQV",
+      "thumb": "https://img.animeworld.ac/locandine/-mQNZ.jpg",
+      "title": "Kuroko no Basket Movie 2: Winter Cup - Namida no Saki e",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/FyrUaDb72n",
+      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
+      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
       "lang": null
      },
      {
-      "url": "/play/ace-of-diamond-act-ii-2-part-2.2LM67/KdcXBxfmUe",
-      "thumb": "https://img.animeworld.ac/locandine/2LM67.png?0",
-      "title": "Ace of Diamond Act II 2 Part 2",
-      "lang": null
-     },
-     {
-      "url": "/play/mission-yozakura-family-2-part-2.tiNG2/i5AtGkIwPo",
-      "thumb": "https://img.animeworld.ac/locandine/tiNG2.jpg",
-      "title": "Mission: Yozakura Family 2 Part 2",
+      "url": "/play/star-detective-precure.quYaR/m8b0Wj6Qy9",
+      "thumb": "https://img.animeworld.ac/locandine/quYaR.jpg",
+      "title": "Star Detective Pretty Cure!",
       "lang": null
      }
     ],
@@ -462,21 +460,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/ao-ashi-2.RaLLQ/AyFjGxLdfD",
-      "thumb": "https://img.animeworld.ac/locandine/RaLLQ.jpg",
-      "title": "Ao Ashi 2",
+      "url": "/play/kuroko-no-basket-movie-2-winter-cup-namida-no-saki-e-ita.3JQEm/jxgZQV",
+      "thumb": "https://img.animeworld.ac/locandine/-mQNZ.jpg",
+      "title": "Kuroko no Basket Movie 2: Winter Cup - Namida no Saki e",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/FyrUaDb72n",
+      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
+      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
       "lang": null
      },
      {
-      "url": "/play/ace-of-diamond-act-ii-2-part-2.2LM67/KdcXBxfmUe",
-      "thumb": "https://img.animeworld.ac/locandine/2LM67.png?0",
-      "title": "Ace of Diamond Act II 2 Part 2",
-      "lang": null
-     },
-     {
-      "url": "/play/mission-yozakura-family-2-part-2.tiNG2/i5AtGkIwPo",
-      "thumb": "https://img.animeworld.ac/locandine/tiNG2.jpg",
-      "title": "Mission: Yozakura Family 2 Part 2",
+      "url": "/play/star-detective-precure.quYaR/m8b0Wj6Qy9",
+      "thumb": "https://img.animeworld.ac/locandine/quYaR.jpg",
+      "title": "Star Detective Pretty Cure!",
       "lang": null
      }
     ],
@@ -524,6 +522,13 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
+      "url": "https://guardaseriex.art/animazione/5823-avatar-i-sette-rifugi-streaming.html",
+      "thumb": "/uploads/immagini/tt35854736.webp",
+      "year": "2026",
+      "title": "Avatar: I sette rifugi",
+      "lang": null
+     },
+     {
       "url": "https://guardaseriex.art/animazione/3489-craig-of-the-creek.html",
       "thumb": "/uploads/immagini/tt7713450.webp",
       "year": "2018",
@@ -535,13 +540,6 @@
       "thumb": "/uploads/immagini/tt3590338.webp",
       "year": "2015",
       "title": "Puffin Rock",
-      "lang": null
-     },
-     {
-      "url": "https://guardaseriex.art/animazione/5879-bass-x-machina-streaming.html",
-      "thumb": "/uploads/immagini/tt39957390.webp",
-      "year": "2026",
-      "title": "Bass X Machina",
       "lang": null
      }
     ],
@@ -588,24 +586,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.art/dramma/5882-the-greatest-streaming.html",
-      "thumb": "/uploads/immagini/tt15715850.webp",
-      "year": "2026",
-      "title": "The Greatest",
+      "url": "https://guardaseriex.art/dramma/407-american-horror-story-1.html",
+      "thumb": "/uploads/immagini/tt1844624.webp",
+      "year": "2011",
+      "title": "American Horror Story",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.art/dramma/5880-anestesia-streaming.html",
-      "thumb": "/uploads/immagini/tt38681812.webp",
+      "url": "https://guardaseriex.art/documentario/5832-tyson-streaming.html",
+      "thumb": "/uploads/immagini/tt35051210.webp",
       "year": "2026",
-      "title": "Anestesia",
+      "title": "TYSON",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.art/avventura/5848-amore-sotto-copertura-streaming.html",
-      "thumb": "/uploads/immagini/tt45246384.webp",
+      "url": "https://guardaseriex.art/commedia/5815-merry-berry-love-streaming.html",
+      "thumb": "/uploads/immagini/tt38937897.webp",
       "year": "2026",
-      "title": "Amore sotto copertura",
+      "title": "Merry Berry Love",
       "lang": null
      }
     ],
@@ -645,24 +643,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.art/dramma/5882-the-greatest-streaming.html",
-      "thumb": "/uploads/immagini/tt15715850.webp",
-      "year": "2026",
-      "title": "The Greatest",
+      "url": "https://guardaseriex.art/dramma/407-american-horror-story-1.html",
+      "thumb": "/uploads/immagini/tt1844624.webp",
+      "year": "2011",
+      "title": "American Horror Story",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.art/dramma/5880-anestesia-streaming.html",
-      "thumb": "/uploads/immagini/tt38681812.webp",
+      "url": "https://guardaseriex.art/documentario/5832-tyson-streaming.html",
+      "thumb": "/uploads/immagini/tt35051210.webp",
       "year": "2026",
-      "title": "Anestesia",
+      "title": "TYSON",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.art/avventura/5848-amore-sotto-copertura-streaming.html",
-      "thumb": "/uploads/immagini/tt45246384.webp",
+      "url": "https://guardaseriex.art/commedia/5815-merry-berry-love-streaming.html",
+      "thumb": "/uploads/immagini/tt38937897.webp",
       "year": "2026",
-      "title": "Amore sotto copertura",
+      "title": "Merry Berry Love",
       "lang": null
      }
     ],
@@ -721,7 +719,7 @@
   "canale": "ilgeniodellostreaming_cam",
   "stato": "ROTTO",
   "dettagli": [
-   "OK: peliculas /catalog/all | 17 risultati",
+   "OK: peliculas /catalog/all | 19 risultati",
    "ROTTO: peliculas /serie-tv/ | patron non trova titoli",
    "  campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html",
    "  regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating",
@@ -909,7 +907,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27308 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27451 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -959,7 +957,7 @@
    "  patronBlock rimosso: senza blocco le regex dei titoli trovano 32 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 24 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli"
   ],
   "correzione": true,
