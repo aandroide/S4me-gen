@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 131
+   "voci": 130
   },
   {
    "passo": "findvideos su \"Die hard - Un buon giorno per morire\"",
@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 21
+   "voci": 20
   },
   {
-   "passo": "findvideos su \"Lost river\"",
+   "passo": "findvideos su \"Un figlio di nome Erasmus\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -33,7 +33,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"Harry Potter e la pietra filosofale\"",
+   "passo": "findvideos su \"The place\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   }
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 73
+   "titoli": 71
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -123,13 +123,13 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 4
     },
     {
      "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 11
+     "titoli": 12
     }
    ]
   },
@@ -166,22 +166,22 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Forbidden Fruit 4",
+     "voce": "Tempesta d'amore",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 3
     },
     {
-     "voce": "Beautiful",
+     "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
     },
     {
-     "voce": "Tempesta d'amore",
+     "voce": "La promessa",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 7
     }
    ]
   },
@@ -201,7 +201,7 @@
      "voce": "Dragon Ball Super",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 27
+     "titoli": 24
     },
     {
      "voce": "Captain Tsubasa",
@@ -213,7 +213,7 @@
      "voce": "Dragon Ball Daima",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 8
+     "titoli": 10
     }
    ]
   },
@@ -230,16 +230,16 @@
      "titoli": 5
     },
     {
-     "voce": "Law & Order: Unità speciale 15",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 11
-    },
-    {
      "voce": "C.S.I. Scena del crimine 10",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 8
+    },
+    {
+     "voce": "Law & Order: Unità speciale 15",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 12
     }
    ]
   },
@@ -256,16 +256,16 @@
      "titoli": 4
     },
     {
-     "voce": "Forbidden Fruit 4",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
-    },
-    {
      "voce": "Love is in the air",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 7
+    },
+    {
+     "voce": "Forbidden Fruit 4",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
     }
    ]
   },
@@ -273,7 +273,7 @@
    "voce": "•• Programmi TV Prima serata",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 11,
+   "sottovoci": 12,
    "figli": [
     {
      "voce": "Grande Fratello VIP - Autunno 2026",
@@ -314,10 +314,10 @@
      "titoli": 5
     },
     {
-     "voce": "Realpolitik 2026/2027",
+     "voce": "Caduta libera 2026/2027",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 4
     }
    ]
   },
@@ -340,10 +340,10 @@
      "titoli": 10
     },
     {
-     "voce": "Tu Si Que Vales 2026",
+     "voce": "Uomini e Donne 2026/2027",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 10
     }
    ]
   },
@@ -363,10 +363,10 @@
      "titoli": 9
     },
     {
-     "voce": "Adventure Time",
+     "voce": "Teen Titans Go!",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 6
     },
     {
      "voce": "Looney Tunes Cartoons",
@@ -383,12 +383,6 @@
    "sottovoci": 14,
    "figli": [
     {
-     "voce": "Simone",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
-    },
-    {
      "voce": "Paw Patrol",
      "azione": "epmenu",
      "esito": "OK",
@@ -399,6 +393,12 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
+    },
+    {
+     "voce": "Chi ha sfidato Ninna e Matti?",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 15
     }
    ]
   },
@@ -435,7 +435,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 13
+   "titoli": 11
   },
   {
    "voce": "•• Documentari più visti",
@@ -459,10 +459,10 @@
      "titoli": 2
     },
     {
-     "voce": "Lo sapevi che? 2024",
+     "voce": "Tesori d'Italia - Nel cuore dei Sibillini",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 25
+     "titoli": 1
     }
    ]
   },

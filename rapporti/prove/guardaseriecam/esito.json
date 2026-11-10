@@ -1,6 +1,6 @@
 {
  "canale": "guardaseriecam",
- "host": "https://guardaseriex.art",
+ "host": "https://guardaseriex.work",
  "passi": [
   {
    "passo": "mainlist",
@@ -13,12 +13,12 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"American Horror Story\"",
+   "passo": "episodios su \"YAGA\"",
    "esito": "OK",
-   "voci": 145
+   "voci": 8
   },
   {
-   "passo": "findvideos su \"1x01 - La nuova casa\"",
+   "passo": "findvideos su \"1x01 - Uomo in fiamme\"",
    "esito": "OK",
    "voci": 1
   }
@@ -26,9 +26,9 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/1844624/1/1",
+   "url": "https://v.vidxgo.co/39980704/1/1",
    "tipo": "film",
-   "finale": "http://127.0.0.1:32861/hls/tv/1844624/1/1/master.m3u8",
+   "finale": "http://127.0.0.1:38149/hls/tv/39980704/1/1/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -87,19 +87,19 @@
  "sezioni_riepilogo": "4 ok su 4",
  "rete": [
   {
-   "url": "https://guardaseriex.art/serietv-streaming",
+   "url": "https://guardaseriex.work/serietv-streaming",
    "status": 200,
-   "byte": 100017,
+   "byte": 99868,
    "secondi": 0.7,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.art/dramma/407-american-horror-story-1.html",
+   "url": "https://guardaseriex.work/dramma/5856-yaga-streaming.html",
    "status": 200,
-   "byte": 66555,
-   "secondi": 0.3,
-   "titolo_pagina": "American Horror Story streaming - Guardaserie",
+   "byte": 65533,
+   "secondi": 0.6,
+   "titolo_pagina": "YAGA streaming - Guardaserie",
    "file": "pagine/02.html"
   },
   {
@@ -111,287 +111,112 @@
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt1844624?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt39980704?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 1204,
+   "byte": 874,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/314360/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 1730,
+   "byte": 284,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
+   "url": "https://api.themoviedb.org/3/tv/314360?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
    "status": 200,
-   "byte": 87727,
+   "byte": 12074,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/314360/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 1730,
+   "byte": 284,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/314360?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 12539,
+   "byte": 2930,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/0?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/314360/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 6810,
+   "byte": 12174,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/314360/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
    "status": 200,
-   "byte": 79081,
+   "byte": 16875,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/2?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.work/serietv-streaming",
    "status": 200,
-   "byte": 59957,
-   "secondi": 0.1,
-   "titolo_pagina": "",
+   "byte": 99868,
+   "secondi": 0.7,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/3?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.work/serietv-popolari/",
    "status": 200,
-   "byte": 52238,
-   "secondi": 0.1,
-   "titolo_pagina": "",
+   "byte": 405677,
+   "secondi": 0.6,
+   "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/4?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.work/serietv-streaming",
    "status": 200,
-   "byte": 73356,
-   "secondi": 0.1,
-   "titolo_pagina": "",
+   "byte": 99868,
+   "secondi": 0.5,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/5?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.work/biografico/",
    "status": 200,
-   "byte": 83493,
-   "secondi": 0.1,
-   "titolo_pagina": "",
+   "byte": 221708,
+   "secondi": 0.5,
+   "titolo_pagina": "Biografico streaming | Guardaserie",
    "file": "pagine/14.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/6?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.work/commedia/",
    "status": 200,
-   "byte": 68120,
-   "secondi": 0.1,
-   "titolo_pagina": "",
+   "byte": 2271205,
+   "secondi": 0.7,
+   "titolo_pagina": "Commedia streaming | Guardaserie",
    "file": "pagine/15.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/7?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.work/crime/",
    "status": 200,
-   "byte": 75229,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/8?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 40094,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/9?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 52316,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/10?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 67771,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/11?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 59688,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/12?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 38226,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/13?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 52794,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 89851,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/2?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 71933,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/3?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 64122,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/4?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 87668,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/5?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 98070,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/6?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 82129,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/7?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 87548,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/8?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 54627,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/9?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 68423,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/10?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 81488,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/11?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 75390,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/12?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 54326,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/1413/season/13?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 67432,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://guardaseriex.art/serietv-streaming",
-   "status": 200,
-   "byte": 100017,
-   "secondi": 0.8,
-   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie"
-  },
-  {
-   "url": "https://guardaseriex.art/serietv-popolari/",
-   "status": 200,
-   "byte": 405109,
-   "secondi": 0.5,
-   "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie"
-  },
-  {
-   "url": "https://guardaseriex.art/serietv-streaming",
-   "status": 200,
-   "byte": 100017,
-   "secondi": 0.7,
-   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie"
-  },
-  {
-   "url": "https://guardaseriex.art/biografico/",
-   "status": 200,
-   "byte": 221391,
-   "secondi": 0.6,
-   "titolo_pagina": "Biografico streaming | Guardaserie"
-  },
-  {
-   "url": "https://guardaseriex.art/commedia/",
-   "status": 200,
-   "byte": 2267952,
-   "secondi": 0.7,
-   "titolo_pagina": "Commedia streaming | Guardaserie"
-  },
-  {
-   "url": "https://guardaseriex.art/crime/",
-   "status": 200,
-   "byte": 1263368,
-   "secondi": 0.6,
+   "byte": 1265234,
+   "secondi": 2.0,
    "titolo_pagina": "Crime streaming | Guardaserie"
   },
   {
-   "url": "https://guardaseriex.art/index.php?story=avatar&do=search&subaction=search",
+   "url": "https://guardaseriex.work/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 38170,
+   "byte": 38226,
    "secondi": 0.6,
    "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS"
   }

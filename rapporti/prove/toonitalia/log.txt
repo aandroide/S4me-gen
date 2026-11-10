@@ -7,15 +7,35 @@ Canale toonitalia | indirizzo https://toonitalia.xyz
       peliculas | Film Animazione  | https://toonitalia.xyz/film-animazione
 == lista "Anime "
    -> 21 voci
+      check | Lupin l’incorreggibile Lupin  | https://toonitalia.xyz/lupin-lincorreggibile-lupin/
       check | Winx Club - Battaglia per Magix  | https://toonitalia.xyz/winx-club-battaglia-per-magix/
       check | Winx Club - Il destino di Bloom  | https://toonitalia.xyz/winx-club-il-destino-di-bloom/
       check | Winx Club - La Fenice d’ombra  | https://toonitalia.xyz/winx-club-la-fenice-dombra/
-      check | Winx Club - La Vendetta delle Trix  | https://toonitalia.xyz/winx-club-la-vendetta-delle-trix/
-== check su "Winx Club - Battaglia per Magix "
+== check su "Lupin l’incorreggibile Lupin "
+   -> 51 voci
+      findvideos | 3x01 - Il tesoro di Al capone | https://toonitalia.xyz/lupin-lincorreggibile-lupin/
+      findvideos | 3x02 - Un tiro mancino | https://toonitalia.xyz/lupin-lincorreggibile-lupin/
+      findvideos | 3x03 - La torre degli angeli | https://toonitalia.xyz/lupin-lincorreggibile-lupin/
+      findvideos | 3x04 - Segnali d’amore | https://toonitalia.xyz/lupin-lincorreggibile-lupin/
+== findvideos su "3x01 - Il tesoro di Al capone"
+   -> 0 voci
+== lista "•• Anime ITA"
+   -> 21 voci
+      check | .hack//Sign  | https://toonitalia.xyz/hack-sign/
+      check | 3x3 occhi  | https://toonitalia.xyz/3x3-occhi/
+      check | 44 Gatti  | https://toonitalia.xyz/44-gatti/
+      check | 5 Centimetri al Secondo  | https://toonitalia.xyz/5-centimetri-al-secondo/
+== check su ".hack//Sign "
+   -> 29 voci
+      findvideos | 01 - Gioco di Ruolo | https://toonitalia.xyz/hack-sign/
+      findvideos | 02 - Il guardiano | https://toonitalia.xyz/hack-sign/
+      findvideos | 03 - Dicerie | https://toonitalia.xyz/hack-sign/
+      findvideos | 04 - Ricercato | https://toonitalia.xyz/hack-sign/
+== findvideos su "01 - Gioco di Ruolo"
    -> 1 voci
-      play | Winx Club - Battaglia per Magix  | https://voe.sx/e/pvjxstt9hq8m
-== risoluzione voe https://voe.sx/e/pvjxstt9hq8m
-   -> VIDEO OK m3u8 206 
+      play | 01 - Gioco di Ruolo | https://voe.sx/e/hig6dbajibee
+== risoluzione voe https://voe.sx/e/hig6dbajibee
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (5)
     menu | ('Anime', ['/category/anime', 'peliculas', '', 'undefined'])
     menu | ('Anime ITA {submenu}', ['/anime-ita', 'peliculas', 'list', 'undefined'])
@@ -24,12 +44,12 @@ Canale toonitalia | indirizzo https://toonitalia.xyz
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', 'list', 'tvshow'])
 == controllo di tutte le sezioni
    SEZIONE Anime -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Lupin l’incorreggibile Lupin
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Winx Club - Battaglia per Magix
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Winx Club - Il destino di Bloom
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Winx Club - La Fenice d’ombra
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Winx Club - La Vendetta delle Trix
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Due spicci
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Transformers: EarthSpark
    SEZIONE •• Anime ITA -> OK 20 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: .hack//Sign
       PROBLEMA: tipo undefined, in Kodi appare come cartella: 3x3 occhi

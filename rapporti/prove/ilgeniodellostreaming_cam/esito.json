@@ -1,6 +1,6 @@
 {
  "canale": "ilgeniodellostreaming_cam",
- "host": "https://il-geniodellostreaming.rest",
+ "host": "https://il-geniodellostreaming.tattoo",
  "passi": [
   {
    "passo": "mainlist",
@@ -13,7 +13,7 @@
    "voci": 20
   },
   {
-   "passo": "check su \"Un buon avvocato\"",
+   "passo": "check su \"The Serial Killer Connection\"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,7 +21,7 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/39453578",
+   "url": "https://v.vidxgo.co/46066662",
    "tipo": "film",
    "nota": "il server non risponde entro 90 secondi",
    "modulo_server": true,
@@ -32,12 +32,12 @@
    },
    "api_t": [
     {
-     "referer": "https://v.vidxgo.co/39453578",
+     "referer": "https://v.vidxgo.co/46066662",
      "status": 403,
      "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
     },
     {
-     "referer": "https://il-geniodellostreaming.rest/",
+     "referer": "https://il-geniodellostreaming.tattoo/",
      "status": 403,
      "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
     }
@@ -55,12 +55,12 @@
    "voce": "Tutti",
    "azione": "peliculas",
    "problemi": [
+    "tipo undefined, in Kodi appare come cartella: The Serial Killer Connection",
     "tipo undefined, in Kodi appare come cartella: Un buon avvocato",
     "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
     "tipo undefined, in Kodi appare come cartella: Può solo andar peggio",
     "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile",
-    "tipo undefined, in Kodi appare come cartella: Blue Film",
-    "tipo undefined, in Kodi appare come cartella: Campus Drivers"
+    "tipo undefined, in Kodi appare come cartella: Blue"
    ],
    "esito": "OK",
    "titoli": 19
@@ -75,10 +75,10 @@
      "voce": "Serie TV",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Livatino - Il giudice e i suoi assassini",
+      "tipo undefined, in Kodi appare come cartella: The Serial Killer Connection",
       "tipo undefined, in Kodi appare come cartella: Può solo andar peggio",
       "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile",
-      "tipo undefined, in Kodi appare come cartella: Campus Drivers",
-      "tipo undefined, in Kodi appare come cartella: Dead-End Job",
       "tipo undefined, in Kodi appare come cartella: Melania Rea",
       "tipo undefined, in Kodi appare come cartella: Palacio - Sotto assedio"
      ],
@@ -125,12 +125,12 @@
      "voce": "0-9",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Livatino - Il giudice e i suoi assassini",
       "tipo undefined, in Kodi appare come cartella: The Serial Killer Connection",
       "tipo undefined, in Kodi appare come cartella: Un buon avvocato",
       "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
       "tipo undefined, in Kodi appare come cartella: Può solo andar peggio",
-      "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile",
-      "tipo undefined, in Kodi appare come cartella: Blue Film"
+      "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile"
      ],
      "esito": "OK",
      "titoli": 19
@@ -139,12 +139,12 @@
      "voce": "A",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Livatino - Il giudice e i suoi assassini",
+      "tipo undefined, in Kodi appare come cartella: The Serial Killer Connection",
       "tipo undefined, in Kodi appare come cartella: Un buon avvocato",
       "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
       "tipo undefined, in Kodi appare come cartella: Può solo andar peggio",
-      "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile",
-      "tipo undefined, in Kodi appare come cartella: Blue Film",
-      "tipo undefined, in Kodi appare come cartella: Campus Drivers"
+      "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile"
      ],
      "esito": "OK",
      "titoli": 19
@@ -153,12 +153,12 @@
      "voce": "B",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Livatino - Il giudice e i suoi assassini",
       "tipo undefined, in Kodi appare come cartella: The Serial Killer Connection",
       "tipo undefined, in Kodi appare come cartella: Un buon avvocato",
       "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
       "tipo undefined, in Kodi appare come cartella: Può solo andar peggio",
-      "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile",
-      "tipo undefined, in Kodi appare come cartella: Blue Film"
+      "tipo undefined, in Kodi appare come cartella: Awkwafina: Una chef improbabile"
      ],
      "esito": "OK",
      "titoli": 19
@@ -177,9 +177,9 @@
    "esito": "VUOTA",
    "pagine": [
     {
-     "url": "https://il-geniodellostreaming.rest/?s=avatar",
+     "url": "https://il-geniodellostreaming.tattoo/?s=avatar",
      "status": 200,
-     "byte": 34900,
+     "byte": 35026,
      "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis"
     }
    ]
@@ -188,114 +188,114 @@
  "sezioni_riepilogo": "4 ok su 5",
  "rete": [
   {
-   "url": "https://il-geniodellostreaming.rest/catalog/all",
+   "url": "https://il-geniodellostreaming.tattoo/catalog/all",
    "status": 200,
-   "byte": 37900,
-   "secondi": 0.4,
+   "byte": 38502,
+   "secondi": 0.9,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/film/35473-un-buon-avvocato-streaming.html",
+   "url": "https://il-geniodellostreaming.tattoo/film/35475-the-serial-killer-connection-streaming.html",
    "status": 200,
-   "byte": 32826,
-   "secondi": 0.2,
-   "titolo_pagina": "Un buon avvocato Streaming HD Gratis - ilGenioDelloStreaming",
+   "byte": 32984,
+   "secondi": 0.5,
+   "titolo_pagina": "The Serial Killer Connection Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/film/35473-un-buon-avvocato-streaming.html",
+   "url": "https://il-geniodellostreaming.tattoo/film/35475-the-serial-killer-connection-streaming.html",
    "status": 200,
-   "byte": 32826,
+   "byte": 32984,
    "secondi": 0.2,
-   "titolo_pagina": "Un buon avvocato Streaming HD Gratis - ilGenioDelloStreaming",
+   "titolo_pagina": "The Serial Killer Connection Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/catalog/all",
+   "url": "https://il-geniodellostreaming.tattoo/catalog/all",
    "status": 200,
-   "byte": 37900,
+   "byte": 38502,
    "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest",
+   "url": "https://il-geniodellostreaming.tattoo",
    "status": 200,
-   "byte": 85037,
+   "byte": 81479,
    "secondi": 0.2,
    "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/serie-tv/",
+   "url": "https://il-geniodellostreaming.tattoo/serie-tv/",
    "status": 200,
-   "byte": 84187,
+   "byte": 85089,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/animazione/",
+   "url": "https://il-geniodellostreaming.tattoo/animazione/",
    "status": 200,
-   "byte": 85231,
-   "secondi": 0.2,
+   "byte": 85920,
+   "secondi": 0.6,
    "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/avventura/",
+   "url": "https://il-geniodellostreaming.tattoo/avventura/",
    "status": 200,
-   "byte": 85712,
+   "byte": 85888,
    "secondi": 0.2,
    "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/catalog/all",
+   "url": "https://il-geniodellostreaming.tattoo/catalog/all",
    "status": 200,
-   "byte": 37900,
+   "byte": 38502,
    "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/catalog/0",
+   "url": "https://il-geniodellostreaming.tattoo/catalog/0",
    "status": 200,
-   "byte": 38426,
-   "secondi": 0.5,
+   "byte": 38767,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/catalog/a",
+   "url": "https://il-geniodellostreaming.tattoo/catalog/a",
    "status": 200,
-   "byte": 37890,
+   "byte": 38805,
    "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/catalog/b",
+   "url": "https://il-geniodellostreaming.tattoo/catalog/b",
    "status": 200,
-   "byte": 38462,
-   "secondi": 0.5,
+   "byte": 38803,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/serie-tv/",
+   "url": "https://il-geniodellostreaming.tattoo/serie-tv/",
    "status": 200,
-   "byte": 84187,
+   "byte": 85089,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://il-geniodellostreaming.rest/?s=avatar",
+   "url": "https://il-geniodellostreaming.tattoo/?s=avatar",
    "status": 200,
-   "byte": 34900,
-   "secondi": 2.3,
+   "byte": 35026,
+   "secondi": 2.5,
    "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/14.html"
   }

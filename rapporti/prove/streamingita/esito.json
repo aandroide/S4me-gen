@@ -19,8 +19,8 @@
   },
   {
    "passo": "lista \"• Film\"",
-   "esito": "ERRORE",
-   "errore": "\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/channels/streamingita.py\", line 38, in peliculas\n    return support.dooplay_peliculas(item, mixed)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nplatformcode.logger.WebErrorException\n"
+   "esito": "VUOTO",
+   "voci": 0
   }
  ],
  "video": [],
@@ -39,7 +39,7 @@
     {
      "url": "https://streamingita.homes/film",
      "status": 200,
-     "byte": 27620,
+     "byte": 27438,
      "titolo_pagina": ""
     }
    ]
@@ -52,7 +52,7 @@
     {
      "url": "https://streamingita.homes/film",
      "status": 200,
-     "byte": 27578,
+     "byte": 27640,
      "titolo_pagina": ""
     }
    ]
@@ -65,7 +65,7 @@
     {
      "url": "https://streamingita.homes/film",
      "status": 200,
-     "byte": 27354,
+     "byte": 27360,
      "titolo_pagina": ""
     }
    ]
@@ -73,12 +73,12 @@
   {
    "voce": "• Serie TV",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "ERRORE WebErrorException",
    "pagine": [
     {
      "url": "https://streamingita.homes/tv",
-     "status": 200,
-     "byte": 27466,
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
      "titolo_pagina": ""
     }
    ]
@@ -90,8 +90,8 @@
    "pagine": [
     {
      "url": "https://streamingita.homes/?s=avatar",
-     "status": 200,
-     "byte": 27377,
+     "status": "'NoneType' object has no attribute 'elapsed'",
+     "byte": 0,
      "titolo_pagina": ""
     }
    ]
@@ -102,64 +102,64 @@
   {
    "url": "https://streamingita.homes/film",
    "status": 200,
-   "byte": 27380,
-   "secondi": 6.5,
+   "byte": 27560,
+   "secondi": 1.9,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
    "url": "https://streamingita.homes/film",
    "status": 200,
-   "byte": 27850,
-   "secondi": 7.4,
+   "byte": 27540,
+   "secondi": 3.8,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://streamingita.homes/film",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 10.6,
+   "status": 200,
+   "byte": 27334,
+   "secondi": 2.0,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
    "url": "https://streamingita.homes/film",
    "status": 200,
-   "byte": 27620,
-   "secondi": 1.1,
+   "byte": 27438,
+   "secondi": 5.9,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://streamingita.homes/film",
    "status": 200,
-   "byte": 27578,
-   "secondi": 0.9,
+   "byte": 27640,
+   "secondi": 8.8,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
    "url": "https://streamingita.homes/film",
    "status": 200,
-   "byte": 27354,
-   "secondi": 4.2,
+   "byte": 27360,
+   "secondi": 5.6,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
    "url": "https://streamingita.homes/tv",
-   "status": 200,
-   "byte": 27466,
-   "secondi": 1.6,
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 10.5,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
    "url": "https://streamingita.homes/?s=avatar",
-   "status": 200,
-   "byte": 27377,
-   "secondi": 2.2,
+   "status": "'NoneType' object has no attribute 'elapsed'",
+   "byte": 0,
+   "secondi": 10.4,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   }

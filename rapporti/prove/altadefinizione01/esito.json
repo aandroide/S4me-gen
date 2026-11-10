@@ -10,7 +10,7 @@
   {
    "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 26
+   "voci": 27
   },
   {
    "passo": "check su \"Un buon avvocato \"",
@@ -23,31 +23,15 @@
    "server": "vidxgo",
    "url": "https://v.vidxgo.co/39453578",
    "tipo": "film",
-   "nota": "il server non risponde entro 90 secondi",
-   "modulo_server": true,
-   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
-   "pagina_server": {
-    "status": 403,
-    "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-   },
-   "api_t": [
-    {
-     "referer": "https://v.vidxgo.co/39453578",
-     "status": 403,
-     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-    },
-    {
-     "referer": "https://altadefinizione-01.best/",
-     "status": 403,
-     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-    }
-   ]
+   "finale": "http://127.0.0.1:42433/hls/39453578/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
   },
   {
    "server": "vixsrc",
    "url": "https://vixsrc.to/movie/tt39453578",
    "tipo": "film",
-   "finale": "https://vixsrc.to/playlist/799573.m3u8?ub=1&token=0d67218273bbfe7a58062acfc1815486&expires=1799417503&h=1&lang=it",
+   "finale": "https://vixsrc.to/playlist/799573.m3u8?ub=1&token=82e66365137f626a43c98ab5096afe79&expires=1799502251&h=1&lang=it",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -67,7 +51,7 @@
    "voce": "Tutti",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 25
+   "titoli": 26
   },
   {
    "voce": "•• Al Cinema",
@@ -79,7 +63,7 @@
    "voce": "•• Ultimi Aggiornati-Aggiunti",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 36
+   "titoli": 37
   },
   {
    "voce": "•• Generi",
@@ -183,7 +167,7 @@
     {
      "url": "https://altadefinizione-01.best",
      "status": 200,
-     "byte": 181631,
+     "byte": 182725,
      "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
     },
     {
@@ -224,16 +208,16 @@
   {
    "url": "https://altadefinizione-01.best/lastnews/",
    "status": 200,
-   "byte": 132969,
-   "secondi": 0.6,
+   "byte": 133670,
+   "secondi": 0.9,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/01.html"
   },
   {
    "url": "https://altadefinizione-01.best/35473-un-buon-avvocato-streaming.html",
    "status": 200,
-   "byte": 94459,
-   "secondi": 0.5,
+   "byte": 94976,
+   "secondi": 0.3,
    "titolo_pagina": "Un buon avvocato Streaming HD - Altadefinizione01",
    "file": "pagine/02.html"
   },
@@ -246,65 +230,65 @@
    "file": "pagine/03.html"
   },
   {
-   "url": "https://vixsrc.to/embed/799573?token=aa612edef8be299748035ba44565e611&t=VGhlIEdvb2QgTGF3eWVy&expires=1794233513&lang=en&skin=vixsrc&canPlayFHD=1",
+   "url": "https://vixsrc.to/embed/799573?token=d56ebe85f35148de78b95fe840402c85&t=VGhlIEdvb2QgTGF3eWVy&expires=1794318261&lang=en&skin=vixsrc&canPlayFHD=1",
    "status": 200,
    "byte": 6591,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "799573",
    "file": "pagine/04.html"
   },
   {
    "url": "https://altadefinizione-01.best/lastnews/",
    "status": 200,
-   "byte": 132969,
-   "secondi": 0.5,
+   "byte": 133670,
+   "secondi": 0.6,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/05.html"
   },
   {
    "url": "https://altadefinizione-01.best/cinema/",
    "status": 200,
-   "byte": 156689,
-   "secondi": 0.3,
+   "byte": 157214,
+   "secondi": 0.5,
    "titolo_pagina": "Al Cinema – Altadefinizione01",
    "file": "pagine/06.html"
   },
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 181631,
-   "secondi": 0.6,
+   "byte": 182725,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/07.html"
   },
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 181631,
-   "secondi": 0.5,
+   "byte": 182725,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/08.html"
   },
   {
    "url": "https://altadefinizione-01.best/azione/",
    "status": 200,
-   "byte": 156268,
-   "secondi": 2.1,
+   "byte": 156735,
+   "secondi": 0.6,
    "titolo_pagina": "Azione – Altadefinizione01",
    "file": "pagine/09.html"
   },
   {
    "url": "https://altadefinizione-01.best/animazione/",
    "status": 200,
-   "byte": 157959,
-   "secondi": 0.6,
+   "byte": 158400,
+   "secondi": 0.3,
    "titolo_pagina": "Animazione – Altadefinizione01",
    "file": "pagine/10.html"
   },
   {
    "url": "https://altadefinizione-01.best/avventura/",
    "status": 200,
-   "byte": 158321,
+   "byte": 158762,
    "secondi": 0.3,
    "titolo_pagina": "Avventura – Altadefinizione01",
    "file": "pagine/11.html"
@@ -312,15 +296,15 @@
   {
    "url": "https://altadefinizione-01.best/catalog/a",
    "status": 200,
-   "byte": 107944,
-   "secondi": 0.9,
+   "byte": 108719,
+   "secondi": 0.8,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/12.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/9",
    "status": 200,
-   "byte": 107176,
+   "byte": 107782,
    "secondi": 0.6,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/13.html"
@@ -328,15 +312,15 @@
   {
    "url": "https://altadefinizione-01.best/catalog/A",
    "status": 200,
-   "byte": 108113,
-   "secondi": 0.6,
+   "byte": 108719,
+   "secondi": 0.4,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/14.html"
   },
   {
    "url": "https://altadefinizione-01.best/catalog/B",
    "status": 200,
-   "byte": 108113,
+   "byte": 108719,
    "secondi": 0.6,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/15.html"
@@ -344,8 +328,8 @@
   {
    "url": "https://altadefinizione-01.best",
    "status": 200,
-   "byte": 181631,
-   "secondi": 0.4,
+   "byte": 182725,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
   },
   {
@@ -359,7 +343,7 @@
    "url": "https://altadefinizione-01.best/find/2025/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "404 | Not Found"
   },
   {
@@ -372,22 +356,22 @@
   {
    "url": "https://altadefinizione-01.best/sub-ita/",
    "status": 200,
-   "byte": 156223,
-   "secondi": 0.5,
+   "byte": 156664,
+   "secondi": 0.3,
    "titolo_pagina": "Sub-ITA &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   },
   {
    "url": "https://altadefinizione-01.best/serie-tv/",
    "status": 200,
-   "byte": 154668,
+   "byte": 155129,
    "secondi": 0.3,
    "titolo_pagina": "Serie TV in Streaming Gratis - Altadefinizione01"
   },
   {
    "url": "https://altadefinizione-01.best/?do=search&subaction=search&titleonly=3&story=avatar",
    "status": 200,
-   "byte": 93087,
-   "secondi": 0.9,
+   "byte": 93528,
+   "secondi": 0.7,
    "titolo_pagina": "Site search &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   }
  ],

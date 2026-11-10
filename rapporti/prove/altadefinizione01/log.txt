@@ -6,20 +6,18 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
       peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.best
       genres | •• Generi | https://altadefinizione-01.best
 == lista "Tutti "
-   -> 26 voci
+   -> 27 voci
       check | Un buon avvocato  | https://altadefinizione-01.best/35473-un-buon-avvocato-streaming.html
       check | L'isola dei ricordi  | https://altadefinizione-01.best/35469-l-isola-dei-ricordi-streaming.html
-      check | Blue Film  | https://altadefinizione-01.best/35456-blue-streaming.html
-      check | Possible Love  | https://altadefinizione-01.best/35448-possible-love-streaming.html
+      check | Blue  | https://altadefinizione-01.best/35456-blue-streaming.html
+      check | Ice Cream Man  | https://altadefinizione-01.best/35450-ice-cream-man-streaming.html
 == check su "Un buon avvocato "
    -> 3 voci
       play | Un buon avvocato  | https://v.vidxgo.co/39453578
       play | Un buon avvocato  | https://vixsrc.to/movie/tt39453578
       add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35473-un-buon-avvocato-streaming.html
 == risoluzione vidxgo https://v.vidxgo.co/39453578
-   api /t/ 39453578 referer https://v.vidxgo.co/39453578 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 39453578 referer https://altadefinizione-01.best/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+   -> VIDEO OK m3u8 200 
 == risoluzione vixsrc https://vixsrc.to/movie/tt39453578
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (8)
@@ -32,9 +30,9 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
     menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 25 
+   SEZIONE Tutti -> OK 26 
    SEZIONE •• Al Cinema -> OK 30 
-   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 36 
+   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 37 
    SEZIONE Azione -> OK 29 
    SEZIONE Animazione -> OK 27 
    SEZIONE Avventura -> OK 30 

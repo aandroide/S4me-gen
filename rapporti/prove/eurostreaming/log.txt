@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.one
       peliculas | • Archivio | https://eurostream.one/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
+      episodios | Signora Volpe | https://eurostream.one/signora-volpe/
+      episodios | The Ramparts of Ice | https://eurostream.one/the-ramparts-of-ice/
+      episodios | Il paradiso delle signore | https://eurostream.one/il-paradiso-delle-signore/
       episodios | Best Medicine | https://eurostream.one/best-medicine/
-      episodios | L’ultimo piatto | https://eurostream.one/lultimo-piatto/
-      episodios | 100 Days of Deception | https://eurostream.one/100-days-deception/
-      episodios | Sacrifice | https://eurostream.one/sacrifice/
-== episodios su "Best Medicine"
-   -> 20 voci
-      findvideos | 1x01 - Docked  | https://eurostream.one/best-medicine/
-      findvideos | 1x02 - Bean There Done That  | https://eurostream.one/best-medicine/
-      findvideos | 1x03 - Take Me Out of the Ballgame  | https://eurostream.one/best-medicine/
-      findvideos | 1x04 - All the World’s Ablaze  | https://eurostream.one/best-medicine/
-== findvideos su "1x01 - Docked "
+== episodios su "Signora Volpe"
+   -> 9 voci
+      findvideos | 1x01 - Una zia ansiosa  | https://eurostream.one/signora-volpe/
+      findvideos | 1x02 - Segreti e sacrifici  | https://eurostream.one/signora-volpe/
+      findvideos | 1x03 - Tartufi e tradimento  | https://eurostream.one/signora-volpe/
+      findvideos | 2x01 - Un debito d’onore  | https://eurostream.one/signora-volpe/
+== findvideos su "1x01 - Una zia ansiosa "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/lzae8228nww6
+Exception: Not un-shortened link: https://clicka.cc/delta/hs1d0mlmf4fu
 
 == lista "• Anime"
    -> 19 voci
@@ -65,21 +65,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/0d9arej2
+Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47
 
 == lista "• Aggiornamenti"
    -> 21 voci
+      episodios | 3x02 - Signora Volpe - Riccioli d'oro è morto | https://eurostream.one/signora-volpe/
+      episodios | 1x05 - The Ramparts of Ice - Cambiamento | https://eurostream.one/the-ramparts-of-ice/
+      episodios | 11x36 - Il paradiso delle signore - Episodio 36 , 11x45 Epis | https://eurostream.one/il-paradiso-delle-signore/
       episodios | 2x06 - Best Medicine - Can't Stop the Healing  | https://eurostream.one/best-medicine/
-      episodios | 1x05 - L'ultimo piatto - Episodio 5 , 1x06 Episodio 6 | https://eurostream.one/lultimo-piatto/
-      episodios | 1x10 - 100 Days of Deception - Episode 10  | https://eurostream.one/100-days-deception/
-      episodios | 2x07 - Sacrifice - Il prezzo del cambiamento | https://eurostream.one/sacrifice/
-== episodios su "2x06 - Best Medicine - Can't Stop the He"
-   -> 20 voci
-      findvideos | 1x01 - Docked  | https://eurostream.one/best-medicine/
-      findvideos | 1x02 - Bean There Done That  | https://eurostream.one/best-medicine/
-      findvideos | 1x03 - Take Me Out of the Ballgame  | https://eurostream.one/best-medicine/
-      findvideos | 1x04 - All the World’s Ablaze  | https://eurostream.one/best-medicine/
-== findvideos su "1x01 - Docked "
+== episodios su "3x02 - Signora Volpe - Riccioli d'oro è "
+   -> 9 voci
+      findvideos | 1x01 - Una zia ansiosa  | https://eurostream.one/signora-volpe/
+      findvideos | 1x02 - Segreti e sacrifici  | https://eurostream.one/signora-volpe/
+      findvideos | 1x03 - Tartufi e tradimento  | https://eurostream.one/signora-volpe/
+      findvideos | 2x01 - Un debito d’onore  | https://eurostream.one/signora-volpe/
+== findvideos su "1x01 - Una zia ansiosa "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/lzae8228nww6
+Exception: Not un-shortened link: https://clicka.cc/delta/hs1d0mlmf4fu
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -110,4 +110,4 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - Docked "
+VERDETTO: SI FERMA A: findvideos su "1x01 - Una zia ansiosa "
