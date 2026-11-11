@@ -1,23 +1,23 @@
-Canale eurostreaming | indirizzo https://eurostream.one
+Canale eurostreaming | indirizzo https://eurostream.hair
 == mainlist
    -> 6 voci
-      peliculas | • Serie TV | https://eurostream.one
-      peliculas | • Anime | https://eurostream.one/category/anime-cartoni-animati/
-      peliculas | • Aggiornamenti | https://eurostream.one/nuovi-ep-aggiornamento/
-      peliculas | • Archivio | https://eurostream.one/category/serie-tv-archive/
+      peliculas | • Serie TV | https://eurostream.hair
+      peliculas | • Anime | https://eurostream.hair/category/anime-cartoni-animati/
+      peliculas | • Aggiornamenti | https://eurostream.hair/nuovi-ep-aggiornamento/
+      peliculas | • Archivio | https://eurostream.hair/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Signora Volpe | https://eurostream.one/signora-volpe/
-      episodios | The Ramparts of Ice | https://eurostream.one/the-ramparts-of-ice/
-      episodios | Il paradiso delle signore | https://eurostream.one/il-paradiso-delle-signore/
-      episodios | Best Medicine | https://eurostream.one/best-medicine/
-== episodios su "Signora Volpe"
-   -> 9 voci
-      findvideos | 1x01 - Una zia ansiosa  | https://eurostream.one/signora-volpe/
-      findvideos | 1x02 - Segreti e sacrifici  | https://eurostream.one/signora-volpe/
-      findvideos | 1x03 - Tartufi e tradimento  | https://eurostream.one/signora-volpe/
-      findvideos | 2x01 - Un debito d’onore  | https://eurostream.one/signora-volpe/
-== findvideos su "1x01 - Una zia ansiosa "
+      episodios | VisionQuest | https://eurostream.hair/visionquest/
+      episodios | The Blame | https://eurostream.hair/the-blame/
+      episodios | Stick | https://eurostream.hair/stick-2025/
+      episodios | Sacrifice | https://eurostream.hair/sacrifice/
+== episodios su "VisionQuest"
+   -> 17 voci
+      findvideos | 1x01 - Senza legami  | https://eurostream.hair/visionquest/
+      findvideos | 1x02 - Teseo  | https://eurostream.hair/visionquest/
+      findvideos | 1x03 - Reboot  | https://eurostream.hair/visionquest/
+      findvideos | 1x04 - Malware  | https://eurostream.hair/visionquest/
+== findvideos su "1x01 - Senza legami "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,21 +34,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/hs1d0mlmf4fu
+Exception: Not un-shortened link: https://clicka.cc/delta/gz2dhgo42blb
 
 == lista "• Anime"
    -> 19 voci
-      episodios | Daemons of the Shadow Realm | https://eurostream.one/daemons-of-the-shadow-realm/
-      episodios | Adventure Time: Missioni leggendarie | https://eurostream.one/adventure-time-side-quests/
-      episodios | Avatar: I Sette Rifugi | https://eurostream.one/avatar-sette-rifugi/
-      episodios | Willy il Coyote e Beep Beep | https://eurostream.one/willy-il-coyote-e-beep-beep/
-== episodios su "Daemons of the Shadow Realm"
-   -> 25 voci
-      findvideos | 1x01 - Asa e Yuru  | https://eurostream.one/daemons-of-the-shadow-realm/
-      findvideos | 1x02 - Destra e Sinistra  | https://eurostream.one/daemons-of-the-shadow-realm/
-      findvideos | 1x03 - Dera e Hana  | https://eurostream.one/daemons-of-the-shadow-realm/
-      findvideos | 1x04 - Jin e Yuru  | https://eurostream.one/daemons-of-the-shadow-realm/
-== findvideos su "1x01 - Asa e Yuru "
+      episodios | Bass X Machina | https://eurostream.hair/bass-x-machina/
+      episodios | Daemons of the Shadow Realm | https://eurostream.hair/daemons-of-the-shadow-realm/
+      episodios | Adventure Time: Missioni leggendarie | https://eurostream.hair/adventure-time-side-quests/
+      episodios | Avatar: I Sette Rifugi | https://eurostream.hair/avatar-sette-rifugi/
+== episodios su "Bass X Machina"
+   -> 7 voci
+      findvideos | 1x01 - Fino ad allora… sono Bass Reeves  | https://eurostream.hair/bass-x-machina/
+      findvideos | 1x02 - Come chiedere una pallottola  | https://eurostream.hair/bass-x-machina/
+      findvideos | 1x03 - Quello non sembra Dio  | https://eurostream.hair/bass-x-machina/
+      findvideos | 1x04 - Questo treno verrà integrato  | https://eurostream.hair/bass-x-machina/
+== findvideos su "1x01 - Fino ad allora… sono Bass Reeves "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -65,21 +65,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/d40bd8wivg47
+Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 3x02 - Signora Volpe - Riccioli d'oro è morto | https://eurostream.one/signora-volpe/
-      episodios | 1x05 - The Ramparts of Ice - Cambiamento | https://eurostream.one/the-ramparts-of-ice/
-      episodios | 11x36 - Il paradiso delle signore - Episodio 36 , 11x45 Epis | https://eurostream.one/il-paradiso-delle-signore/
-      episodios | 2x06 - Best Medicine - Can't Stop the Healing  | https://eurostream.one/best-medicine/
-== episodios su "3x02 - Signora Volpe - Riccioli d'oro è "
-   -> 9 voci
-      findvideos | 1x01 - Una zia ansiosa  | https://eurostream.one/signora-volpe/
-      findvideos | 1x02 - Segreti e sacrifici  | https://eurostream.one/signora-volpe/
-      findvideos | 1x03 - Tartufi e tradimento  | https://eurostream.one/signora-volpe/
-      findvideos | 2x01 - Un debito d’onore  | https://eurostream.one/signora-volpe/
-== findvideos su "1x01 - Una zia ansiosa "
+      episodios | 1x08 - VisionQuest - Per sempre | https://eurostream.hair/visionquest/
+      episodios | 1x01 - The Blame - Episode 1  | https://eurostream.hair/the-blame/
+      episodios | 2x03 - Stick (2025) - Il figliol prodigo | https://eurostream.hair/stick-2025/
+      episodios | 2x08 - Sacrifice - Giù la maschera | https://eurostream.hair/sacrifice/
+== episodios su "1x08 - VisionQuest - Per sempre"
+   -> 17 voci
+      findvideos | 1x01 - Senza legami  | https://eurostream.hair/visionquest/
+      findvideos | 1x02 - Teseo  | https://eurostream.hair/visionquest/
+      findvideos | 1x03 - Reboot  | https://eurostream.hair/visionquest/
+      findvideos | 1x04 - Malware  | https://eurostream.hair/visionquest/
+== findvideos su "1x01 - Senza legami "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/hs1d0mlmf4fu
+Exception: Not un-shortened link: https://clicka.cc/mix/bad09plj
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -107,7 +107,9 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Serie TV -> OK 18 
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
+      PROBLEMA: titolo rovinato: 3x01 - Il Signore degli Anelli: Gli anelli del potere - Marnûkh , 3x02
    SEZIONE • Archivio -> OK 18 
-   SEZIONE txt70741 … -> OK 11 
-SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - Una zia ansiosa "
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostream.hair/?s=avatar', 'status': 403, 'byte': 5914, 'titolo_pagina': 'Just a moment...'}
+SEZIONI: 4 ok su 5
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
+VERDETTO: SI FERMA A: findvideos su "1x01 - Senza legami "

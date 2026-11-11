@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 130
+   "voci": 133
   },
   {
    "passo": "findvideos su \"Die hard - Un buon giorno per morire\"",
@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 20
+   "voci": 21
   },
   {
-   "passo": "findvideos su \"Un figlio di nome Erasmus\"",
+   "passo": "findvideos su \"I mercen4ri - Expendables\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 71
+   "titoli": 69
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -123,7 +123,7 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 5
     },
     {
      "voce": "Law & Order: Unità speciale 15",
@@ -201,19 +201,19 @@
      "voce": "Dragon Ball Super",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 24
-    },
-    {
-     "voce": "Captain Tsubasa",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 49
+     "titoli": 21
     },
     {
      "voce": "Dragon Ball Daima",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
+    },
+    {
+     "voce": "Captain Tsubasa",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 49
     }
    ]
   },
@@ -227,19 +227,19 @@
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
-    },
-    {
-     "voce": "C.S.I. Scena del crimine 10",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 8
+     "titoli": 4
     },
     {
      "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 12
+    },
+    {
+     "voce": "C.S.I. Scena del crimine 10",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 8
     }
    ]
   },
@@ -250,22 +250,22 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Racconto di una notte",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
      "voce": "Tutto per la mia famiglia 2",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
     },
     {
-     "voce": "Love is in the air",
+     "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
-    },
-    {
-     "voce": "Forbidden Fruit 4",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
+     "titoli": 5
     }
    ]
   },
@@ -276,6 +276,12 @@
    "sottovoci": 12,
    "figli": [
     {
+     "voce": "Giorgia - Last Call 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
+    },
+    {
      "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
@@ -283,12 +289,6 @@
     },
     {
      "voce": "Tu Si Que Vales 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 6
-    },
-    {
-     "voce": "Le Iene 2026/2027",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
@@ -366,7 +366,7 @@
      "voce": "Teen Titans Go!",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 5
     },
     {
      "voce": "Looney Tunes Cartoons",
@@ -392,7 +392,7 @@
      "voce": "La casa delle bambole di Gabby",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 3
     },
     {
      "voce": "Chi ha sfidato Ninna e Matti?",
@@ -406,7 +406,7 @@
    "voce": "•• Kids Evergreen",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 8,
+   "sottovoci": 9,
    "figli": [
     {
      "voce": "C'era una volta... Pollon",
@@ -435,7 +435,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 11
+   "titoli": 12
   },
   {
    "voce": "•• Documentari più visti",
@@ -459,10 +459,10 @@
      "titoli": 2
     },
     {
-     "voce": "Tesori d'Italia - Nel cuore dei Sibillini",
+     "voce": "Fuori le prove! - Indagini ai confini della realtà 3",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 1
+     "titoli": 10
     }
    ]
   },

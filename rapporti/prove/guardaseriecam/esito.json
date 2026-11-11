@@ -13,12 +13,12 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"YAGA\"",
+   "passo": "episodios su \"The West con Kevin Costner\"",
    "esito": "OK",
    "voci": 8
   },
   {
-   "passo": "findvideos su \"1x01 - Uomo in fiamme\"",
+   "passo": "findvideos su \"1x01 - Episodio 1\"",
    "esito": "OK",
    "voci": 1
   }
@@ -26,9 +26,9 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/39980704/1/1",
+   "url": "https://v.vidxgo.co/27052640/1/1",
    "tipo": "film",
-   "finale": "http://127.0.0.1:38149/hls/tv/39980704/1/1/master.m3u8",
+   "finale": "http://127.0.0.1:32979/hls/tv/27052640/1/1/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -89,17 +89,17 @@
   {
    "url": "https://guardaseriex.work/serietv-streaming",
    "status": 200,
-   "byte": 99868,
+   "byte": 100059,
    "secondi": 0.7,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.work/dramma/5856-yaga-streaming.html",
+   "url": "https://guardaseriex.work/documentario/5888-the-west-con-kevin-costner-streaming.html",
    "status": 200,
-   "byte": 65533,
-   "secondi": 0.6,
-   "titolo_pagina": "YAGA streaming - Guardaserie",
+   "byte": 65583,
+   "secondi": 0.5,
+   "titolo_pagina": "The West con Kevin Costner streaming - Guardaserie",
    "file": "pagine/02.html"
   },
   {
@@ -111,57 +111,57 @@
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt39980704?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt27052640?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 874,
+   "byte": 664,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/227520/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 284,
+   "byte": 238,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
+   "url": "https://api.themoviedb.org/3/tv/227520?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
    "status": 200,
-   "byte": 12074,
+   "byte": 8065,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/227520/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 284,
+   "byte": 238,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/227520?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 2930,
+   "byte": 2215,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/227520/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 12174,
+   "byte": 2678,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
+   "url": "https://api.themoviedb.org/3/tv/227520/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
    "status": 200,
-   "byte": 16875,
+   "byte": 7262,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/10.html"
@@ -169,7 +169,7 @@
   {
    "url": "https://guardaseriex.work/serietv-streaming",
    "status": 200,
-   "byte": 99868,
+   "byte": 100059,
    "secondi": 0.7,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/11.html"
@@ -177,15 +177,15 @@
   {
    "url": "https://guardaseriex.work/serietv-popolari/",
    "status": 200,
-   "byte": 405677,
-   "secondi": 0.6,
+   "byte": 405727,
+   "secondi": 0.9,
    "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
    "file": "pagine/12.html"
   },
   {
    "url": "https://guardaseriex.work/serietv-streaming",
    "status": 200,
-   "byte": 99868,
+   "byte": 100059,
    "secondi": 0.5,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/13.html"
@@ -193,30 +193,30 @@
   {
    "url": "https://guardaseriex.work/biografico/",
    "status": 200,
-   "byte": 221708,
-   "secondi": 0.5,
+   "byte": 221728,
+   "secondi": 0.6,
    "titolo_pagina": "Biografico streaming | Guardaserie",
    "file": "pagine/14.html"
   },
   {
    "url": "https://guardaseriex.work/commedia/",
    "status": 200,
-   "byte": 2271205,
-   "secondi": 0.7,
+   "byte": 2271155,
+   "secondi": 1.0,
    "titolo_pagina": "Commedia streaming | Guardaserie",
    "file": "pagine/15.html"
   },
   {
    "url": "https://guardaseriex.work/crime/",
    "status": 200,
-   "byte": 1265234,
-   "secondi": 2.0,
+   "byte": 1265374,
+   "secondi": 0.8,
    "titolo_pagina": "Crime streaming | Guardaserie"
   },
   {
    "url": "https://guardaseriex.work/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 38226,
+   "byte": 38276,
    "secondi": 0.6,
    "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS"
   }

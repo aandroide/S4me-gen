@@ -36,11 +36,11 @@
  "video": [
   {
    "server": "directo",
-   "url": "https://vod9-rai-it.akamaized.net/podcastcdn/teche_root/Catalogo_Italia_HD_multiaudio/HFZssSlash6hEv2Fl5uEXnDOCKNQeeqqEEqualeeqqEEqual_,1200,1800,2400/playlist.m3u8?hdnea=st=1794318358~exp=1794318508~",
+   "url": "https://download-rai-it.akamaized.net/video_no_available.mp4",
    "tipo": "film",
-   "finale": "https://vod9-rai-it.akamaized.net/podcastcdn/teche_root/Catalogo_Italia_HD_multiaudio/HFZssSlash6hEv2Fl5uEXnDOCKNQeeqqEEqualeeqqEEqual_,1200,1800,2400/playlist.m3u8?hdnea=st=1794318358~exp=1794318508~",
+   "finale": "https://download-rai-it.akamaized.net/video_no_available.mp4",
    "esito": "VIDEO OK",
-   "dettaglio": "m3u8 206"
+   "dettaglio": "206 video/mp4"
   }
  ],
  "menu_dichiarato": [
@@ -72,59 +72,33 @@
    "sottovoci": 7,
    "figli": [
     {
-     "voce": "str12 10 str31",
+     "voce": "str13 11 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
      "sottovoci": 15,
      "figli": [
       {
        "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 21
+      },
+      {
+       "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
        "titoli": 20
       },
       {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      },
-      {
        "voce": "Rai 3",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 16
+       "titoli": 15
       }
      ]
     },
     {
-     "voce": "str11 09 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 31
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      }
-     ]
-    },
-    {
-     "voce": "str17 08 str31",
+     "voce": "str12 10 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
      "sottovoci": 15,
@@ -138,14 +112,40 @@
       {
        "voce": "Rai 2",
        "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
+       "esito": "OK",
+       "titoli": 32
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
        "esito": "ERRORE JSONDecodeError",
        "pagine": []
+      }
+     ]
+    },
+    {
+     "voce": "str11 09 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 30
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 30
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 30
       }
      ]
     }
@@ -161,7 +161,7 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     },
     {
      "voce": "Da non perdere",
@@ -213,13 +213,13 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 26
+     "titoli": 25
     },
     {
      "voce": "Drama",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 14
+     "titoli": 13
     },
     {
      "voce": "Serie Original RaiPlay",
@@ -239,7 +239,7 @@
      "voce": "Intrattenimento",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 25
+     "titoli": 24
     },
     {
      "voce": "Territori e itinerari",
@@ -343,7 +343,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     },
     {
      "voce": "Il teatro di Eduardo",
@@ -422,7 +422,7 @@
      "voce": "L'offerta",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 45
+     "titoli": 46
     }
    ]
   },
@@ -434,8 +434,8 @@
     "tipo undefined, in Kodi appare come cartella: To be",
     "tipo undefined, in Kodi appare come cartella: Fumbleland",
     "tipo undefined, in Kodi appare come cartella: Pupi Avati. Che cinema la vita!",
-    "tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream",
-    "tipo undefined, in Kodi appare come cartella: Cicatrici"
+    "tipo undefined, in Kodi appare come cartella: Cicatrici",
+    "tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream"
    ],
    "esito": "OK",
    "titoli": 8
@@ -446,8 +446,8 @@
   {
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
-   "byte": 1437,
-   "secondi": 1.1,
+   "byte": 597,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }

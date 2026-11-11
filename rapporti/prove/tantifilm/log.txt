@@ -13,15 +13,15 @@ Canale tantifilm | indirizzo https://tanti-film.rest
       peliculas | Commedia | https://tanti-film.rest/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
+      check | It Ends  | https://tanti-film.rest/guarda/35492-it-end-streaming-streaming-hd.html
+      check | The Gospel of Christmas  | https://tanti-film.rest/guarda/35488-the-gospel-of-christmas-streaming-streaming-hd.html
+      check | Azzurrina - Oltre il tempo  | https://tanti-film.rest/guarda/35484-azzurrina-oltre-il-tempo-streaming-streaming-hd.html
       check | Un buon avvocato  | https://tanti-film.rest/guarda/35473-un-buon-avvocato-streaming-streaming-hd.html
-      check | L'isola dei ricordi  | https://tanti-film.rest/guarda/35469-l-isola-dei-ricordi-streaming-streaming-hd.html
-      check | Blue  | https://tanti-film.rest/guarda/35456-blue-streaming-streaming-hd.html
-      check | Ice Cream Man  | https://tanti-film.rest/guarda/35450-ice-cream-man-streaming-streaming-hd.html
-== check su "Un buon avvocato "
+== check su "It Ends "
    -> 2 voci
-      play | Un buon avvocato  | https://v.vidxgo.co/39453578
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.rest/guarda/35473-un-buon-avvocato-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/39453578
+      play | It Ends  | https://v.vidxgo.co/35519455
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.rest/guarda/35492-it-end-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/35519455
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
@@ -29,7 +29,7 @@ Canale tantifilm | indirizzo https://tanti-film.rest
     tvshow | '/serie-tv/'
 == controllo di tutte le sezioni
    SEZIONE Animazione -> OK 24 
-   SEZIONE Avventura -> OK 24 
+   SEZIONE Avventura -> OK 23 
    SEZIONE Biografico -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE • Film -> OK 20 

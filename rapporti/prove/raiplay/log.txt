@@ -31,9 +31,9 @@ Canale raiplay | indirizzo https://www.raiplay.it
       episodios | Abbi fede | https://www.raiplay.it/programmi/abbifede
 == findvideos su "A caccia del vedovo d'oro"
    -> 1 voci
-      play | A caccia del vedovo d'oro | https://vod9-rai-it.akamaized.net/podcastcdn/teche_root/Catalogo_Italia_HD_multiaudio/HFZssSlash6hEv
-== risoluzione directo https://vod9-rai-it.akamaized.net/podcastcdn/teche_root/Catalogo_Italia_HD_multiaudio/HFZssSlash6hEv
-   -> VIDEO OK m3u8 206 
+      play | A caccia del vedovo d'oro | https://download-rai-it.akamaized.net/video_no_available.mp4
+== risoluzione directo https://download-rai-it.akamaized.net/video_no_available.mp4
+   -> VIDEO OK 206 video/mp4 
 == voci dichiarate in mainlist (13)
     top | ('Dirette {bold}', ['/dirette', 'live', '/palinsesto/onAir.json'])
     top | ('Replay {bold}', ['/guidatv', 'replayMenu', '/guidatv.json'])
@@ -50,20 +50,20 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 20 
-   SEZIONE Rai 2 -> ERRORE JSONDecodeError
-   SEZIONE Rai 3 -> OK 16 
+   SEZIONE Rai 1 -> OK 21 
+   SEZIONE Rai 2 -> OK 20 
+   SEZIONE Rai 3 -> OK 15 
+   SEZIONE str13 11 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 32 
+   SEZIONE Rai 2 -> OK 32 
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
    SEZIONE str12 10 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 31 
-   SEZIONE Rai 2 -> ERRORE JSONDecodeError
+   SEZIONE Rai 1 -> OK 30 
+   SEZIONE Rai 2 -> OK 30 
    SEZIONE Rai 3 -> OK 30 
    SEZIONE str11 09 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 32 
-   SEZIONE Rai 2 -> ERRORE JSONDecodeError
-   SEZIONE Rai 3 -> ERRORE JSONDecodeError
-   SEZIONE str17 08 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
-   SEZIONE Novità -> OK 23 
+   SEZIONE Novità -> OK 24 
    SEZIONE Da non perdere -> OK 24 
    SEZIONE Dal libro al film -> OK 24 
    SEZIONE Film -> SOTTOMENU  
@@ -71,11 +71,11 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Serie Original RaiPlay -> OK 23 
    SEZIONE Serie tratte da libri -> OK 25 
    SEZIONE Serie italiane -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 26 
-   SEZIONE Drama -> OK 14 
+   SEZIONE Da non perdere -> OK 25 
+   SEZIONE Drama -> OK 13 
    SEZIONE Serie Original RaiPlay -> OK 23 
    SEZIONE Serie Internazionali -> SOTTOMENU  
-   SEZIONE Intrattenimento -> OK 25 
+   SEZIONE Intrattenimento -> OK 24 
    SEZIONE Territori e itinerari -> OK 32 
    SEZIONE Approfondimento -> OK 25 
    SEZIONE Programmi TV -> SOTTOMENU  
@@ -91,7 +91,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Un mondo di fumetti -> OK 15 
    SEZIONE Next Star -> OK 21 
    SEZIONE Teen -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 23 
+   SEZIONE Da non perdere -> OK 24 
    SEZIONE Il teatro di Eduardo -> OK 25 
    SEZIONE Musica classica -> OK 25 
    SEZIONE Musica e Teatro -> SOTTOMENU  
@@ -103,15 +103,15 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Generi -> SOTTOMENU SENZA TITOLI  
    SEZIONE Teche Rai -> SOTTOMENU  
    SEZIONE Learning -> ERRORE JSONDecodeError
-   SEZIONE L'offerta -> OK 45 
+   SEZIONE L'offerta -> OK 46 
    SEZIONE Rai Italy -> SOTTOMENU  
    SEZIONE txt70741 … -> OK 8 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: The Avatars
       PROBLEMA: tipo undefined, in Kodi appare come cartella: To be
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Fumbleland
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Pupi Avati. Che cinema la vita!
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Cicatrici
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream
 SEZIONI: 13 ok su 14
    SEZIONE SENZA TITOLI: Learning | ERRORE JSONDecodeError
 VERDETTO: ARRIVA AL VIDEO

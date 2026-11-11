@@ -6,11 +6,11 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 130 voci
+   -> 133 voci
       findvideos | Die hard - Un buon giorno per morire | https://mediasetinfinity.mediaset.it/movie/diehardunbuongiornopermorire/die-hard-un-buon-giorno-per-
-      findvideos | L'uomo d'acciaio | https://mediasetinfinity.mediaset.it/movie/luomodacciaio/luomo-dacciaio_F303733201000102
-      findvideos | Divergent | https://mediasetinfinity.mediaset.it/movie/divergent/divergent_F305721401000102
+      findvideos | I mercen4ri - Expendables | https://mediasetinfinity.mediaset.it/movie/imercen4riexpendables/i-mercen4ri-expendables_F3127509010
       findvideos | 3 days to kill | https://mediasetinfinity.mediaset.it/movie/3daystokill/3-days-to-kill_F305950301000102
+      findvideos | Codice unlocked | https://mediasetinfinity.mediaset.it/movie/codiceunlocked/codice-unlocked_F308033801000102
 == findvideos su "Die hard - Un buon giorno per morire"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 20 voci
-      findvideos | Un figlio di nome Erasmus | https://mediasetinfinity.mediaset.it/movie/unfigliodinomeerasmus/un-figlio-di-nome-erasmus_F31008050
-      findvideos | La leggenda di Al, John & Jack | https://mediasetinfinity.mediaset.it/movie/laleggendadialjohnjack/la-leggenda-di-al-john--jack_F0112
-      findvideos | Inga Lindstrom - In fuga dal passato | https://mediasetinfinity.mediaset.it/movie/ingalindstrominfugadalpassato/inga-lindstrom-in-fuga-dal-
-      findvideos | Lost river | https://mediasetinfinity.mediaset.it/movie/lostriver/lost-river_F307190901000102
-== findvideos su "Un figlio di nome Erasmus"
+   -> 21 voci
+      findvideos | I mercen4ri - Expendables | https://mediasetinfinity.mediaset.it/movie/imercen4riexpendables/i-mercen4ri-expendables_F3127509010
+      findvideos | Halvdan il giovane vichingo | https://mediasetinfinity.mediaset.it/movie/halvdanilgiovanevichingo/halvdan-il-giovane-vichingo_F310
+      findvideos | Anche se è amore non si vede | https://mediasetinfinity.mediaset.it/movie/ancheseeamorenonsivede/anche-se-e-amore-non-si-vede_F3042
+      findvideos | Ci vuole un gran fisico | https://mediasetinfinity.mediaset.it/movie/civuoleungranfisico/ci-vuole-un-gran-fisico_F304802501000
+== findvideos su "I mercen4ri - Expendables"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -48,7 +48,7 @@ KeyError: 'response'
       findvideos | The place | https://mediasetinfinity.mediaset.it/movie/theplace/the-place_F306383601000101
       findvideos | Harry Potter e la pietra filosofale | https://mediasetinfinity.mediaset.it/movie/harrypotterelapietrafilosofale/harry-potter-e-la-pietra-f
       findvideos | Animali fantastici e dove trovarli | https://mediasetinfinity.mediaset.it/movie/animalifantasticiedovetrovarli/animali-fantastici-e-dove-
-      findvideos | Rosamunde Pilcher: ti troverò | https://mediasetinfinity.mediaset.it/movie/rosamundepilchertitrovero/rosamunde-pilcher-ti-trovero_F3
+      findvideos | Maigret e la spilungona | https://mediasetinfinity.mediaset.it/movie/maigretelaspilungona/maigret-e-la-spilungona_F01145130100
 == findvideos su "The place"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -90,13 +90,13 @@ Nessuna voce da riprodurre trovata
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 46 
    SEZIONE Replay -> OK 23 
-   SEZIONE •• Tutti i Film -> OK 71 
+   SEZIONE •• Tutti i Film -> OK 69 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 4 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 5 
    SEZIONE Law & Order: Unità speciale 15 -> OK 12 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
@@ -108,21 +108,21 @@ Nessuna voce da riprodurre trovata
    SEZIONE La promessa -> OK 7 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
-   SEZIONE Dragon Ball Super -> OK 24 
-   SEZIONE Captain Tsubasa -> OK 49 
+   SEZIONE Dragon Ball Super -> OK 21 
    SEZIONE Dragon Ball Daima -> OK 10 
+   SEZIONE Captain Tsubasa -> OK 49 
    SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
-   SEZIONE I Simpson -> OK 5 
-   SEZIONE C.S.I. Scena del crimine 10 -> OK 8 
+   SEZIONE I Simpson -> OK 4 
    SEZIONE Law & Order: Unità speciale 15 -> OK 12 
+   SEZIONE C.S.I. Scena del crimine 10 -> OK 8 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
+   SEZIONE Racconto di una notte -> OK 4 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
-   SEZIONE Love is in the air -> OK 7 
-   SEZIONE Forbidden Fruit 4 -> OK 4 
+   SEZIONE My Sweet Lie -> OK 5 
    SEZIONE •• Serie Turche -> SOTTOMENU  
+   SEZIONE Giorgia - Last Call 2026 -> OK 3 
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Tu Si Que Vales 2026 -> OK 6 
-   SEZIONE Le Iene 2026/2027 -> OK 6 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
    SEZIONE Ore 11 -> OK 3 
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
@@ -133,23 +133,23 @@ Nessuna voce da riprodurre trovata
    SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Lo straordinario mondo di Gumball -> OK 9 
-   SEZIONE Teen Titans Go! -> OK 6 
+   SEZIONE Teen Titans Go! -> OK 5 
    SEZIONE Looney Tunes Cartoons -> OK 5 
    SEZIONE •• Kids Boing -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Paw Patrol -> OK 5 
-   SEZIONE La casa delle bambole di Gabby -> OK 5 
+   SEZIONE La casa delle bambole di Gabby -> OK 3 
    SEZIONE Chi ha sfidato Ninna e Matti? -> OK 15 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
    SEZIONE I pinguini di Madagascar -> OK 4 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 11 
+   SEZIONE •• Tutti i Documentari -> OK 12 
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Enigmi alieni 10 -> OK 8 
    SEZIONE Parco nazionale di Donana - Eden spagnolo -> OK 2 
-   SEZIONE Tesori d'Italia - Nel cuore dei Sibillini -> OK 1 
+   SEZIONE Fuori le prove! - Indagini ai confini della realtà 3 -> OK 10 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE •• Film Documentari di Focus -> OK 20 
