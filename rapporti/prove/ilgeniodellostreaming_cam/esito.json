@@ -1,0 +1,304 @@
+{
+ "canale": "ilgeniodellostreaming_cam",
+ "host": "https://il-geniodellostreaming.tattoo",
+ "passi": [
+  {
+   "passo": "mainlist",
+   "esito": "OK",
+   "voci": 6
+  },
+  {
+   "passo": "lista \"Tutti \"",
+   "esito": "OK",
+   "voci": 17
+  },
+  {
+   "passo": "check su \"Serangan Balik\"",
+   "esito": "OK",
+   "voci": 1
+  }
+ ],
+ "video": [
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/39370926",
+   "tipo": "film",
+   "nota": "il server non risponde entro 90 secondi",
+   "modulo_server": true,
+   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
+   "pagina_server": {
+    "status": 403,
+    "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+   },
+   "api_t": [
+    {
+     "referer": "https://v.vidxgo.co/39370926",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    },
+    {
+     "referer": "https://il-geniodellostreaming.tattoo/",
+     "status": 403,
+     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
+    }
+   ]
+  }
+ ],
+ "menu_dichiarato": [
+  "menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])",
+  "menu | ('Generi {submenu}', ['', 'genres', 'genres', 'undefined'])",
+  "menu | ('Per Lettera {submenu}', ['/catalog/all', 'genres', 'template-az', 'undefined'])",
+  "menu | ('Serie Tv', ['/serie-tv/', 'peliculas', '', 'tvshow'])"
+ ],
+ "sezioni": [
+  {
+   "voce": "Tutti",
+   "azione": "peliculas",
+   "problemi": [
+    "tipo undefined, in Kodi appare come cartella: Serangan Balik",
+    "tipo undefined, in Kodi appare come cartella: It Ends",
+    "tipo undefined, in Kodi appare come cartella: The Gospel of Christmas",
+    "tipo undefined, in Kodi appare come cartella: I casi di Alicia",
+    "tipo undefined, in Kodi appare come cartella: The Body",
+    "tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo"
+   ],
+   "esito": "OK",
+   "titoli": 16
+  },
+  {
+   "voce": "•• Generi",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 41,
+   "figli": [
+    {
+     "voce": "Serie TV",
+     "azione": "peliculas",
+     "problemi": [
+      "tipo undefined, in Kodi appare come cartella: I casi di Alicia",
+      "tipo undefined, in Kodi appare come cartella: The Body",
+      "tipo undefined, in Kodi appare come cartella: ChiaroScuro",
+      "tipo undefined, in Kodi appare come cartella: Livatino - Il giudice e i suoi assassini",
+      "tipo undefined, in Kodi appare come cartella: The Serial Killer Connection",
+      "tipo undefined, in Kodi appare come cartella: Può solo andar peggio"
+     ],
+     "esito": "OK",
+     "titoli": 19
+    },
+    {
+     "voce": "Animazione",
+     "azione": "peliculas",
+     "problemi": [
+      "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
+      "tipo undefined, in Kodi appare come cartella: Bass X Machina",
+      "tipo undefined, in Kodi appare come cartella: Helluva Boss",
+      "tipo undefined, in Kodi appare come cartella: Thomas & Friends: Really Helpful Engines",
+      "tipo undefined, in Kodi appare come cartella: Magic Knight Rayearth",
+      "tipo undefined, in Kodi appare come cartella: Shaun, vita da pecora - Operazione Z.U.C.C.A."
+     ],
+     "esito": "OK",
+     "titoli": 20
+    },
+    {
+     "voce": "Avventura",
+     "azione": "peliculas",
+     "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo",
+      "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
+      "tipo undefined, in Kodi appare come cartella: Il Signore degli Anelli - Gli Anelli del Potere",
+      "tipo undefined, in Kodi appare come cartella: Organize Isler: Money Trap",
+      "tipo undefined, in Kodi appare come cartella: Tamerlano - L'ultimo conquistatore",
+      "tipo undefined, in Kodi appare come cartella: Amore sotto copertura"
+     ],
+     "esito": "OK",
+     "titoli": 19
+    }
+   ]
+  },
+  {
+   "voce": "•• Per Lettera",
+   "azione": "genres",
+   "esito": "SOTTOMENU",
+   "sottovoci": 27,
+   "figli": [
+    {
+     "voce": "0-9",
+     "azione": "peliculas",
+     "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Serangan Balik",
+      "tipo undefined, in Kodi appare come cartella: It Ends",
+      "tipo undefined, in Kodi appare come cartella: The Gospel of Christmas",
+      "tipo undefined, in Kodi appare come cartella: I casi di Alicia",
+      "tipo undefined, in Kodi appare come cartella: The Body",
+      "tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo"
+     ],
+     "esito": "OK",
+     "titoli": 16
+    },
+    {
+     "voce": "A",
+     "azione": "peliculas",
+     "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Allen",
+      "tipo undefined, in Kodi appare come cartella: It Ends",
+      "tipo undefined, in Kodi appare come cartella: The Gospel of Christmas",
+      "tipo undefined, in Kodi appare come cartella: I casi di Alicia",
+      "tipo undefined, in Kodi appare come cartella: The Body",
+      "tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo"
+     ],
+     "esito": "OK",
+     "titoli": 18
+    },
+    {
+     "voce": "B",
+     "azione": "peliculas",
+     "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Serangan Balik",
+      "tipo undefined, in Kodi appare come cartella: It Ends",
+      "tipo undefined, in Kodi appare come cartella: The Gospel of Christmas",
+      "tipo undefined, in Kodi appare come cartella: I casi di Alicia",
+      "tipo undefined, in Kodi appare come cartella: The Body",
+      "tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo"
+     ],
+     "esito": "OK",
+     "titoli": 16
+    }
+   ]
+  },
+  {
+   "voce": "Serie Tv",
+   "azione": "peliculas",
+   "esito": "OK",
+   "titoli": 19
+  },
+  {
+   "voce": "txt70741 …",
+   "azione": "search",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://il-geniodellostreaming.tattoo/?s=avatar",
+     "status": 200,
+     "byte": 35026,
+     "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis"
+    }
+   ]
+  }
+ ],
+ "sezioni_riepilogo": "4 ok su 5",
+ "rete": [
+  {
+   "url": "https://il-geniodellostreaming.tattoo/catalog/all",
+   "status": 200,
+   "byte": 38118,
+   "secondi": 1.0,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/01.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/film/35496-never-surrender-streaming.html",
+   "status": 200,
+   "byte": 33370,
+   "secondi": 0.2,
+   "titolo_pagina": "Serangan Balik Streaming HD Gratis - ilGenioDelloStreaming",
+   "file": "pagine/02.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/film/35496-never-surrender-streaming.html",
+   "status": 200,
+   "byte": 33370,
+   "secondi": 0.2,
+   "titolo_pagina": "Serangan Balik Streaming HD Gratis - ilGenioDelloStreaming",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/catalog/all",
+   "status": 200,
+   "byte": 38118,
+   "secondi": 0.6,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo",
+   "status": 200,
+   "byte": 81488,
+   "secondi": 0.2,
+   "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/serie-tv/",
+   "status": 200,
+   "byte": 86229,
+   "secondi": 0.2,
+   "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/animazione/",
+   "status": 200,
+   "byte": 85920,
+   "secondi": 0.2,
+   "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/avventura/",
+   "status": 200,
+   "byte": 85796,
+   "secondi": 0.2,
+   "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/catalog/all",
+   "status": 200,
+   "byte": 38118,
+   "secondi": 0.4,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/catalog/0",
+   "status": 200,
+   "byte": 38460,
+   "secondi": 0.4,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/catalog/a",
+   "status": 200,
+   "byte": 38421,
+   "secondi": 0.4,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/catalog/b",
+   "status": 200,
+   "byte": 37990,
+   "secondi": 0.4,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/serie-tv/",
+   "status": 200,
+   "byte": 86229,
+   "secondi": 0.2,
+   "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
+   "file": "pagine/13.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.tattoo/?s=avatar",
+   "status": 200,
+   "byte": 35026,
+   "secondi": 2.0,
+   "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
+   "file": "pagine/14.html"
+  }
+ ],
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
+}

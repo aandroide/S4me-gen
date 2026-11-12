@@ -10,10 +10,10 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 133
+   "voci": 132
   },
   {
-   "passo": "findvideos su \"Die hard - Un buon giorno per morire\"",
+   "passo": "findvideos su \"White Elephant - Codice criminale (di j.\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -23,9 +23,9 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"I mercen4ri - Expendables\"",
+   "passo": "findvideos su \"Il grande botto\"",
    "esito": "ERRORE",
-   "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+   "errore": "enti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'mediaSelector'\n"
   },
   {
    "passo": "lista \"•• Film più visti del giorno\"",
@@ -69,19 +69,19 @@
    "voce": "Dirette",
    "azione": "live",
    "esito": "OK",
-   "titoli": 46
+   "titoli": 48
   },
   {
    "voce": "Replay",
    "azione": "restart",
    "esito": "OK",
-   "titoli": 23
+   "titoli": 24
   },
   {
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 69
+   "titoli": 68
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -123,13 +123,13 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 6
     },
     {
-     "voce": "Law & Order: Unità speciale 15",
+     "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 12
+     "titoli": 4
     }
    ]
   },
@@ -166,22 +166,22 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Forbidden Fruit 4",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
+     "voce": "Beautiful",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
      "voce": "Tempesta d'amore",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 3
-    },
-    {
-     "voce": "My Sweet Lie",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
-    },
-    {
-     "voce": "La promessa",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 7
     }
    ]
   },
@@ -198,22 +198,22 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Dragon Ball Super",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 21
-    },
-    {
      "voce": "Dragon Ball Daima",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
     },
     {
-     "voce": "Captain Tsubasa",
+     "voce": "One Piece 18",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 49
+     "titoli": 2
+    },
+    {
+     "voce": "Dragon Ball Super",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 18
     }
    ]
   },
@@ -233,13 +233,13 @@
      "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 12
+     "titoli": 10
     },
     {
-     "voce": "C.S.I. Scena del crimine 10",
+     "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 8
+     "titoli": 6
     }
    ]
   },
@@ -250,10 +250,10 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Racconto di una notte",
+     "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 5
     },
     {
      "voce": "Tutto per la mia famiglia 2",
@@ -262,10 +262,10 @@
      "titoli": 4
     },
     {
-     "voce": "My Sweet Lie",
+     "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 4
     }
    ]
   },
@@ -276,16 +276,16 @@
    "sottovoci": 12,
    "figli": [
     {
-     "voce": "Giorgia - Last Call 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 3
-    },
-    {
      "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
+    },
+    {
+     "voce": "Giorgia - Last Call 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
     },
     {
      "voce": "Tu Si Que Vales 2026",
@@ -366,7 +366,7 @@
      "voce": "Teen Titans Go!",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 7
     },
     {
      "voce": "Looney Tunes Cartoons",
@@ -380,7 +380,7 @@
    "voce": "•• Kids Cartoonito",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 14,
+   "sottovoci": 13,
    "figli": [
     {
      "voce": "Paw Patrol",
@@ -392,13 +392,13 @@
      "voce": "La casa delle bambole di Gabby",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 2
     },
     {
-     "voce": "Chi ha sfidato Ninna e Matti?",
+     "voce": "Hey Duggee",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 15
+     "titoli": 5
     }
    ]
   },
@@ -406,7 +406,7 @@
    "voce": "•• Kids Evergreen",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 9,
+   "sottovoci": 8,
    "figli": [
     {
      "voce": "C'era una volta... Pollon",
@@ -435,7 +435,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 12
+   "titoli": 14
   },
   {
    "voce": "•• Documentari più visti",
@@ -484,5 +484,5 @@
  ],
  "sezioni_riepilogo": "24 ok su 24",
  "rete": [],
- "verdetto": "SI FERMA A: findvideos su \"Die hard - Un buon giorno per morire\""
+ "verdetto": "SI FERMA A: findvideos su \"White Elephant - Codice criminale (di j.\""
 }

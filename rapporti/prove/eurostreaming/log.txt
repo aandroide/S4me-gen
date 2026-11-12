@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.hair
       peliculas | • Archivio | https://eurostream.hair/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | VisionQuest | https://eurostream.hair/visionquest/
-      episodios | The Blame | https://eurostream.hair/the-blame/
-      episodios | Stick | https://eurostream.hair/stick-2025/
-      episodios | Sacrifice | https://eurostream.hair/sacrifice/
-== episodios su "VisionQuest"
-   -> 17 voci
-      findvideos | 1x01 - Senza legami  | https://eurostream.hair/visionquest/
-      findvideos | 1x02 - Teseo  | https://eurostream.hair/visionquest/
-      findvideos | 1x03 - Reboot  | https://eurostream.hair/visionquest/
-      findvideos | 1x04 - Malware  | https://eurostream.hair/visionquest/
-== findvideos su "1x01 - Senza legami "
+      episodios | L’imperatrice | https://eurostream.hair/l-imperatrice/
+      episodios | Racconto di una notte | https://eurostream.hair/racconto-di-una-notte/
+      episodios | My Sweet Lie | https://eurostream.hair/my-sweet-lie/
+      episodios | Viola come il mare | https://eurostream.hair/viola-come-il-mare/
+== episodios su "L’imperatrice"
+   -> 19 voci
+      findvideos | 1x01 - Un posto nel mondo  | https://eurostream.hair/l-imperatrice/
+      findvideos | 1x02 - L’arrivo  | https://eurostream.hair/l-imperatrice/
+      findvideos | 1x03 - Le nozze  | https://eurostream.hair/l-imperatrice/
+      findvideos | 1x04 - La caccia  | https://eurostream.hair/l-imperatrice/
+== findvideos su "1x01 - Un posto nel mondo "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/gz2dhgo42blb
+Exception: Not un-shortened link: https://clicka.cc/mix/auk2xfmi
 
 == lista "• Anime"
    -> 19 voci
@@ -69,17 +69,17 @@ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 1x08 - VisionQuest - Per sempre | https://eurostream.hair/visionquest/
-      episodios | 1x01 - The Blame - Episode 1  | https://eurostream.hair/the-blame/
-      episodios | 2x03 - Stick (2025) - Il figliol prodigo | https://eurostream.hair/stick-2025/
-      episodios | 2x08 - Sacrifice - Giù la maschera | https://eurostream.hair/sacrifice/
-== episodios su "1x08 - VisionQuest - Per sempre"
-   -> 17 voci
-      findvideos | 1x01 - Senza legami  | https://eurostream.hair/visionquest/
-      findvideos | 1x02 - Teseo  | https://eurostream.hair/visionquest/
-      findvideos | 1x03 - Reboot  | https://eurostream.hair/visionquest/
-      findvideos | 1x04 - Malware  | https://eurostream.hair/visionquest/
-== findvideos su "1x01 - Senza legami "
+      episodios | 3x01 - L’imperatrice - Il ritorno , 3x06 Finché non ci rived | https://eurostream.hair/l-imperatrice/
+      episodios | 1x80 - Racconto di una notte - Episodio 80 , 1x87 Episodio 8 | https://eurostream.hair/racconto-di-una-notte/
+      episodios | 1x49 - My Sweet Lie - Episodio 49 , 1x73 Episodio 73 | https://eurostream.hair/my-sweet-lie/
+      episodios | 1x05 - Viola come il mare - Quinta e sesta puntata | https://eurostream.hair/viola-come-il-mare/
+== episodios su "3x01 - L’imperatrice - Il ritorno , 3x06"
+   -> 19 voci
+      findvideos | 1x01 - Un posto nel mondo  | https://eurostream.hair/l-imperatrice/
+      findvideos | 1x02 - L’arrivo  | https://eurostream.hair/l-imperatrice/
+      findvideos | 1x03 - Le nozze  | https://eurostream.hair/l-imperatrice/
+      findvideos | 1x04 - La caccia  | https://eurostream.hair/l-imperatrice/
+== findvideos su "1x01 - Un posto nel mondo "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/bad09plj
+Exception: Not un-shortened link: https://clicka.cc/mix/auk2xfmi
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -107,9 +107,8 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Serie TV -> OK 18 
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
-      PROBLEMA: titolo rovinato: 3x01 - Il Signore degli Anelli: Gli anelli del potere - Marnûkh , 3x02
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostream.hair/?s=avatar', 'status': 403, 'byte': 5914, 'titolo_pagina': 'Just a moment...'}
 SEZIONI: 4 ok su 5
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: findvideos su "1x01 - Senza legami "
+VERDETTO: SI FERMA A: findvideos su "1x01 - Un posto nel mondo "

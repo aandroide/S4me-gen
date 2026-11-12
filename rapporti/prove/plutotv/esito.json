@@ -51,46 +51,46 @@
    "azione": "search",
    "problemi": [
     "titolo senza indirizzo: Hunan: The Other World of Avatar",
-    "titolo senza indirizzo: Altar",
-    "titolo senza indirizzo: Altar Egos",
-    "titolo senza indirizzo: Matar a Dios",
-    "titolo senza indirizzo: Vestida Para Matar",
-    "titolo senza indirizzo: Cazar para matar"
+    "titolo senza indirizzo: Gamera 3: Revenge of Iris",
+    "titolo senza indirizzo: Iris",
+    "titolo senza indirizzo: Quackerz",
+    "titolo senza indirizzo: Ella The Elephant",
+    "titolo senza indirizzo: Drawn Together"
    ],
    "esito": "OK",
-   "titoli": 90
+   "titoli": 37
   }
  ],
  "sezioni_riepilogo": "3 ok su 3",
  "rete": [
   {
-   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=a36bf2eb-7ce4-44ac-bbee-9e01779c6bfb&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
+   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=7f1e53e5-fb62-42ac-841e-f0f3f962a3ae&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
    "status": 200,
-   "byte": 18497,
-   "secondi": 0.6,
+   "byte": 18451,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://api.pluto.tv/v2/channels?start=2026-11-11T12:00:00Z&stop=2026-11-11T16:00:00Z&sid=abc44752-ddcf-11f1-ae73-000d3aa7d355&deviceId=a36bf2eb-7ce4-44ac-bbee-9e01779c6bfb",
+   "url": "https://api.pluto.tv/v2/channels?start=2026-11-12T14:00:00Z&stop=2026-11-12T18:00:00Z&sid=cb05418e-dea1-11f1-ac9f-6045bd327e8d&deviceId=7f1e53e5-fb62-42ac-841e-f0f3f962a3ae",
    "status": 200,
-   "byte": 7945219,
+   "byte": 7963873,
    "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.pluto.tv/v2/channels.json?sid=abc44752-ddcf-11f1-ae73-000d3aa7d355&deviceId=a36bf2eb-7ce4-44ac-bbee-9e01779c6bfb",
+   "url": "https://api.pluto.tv/v2/channels.json?sid=cb05418e-dea1-11f1-ac9f-6045bd327e8d&deviceId=7f1e53e5-fb62-42ac-841e-f0f3f962a3ae",
    "status": 200,
    "byte": 1149673,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=abc44752-ddcf-11f1-ae73-000d3aa7d355&deviceId=a36bf2eb-7ce4-44ac-bbee-9e01779c6bfb",
+   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=cb05418e-dea1-11f1-ac9f-6045bd327e8d&deviceId=7f1e53e5-fb62-42ac-841e-f0f3f962a3ae",
    "status": 200,
-   "byte": 13736678,
+   "byte": 13748960,
    "secondi": 0.8,
    "titolo_pagina": "",
    "file": "pagine/04.html"
@@ -98,7 +98,7 @@
   {
    "url": "https://service-media-search.clusters.pluto.tv/v1/search?q=avatar&limit=100",
    "status": 200,
-   "byte": 18138,
+   "byte": 10702,
    "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/05.html"

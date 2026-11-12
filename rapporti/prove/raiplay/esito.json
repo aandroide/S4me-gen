@@ -72,7 +72,7 @@
    "sottovoci": 7,
    "figli": [
     {
-     "voce": "str13 11 str31",
+     "voce": "str14 12 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
      "sottovoci": 15,
@@ -87,13 +87,39 @@
        "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 20
+       "titoli": 23
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 15
+       "titoli": 17
+      }
+     ]
+    },
+    {
+     "voce": "str13 11 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 31
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 35
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 30
       }
      ]
     },
@@ -122,32 +148,6 @@
        "pagine": []
       }
      ]
-    },
-    {
-     "voce": "str11 09 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      }
-     ]
     }
    ]
   },
@@ -167,13 +167,13 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 23
     },
     {
-     "voce": "Dal libro al film",
+     "voce": "Film in esclusiva",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 31
     }
    ]
   },
@@ -265,7 +265,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 25
     },
     {
      "voce": "Docu-serie Original",
@@ -434,8 +434,8 @@
     "tipo undefined, in Kodi appare come cartella: To be",
     "tipo undefined, in Kodi appare come cartella: Fumbleland",
     "tipo undefined, in Kodi appare come cartella: Pupi Avati. Che cinema la vita!",
-    "tipo undefined, in Kodi appare come cartella: Cicatrici",
-    "tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream"
+    "tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream",
+    "tipo undefined, in Kodi appare come cartella: Cicatrici"
    ],
    "esito": "OK",
    "titoli": 8

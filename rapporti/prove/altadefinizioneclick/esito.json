@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"Perversioni femminili\"",
+   "passo": "findvideos su \"Allen\"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,9 +21,9 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/0116293",
+   "url": "https://v.vidxgo.co/37675123",
    "tipo": "film",
-   "finale": "http://127.0.0.1:35399/hls/0116293/master.m3u8",
+   "finale": "http://127.0.0.1:38935/hls/37675123/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -119,23 +119,23 @@
   {
    "url": "https://altadefinizionex.fit/film/",
    "status": 200,
-   "byte": 133574,
-   "secondi": 0.9,
+   "byte": 134533,
+   "secondi": 0.7,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizionex.fit/drammatico/14788-perversioni-femminili-streaming.html",
+   "url": "https://altadefinizionex.fit/fantascienza/45527-allen-streaming.html",
    "status": 200,
-   "byte": 274490,
+   "byte": 181499,
    "secondi": 0.8,
-   "titolo_pagina": "",
+   "titolo_pagina": "Allen Streaming ITA - Altadefinizione",
    "file": "pagine/02.html"
   },
   {
    "url": "https://altadefinizionex.fit/film/",
    "status": 200,
-   "byte": 133574,
+   "byte": 134533,
    "secondi": 0.3,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/03.html"
@@ -143,7 +143,7 @@
   {
    "url": "https://altadefinizionex.fit",
    "status": 200,
-   "byte": 511146,
+   "byte": 513040,
    "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/04.html"
@@ -160,22 +160,22 @@
    "url": "https://altadefinizionex.fit/cinema/",
    "status": 200,
    "byte": 73053,
-   "secondi": 0.6,
+   "secondi": 1.2,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/06.html"
   },
   {
    "url": "https://altadefinizionex.fit/azione/film",
    "status": 200,
-   "byte": 133332,
-   "secondi": 0.6,
+   "byte": 133725,
+   "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/07.html"
   },
   {
    "url": "https://altadefinizionex.fit/animazione/film",
    "status": 200,
-   "byte": 135029,
+   "byte": 135755,
    "secondi": 0.9,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/08.html"
@@ -183,16 +183,16 @@
   {
    "url": "https://altadefinizionex.fit/serie-tv/",
    "status": 200,
-   "byte": 136936,
-   "secondi": 0.7,
+   "byte": 137049,
+   "secondi": 0.6,
    "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione",
    "file": "pagine/09.html"
   },
   {
    "url": "https://altadefinizionex.fit",
    "status": 200,
-   "byte": 511146,
-   "secondi": 0.3,
+   "byte": 510873,
+   "secondi": 0.9,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/10.html"
   },
@@ -208,22 +208,22 @@
    "url": "https://altadefinizionex.fit/cinema/",
    "status": 200,
    "byte": 73053,
-   "secondi": 0.3,
+   "secondi": 1.1,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/12.html"
   },
   {
    "url": "https://altadefinizionex.fit/azione/serie-tv",
    "status": 200,
-   "byte": 136384,
-   "secondi": 1.0,
+   "byte": 137168,
+   "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/13.html"
   },
   {
    "url": "https://altadefinizionex.fit/animazione/serie-tv",
    "status": 200,
-   "byte": 136084,
+   "byte": 136325,
    "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/14.html"
@@ -232,7 +232,7 @@
    "url": "https://altadefinizionex.fit/archivio?search=avatar&f=all&page=1",
    "status": 200,
    "byte": 97376,
-   "secondi": 1.0,
+   "secondi": 0.9,
    "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione",
    "file": "pagine/15.html"
   }

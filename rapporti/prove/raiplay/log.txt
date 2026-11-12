@@ -9,8 +9,8 @@ Canale raiplay | indirizzo https://www.raiplay.it
    -> 14 voci
       peliculas | Novità | https://www.raiplay.it/film
       peliculas | Da non perdere | https://www.raiplay.it/film
-      peliculas | Dal libro al film | https://www.raiplay.it/film
-      peliculas | Love Stories | https://www.raiplay.it/film
+      peliculas | Film in esclusiva | https://www.raiplay.it/film
+      peliculas | Commedie | https://www.raiplay.it/film
 == menu su "Generi"
    -> 10 voci
       genres | Film sottotitolati | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
@@ -51,21 +51,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
    SEZIONE Rai 1 -> OK 21 
-   SEZIONE Rai 2 -> OK 20 
-   SEZIONE Rai 3 -> OK 15 
+   SEZIONE Rai 2 -> OK 23 
+   SEZIONE Rai 3 -> OK 17 
+   SEZIONE str14 12 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 31 
+   SEZIONE Rai 2 -> OK 35 
+   SEZIONE Rai 3 -> OK 30 
    SEZIONE str13 11 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 32 
    SEZIONE Rai 2 -> OK 32 
    SEZIONE Rai 3 -> ERRORE JSONDecodeError
    SEZIONE str12 10 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 30 
-   SEZIONE Rai 2 -> OK 30 
-   SEZIONE Rai 3 -> OK 30 
-   SEZIONE str11 09 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE Novità -> OK 24 
-   SEZIONE Da non perdere -> OK 24 
-   SEZIONE Dal libro al film -> OK 24 
+   SEZIONE Da non perdere -> OK 23 
+   SEZIONE Film in esclusiva -> OK 31 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 25 
    SEZIONE Serie Original RaiPlay -> OK 23 
@@ -79,7 +79,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Territori e itinerari -> OK 32 
    SEZIONE Approfondimento -> OK 25 
    SEZIONE Programmi TV -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Da non perdere -> OK 25 
    SEZIONE Docu-serie Original -> OK 29 
    SEZIONE Documentari Original -> OK 25 
    SEZIONE Documentari -> SOTTOMENU  
@@ -110,8 +110,8 @@ Canale raiplay | indirizzo https://www.raiplay.it
       PROBLEMA: tipo undefined, in Kodi appare come cartella: To be
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Fumbleland
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Pupi Avati. Che cinema la vita!
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Cicatrici
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Cicatrici
 SEZIONI: 13 ok su 14
    SEZIONE SENZA TITOLI: Learning | ERRORE JSONDecodeError
 VERDETTO: ARRIVA AL VIDEO
