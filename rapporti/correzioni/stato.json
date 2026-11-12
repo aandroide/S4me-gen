@@ -1,11 +1,13 @@
 [
  {
   "canale": "1337x",
-  "stato": "OK",
+  "stato": "ROTTO",
   "dettagli": [
    "indirizzo scritto nel canale: https://1337x.to",
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | 14 risultati",
+   "ROTTO: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | patron non trova titoli",
+   "  campione della pagina salvato in rapporti/correzioni/1337x/pagina_peliculas_movie_lib_sort_all_it_popularity_desc_al.html",
+   "  nessuna regex sostitutiva trovata automaticamente in /movie-lib-sort/all/it/popularity/desc/all/1/",
    "OK: peliculas /movie-library/1/ | 25 risultati"
   ],
   "correzione": false,
@@ -13,10 +15,12 @@
  },
  {
   "canale": "accuradio",
-  "stato": "OK",
+  "stato": "ROTTO",
   "dettagli": [
    "indirizzo scritto nel canale: https://www.accuradio.com",
-   "OK: peliculas / | 48 risultati"
+   "ROTTO: peliculas / | patron non trova titoli",
+   "  campione della pagina salvato in rapporti/correzioni/accuradio/pagina_peliculas_home.html",
+   "  nessuna regex sostitutiva trovata automaticamente in /"
   ],
   "correzione": false,
   "host": "https://www.accuradio.com"
@@ -34,10 +38,10 @@
   "canale": "altadefinizione01",
   "stato": "OK",
   "dettagli": [
-   "OK: peliculas /lastnews/ | 89 risultati",
-   "OK: peliculas /cinema/ | 97 risultati",
-   "OK: peliculas /sub-ita/ | 97 risultati",
-   "OK: peliculas /serie-tv/ | 97 risultati"
+   "OK: peliculas /lastnews/ | 93 risultati",
+   "OK: peliculas /cinema/ | 99 risultati",
+   "OK: peliculas /sub-ita/ | 99 risultati",
+   "OK: peliculas /serie-tv/ | 99 risultati"
   ],
   "correzione": false,
   "host": "https://altadefinizione-01.best"
@@ -118,7 +122,7 @@
   "dettagli": [
    "OK: peliculas /filter?sort= | 40 risultati",
    "OK: peliculas /ongoing | 40 risultati",
-   "OK: peliculas /updated | 80 risultati",
+   "OK: peliculas /updated | 79 risultati",
    "OK: peliculas /newest | 40 risultati"
   ],
   "correzione": false,
@@ -191,6 +195,11 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
+      "title": "Dead-End Job",
+      "url": "https://cineblog001.tires/cb01-streaming/35370-dead-end-job-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg"
+     },
+     {
       "title": "A Story of Derry",
       "url": "https://cineblog001.tires/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
@@ -199,11 +208,6 @@
       "title": "Black Doves",
       "url": "https://cineblog001.tires/cb01-streaming/28300-black-doves-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
-     },
-     {
-      "title": "Tulsa King",
-      "url": "https://cineblog001.tires/cb01-streaming/27279-tulsa-king-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-11/tulsa-king_1732014592.jpg"
      }
     ],
     "perse": []
@@ -214,6 +218,11 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
+      "title": "Dead-End Job",
+      "url": "https://cineblog001.tires/cb01-streaming/35370-dead-end-job-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg"
+     },
+     {
       "title": "A Story of Derry",
       "url": "https://cineblog001.tires/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
@@ -222,11 +231,6 @@
       "title": "Black Doves",
       "url": "https://cineblog001.tires/cb01-streaming/28300-black-doves-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
-     },
-     {
-      "title": "Tulsa King",
-      "url": "https://cineblog001.tires/cb01-streaming/27279-tulsa-king-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-11/tulsa-king_1732014592.jpg"
      }
     ],
     "perse": []
@@ -237,6 +241,11 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
+      "title": "Dead-End Job",
+      "url": "https://cineblog001.tires/cb01-streaming/35370-dead-end-job-streaming-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg"
+     },
+     {
       "title": "A Story of Derry",
       "url": "https://cineblog001.tires/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
@@ -245,11 +254,6 @@
       "title": "Black Doves",
       "url": "https://cineblog001.tires/cb01-streaming/28300-black-doves-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
-     },
-     {
-      "title": "Tulsa King",
-      "url": "https://cineblog001.tires/cb01-streaming/27279-tulsa-king-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-11/tulsa-king_1732014592.jpg"
      }
     ],
     "perse": []
@@ -269,9 +273,9 @@
   "canale": "cinemalibero",
   "stato": "BLOCCO ANTI BOT",
   "dettagli": [
-   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5638 byte): non e un cambio di struttura",
-   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5646 byte): non e un cambio di struttura",
-   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5666 byte): non e un cambio di struttura",
+   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5634 byte): non e un cambio di struttura",
+   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5642 byte): non e un cambio di struttura",
+   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5662 byte): non e un cambio di struttura",
    "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5655 byte): non e un cambio di struttura"
   ],
   "correzione": false,
@@ -373,22 +377,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/super-cube-ita.keAcA/8ib2-q",
-      "thumb": "https://img.animeworld.ac/locandine/39S0Y.jpg",
-      "title": "Super Cube",
+      "url": "/play/fx-fighter-kurumi-chan.M32Ff/DtaQtMMhTw",
+      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
+      "title": "FX Fighter Kurumi-chan",
+      "lang": null
+     },
+     {
+      "url": "/play/one-piece-ita.d5nahE/ljRtLA",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
       "lang": "ITA"
      },
      {
-      "url": "/play/blades-of-the-guardians-2.ERlqG/4SrIPwIn1U",
-      "thumb": "https://img.animeworld.ac/locandine/ERlqG.jpg",
-      "title": "Blades of the Guardians 2",
-      "lang": null
-     },
-     {
-      "url": "/play/magical-girl-raising-project-restart.aT5Oj/LUWig4IZMw",
-      "thumb": "https://img.animeworld.ac/locandine/aT5Oj.png",
-      "title": "Magical Girl Raising Project: Restart",
-      "lang": null
+      "url": "/play/one-piece-ita.d5nahE/NLmk5v",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
+      "lang": "ITA"
      }
     ],
     "perse": [
@@ -402,22 +406,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/super-cube-ita.keAcA/8ib2-q",
-      "thumb": "https://img.animeworld.ac/locandine/39S0Y.jpg",
-      "title": "Super Cube",
+      "url": "/play/fx-fighter-kurumi-chan.M32Ff/DtaQtMMhTw",
+      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
+      "title": "FX Fighter Kurumi-chan",
+      "lang": null
+     },
+     {
+      "url": "/play/one-piece-ita.d5nahE/ljRtLA",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
       "lang": "ITA"
      },
      {
-      "url": "/play/blades-of-the-guardians-2.ERlqG/4SrIPwIn1U",
-      "thumb": "https://img.animeworld.ac/locandine/ERlqG.jpg",
-      "title": "Blades of the Guardians 2",
-      "lang": null
-     },
-     {
-      "url": "/play/magical-girl-raising-project-restart.aT5Oj/LUWig4IZMw",
-      "thumb": "https://img.animeworld.ac/locandine/aT5Oj.png",
-      "title": "Magical Girl Raising Project: Restart",
-      "lang": null
+      "url": "/play/one-piece-ita.d5nahE/NLmk5v",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
+      "lang": "ITA"
      }
     ],
     "perse": [
@@ -431,22 +435,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/super-cube-ita.keAcA/8ib2-q",
-      "thumb": "https://img.animeworld.ac/locandine/39S0Y.jpg",
-      "title": "Super Cube",
+      "url": "/play/fx-fighter-kurumi-chan.M32Ff/DtaQtMMhTw",
+      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
+      "title": "FX Fighter Kurumi-chan",
+      "lang": null
+     },
+     {
+      "url": "/play/one-piece-ita.d5nahE/ljRtLA",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
       "lang": "ITA"
      },
      {
-      "url": "/play/blades-of-the-guardians-2.ERlqG/4SrIPwIn1U",
-      "thumb": "https://img.animeworld.ac/locandine/ERlqG.jpg",
-      "title": "Blades of the Guardians 2",
-      "lang": null
-     },
-     {
-      "url": "/play/magical-girl-raising-project-restart.aT5Oj/LUWig4IZMw",
-      "thumb": "https://img.animeworld.ac/locandine/aT5Oj.png",
-      "title": "Magical Girl Raising Project: Restart",
-      "lang": null
+      "url": "/play/one-piece-ita.d5nahE/NLmk5v",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
+      "lang": "ITA"
      }
     ],
     "perse": [
@@ -460,22 +464,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/super-cube-ita.keAcA/8ib2-q",
-      "thumb": "https://img.animeworld.ac/locandine/39S0Y.jpg",
-      "title": "Super Cube",
+      "url": "/play/fx-fighter-kurumi-chan.M32Ff/DtaQtMMhTw",
+      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
+      "title": "FX Fighter Kurumi-chan",
+      "lang": null
+     },
+     {
+      "url": "/play/one-piece-ita.d5nahE/ljRtLA",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
       "lang": "ITA"
      },
      {
-      "url": "/play/blades-of-the-guardians-2.ERlqG/4SrIPwIn1U",
-      "thumb": "https://img.animeworld.ac/locandine/ERlqG.jpg",
-      "title": "Blades of the Guardians 2",
-      "lang": null
-     },
-     {
-      "url": "/play/magical-girl-raising-project-restart.aT5Oj/LUWig4IZMw",
-      "thumb": "https://img.animeworld.ac/locandine/aT5Oj.png",
-      "title": "Magical Girl Raising Project: Restart",
-      "lang": null
+      "url": "/play/one-piece-ita.d5nahE/NLmk5v",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
+      "lang": "ITA"
      }
     ],
     "perse": [
@@ -529,17 +533,17 @@
       "lang": null
      },
      {
+      "url": "https://guardaseriex.work/animazione/5895-karin-piccola-dea-streaming.html",
+      "thumb": "/uploads/immagini/tt2109422.webp",
+      "year": "2007",
+      "title": "Karin Piccola Dea",
+      "lang": null
+     },
+     {
       "url": "https://guardaseriex.work/animazione/5878-puffin-rock-streaming.html",
       "thumb": "/uploads/immagini/tt3590338.webp",
       "year": "2015",
       "title": "Puffin Rock",
-      "lang": null
-     },
-     {
-      "url": "https://guardaseriex.work/animazione/5879-bass-x-machina-streaming.html",
-      "thumb": "/uploads/immagini/tt39957390.webp",
-      "year": "2026",
-      "title": "Bass X Machina",
       "lang": null
      }
     ],
@@ -586,24 +590,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.work/documentario/5888-the-west-con-kevin-costner-streaming.html",
-      "thumb": "/uploads/immagini/tt27052640.webp",
-      "year": "2025",
-      "title": "The West con Kevin Costner",
+      "url": "https://guardaseriex.work/dramma/5886-campus-drivers-streaming.html",
+      "thumb": "/uploads/immagini/tt39943756.webp",
+      "year": "2026",
+      "title": "Campus Drivers",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/dramma/5887-melania-rea-streaming.html",
-      "thumb": "/uploads/immagini/tt45114341.webp",
+      "url": "https://guardaseriex.work/commedia/5884-it-gets-worse-streaming.html",
+      "thumb": "/uploads/immagini/tt35926686.webp",
       "year": "2026",
-      "title": "Melania Rea",
+      "title": "Può solo andar peggio",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/dramma/5787-4-blocks-zero-streaming.html",
-      "thumb": "/uploads/immagini/tt39379365.webp",
+      "url": "https://guardaseriex.work/crime/5806-the-torment-streaming.html",
+      "thumb": "/uploads/immagini/tt47816221.webp",
       "year": "2026",
-      "title": "4 Blocks Zero",
+      "title": "The Torment",
       "lang": null
      }
     ],
@@ -643,24 +647,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.work/documentario/5888-the-west-con-kevin-costner-streaming.html",
-      "thumb": "/uploads/immagini/tt27052640.webp",
-      "year": "2025",
-      "title": "The West con Kevin Costner",
+      "url": "https://guardaseriex.work/dramma/5886-campus-drivers-streaming.html",
+      "thumb": "/uploads/immagini/tt39943756.webp",
+      "year": "2026",
+      "title": "Campus Drivers",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/dramma/5887-melania-rea-streaming.html",
-      "thumb": "/uploads/immagini/tt45114341.webp",
+      "url": "https://guardaseriex.work/commedia/5884-it-gets-worse-streaming.html",
+      "thumb": "/uploads/immagini/tt35926686.webp",
       "year": "2026",
-      "title": "Melania Rea",
+      "title": "Può solo andar peggio",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/dramma/5787-4-blocks-zero-streaming.html",
-      "thumb": "/uploads/immagini/tt39379365.webp",
+      "url": "https://guardaseriex.work/crime/5806-the-torment-streaming.html",
+      "thumb": "/uploads/immagini/tt47816221.webp",
       "year": "2026",
-      "title": "4 Blocks Zero",
+      "title": "The Torment",
       "lang": null
      }
     ],
@@ -681,7 +685,7 @@
   "stato": "OK",
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /index | 10164 risultati"
+   "OK: peliculas /index | 10119 risultati"
   ],
   "correzione": false,
   "host": "https://hd4me.net"
@@ -719,7 +723,7 @@
   "canale": "ilgeniodellostreaming_cam",
   "stato": "ROTTO",
   "dettagli": [
-   "OK: peliculas /catalog/all | 15 risultati",
+   "OK: peliculas /catalog/all | 16 risultati",
    "ROTTO: peliculas /serie-tv/ | patron non trova titoli",
    "  campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html",
    "  regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating",
@@ -735,7 +739,7 @@
     "esempi": [
      {
       "url": "https://il-geniodellostreaming.tattoo/film/35489-i-casi-di-alicia-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-01/i-casi-di-alicia.jpg",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt39390491.jpg",
       "title": "I casi di Alicia",
       "lang": null,
       "year": "2026"
@@ -889,7 +893,7 @@
   "canale": "raiplay",
   "stato": "OK",
   "dettagli": [
-   "OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata",
+   "attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.tech_datetime_en",
    "OK: https://www.raiplay.it/dirette | html",
    "OK: https://www.raiplay.it/guidatv.json | json, struttura invariata",
    "OK: https://www.raiplay.it/guidatv | html",
@@ -907,7 +911,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27396 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27331 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -924,7 +928,7 @@
    "OK: Archivio per nome | 60 titoli in props.titles",
    "OK: Ricerca | 60 titoli in props.titles",
    "OK: Generi | 20 titoli in props.genres",
-   "OK: serie di esempio /it/titles/66557-i-casi-di-alicia | 1 stagioni, 10 episodi nella prima"
+   "OK: serie di esempio /it/titles/66568-the-good-daughter | 1 stagioni, 6 episodi nella prima"
   ],
   "correzione": false,
   "host": "https://streamingcommunityz.nexus"
@@ -957,7 +961,7 @@
    "  patronBlock rimosso: senza blocco le regex dei titoli trovano 34 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 24 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli"
   ],
   "correzione": true,
@@ -981,7 +985,7 @@
    "OK: peliculas /category/anime | 400 risultati",
    "OK: peliculas /anime-ita | 2782 risultati",
    "attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
-   "OK: peliculas /contatti | 822 risultati",
+   "OK: peliculas /contatti | 824 risultati",
    "attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)"
   ],
   "correzione": false,

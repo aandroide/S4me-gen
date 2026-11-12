@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 5, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 11, NON VERIFICATO 5, OK 22, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 7, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 11, NON VERIFICATO 5, OK 20, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (3)
 
@@ -29,7 +29,7 @@ Sito: https://tanti-film.rest
 -   patronBlock rimosso: senza blocco le regex dei titoli trovano 34 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 24 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
 
 ## CORRETTO IN PARTE (1)
@@ -48,7 +48,23 @@ Sito: http://cinestore.cinetecadibologna.it
 - file corretto scritto in rapporti/correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli
 - attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano
 
-## ROTTO (5)
+## ROTTO (7)
+
+### 1337x
+Sito: https://1337x.to
+- indirizzo scritto nel canale: https://1337x.to
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- ROTTO: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/1337x/pagina_peliculas_movie_lib_sort_all_it_popularity_desc_al.html
+-   nessuna regex sostitutiva trovata automaticamente in /movie-lib-sort/all/it/popularity/desc/all/1/
+- OK: peliculas /movie-library/1/ | 25 risultati
+
+### accuradio
+Sito: https://www.accuradio.com
+- indirizzo scritto nel canale: https://www.accuradio.com
+- ROTTO: peliculas / | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/accuradio/pagina_peliculas_home.html
+-   nessuna regex sostitutiva trovata automaticamente in /
 
 ### cineblog001
 Sito: https://cineblog001.tires
@@ -114,7 +130,7 @@ Sito: https://ilcorsaronero.link
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.tattoo
-- OK: peliculas /catalog/all | 15 risultati
+- OK: peliculas /catalog/all | 16 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
@@ -132,15 +148,15 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27396 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27331 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5638 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5646 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5666 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
 - peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (11)
@@ -217,26 +233,14 @@ Sito: https://streamingita.homes
 Sito: https://vixsrc.to
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
-## OK (22)
-
-### 1337x
-Sito: https://1337x.to
-- indirizzo scritto nel canale: https://1337x.to
-- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | 14 risultati
-- OK: peliculas /movie-library/1/ | 25 risultati
-
-### accuradio
-Sito: https://www.accuradio.com
-- indirizzo scritto nel canale: https://www.accuradio.com
-- OK: peliculas / | 48 risultati
+## OK (20)
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best
-- OK: peliculas /lastnews/ | 89 risultati
-- OK: peliculas /cinema/ | 97 risultati
-- OK: peliculas /sub-ita/ | 97 risultati
-- OK: peliculas /serie-tv/ | 97 risultati
+- OK: peliculas /lastnews/ | 93 risultati
+- OK: peliculas /cinema/ | 99 risultati
+- OK: peliculas /sub-ita/ | 99 risultati
+- OK: peliculas /serie-tv/ | 99 risultati
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.fit
@@ -254,7 +258,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 80 risultati
+- OK: peliculas /updated | 79 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -282,7 +286,7 @@ Sito: https://eurostream.hair
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10164 risultati
+- OK: peliculas /index | 10119 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -326,7 +330,7 @@ Sito: https://pluto.tv
 
 ### raiplay
 Sito: https://www.raiplay.it
-- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
+- attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.tech_datetime_en
 - OK: https://www.raiplay.it/dirette | html
 - OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
 - OK: https://www.raiplay.it/guidatv | html
@@ -347,7 +351,7 @@ Sito: https://streamingcommunityz.nexus
 - OK: Archivio per nome | 60 titoli in props.titles
 - OK: Ricerca | 60 titoli in props.titles
 - OK: Generi | 20 titoli in props.genres
-- OK: serie di esempio /it/titles/66557-i-casi-di-alicia | 1 stagioni, 10 episodi nella prima
+- OK: serie di esempio /it/titles/66568-the-good-daughter | 1 stagioni, 6 episodi nella prima
 
 ### thepiratebay
 Sito: https://apibay.org
@@ -359,7 +363,7 @@ Sito: https://toonitalia.xyz
 - OK: peliculas /category/anime | 400 risultati
 - OK: peliculas /anime-ita | 2782 risultati
 - attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
-- OK: peliculas /contatti | 822 risultati
+- OK: peliculas /contatti | 824 risultati
 - attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 
 ### tunein
