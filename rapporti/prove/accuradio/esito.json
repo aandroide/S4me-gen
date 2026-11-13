@@ -5,22 +5,22 @@
   {
    "passo": "mainlist",
    "esito": "OK",
-   "voci": 72
+   "voci": 71
   },
   {
    "passo": "lista \"Most Popular \"",
+   "esito": "OK",
+   "voci": 48
+  },
+  {
+   "passo": "lista \"\"Smooth Jazz Christmas 50\" — A playlist \"",
+   "esito": "OK",
+   "voci": 48
+  },
+  {
+   "passo": "lista \"\"Best of 2026\" channels \"",
    "esito": "VUOTO",
    "voci": 0
-  },
-  {
-   "passo": "lista \"\"Bluegrass Holiday\" — Christmas pickin' \"",
-   "esito": "ERRORE",
-   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
-  },
-  {
-   "passo": "lista \"Throwback Thursday: 1972 \"",
-   "esito": "ERRORE",
-   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
   }
  ],
  "video": [],
@@ -29,38 +29,79 @@
   {
    "voce": "Most Popular",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.39354587071979075",
+       "status": 200,
+       "byte": 41519,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.2054001123494743",
+       "status": 200,
+       "byte": 56613,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.518592340822308",
+       "status": 200,
+       "byte": 41882,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.39354587071979075",
+     "status": 200,
+     "byte": 41519,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.2054001123494743",
+     "status": 200,
+     "byte": 56613,
+     "titolo_pagina": ""
     }
    ]
   },
   {
-   "voce": "\"Bluegrass Holiday\" — Christmas pickin' by Doyle Lawson, Patty Loveless, the Osborne Bros. and more",
+   "voce": "\"Smooth Jazz Christmas 50\" — A playlist of 50 Smooth Jazz holiday essentials",
    "azione": "peliculas",
    "esito": "VUOTA",
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
-     "titolo_pagina": "Free Internet Radio | AccuRadio Online"
-    }
-   ]
-  },
-  {
-   "voce": "Throwback Thursday: 1972",
-   "azione": "peliculas",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://www.accuradio.com/",
-     "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -77,9 +118,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.4809892398686755",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7468877799457614",
        "status": 200,
-       "byte": 42908,
+       "byte": 41811,
        "titolo_pagina": ""
       }
      ]
@@ -90,9 +131,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.9113095938907803",
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.12352859064398636",
        "status": 200,
-       "byte": 56186,
+       "byte": 56889,
        "titolo_pagina": ""
       }
      ]
@@ -103,9 +144,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.9942360109493368",
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.7910238449358307",
        "status": 200,
-       "byte": 41820,
+       "byte": 41564,
        "titolo_pagina": ""
       }
      ]
@@ -115,19 +156,19 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 283643,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.4809892398686755",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7468877799457614",
      "status": 200,
-     "byte": 42908,
+     "byte": 41811,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.9113095938907803",
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.12352859064398636",
      "status": 200,
-     "byte": 56186,
+     "byte": 56889,
      "titolo_pagina": ""
     }
    ]
@@ -140,20 +181,20 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
   },
   {
-   "voce": "Today's Commercial-Free Genre: Dance",
+   "voce": "Today's Commercial-Free Genre: \"Movie & TV\" channels",
    "azione": "peliculas",
    "esito": "VUOTA",
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -170,9 +211,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600002b/?ando=55&rand=0.7059694824405854",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600002b/?ando=55&rand=0.7787008637523899",
        "status": 200,
-       "byte": 43175,
+       "byte": 42714,
        "titolo_pagina": ""
       }
      ]
@@ -183,9 +224,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.11820770680574832",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.6674092449056084",
        "status": 200,
-       "byte": 43072,
+       "byte": 42845,
        "titolo_pagina": ""
       }
      ]
@@ -196,9 +237,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000029/?ando=58&rand=0.9484396713236751",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000029/?ando=58&rand=0.6084974458891094",
        "status": 200,
-       "byte": 42917,
+       "byte": 42976,
        "titolo_pagina": ""
       }
      ]
@@ -208,19 +249,19 @@
     {
      "url": "https://www.accuradio.com/adult-contemporary",
      "status": 200,
-     "byte": 227861,
+     "byte": 227297,
      "titolo_pagina": "Adult Contemporary - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600002b/?ando=55&rand=0.7059694824405854",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600002b/?ando=55&rand=0.7787008637523899",
      "status": 200,
-     "byte": 43175,
+     "byte": 42714,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.11820770680574832",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.6674092449056084",
      "status": 200,
-     "byte": 43072,
+     "byte": 42845,
      "titolo_pagina": ""
     }
    ]
@@ -237,9 +278,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6ac80d42ab53e37646ab89ba/?ando=4274&rand=0.9246055850608381",
+       "url": "https://www.accuradio.com/playlist/json/6ac80d42ab53e37646ab89ba/?ando=4274&rand=0.23425146708285582",
        "status": 200,
-       "byte": 54841,
+       "byte": 53819,
        "titolo_pagina": ""
       }
      ]
@@ -250,9 +291,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/67913f75ab53e34644bec250/?ando=3979&rand=0.19151750672170686",
+       "url": "https://www.accuradio.com/playlist/json/67913f75ab53e34644bec250/?ando=3979&rand=0.6038875860073628",
        "status": 200,
-       "byte": 50999,
+       "byte": 52956,
        "titolo_pagina": ""
       }
      ]
@@ -263,9 +304,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/560d92fbab53e36eaa7c3086/?ando=822&rand=0.014163065114282225",
+       "url": "https://www.accuradio.com/playlist/json/560d92fbab53e36eaa7c3086/?ando=822&rand=0.3594676302386385",
        "status": 200,
-       "byte": 46445,
+       "byte": 44378,
        "titolo_pagina": ""
       }
      ]
@@ -275,19 +316,19 @@
     {
      "url": "https://www.accuradio.com/adult-rock",
      "status": 200,
-     "byte": 208220,
+     "byte": 207656,
      "titolo_pagina": "Adult Rock - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6ac80d42ab53e37646ab89ba/?ando=4274&rand=0.9246055850608381",
+     "url": "https://www.accuradio.com/playlist/json/6ac80d42ab53e37646ab89ba/?ando=4274&rand=0.23425146708285582",
      "status": 200,
-     "byte": 54841,
+     "byte": 53819,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/67913f75ab53e34644bec250/?ando=3979&rand=0.19151750672170686",
+     "url": "https://www.accuradio.com/playlist/json/67913f75ab53e34644bec250/?ando=3979&rand=0.6038875860073628",
      "status": 200,
-     "byte": 50999,
+     "byte": 52956,
      "titolo_pagina": ""
     }
    ]
@@ -295,12 +336,66 @@
   {
    "voce": "• Alt-Country",
    "azione": "peliculas",
-   "esito": "ERRORE WebErrorException",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 4,
+   "figli": [
+    {
+     "voce": "Insurgent Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600006a/?ando=569&rand=0.8382387423942257",
+       "status": 200,
+       "byte": 43491,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "The Fast Train",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4f846a740d11401270000001/?ando=1099&rand=0.8794559152100713",
+       "status": 200,
+       "byte": 44319,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "The Train",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562e77d9e74636000260/?ando=1061&rand=0.19144699600640103",
+       "status": 200,
+       "byte": 42138,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/alt-country",
-     "status": "HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)",
-     "byte": 0,
+     "status": 200,
+     "byte": 160229,
+     "titolo_pagina": "Alt-Country - Listen to Free Radio Stations - AccuRadio"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600006a/?ando=569&rand=0.8382387423942257",
+     "status": 200,
+     "byte": 43491,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4f846a740d11401270000001/?ando=1099&rand=0.8794559152100713",
+     "status": 200,
+     "byte": 44319,
      "titolo_pagina": ""
     }
    ]
@@ -317,9 +412,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6ac80da1ab53e37646ab89bb/?ando=1359&rand=0.7099687919101976",
+       "url": "https://www.accuradio.com/playlist/json/6ac80da1ab53e37646ab89bb/?ando=1359&rand=0.8033309296723292",
        "status": 200,
-       "byte": 55545,
+       "byte": 54691,
        "titolo_pagina": ""
       }
      ]
@@ -330,9 +425,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.6607436867075734",
+       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.6174237716384872",
        "status": 200,
-       "byte": 43373,
+       "byte": 43418,
        "titolo_pagina": ""
       }
      ]
@@ -343,9 +438,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000081/?ando=263&rand=0.8413118185624212",
+       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000081/?ando=263&rand=0.31621494222632784",
        "status": 200,
-       "byte": 42910,
+       "byte": 42954,
        "titolo_pagina": ""
       }
      ]
@@ -355,19 +450,19 @@
     {
      "url": "https://www.accuradio.com/alternative-rock",
      "status": 200,
-     "byte": 213105,
+     "byte": 212541,
      "titolo_pagina": "Alternative Rock - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6ac80da1ab53e37646ab89bb/?ando=1359&rand=0.7099687919101976",
+     "url": "https://www.accuradio.com/playlist/json/6ac80da1ab53e37646ab89bb/?ando=1359&rand=0.8033309296723292",
      "status": 200,
-     "byte": 55545,
+     "byte": 54691,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.6607436867075734",
+     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.6174237716384872",
      "status": 200,
-     "byte": 43373,
+     "byte": 43418,
      "titolo_pagina": ""
     }
    ]
@@ -384,9 +479,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6a271cc7ab53e30b49becc2b/?ando=3062&rand=0.5510588131567189",
+       "url": "https://www.accuradio.com/playlist/json/6a271cc7ab53e30b49becc2b/?ando=3062&rand=0.5230292485222701",
        "status": 200,
-       "byte": 43789,
+       "byte": 43633,
        "titolo_pagina": ""
       }
      ]
@@ -397,9 +492,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.29901076258893167",
+       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.4327027327289613",
        "status": 200,
-       "byte": 43370,
+       "byte": 43338,
        "titolo_pagina": ""
       }
      ]
@@ -410,9 +505,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000081/?ando=263&rand=0.6599017159921591",
+       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000081/?ando=263&rand=0.251344186970328",
        "status": 200,
-       "byte": 42536,
+       "byte": 43274,
        "titolo_pagina": ""
       }
      ]
@@ -422,19 +517,19 @@
     {
      "url": "https://www.accuradio.com/modern-rock-classics",
      "status": 200,
-     "byte": 246246,
+     "byte": 245682,
      "titolo_pagina": "Alternative Rock Classics - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6a271cc7ab53e30b49becc2b/?ando=3062&rand=0.5510588131567189",
+     "url": "https://www.accuradio.com/playlist/json/6a271cc7ab53e30b49becc2b/?ando=3062&rand=0.5230292485222701",
      "status": 200,
-     "byte": 43789,
+     "byte": 43633,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.29901076258893167",
+     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.4327027327289613",
      "status": 200,
-     "byte": 43370,
+     "byte": 43338,
      "titolo_pagina": ""
     }
    ]
@@ -442,13 +537,13 @@
   {
    "voce": "• Americana",
    "azione": "peliculas",
-   "esito": "ERRORE WebErrorException",
+   "esito": "VUOTA",
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
-     "status": "HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)",
-     "byte": 0,
-     "titolo_pagina": ""
+     "status": 200,
+     "byte": 167478,
+     "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
   },
@@ -464,9 +559,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8452557274406689",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.5095524466786233",
        "status": 200,
-       "byte": 42736,
+       "byte": 42120,
        "titolo_pagina": ""
       }
      ]
@@ -477,9 +572,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.3818018056933482",
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.667883147462014",
        "status": 200,
-       "byte": 56355,
+       "byte": 57086,
        "titolo_pagina": ""
       }
      ]
@@ -490,9 +585,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.05497319543317891",
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.7137132978601759",
        "status": 200,
-       "byte": 41921,
+       "byte": 42283,
        "titolo_pagina": ""
       }
      ]
@@ -502,19 +597,19 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 283643,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8452557274406689",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.5095524466786233",
      "status": 200,
-     "byte": 42736,
+     "byte": 42120,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.3818018056933482",
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.667883147462014",
      "status": 200,
-     "byte": 56355,
+     "byte": 57086,
      "titolo_pagina": ""
     }
    ]
@@ -531,9 +626,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.18603661575738373",
+       "url": "https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.6565794254909634",
        "status": 200,
-       "byte": 42928,
+       "byte": 42866,
        "titolo_pagina": ""
       }
      ]
@@ -544,9 +639,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/556e1979ab53e370ee604e5b/?ando=4281&rand=0.0465559242923107",
+       "url": "https://www.accuradio.com/playlist/json/556e1979ab53e370ee604e5b/?ando=4281&rand=0.9574913004076132",
        "status": 200,
-       "byte": 37693,
+       "byte": 39418,
        "titolo_pagina": ""
       }
      ]
@@ -557,9 +652,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001c2/?ando=49&rand=0.5563820078678768",
+       "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001c2/?ando=49&rand=0.4024240013608533",
        "status": 200,
-       "byte": 50453,
+       "byte": 50211,
        "titolo_pagina": ""
       }
      ]
@@ -569,19 +664,19 @@
     {
      "url": "https://www.accuradio.com/beautiful",
      "status": 200,
-     "byte": 165365,
+     "byte": 164801,
      "titolo_pagina": "Beautiful Music - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.18603661575738373",
+     "url": "https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.6565794254909634",
      "status": 200,
-     "byte": 42928,
+     "byte": 42866,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/556e1979ab53e370ee604e5b/?ando=4281&rand=0.0465559242923107",
+     "url": "https://www.accuradio.com/playlist/json/556e1979ab53e370ee604e5b/?ando=4281&rand=0.9574913004076132",
      "status": 200,
-     "byte": 37693,
+     "byte": 39418,
      "titolo_pagina": ""
     }
    ]
@@ -589,6 +684,19 @@
   {
    "voce": "• Blends",
    "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.accuradio.com/",
+     "status": 200,
+     "byte": 167478,
+     "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    }
+   ]
+  },
+  {
+   "voce": "• Bluegrass",
+   "azione": "peliculas",
    "esito": "SOTTOMENU SENZA TITOLI",
    "sottovoci": 48,
    "figli": [
@@ -598,9 +706,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7262071541128949",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.5701498933475407",
        "status": 200,
-       "byte": 41933,
+       "byte": 42242,
        "titolo_pagina": ""
       }
      ]
@@ -611,9 +719,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.8103962516948605",
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.15136294055821176",
        "status": 200,
-       "byte": 56280,
+       "byte": 56496,
        "titolo_pagina": ""
       }
      ]
@@ -624,9 +732,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.8153807282163368",
-       "status": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 468, in _make_request\n    six.raise_from(e, None)\n  File \"<string>\", line 3, in raise_from\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 463, in _make_request\n    httplib_response = conn.getresponse()\n                       ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py\", line 1478, in getresponse\n    response.begin()\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py\", line 343, in begin\n    version, status, reason = self._read_status()\n                              ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py\", line 304, in _read_status\n    line = str(self.fp.readline(_MAXLINE + 1), \"iso-8859-1\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/socket.py\", line 720, in readinto\n    return self._sock.recv_into(b)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ssl.py\", line 1264, in recv_into\n    return self.read(nbytes, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 802, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 552, in increment\n    raise six.reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/packages/six.py\", line 770, in reraise\n    raise value\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 716, in urlopen\n    httplib_response = self._make_request(\n                       ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 470, in _make_request\n    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 358, in _raise_timeout\n    raise ReadTimeoutError(\nurllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 645, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 275, in send\n    raise e\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 259, in send\n    return super(CipherSuiteAdapter, self).send(request, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 742, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)\n",
-       "byte": 0,
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.6421702570846027",
+       "status": 200,
+       "byte": 42075,
        "titolo_pagina": ""
       }
      ]
@@ -636,32 +744,19 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 283643,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7262071541128949",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.5701498933475407",
      "status": 200,
-     "byte": 41933,
+     "byte": 42242,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.8103962516948605",
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.15136294055821176",
      "status": 200,
-     "byte": 56280,
-     "titolo_pagina": ""
-    }
-   ]
-  },
-  {
-   "voce": "• Bluegrass",
-   "azione": "peliculas",
-   "esito": "ERRORE WebErrorException",
-   "pagine": [
-    {
-     "url": "https://www.accuradio.com/",
-     "status": "HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)",
-     "byte": 0,
+     "byte": 56496,
      "titolo_pagina": ""
     }
    ]
@@ -669,67 +764,13 @@
   {
    "voce": "• Blues",
    "azione": "peliculas",
-   "esito": "SOTTOMENU SENZA TITOLI",
-   "sottovoci": 48,
-   "figli": [
-    {
-     "voce": "Classic Rocktopia",
-     "azione": "playradio",
-     "esito": "ERRORE AttributeError",
-     "pagine": [
-      {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.2556344486808565",
-       "status": 200,
-       "byte": 41222,
-       "titolo_pagina": ""
-      }
-     ]
-    },
-    {
-     "voce": "Today's New Country",
-     "azione": "playradio",
-     "esito": "ERRORE AttributeError",
-     "pagine": [
-      {
-       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.45223449403809557",
-       "status": 200,
-       "byte": 56082,
-       "titolo_pagina": ""
-      }
-     ]
-    },
-    {
-     "voce": "Classical Concentration",
-     "azione": "playradio",
-     "esito": "ERRORE AttributeError",
-     "pagine": [
-      {
-       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.5643338280461605",
-       "status": 200,
-       "byte": 41767,
-       "titolo_pagina": ""
-      }
-     ]
-    }
-   ],
+   "esito": "VUOTA",
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 283643,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
-    },
-    {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.2556344486808565",
-     "status": 200,
-     "byte": 41222,
-     "titolo_pagina": ""
-    },
-    {
-     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.45223449403809557",
-     "status": 200,
-     "byte": 56082,
-     "titolo_pagina": ""
     }
    ]
   },
@@ -745,9 +786,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/577c1286ab53e36647e3e846/?ando=3419&rand=0.00157153605396132",
+       "url": "https://www.accuradio.com/playlist/json/577c1286ab53e36647e3e846/?ando=3419&rand=0.2817919871345448",
        "status": 200,
-       "byte": 47035,
+       "byte": 48591,
        "titolo_pagina": ""
       }
      ]
@@ -758,9 +799,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/59c59dd6ab53e35581c8f107/?ando=2998&rand=0.40984856277102366",
+       "url": "https://www.accuradio.com/playlist/json/59c59dd6ab53e35581c8f107/?ando=2998&rand=0.46170574587812074",
        "status": 200,
-       "byte": 50814,
+       "byte": 50474,
        "titolo_pagina": ""
       }
      ]
@@ -771,9 +812,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001af/?ando=915&rand=0.9221728291368235",
+       "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001af/?ando=915&rand=0.5068644705495525",
        "status": 200,
-       "byte": 49216,
+       "byte": 46767,
        "titolo_pagina": ""
       }
      ]
@@ -783,19 +824,19 @@
     {
      "url": "https://www.accuradio.com/brazilian",
      "status": 200,
-     "byte": 183359,
+     "byte": 182795,
      "titolo_pagina": "Brazilian - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/577c1286ab53e36647e3e846/?ando=3419&rand=0.00157153605396132",
+     "url": "https://www.accuradio.com/playlist/json/577c1286ab53e36647e3e846/?ando=3419&rand=0.2817919871345448",
      "status": 200,
-     "byte": 47035,
+     "byte": 48591,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/59c59dd6ab53e35581c8f107/?ando=2998&rand=0.40984856277102366",
+     "url": "https://www.accuradio.com/playlist/json/59c59dd6ab53e35581c8f107/?ando=2998&rand=0.46170574587812074",
      "status": 200,
-     "byte": 50814,
+     "byte": 50474,
      "titolo_pagina": ""
     }
    ]
@@ -812,9 +853,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000121/?ando=300&rand=0.5831572717360805",
+       "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000121/?ando=300&rand=0.11476431356445149",
        "status": 200,
-       "byte": 42177,
+       "byte": 42768,
        "titolo_pagina": ""
       }
      ]
@@ -825,9 +866,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/61e8983eab53e344fc6d3e24/?ando=3523&rand=0.887382672241771",
+       "url": "https://www.accuradio.com/playlist/json/61e8983eab53e344fc6d3e24/?ando=3523&rand=0.16868613274868471",
        "status": 200,
-       "byte": 51378,
+       "byte": 50570,
        "titolo_pagina": ""
       }
      ]
@@ -838,9 +879,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000126/?ando=301&rand=0.8064723462352713",
+       "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000126/?ando=301&rand=0.9276829327025616",
        "status": 200,
-       "byte": 42923,
+       "byte": 42774,
        "titolo_pagina": ""
       }
      ]
@@ -850,25 +891,38 @@
     {
      "url": "https://www.accuradio.com/brit-rock",
      "status": 200,
-     "byte": 173067,
+     "byte": 172503,
      "titolo_pagina": "Brit Rock - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000121/?ando=300&rand=0.5831572717360805",
+     "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000121/?ando=300&rand=0.11476431356445149",
      "status": 200,
-     "byte": 42177,
+     "byte": 42768,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/61e8983eab53e344fc6d3e24/?ando=3523&rand=0.887382672241771",
+     "url": "https://www.accuradio.com/playlist/json/61e8983eab53e344fc6d3e24/?ando=3523&rand=0.16868613274868471",
      "status": 200,
-     "byte": 51378,
+     "byte": 50570,
      "titolo_pagina": ""
     }
    ]
   },
   {
    "voce": "• Broadway",
+   "azione": "peliculas",
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://www.accuradio.com/",
+     "status": 200,
+     "byte": 167478,
+     "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    }
+   ]
+  },
+  {
+   "voce": "• Cabaret",
    "azione": "peliculas",
    "esito": "SOTTOMENU SENZA TITOLI",
    "sottovoci": 48,
@@ -879,9 +933,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8985551031401697",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.12336345908327373",
        "status": 200,
-       "byte": 41878,
+       "byte": 42156,
        "titolo_pagina": ""
       }
      ]
@@ -892,9 +946,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.844076552743798",
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.8208017192341336",
        "status": 200,
-       "byte": 57266,
+       "byte": 57057,
        "titolo_pagina": ""
       }
      ]
@@ -905,9 +959,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.84215325614577",
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.7617096096296542",
        "status": 200,
-       "byte": 41842,
+       "byte": 42046,
        "titolo_pagina": ""
       }
      ]
@@ -917,33 +971,20 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 283643,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8985551031401697",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.12336345908327373",
      "status": 200,
-     "byte": 41878,
+     "byte": 42156,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.844076552743798",
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.8208017192341336",
      "status": 200,
-     "byte": 57266,
+     "byte": 57057,
      "titolo_pagina": ""
-    }
-   ]
-  },
-  {
-   "voce": "• Cabaret",
-   "azione": "peliculas",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://www.accuradio.com/",
-     "status": 200,
-     "byte": 168042,
-     "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
   },
@@ -955,7 +996,7 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -972,9 +1013,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562777d9e7463600016d/?ando=259&rand=0.8242877092075718",
+       "url": "https://www.accuradio.com/playlist/json/4e38562777d9e7463600016d/?ando=259&rand=0.6431847409745322",
        "status": 200,
-       "byte": 42811,
+       "byte": 42317,
        "titolo_pagina": ""
       }
      ]
@@ -985,9 +1026,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6050b9b3ab53e35eef51ae75/?ando=1826&rand=0.9641623445544184",
+       "url": "https://www.accuradio.com/playlist/json/6050b9b3ab53e35eef51ae75/?ando=1826&rand=0.2343831712584452",
        "status": 200,
-       "byte": 43484,
+       "byte": 42589,
        "titolo_pagina": ""
       }
      ]
@@ -998,9 +1039,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/58ac7da2ab53e3440d3a0bce/?ando=4051&rand=0.7563921829625897",
+       "url": "https://www.accuradio.com/playlist/json/58ac7da2ab53e3440d3a0bce/?ando=4051&rand=0.8982677859341264",
        "status": 200,
-       "byte": 42692,
+       "byte": 42702,
        "titolo_pagina": ""
       }
      ]
@@ -1010,19 +1051,19 @@
     {
      "url": "https://www.accuradio.com/celtic-music",
      "status": 200,
-     "byte": 189434,
+     "byte": 188870,
      "titolo_pagina": "Celtic - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562777d9e7463600016d/?ando=259&rand=0.8242877092075718",
+     "url": "https://www.accuradio.com/playlist/json/4e38562777d9e7463600016d/?ando=259&rand=0.6431847409745322",
      "status": 200,
-     "byte": 42811,
+     "byte": 42317,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6050b9b3ab53e35eef51ae75/?ando=1826&rand=0.9641623445544184",
+     "url": "https://www.accuradio.com/playlist/json/6050b9b3ab53e35eef51ae75/?ando=1826&rand=0.2343831712584452",
      "status": 200,
-     "byte": 43484,
+     "byte": 42589,
      "titolo_pagina": ""
     }
    ]
@@ -1030,13 +1071,67 @@
   {
    "voce": "• Chill",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.9531873026845229",
+       "status": 200,
+       "byte": 41742,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.7724656234443638",
+       "status": 200,
+       "byte": 56793,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.6563841341238836",
+       "status": 200,
+       "byte": 41594,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.9531873026845229",
+     "status": 200,
+     "byte": 41742,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.7724656234443638",
+     "status": 200,
+     "byte": 56793,
+     "titolo_pagina": ""
     }
    ]
   },
@@ -1048,7 +1143,7 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -1057,7 +1152,7 @@
    "voce": "• Christmas Music",
    "azione": "peliculas",
    "esito": "SOTTOMENU SENZA TITOLI",
-   "sottovoci": 149,
+   "sottovoci": 150,
    "figli": [
     {
      "voce": "Holidays Radio",
@@ -1065,9 +1160,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562b77d9e7463600020f/?ando=342&rand=0.9805605093703509",
+       "url": "https://www.accuradio.com/playlist/json/4e38562b77d9e7463600020f/?ando=342&rand=0.921458798115102",
        "status": 200,
-       "byte": 43645,
+       "byte": 43480,
        "titolo_pagina": ""
       }
      ]
@@ -1078,9 +1173,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001ed/?ando=357&rand=0.13251863137164188",
+       "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001ed/?ando=357&rand=0.9546924404685555",
        "status": 200,
-       "byte": 46355,
+       "byte": 46497,
        "titolo_pagina": ""
       }
      ]
@@ -1091,9 +1186,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001db/?ando=347&rand=0.6231944088416377",
+       "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001db/?ando=347&rand=0.6855220604412805",
        "status": 200,
-       "byte": 47307,
+       "byte": 45455,
        "titolo_pagina": ""
       }
      ]
@@ -1103,19 +1198,19 @@
     {
      "url": "https://www.accuradio.com/christmas-music",
      "status": 200,
-     "byte": 375578,
+     "byte": 375223,
      "titolo_pagina": "Holiday Channels - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562b77d9e7463600020f/?ando=342&rand=0.9805605093703509",
+     "url": "https://www.accuradio.com/playlist/json/4e38562b77d9e7463600020f/?ando=342&rand=0.921458798115102",
      "status": 200,
-     "byte": 43645,
+     "byte": 43480,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001ed/?ando=357&rand=0.13251863137164188",
+     "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001ed/?ando=357&rand=0.9546924404685555",
      "status": 200,
-     "byte": 46355,
+     "byte": 46497,
      "titolo_pagina": ""
     }
    ]
@@ -1132,9 +1227,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562d77d9e7463600024b/?ando=910&rand=0.9922396658747206",
+       "url": "https://www.accuradio.com/playlist/json/4e38562d77d9e7463600024b/?ando=910&rand=0.8481311420641059",
        "status": 200,
-       "byte": 41833,
+       "byte": 41476,
        "titolo_pagina": ""
       }
      ]
@@ -1145,9 +1240,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6a7b62f9ab53e36f13ab89e5/?ando=4164&rand=0.44347451894979995",
+       "url": "https://www.accuradio.com/playlist/json/6a7b62f9ab53e36f13ab89e5/?ando=4164&rand=0.7099534408137755",
        "status": 200,
-       "byte": 41599,
+       "byte": 41614,
        "titolo_pagina": ""
       }
      ]
@@ -1158,9 +1253,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6a286ca6ab53e30b49becca0/?ando=3143&rand=0.08471027865669234",
+       "url": "https://www.accuradio.com/playlist/json/6a286ca6ab53e30b49becca0/?ando=3143&rand=0.21284933955848773",
        "status": 200,
-       "byte": 42704,
+       "byte": 42398,
        "titolo_pagina": ""
       }
      ]
@@ -1170,19 +1265,19 @@
     {
      "url": "https://www.accuradio.com/classic-hits",
      "status": 200,
-     "byte": 216694,
+     "byte": 216130,
      "titolo_pagina": "Classic Hits - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562d77d9e7463600024b/?ando=910&rand=0.9922396658747206",
+     "url": "https://www.accuradio.com/playlist/json/4e38562d77d9e7463600024b/?ando=910&rand=0.8481311420641059",
      "status": 200,
-     "byte": 41833,
+     "byte": 41476,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6a7b62f9ab53e36f13ab89e5/?ando=4164&rand=0.44347451894979995",
+     "url": "https://www.accuradio.com/playlist/json/6a7b62f9ab53e36f13ab89e5/?ando=4164&rand=0.7099534408137755",
      "status": 200,
-     "byte": 41599,
+     "byte": 41614,
      "titolo_pagina": ""
     }
    ]
@@ -1199,9 +1294,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8762589953981481",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.20889624008702523",
        "status": 200,
-       "byte": 41748,
+       "byte": 41866,
        "titolo_pagina": ""
       }
      ]
@@ -1212,9 +1307,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/561d8893ab53e32b06edfeec/?ando=3467&rand=0.9291053494971117",
+       "url": "https://www.accuradio.com/playlist/json/561d8893ab53e32b06edfeec/?ando=3467&rand=0.097753896676393",
        "status": 200,
-       "byte": 43524,
+       "byte": 42879,
        "titolo_pagina": ""
       }
      ]
@@ -1225,9 +1320,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5249f6940d114015bc59ac7f/?ando=4445&rand=0.8517677106544965",
+       "url": "https://www.accuradio.com/playlist/json/5249f6940d114015bc59ac7f/?ando=4445&rand=0.072955361112366",
        "status": 200,
-       "byte": 43238,
+       "byte": 42464,
        "titolo_pagina": ""
       }
      ]
@@ -1237,19 +1332,19 @@
     {
      "url": "https://www.accuradio.com/classic-rock",
      "status": 200,
-     "byte": 289005,
+     "byte": 288441,
      "titolo_pagina": "Classic Rock - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8762589953981481",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.20889624008702523",
      "status": 200,
-     "byte": 41748,
+     "byte": 41866,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/561d8893ab53e32b06edfeec/?ando=3467&rand=0.9291053494971117",
+     "url": "https://www.accuradio.com/playlist/json/561d8893ab53e32b06edfeec/?ando=3467&rand=0.097753896676393",
      "status": 200,
-     "byte": 43524,
+     "byte": 42879,
      "titolo_pagina": ""
     }
    ]
@@ -1266,9 +1361,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6a4e7f71ab53e36e31ab8b99/?ando=3855&rand=0.02687631618873898",
+       "url": "https://www.accuradio.com/playlist/json/6a4e7f71ab53e36e31ab8b99/?ando=3855&rand=0.425401418416266",
        "status": 200,
-       "byte": 46375,
+       "byte": 46338,
        "titolo_pagina": ""
       }
      ]
@@ -1279,9 +1374,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/58641912ab53e3439df32625/?ando=1980&rand=0.4227277142766256",
+       "url": "https://www.accuradio.com/playlist/json/58641912ab53e3439df32625/?ando=1980&rand=0.06703408378340814",
        "status": 200,
-       "byte": 41432,
+       "byte": 40753,
        "titolo_pagina": ""
       }
      ]
@@ -1292,9 +1387,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562177d9e746360000ab/?ando=111&rand=0.3895628721125197",
+       "url": "https://www.accuradio.com/playlist/json/4e38562177d9e746360000ab/?ando=111&rand=0.3996596577118168",
        "status": 200,
-       "byte": 41425,
+       "byte": 42545,
        "titolo_pagina": ""
       }
      ]
@@ -1304,19 +1399,19 @@
     {
      "url": "https://www.accuradio.com/classical",
      "status": 200,
-     "byte": 278665,
+     "byte": 278101,
      "titolo_pagina": "Classical - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6a4e7f71ab53e36e31ab8b99/?ando=3855&rand=0.02687631618873898",
+     "url": "https://www.accuradio.com/playlist/json/6a4e7f71ab53e36e31ab8b99/?ando=3855&rand=0.425401418416266",
      "status": 200,
-     "byte": 46375,
+     "byte": 46338,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/58641912ab53e3439df32625/?ando=1980&rand=0.4227277142766256",
+     "url": "https://www.accuradio.com/playlist/json/58641912ab53e3439df32625/?ando=1980&rand=0.06703408378340814",
      "status": 200,
-     "byte": 41432,
+     "byte": 40753,
      "titolo_pagina": ""
     }
    ]
@@ -1324,67 +1419,13 @@
   {
    "voce": "• Comedy",
    "azione": "peliculas",
-   "esito": "SOTTOMENU SENZA TITOLI",
-   "sottovoci": 48,
-   "figli": [
-    {
-     "voce": "Classic Rocktopia",
-     "azione": "playradio",
-     "esito": "ERRORE AttributeError",
-     "pagine": [
-      {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.30421577532412747",
-       "status": 200,
-       "byte": 42155,
-       "titolo_pagina": ""
-      }
-     ]
-    },
-    {
-     "voce": "Today's New Country",
-     "azione": "playradio",
-     "esito": "ERRORE AttributeError",
-     "pagine": [
-      {
-       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.5764014831690696",
-       "status": 200,
-       "byte": 56377,
-       "titolo_pagina": ""
-      }
-     ]
-    },
-    {
-     "voce": "Classical Concentration",
-     "azione": "playradio",
-     "esito": "ERRORE AttributeError",
-     "pagine": [
-      {
-       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.7484735654915872",
-       "status": 200,
-       "byte": 41617,
-       "titolo_pagina": ""
-      }
-     ]
-    }
-   ],
+   "esito": "VUOTA",
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 283643,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
-    },
-    {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.30421577532412747",
-     "status": 200,
-     "byte": 42155,
-     "titolo_pagina": ""
-    },
-    {
-     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.5764014831690696",
-     "status": 200,
-     "byte": 56377,
-     "titolo_pagina": ""
     }
    ]
   },
@@ -1400,9 +1441,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6ac80de0ab53e37646ab89bc/?ando=2057&rand=0.8643259151455642",
+       "url": "https://www.accuradio.com/playlist/json/6ac80de0ab53e37646ab89bc/?ando=2057&rand=0.9996479431310571",
        "status": 200,
-       "byte": 57421,
+       "byte": 57660,
        "titolo_pagina": ""
       }
      ]
@@ -1413,9 +1454,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600006f/?ando=688&rand=0.56968097747716",
+       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600006f/?ando=688&rand=0.09367660510369968",
        "status": 200,
-       "byte": 41566,
+       "byte": 41809,
        "titolo_pagina": ""
       }
      ]
@@ -1426,9 +1467,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000070/?ando=689&rand=0.29026171534513123",
+       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000070/?ando=689&rand=0.8869552823072668",
        "status": 200,
-       "byte": 42200,
+       "byte": 41985,
        "titolo_pagina": ""
       }
      ]
@@ -1438,19 +1479,19 @@
     {
      "url": "https://www.accuradio.com/country",
      "status": 200,
-     "byte": 291318,
+     "byte": 290754,
      "titolo_pagina": "Country - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6ac80de0ab53e37646ab89bc/?ando=2057&rand=0.8643259151455642",
+     "url": "https://www.accuradio.com/playlist/json/6ac80de0ab53e37646ab89bc/?ando=2057&rand=0.9996479431310571",
      "status": 200,
-     "byte": 57421,
+     "byte": 57660,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600006f/?ando=688&rand=0.56968097747716",
+     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600006f/?ando=688&rand=0.09367660510369968",
      "status": 200,
-     "byte": 41566,
+     "byte": 41809,
      "titolo_pagina": ""
     }
    ]
@@ -1458,26 +1499,134 @@
   {
    "voce": "• Crowdsourced channels",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.9823340236372292",
+       "status": 200,
+       "byte": 42345,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.2687073709726341",
+       "status": 200,
+       "byte": 55992,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.5971672143953499",
+       "status": 200,
+       "byte": 42529,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.9823340236372292",
+     "status": 200,
+     "byte": 42345,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.2687073709726341",
+     "status": 200,
+     "byte": 55992,
+     "titolo_pagina": ""
     }
    ]
   },
   {
    "voce": "• Dance",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.0978426895162392",
+       "status": 200,
+       "byte": 42240,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.8775019522964784",
+       "status": 200,
+       "byte": 56408,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.21459595839056977",
+       "status": 200,
+       "byte": 41491,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.0978426895162392",
+     "status": 200,
+     "byte": 42240,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.8775019522964784",
+     "status": 200,
+     "byte": 56408,
+     "titolo_pagina": ""
     }
    ]
   },
@@ -1493,9 +1642,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000041/?ando=66&rand=0.5701780283616563",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000041/?ando=66&rand=0.3014173391313003",
        "status": 200,
-       "byte": 40155,
+       "byte": 39788,
        "titolo_pagina": ""
       }
      ]
@@ -1506,9 +1655,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562c77d9e74636000235/?ando=641&rand=0.5327354334168803",
+       "url": "https://www.accuradio.com/playlist/json/4e38562c77d9e74636000235/?ando=641&rand=0.8427224161307804",
        "status": 200,
-       "byte": 43499,
+       "byte": 43956,
        "titolo_pagina": ""
       }
      ]
@@ -1519,9 +1668,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/59aebea3ab53e3470f5bc2a5/?ando=2838&rand=0.12220389309627666",
+       "url": "https://www.accuradio.com/playlist/json/59aebea3ab53e3470f5bc2a5/?ando=2838&rand=0.5174626274230919",
        "status": 200,
-       "byte": 40871,
+       "byte": 39895,
        "titolo_pagina": ""
       }
      ]
@@ -1531,19 +1680,19 @@
     {
      "url": "https://www.accuradio.com/fifties",
      "status": 200,
-     "byte": 160590,
+     "byte": 160026,
      "titolo_pagina": "Decade: 1950s - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000041/?ando=66&rand=0.5701780283616563",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000041/?ando=66&rand=0.3014173391313003",
      "status": 200,
-     "byte": 40155,
+     "byte": 39788,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562c77d9e74636000235/?ando=641&rand=0.5327354334168803",
+     "url": "https://www.accuradio.com/playlist/json/4e38562c77d9e74636000235/?ando=641&rand=0.8427224161307804",
      "status": 200,
-     "byte": 43499,
+     "byte": 43956,
      "titolo_pagina": ""
     }
    ]
@@ -1551,13 +1700,67 @@
   {
    "voce": "• Decade: 1960s",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8570228255039959",
+       "status": 200,
+       "byte": 41851,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.4430016350208329",
+       "status": 200,
+       "byte": 56358,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.03837403005376849",
+       "status": 200,
+       "byte": 42176,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8570228255039959",
+     "status": 200,
+     "byte": 41851,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.4430016350208329",
+     "status": 200,
+     "byte": 56358,
+     "titolo_pagina": ""
     }
    ]
   },
@@ -1573,9 +1776,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600007f/?ando=257&rand=0.6751578142810237",
+       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600007f/?ando=257&rand=0.7296245783258237",
        "status": 200,
-       "byte": 42615,
+       "byte": 42743,
        "titolo_pagina": ""
       }
      ]
@@ -1586,9 +1789,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6406332cab53e31465eb505a/?ando=3654&rand=0.3334866238986063",
+       "url": "https://www.accuradio.com/playlist/json/6406332cab53e31465eb505a/?ando=3654&rand=0.9202877300659729",
        "status": 200,
-       "byte": 42542,
+       "byte": 41851,
        "titolo_pagina": ""
       }
      ]
@@ -1599,9 +1802,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562177d9e746360000a3/?ando=192&rand=0.2584818223020776",
+       "url": "https://www.accuradio.com/playlist/json/4e38562177d9e746360000a3/?ando=192&rand=0.9420859659006688",
        "status": 200,
-       "byte": 48673,
+       "byte": 49542,
        "titolo_pagina": ""
       }
      ]
@@ -1611,19 +1814,19 @@
     {
      "url": "https://www.accuradio.com/seventies",
      "status": 200,
-     "byte": 276450,
+     "byte": 275886,
      "titolo_pagina": "Decade: 1970s - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600007f/?ando=257&rand=0.6751578142810237",
+     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600007f/?ando=257&rand=0.7296245783258237",
      "status": 200,
-     "byte": 42615,
+     "byte": 42743,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6406332cab53e31465eb505a/?ando=3654&rand=0.3334866238986063",
+     "url": "https://www.accuradio.com/playlist/json/6406332cab53e31465eb505a/?ando=3654&rand=0.9202877300659729",
      "status": 200,
-     "byte": 42542,
+     "byte": 41851,
      "titolo_pagina": ""
     }
    ]
@@ -1640,9 +1843,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.200833418512544",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7633609193066259",
        "status": 200,
-       "byte": 42316,
+       "byte": 41561,
        "titolo_pagina": ""
       }
      ]
@@ -1653,9 +1856,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.3540089031630961",
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.5164249685117253",
        "status": 200,
-       "byte": 55946,
+       "byte": 56983,
        "titolo_pagina": ""
       }
      ]
@@ -1666,9 +1869,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.7322891639808047",
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.7017536006050851",
        "status": 200,
-       "byte": 42166,
+       "byte": 41297,
        "titolo_pagina": ""
       }
      ]
@@ -1678,19 +1881,19 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 283643,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.200833418512544",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7633609193066259",
      "status": 200,
-     "byte": 42316,
+     "byte": 41561,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.3540089031630961",
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.5164249685117253",
      "status": 200,
-     "byte": 55946,
+     "byte": 56983,
      "titolo_pagina": ""
     }
    ]
@@ -1703,7 +1906,7 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -1711,78 +1914,348 @@
   {
    "voce": "• Decade: 2000s",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.15270103393965329",
+       "status": 200,
+       "byte": 41941,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.14347875436114765",
+       "status": 200,
+       "byte": 57464,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.14191359897511557",
+       "status": 200,
+       "byte": 41552,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.15270103393965329",
+     "status": 200,
+     "byte": 41941,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.14347875436114765",
+     "status": 200,
+     "byte": 57464,
+     "titolo_pagina": ""
     }
    ]
   },
   {
    "voce": "• Decade: 2010s",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7319615531835576",
+       "status": 200,
+       "byte": 41317,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.6700402215442509",
+       "status": 200,
+       "byte": 56247,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.0006570618603256584",
+       "status": 200,
+       "byte": 41961,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7319615531835576",
+     "status": 200,
+     "byte": 41317,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.6700402215442509",
+     "status": 200,
+     "byte": 56247,
+     "titolo_pagina": ""
     }
    ]
   },
   {
    "voce": "• Decade: 2020s",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8097766597462662",
+       "status": 200,
+       "byte": 41723,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.1503715527485462",
+       "status": 200,
+       "byte": 56381,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.7270605685224079",
+       "status": 200,
+       "byte": 41889,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8097766597462662",
+     "status": 200,
+     "byte": 41723,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.1503715527485462",
+     "status": 200,
+     "byte": 56381,
+     "titolo_pagina": ""
     }
    ]
   },
   {
    "voce": "• Disco",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.039776552552237665",
+       "status": 200,
+       "byte": 41725,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.1664347711651507",
+       "status": 200,
+       "byte": 56441,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.19637864871732746",
+       "status": 200,
+       "byte": 41792,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.039776552552237665",
+     "status": 200,
+     "byte": 41725,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.1664347711651507",
+     "status": 200,
+     "byte": 56441,
+     "titolo_pagina": ""
     }
    ]
   },
   {
    "voce": "• Electronic",
    "azione": "peliculas",
-   "esito": "ERRORE WebErrorException",
+   "esito": "VUOTA",
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
-     "status": "HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)",
-     "byte": 0,
-     "titolo_pagina": ""
+     "status": 200,
+     "byte": 167478,
+     "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
   },
   {
    "voce": "• Folk",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.5309312223799416",
+       "status": 200,
+       "byte": 41537,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.7732427307727979",
+       "status": 200,
+       "byte": 56409,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.6661692834198695",
+       "status": 200,
+       "byte": 41278,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.5309312223799416",
+     "status": 200,
+     "byte": 41537,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.7732427307727979",
+     "status": 200,
+     "byte": 56409,
+     "titolo_pagina": ""
     }
    ]
   },
@@ -1798,9 +2271,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561f77d9e7463600005d/?ando=589&rand=0.4567200882032677",
+       "url": "https://www.accuradio.com/playlist/json/4e38561f77d9e7463600005d/?ando=589&rand=0.20201384427843216",
        "status": 200,
-       "byte": 43253,
+       "byte": 42649,
        "titolo_pagina": ""
       }
      ]
@@ -1811,9 +2284,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600003c/?ando=593&rand=0.6420639203462979",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600003c/?ando=593&rand=0.665906458917658",
        "status": 200,
-       "byte": 42982,
+       "byte": 42619,
        "titolo_pagina": ""
       }
      ]
@@ -1824,9 +2297,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561f77d9e7463600005c/?ando=590&rand=0.9006207851762403",
+       "url": "https://www.accuradio.com/playlist/json/4e38561f77d9e7463600005c/?ando=590&rand=0.8382908741731006",
        "status": 200,
-       "byte": 43365,
+       "byte": 43024,
        "titolo_pagina": ""
       }
      ]
@@ -1836,19 +2309,19 @@
     {
      "url": "https://www.accuradio.com/french-pop",
      "status": 200,
-     "byte": 160688,
+     "byte": 160124,
      "titolo_pagina": "French Pop Classics - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561f77d9e7463600005d/?ando=589&rand=0.4567200882032677",
+     "url": "https://www.accuradio.com/playlist/json/4e38561f77d9e7463600005d/?ando=589&rand=0.20201384427843216",
      "status": 200,
-     "byte": 43253,
+     "byte": 42649,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600003c/?ando=593&rand=0.6420639203462979",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600003c/?ando=593&rand=0.665906458917658",
      "status": 200,
-     "byte": 42982,
+     "byte": 42619,
      "titolo_pagina": ""
     }
    ]
@@ -1865,9 +2338,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/57869791ab53e346620eeda0/?ando=3335&rand=0.26055862223537285",
+       "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001a5/?ando=99&rand=0.829060724009327",
        "status": 200,
-       "byte": 43216,
+       "byte": 53845,
        "titolo_pagina": ""
       }
      ]
@@ -1878,9 +2351,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600008c/?ando=284&rand=0.9873050433011468",
+       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600008c/?ando=284&rand=0.8134810866237246",
        "status": 200,
-       "byte": 42762,
+       "byte": 42767,
        "titolo_pagina": ""
       }
      ]
@@ -1891,9 +2364,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600008d/?ando=286&rand=0.5575433606226977",
+       "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600008d/?ando=286&rand=0.2580391639872891",
        "status": 200,
-       "byte": 43082,
+       "byte": 42389,
        "titolo_pagina": ""
       }
      ]
@@ -1903,19 +2376,19 @@
     {
      "url": "https://www.accuradio.com/hip-hop",
      "status": 200,
-     "byte": 232876,
+     "byte": 232308,
      "titolo_pagina": "Hip Hop - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/57869791ab53e346620eeda0/?ando=3335&rand=0.26055862223537285",
+     "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001a5/?ando=99&rand=0.829060724009327",
      "status": 200,
-     "byte": 43216,
+     "byte": 53845,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600008c/?ando=284&rand=0.9873050433011468",
+     "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600008c/?ando=284&rand=0.8134810866237246",
      "status": 200,
-     "byte": 42762,
+     "byte": 42767,
      "titolo_pagina": ""
     }
    ]
@@ -1932,9 +2405,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6ac8101bab53e37646ab89c2/?ando=31&rand=0.03295863688357925",
+       "url": "https://www.accuradio.com/playlist/json/6ac8101bab53e37646ab89c2/?ando=31&rand=0.3738375578669709",
        "status": 200,
-       "byte": 55929,
+       "byte": 54920,
        "titolo_pagina": ""
       }
      ]
@@ -1945,9 +2418,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5e823cb0ab53e37e7b623fe0/?ando=1684&rand=0.017438100842083415",
+       "url": "https://www.accuradio.com/playlist/json/5e823cb0ab53e37e7b623fe0/?ando=1684&rand=0.7411155019642668",
        "status": 200,
-       "byte": 55047,
+       "byte": 53133,
        "titolo_pagina": ""
       }
      ]
@@ -1958,9 +2431,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6ac80e80ab53e37646ab89be/?ando=4843&rand=0.8770157733755501",
+       "url": "https://www.accuradio.com/playlist/json/6ac80e80ab53e37646ab89be/?ando=4843&rand=0.06965559264804833",
        "status": 200,
-       "byte": 56318,
+       "byte": 55162,
        "titolo_pagina": ""
       }
      ]
@@ -1970,19 +2443,19 @@
     {
      "url": "https://www.accuradio.com/top-40-hits",
      "status": 200,
-     "byte": 214812,
+     "byte": 214248,
      "titolo_pagina": "Hits (Top 40) - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6ac8101bab53e37646ab89c2/?ando=31&rand=0.03295863688357925",
+     "url": "https://www.accuradio.com/playlist/json/6ac8101bab53e37646ab89c2/?ando=31&rand=0.3738375578669709",
      "status": 200,
-     "byte": 55929,
+     "byte": 54920,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/5e823cb0ab53e37e7b623fe0/?ando=1684&rand=0.017438100842083415",
+     "url": "https://www.accuradio.com/playlist/json/5e823cb0ab53e37e7b623fe0/?ando=1684&rand=0.7411155019642668",
      "status": 200,
-     "byte": 55047,
+     "byte": 53133,
      "titolo_pagina": ""
     }
    ]
@@ -1991,7 +2464,7 @@
    "voce": "• Holiday Music",
    "azione": "peliculas",
    "esito": "SOTTOMENU SENZA TITOLI",
-   "sottovoci": 149,
+   "sottovoci": 150,
    "figli": [
     {
      "voce": "Holidays Radio",
@@ -1999,9 +2472,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562b77d9e7463600020f/?ando=342&rand=0.5659401476425426",
+       "url": "https://www.accuradio.com/playlist/json/4e38562b77d9e7463600020f/?ando=342&rand=0.6013725997243744",
        "status": 200,
-       "byte": 43881,
+       "byte": 44174,
        "titolo_pagina": ""
       }
      ]
@@ -2012,9 +2485,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001ed/?ando=357&rand=0.7869101308905556",
+       "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001ed/?ando=357&rand=0.0966938939174502",
        "status": 200,
-       "byte": 47169,
+       "byte": 46110,
        "titolo_pagina": ""
       }
      ]
@@ -2025,9 +2498,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001db/?ando=347&rand=0.3727260525406063",
+       "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001db/?ando=347&rand=0.032668494948887794",
        "status": 200,
-       "byte": 46708,
+       "byte": 46497,
        "titolo_pagina": ""
       }
      ]
@@ -2037,19 +2510,19 @@
     {
      "url": "https://www.accuradio.com/holiday-music",
      "status": 200,
-     "byte": 375574,
+     "byte": 375219,
      "titolo_pagina": "Holiday Channels - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562b77d9e7463600020f/?ando=342&rand=0.5659401476425426",
+     "url": "https://www.accuradio.com/playlist/json/4e38562b77d9e7463600020f/?ando=342&rand=0.6013725997243744",
      "status": 200,
-     "byte": 43881,
+     "byte": 44174,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001ed/?ando=357&rand=0.7869101308905556",
+     "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001ed/?ando=357&rand=0.0966938939174502",
      "status": 200,
-     "byte": 47169,
+     "byte": 46110,
      "titolo_pagina": ""
     }
    ]
@@ -2066,9 +2539,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6ac80ec0ab53e37646ab89bf/?ando=3690&rand=0.7654351933378831",
+       "url": "https://www.accuradio.com/playlist/json/6ac80ec0ab53e37646ab89bf/?ando=3690&rand=0.6291519339577017",
        "status": 200,
-       "byte": 54107,
+       "byte": 53149,
        "titolo_pagina": ""
       }
      ]
@@ -2079,9 +2552,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5db755b9ab53e39820c9befd/?ando=4608&rand=0.6183111015453339",
+       "url": "https://www.accuradio.com/playlist/json/5db755b9ab53e39820c9befd/?ando=4608&rand=0.826461173241581",
        "status": 200,
-       "byte": 43429,
+       "byte": 43284,
        "titolo_pagina": ""
       }
      ]
@@ -2092,9 +2565,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/67929308ab53e34644bec2bf/?ando=1773&rand=0.8570900021006544",
+       "url": "https://www.accuradio.com/playlist/json/67929308ab53e34644bec2bf/?ando=1773&rand=0.5957856290431743",
        "status": 200,
-       "byte": 53566,
+       "byte": 52532,
        "titolo_pagina": ""
       }
      ]
@@ -2104,19 +2577,19 @@
     {
      "url": "https://www.accuradio.com/indie-rock",
      "status": 200,
-     "byte": 239437,
+     "byte": 238873,
      "titolo_pagina": "Indie - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6ac80ec0ab53e37646ab89bf/?ando=3690&rand=0.7654351933378831",
+     "url": "https://www.accuradio.com/playlist/json/6ac80ec0ab53e37646ab89bf/?ando=3690&rand=0.6291519339577017",
      "status": 200,
-     "byte": 54107,
+     "byte": 53149,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/5db755b9ab53e39820c9befd/?ando=4608&rand=0.6183111015453339",
+     "url": "https://www.accuradio.com/playlist/json/5db755b9ab53e39820c9befd/?ando=4608&rand=0.826461173241581",
      "status": 200,
-     "byte": 43429,
+     "byte": 43284,
      "titolo_pagina": ""
     }
    ]
@@ -2129,7 +2602,7 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -2146,9 +2619,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5f513c89ab53e35d3b691e9b/?ando=431&rand=0.013455634920714",
+       "url": "https://www.accuradio.com/playlist/json/5f513c89ab53e35d3b691e9b/?ando=431&rand=0.6433977506851519",
        "status": 200,
-       "byte": 57055,
+       "byte": 57235,
        "titolo_pagina": ""
       }
      ]
@@ -2159,9 +2632,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/651b1999ab53e353176dc748/?ando=2111&rand=0.38690314188198405",
+       "url": "https://www.accuradio.com/playlist/json/651b1999ab53e353176dc748/?ando=2111&rand=0.22593463668775982",
        "status": 200,
-       "byte": 51583,
+       "byte": 50357,
        "titolo_pagina": ""
       }
      ]
@@ -2171,19 +2644,19 @@
     {
      "url": "https://www.accuradio.com/k-pop",
      "status": 200,
-     "byte": 156226,
+     "byte": 155662,
      "titolo_pagina": "K-pop (Korean) - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/5f513c89ab53e35d3b691e9b/?ando=431&rand=0.013455634920714",
+     "url": "https://www.accuradio.com/playlist/json/5f513c89ab53e35d3b691e9b/?ando=431&rand=0.6433977506851519",
      "status": 200,
-     "byte": 57055,
+     "byte": 57235,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/651b1999ab53e353176dc748/?ando=2111&rand=0.38690314188198405",
+     "url": "https://www.accuradio.com/playlist/json/651b1999ab53e353176dc748/?ando=2111&rand=0.22593463668775982",
      "status": 200,
-     "byte": 51583,
+     "byte": 50357,
      "titolo_pagina": ""
     }
    ]
@@ -2200,9 +2673,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6ac80f4eab53e37625ab844e/?ando=1545&rand=0.6370723437457784",
+       "url": "https://www.accuradio.com/playlist/json/6ac80f4eab53e37625ab844e/?ando=1545&rand=0.20664819544474766",
        "status": 200,
-       "byte": 56906,
+       "byte": 55487,
        "titolo_pagina": ""
       }
      ]
@@ -2213,9 +2686,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5f77592bab53e338838b2bcd/?ando=3386&rand=0.26554610593949146",
+       "url": "https://www.accuradio.com/playlist/json/5f77592bab53e338838b2bcd/?ando=3386&rand=0.31093867411667386",
        "status": 200,
-       "byte": 54402,
+       "byte": 53958,
        "titolo_pagina": ""
       }
      ]
@@ -2226,9 +2699,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5f7e340aab53e305efa952c3/?ando=1289&rand=0.5379609090118797",
+       "url": "https://www.accuradio.com/playlist/json/5f7e340aab53e305efa952c3/?ando=1289&rand=0.3493443709152825",
        "status": 200,
-       "byte": 51203,
+       "byte": 49548,
        "titolo_pagina": ""
       }
      ]
@@ -2238,19 +2711,19 @@
     {
      "url": "https://www.accuradio.com/latin-music",
      "status": 200,
-     "byte": 216758,
+     "byte": 216194,
      "titolo_pagina": "Latino - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6ac80f4eab53e37625ab844e/?ando=1545&rand=0.6370723437457784",
+     "url": "https://www.accuradio.com/playlist/json/6ac80f4eab53e37625ab844e/?ando=1545&rand=0.20664819544474766",
      "status": 200,
-     "byte": 56906,
+     "byte": 55487,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/5f77592bab53e338838b2bcd/?ando=3386&rand=0.26554610593949146",
+     "url": "https://www.accuradio.com/playlist/json/5f77592bab53e338838b2bcd/?ando=3386&rand=0.31093867411667386",
      "status": 200,
-     "byte": 54402,
+     "byte": 53958,
      "titolo_pagina": ""
     }
    ]
@@ -2267,9 +2740,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000029/?ando=58&rand=0.7857353570113045",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000029/?ando=58&rand=0.8353981322086732",
        "status": 200,
-       "byte": 43083,
+       "byte": 42937,
        "titolo_pagina": ""
       }
      ]
@@ -2280,9 +2753,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.9824358298957391",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.8791853739956323",
        "status": 200,
-       "byte": 43103,
+       "byte": 43089,
        "titolo_pagina": ""
       }
      ]
@@ -2293,9 +2766,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600002a/?ando=59&rand=0.6560924169066497",
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600002a/?ando=59&rand=0.9321909972920166",
        "status": 200,
-       "byte": 42575,
+       "byte": 42751,
        "titolo_pagina": ""
       }
      ]
@@ -2305,19 +2778,19 @@
     {
      "url": "https://www.accuradio.com/lite-hits",
      "status": 200,
-     "byte": 225090,
+     "byte": 224526,
      "titolo_pagina": "Lite Hits - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000029/?ando=58&rand=0.7857353570113045",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000029/?ando=58&rand=0.8353981322086732",
      "status": 200,
-     "byte": 43083,
+     "byte": 42937,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.9824358298957391",
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.8791853739956323",
      "status": 200,
-     "byte": 43103,
+     "byte": 43089,
      "titolo_pagina": ""
     }
    ]
@@ -2334,9 +2807,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6324df92ab53e3071eeb58f4/?ando=1581&rand=0.12708599453570346",
+       "url": "https://www.accuradio.com/playlist/json/6324df92ab53e3071eeb58f4/?ando=1581&rand=0.46301825495713533",
        "status": 200,
-       "byte": 42873,
+       "byte": 42271,
        "titolo_pagina": ""
       }
      ]
@@ -2347,9 +2820,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.03398211443390087",
+       "url": "https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.5412766077823365",
        "status": 200,
-       "byte": 43182,
+       "byte": 42918,
        "titolo_pagina": ""
       }
      ]
@@ -2360,9 +2833,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/59c59dd6ab53e35581c8f107/?ando=2998&rand=0.6918855355429628",
+       "url": "https://www.accuradio.com/playlist/json/59c59dd6ab53e35581c8f107/?ando=2998&rand=0.9436177186179528",
        "status": 200,
-       "byte": 51394,
+       "byte": 50630,
        "titolo_pagina": ""
       }
      ]
@@ -2372,19 +2845,19 @@
     {
      "url": "https://www.accuradio.com/love-songs",
      "status": 200,
-     "byte": 241719,
+     "byte": 241155,
      "titolo_pagina": "Love Songs - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6324df92ab53e3071eeb58f4/?ando=1581&rand=0.12708599453570346",
+     "url": "https://www.accuradio.com/playlist/json/6324df92ab53e3071eeb58f4/?ando=1581&rand=0.46301825495713533",
      "status": 200,
-     "byte": 42873,
+     "byte": 42271,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.03398211443390087",
+     "url": "https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.5412766077823365",
      "status": 200,
-     "byte": 43182,
+     "byte": 42918,
      "titolo_pagina": ""
     }
    ]
@@ -2401,9 +2874,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/51c0dee20d114058d28ac0ca/?ando=3856&rand=0.9637267989595448",
+       "url": "https://www.accuradio.com/playlist/json/51c0dee20d114058d28ac0ca/?ando=3856&rand=0.2900621518063896",
        "status": 200,
-       "byte": 44077,
+       "byte": 44924,
        "titolo_pagina": ""
       }
      ]
@@ -2414,9 +2887,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38561f77d9e74636000061/?ando=500&rand=0.2825925796311164",
+       "url": "https://www.accuradio.com/playlist/json/4e38561f77d9e74636000061/?ando=500&rand=0.5879183563346936",
        "status": 200,
-       "byte": 44709,
+       "byte": 44132,
        "titolo_pagina": ""
       }
      ]
@@ -2427,9 +2900,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5249f7180d114015bc59ac80/?ando=3401&rand=0.26515741300279194",
+       "url": "https://www.accuradio.com/playlist/json/5249f7180d114015bc59ac80/?ando=3401&rand=0.30261202905681206",
        "status": 200,
-       "byte": 42376,
+       "byte": 42361,
        "titolo_pagina": ""
       }
      ]
@@ -2439,19 +2912,19 @@
     {
      "url": "https://www.accuradio.com/heavy-metal",
      "status": 200,
-     "byte": 185568,
+     "byte": 185004,
      "titolo_pagina": "Metal - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/51c0dee20d114058d28ac0ca/?ando=3856&rand=0.9637267989595448",
+     "url": "https://www.accuradio.com/playlist/json/51c0dee20d114058d28ac0ca/?ando=3856&rand=0.2900621518063896",
      "status": 200,
-     "byte": 44077,
+     "byte": 44924,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38561f77d9e74636000061/?ando=500&rand=0.2825925796311164",
+     "url": "https://www.accuradio.com/playlist/json/4e38561f77d9e74636000061/?ando=500&rand=0.5879183563346936",
      "status": 200,
-     "byte": 44709,
+     "byte": 44132,
      "titolo_pagina": ""
     }
    ]
@@ -2464,7 +2937,7 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -2481,9 +2954,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/6a26e708ab53e30b49becc0a/?ando=2961&rand=0.015622816215357549",
+       "url": "https://www.accuradio.com/playlist/json/6a26e708ab53e30b49becc0a/?ando=2961&rand=0.09111667493563236",
        "status": 200,
-       "byte": 43154,
+       "byte": 44113,
        "titolo_pagina": ""
       }
      ]
@@ -2494,9 +2967,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000105/?ando=490&rand=0.7647757911467388",
+       "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000105/?ando=490&rand=0.4954039496839877",
        "status": 200,
-       "byte": 50162,
+       "byte": 51302,
        "titolo_pagina": ""
       }
      ]
@@ -2507,9 +2980,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/552c44ecab53e37e4c4d614a/?ando=4050&rand=0.29930981696677394",
+       "url": "https://www.accuradio.com/playlist/json/552c44ecab53e37e4c4d614a/?ando=4050&rand=0.7311669687771439",
        "status": 200,
-       "byte": 50222,
+       "byte": 49740,
        "titolo_pagina": ""
       }
      ]
@@ -2519,19 +2992,19 @@
     {
      "url": "https://www.accuradio.com/new-age",
      "status": 200,
-     "byte": 196976,
+     "byte": 196412,
      "titolo_pagina": "New Age (Relaxing) - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/6a26e708ab53e30b49becc0a/?ando=2961&rand=0.015622816215357549",
+     "url": "https://www.accuradio.com/playlist/json/6a26e708ab53e30b49becc0a/?ando=2961&rand=0.09111667493563236",
      "status": 200,
-     "byte": 43154,
+     "byte": 44113,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000105/?ando=490&rand=0.7647757911467388",
+     "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000105/?ando=490&rand=0.4954039496839877",
      "status": 200,
-     "byte": 50162,
+     "byte": 51302,
      "titolo_pagina": ""
     }
    ]
@@ -2539,13 +3012,67 @@
   {
    "voce": "• Nordic Folk Songs",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7031835167766278",
+       "status": 200,
+       "byte": 41545,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.7617920371072794",
+       "status": 200,
+       "byte": 56982,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.5458457727568532",
+       "status": 200,
+       "byte": 42255,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7031835167766278",
+     "status": 200,
+     "byte": 41545,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.7617920371072794",
+     "status": 200,
+     "byte": 56982,
+     "titolo_pagina": ""
     }
    ]
   },
@@ -2557,7 +3084,7 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -2570,7 +3097,7 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -2587,9 +3114,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562277d9e746360000c7/?ando=230&rand=0.6808274841614996",
+       "url": "https://www.accuradio.com/playlist/json/4e38562277d9e746360000c7/?ando=230&rand=0.18821629933038253",
        "status": 200,
-       "byte": 46171,
+       "byte": 46113,
        "titolo_pagina": ""
       }
      ]
@@ -2600,9 +3127,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/551c0e3eab53e32d3edaf854/?ando=35&rand=0.8410150107927746",
+       "url": "https://www.accuradio.com/playlist/json/551c0e3eab53e32d3edaf854/?ando=35&rand=0.38353358352093825",
        "status": 200,
-       "byte": 42251,
+       "byte": 42592,
        "titolo_pagina": ""
       }
      ]
@@ -2613,9 +3140,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562277d9e746360000bf/?ando=236&rand=0.3891468292873612",
+       "url": "https://www.accuradio.com/playlist/json/4e38562277d9e746360000bf/?ando=236&rand=0.05276926892472977",
        "status": 200,
-       "byte": 44357,
+       "byte": 44709,
        "titolo_pagina": ""
       }
      ]
@@ -2625,19 +3152,19 @@
     {
      "url": "https://www.accuradio.com/pop-standards",
      "status": 200,
-     "byte": 220262,
+     "byte": 219698,
      "titolo_pagina": "Pop Standards - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562277d9e746360000c7/?ando=230&rand=0.6808274841614996",
+     "url": "https://www.accuradio.com/playlist/json/4e38562277d9e746360000c7/?ando=230&rand=0.18821629933038253",
      "status": 200,
-     "byte": 46171,
+     "byte": 46113,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/551c0e3eab53e32d3edaf854/?ando=35&rand=0.8410150107927746",
+     "url": "https://www.accuradio.com/playlist/json/551c0e3eab53e32d3edaf854/?ando=35&rand=0.38353358352093825",
      "status": 200,
-     "byte": 42251,
+     "byte": 42592,
      "titolo_pagina": ""
     }
    ]
@@ -2654,9 +3181,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/520419e70d114040abe0871d/?ando=4961&rand=0.4726788297504906",
+       "url": "https://www.accuradio.com/playlist/json/520419e70d114040abe0871d/?ando=4961&rand=0.618072005620497",
        "status": 200,
-       "byte": 45035,
+       "byte": 45428,
        "titolo_pagina": ""
       }
      ]
@@ -2667,9 +3194,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5a1de781ab53e339b155e799/?ando=2412&rand=0.8174169332795717",
+       "url": "https://www.accuradio.com/playlist/json/5a1de781ab53e339b155e799/?ando=2412&rand=0.24961281221675857",
        "status": 200,
-       "byte": 43982,
+       "byte": 42169,
        "titolo_pagina": ""
       }
      ]
@@ -2680,9 +3207,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000134/?ando=863&rand=0.7520040999314251",
+       "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000134/?ando=863&rand=0.9916965040746976",
        "status": 200,
-       "byte": 42799,
+       "byte": 41829,
        "titolo_pagina": ""
       }
      ]
@@ -2692,19 +3219,19 @@
     {
      "url": "https://www.accuradio.com/punk-rock",
      "status": 200,
-     "byte": 168253,
+     "byte": 167689,
      "titolo_pagina": "Punk &amp; Underground - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/520419e70d114040abe0871d/?ando=4961&rand=0.4726788297504906",
+     "url": "https://www.accuradio.com/playlist/json/520419e70d114040abe0871d/?ando=4961&rand=0.618072005620497",
      "status": 200,
-     "byte": 45035,
+     "byte": 45428,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/5a1de781ab53e339b155e799/?ando=2412&rand=0.8174169332795717",
+     "url": "https://www.accuradio.com/playlist/json/5a1de781ab53e339b155e799/?ando=2412&rand=0.24961281221675857",
      "status": 200,
-     "byte": 43982,
+     "byte": 42169,
      "titolo_pagina": ""
     }
    ]
@@ -2721,9 +3248,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001d0/?ando=977&rand=0.9245850177538034",
+       "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001ab/?ando=105&rand=0.799868510602237",
        "status": 200,
-       "byte": 56281,
+       "byte": 53202,
        "titolo_pagina": ""
       }
      ]
@@ -2734,9 +3261,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562177d9e74636000098/?ando=497&rand=0.22519895536101187",
+       "url": "https://www.accuradio.com/playlist/json/4e38562177d9e74636000098/?ando=497&rand=0.9641866404965518",
        "status": 200,
-       "byte": 42253,
+       "byte": 42308,
        "titolo_pagina": ""
       }
      ]
@@ -2747,9 +3274,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562177d9e74636000092/?ando=498&rand=0.3278230039069514",
+       "url": "https://www.accuradio.com/playlist/json/4e38562177d9e74636000092/?ando=498&rand=0.7039497659046656",
        "status": 200,
-       "byte": 42504,
+       "byte": 41801,
        "titolo_pagina": ""
       }
      ]
@@ -2759,19 +3286,19 @@
     {
      "url": "https://www.accuradio.com/r-and-b",
      "status": 200,
-     "byte": 277427,
+     "byte": 276917,
      "titolo_pagina": "R&amp;B - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562a77d9e746360001d0/?ando=977&rand=0.9245850177538034",
+     "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001ab/?ando=105&rand=0.799868510602237",
      "status": 200,
-     "byte": 56281,
+     "byte": 53202,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562177d9e74636000098/?ando=497&rand=0.22519895536101187",
+     "url": "https://www.accuradio.com/playlist/json/4e38562177d9e74636000098/?ando=497&rand=0.9641866404965518",
      "status": 200,
-     "byte": 42253,
+     "byte": 42308,
      "titolo_pagina": ""
     }
    ]
@@ -2784,7 +3311,7 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -2792,13 +3319,67 @@
   {
    "voce": "• Rock",
    "azione": "peliculas",
-   "esito": "VUOTA",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 48,
+   "figli": [
+    {
+     "voce": "Classic Rocktopia",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8965192174088993",
+       "status": 200,
+       "byte": 42520,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Today's New Country",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.8614621306908465",
+       "status": 200,
+       "byte": 56448,
+       "titolo_pagina": ""
+      }
+     ]
+    },
+    {
+     "voce": "Classical Concentration",
+     "azione": "playradio",
+     "esito": "ERRORE AttributeError",
+     "pagine": [
+      {
+       "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.6401282387609516",
+       "status": 200,
+       "byte": 41281,
+       "titolo_pagina": ""
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 283079,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8965192174088993",
+     "status": 200,
+     "byte": 42520,
+     "titolo_pagina": ""
+    },
+    {
+     "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.8614621306908465",
+     "status": 200,
+     "byte": 56448,
+     "titolo_pagina": ""
     }
    ]
   },
@@ -2814,9 +3395,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/68b9ac12ab53e335f1bec78a/?ando=2645&rand=0.6057300243013866",
+       "url": "https://www.accuradio.com/playlist/json/68b9ac12ab53e335f1bec78a/?ando=2645&rand=0.6737499277834712",
        "status": 200,
-       "byte": 49073,
+       "byte": 50866,
        "titolo_pagina": ""
       }
      ]
@@ -2827,9 +3408,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562677d9e7463600015e/?ando=559&rand=0.11822669255034202",
+       "url": "https://www.accuradio.com/playlist/json/4e38562677d9e7463600015e/?ando=559&rand=0.11260639174958365",
        "status": 200,
-       "byte": 43794,
+       "byte": 43206,
        "titolo_pagina": ""
       }
      ]
@@ -2840,9 +3421,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562677d9e7463600014e/?ando=560&rand=0.19744879243148616",
+       "url": "https://www.accuradio.com/playlist/json/4e38562677d9e7463600014e/?ando=560&rand=0.14995018779598268",
        "status": 200,
-       "byte": 44584,
+       "byte": 45148,
        "titolo_pagina": ""
       }
      ]
@@ -2852,19 +3433,19 @@
     {
      "url": "https://www.accuradio.com/smooth-jazz",
      "status": 200,
-     "byte": 214349,
+     "byte": 213785,
      "titolo_pagina": "Smooth Jazz - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/68b9ac12ab53e335f1bec78a/?ando=2645&rand=0.6057300243013866",
+     "url": "https://www.accuradio.com/playlist/json/68b9ac12ab53e335f1bec78a/?ando=2645&rand=0.6737499277834712",
      "status": 200,
-     "byte": 49073,
+     "byte": 50866,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562677d9e7463600015e/?ando=559&rand=0.11822669255034202",
+     "url": "https://www.accuradio.com/playlist/json/4e38562677d9e7463600015e/?ando=559&rand=0.11260639174958365",
      "status": 200,
-     "byte": 43794,
+     "byte": 43206,
      "titolo_pagina": ""
     }
    ]
@@ -2881,9 +3462,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/5fc524c1ab53e313f17b2330/?ando=3774&rand=0.13013849746990558",
+       "url": "https://www.accuradio.com/playlist/json/5fc524c1ab53e313f17b2330/?ando=3774&rand=0.38556198267099384",
        "status": 200,
-       "byte": 42631,
+       "byte": 42142,
        "titolo_pagina": ""
       }
      ]
@@ -2894,9 +3475,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/54cbe2f10d11403bbc57baa6/?ando=3101&rand=0.2556534939326566",
+       "url": "https://www.accuradio.com/playlist/json/54cbe2f10d11403bbc57baa6/?ando=3101&rand=0.7471672863083226",
        "status": 200,
-       "byte": 43054,
+       "byte": 42521,
        "titolo_pagina": ""
       }
      ]
@@ -2907,9 +3488,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/599201c6ab53e35fd68eb9ad/?ando=1662&rand=0.5723932713672814",
+       "url": "https://www.accuradio.com/playlist/json/599201c6ab53e35fd68eb9ad/?ando=1662&rand=0.11110913891582697",
        "status": 200,
-       "byte": 47835,
+       "byte": 47152,
        "titolo_pagina": ""
       }
      ]
@@ -2919,19 +3500,19 @@
     {
      "url": "https://www.accuradio.com/classic-soul-music",
      "status": 200,
-     "byte": 245733,
+     "byte": 245169,
      "titolo_pagina": "Soul - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/5fc524c1ab53e313f17b2330/?ando=3774&rand=0.13013849746990558",
+     "url": "https://www.accuradio.com/playlist/json/5fc524c1ab53e313f17b2330/?ando=3774&rand=0.38556198267099384",
      "status": 200,
-     "byte": 42631,
+     "byte": 42142,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/54cbe2f10d11403bbc57baa6/?ando=3101&rand=0.2556534939326566",
+     "url": "https://www.accuradio.com/playlist/json/54cbe2f10d11403bbc57baa6/?ando=3101&rand=0.7471672863083226",
      "status": 200,
-     "byte": 43054,
+     "byte": 42521,
      "titolo_pagina": ""
     }
    ]
@@ -2944,7 +3525,7 @@
     {
      "url": "https://www.accuradio.com/",
      "status": 200,
-     "byte": 168042,
+     "byte": 167478,
      "titolo_pagina": "Free Internet Radio | AccuRadio Online"
     }
    ]
@@ -2961,9 +3542,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/50e5ff630d11406bcf4b4ea5/?ando=2184&rand=0.43678671254661394",
+       "url": "https://www.accuradio.com/playlist/json/50e5ff630d11406bcf4b4ea5/?ando=2184&rand=0.3194503715889866",
        "status": 200,
-       "byte": 46746,
+       "byte": 46535,
        "titolo_pagina": ""
       }
      ]
@@ -2974,9 +3555,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/513110ef0d114006b3c28fb0/?ando=4135&rand=0.781281416035518",
+       "url": "https://www.accuradio.com/playlist/json/513110ef0d114006b3c28fb0/?ando=4135&rand=0.2264271469549487",
        "status": 200,
-       "byte": 43425,
+       "byte": 43315,
        "titolo_pagina": ""
       }
      ]
@@ -2987,9 +3568,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/55cb7e1cab53e31c6106b5ac/?ando=3488&rand=0.7227017440978186",
+       "url": "https://www.accuradio.com/playlist/json/55cb7e1cab53e31c6106b5ac/?ando=3488&rand=0.01603583942593423",
        "status": 200,
-       "byte": 42896,
+       "byte": 42693,
        "titolo_pagina": ""
       }
      ]
@@ -2999,19 +3580,19 @@
     {
      "url": "https://www.accuradio.com/top-hundred-songs",
      "status": 200,
-     "byte": 213525,
+     "byte": 212961,
      "titolo_pagina": "Top 100 Songs - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/50e5ff630d11406bcf4b4ea5/?ando=2184&rand=0.43678671254661394",
+     "url": "https://www.accuradio.com/playlist/json/50e5ff630d11406bcf4b4ea5/?ando=2184&rand=0.3194503715889866",
      "status": 200,
-     "byte": 46746,
+     "byte": 46535,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/513110ef0d114006b3c28fb0/?ando=4135&rand=0.781281416035518",
+     "url": "https://www.accuradio.com/playlist/json/513110ef0d114006b3c28fb0/?ando=4135&rand=0.2264271469549487",
      "status": 200,
-     "byte": 43425,
+     "byte": 43315,
      "titolo_pagina": ""
     }
    ]
@@ -3028,9 +3609,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000108/?ando=376&rand=0.4240865163461168",
+       "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000108/?ando=376&rand=0.62970834242631",
        "status": 200,
-       "byte": 42326,
+       "byte": 42848,
        "titolo_pagina": ""
       }
      ]
@@ -3041,9 +3622,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/53eb8f9f0d11402c84f0088c/?ando=826&rand=0.30192046995005184",
+       "url": "https://www.accuradio.com/playlist/json/53eb8f9f0d11402c84f0088c/?ando=826&rand=0.04849693657864962",
        "status": 200,
-       "byte": 40857,
+       "byte": 41052,
        "titolo_pagina": ""
       }
      ]
@@ -3054,9 +3635,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/599b2a28ab53e30b86879abc/?ando=3106&rand=0.7095616694548962",
+       "url": "https://www.accuradio.com/playlist/json/599b2a28ab53e30b86879abc/?ando=3106&rand=0.3382501454497031",
        "status": 200,
-       "byte": 54781,
+       "byte": 54816,
        "titolo_pagina": ""
       }
      ]
@@ -3066,19 +3647,19 @@
     {
      "url": "https://www.accuradio.com/world-music",
      "status": 200,
-     "byte": 214064,
+     "byte": 213500,
      "titolo_pagina": "World Music - Listen to Free Radio Stations - AccuRadio"
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000108/?ando=376&rand=0.4240865163461168",
+     "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000108/?ando=376&rand=0.62970834242631",
      "status": 200,
-     "byte": 42326,
+     "byte": 42848,
      "titolo_pagina": ""
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/53eb8f9f0d11402c84f0088c/?ando=826&rand=0.30192046995005184",
+     "url": "https://www.accuradio.com/playlist/json/53eb8f9f0d11402c84f0088c/?ando=826&rand=0.04849693657864962",
      "status": 200,
-     "byte": 40857,
+     "byte": 41052,
      "titolo_pagina": ""
     }
    ]
@@ -3095,9 +3676,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000105/?ando=490&rand=0.7368199848652845",
+       "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000105/?ando=490&rand=0.9246753032203403",
        "status": 200,
-       "byte": 50485,
+       "byte": 50751,
        "titolo_pagina": ""
       }
      ]
@@ -3108,9 +3689,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/4e38562b77d9e74636000220/?ando=1003&rand=0.5981697060529242",
+       "url": "https://www.accuradio.com/playlist/json/4e38562b77d9e74636000220/?ando=1003&rand=0.38732035435840717",
        "status": 200,
-       "byte": 55945,
+       "byte": 55579,
        "titolo_pagina": ""
       }
      ]
@@ -3121,9 +3702,9 @@
      "esito": "ERRORE AttributeError",
      "pagine": [
       {
-       "url": "https://www.accuradio.com/playlist/json/513f98b20d114006b3c29790/?ando=2499&rand=0.6609732704325231",
+       "url": "https://www.accuradio.com/playlist/json/513f98b20d114006b3c29790/?ando=2499&rand=0.4213943751300141",
        "status": 200,
-       "byte": 50371,
+       "byte": 51072,
        "titolo_pagina": ""
       }
      ]
@@ -3133,30 +3714,30 @@
     {
      "url": "https://www.accuradio.com/search/avatar",
      "status": 200,
-     "byte": 149059,
+     "byte": 148495,
      "titolo_pagina": "Search - AccuRadio - Listen to Free Radio Stations "
     },
     {
      "url": "https://www.accuradio.com/search/avatar",
      "status": 200,
-     "byte": 149059,
+     "byte": 148495,
      "titolo_pagina": "Search - AccuRadio - Listen to Free Radio Stations "
     },
     {
-     "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000105/?ando=490&rand=0.7368199848652845",
+     "url": "https://www.accuradio.com/playlist/json/4e38562477d9e74636000105/?ando=490&rand=0.9246753032203403",
      "status": 200,
-     "byte": 50485,
+     "byte": 50751,
      "titolo_pagina": ""
     }
    ]
   }
  ],
- "sezioni_riepilogo": "0 ok su 71",
+ "sezioni_riepilogo": "0 ok su 70",
  "rete": [
   {
    "url": "https://www.accuradio.com/c/m/json/brands/",
    "status": 200,
-   "byte": 9648,
+   "byte": 9271,
    "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/01.html"
@@ -3164,430 +3745,430 @@
   {
    "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 168042,
-   "secondi": 3.8,
+   "byte": 283079,
+   "secondi": 1.4,
    "titolo_pagina": "Free Internet Radio | AccuRadio Online",
    "file": "pagine/02.html"
   },
   {
    "url": "https://www.accuradio.com/",
-   "status": "HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)",
-   "byte": 0,
-   "secondi": 5.1,
-   "titolo_pagina": "",
+   "status": 200,
+   "byte": 283079,
+   "secondi": 0.2,
+   "titolo_pagina": "Free Internet Radio | AccuRadio Online",
    "file": "pagine/03.html"
   },
   {
    "url": "https://www.accuradio.com/",
-   "status": "HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)",
-   "byte": 0,
-   "secondi": 5.1,
-   "titolo_pagina": "",
+   "status": 200,
+   "byte": 167478,
+   "secondi": 0.3,
+   "titolo_pagina": "Free Internet Radio | AccuRadio Online",
    "file": "pagine/04.html"
   },
   {
    "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 168042,
-   "secondi": 3.9,
+   "byte": 283079,
+   "secondi": 0.2,
    "titolo_pagina": "Free Internet Radio | AccuRadio Online",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://www.accuradio.com/",
+   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.39354587071979075",
    "status": 200,
-   "byte": 168042,
-   "secondi": 0.1,
-   "titolo_pagina": "Free Internet Radio | AccuRadio Online",
+   "byte": 41519,
+   "secondi": 0.2,
+   "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://www.accuradio.com/",
+   "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.2054001123494743",
    "status": 200,
-   "byte": 168042,
-   "secondi": 3.0,
-   "titolo_pagina": "Free Internet Radio | AccuRadio Online",
+   "byte": 56613,
+   "secondi": 0.2,
+   "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://www.accuradio.com/",
+   "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.518592340822308",
    "status": 200,
-   "byte": 283643,
-   "secondi": 0.8,
-   "titolo_pagina": "Free Internet Radio | AccuRadio Online",
+   "byte": 41882,
+   "secondi": 0.3,
+   "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.4809892398686755",
+   "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 42908,
-   "secondi": 0.3,
-   "titolo_pagina": "",
+   "byte": 167478,
+   "secondi": 0.2,
+   "titolo_pagina": "Free Internet Radio | AccuRadio Online",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.9113095938907803",
+   "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 56186,
+   "byte": 283079,
    "secondi": 0.2,
-   "titolo_pagina": "",
+   "titolo_pagina": "Free Internet Radio | AccuRadio Online",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.9942360109493368",
+   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7468877799457614",
    "status": 200,
-   "byte": 41820,
-   "secondi": 0.4,
+   "byte": 41811,
+   "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://www.accuradio.com/",
+   "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.12352859064398636",
    "status": 200,
-   "byte": 168042,
+   "byte": 56889,
    "secondi": 0.2,
-   "titolo_pagina": "Free Internet Radio | AccuRadio Online",
+   "titolo_pagina": "",
    "file": "pagine/12.html"
+  },
+  {
+   "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.7910238449358307",
+   "status": 200,
+   "byte": 41564,
+   "secondi": 0.2,
+   "titolo_pagina": "",
+   "file": "pagine/13.html"
   },
   {
    "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 168042,
+   "byte": 167478,
    "secondi": 0.2,
    "titolo_pagina": "Free Internet Radio | AccuRadio Online",
-   "file": "pagine/13.html"
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://www.accuradio.com/",
+   "status": 200,
+   "byte": 167478,
+   "secondi": 0.2,
+   "titolo_pagina": "Free Internet Radio | AccuRadio Online",
+   "file": "pagine/15.html"
   },
   {
    "url": "https://www.accuradio.com/adult-contemporary",
    "status": 200,
-   "byte": 227861,
+   "byte": 227297,
    "secondi": 0.3,
-   "titolo_pagina": "Adult Contemporary - Listen to Free Radio Stations - AccuRadio",
-   "file": "pagine/14.html"
+   "titolo_pagina": "Adult Contemporary - Listen to Free Radio Stations - AccuRadio"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600002b/?ando=55&rand=0.7059694824405854",
+   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e7463600002b/?ando=55&rand=0.7787008637523899",
    "status": 200,
-   "byte": 43175,
+   "byte": 42714,
    "secondi": 0.2,
-   "titolo_pagina": "",
-   "file": "pagine/15.html"
-  },
-  {
-   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.11820770680574832",
-   "status": 200,
-   "byte": 43072,
-   "secondi": 0.4,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000029/?ando=58&rand=0.9484396713236751",
+   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000028/?ando=57&rand=0.6674092449056084",
    "status": 200,
-   "byte": 42917,
-   "secondi": 0.2,
+   "byte": 42845,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000029/?ando=58&rand=0.6084974458891094",
+   "status": 200,
+   "byte": 42976,
+   "secondi": 0.4,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.accuradio.com/adult-rock",
    "status": 200,
-   "byte": 208220,
+   "byte": 207656,
    "secondi": 0.3,
    "titolo_pagina": "Adult Rock - Listen to Free Radio Stations - AccuRadio"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/6ac80d42ab53e37646ab89ba/?ando=4274&rand=0.9246055850608381",
+   "url": "https://www.accuradio.com/playlist/json/6ac80d42ab53e37646ab89ba/?ando=4274&rand=0.23425146708285582",
    "status": 200,
-   "byte": 54841,
+   "byte": 53819,
+   "secondi": 0.8,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.accuradio.com/playlist/json/67913f75ab53e34644bec250/?ando=3979&rand=0.6038875860073628",
+   "status": 200,
+   "byte": 52956,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/67913f75ab53e34644bec250/?ando=3979&rand=0.19151750672170686",
+   "url": "https://www.accuradio.com/playlist/json/560d92fbab53e36eaa7c3086/?ando=822&rand=0.3594676302386385",
    "status": 200,
-   "byte": 50999,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.accuradio.com/playlist/json/560d92fbab53e36eaa7c3086/?ando=822&rand=0.014163065114282225",
-   "status": 200,
-   "byte": 46445,
+   "byte": 44378,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.accuradio.com/alt-country",
-   "status": "HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)",
-   "byte": 0,
-   "secondi": 5.0,
+   "status": 200,
+   "byte": 160229,
+   "secondi": 0.2,
+   "titolo_pagina": "Alt-Country - Listen to Free Radio Stations - AccuRadio"
+  },
+  {
+   "url": "https://www.accuradio.com/playlist/json/4e38562077d9e7463600006a/?ando=569&rand=0.8382387423942257",
+   "status": 200,
+   "byte": 43491,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.accuradio.com/playlist/json/4f846a740d11401270000001/?ando=1099&rand=0.8794559152100713",
+   "status": 200,
+   "byte": 44319,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.accuradio.com/playlist/json/4e38562e77d9e74636000260/?ando=1061&rand=0.19144699600640103",
+   "status": 200,
+   "byte": 42138,
+   "secondi": 0.6,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.accuradio.com/alternative-rock",
    "status": 200,
-   "byte": 213105,
-   "secondi": 0.1,
+   "byte": 212541,
+   "secondi": 0.2,
    "titolo_pagina": "Alternative Rock - Listen to Free Radio Stations - AccuRadio"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/6ac80da1ab53e37646ab89bb/?ando=1359&rand=0.7099687919101976",
+   "url": "https://www.accuradio.com/playlist/json/6ac80da1ab53e37646ab89bb/?ando=1359&rand=0.8033309296723292",
    "status": 200,
-   "byte": 55545,
+   "byte": 54691,
    "secondi": 0.3,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.6607436867075734",
+   "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.6174237716384872",
    "status": 200,
-   "byte": 43373,
-   "secondi": 0.4,
+   "byte": 43418,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000081/?ando=263&rand=0.8413118185624212",
+   "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000081/?ando=263&rand=0.31621494222632784",
    "status": 200,
-   "byte": 42910,
+   "byte": 42954,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.accuradio.com/modern-rock-classics",
    "status": 200,
-   "byte": 246246,
-   "secondi": 0.2,
+   "byte": 245682,
+   "secondi": 0.1,
    "titolo_pagina": "Alternative Rock Classics - Listen to Free Radio Stations - AccuRadio"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/6a271cc7ab53e30b49becc2b/?ando=3062&rand=0.5510588131567189",
+   "url": "https://www.accuradio.com/playlist/json/6a271cc7ab53e30b49becc2b/?ando=3062&rand=0.5230292485222701",
    "status": 200,
-   "byte": 43789,
-   "secondi": 0.2,
+   "byte": 43633,
+   "secondi": 0.3,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.29901076258893167",
+   "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000080/?ando=265&rand=0.4327027327289613",
    "status": 200,
-   "byte": 43370,
-   "secondi": 2.4,
+   "byte": 43338,
+   "secondi": 0.5,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000081/?ando=263&rand=0.6599017159921591",
+   "url": "https://www.accuradio.com/playlist/json/4e38562077d9e74636000081/?ando=263&rand=0.251344186970328",
    "status": 200,
-   "byte": 42536,
-   "secondi": 0.2,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.accuradio.com/",
-   "status": "HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)",
-   "byte": 0,
-   "secondi": 5.1,
+   "byte": 43274,
+   "secondi": 0.3,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 283643,
-   "secondi": 0.6,
+   "byte": 167478,
+   "secondi": 0.2,
    "titolo_pagina": "Free Internet Radio | AccuRadio Online"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8452557274406689",
+   "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 42736,
-   "secondi": 1.1,
+   "byte": 283079,
+   "secondi": 0.2,
+   "titolo_pagina": "Free Internet Radio | AccuRadio Online"
+  },
+  {
+   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.5095524466786233",
+   "status": 200,
+   "byte": 42120,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.3818018056933482",
+   "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.667883147462014",
    "status": 200,
-   "byte": 56355,
-   "secondi": 0.1,
+   "byte": 57086,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.05497319543317891",
+   "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.7137132978601759",
    "status": 200,
-   "byte": 41921,
-   "secondi": 0.4,
+   "byte": 42283,
+   "secondi": 1.6,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.accuradio.com/beautiful",
    "status": 200,
-   "byte": 165365,
-   "secondi": 4.2,
+   "byte": 164801,
+   "secondi": 0.1,
    "titolo_pagina": "Beautiful Music - Listen to Free Radio Stations - AccuRadio"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.18603661575738373",
+   "url": "https://www.accuradio.com/playlist/json/5568d338ab53e30ba1d5b2d4/?ando=4058&rand=0.6565794254909634",
    "status": 200,
-   "byte": 42928,
+   "byte": 42866,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/556e1979ab53e370ee604e5b/?ando=4281&rand=0.0465559242923107",
+   "url": "https://www.accuradio.com/playlist/json/556e1979ab53e370ee604e5b/?ando=4281&rand=0.9574913004076132",
    "status": 200,
-   "byte": 37693,
+   "byte": 39418,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001c2/?ando=49&rand=0.5563820078678768",
+   "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001c2/?ando=49&rand=0.4024240013608533",
    "status": 200,
-   "byte": 50453,
+   "byte": 50211,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 283643,
+   "byte": 167478,
    "secondi": 0.2,
    "titolo_pagina": "Free Internet Radio | AccuRadio Online"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.7262071541128949",
-   "status": 200,
-   "byte": 41933,
-   "secondi": 1.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.8103962516948605",
-   "status": 200,
-   "byte": 56280,
-   "secondi": 3.6,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.8153807282163368",
-   "status": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 468, in _make_request\n    six.raise_from(e, None)\n  File \"<string>\", line 3, in raise_from\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 463, in _make_request\n    httplib_response = conn.getresponse()\n                       ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py\", line 1478, in getresponse\n    response.begin()\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py\", line 343, in begin\n    version, status, reason = self._read_status()\n                              ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py\", line 304, in _read_status\n    line = str(self.fp.readline(_MAXLINE + 1), \"iso-8859-1\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/socket.py\", line 720, in readinto\n    return self._sock.recv_into(b)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ssl.py\", line 1264, in recv_into\n    return self.read(nbytes, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 802, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 552, in increment\n    raise six.reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/packages/six.py\", line 770, in reraise\n    raise value\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 716, in urlopen\n    httplib_response = self._make_request(\n                       ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 470, in _make_request\n    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 358, in _raise_timeout\n    raise ReadTimeoutError(\nurllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 387, in downloadpage\n    req = session.get(url, allow_redirects=opt.get('follow_redirects', True),\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 542, in get\n    return self.request('GET', url, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 645, in send\n    r = adapter.send(request, **kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 275, in send\n    raise e\n  File \"/tmp/kh/addon/core/resolverdns.py\", line 259, in send\n    return super(CipherSuiteAdapter, self).send(request, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 742, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)\n",
-   "byte": 0,
-   "secondi": 5.2,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.accuradio.com/",
-   "status": "HTTPSConnectionPool(host='www.accuradio.com', port=443): Read timed out. (read timeout=5)",
-   "byte": 0,
-   "secondi": 5.1,
-   "titolo_pagina": ""
-  },
-  {
    "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 283643,
-   "secondi": 2.5,
+   "byte": 283079,
+   "secondi": 0.2,
    "titolo_pagina": "Free Internet Radio | AccuRadio Online"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.2556344486808565",
+   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.5701498933475407",
    "status": 200,
-   "byte": 41222,
+   "byte": 42242,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.45223449403809557",
+   "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.15136294055821176",
    "status": 200,
-   "byte": 56082,
+   "byte": 56496,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.6421702570846027",
+   "status": 200,
+   "byte": 42075,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.5643338280461605",
+   "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 41767,
+   "byte": 167478,
    "secondi": 0.3,
-   "titolo_pagina": ""
+   "titolo_pagina": "Free Internet Radio | AccuRadio Online"
   },
   {
    "url": "https://www.accuradio.com/brazilian",
    "status": 200,
-   "byte": 183359,
-   "secondi": 0.2,
+   "byte": 182795,
+   "secondi": 0.1,
    "titolo_pagina": "Brazilian - Listen to Free Radio Stations - AccuRadio"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/577c1286ab53e36647e3e846/?ando=3419&rand=0.00157153605396132",
+   "url": "https://www.accuradio.com/playlist/json/577c1286ab53e36647e3e846/?ando=3419&rand=0.2817919871345448",
    "status": 200,
-   "byte": 47035,
-   "secondi": 2.7,
+   "byte": 48591,
+   "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/59c59dd6ab53e35581c8f107/?ando=2998&rand=0.40984856277102366",
+   "url": "https://www.accuradio.com/playlist/json/59c59dd6ab53e35581c8f107/?ando=2998&rand=0.46170574587812074",
    "status": 200,
-   "byte": 50814,
+   "byte": 50474,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001af/?ando=915&rand=0.9221728291368235",
+   "url": "https://www.accuradio.com/playlist/json/4e38562977d9e746360001af/?ando=915&rand=0.5068644705495525",
    "status": 200,
-   "byte": 49216,
-   "secondi": 0.3,
+   "byte": 46767,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.accuradio.com/brit-rock",
    "status": 200,
-   "byte": 173067,
-   "secondi": 0.2,
+   "byte": 172503,
+   "secondi": 0.7,
    "titolo_pagina": "Brit Rock - Listen to Free Radio Stations - AccuRadio"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000121/?ando=300&rand=0.5831572717360805",
+   "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000121/?ando=300&rand=0.11476431356445149",
    "status": 200,
-   "byte": 42177,
+   "byte": 42768,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/61e8983eab53e344fc6d3e24/?ando=3523&rand=0.887382672241771",
+   "url": "https://www.accuradio.com/playlist/json/61e8983eab53e344fc6d3e24/?ando=3523&rand=0.16868613274868471",
    "status": 200,
-   "byte": 51378,
-   "secondi": 0.2,
+   "byte": 50570,
+   "secondi": 0.3,
    "titolo_pagina": ""
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000126/?ando=301&rand=0.8064723462352713",
+   "url": "https://www.accuradio.com/playlist/json/4e38562577d9e74636000126/?ando=301&rand=0.9276829327025616",
    "status": 200,
-   "byte": 42923,
+   "byte": 42774,
    "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 283643,
-   "secondi": 0.4,
+   "byte": 167478,
+   "secondi": 0.1,
    "titolo_pagina": "Free Internet Radio | AccuRadio Online"
   },
   {
-   "url": "https://www.accuradio.com/playlist/json/4e38561e77d9e74636000024/?ando=136&rand=0.8985551031401697",
+   "url": "https://www.accuradio.com/",
    "status": 200,
-   "byte": 41878,
+   "byte": 283079,
    "secondi": 0.2,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.accuradio.com/playlist/json/4e38562877d9e74636000199/?ando=191&rand=0.844076552743798",
-   "status": 200,
-   "byte": 57266,
-   "secondi": 0.2,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://www.accuradio.com/playlist/json/5669abe7ab53e3557be3ffa2/?ando=2259&rand=0.84215325614577",
-   "status": 200,
-   "byte": 41842,
-   "secondi": 0.3,
-   "titolo_pagina": ""
+   "titolo_pagina": "Free Internet Radio | AccuRadio Online"
   }
  ],
- "verdetto": "SI FERMA A: lista \"Most Popular \""
+ "verdetto": "SI FERMA A: lista \"\"Best of 2026\" channels \""
 }

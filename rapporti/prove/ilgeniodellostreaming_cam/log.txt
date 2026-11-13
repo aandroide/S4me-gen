@@ -6,17 +6,17 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.tatt
       genres | •• Per Lettera | https://il-geniodellostreaming.tattoo/catalog/all
       peliculas | Serie Tv  | https://il-geniodellostreaming.tattoo/serie-tv/
 == lista "Tutti "
-   -> 17 voci
-      check | Serangan Balik | https://il-geniodellostreaming.tattoo/film/35496-never-surrender-streaming.html
-      check | It Ends | https://il-geniodellostreaming.tattoo/film/35492-it-end-streaming.html
-      check | The Gospel of Christmas | https://il-geniodellostreaming.tattoo/film/35488-the-gospel-of-christmas-streaming.html
-      check | I casi di Alicia | https://il-geniodellostreaming.tattoo/film/35489-i-casi-di-alicia-streaming.html
-== check su "Serangan Balik"
+   -> 18 voci
+      check | Heartland | https://il-geniodellostreaming.tattoo/film/35512-heartland-streaming.html
+      check | 12 12 12 | https://il-geniodellostreaming.tattoo/film/35511-12-12-12-streaming.html
+      check | Nessuna tregua | https://il-geniodellostreaming.tattoo/film/35509-nessuna-tregua-streaming.html
+      check | Come il giorno e la notte | https://il-geniodellostreaming.tattoo/film/35505-come-il-giorno-e-la-notte-streaming.html
+== check su "Heartland"
    -> 1 voci
-      play | Serangan Balik | https://v.vidxgo.co/39370926
-== risoluzione vidxgo https://v.vidxgo.co/39370926
-   api /t/ 39370926 referer https://v.vidxgo.co/39370926 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 39370926 referer https://il-geniodellostreaming.tattoo/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+      play | Heartland | https://v.vidxgo.co/38213251
+== risoluzione vidxgo https://v.vidxgo.co/38213251
+   api /t/ 38213251 referer https://v.vidxgo.co/38213251 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 38213251 referer https://il-geniodellostreaming.tattoo/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (4)
     menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])
@@ -24,20 +24,20 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.tatt
     menu | ('Per Lettera {submenu}', ['/catalog/all', 'genres', 'template-az', 'undefined'])
     menu | ('Serie Tv', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 16 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Serangan Balik
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: It Ends
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Gospel of Christmas
+   SEZIONE Tutti -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Heartland
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Nessuna tregua
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Come il giorno e la notte
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Early Spring
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Varnell Hill Show
+   SEZIONE Serie TV -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Delitto in Galizia
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Early Spring
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Varnell Hill Show
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Good Daughter
       PROBLEMA: tipo undefined, in Kodi appare come cartella: I casi di Alicia
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Body
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo
-   SEZIONE Serie TV -> OK 19 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: I casi di Alicia
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Body
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: ChiaroScuro
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Livatino - Il giudice e i suoi assassini
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Serial Killer Connection
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Può solo andar peggio
    SEZIONE Animazione -> OK 20 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Bass X Machina
@@ -46,36 +46,36 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.tatt
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Magic Knight Rayearth
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Shaun, vita da pecora - Operazione Z.U.C.C.A.
    SEZIONE Avventura -> OK 19 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Allen
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Il Signore degli Anelli - Gli Anelli del Potere
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Organize Isler: Money Trap
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Tamerlano - L'ultimo conquistatore
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Amore sotto copertura
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE 0-9 -> OK 16 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Serangan Balik
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: It Ends
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Gospel of Christmas
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: I casi di Alicia
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Body
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo
-   SEZIONE A -> OK 18 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Allen
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: It Ends
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Gospel of Christmas
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: I casi di Alicia
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Body
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Chronological Back to the Future
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Nessuna tregua
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Come il giorno e la notte
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Early Spring
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Varnell Hill Show
+   SEZIONE A -> OK 16 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Chronological Back to the Future
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Nessuna tregua
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Come il giorno e la notte
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Early Spring
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Varnell Hill Show
    SEZIONE B -> OK 16 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Serangan Balik
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: It Ends
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Gospel of Christmas
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: I casi di Alicia
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Body
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Chronological Back to the Future
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Nessuna tregua
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Come il giorno e la notte
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Early Spring
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Varnell Hill Show
    SEZIONE •• Per Lettera -> SOTTOMENU  
-   SEZIONE Serie Tv -> OK 19 
+   SEZIONE Serie Tv -> OK 20 
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://il-geniodellostreaming.tattoo/?s=avatar', 'status': 200, 'byte': 35026, 'titolo_pagina': 'Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis'}
 SEZIONI: 4 ok su 5
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA

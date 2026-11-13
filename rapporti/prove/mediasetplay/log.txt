@@ -7,11 +7,11 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
    -> 132 voci
+      findvideos | Intrigo a Damasco | https://mediasetinfinity.mediaset.it/movie/intrigoadamasco/intrigo-a-damasco_F309311101000102
       findvideos | White Elephant - Codice criminale (di j. v. johnson) - White | https://mediasetinfinity.mediaset.it/movie/whiteelephantcodicecriminaledijvjohnson/white-elephant-co
       findvideos | I mercen4ri - Expendables | https://mediasetinfinity.mediaset.it/movie/imercen4riexpendables/i-mercen4ri-expendables_F3127509010
       findvideos | 3 days to kill | https://mediasetinfinity.mediaset.it/movie/3daystokill/3-days-to-kill_F305950301000102
-      findvideos | Codice unlocked | https://mediasetinfinity.mediaset.it/movie/codiceunlocked/codice-unlocked_F308033801000102
-== findvideos su "White Elephant - Codice criminale (di j."
+== findvideos su "Intrigo a Damasco"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -26,11 +26,11 @@ KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
    -> 21 voci
-      findvideos | Il grande botto | https://mediasetinfinity.mediaset.it/movie/ilgrandebotto/il-grande-botto_F010586701000101
-      findvideos | Sconosciuto nell'intimo | https://mediasetinfinity.mediaset.it/movie/sconosciutonellintimo/sconosciuto-nellintimo_F30923750100
-      findvideos | Alien: Romulus | https://mediasetinfinity.mediaset.it/movie/alienromulus/alien-romulus_F313319401000102
-      findvideos | White Elephant - Codice criminale (di j. v. johnson) - White | https://mediasetinfinity.mediaset.it/movie/whiteelephantcodicecriminaledijvjohnson/white-elephant-co
-== findvideos su "Il grande botto"
+      findvideos | Troy | https://mediasetinfinity.mediaset.it/movie/troy/troy_F011462901000102
+      findvideos | Lady driver - Veloce come il vento | https://mediasetinfinity.mediaset.it/movie/ladydrivervelocecomeilvento/lady-driver-veloce-come-il-ve
+      findvideos | Amicizia a rischio | https://mediasetinfinity.mediaset.it/movie/amiciziaarischio/amicizia-a-rischio_F309279401000102
+      findvideos | Inga Lindstrom - Un uomo dei sogni in prova | https://mediasetinfinity.mediaset.it/movie/ingalindstromunuomodeisogniinprova/inga-lindstrom-un-uomo
+== findvideos su "Troy"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -41,7 +41,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
     res = session.post(
           ^^^^^^^^^^^^^
-KeyError: 'mediaSelector'
+KeyError: 'response'
 
 == lista "•• Film più visti del giorno"
    -> 21 voci
@@ -88,41 +88,41 @@ Nessuna voce da riprodurre trovata
     menu | ('Documentari più visti {submenu}', ['/documentari', 'peliculas', {'uxReference': 'documentariPiuVisti24H'}, '
     menu | ('Film Documentari di Focus {submenu}', ['/documentari', 'peliculas', {'uxReference': 'filmDocumentari'}, 'und
 == controllo di tutte le sezioni
-   SEZIONE Dirette -> OK 48 
-   SEZIONE Replay -> OK 24 
-   SEZIONE •• Tutti i Film -> OK 68 
+   SEZIONE Dirette -> OK 46 
+   SEZIONE Replay -> OK 23 
+   SEZIONE •• Tutti i Film -> OK 66 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 6 
-   SEZIONE I Simpson -> OK 4 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 7 
+   SEZIONE I Simpson -> OK 5 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Segreti di famiglia 3 -> OK 5 
    SEZIONE Innocence -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
-   SEZIONE Forbidden Fruit 4 -> OK 4 
-   SEZIONE Beautiful -> OK 6 
    SEZIONE Tempesta d'amore -> OK 3 
+   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
+   SEZIONE My Sweet Lie -> OK 5 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
    SEZIONE Dragon Ball Daima -> OK 10 
    SEZIONE One Piece 18 -> OK 2 
-   SEZIONE Dragon Ball Super -> OK 18 
+   SEZIONE Dragon Ball Super -> OK 17 
    SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
-   SEZIONE I Simpson -> OK 4 
-   SEZIONE Law & Order: Unità speciale 15 -> OK 10 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 6 
+   SEZIONE I Simpson -> OK 5 
+   SEZIONE Law & Order: Unità speciale 15 -> OK 8 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 7 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE •• Serie Turche -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
-   SEZIONE Giorgia - Last Call 2026 -> OK 3 
-   SEZIONE Tu Si Que Vales 2026 -> OK 6 
+   SEZIONE Giganti - Toni Capuozzo -> OK 3 
+   SEZIONE Le Iene 2026/2027 -> OK 6 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
    SEZIONE Ore 11 -> OK 3 
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
@@ -138,12 +138,12 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• Kids Boing -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Paw Patrol -> OK 5 
-   SEZIONE La casa delle bambole di Gabby -> OK 2 
    SEZIONE Hey Duggee -> OK 5 
+   SEZIONE La casa delle bambole di Gabby -> OK 2 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
-   SEZIONE I pinguini di Madagascar -> OK 4 
+   SEZIONE I pinguini di Madagascar -> OK 2 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
    SEZIONE •• Tutti i Documentari -> OK 14 
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
@@ -156,4 +156,4 @@ Nessuna voce da riprodurre trovata
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE txt70741 … -> OK 20 
 SEZIONI: 24 ok su 24
-VERDETTO: SI FERMA A: findvideos su "White Elephant - Codice criminale (di j."
+VERDETTO: SI FERMA A: findvideos su "Intrigo a Damasco"

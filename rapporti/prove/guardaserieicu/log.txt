@@ -7,18 +7,18 @@ Canale guardaserieicu | indirizzo
       channel_config | txt60587 %s | 
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Campus Drivers | https://guardaseriex.work/dramma/5886-campus-drivers-streaming.html
-      episodios | Può solo andar peggio | https://guardaseriex.work/commedia/5884-it-gets-worse-streaming.html
-      episodios | The Torment | https://guardaseriex.work/crime/5806-the-torment-streaming.html
-      episodios | Paolo | https://guardaseriex.work/dramma/5789-paolo-streaming.html
-== episodios su "Campus Drivers"
+      episodios | L'Istituto | https://guardaseriex.work/fantascienza/4178-listituto-streaming.html
+      episodios | Shetland | https://guardaseriex.work/crime/1657-shetland.html
+      episodios | Melania Rea | https://guardaseriex.work/dramma/5887-melania-rea-streaming.html
+      episodios | L'ultimo piatto | https://guardaseriex.work/dramma/5877-l-ultimo-piatto-streaming.html
+== episodios su "L'Istituto"
    -> 2 voci
-      findvideos | 1x01 - Cuore Spezzato | https://guardaseriex.work/dramma/5886-campus-drivers-streaming.html
-      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.work/dramma/5886-campus-drivers-streaming.html
-== findvideos su "1x01 - Cuore Spezzato"
+      findvideos | 1x01 - Il ragazzo | https://guardaseriex.work/fantascienza/4178-listituto-streaming.html
+      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.work/fantascienza/4178-listituto-streaming.html
+== findvideos su "1x01 - Il ragazzo"
    -> 1 voci
-      play | 1x01 - Cuore Spezzato | https://v.vidxgo.co/39943756/1/1
-== risoluzione vidxgo https://v.vidxgo.co/39943756/1/1
+      play | 1x01 - Il ragazzo | https://v.vidxgo.co/10946316/1/1
+== risoluzione vidxgo https://v.vidxgo.co/10946316/1/1
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (2)
     tvshow | '/serietv-streaming/page/1/'
@@ -26,7 +26,7 @@ Canale guardaserieicu | indirizzo
 == controllo di tutte le sezioni
    SEZIONE • Serie TV -> OK 18 
    SEZIONE Biografico -> OK 129 
-   SEZIONE Commedia -> OK 1527 
+   SEZIONE Commedia -> OK 1529 
    SEZIONE Crime -> OK 851 
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE •• txt70741 Serie TV… -> OK 4 

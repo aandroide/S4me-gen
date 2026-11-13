@@ -72,6 +72,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str15 13 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 19
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 21
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
+      }
+     ]
+    },
+    {
      "voce": "str14 12 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -81,19 +107,19 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 21
+       "titoli": 30
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
-       "esito": "OK",
-       "titoli": 23
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 17
+       "titoli": 31
       }
      ]
     },
@@ -122,32 +148,6 @@
        "titoli": 30
       }
      ]
-    },
-    {
-     "voce": "str12 10 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 32
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 32
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      }
-     ]
     }
    ]
   },
@@ -161,13 +161,13 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 23
     },
     {
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 22
     },
     {
      "voce": "Film in esclusiva",
@@ -193,7 +193,7 @@
      "voce": "Serie Original RaiPlay",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     },
     {
      "voce": "Serie tratte da libri",
@@ -213,7 +213,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 25
+     "titoli": 23
     },
     {
      "voce": "Drama",
@@ -225,7 +225,7 @@
      "voce": "Serie Original RaiPlay",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     }
    ]
   },
@@ -265,7 +265,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 25
+     "titoli": 26
     },
     {
      "voce": "Docu-serie Original",
@@ -291,19 +291,19 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 28
+     "titoli": 29
+    },
+    {
+     "voce": "Esclusive RaiPlay Bambini",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 32
     },
     {
      "voce": "Cinema bambini",
      "azione": "peliculas",
      "esito": "OK",
      "titoli": 24
-    },
-    {
-     "voce": "Solo  Corti!",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 20
     }
    ]
   },
@@ -447,7 +447,7 @@
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
    "byte": 597,
-   "secondi": 0.7,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }

@@ -13,27 +13,29 @@ Canale tantifilm | indirizzo https://tanti-film.rest
       peliculas | Commedia | https://tanti-film.rest/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
-      check | Allen  | https://tanti-film.rest/guarda/35495-allen-streaming-streaming-hd.html
-      check | Suzane von Richthofen: O que o Tempo Não Apaga  | https://tanti-film.rest/guarda/35493-la-figlia-indegna-il-caso-suzane-von-richthofen-streaming-strea
-      check | It Ends  | https://tanti-film.rest/guarda/35492-it-end-streaming-streaming-hd.html
-      check | The Gospel of Christmas  | https://tanti-film.rest/guarda/35488-the-gospel-of-christmas-streaming-streaming-hd.html
-== check su "Allen "
+      check | Heartland  | https://tanti-film.rest/guarda/35512-heartland-streaming-streaming-hd.html
+      check | Being Heumann  | https://tanti-film.rest/guarda/35510-being-heumann-streaming-streaming-hd.html
+      check | Nessuna tregua  | https://tanti-film.rest/guarda/35509-nessuna-tregua-streaming-streaming-hd.html
+      check | Come il giorno e la notte  | https://tanti-film.rest/guarda/35505-come-il-giorno-e-la-notte-streaming-streaming-hd.html
+== check su "Heartland "
    -> 2 voci
-      play | Allen  | https://v.vidxgo.co/37675123
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.rest/guarda/35495-allen-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/37675123
-   -> VIDEO OK m3u8 200 
+      play | Heartland  | https://v.vidxgo.co/38213251
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.rest/guarda/35512-heartland-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/38213251
+   api /t/ 38213251 referer https://v.vidxgo.co/38213251 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 38213251 referer https://tanti-film.rest/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
     tvshow | '/serie-tv/'
 == controllo di tutte le sezioni
    SEZIONE Animazione -> OK 25 
-   SEZIONE Avventura -> OK 23 
+   SEZIONE Avventura -> OK 24 
    SEZIONE Biografico -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE • Film -> OK 20 
-   SEZIONE • Serie TV -> OK 18 
+   SEZIONE • Serie TV -> OK 7 
    SEZIONE txt70741 … -> OK 11 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Wizards
@@ -42,4 +44,4 @@ Canale tantifilm | indirizzo https://tanti-film.rest
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'ultimo dominatore dell'aria
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar Aang: L’ultimo dominatore dell’aria
 SEZIONI: 4 ok su 4
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)

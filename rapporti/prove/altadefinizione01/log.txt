@@ -6,19 +6,21 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
       peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.best
       genres | •• Generi | https://altadefinizione-01.best
 == lista "Tutti "
-   -> 28 voci
-      check | Allen  | https://altadefinizione-01.best/35495-allen-streaming.html
-      check | Suzane von Richthofen: O que o Tempo Não Apaga  | https://altadefinizione-01.best/35493-la-figlia-indegna-il-caso-suzane-von-richthofen-streaming.html
-      check | It Ends  | https://altadefinizione-01.best/35492-it-end-streaming.html
-      check | The Gospel of Christmas  | https://altadefinizione-01.best/35488-the-gospel-of-christmas-streaming.html
-== check su "Allen "
+   -> 29 voci
+      check | Heartland  | https://altadefinizione-01.best/35512-heartland-streaming.html
+      check | Being Heumann  | https://altadefinizione-01.best/35510-being-heumann-streaming.html
+      check | Nessuna tregua  | https://altadefinizione-01.best/35509-nessuna-tregua-streaming.html
+      check | Come il giorno e la notte  | https://altadefinizione-01.best/35505-come-il-giorno-e-la-notte-streaming.html
+== check su "Heartland "
    -> 3 voci
-      play | Allen  | https://v.vidxgo.co/37675123
-      play | Allen  | https://vixsrc.to/movie/tt37675123
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35495-allen-streaming.html
-== risoluzione vidxgo https://v.vidxgo.co/37675123
-   -> VIDEO OK m3u8 200 
-== risoluzione vixsrc https://vixsrc.to/movie/tt37675123
+      play | Heartland  | https://v.vidxgo.co/38213251
+      play | Heartland  | https://vixsrc.to/movie/tt38213251
+      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35512-heartland-streaming.html
+== risoluzione vidxgo https://v.vidxgo.co/38213251
+   api /t/ 38213251 referer https://v.vidxgo.co/38213251 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   api /t/ 38213251 referer https://altadefinizione-01.best/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+== risoluzione vixsrc https://vixsrc.to/movie/tt38213251
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (8)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
@@ -30,9 +32,9 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
     menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 27 
+   SEZIONE Tutti -> OK 28 
    SEZIONE •• Al Cinema -> OK 30 
-   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 39 
+   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 41 
    SEZIONE Azione -> OK 29 
    SEZIONE Animazione -> OK 27 
    SEZIONE Avventura -> OK 30 
