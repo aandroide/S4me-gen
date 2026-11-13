@@ -26,10 +26,10 @@ Sito: https://guardaseriex.cyou
 Sito: https://tanti-film.rest
 - ROTTO: peliculas /film | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_film.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 34 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 35 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html
--   patronBlock rimosso: senza blocco le regex dei titoli trovano 24 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
+-   patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
 - file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli
 
 ## CORRETTO IN PARTE (1)
@@ -130,7 +130,7 @@ Sito: https://ilcorsaronero.link
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.tattoo
-- OK: peliculas /catalog/all | 16 risultati
+- OK: peliculas /catalog/all | 17 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
@@ -148,7 +148,7 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27331 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27335 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
@@ -237,10 +237,10 @@ Sito: https://vixsrc.to
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best
-- OK: peliculas /lastnews/ | 93 risultati
-- OK: peliculas /cinema/ | 99 risultati
-- OK: peliculas /sub-ita/ | 99 risultati
-- OK: peliculas /serie-tv/ | 99 risultati
+- OK: peliculas /lastnews/ | 97 risultati
+- OK: peliculas /cinema/ | 101 risultati
+- OK: peliculas /sub-ita/ | 101 risultati
+- OK: peliculas /serie-tv/ | 101 risultati
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.fit
@@ -279,14 +279,14 @@ Sito: https://www.discoveryplus.com
 Sito: https://eurostream.hair
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.hair/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 96 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 95 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
 
 ### hd4me
 Sito: https://hd4me.net
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10119 risultati
+- OK: peliculas /index | 10183 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -330,7 +330,7 @@ Sito: https://pluto.tv
 
 ### raiplay
 Sito: https://www.raiplay.it
-- attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.tech_datetime_en
+- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
 - OK: https://www.raiplay.it/dirette | html
 - OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
 - OK: https://www.raiplay.it/guidatv | html
@@ -351,7 +351,7 @@ Sito: https://streamingcommunityz.nexus
 - OK: Archivio per nome | 60 titoli in props.titles
 - OK: Ricerca | 60 titoli in props.titles
 - OK: Generi | 20 titoli in props.genres
-- OK: serie di esempio /it/titles/66568-the-good-daughter | 1 stagioni, 6 episodi nella prima
+- OK: serie di esempio /it/titles/66576-silent-night | 1 stagioni, 1 episodi nella prima
 
 ### thepiratebay
 Sito: https://apibay.org

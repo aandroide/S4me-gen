@@ -38,10 +38,10 @@
   "canale": "altadefinizione01",
   "stato": "OK",
   "dettagli": [
-   "OK: peliculas /lastnews/ | 93 risultati",
-   "OK: peliculas /cinema/ | 99 risultati",
-   "OK: peliculas /sub-ita/ | 99 risultati",
-   "OK: peliculas /serie-tv/ | 99 risultati"
+   "OK: peliculas /lastnews/ | 97 risultati",
+   "OK: peliculas /cinema/ | 101 risultati",
+   "OK: peliculas /sub-ita/ | 101 risultati",
+   "OK: peliculas /serie-tv/ | 101 risultati"
   ],
   "correzione": false,
   "host": "https://altadefinizione-01.best"
@@ -195,6 +195,11 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
+      "title": "Il Signore degli Anelli - Gli Anelli del Potere",
+      "url": "https://cineblog001.tires/cb01-streaming/27123-il-signore-degli-anelli-gli-anelli-del-potere-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-11/il-signore-degli-anelli-gli-anelli-del-potere_1732014581.jpg"
+     },
+     {
       "title": "Dead-End Job",
       "url": "https://cineblog001.tires/cb01-streaming/35370-dead-end-job-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg"
@@ -203,11 +208,6 @@
       "title": "A Story of Derry",
       "url": "https://cineblog001.tires/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
-     },
-     {
-      "title": "Black Doves",
-      "url": "https://cineblog001.tires/cb01-streaming/28300-black-doves-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
      }
     ],
     "perse": []
@@ -218,6 +218,11 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
+      "title": "Il Signore degli Anelli - Gli Anelli del Potere",
+      "url": "https://cineblog001.tires/cb01-streaming/27123-il-signore-degli-anelli-gli-anelli-del-potere-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-11/il-signore-degli-anelli-gli-anelli-del-potere_1732014581.jpg"
+     },
+     {
       "title": "Dead-End Job",
       "url": "https://cineblog001.tires/cb01-streaming/35370-dead-end-job-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg"
@@ -226,11 +231,6 @@
       "title": "A Story of Derry",
       "url": "https://cineblog001.tires/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
-     },
-     {
-      "title": "Black Doves",
-      "url": "https://cineblog001.tires/cb01-streaming/28300-black-doves-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
      }
     ],
     "perse": []
@@ -241,6 +241,11 @@
     "patron": "<a(?=[^>]*?title=\"(?P<title>[^\"]+)\")[^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!</a>).)*?<img [^>]*?data-src=\"(?P<thumb>[^\"]+)\"",
     "esempi": [
      {
+      "title": "Il Signore degli Anelli - Gli Anelli del Potere",
+      "url": "https://cineblog001.tires/cb01-streaming/27123-il-signore-degli-anelli-gli-anelli-del-potere-cb01.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2024-11/il-signore-degli-anelli-gli-anelli-del-potere_1732014581.jpg"
+     },
+     {
       "title": "Dead-End Job",
       "url": "https://cineblog001.tires/cb01-streaming/35370-dead-end-job-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt36458668.jpg"
@@ -249,11 +254,6 @@
       "title": "A Story of Derry",
       "url": "https://cineblog001.tires/cb01-streaming/35383-a-story-of-derry-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-10/tt50389959.jpg"
-     },
-     {
-      "title": "Black Doves",
-      "url": "https://cineblog001.tires/cb01-streaming/28300-black-doves-cb01.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2024-12/black-doves_1733418075.jpg"
      }
     ],
     "perse": []
@@ -377,22 +377,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/fx-fighter-kurumi-chan.M32Ff/DtaQtMMhTw",
-      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
-      "title": "FX Fighter Kurumi-chan",
+      "url": "/play/devils-crest-ita.T6LXb/SOPVeqCJH5",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/demons-crest.Qipbr/akbY59vGCp",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": null
      },
      {
-      "url": "/play/one-piece-ita.d5nahE/ljRtLA",
-      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
-      "title": "One Piece",
-      "lang": "ITA"
-     },
-     {
-      "url": "/play/one-piece-ita.d5nahE/NLmk5v",
-      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
-      "title": "One Piece",
-      "lang": "ITA"
+      "url": "/play/waccha-primagi.Jha-y/m85hA1Ovy7",
+      "thumb": "https://img.animeworld.ac/locandine/Jha-y.jpg",
+      "title": "Waccha PriMagi!",
+      "lang": null
      }
     ],
     "perse": [
@@ -406,22 +406,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/fx-fighter-kurumi-chan.M32Ff/DtaQtMMhTw",
-      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
-      "title": "FX Fighter Kurumi-chan",
+      "url": "/play/devils-crest-ita.T6LXb/SOPVeqCJH5",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/demons-crest.Qipbr/akbY59vGCp",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": null
      },
      {
-      "url": "/play/one-piece-ita.d5nahE/ljRtLA",
-      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
-      "title": "One Piece",
-      "lang": "ITA"
-     },
-     {
-      "url": "/play/one-piece-ita.d5nahE/NLmk5v",
-      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
-      "title": "One Piece",
-      "lang": "ITA"
+      "url": "/play/waccha-primagi.Jha-y/m85hA1Ovy7",
+      "thumb": "https://img.animeworld.ac/locandine/Jha-y.jpg",
+      "title": "Waccha PriMagi!",
+      "lang": null
      }
     ],
     "perse": [
@@ -435,22 +435,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/fx-fighter-kurumi-chan.M32Ff/DtaQtMMhTw",
-      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
-      "title": "FX Fighter Kurumi-chan",
+      "url": "/play/devils-crest-ita.T6LXb/SOPVeqCJH5",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/demons-crest.Qipbr/akbY59vGCp",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": null
      },
      {
-      "url": "/play/one-piece-ita.d5nahE/ljRtLA",
-      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
-      "title": "One Piece",
-      "lang": "ITA"
-     },
-     {
-      "url": "/play/one-piece-ita.d5nahE/NLmk5v",
-      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
-      "title": "One Piece",
-      "lang": "ITA"
+      "url": "/play/waccha-primagi.Jha-y/m85hA1Ovy7",
+      "thumb": "https://img.animeworld.ac/locandine/Jha-y.jpg",
+      "title": "Waccha PriMagi!",
+      "lang": null
      }
     ],
     "perse": [
@@ -464,22 +464,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/fx-fighter-kurumi-chan.M32Ff/DtaQtMMhTw",
-      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
-      "title": "FX Fighter Kurumi-chan",
+      "url": "/play/devils-crest-ita.T6LXb/SOPVeqCJH5",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
+      "lang": "ITA"
+     },
+     {
+      "url": "/play/demons-crest.Qipbr/akbY59vGCp",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": null
      },
      {
-      "url": "/play/one-piece-ita.d5nahE/ljRtLA",
-      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
-      "title": "One Piece",
-      "lang": "ITA"
-     },
-     {
-      "url": "/play/one-piece-ita.d5nahE/NLmk5v",
-      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
-      "title": "One Piece",
-      "lang": "ITA"
+      "url": "/play/waccha-primagi.Jha-y/m85hA1Ovy7",
+      "thumb": "https://img.animeworld.ac/locandine/Jha-y.jpg",
+      "title": "Waccha PriMagi!",
+      "lang": null
      }
     ],
     "perse": [
@@ -495,7 +495,7 @@
   "dettagli": [
    "OK: peliculas /category/anime-cartoni-animati/ | 18 risultati",
    "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.hair/?p=23012, controllo quella",
-   "OK: peliculas /aggiornamento-episodi-nuovi/ | 96 risultati",
+   "OK: peliculas /aggiornamento-episodi-nuovi/ | 95 risultati",
    "attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
    "OK: peliculas /category/serie-tv-archive/ | 18 risultati"
   ],
@@ -540,10 +540,10 @@
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/animazione/5878-puffin-rock-streaming.html",
-      "thumb": "/uploads/immagini/tt3590338.webp",
+      "url": "https://guardaseriex.work/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html",
+      "thumb": "/uploads/immagini/tt2580046.webp",
       "year": "2015",
-      "title": "Puffin Rock",
+      "title": "Miraculous - Le storie di Ladybug e Chat Noir",
       "lang": null
      }
     ],
@@ -590,24 +590,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.work/dramma/5886-campus-drivers-streaming.html",
-      "thumb": "/uploads/immagini/tt39943756.webp",
-      "year": "2026",
-      "title": "Campus Drivers",
+      "url": "https://guardaseriex.work/fantascienza/4178-listituto-streaming.html",
+      "thumb": "/uploads/immagini/tt10946316.webp",
+      "year": "2025",
+      "title": "L&#039;Istituto",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/commedia/5884-it-gets-worse-streaming.html",
-      "thumb": "/uploads/immagini/tt35926686.webp",
-      "year": "2026",
-      "title": "Può solo andar peggio",
+      "url": "https://guardaseriex.work/crime/1657-shetland.html",
+      "thumb": "/uploads/immagini/tt2396135.webp",
+      "year": "2013",
+      "title": "Shetland",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/crime/5806-the-torment-streaming.html",
-      "thumb": "/uploads/immagini/tt47816221.webp",
+      "url": "https://guardaseriex.work/dramma/5887-melania-rea-streaming.html",
+      "thumb": "/uploads/immagini/tt45114341.webp",
       "year": "2026",
-      "title": "The Torment",
+      "title": "Melania Rea",
       "lang": null
      }
     ],
@@ -647,24 +647,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.work/dramma/5886-campus-drivers-streaming.html",
-      "thumb": "/uploads/immagini/tt39943756.webp",
-      "year": "2026",
-      "title": "Campus Drivers",
+      "url": "https://guardaseriex.work/fantascienza/4178-listituto-streaming.html",
+      "thumb": "/uploads/immagini/tt10946316.webp",
+      "year": "2025",
+      "title": "L&#039;Istituto",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/commedia/5884-it-gets-worse-streaming.html",
-      "thumb": "/uploads/immagini/tt35926686.webp",
-      "year": "2026",
-      "title": "Può solo andar peggio",
+      "url": "https://guardaseriex.work/crime/1657-shetland.html",
+      "thumb": "/uploads/immagini/tt2396135.webp",
+      "year": "2013",
+      "title": "Shetland",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/crime/5806-the-torment-streaming.html",
-      "thumb": "/uploads/immagini/tt47816221.webp",
+      "url": "https://guardaseriex.work/dramma/5887-melania-rea-streaming.html",
+      "thumb": "/uploads/immagini/tt45114341.webp",
       "year": "2026",
-      "title": "The Torment",
+      "title": "Melania Rea",
       "lang": null
      }
     ],
@@ -685,7 +685,7 @@
   "stato": "OK",
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /index | 10119 risultati"
+   "OK: peliculas /index | 10183 risultati"
   ],
   "correzione": false,
   "host": "https://hd4me.net"
@@ -723,7 +723,7 @@
   "canale": "ilgeniodellostreaming_cam",
   "stato": "ROTTO",
   "dettagli": [
-   "OK: peliculas /catalog/all | 16 risultati",
+   "OK: peliculas /catalog/all | 17 risultati",
    "ROTTO: peliculas /serie-tv/ | patron non trova titoli",
    "  campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html",
    "  regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating",
@@ -738,23 +738,23 @@
     "patron": "<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<h3[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?",
     "esempi": [
      {
-      "url": "https://il-geniodellostreaming.tattoo/film/35489-i-casi-di-alicia-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt39390491.jpg",
-      "title": "I casi di Alicia",
+      "url": "https://il-geniodellostreaming.tattoo/film/35513-delitto-in-galizia-streaming.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-01/delitto-in-galizia.jpg",
+      "title": "Delitto in Galizia",
       "lang": null,
       "year": "2026"
      },
      {
-      "url": "https://il-geniodellostreaming.tattoo/film/35490-the-body-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt8014982.jpg",
-      "title": "The Body",
+      "url": "https://il-geniodellostreaming.tattoo/film/35511-12-12-12-streaming.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt32375763.jpg",
+      "title": "12 12 12",
       "lang": null,
       "year": "2026"
      },
      {
-      "url": "https://il-geniodellostreaming.tattoo/film/35491-chiaroscuro-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt37214564.jpg",
-      "title": "ChiaroScuro",
+      "url": "https://il-geniodellostreaming.tattoo/film/35508-the-early-spring-streaming.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-08/tt37884717.jpg",
+      "title": "The Early Spring",
       "lang": null,
       "year": "2026"
      }
@@ -893,7 +893,7 @@
   "canale": "raiplay",
   "stato": "OK",
   "dettagli": [
-   "attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.tech_datetime_en",
+   "OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata",
    "OK: https://www.raiplay.it/dirette | html",
    "OK: https://www.raiplay.it/guidatv.json | json, struttura invariata",
    "OK: https://www.raiplay.it/guidatv | html",
@@ -911,7 +911,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27331 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27335 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -928,7 +928,7 @@
    "OK: Archivio per nome | 60 titoli in props.titles",
    "OK: Ricerca | 60 titoli in props.titles",
    "OK: Generi | 20 titoli in props.genres",
-   "OK: serie di esempio /it/titles/66568-the-good-daughter | 1 stagioni, 6 episodi nella prima"
+   "OK: serie di esempio /it/titles/66576-silent-night | 1 stagioni, 1 episodi nella prima"
   ],
   "correzione": false,
   "host": "https://streamingcommunityz.nexus"
@@ -958,10 +958,10 @@
   "dettagli": [
    "ROTTO: peliculas /film | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_film.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 34 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 35 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "ROTTO: peliculas /serie-tv/ | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_serie_tv.html",
-   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 24 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
+   "  patronBlock rimosso: senza blocco le regex dei titoli trovano 25 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)",
    "file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli"
   ],
   "correzione": true,
