@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 7, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 11, NON VERIFICATO 5, OK 20, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 6, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 11, NON VERIFICATO 5, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (3)
 
@@ -48,23 +48,7 @@ Sito: http://cinestore.cinetecadibologna.it
 - file corretto scritto in rapporti/correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli
 - attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano
 
-## ROTTO (7)
-
-### 1337x
-Sito: https://1337x.to
-- indirizzo scritto nel canale: https://1337x.to
-- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- ROTTO: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | patron non trova titoli
--   campione della pagina salvato in rapporti/correzioni/1337x/pagina_peliculas_movie_lib_sort_all_it_popularity_desc_al.html
--   nessuna regex sostitutiva trovata automaticamente in /movie-lib-sort/all/it/popularity/desc/all/1/
-- OK: peliculas /movie-library/1/ | 25 risultati
-
-### accuradio
-Sito: https://www.accuradio.com
-- indirizzo scritto nel canale: https://www.accuradio.com
-- ROTTO: peliculas / | patron non trova titoli
--   campione della pagina salvato in rapporti/correzioni/accuradio/pagina_peliculas_home.html
--   nessuna regex sostitutiva trovata automaticamente in /
+## ROTTO (6)
 
 ### cineblog001
 Sito: https://cineblog001.tires
@@ -130,11 +114,15 @@ Sito: https://ilcorsaronero.link
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.tattoo
-- OK: peliculas /catalog/all | 17 risultati
+- OK: peliculas /catalog/all | 18 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
 -   non applicata al file: la funzione ha piu varianti di regex
+
+### thepiratebay
+Sito: https://apibay.org
+- PROBLEMA: https://apibay.org/q.php?q=matrix | il tipo di risposta e cambiato da html a json
 
 ## DOMINIO PARCHEGGIATO (3)
 
@@ -148,16 +136,16 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27335 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27259 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5654 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5670 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5663 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (11)
 
@@ -183,7 +171,7 @@ Sito: https://dinostreaming.it
 
 ### filmpertutti
 Sito: https://filmpertuttiiii.nuovo.live
-- findhost non ha dato un indirizzo partendo da https://filmpertuttiiii.nuovo.live: findhost non restituisce un indirizzo (pagina cambiata?)
+- findhost non ha dato un indirizzo partendo da https://filmpertuttiiii.nuovo.live: errore del certificato HTTPS
 
 ### filmstreaming
 Sito: https://film-streaming-ita.cam
@@ -233,11 +221,23 @@ Sito: https://streamingita.homes
 Sito: https://vixsrc.to
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
-## OK (20)
+## OK (21)
+
+### 1337x
+Sito: https://1337x.to
+- indirizzo scritto nel canale: https://1337x.to
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- OK: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | 14 risultati
+- OK: peliculas /movie-library/1/ | 25 risultati
+
+### accuradio
+Sito: https://www.accuradio.com
+- indirizzo scritto nel canale: https://www.accuradio.com
+- OK: peliculas / | 48 risultati
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best
-- OK: peliculas /lastnews/ | 97 risultati
+- OK: peliculas /lastnews/ | 99 risultati
 - OK: peliculas /cinema/ | 101 risultati
 - OK: peliculas /sub-ita/ | 101 risultati
 - OK: peliculas /serie-tv/ | 101 risultati
@@ -279,14 +279,13 @@ Sito: https://www.discoveryplus.com
 Sito: https://eurostream.hair
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.hair/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 95 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 93 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
 
 ### hd4me
 Sito: https://hd4me.net
-- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- OK: peliculas /index | 10183 risultati
+- OK: peliculas /index | 4034 risultati
 
 ### justwatch
 Sito: https://www.justwatch.com
@@ -353,17 +352,13 @@ Sito: https://streamingcommunityz.nexus
 - OK: Generi | 20 titoli in props.genres
 - OK: serie di esempio /it/titles/66576-silent-night | 1 stagioni, 1 episodi nella prima
 
-### thepiratebay
-Sito: https://apibay.org
-- OK: https://apibay.org/q.php?q=matrix | html
-
 ### toonitalia
 Sito: https://toonitalia.xyz
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
 - OK: peliculas /category/anime | 400 risultati
 - OK: peliculas /anime-ita | 2782 risultati
 - attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
-- OK: peliculas /contatti | 824 risultati
+- OK: peliculas /contatti | 826 risultati
 - attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 
 ### tunein

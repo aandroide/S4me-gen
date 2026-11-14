@@ -1,7 +1,20 @@
 {
 "https://apibay.org/q.php?q=matrix": {
-"dimensione": 29970,
+"chiavi": [
+"[].added",
+"[].category",
+"[].id",
+"[].imdb",
+"[].info_hash",
+"[].leechers",
+"[].name",
+"[].num_files",
+"[].seeders",
+"[].size",
+"[].status",
+"[].username"
+],
 "stato": "ok",
-"tipo": "html"
+"tipo": "json"
 }
 }
