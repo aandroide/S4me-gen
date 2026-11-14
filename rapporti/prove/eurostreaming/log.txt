@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.hair
       peliculas | • Archivio | https://eurostream.hair/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Nocturne | https://eurostream.hair/nocturne/
-      episodios | MobLand | https://eurostream.hair/mobland/
-      episodios | Melania Rea | https://eurostream.hair/melania-rea/
-      episodios | Dexter: Resurrection | https://eurostream.hair/dexter-resurrection/
-== episodios su "Nocturne"
-   -> 9 voci
-      findvideos | 1x01 - Lazzaro, vieni fuori!  | https://eurostream.hair/nocturne/
-      findvideos | 1x02 - Per un momento come questo  | https://eurostream.hair/nocturne/
-      findvideos | 1x03 - Occhi all’interno  | https://eurostream.hair/nocturne/
-      findvideos | 1x04 - Il Corriere  | https://eurostream.hair/nocturne/
-== findvideos su "1x01 - Lazzaro, vieni fuori! "
+      episodios | FBI | https://eurostream.hair/fbi-4/
+      episodios | Would You Marry Me? | https://eurostream.hair/would-you-marry-me/
+      episodios | South Park | https://eurostream.hair/south-park-48/
+      episodios | Chicago P.D. | https://eurostream.hair/chicago-pd-73/
+== episodios su "FBI"
+   -> 298 voci
+      findvideos | 1x01 - La Legge di Goodwin  | https://eurostream.hair/fbi-4/
+      findvideos | 1x02 - Martiri  | https://eurostream.hair/fbi-4/
+      findvideos | 1x03 - La Preda  | https://eurostream.hair/fbi-4/
+      findvideos | 1x04 - Il Cecchino  | https://eurostream.hair/fbi-4/
+== findvideos su "1x01 - La Legge di Goodwin "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/vp11pv4r621q
+Exception: Not un-shortened link: https://clicka.cc/mix/nmu1259h
 
 == lista "• Anime"
    -> 19 voci
@@ -69,17 +69,17 @@ Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 1x04 - Nocturne - Il Corriere | https://eurostream.hair/nocturne/
-      episodios | 2x09 - MobLand - Esaurimento nervoso | https://eurostream.hair/mobland/
-      episodios | 1x02 - Melania Rea - I sospetti | https://eurostream.hair/melania-rea/
-      episodios | 2x03 - Dexter: Resurrection - Vivi libero o muori | https://eurostream.hair/dexter-resurrection/
-== episodios su "1x04 - Nocturne - Il Corriere"
-   -> 9 voci
-      findvideos | 1x01 - Lazzaro, vieni fuori!  | https://eurostream.hair/nocturne/
-      findvideos | 1x02 - Per un momento come questo  | https://eurostream.hair/nocturne/
-      findvideos | 1x03 - Occhi all’interno  | https://eurostream.hair/nocturne/
-      findvideos | 1x04 - Il Corriere  | https://eurostream.hair/nocturne/
-== findvideos su "1x01 - Lazzaro, vieni fuori! "
+      episodios | 9x06 - FBI - Ultimatum  | https://eurostream.hair/fbi-4/
+      episodios | 1x01 - Would You Marry Me? - Episodio 01 , 1x12 Episodio 12 | https://eurostream.hair/would-you-marry-me/
+      episodios | 14x06 - Chicago P.D. - The Thin Grey Line  | https://eurostream.hair/chicago-pd-73/
+      episodios | 4x157 - Forbidden Fruit - Episodio 157 | https://eurostream.hair/forbidden-fruit/
+== episodios su "9x06 - FBI - Ultimatum "
+   -> 298 voci
+      findvideos | 1x01 - La Legge di Goodwin  | https://eurostream.hair/fbi-4/
+      findvideos | 1x02 - Martiri  | https://eurostream.hair/fbi-4/
+      findvideos | 1x03 - La Preda  | https://eurostream.hair/fbi-4/
+      findvideos | 1x04 - Il Cecchino  | https://eurostream.hair/fbi-4/
+== findvideos su "1x01 - La Legge di Goodwin "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/5u3j18og
+Exception: Not un-shortened link: https://clicka.cc/tv/0awseqcg
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -108,7 +108,6 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
    SEZIONE • Archivio -> OK 18 
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostream.hair/?s=avatar', 'status': 403, 'byte': 5914, 'titolo_pagina': 'Just a moment...'}
-SEZIONI: 4 ok su 5
-   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: findvideos su "1x01 - Lazzaro, vieni fuori! "
+   SEZIONE txt70741 … -> OK 11 
+SEZIONI: 5 ok su 5
+VERDETTO: SI FERMA A: findvideos su "1x01 - La Legge di Goodwin "

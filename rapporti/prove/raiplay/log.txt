@@ -50,24 +50,24 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 19 
-   SEZIONE Rai 2 -> OK 21 
-   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE Rai 1 -> ERRORE JSONDecodeError
+   SEZIONE Rai 2 -> ERRORE JSONDecodeError
+   SEZIONE Rai 3 -> OK 17 
+   SEZIONE str16 14 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 30 
+   SEZIONE Rai 2 -> OK 36 
+   SEZIONE Rai 3 -> OK 31 
    SEZIONE str15 13 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 30 
    SEZIONE Rai 2 -> ERRORE JSONDecodeError
    SEZIONE Rai 3 -> OK 31 
    SEZIONE str14 12 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 31 
-   SEZIONE Rai 2 -> OK 35 
-   SEZIONE Rai 3 -> OK 30 
-   SEZIONE str13 11 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE Novità -> OK 23 
-   SEZIONE Da non perdere -> OK 22 
+   SEZIONE Da non perdere -> OK 23 
    SEZIONE Film in esclusiva -> OK 31 
    SEZIONE Film -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 25 
+   SEZIONE Da non perdere -> OK 26 
    SEZIONE Serie Original RaiPlay -> OK 24 
    SEZIONE Serie tratte da libri -> OK 25 
    SEZIONE Serie italiane -> SOTTOMENU  
@@ -76,22 +76,22 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Serie Original RaiPlay -> OK 24 
    SEZIONE Serie Internazionali -> SOTTOMENU  
    SEZIONE Intrattenimento -> OK 24 
-   SEZIONE Territori e itinerari -> OK 32 
-   SEZIONE Approfondimento -> OK 25 
+   SEZIONE Territori e itinerari -> OK 33 
+   SEZIONE Approfondimento -> OK 26 
    SEZIONE Programmi TV -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 26 
+   SEZIONE Da non perdere -> OK 27 
    SEZIONE Docu-serie Original -> OK 29 
    SEZIONE Documentari Original -> OK 25 
    SEZIONE Documentari -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 29 
    SEZIONE Esclusive RaiPlay Bambini -> OK 32 
-   SEZIONE Cinema bambini -> OK 24 
+   SEZIONE Cinema bambini -> OK 23 
    SEZIONE Bambini -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 36 
    SEZIONE Un mondo di fumetti -> OK 15 
    SEZIONE Next Star -> OK 21 
    SEZIONE Teen -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Da non perdere -> OK 23 
    SEZIONE Il teatro di Eduardo -> OK 25 
    SEZIONE Musica classica -> OK 25 
    SEZIONE Musica e Teatro -> SOTTOMENU  

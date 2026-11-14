@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 132
+   "voci": 131
   },
   {
    "passo": "findvideos su \"Intrigo a Damasco\"",
@@ -23,7 +23,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"Troy\"",
+   "passo": "findvideos su \"Harry Potter e la camera dei segreti\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 66
+   "titoli": 67
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -126,10 +126,10 @@
      "titoli": 7
     },
     {
-     "voce": "I Simpson",
+     "voce": "Will & Grace 5",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 1
     }
    ]
   },
@@ -166,10 +166,10 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Tempesta d'amore",
+     "voce": "La promessa",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 7
     },
     {
      "voce": "Tutto per la mia famiglia 2",
@@ -178,10 +178,10 @@
      "titoli": 4
     },
     {
-     "voce": "My Sweet Lie",
+     "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 4
     }
    ]
   },
@@ -198,10 +198,10 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Dragon Ball Daima",
+     "voce": "Dragon Ball Super",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 10
+     "titoli": 17
     },
     {
      "voce": "One Piece 18",
@@ -210,10 +210,10 @@
      "titoli": 2
     },
     {
-     "voce": "Dragon Ball Super",
+     "voce": "Dragon Ball Daima",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 17
+     "titoli": 8
     }
    ]
   },
@@ -227,19 +227,19 @@
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 6
+    },
+    {
+     "voce": "Law & Order: i due volti della giustizia 24",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 2
     },
     {
      "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 8
-    },
-    {
-     "voce": "NCIS - Unità anticrimine 14",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 7
+     "titoli": 6
     }
    ]
   },
@@ -250,16 +250,16 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "My Sweet Lie",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
-    },
-    {
      "voce": "Tutto per la mia famiglia 2",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
+    },
+    {
+     "voce": "My Sweet Lie",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
     },
     {
      "voce": "Forbidden Fruit 4",
@@ -302,16 +302,16 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Ore 11",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 3
-    },
-    {
      "voce": "La ruota della fortuna 2025/2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
+    },
+    {
+     "voce": "Realpolitik 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 2
     },
     {
      "voce": "Caduta libera 2026/2027",
@@ -366,7 +366,7 @@
      "voce": "Teen Titans Go!",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 10
     },
     {
      "voce": "Looney Tunes Cartoons",
@@ -406,7 +406,7 @@
    "voce": "•• Kids Evergreen",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 8,
+   "sottovoci": 7,
    "figli": [
     {
      "voce": "C'era una volta... Pollon",
@@ -421,10 +421,10 @@
      "titoli": 52
     },
     {
-     "voce": "I pinguini di Madagascar",
+     "voce": "Pollyanna",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 7
     }
    ]
   },
@@ -435,7 +435,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 14
+   "titoli": 13
   },
   {
    "voce": "•• Documentari più visti",
@@ -459,10 +459,10 @@
      "titoli": 2
     },
     {
-     "voce": "Fuori le prove! - Indagini ai confini della realtà 3",
+     "voce": "Prove sepolte - Le avventure dell'archeologia",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 10
+     "titoli": 5
     }
    ]
   },

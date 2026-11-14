@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"My Weird School\"",
+   "passo": "findvideos su \"Condorman\"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,9 +21,9 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/34254116",
+   "url": "https://v.vidxgo.co/0082199",
    "tipo": "film",
-   "finale": "http://127.0.0.1:41125/hls/34254116/master.m3u8",
+   "finale": "http://127.0.0.1:40579/hls/0082199/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -119,23 +119,23 @@
   {
    "url": "https://altadefinizionex.fit/film/",
    "status": 200,
-   "byte": 132938,
-   "secondi": 1.0,
+   "byte": 132498,
+   "secondi": 0.8,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizionex.fit/commedia/45539-my-weird-school-streaming.html",
+   "url": "https://altadefinizionex.fit/commedia/45554-condorman-streaming.html",
    "status": 200,
-   "byte": 347213,
-   "secondi": 0.2,
+   "byte": 381980,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
    "url": "https://altadefinizionex.fit/film/",
    "status": 200,
-   "byte": 132938,
+   "byte": 132498,
    "secondi": 0.3,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/03.html"
@@ -143,8 +143,8 @@
   {
    "url": "https://altadefinizionex.fit",
    "status": 200,
-   "byte": 509131,
-   "secondi": 0.2,
+   "byte": 504602,
+   "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/04.html"
   },
@@ -160,22 +160,22 @@
    "url": "https://altadefinizionex.fit/cinema/",
    "status": 200,
    "byte": 73053,
-   "secondi": 1.3,
+   "secondi": 1.8,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/06.html"
   },
   {
    "url": "https://altadefinizionex.fit/azione/film",
    "status": 200,
-   "byte": 133130,
-   "secondi": 1.0,
+   "byte": 132752,
+   "secondi": 0.8,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/07.html"
   },
   {
    "url": "https://altadefinizionex.fit/animazione/film",
    "status": 200,
-   "byte": 135755,
+   "byte": 135893,
    "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/08.html"
@@ -183,16 +183,16 @@
   {
    "url": "https://altadefinizionex.fit/serie-tv/",
    "status": 200,
-   "byte": 135353,
-   "secondi": 1.2,
+   "byte": 134527,
+   "secondi": 1.5,
    "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione",
    "file": "pagine/09.html"
   },
   {
    "url": "https://altadefinizionex.fit",
    "status": 200,
-   "byte": 509131,
-   "secondi": 0.2,
+   "byte": 504602,
+   "secondi": 0.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/10.html"
   },
@@ -200,7 +200,7 @@
    "url": "https://altadefinizionex.fit/cinema/serie-tv",
    "status": 404,
    "byte": 33652,
-   "secondi": 0.6,
+   "secondi": 0.7,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/11.html"
   },
@@ -208,14 +208,14 @@
    "url": "https://altadefinizionex.fit/cinema/",
    "status": 200,
    "byte": 73053,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/12.html"
   },
   {
    "url": "https://altadefinizionex.fit/azione/serie-tv",
    "status": 200,
-   "byte": 137207,
+   "byte": 136995,
    "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/13.html"
@@ -223,8 +223,8 @@
   {
    "url": "https://altadefinizionex.fit/animazione/serie-tv",
    "status": 200,
-   "byte": 136578,
-   "secondi": 1.0,
+   "byte": 136259,
+   "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/14.html"
   },
@@ -232,7 +232,7 @@
    "url": "https://altadefinizionex.fit/archivio?search=avatar&f=all&page=1",
    "status": 200,
    "byte": 97376,
-   "secondi": 1.0,
+   "secondi": 1.2,
    "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione",
    "file": "pagine/15.html"
   }

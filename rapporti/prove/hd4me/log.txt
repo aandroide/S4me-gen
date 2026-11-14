@@ -7,15 +7,15 @@ Canale hd4me | indirizzo https://hd4me.net
       channel_config | txt60587 %s | 
 == lista "• Film"
    -> 11 voci
-      findvideos | Missione compiuta stop. Bacioni Matt Helm | posts/55298.json
-      findvideos | L’imboscata | posts/55296.json
-      findvideos | Matt Helm… non perdona! | posts/55294.json
-      findvideos | Matt Helm il silenziatore | posts/55292.json
-== findvideos su "Missione compiuta stop. Bacioni Matt Hel"
+      findvideos | Congiura al castello | posts/55309.json
+      findvideos | Francis contro la camorra | posts/55306.json
+      findvideos | Francis all’Accademia | posts/55304.json
+      findvideos | Francis alle corse | posts/55302.json
+== findvideos su "Congiura al castello"
    -> 2 voci
-      play | Missione compiuta stop. Bacioni Matt Helm | https://mega.nz/#!YBQAyaJD!lqLlG3tJLuPBqKtw7erAk2UCN2MNg4VsOi-GOm1T3dw
-      add_pelicula_to_library | txt30161 %s | posts/55298.json
-== risoluzione mega https://mega.nz/#!YBQAyaJD!lqLlG3tJLuPBqKtw7erAk2UCN2MNg4VsOi-GOm1T3dw
+      play | Congiura al castello | https://mega.nz/#!YVNVwLKT!qpLckGiFYKMcQCWG4Pw35h09cdVwx2WZ8dh0aaF_QLU
+      add_pelicula_to_library | txt30161 %s | posts/55309.json
+== risoluzione mega https://mega.nz/#!YVNVwLKT!qpLckGiFYKMcQCWG4Pw35h09cdVwx2WZ8dh0aaF_QLU
    -> SERVER NON RISOLVE  
 == voci dichiarate in mainlist (2)
     film | '/index'

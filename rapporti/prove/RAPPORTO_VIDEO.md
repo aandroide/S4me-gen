@@ -1,13 +1,13 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 12, SI FERMA AL SERVER O AL VIDEO 5, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
+Riepilogo: ARRIVA AL VIDEO 15, SI FERMA AL SERVER O AL VIDEO 2, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
 
-## ARRIVA AL VIDEO (12)
+## ARRIVA AL VIDEO (15)
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best | verdetto: ARRIVA AL VIDEO
-- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
-- server vixsrc: VIDEO OK m3u8 200
+- server vidxgo: VIDEO OK m3u8 200
+- server vixsrc: VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.fit | verdetto: ARRIVA AL VIDEO
@@ -25,6 +25,10 @@ Sito: https://www.animeworld.ac | verdetto: ARRIVA AL VIDEO
 Sito: https://casa-cinema.top | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
+### cineblog001
+Sito: https://cineblog001.tires | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
+
 ### cinetecadibologna
 Sito: http://cinestore.cinetecadibologna.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/x-flv
@@ -35,6 +39,10 @@ Sito: https://guardaseriex.work | verdetto: ARRIVA AL VIDEO
 
 ### guardaserieicu
 Sito:  | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
+
+### ilgeniodellostreaming_cam
+Sito: https://il-geniodellostreaming.tattoo | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
 ### la7
@@ -49,16 +57,16 @@ Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
 Sito: https://streamingcommunityz.nexus | verdetto: ARRIVA AL VIDEO
 - server streamingcommunityws: VIDEO OK m3u8 200
 
+### tantifilm
+Sito: https://tanti-film.rest | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
+
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
-- passo "findvideos su "01 - Episodi 01-06"": VUOTO 
+- passo "findvideos su "01 - Episodio 01"": VUOTO 
 - server voe: VIDEO OK m3u8 200
 
-## SI FERMA AL SERVER O AL VIDEO (5)
-
-### cineblog001
-Sito: https://cineblog001.tires | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
-- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
+## SI FERMA AL SERVER O AL VIDEO (2)
 
 ### cineblog01
 Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
@@ -69,14 +77,6 @@ Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO 
 Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE
 - server mega: SERVER NON RISOLVE 
 
-### ilgeniodellostreaming_cam
-Sito: https://il-geniodellostreaming.tattoo | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
-- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
-
-### tantifilm
-Sito: https://tanti-film.rest | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
-- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
-
 ## SI FERMA PRIMA DEL VIDEO (39)
 
 ### 1337x
@@ -85,8 +85,7 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista ""Best of 2026" channels "
-- passo "lista ""Best of 2026" channels "": VUOTO 
+Sito:  | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -156,10 +155,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.hair | verdetto: SI FERMA A: findvideos su "1x01 - Lazzaro, vieni fuori! "
-- passo "findvideos su "1x01 - Lazzaro, vieni fuori! "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/vp11pv4r621q 
+Sito: https://eurostream.hair | verdetto: SI FERMA A: findvideos su "1x01 - La Legge di Goodwin "
+- passo "findvideos su "1x01 - La Legge di Goodwin "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/nmu1259h 
 - passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty 
-- passo "findvideos su "1x01 - Lazzaro, vieni fuori! "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/5u3j18og 
+- passo "findvideos su "1x01 - La Legge di Goodwin "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/0awseqcg 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -221,7 +220,7 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Intrigo a Damasco"
 - passo "findvideos su "Intrigo a Damasco"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Troy"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Harry Potter e la camera dei segreti"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
@@ -254,8 +253,8 @@ Sito: http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1 | verd
 ### streamingita
 Sito: https://streamingita.homes | verdetto: SI FERMA A: lista "Generi"
 - passo "lista "Generi"": VUOTO 
-- passo "lista "Anno"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
-- passo "lista "• Film"": ERRORE line 38, in peliculas     return support.dooplay_peliculas(item, mixed)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ platformcode.logger.WebErrorException 
+- passo "lista "Anno"": VUOTO 
+- passo "lista "• Film"": VUOTO 
 
 ### streamtime
 Sito:  | verdetto: SI FERMA A: lista "• Film"

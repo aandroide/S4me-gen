@@ -7,15 +7,17 @@ Canale toonitalia | indirizzo https://toonitalia.xyz
       peliculas | Film Animazione  | https://toonitalia.xyz/film-animazione
 == lista "Anime "
    -> 21 voci
+      check | I fiori del male  | https://toonitalia.xyz/i-fiori-del-male/
       check | 6 Lovers  | https://toonitalia.xyz/6-lovers/
       check | Street Football - La compagnia dei Celestini  | https://toonitalia.xyz/street-football-la-compagnia-dei-celestini/
       check | UFO Robot Goldrake, il Grande Mazinga e Getta Robot G contro | https://toonitalia.xyz/ufo-robot-goldrake-il-grande-mazinga-e-getta-robot-g-contro-il-dragosauro/
-      check | Mazinga Z contro il Generale Nero  | https://toonitalia.xyz/mazinga-z-contro-il-generale-nero/
-== check su "6 Lovers "
-   -> 2 voci
-      findvideos | 01 - Episodi 01-06 | https://toonitalia.xyz/6-lovers/
-      add_serie_to_library | txt30161 %s | https://toonitalia.xyz/6-lovers/
-== findvideos su "01 - Episodi 01-06"
+== check su "I fiori del male "
+   -> 14 voci
+      findvideos | 01 - Episodio 01 | https://toonitalia.xyz/i-fiori-del-male/
+      findvideos | 02 - Episodio 02 | https://toonitalia.xyz/i-fiori-del-male/
+      findvideos | 03 - Episodio 03 | https://toonitalia.xyz/i-fiori-del-male/
+      findvideos | 04 - Episodio 04 | https://toonitalia.xyz/i-fiori-del-male/
+== findvideos su "01 - Episodio 01"
    -> 0 voci
 == lista "•• Anime ITA"
    -> 21 voci
@@ -42,12 +44,12 @@ Canale toonitalia | indirizzo https://toonitalia.xyz
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', 'list', 'tvshow'])
 == controllo di tutte le sezioni
    SEZIONE Anime -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: I fiori del male
       PROBLEMA: tipo undefined, in Kodi appare come cartella: 6 Lovers
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Street Football - La compagnia dei Celestini
       PROBLEMA: tipo undefined, in Kodi appare come cartella: UFO Robot Goldrake, il Grande Mazinga e Getta Robo
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Mazinga Z contro il Generale Nero
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Lupin l’incorreggibile Lupin
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Winx Club - Battaglia per Magix
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Arifureta - Il più forte del mondo con un mestiere
    SEZIONE •• Anime ITA -> OK 20 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: .hack//Sign
       PROBLEMA: tipo undefined, in Kodi appare come cartella: 3x3 occhi

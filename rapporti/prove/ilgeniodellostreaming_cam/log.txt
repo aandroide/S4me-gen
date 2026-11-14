@@ -6,31 +6,29 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.tatt
       genres | •• Per Lettera | https://il-geniodellostreaming.tattoo/catalog/all
       peliculas | Serie Tv  | https://il-geniodellostreaming.tattoo/serie-tv/
 == lista "Tutti "
-   -> 18 voci
-      check | Heartland | https://il-geniodellostreaming.tattoo/film/35512-heartland-streaming.html
-      check | 12 12 12 | https://il-geniodellostreaming.tattoo/film/35511-12-12-12-streaming.html
-      check | Nessuna tregua | https://il-geniodellostreaming.tattoo/film/35509-nessuna-tregua-streaming.html
-      check | Come il giorno e la notte | https://il-geniodellostreaming.tattoo/film/35505-come-il-giorno-e-la-notte-streaming.html
-== check su "Heartland"
+   -> 19 voci
+      check | Snoopy presenta: Natale con Snoopy | https://il-geniodellostreaming.tattoo/film/35525-snoopy-presenta-natale-con-snoopy-streaming.html
+      check | Bagarre | https://il-geniodellostreaming.tattoo/film/35520-bagarre-streaming.html
+      check | Desprotexida: delitto in Galizia | https://il-geniodellostreaming.tattoo/film/35521-desprotexida-delitto-in-galizia-streaming.html
+      check | NAZA | https://il-geniodellostreaming.tattoo/film/35517-naza-streaming.html
+== check su "Snoopy presenta: Natale con Snoopy"
    -> 1 voci
-      play | Heartland | https://v.vidxgo.co/38213251
-== risoluzione vidxgo https://v.vidxgo.co/38213251
-   api /t/ 38213251 referer https://v.vidxgo.co/38213251 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 38213251 referer https://il-geniodellostreaming.tattoo/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+      play | Snoopy presenta: Natale con Snoopy | https://v.vidxgo.co/47791876
+== risoluzione vidxgo https://v.vidxgo.co/47791876
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (4)
     menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])
     menu | ('Generi {submenu}', ['', 'genres', 'genres', 'undefined'])
     menu | ('Per Lettera {submenu}', ['/catalog/all', 'genres', 'template-az', 'undefined'])
     menu | ('Serie Tv', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 17 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Heartland
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Nessuna tregua
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Come il giorno e la notte
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Early Spring
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Varnell Hill Show
+   SEZIONE Tutti -> OK 18 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Bagarre
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: NAZA
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Chronological Back to the Future
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Delitto in Galizia
    SEZIONE Serie TV -> OK 20 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Delitto in Galizia
       PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
@@ -39,44 +37,44 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.tatt
       PROBLEMA: tipo undefined, in Kodi appare come cartella: The Good Daughter
       PROBLEMA: tipo undefined, in Kodi appare come cartella: I casi di Alicia
    SEZIONE Animazione -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Bass X Machina
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Helluva Boss
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Thomas & Friends: Really Helpful Engines
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Magic Knight Rayearth
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Shaun, vita da pecora - Operazione Z.U.C.C.A.
    SEZIONE Avventura -> OK 19 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Bagarre
       PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Allen
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Il Signore degli Anelli - Gli Anelli del Potere
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Organize Isler: Money Trap
    SEZIONE •• Generi -> SOTTOMENU  
-   SEZIONE 0-9 -> OK 16 
+   SEZIONE 0-9 -> OK 18 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Bagarre
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: NAZA
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Chronological Back to the Future
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Nessuna tregua
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Come il giorno e la notte
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Early Spring
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Varnell Hill Show
-   SEZIONE A -> OK 16 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Delitto in Galizia
+   SEZIONE A -> OK 18 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Bagarre
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: NAZA
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Chronological Back to the Future
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Nessuna tregua
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Come il giorno e la notte
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Early Spring
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Varnell Hill Show
-   SEZIONE B -> OK 16 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Delitto in Galizia
+   SEZIONE B -> OK 18 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Bagarre
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: NAZA
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Chronological Back to the Future
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: 12 12 12
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Nessuna tregua
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Come il giorno e la notte
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Early Spring
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Varnell Hill Show
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Delitto in Galizia
    SEZIONE •• Per Lettera -> SOTTOMENU  
    SEZIONE Serie Tv -> OK 20 
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://il-geniodellostreaming.tattoo/?s=avatar', 'status': 200, 'byte': 35026, 'titolo_pagina': 'Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis'}
 SEZIONI: 4 ok su 5
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+VERDETTO: ARRIVA AL VIDEO

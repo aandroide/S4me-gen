@@ -7,18 +7,18 @@ Canale guardaserieicu | indirizzo
       channel_config | txt60587 %s | 
 == lista "• Serie TV"
    -> 19 voci
-      episodios | L'Istituto | https://guardaseriex.work/fantascienza/4178-listituto-streaming.html
-      episodios | Shetland | https://guardaseriex.work/crime/1657-shetland.html
-      episodios | Melania Rea | https://guardaseriex.work/dramma/5887-melania-rea-streaming.html
+      episodios | The Serial Killer Connection | https://guardaseriex.work/crime/5890-the-serial-killer-connection-streaming.html
       episodios | L'ultimo piatto | https://guardaseriex.work/dramma/5877-l-ultimo-piatto-streaming.html
-== episodios su "L'Istituto"
+      episodios | American Horror Story | https://guardaseriex.work/dramma/407-american-horror-story-1.html
+      episodios | Livatino - Il giudice e i suoi assassini | https://guardaseriex.work/dramma/5891-livatino-il-giudice-e-i-suoi-assassini-streaming.html
+== episodios su "The Serial Killer Connection"
    -> 2 voci
-      findvideos | 1x01 - Il ragazzo | https://guardaseriex.work/fantascienza/4178-listituto-streaming.html
-      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.work/fantascienza/4178-listituto-streaming.html
-== findvideos su "1x01 - Il ragazzo"
+      findvideos | 1x01 | https://guardaseriex.work/crime/5890-the-serial-killer-connection-streaming.html
+      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.work/crime/5890-the-serial-killer-connection-streaming.html
+== findvideos su "1x01"
    -> 1 voci
-      play | 1x01 - Il ragazzo | https://v.vidxgo.co/10946316/1/1
-== risoluzione vidxgo https://v.vidxgo.co/10946316/1/1
+      play | 1x01 | https://v.vidxgo.co/46066662/1/1
+== risoluzione vidxgo https://v.vidxgo.co/46066662/1/1
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (2)
     tvshow | '/serietv-streaming/page/1/'

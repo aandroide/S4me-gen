@@ -10,10 +10,10 @@
   {
    "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 18
+   "voci": 19
   },
   {
-   "passo": "check su \"Heartland\"",
+   "passo": "check su \"Snoopy presenta: Natale con Snoopy\"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,27 +21,11 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/38213251",
+   "url": "https://v.vidxgo.co/47791876",
    "tipo": "film",
-   "nota": "il server non risponde entro 90 secondi",
-   "modulo_server": true,
-   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
-   "pagina_server": {
-    "status": 403,
-    "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-   },
-   "api_t": [
-    {
-     "referer": "https://v.vidxgo.co/38213251",
-     "status": 403,
-     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-    },
-    {
-     "referer": "https://il-geniodellostreaming.tattoo/",
-     "status": 403,
-     "inizio": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!"
-    }
-   ]
+   "finale": "http://127.0.0.1:38895/hls/47791876/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
   }
  ],
  "menu_dichiarato": [
@@ -55,15 +39,15 @@
    "voce": "Tutti",
    "azione": "peliculas",
    "problemi": [
-    "tipo undefined, in Kodi appare come cartella: Heartland",
-    "tipo undefined, in Kodi appare come cartella: 12 12 12",
-    "tipo undefined, in Kodi appare come cartella: Nessuna tregua",
-    "tipo undefined, in Kodi appare come cartella: Come il giorno e la notte",
-    "tipo undefined, in Kodi appare come cartella: The Early Spring",
-    "tipo undefined, in Kodi appare come cartella: The Varnell Hill Show"
+    "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
+    "tipo undefined, in Kodi appare come cartella: Bagarre",
+    "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia",
+    "tipo undefined, in Kodi appare come cartella: NAZA",
+    "tipo undefined, in Kodi appare come cartella: Chronological Back to the Future",
+    "tipo undefined, in Kodi appare come cartella: Delitto in Galizia"
    ],
    "esito": "OK",
-   "titoli": 17
+   "titoli": 18
   },
   {
    "voce": "•• Generi",
@@ -89,12 +73,12 @@
      "voce": "Animazione",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
       "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
       "tipo undefined, in Kodi appare come cartella: Bass X Machina",
       "tipo undefined, in Kodi appare come cartella: Helluva Boss",
       "tipo undefined, in Kodi appare come cartella: Thomas & Friends: Really Helpful Engines",
-      "tipo undefined, in Kodi appare come cartella: Magic Knight Rayearth",
-      "tipo undefined, in Kodi appare come cartella: Shaun, vita da pecora - Operazione Z.U.C.C.A."
+      "tipo undefined, in Kodi appare come cartella: Magic Knight Rayearth"
      ],
      "esito": "OK",
      "titoli": 20
@@ -103,12 +87,12 @@
      "voce": "Avventura",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Bagarre",
       "tipo undefined, in Kodi appare come cartella: 12 12 12",
       "tipo undefined, in Kodi appare come cartella: Allen",
       "tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo",
       "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
-      "tipo undefined, in Kodi appare come cartella: Il Signore degli Anelli - Gli Anelli del Potere",
-      "tipo undefined, in Kodi appare come cartella: Organize Isler: Money Trap"
+      "tipo undefined, in Kodi appare come cartella: Il Signore degli Anelli - Gli Anelli del Potere"
      ],
      "esito": "OK",
      "titoli": 19
@@ -125,43 +109,43 @@
      "voce": "0-9",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
+      "tipo undefined, in Kodi appare come cartella: Bagarre",
+      "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia",
+      "tipo undefined, in Kodi appare come cartella: NAZA",
       "tipo undefined, in Kodi appare come cartella: Chronological Back to the Future",
-      "tipo undefined, in Kodi appare come cartella: 12 12 12",
-      "tipo undefined, in Kodi appare come cartella: Nessuna tregua",
-      "tipo undefined, in Kodi appare come cartella: Come il giorno e la notte",
-      "tipo undefined, in Kodi appare come cartella: The Early Spring",
-      "tipo undefined, in Kodi appare come cartella: The Varnell Hill Show"
+      "tipo undefined, in Kodi appare come cartella: Delitto in Galizia"
      ],
      "esito": "OK",
-     "titoli": 16
+     "titoli": 18
     },
     {
      "voce": "A",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
+      "tipo undefined, in Kodi appare come cartella: Bagarre",
+      "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia",
+      "tipo undefined, in Kodi appare come cartella: NAZA",
       "tipo undefined, in Kodi appare come cartella: Chronological Back to the Future",
-      "tipo undefined, in Kodi appare come cartella: 12 12 12",
-      "tipo undefined, in Kodi appare come cartella: Nessuna tregua",
-      "tipo undefined, in Kodi appare come cartella: Come il giorno e la notte",
-      "tipo undefined, in Kodi appare come cartella: The Early Spring",
-      "tipo undefined, in Kodi appare come cartella: The Varnell Hill Show"
+      "tipo undefined, in Kodi appare come cartella: Delitto in Galizia"
      ],
      "esito": "OK",
-     "titoli": 16
+     "titoli": 18
     },
     {
      "voce": "B",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
+      "tipo undefined, in Kodi appare come cartella: Bagarre",
+      "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia",
+      "tipo undefined, in Kodi appare come cartella: NAZA",
       "tipo undefined, in Kodi appare come cartella: Chronological Back to the Future",
-      "tipo undefined, in Kodi appare come cartella: 12 12 12",
-      "tipo undefined, in Kodi appare come cartella: Nessuna tregua",
-      "tipo undefined, in Kodi appare come cartella: Come il giorno e la notte",
-      "tipo undefined, in Kodi appare come cartella: The Early Spring",
-      "tipo undefined, in Kodi appare come cartella: The Varnell Hill Show"
+      "tipo undefined, in Kodi appare come cartella: Delitto in Galizia"
      ],
      "esito": "OK",
-     "titoli": 16
+     "titoli": 18
     }
    ]
   },
@@ -190,71 +174,71 @@
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/all",
    "status": 200,
-   "byte": 38118,
-   "secondi": 0.4,
+   "byte": 37929,
+   "secondi": 0.5,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/film/35512-heartland-streaming.html",
+   "url": "https://il-geniodellostreaming.tattoo/film/35525-snoopy-presenta-natale-con-snoopy-streaming.html",
    "status": 200,
-   "byte": 30564,
-   "secondi": 0.4,
-   "titolo_pagina": "Heartland Streaming HD Gratis - ilGenioDelloStreaming",
+   "byte": 30052,
+   "secondi": 0.7,
+   "titolo_pagina": "Snoopy presenta: Natale con Snoopy Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/film/35512-heartland-streaming.html",
+   "url": "https://il-geniodellostreaming.tattoo/film/35525-snoopy-presenta-natale-con-snoopy-streaming.html",
    "status": 200,
-   "byte": 30564,
-   "secondi": 0.6,
-   "titolo_pagina": "Heartland Streaming HD Gratis - ilGenioDelloStreaming",
+   "byte": 30052,
+   "secondi": 0.2,
+   "titolo_pagina": "Snoopy presenta: Natale con Snoopy Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/03.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/all",
    "status": 200,
-   "byte": 38118,
-   "secondi": 0.6,
+   "byte": 37929,
+   "secondi": 0.7,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/04.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo",
    "status": 200,
-   "byte": 93540,
-   "secondi": 0.6,
+   "byte": 101100,
+   "secondi": 0.7,
    "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/05.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/serie-tv/",
    "status": 200,
-   "byte": 86872,
-   "secondi": 0.6,
+   "byte": 86850,
+   "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/animazione/",
    "status": 200,
-   "byte": 85922,
-   "secondi": 0.6,
+   "byte": 86032,
+   "secondi": 0.2,
    "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
    "file": "pagine/07.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/avventura/",
    "status": 200,
-   "byte": 85141,
-   "secondi": 0.6,
+   "byte": 85616,
+   "secondi": 0.3,
    "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
    "file": "pagine/08.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/all",
    "status": 200,
-   "byte": 38118,
+   "byte": 37929,
    "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/09.html"
@@ -262,31 +246,31 @@
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/0",
    "status": 200,
-   "byte": 38484,
-   "secondi": 0.8,
+   "byte": 38387,
+   "secondi": 0.6,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/10.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/a",
    "status": 200,
-   "byte": 38016,
-   "secondi": 0.6,
+   "byte": 38425,
+   "secondi": 0.8,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/11.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/b",
    "status": 200,
-   "byte": 38520,
-   "secondi": 0.7,
+   "byte": 38423,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/12.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/serie-tv/",
    "status": 200,
-   "byte": 86872,
+   "byte": 86850,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/13.html"
@@ -300,5 +284,5 @@
    "file": "pagine/14.html"
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
+ "verdetto": "ARRIVA AL VIDEO"
 }

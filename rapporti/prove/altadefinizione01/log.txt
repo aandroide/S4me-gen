@@ -6,22 +6,20 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
       peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.best
       genres | •• Generi | https://altadefinizione-01.best
 == lista "Tutti "
-   -> 29 voci
-      check | Heartland  | https://altadefinizione-01.best/35512-heartland-streaming.html
-      check | Being Heumann  | https://altadefinizione-01.best/35510-being-heumann-streaming.html
-      check | Nessuna tregua  | https://altadefinizione-01.best/35509-nessuna-tregua-streaming.html
-      check | Come il giorno e la notte  | https://altadefinizione-01.best/35505-come-il-giorno-e-la-notte-streaming.html
-== check su "Heartland "
+   -> 30 voci
+      check | Snoopy presenta: Natale con Snoopy  | https://altadefinizione-01.best/35525-snoopy-presenta-natale-con-snoopy-streaming.html
+      check | Bagarre  | https://altadefinizione-01.best/35520-bagarre-streaming.html
+      check | Desprotexida: delitto in Galizia  | https://altadefinizione-01.best/35521-desprotexida-delitto-in-galizia-streaming.html
+      check | NAZA  | https://altadefinizione-01.best/35517-naza-streaming.html
+== check su "Snoopy presenta: Natale con Snoopy "
    -> 3 voci
-      play | Heartland  | https://v.vidxgo.co/38213251
-      play | Heartland  | https://vixsrc.to/movie/tt38213251
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35512-heartland-streaming.html
-== risoluzione vidxgo https://v.vidxgo.co/38213251
-   api /t/ 38213251 referer https://v.vidxgo.co/38213251 -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   api /t/ 38213251 referer https://altadefinizione-01.best/ -> 403 <!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--> <!--[if IE 7]>    <html class
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
-== risoluzione vixsrc https://vixsrc.to/movie/tt38213251
+      play | Snoopy presenta: Natale con Snoopy  | https://v.vidxgo.co/47791876
+      play | Snoopy presenta: Natale con Snoopy  | https://vixsrc.to/movie/tt47791876
+      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35525-snoopy-presenta-natale-con-snoopy-streaming.html
+== risoluzione vidxgo https://v.vidxgo.co/47791876
    -> VIDEO OK m3u8 200 
+== risoluzione vixsrc https://vixsrc.to/movie/tt47791876
+   -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
 == voci dichiarate in mainlist (8)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
     menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])
@@ -32,7 +30,7 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
     menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 28 
+   SEZIONE Tutti -> OK 29 
    SEZIONE •• Al Cinema -> OK 30 
    SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 41 
    SEZIONE Azione -> OK 29 

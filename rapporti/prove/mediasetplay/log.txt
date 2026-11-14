@@ -6,7 +6,7 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 132 voci
+   -> 131 voci
       findvideos | Intrigo a Damasco | https://mediasetinfinity.mediaset.it/movie/intrigoadamasco/intrigo-a-damasco_F309311101000102
       findvideos | White Elephant - Codice criminale (di j. v. johnson) - White | https://mediasetinfinity.mediaset.it/movie/whiteelephantcodicecriminaledijvjohnson/white-elephant-co
       findvideos | I mercen4ri - Expendables | https://mediasetinfinity.mediaset.it/movie/imercen4riexpendables/i-mercen4ri-expendables_F3127509010
@@ -26,11 +26,11 @@ KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
    -> 21 voci
+      findvideos | Harry Potter e la camera dei segreti | https://mediasetinfinity.mediaset.it/movie/harrypotterelacameradeisegreti/harry-potter-e-la-camera-d
+      findvideos | Inga Lindstrom - La casa sul lago | https://mediasetinfinity.mediaset.it/movie/ingalindstromlacasasullago/inga-lindstrom-la-casa-sul-lag
       findvideos | Troy | https://mediasetinfinity.mediaset.it/movie/troy/troy_F011462901000102
       findvideos | Lady driver - Veloce come il vento | https://mediasetinfinity.mediaset.it/movie/ladydrivervelocecomeilvento/lady-driver-veloce-come-il-ve
-      findvideos | Amicizia a rischio | https://mediasetinfinity.mediaset.it/movie/amiciziaarischio/amicizia-a-rischio_F309279401000102
-      findvideos | Inga Lindstrom - Un uomo dei sogni in prova | https://mediasetinfinity.mediaset.it/movie/ingalindstromunuomodeisogniinprova/inga-lindstrom-un-uomo
-== findvideos su "Troy"
+== findvideos su "Harry Potter e la camera dei segreti"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -46,9 +46,9 @@ KeyError: 'response'
 == lista "•• Film più visti del giorno"
    -> 21 voci
       findvideos | The place | https://mediasetinfinity.mediaset.it/movie/theplace/the-place_F306383601000101
+      findvideos | Alien: Romulus | https://mediasetinfinity.mediaset.it/movie/alienromulus/alien-romulus_F313319401000102
       findvideos | I mercen4ri - Expendables | https://mediasetinfinity.mediaset.it/movie/imercen4riexpendables/i-mercen4ri-expendables_F3127509010
-      findvideos | Harry Potter e la pietra filosofale | https://mediasetinfinity.mediaset.it/movie/harrypotterelapietrafilosofale/harry-potter-e-la-pietra-f
-      findvideos | Inga Lindstrom - Incanto d'amore - Inga Lindström - Incanto  | https://mediasetinfinity.mediaset.it/movie/ingalindstromincantodamore/inga-lindstrom-incanto-damore_
+      findvideos | Sconosciuto nell'intimo | https://mediasetinfinity.mediaset.it/movie/sconosciutonellintimo/sconosciuto-nellintimo_F30923750100
 == findvideos su "The place"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -90,42 +90,42 @@ Nessuna voce da riprodurre trovata
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 46 
    SEZIONE Replay -> OK 23 
-   SEZIONE •• Tutti i Film -> OK 66 
+   SEZIONE •• Tutti i Film -> OK 67 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
    SEZIONE NCIS - Unità anticrimine 14 -> OK 7 
-   SEZIONE I Simpson -> OK 5 
+   SEZIONE Will & Grace 5 -> OK 1 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Segreti di famiglia 3 -> OK 5 
    SEZIONE Innocence -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
-   SEZIONE Tempesta d'amore -> OK 3 
+   SEZIONE La promessa -> OK 7 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
-   SEZIONE My Sweet Lie -> OK 5 
+   SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
-   SEZIONE Dragon Ball Daima -> OK 10 
-   SEZIONE One Piece 18 -> OK 2 
    SEZIONE Dragon Ball Super -> OK 17 
+   SEZIONE One Piece 18 -> OK 2 
+   SEZIONE Dragon Ball Daima -> OK 8 
    SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
-   SEZIONE I Simpson -> OK 5 
-   SEZIONE Law & Order: Unità speciale 15 -> OK 8 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 7 
+   SEZIONE I Simpson -> OK 6 
+   SEZIONE Law & Order: i due volti della giustizia 24 -> OK 2 
+   SEZIONE Law & Order: Unità speciale 15 -> OK 6 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
-   SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
+   SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE •• Serie Turche -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Giganti - Toni Capuozzo -> OK 3 
    SEZIONE Le Iene 2026/2027 -> OK 6 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
-   SEZIONE Ore 11 -> OK 3 
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
+   SEZIONE Realpolitik 2026/2027 -> OK 2 
    SEZIONE Caduta libera 2026/2027 -> OK 4 
    SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
@@ -133,7 +133,7 @@ Nessuna voce da riprodurre trovata
    SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Lo straordinario mondo di Gumball -> OK 9 
-   SEZIONE Teen Titans Go! -> OK 7 
+   SEZIONE Teen Titans Go! -> OK 10 
    SEZIONE Looney Tunes Cartoons -> OK 5 
    SEZIONE •• Kids Boing -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
@@ -143,13 +143,13 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
-   SEZIONE I pinguini di Madagascar -> OK 2 
+   SEZIONE Pollyanna -> OK 7 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 14 
+   SEZIONE •• Tutti i Documentari -> OK 13 
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Enigmi alieni 10 -> OK 8 
    SEZIONE Parco nazionale di Donana - Eden spagnolo -> OK 2 
-   SEZIONE Fuori le prove! - Indagini ai confini della realtà 3 -> OK 10 
+   SEZIONE Prove sepolte - Le avventure dell'archeologia -> OK 5 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE •• Film Documentari di Focus -> OK 20 
