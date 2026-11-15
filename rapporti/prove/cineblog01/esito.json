@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"Heartland \"",
+   "passo": "findvideos su \"Robin Hood - Il prezzo del sangue \"",
    "esito": "OK",
    "voci": 3
   }
@@ -21,17 +21,17 @@
  "video": [
   {
    "server": "mixdrop",
-   "url": "https://m1xdrop.net/e/8lll9reec8z03d",
+   "url": "https://m1xdrop.net/e/xwwwqp81flo4dme",
    "tipo": "film",
-   "finale": "http://92xseh0ry.mxcontent.net/v2/8lll9reec8z03d.mp4?s=xOninIQoWJ3MVgwxYSOOvw&e=1794680846&_t=1794662933",
+   "finale": "http://q2dgt5pce.mxcontent.net/v2/xwwwqp81flo4dme.mp4?s=fvTpyXDpLQJLtmfofkxn5Q&e=1794769202&_t=1794750002",
    "esito": "VIDEO NON RAGGIUNGIBILE",
    "dettaglio": "HTTP 403"
   },
   {
    "server": "mixdrop",
-   "url": "https://m1xdrop.net/e/gjjjmmklt1q7r1",
+   "url": "https://m1xdrop.net/e/677793xjtjeonw",
    "tipo": "film",
-   "finale": "http://592lvpizh.mxcontent.net/v2/gjjjmmklt1q7r1.mp4?s=3S1DI5FknadhEOxY9kLg2w&e=1794680849&_t=1794660010",
+   "finale": "http://w9iuf7sh.mxcontent.net/v2/677793xjtjeonw.mp4?s=J5zPtMDjrgFv0QD6TDQtQA&e=1794769206&_t=1794755007",
    "esito": "VIDEO NON RAGGIUNGIBILE",
    "dettaglio": "HTTP 403"
   }
@@ -301,29 +301,29 @@
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 540702,
-   "secondi": 1.1,
+   "byte": 541328,
+   "secondi": 0.8,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://cb01one.uno/heartland-hd-2026/",
+   "url": "https://cb01one.uno/robin-hood-il-prezzo-del-sangue-hd-2026/",
    "status": 200,
-   "byte": 309665,
-   "secondi": 1.0,
-   "titolo_pagina": "Heartland [HD] (2026) Streaming - FILM GRATIS by CB01 OFFICIAL",
+   "byte": 320258,
+   "secondi": 0.3,
+   "titolo_pagina": "Robin Hood – Il prezzo del sangue [HD] (2026) Streaming - FILM GRATIS by CB01 OF",
    "file": "pagine/02.html"
   },
   {
    "url": "https://stayonline.pro/ajax/linkView.php",
    "status": 200,
-   "byte": 108,
-   "secondi": 1.2,
+   "byte": 109,
+   "secondi": 1.0,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://m1xdrop.net/f/8lll9reec8z03d",
+   "url": "https://m1xdrop.net/f/xwwwqp81flo4dme",
    "status": 302,
    "byte": 510,
    "secondi": 0.1,
@@ -331,9 +331,9 @@
    "file": "pagine/04.html"
   },
   {
-   "url": "https://m1xdrop.net/e/8lll9reec8z03d",
+   "url": "https://m1xdrop.net/e/xwwwqp81flo4dme",
    "status": 200,
-   "byte": 78464,
+   "byte": 78497,
    "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/05.html"
@@ -342,12 +342,12 @@
    "url": "https://stayonline.pro/ajax/linkView.php",
    "status": 200,
    "byte": 108,
-   "secondi": 1.1,
+   "secondi": 1.2,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://m1xdrop.net/f/gjjjmmklt1q7r1",
+   "url": "https://m1xdrop.net/f/677793xjtjeonw",
    "status": 302,
    "byte": 510,
    "secondi": 0.1,
@@ -355,9 +355,9 @@
    "file": "pagine/07.html"
   },
   {
-   "url": "https://m1xdrop.net/e/gjjjmmklt1q7r1",
+   "url": "https://m1xdrop.net/e/677793xjtjeonw",
    "status": 200,
-   "byte": 78463,
+   "byte": 78496,
    "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/08.html"
@@ -365,7 +365,7 @@
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 540702,
+   "byte": 541328,
    "secondi": 1.0,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/09.html"
@@ -373,7 +373,7 @@
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 540702,
+   "byte": 541328,
    "secondi": 0.7,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/10.html"
@@ -405,8 +405,8 @@
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 540702,
-   "secondi": 0.6,
+   "byte": 541328,
+   "secondi": 0.7,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/14.html"
   },
@@ -422,21 +422,21 @@
    "url": "https://cb01official.uno/category/avventura/",
    "status": 200,
    "byte": 298740,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "Avventura - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/azione/",
    "status": 200,
    "byte": 303885,
-   "secondi": 0.8,
+   "secondi": 0.5,
    "titolo_pagina": "Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 540702,
-   "secondi": 0.6,
+   "byte": 541328,
+   "secondi": 1.1,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
   },
   {
@@ -450,20 +450,20 @@
    "url": "https://cb01official.uno/category/anno-2025/",
    "status": 200,
    "byte": 293453,
-   "secondi": 0.5,
+   "secondi": 0.3,
    "titolo_pagina": "2025 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/anno-2024/",
    "status": 200,
    "byte": 294482,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "2024 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 540702,
+   "byte": 541328,
    "secondi": 0.7,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
   },
@@ -491,7 +491,7 @@
   {
    "url": "https://cb01official.uno/ultimi-100-film-aggiunti/",
    "status": 200,
-   "byte": 326102,
+   "byte": 326348,
    "secondi": 0.5,
    "titolo_pagina": "Ultimi 100 film aggiunti - FILM GRATIS by CB01 OFFICIAL"
   },
@@ -506,28 +506,28 @@
    "url": "https://cb01official.uno/category/nazione/italia/",
    "status": 200,
    "byte": 342745,
-   "secondi": 0.3,
+   "secondi": 0.7,
    "titolo_pagina": "Italia - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/search/avatar",
    "status": 200,
-   "byte": 267498,
-   "secondi": 0.3,
+   "byte": 267464,
+   "secondi": 0.5,
    "titolo_pagina": "Hai cercato avatar - CB01 OFFICIAL - FILM"
   },
   {
    "url": "https://cb01official.uno/serietv/",
    "status": 200,
-   "byte": 351772,
-   "secondi": 0.6,
+   "byte": 349423,
+   "secondi": 0.3,
    "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
   },
   {
    "url": "https://cb01official.uno/serietv/",
    "status": 200,
-   "byte": 351772,
-   "secondi": 0.7,
+   "byte": 349423,
+   "secondi": 0.3,
    "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
   },
   {
@@ -548,14 +548,14 @@
    "url": "https://cb01official.uno/serietv/category/b/",
    "status": 200,
    "byte": 251120,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "B - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/",
    "status": 200,
-   "byte": 351772,
-   "secondi": 0.6,
+   "byte": 349423,
+   "secondi": 0.7,
    "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
   },
   {
@@ -576,14 +576,14 @@
    "url": "https://cb01official.uno/serietv/category/azione/",
    "status": 200,
    "byte": 253067,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "Azione - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/",
    "status": 200,
-   "byte": 351772,
-   "secondi": 0.6,
+   "byte": 349423,
+   "secondi": 0.7,
    "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
   },
   {
@@ -597,28 +597,28 @@
    "url": "https://cb01official.uno/serietv/category/2025/",
    "status": 200,
    "byte": 251804,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "2025 - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/category/2024/",
    "status": 200,
    "byte": 251955,
-   "secondi": 0.6,
+   "secondi": 0.5,
    "titolo_pagina": "2024 - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/ultime-100-serie-tv-aggiunte/",
    "status": 200,
    "byte": 300184,
-   "secondi": 0.6,
+   "secondi": 0.3,
    "titolo_pagina": "ULTIME 100 SERIE-TV AGGIUNTE - SERIE TV GRATIS by CB01 OFFICIAL"
   },
   {
    "url": "https://cb01official.uno/serietv/search/avatar",
    "status": 200,
-   "byte": 222527,
-   "secondi": 0.9,
+   "byte": 222699,
+   "secondi": 0.5,
    "titolo_pagina": "Hai cercato avatar - CB01 OFFICIAL - SERIE-TV"
   },
   {
@@ -632,7 +632,7 @@
    "url": "https://cb01official.uno/category/hd-alta-definizione/documentario-hd/",
    "status": 200,
    "byte": 293630,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "Documentario HD - CB01 OFFICIAL - FILM GRATIS by cb01"
   }
  ],

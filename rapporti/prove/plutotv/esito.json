@@ -18,7 +18,7 @@
    "voce": "Dirette",
    "azione": "live",
    "esito": "OK",
-   "titoli": 465
+   "titoli": 466
   },
   {
    "voce": "Categorie",
@@ -54,51 +54,51 @@
     "titolo senza indirizzo: The Aviator",
     "titolo senza indirizzo: Animal Imitators",
     "titolo senza indirizzo: Gamera 3: Revenge of Iris",
-    "titolo senza indirizzo: Cool World",
-    "titolo senza indirizzo: MST3K: Gamera"
+    "titolo senza indirizzo: Social Animals",
+    "titolo senza indirizzo: Iris"
    ],
    "esito": "OK",
-   "titoli": 35
+   "titoli": 72
   }
  ],
  "sezioni_riepilogo": "3 ok su 3",
  "rete": [
   {
-   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=d0af02bb-27fe-4236-8b4d-be77ee8206c7&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
+   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=d7c6231b-4c62-40ce-8334-231c8e224b15&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
    "status": 200,
-   "byte": 18465,
-   "secondi": 0.7,
+   "byte": 15885,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://api.pluto.tv/v2/channels?start=2026-11-14T12:00:00Z&stop=2026-11-14T16:00:00Z&sid=1a5ca3ba-e016-11f1-8000-002248c245c9&deviceId=d0af02bb-27fe-4236-8b4d-be77ee8206c7",
+   "url": "https://api.pluto.tv/v2/channels?start=2026-11-15T13:00:00Z&stop=2026-11-15T17:00:00Z&sid=d2e27dce-e0e3-11f1-8000-7ced8d7e1a4f&deviceId=d7c6231b-4c62-40ce-8334-231c8e224b15",
    "status": 200,
-   "byte": 8015543,
-   "secondi": 0.9,
+   "byte": 8073537,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.pluto.tv/v2/channels.json?sid=1a5ca3ba-e016-11f1-8000-002248c245c9&deviceId=d0af02bb-27fe-4236-8b4d-be77ee8206c7",
+   "url": "https://api.pluto.tv/v2/channels.json?sid=d2e27dce-e0e3-11f1-8000-7ced8d7e1a4f&deviceId=d7c6231b-4c62-40ce-8334-231c8e224b15",
    "status": 200,
-   "byte": 1152451,
-   "secondi": 0.5,
+   "byte": 1154924,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=1a5ca3ba-e016-11f1-8000-002248c245c9&deviceId=d0af02bb-27fe-4236-8b4d-be77ee8206c7",
+   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=d2e27dce-e0e3-11f1-8000-7ced8d7e1a4f&deviceId=d7c6231b-4c62-40ce-8334-231c8e224b15",
    "status": 200,
-   "byte": 13765090,
-   "secondi": 1.3,
+   "byte": 13753335,
+   "secondi": 1.0,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://service-media-search.clusters.pluto.tv/v1/search?q=avatar&limit=100",
    "status": 200,
-   "byte": 7316,
+   "byte": 17881,
    "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/05.html"

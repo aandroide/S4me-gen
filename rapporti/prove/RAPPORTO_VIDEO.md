@@ -85,7 +85,10 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
+Sito:  | verdetto: SI FERMA A: lista "Most Popular "
+- passo "lista "Most Popular "": VUOTO 
+- passo "lista ""Black Broadway" — Celebrating the Black"": VUOTO 
+- passo "lista "Birthday: Nickelback's Chad Kroeger (11/"": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -155,10 +158,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.hair | verdetto: SI FERMA A: findvideos su "1x01 - La Legge di Goodwin "
-- passo "findvideos su "1x01 - La Legge di Goodwin "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/nmu1259h 
+Sito: https://eurostream.hair | verdetto: SI FERMA A: findvideos su "5x01 - Puntata del 1 settembre "
+- passo "findvideos su "5x01 - Puntata del 1 settembre "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/1wna6pcz 
 - passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty 
-- passo "findvideos su "1x01 - La Legge di Goodwin "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/0awseqcg 
+- passo "findvideos su "1x01 - Ritorno "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/er8yw75c 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -218,9 +221,9 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Serie TV"": VUOTO 
 
 ### mediasetplay
-Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Intrigo a Damasco"
-- passo "findvideos su "Intrigo a Damasco"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Harry Potter e la camera dei segreti"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Transformers - L'ultimo cavaliere"
+- passo "findvideos su "Transformers - L'ultimo cavaliere"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Mr. Beaver"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
@@ -252,9 +255,9 @@ Sito: http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1 | verd
 
 ### streamingita
 Sito: https://streamingita.homes | verdetto: SI FERMA A: lista "Generi"
-- passo "lista "Generi"": VUOTO 
-- passo "lista "Anno"": VUOTO 
-- passo "lista "• Film"": VUOTO 
+- passo "lista "Generi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+- passo "lista "Anno"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+- passo "lista "• Film"": ERRORE line 38, in peliculas     return support.dooplay_peliculas(item, mixed)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ platformcode.logger.WebErrorException 
 
 ### streamtime
 Sito:  | verdetto: SI FERMA A: lista "• Film"

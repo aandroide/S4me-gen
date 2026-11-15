@@ -28,7 +28,7 @@
    "server": "vidxgo",
    "url": "https://v.vidxgo.co/47791876",
    "tipo": "film",
-   "finale": "http://127.0.0.1:45811/hls/47791876/master.m3u8",
+   "finale": "http://127.0.0.1:33787/hls/47791876/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -75,7 +75,7 @@
    "voce": "• Serie TV",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 19
+   "titoli": 5
   },
   {
    "voce": "txt70741 …",
@@ -98,15 +98,15 @@
    "url": "https://tanti-film.rest",
    "status": 200,
    "byte": 16382,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "TantiFilm (2026) - Guarda Film Streaming con Tanti film",
    "file": "pagine/01.html"
   },
   {
    "url": "https://tanti-film.rest/prossimamente/",
    "status": 200,
-   "byte": 70380,
-   "secondi": 0.2,
+   "byte": 70816,
+   "secondi": 0.7,
    "titolo_pagina": "Prossimamente al Cinema",
    "file": "pagine/02.html"
   },
@@ -114,7 +114,7 @@
    "url": "https://tanti-film.rest/guarda/35525-snoopy-presenta-natale-con-snoopy-streaming-streaming-hd.html",
    "status": 200,
    "byte": 30228,
-   "secondi": 0.2,
+   "secondi": 0.5,
    "titolo_pagina": "Snoopy presenta: Natale con Snoopy (2026) streaming | TantiFILM",
    "file": "pagine/03.html"
   },
@@ -137,23 +137,23 @@
   {
    "url": "https://tanti-film.rest/animazione/",
    "status": 200,
-   "byte": 71652,
-   "secondi": 0.3,
+   "byte": 71627,
+   "secondi": 0.7,
    "titolo_pagina": "Animazione guarda Gratis | TantiFILM",
    "file": "pagine/06.html"
   },
   {
    "url": "https://tanti-film.rest/avventura/",
    "status": 200,
-   "byte": 70810,
-   "secondi": 0.2,
+   "byte": 70382,
+   "secondi": 0.7,
    "titolo_pagina": "Avventura guarda Gratis | TantiFILM",
    "file": "pagine/07.html"
   },
   {
    "url": "https://tanti-film.rest/biografico/",
    "status": 200,
-   "byte": 69568,
+   "byte": 69543,
    "secondi": 0.2,
    "titolo_pagina": "Biografico guarda Gratis | TantiFILM",
    "file": "pagine/08.html"
@@ -161,7 +161,7 @@
   {
    "url": "https://tanti-film.rest/film",
    "status": 200,
-   "byte": 87845,
+   "byte": 88199,
    "secondi": 0.4,
    "titolo_pagina": "Guarda Tanti Film Streaming in Italiano | TantiFILM Gratis",
    "file": "pagine/09.html"
@@ -169,8 +169,8 @@
   {
    "url": "https://tanti-film.rest/serie-tv/",
    "status": 200,
-   "byte": 71348,
-   "secondi": 0.2,
+   "byte": 71193,
+   "secondi": 0.5,
    "titolo_pagina": "Serie TV in Streaming Gratis - TantiFILM",
    "file": "pagine/10.html"
   },
@@ -178,14 +178,14 @@
    "url": "https://api.themoviedb.org/3/genre/tv/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
    "byte": 495,
-   "secondi": 0.1,
+   "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt37214564?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt34724686?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 1454,
+   "byte": 655,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/12.html"
@@ -199,17 +199,9 @@
    "file": "pagine/13.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt39390491?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt37884717?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 667,
-   "secondi": 0.1,
-   "titolo_pagina": "",
-   "file": "pagine/14.html"
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt8014982?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 971,
+   "byte": 661,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
@@ -219,20 +211,28 @@
    "byte": 500,
    "secondi": 0.1,
    "titolo_pagina": "",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://api.themoviedb.org/3/find/tt48500521?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 702,
+   "secondi": 0.1,
+   "titolo_pagina": "",
    "file": "pagine/16.html"
   },
   {
    "url": "https://api.themoviedb.org/3/find/tt32375763?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
    "byte": 727,
-   "secondi": 0.2,
+   "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt37884717?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt47791876?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 661,
-   "secondi": 0.2,
+   "byte": 670,
+   "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
@@ -243,30 +243,16 @@
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/336243/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/303182/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 281,
+   "byte": 180,
    "secondi": 0.0,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/338562/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/find/tt44766123?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 948,
-   "secondi": 0.0,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/291507/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
-   "status": 200,
-   "byte": 2141,
-   "secondi": 0.0,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/254630/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
-   "status": 200,
-   "byte": 2405,
+   "byte": 724,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
@@ -278,16 +264,9 @@
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt46066662?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt38213251?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 704,
-   "secondi": 0.0,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/330912/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
-   "status": 200,
-   "byte": 76,
+   "byte": 659,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
@@ -299,164 +278,66 @@
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/337700/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
-   "status": 200,
-   "byte": 182,
-   "secondi": 0.0,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/303182/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
-   "status": 200,
-   "byte": 180,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt35926686?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 978,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt38281194?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 1342,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt38992068?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 800,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt45114341?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 940,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt37762350?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 1111,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt38681812?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 650,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt39325975?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 800,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt43681696?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 728,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/334470/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/330912/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
    "byte": 76,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/338818/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/find/tt15095848?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 26,
+   "byte": 730,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/297491/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/254630/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 284,
+   "byte": 2405,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/312006/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/find/tt34706535?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 334,
-   "secondi": 0.0,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/306179/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
-   "status": 200,
-   "byte": 2346,
+   "byte": 779,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/339697/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/find/tt39370926?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 129,
+   "byte": 659,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/338684/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/find/tt39313557?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 180,
-   "secondi": 0.0,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt49692512?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 884,
-   "secondi": 0.0,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/279246/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
-   "status": 200,
-   "byte": 386,
+   "byte": 657,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/316702/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/find/tt50817930?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 291,
-   "secondi": 0.0,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/find/tt39957390?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 671,
+   "byte": 723,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt46657449?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt35519455?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 103,
+   "byte": 887,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314271/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/find/tt37675123?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 1736,
-   "secondi": 0.0,
+   "byte": 646,
+   "secondi": 0.1,
    "titolo_pagina": ""
   },
   {

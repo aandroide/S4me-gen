@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.hair
       peliculas | • Archivio | https://eurostream.hair/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | FBI | https://eurostream.hair/fbi-4/
-      episodios | Would You Marry Me? | https://eurostream.hair/would-you-marry-me/
-      episodios | South Park | https://eurostream.hair/south-park-48/
-      episodios | Chicago P.D. | https://eurostream.hair/chicago-pd-73/
-== episodios su "FBI"
-   -> 298 voci
-      findvideos | 1x01 - La Legge di Goodwin  | https://eurostream.hair/fbi-4/
-      findvideos | 1x02 - Martiri  | https://eurostream.hair/fbi-4/
-      findvideos | 1x03 - La Preda  | https://eurostream.hair/fbi-4/
-      findvideos | 1x04 - Il Cecchino  | https://eurostream.hair/fbi-4/
-== findvideos su "1x01 - La Legge di Goodwin "
+      episodios | Bake Off Italia | https://eurostream.hair/bake-off-italia/
+      episodios | Scrubs | https://eurostream.hair/scrubs-2026/
+      episodios | Law & Order - Unita Vittime Speciali | https://eurostream.hair/law-and-order-unita-vittime-speciali-30/
+      episodios | S.W.A.T. Exiles | https://eurostream.hair/s-w-t-exiles/
+== episodios su "Bake Off Italia"
+   -> 148 voci
+      findvideos | 5x01 - Puntata del 1 settembre  | https://eurostream.hair/bake-off-italia/
+      findvideos | 5x02 - Puntata del 8 settembre  | https://eurostream.hair/bake-off-italia/
+      findvideos | 5x03 - Puntata del 15 settembre  | https://eurostream.hair/bake-off-italia/
+      findvideos | 5x04 - Puntata del 22 settembre  | https://eurostream.hair/bake-off-italia/
+== findvideos su "5x01 - Puntata del 1 settembre "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/nmu1259h
+Exception: Not un-shortened link: https://clicka.cc/tv/1wna6pcz
 
 == lista "• Anime"
    -> 19 voci
@@ -69,17 +69,17 @@ Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 9x06 - FBI - Ultimatum  | https://eurostream.hair/fbi-4/
-      episodios | 1x01 - Would You Marry Me? - Episodio 01 , 1x12 Episodio 12 | https://eurostream.hair/would-you-marry-me/
-      episodios | 14x06 - Chicago P.D. - The Thin Grey Line  | https://eurostream.hair/chicago-pd-73/
-      episodios | 4x157 - Forbidden Fruit - Episodio 157 | https://eurostream.hair/forbidden-fruit/
-== episodios su "9x06 - FBI - Ultimatum "
-   -> 298 voci
-      findvideos | 1x01 - La Legge di Goodwin  | https://eurostream.hair/fbi-4/
-      findvideos | 1x02 - Martiri  | https://eurostream.hair/fbi-4/
-      findvideos | 1x03 - La Preda  | https://eurostream.hair/fbi-4/
-      findvideos | 1x04 - Il Cecchino  | https://eurostream.hair/fbi-4/
-== findvideos su "1x01 - La Legge di Goodwin "
+      episodios | 2x08 - Scrubs (2026) - My Emergency  | https://eurostream.hair/scrubs-2026/
+      episodios | 28x06 - Law & Order - Unita Vittime Speciali - Obedience  | https://eurostream.hair/law-and-order-unita-vittime-speciali-30/
+      episodios | 1x08 - S.W.A.T. Exiles - The Vault  | https://eurostream.hair/s-w-t-exiles/
+      episodios | 1x01 - 12 12 12 - Svaligio case la vigilia di Natale, mentre | https://eurostream.hair/12-12-12/
+== episodios su "2x08 - Scrubs (2026) - My Emergency "
+   -> 29 voci
+      findvideos | 1x01 - Ritorno  | https://eurostream.hair/scrubs-2026/
+      findvideos | 1x02 - Il mio secondo primo giorno  | https://eurostream.hair/scrubs-2026/
+      findvideos | 1x03 - La mia commedia romantica  | https://eurostream.hair/scrubs-2026/
+      findvideos | 1x04 - La mia faccia da poker  | https://eurostream.hair/scrubs-2026/
+== findvideos su "1x01 - Ritorno "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/tv/0awseqcg
+Exception: Not un-shortened link: https://clicka.cc/mix/er8yw75c
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -110,4 +110,4 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - La Legge di Goodwin "
+VERDETTO: SI FERMA A: findvideos su "5x01 - Puntata del 1 settembre "

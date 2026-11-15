@@ -13,9 +13,9 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"L'ultimo piatto\"",
+   "passo": "episodios su \"The Serial Killer Connection\"",
    "esito": "OK",
-   "voci": 12
+   "voci": 3
   },
   {
    "passo": "findvideos su \"1x01 - Episodio 1\"",
@@ -26,9 +26,9 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/49692512/1/1",
+   "url": "https://v.vidxgo.co/46066662/1/1",
    "tipo": "film",
-   "finale": "http://127.0.0.1:37731/hls/tv/49692512/1/1/master.m3u8",
+   "finale": "http://127.0.0.1:42017/hls/tv/46066662/1/1/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -89,79 +89,79 @@
   {
    "url": "https://guardaseriex.work/serietv-streaming",
    "status": 200,
-   "byte": 100799,
+   "byte": 100655,
    "secondi": 0.9,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.work/dramma/5877-l-ultimo-piatto-streaming.html",
+   "url": "https://guardaseriex.work/crime/5890-the-serial-killer-connection-streaming.html",
    "status": 200,
-   "byte": 65122,
+   "byte": 64619,
    "secondi": 0.7,
-   "titolo_pagina": "L'ultimo piatto streaming - Guardaserie",
+   "titolo_pagina": "The Serial Killer Connection streaming - Guardaserie",
    "file": "pagine/02.html"
   },
   {
    "url": "https://api.themoviedb.org/3/genre/tv/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
    "byte": 495,
-   "secondi": 0.1,
+   "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt49692512?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt46066662?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 884,
+   "byte": 704,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/316702/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/337700/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 291,
+   "byte": 182,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/316702?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
+   "url": "https://api.themoviedb.org/3/tv/337700?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
    "status": 200,
-   "byte": 10585,
+   "byte": 4074,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/316702/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/337700/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 291,
-   "secondi": 0.1,
+   "byte": 182,
+   "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/316702?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/337700?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 2580,
+   "byte": 1970,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/316702/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/337700/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 4560,
+   "byte": 1313,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/316702/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
+   "url": "https://api.themoviedb.org/3/tv/337700/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
    "status": 200,
-   "byte": 8135,
+   "byte": 2647,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/10.html"
@@ -169,31 +169,31 @@
   {
    "url": "https://guardaseriex.work/serietv-streaming",
    "status": 200,
-   "byte": 100799,
-   "secondi": 0.9,
+   "byte": 100655,
+   "secondi": 0.8,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/11.html"
   },
   {
    "url": "https://guardaseriex.work/serietv-popolari/",
    "status": 200,
-   "byte": 404787,
-   "secondi": 0.5,
+   "byte": 404807,
+   "secondi": 1.0,
    "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
    "file": "pagine/12.html"
   },
   {
    "url": "https://guardaseriex.work/serietv-streaming",
    "status": 200,
-   "byte": 100799,
-   "secondi": 0.5,
+   "byte": 100655,
+   "secondi": 0.8,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/13.html"
   },
   {
    "url": "https://guardaseriex.work/biografico/",
    "status": 200,
-   "byte": 221705,
+   "byte": 221748,
    "secondi": 0.4,
    "titolo_pagina": "Biografico streaming | Guardaserie",
    "file": "pagine/14.html"
@@ -201,7 +201,7 @@
   {
    "url": "https://guardaseriex.work/commedia/",
    "status": 200,
-   "byte": 2271085,
+   "byte": 2271141,
    "secondi": 0.9,
    "titolo_pagina": "Commedia streaming | Guardaserie",
    "file": "pagine/15.html"
@@ -209,14 +209,14 @@
   {
    "url": "https://guardaseriex.work/crime/",
    "status": 200,
-   "byte": 1265361,
+   "byte": 1265382,
    "secondi": 0.7,
    "titolo_pagina": "Crime streaming | Guardaserie"
   },
   {
    "url": "https://guardaseriex.work/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 38253,
+   "byte": 38273,
    "secondi": 0.7,
    "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS"
   }
