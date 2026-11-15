@@ -50,6 +50,13 @@ Sito: http://cinestore.cinetecadibologna.it
 
 ## ROTTO (6)
 
+### accuradio
+Sito: https://www.accuradio.com
+- indirizzo scritto nel canale: https://www.accuradio.com
+- ROTTO: peliculas / | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/accuradio/pagina_peliculas_home.html
+-   nessuna regex sostitutiva trovata automaticamente in /
+
 ### cineblog001
 Sito: https://cineblog001.tires
 - ROTTO: peliculas /film/ | patron non trova titoli
@@ -120,10 +127,6 @@ Sito: https://il-geniodellostreaming.tattoo
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
 -   non applicata al file: la funzione ha piu varianti di regex
 
-### thepiratebay
-Sito: https://apibay.org
-- PROBLEMA: https://apibay.org/q.php?q=matrix | il tipo di risposta e cambiato da html a json
-
 ## DOMINIO PARCHEGGIATO (3)
 
 ### animealtadefinizione
@@ -136,16 +139,16 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27259 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27250 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5654 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5670 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5663 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (11)
 
@@ -171,7 +174,7 @@ Sito: https://dinostreaming.it
 
 ### filmpertutti
 Sito: https://filmpertuttiiii.nuovo.live
-- findhost non ha dato un indirizzo partendo da https://filmpertuttiiii.nuovo.live: errore del certificato HTTPS
+- findhost non ha dato un indirizzo partendo da https://filmpertuttiiii.nuovo.live: findhost non restituisce un indirizzo (pagina cambiata?)
 
 ### filmstreaming
 Sito: https://film-streaming-ita.cam
@@ -214,8 +217,6 @@ Sito: https://www.mtv.com
 
 ### streamingita
 Sito: https://streamingita.homes
-- il sito reindirizza a un altro indirizzo: https://ww17.streamingita.homes (in channels.json c'e https://streamingita.homes)
-- riga per channels.json: "streamingita": "https://ww17.streamingita.homes",
 
 ### vixsrc
 Sito: https://vixsrc.to
@@ -230,17 +231,12 @@ Sito: https://1337x.to
 - OK: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | 14 risultati
 - OK: peliculas /movie-library/1/ | 25 risultati
 
-### accuradio
-Sito: https://www.accuradio.com
-- indirizzo scritto nel canale: https://www.accuradio.com
-- OK: peliculas / | 48 risultati
-
 ### altadefinizione01
 Sito: https://altadefinizione-01.best
-- OK: peliculas /lastnews/ | 99 risultati
-- OK: peliculas /cinema/ | 101 risultati
-- OK: peliculas /sub-ita/ | 101 risultati
-- OK: peliculas /serie-tv/ | 101 risultati
+- OK: peliculas /lastnews/ | 102 risultati
+- OK: peliculas /cinema/ | 102 risultati
+- OK: peliculas /sub-ita/ | 102 risultati
+- OK: peliculas /serie-tv/ | 102 risultati
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.fit
@@ -258,7 +254,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 79 risultati
+- OK: peliculas /updated | 78 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -279,7 +275,7 @@ Sito: https://www.discoveryplus.com
 Sito: https://eurostream.hair
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.hair/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 93 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 94 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
 
@@ -351,6 +347,10 @@ Sito: https://streamingcommunityz.nexus
 - OK: Ricerca | 60 titoli in props.titles
 - OK: Generi | 20 titoli in props.genres
 - OK: serie di esempio /it/titles/66576-silent-night | 1 stagioni, 1 episodi nella prima
+
+### thepiratebay
+Sito: https://apibay.org
+- OK: https://apibay.org/q.php?q=matrix | json, struttura invariata
 
 ### toonitalia
 Sito: https://toonitalia.xyz
