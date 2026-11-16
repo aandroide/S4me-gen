@@ -36,10 +36,10 @@
   "canale": "altadefinizione01",
   "stato": "OK",
   "dettagli": [
-   "OK: peliculas /lastnews/ | 102 risultati",
-   "OK: peliculas /cinema/ | 102 risultati",
-   "OK: peliculas /sub-ita/ | 102 risultati",
-   "OK: peliculas /serie-tv/ | 102 risultati"
+   "OK: peliculas /lastnews/ | 99 risultati",
+   "OK: peliculas /cinema/ | 101 risultati",
+   "OK: peliculas /sub-ita/ | 101 risultati",
+   "OK: peliculas /serie-tv/ | 101 risultati"
   ],
   "correzione": false,
   "host": "https://altadefinizione-01.best"
@@ -48,11 +48,14 @@
   "canale": "altadefinizioneclick",
   "stato": "OK",
   "dettagli": [
+   "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
+   "il sito reindirizza a un altro indirizzo: https://altadefinizionex.ink (in channels.json c'e https://altadefinizionex.fit)",
    "OK: peliculas /film/ | 30 risultati",
    "OK: peliculas /serie-tv/ | 30 risultati"
   ],
   "correzione": false,
-  "host": "https://altadefinizionex.fit"
+  "host": "https://altadefinizionex.fit",
+  "nuovo_host": "https://altadefinizionex.ink"
  },
  {
   "canale": "altadefinizionecommunity",
@@ -274,7 +277,7 @@
    "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5634 byte): non e un cambio di struttura",
    "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5642 byte): non e un cambio di struttura",
    "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5662 byte): non e un cambio di struttura",
-   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5655 byte): non e un cambio di struttura"
+   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5651 byte): non e un cambio di struttura"
   ],
   "correzione": false,
   "host": "https://cinemalibero.cafe"
@@ -351,19 +354,19 @@
   "dettagli": [
    "ROTTO: peliculas /search?typeY=tv | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_tv.html",
-   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
+   "  regex proposta: 244 titoli su 223 card | gruppi persi: episode, year",
    "  non applicata al file: la funzione ha piu varianti di regex",
    "ROTTO: peliculas /search?typeY=movie | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_movie.html",
-   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
+   "  regex proposta: 244 titoli su 223 card | gruppi persi: episode, year",
    "  non applicata al file: la funzione ha piu varianti di regex",
    "ROTTO: peliculas /search?typeY=oav | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_oav.html",
-   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
+   "  regex proposta: 244 titoli su 223 card | gruppi persi: episode, year",
    "  non applicata al file: la funzione ha piu varianti di regex",
    "ROTTO: peliculas /search?typeY=spinoff | patronBlock non trova nessun blocco",
    "  campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_spinoff.html",
-   "  regex proposta: 237 titoli su 216 card | gruppi persi: episode, year",
+   "  regex proposta: 244 titoli su 223 card | gruppi persi: episode, year",
    "  non applicata al file: la funzione ha piu varianti di regex"
   ],
   "correzione": false,
@@ -375,22 +378,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/blue-box-2-ita.5snfL/K01qDITJyw",
-      "thumb": "https://img.animeworld.ac/locandine/3Jh2F.jpg",
-      "title": "Blue Box 2",
+      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/TJO7BEWIcX",
+      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
+      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?",
+      "lang": null
+     },
+     {
+      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/gXBemP2DnQ",
+      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
+      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
+      "lang": null
+     },
+     {
+      "url": "/play/kuroko-no-basket-movie-3-winter-cup-tobira-no-mukou-ita.HC9WW/drfaF2",
+      "thumb": "https://img.animeworld.ac/locandine/HC9WW.jpg",
+      "title": "Kuroko no Basket Movie 3: Winter Cup - Tobira no Mukou",
       "lang": "ITA"
-     },
-     {
-      "url": "/play/blue-box-2.3Jh2F/CjsnPDg3XG",
-      "thumb": "https://img.animeworld.ac/locandine/3Jh2F.jpg",
-      "title": "Blue Box 2",
-      "lang": null
-     },
-     {
-      "url": "/play/mission-yozakura-family-2-part-2.tiNG2/DdzJY87SBz",
-      "thumb": "https://img.animeworld.ac/locandine/tiNG2.jpg",
-      "title": "Mission: Yozakura Family 2 Part 2",
-      "lang": null
      }
     ],
     "perse": [
@@ -404,22 +407,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/blue-box-2-ita.5snfL/K01qDITJyw",
-      "thumb": "https://img.animeworld.ac/locandine/3Jh2F.jpg",
-      "title": "Blue Box 2",
+      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/TJO7BEWIcX",
+      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
+      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?",
+      "lang": null
+     },
+     {
+      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/gXBemP2DnQ",
+      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
+      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
+      "lang": null
+     },
+     {
+      "url": "/play/kuroko-no-basket-movie-3-winter-cup-tobira-no-mukou-ita.HC9WW/drfaF2",
+      "thumb": "https://img.animeworld.ac/locandine/HC9WW.jpg",
+      "title": "Kuroko no Basket Movie 3: Winter Cup - Tobira no Mukou",
       "lang": "ITA"
-     },
-     {
-      "url": "/play/blue-box-2.3Jh2F/CjsnPDg3XG",
-      "thumb": "https://img.animeworld.ac/locandine/3Jh2F.jpg",
-      "title": "Blue Box 2",
-      "lang": null
-     },
-     {
-      "url": "/play/mission-yozakura-family-2-part-2.tiNG2/DdzJY87SBz",
-      "thumb": "https://img.animeworld.ac/locandine/tiNG2.jpg",
-      "title": "Mission: Yozakura Family 2 Part 2",
-      "lang": null
      }
     ],
     "perse": [
@@ -433,22 +436,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/blue-box-2-ita.5snfL/K01qDITJyw",
-      "thumb": "https://img.animeworld.ac/locandine/3Jh2F.jpg",
-      "title": "Blue Box 2",
+      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/TJO7BEWIcX",
+      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
+      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?",
+      "lang": null
+     },
+     {
+      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/gXBemP2DnQ",
+      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
+      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
+      "lang": null
+     },
+     {
+      "url": "/play/kuroko-no-basket-movie-3-winter-cup-tobira-no-mukou-ita.HC9WW/drfaF2",
+      "thumb": "https://img.animeworld.ac/locandine/HC9WW.jpg",
+      "title": "Kuroko no Basket Movie 3: Winter Cup - Tobira no Mukou",
       "lang": "ITA"
-     },
-     {
-      "url": "/play/blue-box-2.3Jh2F/CjsnPDg3XG",
-      "thumb": "https://img.animeworld.ac/locandine/3Jh2F.jpg",
-      "title": "Blue Box 2",
-      "lang": null
-     },
-     {
-      "url": "/play/mission-yozakura-family-2-part-2.tiNG2/DdzJY87SBz",
-      "thumb": "https://img.animeworld.ac/locandine/tiNG2.jpg",
-      "title": "Mission: Yozakura Family 2 Part 2",
-      "lang": null
      }
     ],
     "perse": [
@@ -462,22 +465,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/blue-box-2-ita.5snfL/K01qDITJyw",
-      "thumb": "https://img.animeworld.ac/locandine/3Jh2F.jpg",
-      "title": "Blue Box 2",
+      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/TJO7BEWIcX",
+      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
+      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?",
+      "lang": null
+     },
+     {
+      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/gXBemP2DnQ",
+      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
+      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
+      "lang": null
+     },
+     {
+      "url": "/play/kuroko-no-basket-movie-3-winter-cup-tobira-no-mukou-ita.HC9WW/drfaF2",
+      "thumb": "https://img.animeworld.ac/locandine/HC9WW.jpg",
+      "title": "Kuroko no Basket Movie 3: Winter Cup - Tobira no Mukou",
       "lang": "ITA"
-     },
-     {
-      "url": "/play/blue-box-2.3Jh2F/CjsnPDg3XG",
-      "thumb": "https://img.animeworld.ac/locandine/3Jh2F.jpg",
-      "title": "Blue Box 2",
-      "lang": null
-     },
-     {
-      "url": "/play/mission-yozakura-family-2-part-2.tiNG2/DdzJY87SBz",
-      "thumb": "https://img.animeworld.ac/locandine/tiNG2.jpg",
-      "title": "Mission: Yozakura Family 2 Part 2",
-      "lang": null
      }
     ],
     "perse": [
@@ -493,7 +496,7 @@
   "dettagli": [
    "OK: peliculas /category/anime-cartoni-animati/ | 18 risultati",
    "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.hair/?p=23012, controllo quella",
-   "OK: peliculas /aggiornamento-episodi-nuovi/ | 94 risultati",
+   "OK: peliculas /aggiornamento-episodi-nuovi/ | 96 risultati",
    "attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
    "OK: peliculas /category/serie-tv-archive/ | 18 risultati"
   ],
@@ -524,13 +527,6 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.work/animazione/3489-craig-of-the-creek.html",
-      "thumb": "/uploads/immagini/tt7713450.webp",
-      "year": "2018",
-      "title": "Craig",
-      "lang": null
-     },
-     {
       "url": "https://guardaseriex.work/animazione/5895-karin-piccola-dea-streaming.html",
       "thumb": "/uploads/immagini/tt2109422.webp",
       "year": "2007",
@@ -542,6 +538,13 @@
       "thumb": "/uploads/immagini/tt2580046.webp",
       "year": "2015",
       "title": "Miraculous - Le storie di Ladybug e Chat Noir",
+      "lang": null
+     },
+     {
+      "url": "https://guardaseriex.work/animazione/3621-bluey.html",
+      "thumb": "/uploads/immagini/tt7678620.webp",
+      "year": "2018",
+      "title": "Bluey",
       "lang": null
      }
     ],
@@ -588,24 +591,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.work/dramma/5891-livatino-il-giudice-e-i-suoi-assassini-streaming.html",
-      "thumb": "/uploads/immagini/tt38281194.webp",
+      "url": "https://guardaseriex.work/documentario/5875-fear-of-missing-out-streaming.html",
+      "thumb": "/uploads/immagini/tt46657449.webp",
       "year": "2026",
-      "title": "Livatino - Il giudice e i suoi assassini",
+      "title": "FOMO - Fear Of Missing Out",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/crime/5890-the-serial-killer-connection-streaming.html",
-      "thumb": "/uploads/immagini/tt46066662.webp",
+      "url": "https://guardaseriex.work/documentario/5864-la-caduta-di-el-mayo-streaming.html",
+      "thumb": "/uploads/immagini/tt49250618.webp",
       "year": "2026",
-      "title": "The Serial Killer Connection",
+      "title": "La caduta di El Mayo",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/commedia/4373-wild-cards-streaming.html",
-      "thumb": "/uploads/immagini/tt29780951.webp",
-      "year": "2024",
-      "title": "Wild Cards",
+      "url": "https://guardaseriex.work/crime/1273-power-book-iii-raising-kanan.html",
+      "thumb": "/uploads/immagini/tt11761176.webp",
+      "year": "2021",
+      "title": "Power Book III: Raising Kanan",
       "lang": null
      }
     ],
@@ -645,24 +648,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.work/crime/5890-the-serial-killer-connection-streaming.html",
-      "thumb": "/uploads/immagini/tt46066662.webp",
+      "url": "https://guardaseriex.work/documentario/5875-fear-of-missing-out-streaming.html",
+      "thumb": "/uploads/immagini/tt46657449.webp",
       "year": "2026",
-      "title": "The Serial Killer Connection",
+      "title": "FOMO - Fear Of Missing Out",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/commedia/4373-wild-cards-streaming.html",
-      "thumb": "/uploads/immagini/tt29780951.webp",
-      "year": "2024",
-      "title": "Wild Cards",
+      "url": "https://guardaseriex.work/documentario/5864-la-caduta-di-el-mayo-streaming.html",
+      "thumb": "/uploads/immagini/tt49250618.webp",
+      "year": "2026",
+      "title": "La caduta di El Mayo",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.work/animazione/3489-craig-of-the-creek.html",
-      "thumb": "/uploads/immagini/tt7713450.webp",
-      "year": "2018",
-      "title": "Craig",
+      "url": "https://guardaseriex.work/crime/1273-power-book-iii-raising-kanan.html",
+      "thumb": "/uploads/immagini/tt11761176.webp",
+      "year": "2021",
+      "title": "Power Book III: Raising Kanan",
       "lang": null
      }
     ],
@@ -720,7 +723,7 @@
   "canale": "ilgeniodellostreaming_cam",
   "stato": "ROTTO",
   "dettagli": [
-   "OK: peliculas /catalog/all | 18 risultati",
+   "OK: peliculas /catalog/all | 16 risultati",
    "ROTTO: peliculas /serie-tv/ | patron non trova titoli",
    "  campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html",
    "  regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating",
@@ -735,23 +738,23 @@
     "patron": "<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<h3[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?",
     "esempi": [
      {
-      "url": "https://il-geniodellostreaming.tattoo/film/35513-delitto-in-galizia-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt38707741.jpg",
-      "title": "Delitto in Galizia",
+      "url": "https://il-geniodellostreaming.tattoo/film/35544-177-giorni-il-rapimento-di-farouk-streaming.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt38354557.jpg",
+      "title": "177 Giorni. Il rapimento di Farouk",
       "lang": null,
       "year": "2026"
      },
      {
-      "url": "https://il-geniodellostreaming.tattoo/film/35511-12-12-12-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt32375763.jpg",
-      "title": "12 12 12",
+      "url": "https://il-geniodellostreaming.tattoo/film/35539-la-vita-segreta-delle-mogli-mormoni-orange-county-streaming.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt42006761.jpg",
+      "title": "La vita segreta delle mogli Mormoni: Orange County",
       "lang": null,
       "year": "2026"
      },
      {
-      "url": "https://il-geniodellostreaming.tattoo/film/35508-the-early-spring-streaming.html",
-      "thumb": "/uploads/thumb/203x293-0-70/2026-08/tt37884717.jpg",
-      "title": "The Early Spring",
+      "url": "https://il-geniodellostreaming.tattoo/film/35540-cunk-on-cinema-streaming.html",
+      "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt47021035.jpg",
+      "title": "Cunk on Cinema",
       "lang": null,
       "year": "2026"
      }
@@ -908,7 +911,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27250 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27403 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -977,7 +980,7 @@
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
    "OK: peliculas /category/anime | 400 risultati",
-   "OK: peliculas /anime-ita | 2782 risultati",
+   "OK: peliculas /anime-ita | 2784 risultati",
    "attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
    "OK: peliculas /contatti | 826 risultati",
    "attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)"

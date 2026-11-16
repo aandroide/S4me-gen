@@ -76,19 +76,19 @@ Sito: https://cineblog001.tires
 Sito: https://www.animeworld.ac
 - ROTTO: peliculas /search?typeY=tv | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_tv.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
+-   regex proposta: 244 titoli su 223 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=movie | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_movie.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
+-   regex proposta: 244 titoli su 223 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=oav | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_oav.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
+-   regex proposta: 244 titoli su 223 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=spinoff | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_spinoff.html
--   regex proposta: 237 titoli su 216 card | gruppi persi: episode, year
+-   regex proposta: 244 titoli su 223 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 
 ### eurostreaming_actor
@@ -121,7 +121,7 @@ Sito: https://ilcorsaronero.link
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.tattoo
-- OK: peliculas /catalog/all | 18 risultati
+- OK: peliculas /catalog/all | 16 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
@@ -139,7 +139,7 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27250 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27403 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
@@ -148,7 +148,7 @@ Sito: https://cinemalibero.cafe
 - peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
 - peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
 - peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5651 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (11)
 
@@ -233,15 +233,18 @@ Sito: https://1337x.to
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best
-- OK: peliculas /lastnews/ | 102 risultati
-- OK: peliculas /cinema/ | 102 risultati
-- OK: peliculas /sub-ita/ | 102 risultati
-- OK: peliculas /serie-tv/ | 102 risultati
+- OK: peliculas /lastnews/ | 99 risultati
+- OK: peliculas /cinema/ | 101 risultati
+- OK: peliculas /sub-ita/ | 101 risultati
+- OK: peliculas /serie-tv/ | 101 risultati
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.fit
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- il sito reindirizza a un altro indirizzo: https://altadefinizionex.ink (in channels.json c'e https://altadefinizionex.fit)
 - OK: peliculas /film/ | 30 risultati
 - OK: peliculas /serie-tv/ | 30 risultati
+- riga per channels.json: "altadefinizioneclick": "https://altadefinizionex.ink",
 
 ### animesaturn
 Sito: https://www.animesaturn.net
@@ -275,7 +278,7 @@ Sito: https://www.discoveryplus.com
 Sito: https://eurostream.hair
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.hair/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 94 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 96 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
 
@@ -356,7 +359,7 @@ Sito: https://apibay.org
 Sito: https://toonitalia.xyz
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
 - OK: peliculas /category/anime | 400 risultati
-- OK: peliculas /anime-ita | 2782 risultati
+- OK: peliculas /anime-ita | 2784 risultati
 - attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /contatti | 826 risultati
 - attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
