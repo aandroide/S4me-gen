@@ -6,11 +6,11 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 131 voci
+   -> 136 voci
       findvideos | Transformers - L'ultimo cavaliere | https://mediasetinfinity.mediaset.it/movie/transformerslultimocavaliere/transformers-lultimo-cavalie
-      findvideos | Prey - La grande caccia (di m.m. dewil) - Prey - La grande c | https://mediasetinfinity.mediaset.it/movie/preylagrandecacciadimmdewil/prey-la-grande-caccia_F313164
-      findvideos | Intrigo a Damasco | https://mediasetinfinity.mediaset.it/movie/intrigoadamasco/intrigo-a-damasco_F309311101000102
-      findvideos | White Elephant - Codice criminale (di j. v. johnson) - White | https://mediasetinfinity.mediaset.it/movie/whiteelephantcodicecriminaledijvjohnson/white-elephant-co
+      findvideos | Greenland | https://mediasetinfinity.mediaset.it/movie/greenland/greenland_F310510901000102
+      findvideos | Indiana Jones e il regno del teschio di cristallo | https://mediasetinfinity.mediaset.it/movie/indianajoneseilregnodelteschiodicristallo/indiana-jones-e
+      findvideos | Spy Game | https://mediasetinfinity.mediaset.it/movie/spygame/spy-game_F011035001000102
 == findvideos su "Transformers - L'ultimo cavaliere"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 20 voci
-      findvideos | Mr. Beaver | https://mediasetinfinity.mediaset.it/movie/mrbeaver/mr-beaver_F303488301000102
-      findvideos | La pasion turca | https://mediasetinfinity.mediaset.it/movie/lapasionturca/la-pasion-turca_F010351701000101
-      findvideos | The forger  - Il falsario | https://mediasetinfinity.mediaset.it/movie/theforgerilfalsario/the-forger-il-falsario_F3057422010001
-      findvideos | Transformers - L'ultimo cavaliere | https://mediasetinfinity.mediaset.it/movie/transformerslultimocavaliere/transformers-lultimo-cavalie
-== findvideos su "Mr. Beaver"
+   -> 21 voci
+      findvideos | Midnight special - Fuga nella notte | https://mediasetinfinity.mediaset.it/movie/midnightspecialfuganellanotte/midnight-special-fuga-nella
+      findvideos | All I want for Christmas - Il regalo più bello | https://mediasetinfinity.mediaset.it/movie/alliwantforchristmasilregalopiubello/all-i-want-for-chris
+      findvideos | Maigret e la ragazza scomparsa | https://mediasetinfinity.mediaset.it/movie/maigretelaragazzascomparsa/maigret-e-la-ragazza-scomparsa
+      findvideos | Indiana Jones e il regno del teschio di cristallo | https://mediasetinfinity.mediaset.it/movie/indianajoneseilregnodelteschiodicristallo/indiana-jones-e
+== findvideos su "Midnight special - Fuga nella notte"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -45,11 +45,11 @@ KeyError: 'response'
 
 == lista "•• Film più visti del giorno"
    -> 21 voci
+      findvideos | Harry Potter e la camera dei segreti | https://mediasetinfinity.mediaset.it/movie/harrypotterelacameradeisegreti/harry-potter-e-la-camera-d
       findvideos | The place | https://mediasetinfinity.mediaset.it/movie/theplace/the-place_F306383601000101
       findvideos | Troy | https://mediasetinfinity.mediaset.it/movie/troy/troy_F011462901000102
       findvideos | Alien: Romulus | https://mediasetinfinity.mediaset.it/movie/alienromulus/alien-romulus_F313319401000102
-      findvideos | Inga Lindstrom - Un uomo dei sogni in prova | https://mediasetinfinity.mediaset.it/movie/ingalindstromunuomodeisogniinprova/inga-lindstrom-un-uomo
-== findvideos su "The place"
+== findvideos su "Harry Potter e la camera dei segreti"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -90,44 +90,44 @@ Nessuna voce da riprodurre trovata
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 48 
    SEZIONE Replay -> OK 24 
-   SEZIONE •• Tutti i Film -> OK 68 
+   SEZIONE •• Tutti i Film -> OK 67 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
    SEZIONE NCIS - Unità anticrimine 14 -> OK 7 
-   SEZIONE Will & Grace 5 -> OK 3 
+   SEZIONE Law & Order: Unità speciale 15 -> OK 8 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Segreti di famiglia 3 -> OK 5 
    SEZIONE Innocence -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
-   SEZIONE La promessa -> OK 7 
-   SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE Beautiful -> OK 6 
+   SEZIONE Tempesta d'amore -> OK 3 
+   SEZIONE Racconto di una notte -> OK 4 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
    SEZIONE •• Animazione Made in Japan -> OK 1 
-   SEZIONE I Simpson -> OK 7 
+   SEZIONE I Simpson -> OK 5 
    SEZIONE NCIS - Unità anticrimine 14 -> OK 7 
-   SEZIONE Law & Order: Unità speciale 15 -> OK 6 
+   SEZIONE Law & Order: i due volti della giustizia 24 -> OK 2 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
-   SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Forbidden Fruit 4 -> OK 4 
+   SEZIONE Love is in the air -> OK 7 
    SEZIONE •• Serie Turche -> SOTTOMENU  
-   SEZIONE Tu Si Que Vales 2026 -> OK 6 
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
-   SEZIONE Le Iene 2026/2027 -> OK 6 
+   SEZIONE Le Iene presentano: Inside Autunno 2026 -> OK 2 
+   SEZIONE Tu Si Que Vales 2026 -> OK 6 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
+   SEZIONE Ore 11 -> OK 3 
+   SEZIONE Giganti - Toni Capuozzo -> OK 3 
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
-   SEZIONE Caduta libera 2026/2027 -> OK 4 
-   SEZIONE Verissimo 2026/2027 -> OK 7 
    SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
+   SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Tu Si Que Vales 2026 -> OK 6 
    SEZIONE Amici 26 -> OK 10 
-   SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Teen Titans Go! -> OK 10 
    SEZIONE Lo straordinario mondo di Gumball -> OK 9 
@@ -140,13 +140,13 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
-   SEZIONE Pollyanna -> OK 7 
+   SEZIONE Pollyanna -> OK 10 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 13 
+   SEZIONE •• Tutti i Documentari -> OK 12 
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Enigmi alieni 10 -> OK 8 
-   SEZIONE Parco nazionale di Donana - Eden spagnolo -> OK 2 
    SEZIONE Prove sepolte - Le avventure dell'archeologia -> OK 5 
+   SEZIONE Enigmi alieni 14 -> OK 1 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE •• Film Documentari di Focus -> OK 20 

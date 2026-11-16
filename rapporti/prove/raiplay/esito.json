@@ -72,6 +72,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str11 16 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 19
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 17
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
+      }
+     ]
+    },
+    {
      "voce": "str17 15 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -81,7 +107,7 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 20
+       "titoli": 30
       },
       {
        "voce": "Rai 2",
@@ -122,32 +148,6 @@
        "titoli": 30
       }
      ]
-    },
-    {
-     "voce": "str15 13 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 36
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 31
-      }
-     ]
     }
    ]
   },
@@ -161,7 +161,7 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     },
     {
      "voce": "Da non perdere",
@@ -343,7 +343,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 22
     },
     {
      "voce": "Il teatro di Eduardo",
@@ -422,7 +422,7 @@
      "voce": "L'offerta",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 46
+     "titoli": 47
     }
    ]
   },

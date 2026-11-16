@@ -10,10 +10,10 @@
   {
    "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 19
+   "voci": 17
   },
   {
-   "passo": "check su \"Snoopy presenta: Natale con Snoopy\"",
+   "passo": "check su \"177 Giorni. Il rapimento di Farouk\"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,11 +21,27 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/47791876",
+   "url": "https://v.vidxgo.co/38354557",
    "tipo": "film",
-   "finale": "http://127.0.0.1:33743/hls/47791876/master.m3u8",
-   "esito": "VIDEO OK",
-   "dettaglio": "m3u8 200"
+   "nota": "il server non risponde entro 90 secondi",
+   "modulo_server": true,
+   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
+   "pagina_server": {
+    "status": 403,
+    "inizio": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>403</title><link rel=\"icon\" type=\"image/png\" href=\"/fav.png\"><link rel=\"apple-touch-icon\" href=\"/fav.png\"><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><l"
+   },
+   "api_t": [
+    {
+     "referer": "https://v.vidxgo.co/38354557",
+     "status": 404,
+     "inizio": "{\"error\":\"not found\"}"
+    },
+    {
+     "referer": "https://il-geniodellostreaming.tattoo/",
+     "status": 404,
+     "inizio": "{\"error\":\"not found\"}"
+    }
+   ]
   }
  ],
  "menu_dichiarato": [
@@ -39,15 +55,15 @@
    "voce": "Tutti",
    "azione": "peliculas",
    "problemi": [
+    "tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk",
+    "tipo undefined, in Kodi appare come cartella: La vita segreta delle mogli Mormoni: Orange County",
+    "tipo undefined, in Kodi appare come cartella: Cunk on Cinema",
     "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
     "tipo undefined, in Kodi appare come cartella: Bagarre",
-    "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia",
-    "tipo undefined, in Kodi appare come cartella: NAZA",
-    "tipo undefined, in Kodi appare come cartella: Chronological Back to the Future",
-    "tipo undefined, in Kodi appare come cartella: Delitto in Galizia"
+    "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia"
    ],
    "esito": "OK",
-   "titoli": 18
+   "titoli": 16
   },
   {
    "voce": "•• Generi",
@@ -59,12 +75,12 @@
      "voce": "Serie TV",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk",
+      "tipo undefined, in Kodi appare come cartella: La vita segreta delle mogli Mormoni: Orange County",
+      "tipo undefined, in Kodi appare come cartella: Cunk on Cinema",
       "tipo undefined, in Kodi appare come cartella: Delitto in Galizia",
       "tipo undefined, in Kodi appare come cartella: 12 12 12",
-      "tipo undefined, in Kodi appare come cartella: The Early Spring",
-      "tipo undefined, in Kodi appare come cartella: The Varnell Hill Show",
-      "tipo undefined, in Kodi appare come cartella: The Good Daughter",
-      "tipo undefined, in Kodi appare come cartella: I casi di Alicia"
+      "tipo undefined, in Kodi appare come cartella: The Early Spring"
      ],
      "esito": "OK",
      "titoli": 20
@@ -109,43 +125,43 @@
      "voce": "0-9",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk",
+      "tipo undefined, in Kodi appare come cartella: La vita segreta delle mogli Mormoni: Orange County",
+      "tipo undefined, in Kodi appare come cartella: Cunk on Cinema",
       "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
       "tipo undefined, in Kodi appare come cartella: Bagarre",
-      "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia",
-      "tipo undefined, in Kodi appare come cartella: NAZA",
-      "tipo undefined, in Kodi appare come cartella: Chronological Back to the Future",
-      "tipo undefined, in Kodi appare come cartella: Delitto in Galizia"
+      "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia"
      ],
      "esito": "OK",
-     "titoli": 18
+     "titoli": 16
     },
     {
      "voce": "A",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk",
+      "tipo undefined, in Kodi appare come cartella: La vita segreta delle mogli Mormoni: Orange County",
+      "tipo undefined, in Kodi appare come cartella: Cunk on Cinema",
       "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
       "tipo undefined, in Kodi appare come cartella: Bagarre",
-      "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia",
-      "tipo undefined, in Kodi appare come cartella: NAZA",
-      "tipo undefined, in Kodi appare come cartella: Chronological Back to the Future",
-      "tipo undefined, in Kodi appare come cartella: Delitto in Galizia"
+      "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia"
      ],
      "esito": "OK",
-     "titoli": 18
+     "titoli": 16
     },
     {
      "voce": "B",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk",
+      "tipo undefined, in Kodi appare come cartella: La vita segreta delle mogli Mormoni: Orange County",
+      "tipo undefined, in Kodi appare come cartella: Cunk on Cinema",
       "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
       "tipo undefined, in Kodi appare come cartella: Bagarre",
-      "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia",
-      "tipo undefined, in Kodi appare come cartella: NAZA",
-      "tipo undefined, in Kodi appare come cartella: Chronological Back to the Future",
-      "tipo undefined, in Kodi appare come cartella: Delitto in Galizia"
+      "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia"
      ],
      "esito": "OK",
-     "titoli": 18
+     "titoli": 16
     }
    ]
   },
@@ -174,47 +190,47 @@
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/all",
    "status": 200,
-   "byte": 37930,
-   "secondi": 0.7,
+   "byte": 37896,
+   "secondi": 1.1,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/film/35525-snoopy-presenta-natale-con-snoopy-streaming.html",
+   "url": "https://il-geniodellostreaming.tattoo/film/35544-177-giorni-il-rapimento-di-farouk-streaming.html",
    "status": 200,
-   "byte": 30058,
-   "secondi": 0.7,
-   "titolo_pagina": "Snoopy presenta: Natale con Snoopy Streaming HD Gratis - ilGenioDelloStreaming",
+   "byte": 31051,
+   "secondi": 0.6,
+   "titolo_pagina": "177 Giorni. Il rapimento di Farouk Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/film/35525-snoopy-presenta-natale-con-snoopy-streaming.html",
+   "url": "https://il-geniodellostreaming.tattoo/film/35544-177-giorni-il-rapimento-di-farouk-streaming.html",
    "status": 200,
-   "byte": 30058,
-   "secondi": 0.7,
-   "titolo_pagina": "Snoopy presenta: Natale con Snoopy Streaming HD Gratis - ilGenioDelloStreaming",
+   "byte": 31051,
+   "secondi": 0.2,
+   "titolo_pagina": "177 Giorni. Il rapimento di Farouk Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/03.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/all",
    "status": 200,
-   "byte": 37930,
-   "secondi": 0.7,
+   "byte": 37896,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/04.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo",
    "status": 200,
-   "byte": 101433,
-   "secondi": 0.2,
+   "byte": 99216,
+   "secondi": 0.7,
    "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/05.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/serie-tv/",
    "status": 200,
-   "byte": 86854,
+   "byte": 87028,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
@@ -223,38 +239,38 @@
    "url": "https://il-geniodellostreaming.tattoo/animazione/",
    "status": 200,
    "byte": 86032,
-   "secondi": 0.7,
+   "secondi": 0.4,
    "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
    "file": "pagine/07.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/avventura/",
    "status": 200,
-   "byte": 85630,
-   "secondi": 0.7,
+   "byte": 85124,
+   "secondi": 0.2,
    "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
    "file": "pagine/08.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/all",
    "status": 200,
-   "byte": 37930,
-   "secondi": 0.7,
+   "byte": 37896,
+   "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/09.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/0",
    "status": 200,
-   "byte": 38388,
-   "secondi": 0.6,
+   "byte": 37732,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/10.html"
   },
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/a",
    "status": 200,
-   "byte": 38492,
+   "byte": 38276,
    "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/11.html"
@@ -262,7 +278,7 @@
   {
    "url": "https://il-geniodellostreaming.tattoo/catalog/b",
    "status": 200,
-   "byte": 38424,
+   "byte": 38274,
    "secondi": 0.5,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/12.html"
@@ -270,8 +286,8 @@
   {
    "url": "https://il-geniodellostreaming.tattoo/serie-tv/",
    "status": 200,
-   "byte": 86854,
-   "secondi": 0.5,
+   "byte": 87028,
+   "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/13.html"
   },
@@ -284,5 +300,5 @@
    "file": "pagine/14.html"
   }
  ],
- "verdetto": "ARRIVA AL VIDEO"
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
 }

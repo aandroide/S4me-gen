@@ -6,19 +6,21 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
       peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.best
       genres | •• Generi | https://altadefinizione-01.best
 == lista "Tutti "
-   -> 31 voci
+   -> 30 voci
+      check | Anatomy of a G.O.A.T  | https://altadefinizione-01.best/35543-anatomy-of-a-g-o-a-t-streaming.html
       check | Snoopy presenta: Natale con Snoopy  | https://altadefinizione-01.best/35525-snoopy-presenta-natale-con-snoopy-streaming.html
       check | Bagarre  | https://altadefinizione-01.best/35520-bagarre-streaming.html
       check | Desprotexida: delitto in Galizia  | https://altadefinizione-01.best/35521-desprotexida-delitto-in-galizia-streaming.html
-      check | NAZA  | https://altadefinizione-01.best/35517-naza-streaming.html
-== check su "Snoopy presenta: Natale con Snoopy "
+== check su "Anatomy of a G.O.A.T "
    -> 3 voci
-      play | Snoopy presenta: Natale con Snoopy  | https://v.vidxgo.co/47791876
-      play | Snoopy presenta: Natale con Snoopy  | https://vixsrc.to/movie/tt47791876
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35525-snoopy-presenta-natale-con-snoopy-streaming.html
-== risoluzione vidxgo https://v.vidxgo.co/47791876
-   -> VIDEO OK m3u8 200 
-== risoluzione vixsrc https://vixsrc.to/movie/tt47791876
+      play | Anatomy of a G.O.A.T  | https://v.vidxgo.co/tm1821866
+      play | Anatomy of a G.O.A.T  | https://vixsrc.to/movie/1821866
+      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35543-anatomy-of-a-g-o-a-t-streaming.html
+== risoluzione vidxgo https://v.vidxgo.co/tm1821866
+   api /t/ tm1821866 referer https://v.vidxgo.co/tm1821866 -> 404 {"error":"not found"}
+   api /t/ tm1821866 referer https://altadefinizione-01.best/ -> 404 {"error":"not found"}
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+== risoluzione vixsrc https://vixsrc.to/movie/1821866
    -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
 == voci dichiarate in mainlist (8)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
@@ -30,9 +32,9 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
     menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 30 
+   SEZIONE Tutti -> OK 29 
    SEZIONE •• Al Cinema -> OK 30 
-   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 42 
+   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 41 
    SEZIONE Azione -> OK 29 
    SEZIONE Animazione -> OK 27 
    SEZIONE Avventura -> OK 30 
@@ -50,4 +52,4 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
    SEZIONE txt70741 … -> OK 6 
 SEZIONI: 8 ok su 9
    SEZIONE SENZA TITOLI: •• Anni | SOTTOMENU SENZA TITOLI
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)

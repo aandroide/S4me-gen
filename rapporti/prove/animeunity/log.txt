@@ -12,12 +12,6 @@ Canale animeunity | indirizzo https://www.animeunity.co
       genres | Genere | https://www.animeunity.co
       years | Anno | https://www.animeunity.co
 == genres su "Genere"
-   -> 46 voci
-      peliculas | Action | https://www.animeunity.co
-      peliculas | Adventure | https://www.animeunity.co
-      peliculas | Avant Garde | https://www.animeunity.co
-      peliculas | Boys Love | https://www.animeunity.co
-== peliculas su "Action"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -25,10 +19,16 @@ Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
-  File "/tmp/kh/addon/channels/animeunity.py", line 205, in peliculas
-    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']
-              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-KeyError: 'records'
+  File "/tmp/kh/addon/channels/animeunity.py", line 54, in genres
+    genres = json.loads(support.match(response.data, patron='genres="([^"]+)').match.replace('&quot;','"'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 
 == lista "•• Film"
    -> 5 voci
@@ -37,12 +37,6 @@ KeyError: 'records'
       genres | Genere | https://www.animeunity.co
       years | Anno | https://www.animeunity.co
 == genres su "Genere"
-   -> 46 voci
-      peliculas | Action | https://www.animeunity.co
-      peliculas | Adventure | https://www.animeunity.co
-      peliculas | Avant Garde | https://www.animeunity.co
-      peliculas | Boys Love | https://www.animeunity.co
-== peliculas su "Action"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -50,10 +44,16 @@ Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
-  File "/tmp/kh/addon/channels/animeunity.py", line 205, in peliculas
-    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']
-              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-KeyError: 'records'
+  File "/tmp/kh/addon/channels/animeunity.py", line 54, in genres
+    genres = json.loads(support.match(response.data, patron='genres="([^"]+)').match.replace('&quot;','"'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 
 == lista "•• TV"
    -> 7 voci
@@ -62,12 +62,6 @@ KeyError: 'records'
       genres | Genere | https://www.animeunity.co
       years | Anno | https://www.animeunity.co
 == genres su "Genere"
-   -> 46 voci
-      peliculas | Action | https://www.animeunity.co
-      peliculas | Adventure | https://www.animeunity.co
-      peliculas | Avant Garde | https://www.animeunity.co
-      peliculas | Boys Love | https://www.animeunity.co
-== peliculas su "Action"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -75,10 +69,16 @@ Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
-  File "/tmp/kh/addon/channels/animeunity.py", line 205, in peliculas
-    records = httptools.downloadpage(host + '/archivio/get-animes', headers=headers, post=payload).json['records']
-              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-KeyError: 'records'
+  File "/tmp/kh/addon/channels/animeunity.py", line 54, in genres
+    genres = json.loads(support.match(response.data, patron='genres="([^"]+)').match.replace('&quot;','"'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (7)
@@ -90,33 +90,25 @@ Nessuna voce da riprodurre trovata
     menu | ('ONA {submenu} {tv}', ['', 'menu', {'type': 'ONA'}, 'tvshow'])
     menu | ('Special {submenu} {tv}', ['', 'menu', {'type': 'Special'}, 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Ultimi Episodi -> OK 30 
+   SEZIONE Ultimi Episodi -> ERRORE JSONDecodeError
    SEZIONE • Anime -> ERRORE KeyError
    SEZIONE •• Film -> ERRORE KeyError
    SEZIONE •• TV -> ERRORE KeyError
    SEZIONE Tutti -> ERRORE KeyError
    SEZIONE ITA -> ERRORE KeyError
-   SEZIONE Action -> ERRORE KeyError
-   SEZIONE Adventure -> ERRORE KeyError
-   SEZIONE Avant Garde -> ERRORE KeyError
-   SEZIONE Genere -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8253, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
+   SEZIONE Genere -> ERRORE JSONDecodeError
    SEZIONE •• OVA -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8253, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
    SEZIONE Tutti -> ERRORE KeyError
    SEZIONE ITA -> ERRORE KeyError
-   SEZIONE Action -> ERRORE KeyError
-   SEZIONE Adventure -> ERRORE KeyError
-   SEZIONE Avant Garde -> ERRORE KeyError
-   SEZIONE Genere -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8253, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
+   SEZIONE Genere -> ERRORE JSONDecodeError
    SEZIONE •• ONA -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8253, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
    SEZIONE Tutti -> ERRORE KeyError
    SEZIONE ITA -> ERRORE KeyError
-   SEZIONE Action -> ERRORE KeyError
-   SEZIONE Adventure -> ERRORE KeyError
-   SEZIONE Avant Garde -> ERRORE KeyError
-   SEZIONE Genere -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8253, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
+   SEZIONE Genere -> ERRORE JSONDecodeError
    SEZIONE •• Special -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8253, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://www.animeunity.co/archivio/get-animes', 'status': 403, 'byte': 8253, 'titolo_pagina': 'Access denied | www.animeunity.co used Cloudflare to restrict access | www.anime'}
-SEZIONI: 1 ok su 8
+SEZIONI: 0 ok su 8
+   SEZIONE SENZA TITOLI: Ultimi Episodi | ERRORE JSONDecodeError
    SEZIONE SENZA TITOLI: • Anime | ERRORE KeyError
    SEZIONE SENZA TITOLI: •• Film | ERRORE KeyError
    SEZIONE SENZA TITOLI: •• TV | ERRORE KeyError
@@ -124,4 +116,4 @@ SEZIONI: 1 ok su 8
    SEZIONE SENZA TITOLI: •• ONA | SOTTOMENU SENZA TITOLI
    SEZIONE SENZA TITOLI: •• Special | SOTTOMENU SENZA TITOLI
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: peliculas su "Action"
+VERDETTO: SI FERMA A: genres su "Genere"

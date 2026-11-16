@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 131
+   "voci": 136
   },
   {
    "passo": "findvideos su \"Transformers - L'ultimo cavaliere\"",
@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 20
+   "voci": 21
   },
   {
-   "passo": "findvideos su \"Mr. Beaver\"",
+   "passo": "findvideos su \"Midnight special - Fuga nella notte\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -33,7 +33,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"The place\"",
+   "passo": "findvideos su \"Harry Potter e la camera dei segreti\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   }
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 68
+   "titoli": 67
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -126,10 +126,10 @@
      "titoli": 7
     },
     {
-     "voce": "Will & Grace 5",
+     "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 8
     }
    ]
   },
@@ -166,22 +166,22 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "La promessa",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 7
-    },
-    {
-     "voce": "Forbidden Fruit 4",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
-    },
-    {
      "voce": "Beautiful",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
+    },
+    {
+     "voce": "Tempesta d'amore",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
+    },
+    {
+     "voce": "Racconto di una notte",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
     }
    ]
   },
@@ -207,7 +207,7 @@
      "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 5
     },
     {
      "voce": "NCIS - Unità anticrimine 14",
@@ -216,10 +216,10 @@
      "titoli": 7
     },
     {
-     "voce": "Law & Order: Unità speciale 15",
+     "voce": "Law & Order: i due volti della giustizia 24",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 2
     }
    ]
   },
@@ -236,16 +236,16 @@
      "titoli": 4
     },
     {
-     "voce": "My Sweet Lie",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
-    },
-    {
      "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
+    },
+    {
+     "voce": "Love is in the air",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 7
     }
    ]
   },
@@ -256,19 +256,19 @@
    "sottovoci": 11,
    "figli": [
     {
-     "voce": "Tu Si Que Vales 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 6
-    },
-    {
      "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
     },
     {
-     "voce": "Le Iene 2026/2027",
+     "voce": "Le Iene presentano: Inside Autunno 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 2
+    },
+    {
+     "voce": "Tu Si Que Vales 2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
@@ -282,22 +282,22 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Ore 11",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
+    },
+    {
+     "voce": "Giganti - Toni Capuozzo",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
+    },
+    {
      "voce": "La ruota della fortuna 2025/2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
-    },
-    {
-     "voce": "Caduta libera 2026/2027",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
-    },
-    {
-     "voce": "Verissimo 2026/2027",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 7
     }
    ]
   },
@@ -307,6 +307,12 @@
    "esito": "SOTTOMENU",
    "sottovoci": 100,
    "figli": [
+    {
+     "voce": "Grande Fratello VIP - Autunno 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
     {
      "voce": "Tu Si Que Vales 2026",
      "azione": "epmenu",
@@ -318,12 +324,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
-    },
-    {
-     "voce": "Grande Fratello VIP - Autunno 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 6
     }
    ]
   },
@@ -404,7 +404,7 @@
      "voce": "Pollyanna",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 10
     }
    ]
   },
@@ -415,7 +415,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 13
+   "titoli": 12
   },
   {
    "voce": "•• Documentari più visti",
@@ -433,16 +433,16 @@
      "titoli": 8
     },
     {
-     "voce": "Parco nazionale di Donana - Eden spagnolo",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 2
-    },
-    {
      "voce": "Prove sepolte - Le avventure dell'archeologia",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
+    },
+    {
+     "voce": "Enigmi alieni 14",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 1
     }
    ]
   },

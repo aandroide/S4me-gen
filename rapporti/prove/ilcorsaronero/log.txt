@@ -21,14 +21,14 @@ Nessuna voce da riprodurre trovata
     menu | ('Video Musica', ['/cat/musica/video-musicali', 'peliculas', [0, 'music', False], 'undefined'])
     menu | ('Videocorsi', ['/cat/altro/videocorsi', 'peliculas', [0, 'music', False], 'undefined'])
 == controllo di tutte le sezioni
-   SEZIONE Film -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/film', 'status': 502, 'byte': 6432, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
-   SEZIONE Serie TV -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/serie-tv', 'status': 502, 'byte': 6432, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
-   SEZIONE Animazione -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/animazione', 'status': 502, 'byte': 6432, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
-   SEZIONE Documentari -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/altro/documentari', 'status': 502, 'byte': 6432, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
-   SEZIONE Programmi TV -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/altro/programmi-tv', 'status': 502, 'byte': 6432, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
-   SEZIONE Video Musica -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/musica/video-musicali', 'status': 502, 'byte': 6432, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
-   SEZIONE Videocorsi -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/altro/videocorsi', 'status': 502, 'byte': 6432, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/search?q=avatar', 'status': 502, 'byte': 6432, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Film -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/film', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Serie TV -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/serie-tv', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Animazione -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/animazione', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Documentari -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/altro/documentari', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Programmi TV -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/altro/programmi-tv', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Video Musica -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/musica/video-musicali', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE Videocorsi -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/cat/altro/videocorsi', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://ilcorsaronero.link/search?q=avatar', 'status': 502, 'byte': 6429, 'titolo_pagina': 'ilcorsaronero.link | 502: Bad gateway'}
 SEZIONI: 0 ok su 8
    SEZIONE SENZA TITOLI: Film | VUOTA
    SEZIONE SENZA TITOLI: Serie TV | VUOTA

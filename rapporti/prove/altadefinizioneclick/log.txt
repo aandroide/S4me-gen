@@ -7,16 +7,18 @@ Canale altadefinizioneclick | indirizzo https://altadefinizionex.fit
       genres | •• Generi | https://altadefinizionex.fit/serie-tv/
 == lista "• Film"
    -> 13 voci
-      findvideos | La sparatoria | https://altadefinizionex.fit/western/45568-la-sparatoria-streaming.html
-      findvideos | Un amore perfetto | https://altadefinizionex.fit/commedia/45567-un-amore-perfetto-streaming.html
-      findvideos | Robin Hood - Il prezzo del sangue | https://altadefinizionex.fit/avventura/34368-robin-hood-il-prezzo-del-sangue-streaming.html
-      findvideos | La vergine, il toro e il capricorno | https://altadefinizionex.fit/commedia/45566-la-vergine-il-toro-e-il-capricorno-streaming.html
-== findvideos su "La sparatoria"
+      findvideos | The Batman: Part II | https://altadefinizionex.fit/mistero/45562-the-batman-part-ii-streaming.html
+      findvideos | Shrek 5 | https://altadefinizionex.fit/animazione/29817-shrek-5-streaming.html
+      findvideos | Gatto | https://altadefinizionex.fit/animazione/45561-gatto-streaming.html
+      findvideos | Narnia - Il nipote del mago | https://altadefinizionex.fit/fantasy/45560-narnia-il-nipote-del-mago-streaming.html
+== findvideos su "The Batman: Part II"
    -> 2 voci
-      play | La sparatoria | https://v.vidxgo.co/0062262
-      add_pelicula_to_library | txt30161 %s | https://altadefinizionex.fit/western/45568-la-sparatoria-streaming.html
-== risoluzione vidxgo https://v.vidxgo.co/0062262
-   -> VIDEO OK m3u8 200 
+      play | The Batman: Part II | https://v.vidxgo.co/19850008
+      add_pelicula_to_library | txt30161 %s | https://altadefinizionex.fit/mistero/45562-the-batman-part-ii-streaming.html
+== risoluzione vidxgo https://v.vidxgo.co/19850008
+   api /t/ 19850008 referer https://v.vidxgo.co/19850008 -> 404 {"error":"not found"}
+   api /t/ 19850008 referer https://altadefinizionex.fit/ -> 404 {"error":"not found"}
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (4)
     film | '/film/'
     film | ('Generi', ['/film/', 'genres', 'genres'])
@@ -41,4 +43,4 @@ Canale altadefinizioneclick | indirizzo https://altadefinizionex.fit
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar: La via dell'acqua
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Anatar
 SEZIONI: 5 ok su 5
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)

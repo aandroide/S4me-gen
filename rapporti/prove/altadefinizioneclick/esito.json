@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"La sparatoria\"",
+   "passo": "findvideos su \"The Batman: Part II\"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,11 +21,27 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/0062262",
+   "url": "https://v.vidxgo.co/19850008",
    "tipo": "film",
-   "finale": "http://127.0.0.1:38857/hls/0062262/master.m3u8",
-   "esito": "VIDEO OK",
-   "dettaglio": "m3u8 200"
+   "nota": "il server non risponde entro 90 secondi",
+   "modulo_server": true,
+   "esito": "NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)",
+   "pagina_server": {
+    "status": 403,
+    "inizio": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>403</title><link rel=\"icon\" type=\"image/png\" href=\"/fav.png\"><link rel=\"apple-touch-icon\" href=\"/fav.png\"><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><l"
+   },
+   "api_t": [
+    {
+     "referer": "https://v.vidxgo.co/19850008",
+     "status": 404,
+     "inizio": "{\"error\":\"not found\"}"
+    },
+    {
+     "referer": "https://altadefinizionex.fit/",
+     "status": 404,
+     "inizio": "{\"error\":\"not found\"}"
+    }
+   ]
   }
  ],
  "menu_dichiarato": [
@@ -117,125 +133,230 @@
  "sezioni_riepilogo": "5 ok su 5",
  "rete": [
   {
-   "url": "https://altadefinizionex.fit/film/",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/film/",
    "status": 200,
-   "byte": 132806,
-   "secondi": 1.4,
+   "byte": 132535,
+   "secondi": 1.6,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizionex.fit/western/45568-la-sparatoria-streaming.html",
+   "url": "https://altadefinizionex.fit/film/",
    "status": 200,
-   "byte": 382279,
-   "secondi": 1.0,
-   "titolo_pagina": "",
+   "byte": 132535,
+   "secondi": 1.7,
+   "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/02.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/mistero/45562-the-batman-part-ii-streaming.html",
+   "status": 200,
+   "byte": 360591,
+   "secondi": 1.5,
+   "titolo_pagina": "The Batman: Part II Streaming ITA - Altadefinizione",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://altadefinizionex.fit/mistero/45562-the-batman-part-ii-streaming.html",
+   "status": 200,
+   "byte": 360591,
+   "secondi": 1.6,
+   "titolo_pagina": "The Batman: Part II Streaming ITA - Altadefinizione",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/film/",
+   "status": 200,
+   "byte": 132535,
+   "secondi": 0.6,
+   "titolo_pagina": "Film Streaming - Altadefinizione",
+   "file": "pagine/05.html"
   },
   {
    "url": "https://altadefinizionex.fit/film/",
    "status": 200,
-   "byte": 132806,
-   "secondi": 0.3,
-   "titolo_pagina": "Film Streaming - Altadefinizione",
-   "file": "pagine/03.html"
-  },
-  {
-   "url": "https://altadefinizionex.fit",
-   "status": 200,
-   "byte": 519455,
-   "secondi": 0.1,
-   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
-   "file": "pagine/04.html"
-  },
-  {
-   "url": "https://altadefinizionex.fit/cinema/film",
-   "status": 404,
-   "byte": 33646,
+   "byte": 132535,
    "secondi": 0.7,
-   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
-   "file": "pagine/05.html"
-  },
-  {
-   "url": "https://altadefinizionex.fit/cinema/",
-   "status": 200,
-   "byte": 73055,
-   "secondi": 1.7,
-   "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
+   "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://altadefinizionex.fit/azione/film",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
    "status": 200,
-   "byte": 133221,
-   "secondi": 1.2,
+   "byte": 511314,
+   "secondi": 0.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://altadefinizionex.fit/animazione/film",
+   "url": "https://altadefinizionex.fit",
    "status": 200,
-   "byte": 136229,
-   "secondi": 0.8,
+   "byte": 511314,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://altadefinizionex.fit/serie-tv/",
-   "status": 200,
-   "byte": 137312,
-   "secondi": 0.6,
-   "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/cinema/film",
+   "status": 404,
+   "byte": 33279,
+   "secondi": 0.7,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://altadefinizionex.fit",
-   "status": 200,
-   "byte": 519455,
-   "secondi": 0.1,
+   "url": "https://altadefinizionex.fit/cinema/film",
+   "status": 404,
+   "byte": 33279,
+   "secondi": 0.7,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://altadefinizionex.fit/cinema/serie-tv",
-   "status": 404,
-   "byte": 33654,
-   "secondi": 0.8,
-   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/cinema/",
+   "status": 200,
+   "byte": 72688,
+   "secondi": 1.7,
+   "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/11.html"
   },
   {
    "url": "https://altadefinizionex.fit/cinema/",
    "status": 200,
-   "byte": 73055,
-   "secondi": 0.3,
+   "byte": 72688,
+   "secondi": 1.8,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://altadefinizionex.fit/azione/serie-tv",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/azione/film",
    "status": 200,
-   "byte": 137535,
-   "secondi": 1.0,
+   "byte": 132473,
+   "secondi": 1.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://altadefinizionex.fit/animazione/serie-tv",
+   "url": "https://altadefinizionex.fit/azione/film",
    "status": 200,
-   "byte": 136655,
-   "secondi": 1.4,
+   "byte": 132473,
+   "secondi": 1.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/14.html"
   },
   {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/animazione/film",
+   "status": 200,
+   "byte": 135371,
+   "secondi": 1.2,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://altadefinizionex.fit/animazione/film",
+   "status": 200,
+   "byte": 135371,
+   "secondi": 1.2,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serie-tv/",
+   "status": 200,
+   "byte": 137190,
+   "secondi": 0.4,
+   "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione"
+  },
+  {
+   "url": "https://altadefinizionex.fit/serie-tv/",
+   "status": 200,
+   "byte": 137190,
+   "secondi": 0.4,
+   "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+   "status": 200,
+   "byte": 511314,
+   "secondi": 0.1,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
+  },
+  {
+   "url": "https://altadefinizionex.fit",
+   "status": 200,
+   "byte": 511314,
+   "secondi": 0.1,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/cinema/serie-tv",
+   "status": 404,
+   "byte": 33287,
+   "secondi": 0.7,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
+  },
+  {
+   "url": "https://altadefinizionex.fit/cinema/serie-tv",
+   "status": 404,
+   "byte": 33287,
+   "secondi": 0.7,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/cinema/",
+   "status": 200,
+   "byte": 72688,
+   "secondi": 0.3,
+   "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione"
+  },
+  {
+   "url": "https://altadefinizionex.fit/cinema/",
+   "status": 200,
+   "byte": 72688,
+   "secondi": 0.3,
+   "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/azione/serie-tv",
+   "status": 200,
+   "byte": 137221,
+   "secondi": 1.0,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
+  },
+  {
+   "url": "https://altadefinizionex.fit/azione/serie-tv",
+   "status": 200,
+   "byte": 137221,
+   "secondi": 1.0,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/animazione/serie-tv",
+   "status": 200,
+   "byte": 135381,
+   "secondi": 1.2,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
+  },
+  {
+   "url": "https://altadefinizionex.fit/animazione/serie-tv",
+   "status": 200,
+   "byte": 135381,
+   "secondi": 1.2,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/archivio?search=avatar&f=all&page=1",
+   "status": 200,
+   "byte": 97011,
+   "secondi": 1.1,
+   "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione"
+  },
+  {
    "url": "https://altadefinizionex.fit/archivio?search=avatar&f=all&page=1",
    "status": 200,
-   "byte": 97378,
-   "secondi": 1.2,
-   "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione",
-   "file": "pagine/15.html"
+   "byte": 97011,
+   "secondi": 1.1,
+   "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione"
   }
  ],
- "verdetto": "ARRIVA AL VIDEO"
+ "verdetto": "SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)"
 }
