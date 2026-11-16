@@ -1,0 +1,45 @@
+{
+ "url": "https://animeunity.cx/archive",
+ "finale": "https://animeunity.cx/archive",
+ "frames": [
+  {
+   "url": "https://animeunity.cx/archive",
+   "name": ""
+  }
+ ],
+ "rete": [
+  {
+   "url": "https://animeunity.cx/archive",
+   "status": 403,
+   "tipo": "document",
+   "ct": "text/html; charset=UTF-8",
+   "intestazioni_richiesta": {
+    "accept-language": "it-IT",
+    "upgrade-insecure-requests": "1",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "sec-ch-ua": "\"HeadlessChrome\";v=\"159\", \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"159\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+   },
+   "intestazioni_risposta": {
+    "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "cf-ray": "a5b8e53569add16e-CDG",
+    "content-encoding": "zstd",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Mon, 16 Nov 2026 19:27:50 GMT",
+    "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "same-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=De4Z1euCN2lPJk9o%2BOnCj3jiCA0HtChJad15Ks4ZwvJK%2BkRhzI%2BsoJCZhxH%2Fc0vaJQuxs6mYslKB2cT0M68ZuNkvmk1rxN7ngpZ%2B21fuu5uaRa0TtFYmUpoGWyAMyOrc\"}]}",
+    "server": "cloudflare",
+    "x-frame-options": "SAMEORIGIN"
+   }
+  },
+  {
+   "url": "https://animeunity.cx/cdn-cgi/styles/main.css",
+   "status": 200,
+   "tipo": "stylesheet",
+   "ct": "text/css"
+  }
+ ]
+}
