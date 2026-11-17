@@ -1,11 +1,19 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 3, CORRETTO IN PARTE 1, ROTTO 6, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 11, NON VERIFICATO 5, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 4, CORRETTO IN PARTE 1, ROTTO 6, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 10, CLOUDFLARE 1, NON VERIFICATO 5, OK 20, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
-## CORRETTO (3)
+## CORRETTO (4)
+
+### dinostreaming
+Sito: https://dinostreaming.it
+- ROTTO: peliculas /film-category/al-cinema/ | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/dinostreaming/pagina_peliculas_film_category_al_cinema.html
+-   dati incorporati nella pagina: 5 elementi (campi: titolo, link)
+-   peliculas: riscritta dai dati incorporati
+- file corretto scritto in rapporti/correzioni/dinostreaming: 1 pagine su 1 ora trovano titoli
 
 ### guardaseriecam
-Sito: https://guardaseriex.work
+Sito: https://guardaseriex.lol
 - ROTTO: peliculas /serietv-streaming | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/guardaseriecam/pagina_peliculas_serietv_streaming.html
 -   regex proposta: 18 titoli su 18 card
@@ -14,16 +22,16 @@ Sito: https://guardaseriex.work
 ### guardaserieicu
 Sito: https://guardaseriex.cyou
 - indirizzo scritto nel canale: https://guardaseriex.cyou
-- il sito reindirizza a un altro indirizzo: https://guardaseriex.work (in channels.json c'e https://guardaseriex.cyou)
+- il sito reindirizza a un altro indirizzo: https://guardaseriex.lol (in channels.json c'e https://guardaseriex.cyou)
 - ROTTO: peliculas /serietv-streaming/page/1/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/guardaserieicu/pagina_peliculas_serietv_streaming_page_1.html
 -   regex proposta: 18 titoli su 18 card | gruppi persi: audio, category, duration, plot, rating, thumbnail
 -   gruppi non piu presenti nelle card e non essenziali per S4Me: audio, category, duration, plot, rating, thumbnail
 - file corretto scritto in rapporti/correzioni/guardaserieicu: 1 pagine su 1 ora trovano titoli
-- riga per channels.json: "guardaserieicu": "https://guardaseriex.work",
+- riga per channels.json: "guardaserieicu": "https://guardaseriex.lol",
 
 ### tantifilm
-Sito: https://tanti-film.rest
+Sito: https://tanti-film.tattoo
 - ROTTO: peliculas /film | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/tantifilm/pagina_peliculas_film.html
 -   patronBlock rimosso: senza blocco le regex dei titoli trovano 35 risultati sull'intera pagina (da controllare: potrebbero entrare anche card di slider o barre laterali)
@@ -58,7 +66,7 @@ Sito: https://www.accuradio.com
 -   nessuna regex sostitutiva trovata automaticamente in /
 
 ### cineblog001
-Sito: https://cineblog001.tires
+Sito: https://cineblog001.run
 - ROTTO: peliculas /film/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/cineblog001/pagina_peliculas_film.html
 -   regex proposta: 70 titoli su 51 card
@@ -76,33 +84,20 @@ Sito: https://cineblog001.tires
 Sito: https://www.animeworld.ac
 - ROTTO: peliculas /search?typeY=tv | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_tv.html
--   regex proposta: 244 titoli su 223 card | gruppi persi: episode, year
+-   regex proposta: 249 titoli su 228 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=movie | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_movie.html
--   regex proposta: 244 titoli su 223 card | gruppi persi: episode, year
+-   regex proposta: 249 titoli su 228 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=oav | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_oav.html
--   regex proposta: 244 titoli su 223 card | gruppi persi: episode, year
+-   regex proposta: 249 titoli su 228 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 - ROTTO: peliculas /search?typeY=spinoff | patronBlock non trova nessun blocco
 -   campione della pagina salvato in rapporti/correzioni/dreamsub/pagina_peliculas_search_typeY_spinoff.html
--   regex proposta: 244 titoli su 223 card | gruppi persi: episode, year
+-   regex proposta: 249 titoli su 228 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
-
-### eurostreaming_actor
-Sito: https://eurostreaming.ooo
-- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
-- il sito reindirizza a un altro indirizzo: https://guardaseriex.work (in channels.json c'e https://eurostreaming.ooo)
-- ROTTO: peliculas /animazione/ | patron non trova titoli
--   campione della pagina salvato in rapporti/correzioni/eurostreaming_actor/pagina_peliculas_animazione.html
--   regex proposta: 1040 titoli su 343 card | gruppi persi: episode, title2
--   non applicata al file: la funzione ha piu varianti di regex
-- ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli
--   campione della pagina salvato in rapporti/correzioni/eurostreaming_actor/pagina_peliculas_aggiornamento_episodi.html
--   nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi/
-- riga per channels.json: "eurostreaming_actor": "https://guardaseriex.work",
 
 ### ilcorsaronero
 Sito: https://ilcorsaronero.link
@@ -120,12 +115,25 @@ Sito: https://ilcorsaronero.link
 -   nessuna regex sostitutiva trovata automaticamente in /cat/altro/documentari
 
 ### ilgeniodellostreaming_cam
-Sito: https://il-geniodellostreaming.tattoo
-- OK: peliculas /catalog/all | 16 risultati
+Sito: https://il-geniodellostreaming.website
+- OK: peliculas /catalog/all | 17 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
 -   non applicata al file: la funzione ha piu varianti di regex
+
+### raiplay
+Sito: https://www.raiplay.it
+- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
+- OK: https://www.raiplay.it/dirette | html
+- OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
+- OK: https://www.raiplay.it/guidatv | html
+- OK: https://www.raiplay.it/tipologia/film/index.json | json, struttura invariata
+- OK: https://www.raiplay.it/film | html
+- OK: https://www.raiplay.it/tipologia/serieitaliane/index.json | json, struttura invariata
+- OK: https://www.raiplay.it/serieitaliane | html
+- PROBLEMA: https://www.raiplay.it/tipologia/serieinternazionali/index.json | chiavi sparite che il canale legge: contents[].info.description, contents[].layout
+- OK: https://www.raiplay.it/serieinternazionali | html
 
 ## DOMINIO PARCHEGGIATO (3)
 
@@ -139,7 +147,7 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27403 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27679 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
@@ -148,9 +156,9 @@ Sito: https://cinemalibero.cafe
 - peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
 - peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
 - peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5651 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
-## IRRAGGIUNGIBILE (11)
+## IRRAGGIUNGIBILE (10)
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live
@@ -167,10 +175,6 @@ Sito: https://www.animeforce.it
 ### cb01anime
 Sito: https://cb01new.one
 - il nome del sito non esiste piu (DNS) (https://cb01new.one)
-
-### dinostreaming
-Sito: https://dinostreaming.it
-- il nome del sito non esiste piu (DNS) (https://dinostreaming.it)
 
 ### filmpertutti
 Sito: https://filmpertuttiiii.nuovo.live
@@ -196,13 +200,19 @@ Sito: http://ww25.mondoserietv.club
 Sito: https://piratestreaming.design
 - il nome del sito non esiste piu (DNS) (https://piratestreaming.design)
 
+## CLOUDFLARE (1)
+
+### eurostreaming_actor
+Sito: https://eurostreaming.ooo
+- FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://eurostreaming.ooo)
+
 ## NON VERIFICATO (5)
 
 ### animeunity
-Sito: https://www.animeunity.co
-- home https://www.animeunity.co: FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl
-- non controllabile senza parametri: https://www.animeunity.co/archivio (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
-- non controllabile senza parametri: https://www.animeunity.co/archivio/get-animes (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
+Sito: https://animeunity.cx
+- home https://animeunity.cx: FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl
+- non controllabile senza parametri: https://animeunity.cx/archivio (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
+- non controllabile senza parametri: https://animeunity.cx/archivio/get-animes (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
 ### aniplay
@@ -222,7 +232,7 @@ Sito: https://streamingita.homes
 Sito: https://vixsrc.to
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
-## OK (21)
+## OK (20)
 
 ### 1337x
 Sito: https://1337x.to
@@ -265,7 +275,7 @@ Sito: https://bt4gprx.com
 - OK: peliculas /search?q=matrix&category=movie&page=rss&orderby=seeders | 15 risultati
 
 ### casacinema
-Sito: https://casa-cinema.top
+Sito: https://casa-cinema.lol
 - OK: peliculas /film | 16 risultati
 - OK: peliculas /serie-tv | 16 risultati
 - OK: peliculas /miniserie-tv | 16 risultati
@@ -326,21 +336,8 @@ Sito: https://pluto.tv
 - OK: https://pluto.tv | html
 - OK: https://pluto.tv/ | html
 
-### raiplay
-Sito: https://www.raiplay.it
-- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
-- OK: https://www.raiplay.it/dirette | html
-- OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
-- OK: https://www.raiplay.it/guidatv | html
-- OK: https://www.raiplay.it/tipologia/film/index.json | json, struttura invariata
-- OK: https://www.raiplay.it/film | html
-- OK: https://www.raiplay.it/tipologia/serieitaliane/index.json | json, struttura invariata
-- OK: https://www.raiplay.it/serieitaliane | html
-- OK: https://www.raiplay.it/tipologia/serieinternazionali/index.json | json, struttura invariata
-- OK: https://www.raiplay.it/serieinternazionali | html
-
 ### streamingcommunity
-Sito: https://streamingcommunityz.nexus
+Sito: https://streamingcommunityz.dad
 - OK: Pagina film (sliders) | 30 titoli in props.sliders.0.titles
 - OK: Pagina serie TV (sliders) | 30 titoli in props.sliders.0.titles
 - OK: Archivio | 60 titoli in props.titles
