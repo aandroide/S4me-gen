@@ -24,11 +24,11 @@ Canale raiplay | indirizzo https://www.raiplay.it
       peliculas | C | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
       peliculas | D | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
 == peliculas su "A"
-   -> 12 voci
+   -> 13 voci
       findvideos | A caccia del vedovo d'oro | https://www.raiplay.it/programmi/acacciadelvedovodoro
+      findvideos | A ciascuno il suo | https://www.raiplay.it/programmi/aciascunoilsuo
       findvideos | A mano disarmata | https://www.raiplay.it/programmi/amanodisarmata
       findvideos | A un passo dalla verità | https://www.raiplay.it/programmi/aunpassodallaverita
-      episodios | Abbi fede | https://www.raiplay.it/programmi/abbifede
 == findvideos su "A caccia del vedovo d'oro"
    -> 1 voci
       play | A caccia del vedovo d'oro | https://download-rai-it.akamaized.net/video_no_available.mp4
@@ -50,21 +50,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 19 
-   SEZIONE Rai 2 -> OK 17 
+   SEZIONE Rai 1 -> OK 20 
+   SEZIONE Rai 2 -> ERRORE JSONDecodeError
+   SEZIONE Rai 3 -> OK 17 
+   SEZIONE str12 17 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 32 
+   SEZIONE Rai 2 -> OK 30 
    SEZIONE Rai 3 -> ERRORE JSONDecodeError
    SEZIONE str11 16 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 30 
    SEZIONE Rai 2 -> ERRORE JSONDecodeError
    SEZIONE Rai 3 -> ERRORE JSONDecodeError
    SEZIONE str17 15 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 34 
-   SEZIONE Rai 2 -> ERRORE JSONDecodeError
-   SEZIONE Rai 3 -> OK 30 
-   SEZIONE str16 14 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
-   SEZIONE Novità -> OK 24 
-   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Novità -> OK 23 
+   SEZIONE Da non perdere -> OK 26 
    SEZIONE Film in esclusiva -> OK 31 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 26 
@@ -79,9 +79,9 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Territori e itinerari -> OK 34 
    SEZIONE Approfondimento -> OK 26 
    SEZIONE Programmi TV -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 27 
+   SEZIONE Da non perdere -> OK 26 
    SEZIONE Docu-serie Original -> OK 29 
-   SEZIONE Documentari Original -> OK 25 
+   SEZIONE Documentari Original -> OK 24 
    SEZIONE Documentari -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 29 
    SEZIONE Esclusive RaiPlay Bambini -> OK 32 
@@ -91,7 +91,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Un mondo di fumetti -> OK 15 
    SEZIONE Next Star -> OK 21 
    SEZIONE Teen -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 22 
+   SEZIONE Da non perdere -> OK 23 
    SEZIONE Il teatro di Eduardo -> OK 25 
    SEZIONE Musica classica -> OK 25 
    SEZIONE Musica e Teatro -> SOTTOMENU  

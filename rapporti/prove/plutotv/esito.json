@@ -17,11 +17,8 @@
   {
    "voce": "Dirette",
    "azione": "live",
-   "problemi": [
-    "titolo rovinato: WeatherNation San Francisco | Top Weather News, Regional Forecasts, Li"
-   ],
    "esito": "OK",
-   "titoli": 469
+   "titoli": 465
   },
   {
    "voce": "Categorie",
@@ -55,54 +52,54 @@
    "problemi": [
     "titolo senza indirizzo: Hunan: The Other World of Avatar",
     "titolo senza indirizzo: The Aviator",
-    "titolo senza indirizzo: Animal Imitators",
-    "titolo senza indirizzo: Gamera 3: Revenge of Iris",
-    "titolo senza indirizzo: Cool World",
-    "titolo senza indirizzo: Social Animals"
+    "titolo senza indirizzo: Altar",
+    "titolo senza indirizzo: Altar Egos",
+    "titolo senza indirizzo: Cazar para matar",
+    "titolo senza indirizzo: Acábame de matar"
    ],
    "esito": "OK",
-   "titoli": 43
+   "titoli": 93
   }
  ],
  "sezioni_riepilogo": "3 ok su 3",
  "rete": [
   {
-   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=fd700fd1-c3e9-4ed2-b864-3a1c95c93c14&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
+   "url": "https://boot.pluto.tv/v4/start?appName=web&appVersion=9.20.0-89258290264838515e264f5b051b7c1602a58482&deviceVersion=146.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID=7056f4ae-cdda-483b-8fc5-a2853fa77f15&clientModelNumber=1.0.0&serverSideAds=false&drmCapabilities=widevine%3AL3&blockingMode=&notificationVersion=1&appLaunchCount=0",
    "status": 200,
-   "byte": 20605,
-   "secondi": 0.2,
+   "byte": 17985,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://api.pluto.tv/v2/channels?start=2026-11-16T13:00:00Z&stop=2026-11-16T17:00:00Z&sid=11e677ce-e1b5-11f1-8000-000d3a3042e0&deviceId=fd700fd1-c3e9-4ed2-b864-3a1c95c93c14",
+   "url": "https://api.pluto.tv/v2/channels?start=2026-11-17T14:00:00Z&stop=2026-11-17T18:00:00Z&sid=0b626c34-e285-11f1-8000-0022487d9caa&deviceId=7056f4ae-cdda-483b-8fc5-a2853fa77f15",
    "status": 200,
-   "byte": 7816931,
+   "byte": 7783395,
    "secondi": 0.9,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://api.pluto.tv/v2/channels.json?sid=11e677ce-e1b5-11f1-8000-000d3a3042e0&deviceId=fd700fd1-c3e9-4ed2-b864-3a1c95c93c14",
+   "url": "https://api.pluto.tv/v2/channels.json?sid=0b626c34-e285-11f1-8000-0022487d9caa&deviceId=7056f4ae-cdda-483b-8fc5-a2853fa77f15",
    "status": 200,
-   "byte": 1162248,
-   "secondi": 0.2,
+   "byte": 1152522,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=11e677ce-e1b5-11f1-8000-000d3a3042e0&deviceId=fd700fd1-c3e9-4ed2-b864-3a1c95c93c14",
+   "url": "https://api.pluto.tv/v3/vod/categories?includeItems=true&deviceType=web&sid=0b626c34-e285-11f1-8000-0022487d9caa&deviceId=7056f4ae-cdda-483b-8fc5-a2853fa77f15",
    "status": 200,
-   "byte": 12937069,
-   "secondi": 1.1,
+   "byte": 13007011,
+   "secondi": 1.0,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
    "url": "https://service-media-search.clusters.pluto.tv/v1/search?q=avatar&limit=100",
    "status": 200,
-   "byte": 9012,
-   "secondi": 0.6,
+   "byte": 17921,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   }

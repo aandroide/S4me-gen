@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 136
+   "voci": 135
   },
   {
    "passo": "findvideos su \"Transformers - L'ultimo cavaliere\"",
@@ -23,9 +23,9 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"Midnight special - Fuga nella notte\"",
+   "passo": "findvideos su \"Tiziano Terzani: il viaggio della vita\"",
    "esito": "ERRORE",
-   "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+   "errore": "enti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'mediaSelector'\n"
   },
   {
    "passo": "lista \"•• Film più visti del giorno\"",
@@ -33,7 +33,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"Harry Potter e la camera dei segreti\"",
+   "passo": "findvideos su \"The place\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   }
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 67
+   "titoli": 69
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -123,13 +123,13 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 6
     },
     {
-     "voce": "Law & Order: Unità speciale 15",
+     "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 8
+     "titoli": 5
     }
    ]
   },
@@ -178,10 +178,10 @@
      "titoli": 3
     },
     {
-     "voce": "Racconto di una notte",
+     "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 5
     }
    ]
   },
@@ -213,13 +213,13 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 6
     },
     {
-     "voce": "Law & Order: i due volti della giustizia 24",
+     "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 6
     }
    ]
   },
@@ -230,7 +230,7 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Tutto per la mia famiglia 2",
+     "voce": "Racconto di una notte",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
@@ -242,10 +242,10 @@
      "titoli": 4
     },
     {
-     "voce": "Love is in the air",
+     "voce": "Tutto per la mia famiglia 2",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 4
     }
    ]
   },
@@ -288,16 +288,16 @@
      "titoli": 3
     },
     {
-     "voce": "Giganti - Toni Capuozzo",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 3
-    },
-    {
      "voce": "La ruota della fortuna 2025/2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
+    },
+    {
+     "voce": "Caduta libera 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
     }
    ]
   },
@@ -314,13 +314,13 @@
      "titoli": 6
     },
     {
-     "voce": "Tu Si Que Vales 2026",
+     "voce": "Amici 26",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 10
     },
     {
-     "voce": "Amici 26",
+     "voce": "Uomini e Donne 2026/2027",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
@@ -360,7 +360,7 @@
    "voce": "•• Kids Cartoonito",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 13,
+   "sottovoci": 14,
    "figli": [
     {
      "voce": "Paw Patrol",
@@ -404,7 +404,7 @@
      "voce": "Pollyanna",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 10
+     "titoli": 13
     }
    ]
   },
@@ -415,7 +415,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 12
+   "titoli": 13
   },
   {
    "voce": "•• Documentari più visti",
@@ -433,16 +433,16 @@
      "titoli": 8
     },
     {
+     "voce": "Universo ai raggi X 5",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 8
+    },
+    {
      "voce": "Prove sepolte - Le avventure dell'archeologia",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
-    },
-    {
-     "voce": "Enigmi alieni 14",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 1
     }
    ]
   },

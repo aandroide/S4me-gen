@@ -1,6 +1,6 @@
 {
  "canale": "guardaseriecam",
- "host": "https://guardaseriex.work",
+ "host": "https://guardaseriex.lol",
  "passi": [
   {
    "passo": "mainlist",
@@ -13,22 +13,12 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"FOMO - Fear Of Missing Out\"",
-   "esito": "VUOTO",
-   "voci": 0
-  },
-  {
-   "passo": "lista \"•• Popolari\"",
+   "passo": "episodios su \"Scrubs\"",
    "esito": "OK",
-   "voci": 258
+   "voci": 20
   },
   {
-   "passo": "episodios su \"House of the Dragon (Game of Thrones)\"",
-   "esito": "OK",
-   "voci": 26
-  },
-  {
-   "passo": "findvideos su \"1x01 - Gli eredi del drago\"",
+   "passo": "findvideos su \"1x01 - Il mio ritorno\"",
    "esito": "OK",
    "voci": 1
   }
@@ -36,9 +26,9 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/11198330/1/1",
+   "url": "https://v.vidxgo.co/40197357/1/1",
    "tipo": "film",
-   "finale": "http://127.0.0.1:33337/hls/tv/11198330/1/1/master.m3u8",
+   "finale": "http://127.0.0.1:37545/hls/tv/40197357/1/1/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -97,193 +87,151 @@
  "sezioni_riepilogo": "4 ok su 4",
  "rete": [
   {
-   "url": "https://guardaseriex.work/serietv-streaming",
+   "url": "https://guardaseriex.lol/serietv-streaming",
    "status": 200,
-   "byte": 100534,
-   "secondi": 1.0,
+   "byte": 100130,
+   "secondi": 0.9,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.work/documentario/5875-fear-of-missing-out-streaming.html",
+   "url": "https://guardaseriex.lol/commedia/5388-scrubs-streaming.html",
    "status": 200,
-   "byte": 63773,
-   "secondi": 0.6,
-   "titolo_pagina": "FOMO - Fear Of Missing Out streaming - Guardaserie",
+   "byte": 65448,
+   "secondi": 0.3,
+   "titolo_pagina": "Scrubs streaming - Guardaserie",
    "file": "pagine/02.html"
   },
   {
    "url": "https://api.themoviedb.org/3/genre/tv/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
    "byte": 495,
-   "secondi": 0.1,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt46657449?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt40197357?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 103,
+   "byte": 754,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://guardaseriex.work/serietv-popolari/",
+   "url": "https://api.themoviedb.org/3/tv/295778/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 404803,
-   "secondi": 0.5,
-   "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
+   "byte": 601,
+   "secondi": 0.1,
+   "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://guardaseriex.work/drammatico/2404-house-of-the-dragon-game-of-thrones-streaming.html",
+   "url": "https://api.themoviedb.org/3/tv/295778?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
    "status": 200,
-   "byte": 66207,
-   "secondi": 0.7,
-   "titolo_pagina": "House of the Dragon (Game of Thrones) streaming - Guardaserie",
+   "byte": 31646,
+   "secondi": 0.1,
+   "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt11198330?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/295778/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 1201,
-   "secondi": 0.1,
+   "byte": 601,
+   "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/94997/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/295778?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 1469,
+   "byte": 2872,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/94997?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
+   "url": "https://api.themoviedb.org/3/tv/295778/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 71914,
+   "byte": 76293,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/94997/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/295778/season/2?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 1469,
-   "secondi": 0.0,
+   "byte": 45146,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/94997?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/295778/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
    "status": 200,
-   "byte": 5354,
-   "secondi": 0.1,
+   "byte": 96359,
+   "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/94997/season/0?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/295778/season/2?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
    "status": 200,
-   "byte": 27022,
+   "byte": 66392,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/94997/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.lol/serietv-streaming",
    "status": 200,
-   "byte": 87081,
-   "secondi": 0.1,
-   "titolo_pagina": "",
+   "byte": 100130,
+   "secondi": 0.6,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/94997/season/2?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.lol/serietv-popolari/",
    "status": 200,
-   "byte": 99883,
-   "secondi": 0.1,
-   "titolo_pagina": "",
+   "byte": 404194,
+   "secondi": 0.9,
+   "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
    "file": "pagine/14.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/94997/season/3?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://guardaseriex.lol/serietv-streaming",
    "status": 200,
-   "byte": 62430,
-   "secondi": 0.1,
-   "titolo_pagina": "",
+   "byte": 100130,
+   "secondi": 0.9,
+   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/15.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/94997/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
+   "url": "https://guardaseriex.lol/biografico/",
    "status": 200,
-   "byte": 107164,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/94997/season/2?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 120921,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/tv/94997/season/3?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
-   "status": 200,
-   "byte": 82680,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://guardaseriex.work/serietv-streaming",
-   "status": 200,
-   "byte": 100534,
-   "secondi": 0.5,
-   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie"
-  },
-  {
-   "url": "https://guardaseriex.work/serietv-popolari/",
-   "status": 200,
-   "byte": 404803,
-   "secondi": 0.8,
-   "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie"
-  },
-  {
-   "url": "https://guardaseriex.work/serietv-streaming",
-   "status": 200,
-   "byte": 100534,
-   "secondi": 0.5,
-   "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie"
-  },
-  {
-   "url": "https://guardaseriex.work/biografico/",
-   "status": 200,
-   "byte": 221721,
-   "secondi": 0.4,
+   "byte": 221360,
+   "secondi": 0.6,
    "titolo_pagina": "Biografico streaming | Guardaserie"
   },
   {
-   "url": "https://guardaseriex.work/commedia/",
+   "url": "https://guardaseriex.lol/commedia/",
    "status": 200,
-   "byte": 2271236,
-   "secondi": 0.5,
+   "byte": 2267890,
+   "secondi": 0.9,
    "titolo_pagina": "Commedia streaming | Guardaserie"
   },
   {
-   "url": "https://guardaseriex.work/crime/",
+   "url": "https://guardaseriex.lol/crime/",
    "status": 200,
-   "byte": 1265381,
-   "secondi": 0.2,
+   "byte": 1263547,
+   "secondi": 0.4,
    "titolo_pagina": "Crime streaming | Guardaserie"
   },
   {
-   "url": "https://guardaseriex.work/index.php?story=avatar&do=search&subaction=search",
+   "url": "https://guardaseriex.lol/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 38269,
-   "secondi": 0.6,
+   "byte": 38169,
+   "secondi": 0.7,
    "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS"
   }
  ],

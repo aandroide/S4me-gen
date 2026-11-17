@@ -1,6 +1,6 @@
 {
  "canale": "ilgeniodellostreaming_cam",
- "host": "https://il-geniodellostreaming.tattoo",
+ "host": "https://il-geniodellostreaming.website",
  "passi": [
   {
    "passo": "mainlist",
@@ -10,7 +10,7 @@
   {
    "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 17
+   "voci": 18
   },
   {
    "passo": "check su \"177 Giorni. Il rapimento di Farouk\"",
@@ -37,7 +37,7 @@
      "inizio": "{\"error\":\"not found\"}"
     },
     {
-     "referer": "https://il-geniodellostreaming.tattoo/",
+     "referer": "https://il-geniodellostreaming.website/",
      "status": 404,
      "inizio": "{\"error\":\"not found\"}"
     }
@@ -56,14 +56,14 @@
    "azione": "peliculas",
    "problemi": [
     "tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk",
-    "tipo undefined, in Kodi appare come cartella: La vita segreta delle mogli Mormoni: Orange County",
+    "tipo undefined, in Kodi appare come cartella: Anatomy of a G.O.A.T",
     "tipo undefined, in Kodi appare come cartella: Cunk on Cinema",
     "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
     "tipo undefined, in Kodi appare come cartella: Bagarre",
     "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia"
    ],
    "esito": "OK",
-   "titoli": 16
+   "titoli": 17
   },
   {
    "voce": "•• Generi",
@@ -126,42 +126,42 @@
      "azione": "peliculas",
      "problemi": [
       "tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk",
-      "tipo undefined, in Kodi appare come cartella: La vita segreta delle mogli Mormoni: Orange County",
+      "tipo undefined, in Kodi appare come cartella: Anatomy of a G.O.A.T",
       "tipo undefined, in Kodi appare come cartella: Cunk on Cinema",
       "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
       "tipo undefined, in Kodi appare come cartella: Bagarre",
       "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia"
      ],
      "esito": "OK",
-     "titoli": 16
+     "titoli": 17
     },
     {
      "voce": "A",
      "azione": "peliculas",
      "problemi": [
       "tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk",
-      "tipo undefined, in Kodi appare come cartella: La vita segreta delle mogli Mormoni: Orange County",
+      "tipo undefined, in Kodi appare come cartella: Anatomy of a G.O.A.T",
       "tipo undefined, in Kodi appare come cartella: Cunk on Cinema",
       "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
       "tipo undefined, in Kodi appare come cartella: Bagarre",
       "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia"
      ],
      "esito": "OK",
-     "titoli": 16
+     "titoli": 17
     },
     {
      "voce": "B",
      "azione": "peliculas",
      "problemi": [
       "tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk",
-      "tipo undefined, in Kodi appare come cartella: La vita segreta delle mogli Mormoni: Orange County",
+      "tipo undefined, in Kodi appare come cartella: Anatomy of a G.O.A.T",
       "tipo undefined, in Kodi appare come cartella: Cunk on Cinema",
       "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
       "tipo undefined, in Kodi appare come cartella: Bagarre",
       "tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia"
      ],
      "esito": "OK",
-     "titoli": 16
+     "titoli": 17
     }
    ]
   },
@@ -177,9 +177,9 @@
    "esito": "VUOTA",
    "pagine": [
     {
-     "url": "https://il-geniodellostreaming.tattoo/?s=avatar",
+     "url": "https://il-geniodellostreaming.website/?s=avatar",
      "status": 200,
-     "byte": 35026,
+     "byte": 35087,
      "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis"
     }
    ]
@@ -188,114 +188,114 @@
  "sezioni_riepilogo": "4 ok su 5",
  "rete": [
   {
-   "url": "https://il-geniodellostreaming.tattoo/catalog/all",
+   "url": "https://il-geniodellostreaming.website/catalog/all",
    "status": 200,
-   "byte": 37896,
-   "secondi": 1.1,
+   "byte": 38118,
+   "secondi": 0.8,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/film/35544-177-giorni-il-rapimento-di-farouk-streaming.html",
+   "url": "https://il-geniodellostreaming.website/film/35544-177-giorni-il-rapimento-di-farouk-streaming.html",
    "status": 200,
-   "byte": 31051,
-   "secondi": 0.6,
+   "byte": 31730,
+   "secondi": 0.3,
    "titolo_pagina": "177 Giorni. Il rapimento di Farouk Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/film/35544-177-giorni-il-rapimento-di-farouk-streaming.html",
+   "url": "https://il-geniodellostreaming.website/film/35544-177-giorni-il-rapimento-di-farouk-streaming.html",
    "status": 200,
-   "byte": 31051,
+   "byte": 31730,
    "secondi": 0.2,
    "titolo_pagina": "177 Giorni. Il rapimento di Farouk Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/catalog/all",
+   "url": "https://il-geniodellostreaming.website/catalog/all",
    "status": 200,
-   "byte": 37896,
-   "secondi": 0.4,
+   "byte": 38118,
+   "secondi": 0.8,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo",
+   "url": "https://il-geniodellostreaming.website",
    "status": 200,
-   "byte": 99216,
-   "secondi": 0.7,
+   "byte": 87109,
+   "secondi": 0.2,
    "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/serie-tv/",
+   "url": "https://il-geniodellostreaming.website/serie-tv/",
    "status": 200,
-   "byte": 87028,
-   "secondi": 0.2,
+   "byte": 87112,
+   "secondi": 0.7,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/animazione/",
+   "url": "https://il-geniodellostreaming.website/animazione/",
    "status": 200,
-   "byte": 86032,
-   "secondi": 0.4,
+   "byte": 86125,
+   "secondi": 0.7,
    "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/avventura/",
+   "url": "https://il-geniodellostreaming.website/avventura/",
    "status": 200,
-   "byte": 85124,
+   "byte": 85683,
    "secondi": 0.2,
    "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/catalog/all",
+   "url": "https://il-geniodellostreaming.website/catalog/all",
    "status": 200,
-   "byte": 37896,
-   "secondi": 0.3,
+   "byte": 38118,
+   "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/catalog/0",
+   "url": "https://il-geniodellostreaming.website/catalog/0",
    "status": 200,
-   "byte": 37732,
+   "byte": 38465,
    "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/catalog/a",
+   "url": "https://il-geniodellostreaming.website/catalog/a",
    "status": 200,
-   "byte": 38276,
-   "secondi": 0.4,
+   "byte": 38503,
+   "secondi": 0.5,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/catalog/b",
+   "url": "https://il-geniodellostreaming.website/catalog/b",
    "status": 200,
-   "byte": 38274,
+   "byte": 37988,
    "secondi": 0.5,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/serie-tv/",
+   "url": "https://il-geniodellostreaming.website/serie-tv/",
    "status": 200,
-   "byte": 87028,
+   "byte": 87112,
    "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://il-geniodellostreaming.tattoo/?s=avatar",
+   "url": "https://il-geniodellostreaming.website/?s=avatar",
    "status": 200,
-   "byte": 35026,
-   "secondi": 2.3,
+   "byte": 35087,
+   "secondi": 2.5,
    "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/14.html"
   }

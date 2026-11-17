@@ -1,29 +1,29 @@
-Canale tantifilm | indirizzo https://tanti-film.rest
+Canale tantifilm | indirizzo https://tanti-film.tattoo
 == mainlist
    -> 5 voci
-      genres | Generi | https://tanti-film.rest
-      peliculas | • Film | https://tanti-film.rest/film
-      peliculas | • Serie TV | https://tanti-film.rest/serie-tv/
-      search | txt70741 … | https://tanti-film.rest
+      genres | Generi | https://tanti-film.tattoo
+      peliculas | • Film | https://tanti-film.tattoo/film
+      peliculas | • Serie TV | https://tanti-film.tattoo/serie-tv/
+      search | txt70741 … | https://tanti-film.tattoo
 == lista "Generi"
    -> 40 voci
-      peliculas | Animazione | https://tanti-film.rest/animazione/
-      peliculas | Avventura | https://tanti-film.rest/avventura/
-      peliculas | Biografico | https://tanti-film.rest/biografico/
-      peliculas | Commedia | https://tanti-film.rest/commedia/
+      peliculas | Animazione | https://tanti-film.tattoo/animazione/
+      peliculas | Avventura | https://tanti-film.tattoo/avventura/
+      peliculas | Biografico | https://tanti-film.tattoo/biografico/
+      peliculas | Commedia | https://tanti-film.tattoo/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
-      check | Anatomy of a G.O.A.T  | https://tanti-film.rest/guarda/35543-anatomy-of-a-g-o-a-t-streaming-streaming-hd.html
-      check | Mammina  | https://tanti-film.rest/guarda/35542-mammina-streaming-streaming-hd.html
-      check | Snoopy presenta: Natale con Snoopy  | https://tanti-film.rest/guarda/35525-snoopy-presenta-natale-con-snoopy-streaming-streaming-hd.html
-      check | Bagarre  | https://tanti-film.rest/guarda/35520-bagarre-streaming-streaming-hd.html
+      check | Anatomy of a G.O.A.T  | https://tanti-film.tattoo/guarda/35543-anatomy-of-a-g-o-a-t-streaming-streaming-hd.html
+      check | Snoopy presenta: Natale con Snoopy  | https://tanti-film.tattoo/guarda/35525-snoopy-presenta-natale-con-snoopy-streaming-streaming-hd.html
+      check | Bagarre  | https://tanti-film.tattoo/guarda/35520-bagarre-streaming-streaming-hd.html
+      check | Desprotexida: delitto in Galizia  | https://tanti-film.tattoo/guarda/35521-desprotexida-delitto-in-galizia-streaming-streaming-hd.html
 == check su "Anatomy of a G.O.A.T "
    -> 2 voci
       play | Anatomy of a G.O.A.T  | https://v.vidxgo.co/tm1821866
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.rest/guarda/35543-anatomy-of-a-g-o-a-t-streaming-streaming-hd.html
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.tattoo/guarda/35543-anatomy-of-a-g-o-a-t-streaming-streaming-hd.html
 == risoluzione vidxgo https://v.vidxgo.co/tm1821866
    api /t/ tm1821866 referer https://v.vidxgo.co/tm1821866 -> 404 {"error":"not found"}
-   api /t/ tm1821866 referer https://tanti-film.rest/ -> 404 {"error":"not found"}
+   api /t/ tm1821866 referer https://tanti-film.tattoo/ -> 404 {"error":"not found"}
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])

@@ -1,8 +1,12 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 10, SI FERMA AL SERVER O AL VIDEO 7, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
+Riepilogo: ARRIVA AL VIDEO 11, SI FERMA AL SERVER O AL VIDEO 6, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
 
-## ARRIVA AL VIDEO (10)
+## ARRIVA AL VIDEO (11)
+
+### altadefinizioneclick
+Sito: https://altadefinizionex.fit | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
 
 ### animesaturn
 Sito: https://www.animesaturn.net | verdetto: ARRIVA AL VIDEO
@@ -13,7 +17,7 @@ Sito: https://www.animeworld.ac | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
 
 ### casacinema
-Sito: https://casa-cinema.top | verdetto: ARRIVA AL VIDEO
+Sito: https://casa-cinema.lol | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
 ### cinetecadibologna
@@ -21,8 +25,7 @@ Sito: http://cinestore.cinetecadibologna.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/x-flv
 
 ### guardaseriecam
-Sito: https://guardaseriex.work | verdetto: ARRIVA AL VIDEO
-- passo "episodios su "FOMO - Fear Of Missing Out"": VUOTO 
+Sito: https://guardaseriex.lol | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
 ### guardaserieicu
@@ -38,26 +41,22 @@ Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
 
 ### streamingcommunity
-Sito: https://streamingcommunityz.nexus | verdetto: ARRIVA AL VIDEO
+Sito: https://streamingcommunityz.dad | verdetto: ARRIVA AL VIDEO
 - server streamingcommunityws: VIDEO OK m3u8 200
 
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
-- server voe: VIDEO OK m3u8 206
+- server voe: VIDEO OK m3u8 200
 
-## SI FERMA AL SERVER O AL VIDEO (7)
+## SI FERMA AL SERVER O AL VIDEO (6)
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.best | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 - server vixsrc: VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video
 
-### altadefinizioneclick
-Sito: https://altadefinizionex.fit | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
-- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
-
 ### cineblog001
-Sito: https://cineblog001.tires | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+Sito: https://cineblog001.run | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
 ### cineblog01
@@ -70,11 +69,11 @@ Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RI
 - server mega: SERVER NON RISOLVE 
 
 ### ilgeniodellostreaming_cam
-Sito: https://il-geniodellostreaming.tattoo | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+Sito: https://il-geniodellostreaming.website | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
 ### tantifilm
-Sito: https://tanti-film.rest | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+Sito: https://tanti-film.tattoo | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
 ## SI FERMA PRIMA DEL VIDEO (39)
@@ -85,8 +84,10 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista ""Christmas in New Orleans" — Holiday sou"
-- passo "lista ""Christmas in New Orleans" — Holiday sou"": VUOTO 
+Sito:  | verdetto: SI FERMA A: lista "Most Popular "
+- passo "lista "Most Popular "": VUOTO 
+- passo "lista ""Guitar for Christmas" — Carols and holi"": VUOTO 
+- passo "lista "Anniversary: Whitney Houston's "The Body"": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -113,7 +114,7 @@ Sito: https://www.animeforce.it | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• Completi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### animeunity
-Sito: https://www.animeunity.co | verdetto: SI FERMA A: genres su "Genere"
+Sito: https://animeunity.cx | verdetto: SI FERMA A: genres su "Genere"
 - passo "genres su "Genere"": ERRORE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
 - passo "genres su "Genere"": ERRORE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
 - passo "genres su "Genere"": ERRORE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
@@ -145,9 +146,9 @@ Sito: https://cinemalibero.cafe | verdetto: SI FERMA A: lista "• Film"
 
 ### dinostreaming
 Sito: https://dinostreaming.it | verdetto: SI FERMA A: lista "• Film"
-- passo "lista "• Film"": ERRORE kh/addon/core/support.py", line 522, in wrapper     args = func(*args)            ^^^^^^^^^^^ TypeError: '>' not supported between instances of 'str' and 'int' 
-- passo "lista "•• Film al cinema"": ERRORE kh/addon/core/support.py", line 522, in wrapper     args = func(*args)            ^^^^^^^^^^^ TypeError: '>' not supported between instances of 'str' and 'int' 
-- passo "lista "•• Generi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+- passo "lista "• Film"": VUOTO 
+- passo "lista "•• Film al cinema"": VUOTO 
+- passo "lista "•• Generi"": VUOTO 
 
 ### dreamsub
 Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
@@ -156,10 +157,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.hair | verdetto: SI FERMA A: findvideos su "1x01 - Il ladro dell’infinito "
-- passo "findvideos su "1x01 - Il ladro dell’infinito "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/lretaq9md2ph 
-- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty 
-- passo "findvideos su "1x01 - Il ladro dell’infinito "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/frtxhgvj 
+Sito: https://eurostream.hair | verdetto: SI FERMA A: findvideos su "1x00 - La Regina di Ghiaccio (puntata do"
+- passo "findvideos su "1x00 - La Regina di Ghiaccio (puntata do"": ERRORE     ^^^^^   File "/tmp/kh/addon/channels/eurostreaming.py", line 107, in findvideos     raise Exception('Manca qualche server') Exception: Manca qualche server 
+- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk 
+- passo "findvideos su "1x00 - La Regina di Ghiaccio (puntata do"": ERRORE     ^^^^^   File "/tmp/kh/addon/channels/eurostreaming.py", line 107, in findvideos     raise Exception('Manca qualche server') Exception: Manca qualche server 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -221,8 +222,8 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Transformers - L'ultimo cavaliere"
 - passo "findvideos su "Transformers - L'ultimo cavaliere"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Midnight special - Fuga nella notte"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Harry Potter e la camera dei segreti"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Tiziano Terzani: il viaggio della vita"": ERRORE        ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'mediaSelector' 
+- passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
 Sito:  | verdetto: SI FERMA A: lista "Generi "
