@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 4, CORRETTO IN PARTE 1, ROTTO 6, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 10, CLOUDFLARE 1, NON VERIFICATO 5, OK 20, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 4, CORRETTO IN PARTE 1, ROTTO 5, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 11, NON VERIFICATO 5, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (4)
 
@@ -56,14 +56,7 @@ Sito: http://cinestore.cinetecadibologna.it
 - file corretto scritto in rapporti/correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli
 - attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano
 
-## ROTTO (6)
-
-### accuradio
-Sito: https://www.accuradio.com
-- indirizzo scritto nel canale: https://www.accuradio.com
-- ROTTO: peliculas / | patron non trova titoli
--   campione della pagina salvato in rapporti/correzioni/accuradio/pagina_peliculas_home.html
--   nessuna regex sostitutiva trovata automaticamente in /
+## ROTTO (5)
 
 ### cineblog001
 Sito: https://cineblog001.run
@@ -99,6 +92,19 @@ Sito: https://www.animeworld.ac
 -   regex proposta: 249 titoli su 228 card | gruppi persi: episode, year
 -   non applicata al file: la funzione ha piu varianti di regex
 
+### eurostreaming_actor
+Sito: https://eurostreaming.ooo
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- il sito reindirizza a un altro indirizzo: https://guardaseriex.lol (in channels.json c'e https://eurostreaming.ooo)
+- ROTTO: peliculas /animazione/ | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/eurostreaming_actor/pagina_peliculas_animazione.html
+-   regex proposta: 1040 titoli su 344 card | gruppi persi: episode, title2
+-   non applicata al file: la funzione ha piu varianti di regex
+- ROTTO: peliculas /aggiornamento-episodi/ | patron non trova titoli
+-   campione della pagina salvato in rapporti/correzioni/eurostreaming_actor/pagina_peliculas_aggiornamento_episodi.html
+-   nessuna regex sostitutiva trovata automaticamente in /aggiornamento-episodi/
+- riga per channels.json: "eurostreaming_actor": "https://guardaseriex.lol",
+
 ### ilcorsaronero
 Sito: https://ilcorsaronero.link
 - ROTTO: peliculas /cat/film | patron non trova titoli
@@ -116,24 +122,11 @@ Sito: https://ilcorsaronero.link
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.website
-- OK: peliculas /catalog/all | 17 risultati
+- OK: peliculas /catalog/all | 12 risultati
 - ROTTO: peliculas /serie-tv/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/ilgeniodellostreaming_cam/pagina_peliculas_serie_tv.html
 -   regex proposta: 20 titoli su 20 card | gruppi persi: categories, plot, quality, rating
 -   non applicata al file: la funzione ha piu varianti di regex
-
-### raiplay
-Sito: https://www.raiplay.it
-- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
-- OK: https://www.raiplay.it/dirette | html
-- OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
-- OK: https://www.raiplay.it/guidatv | html
-- OK: https://www.raiplay.it/tipologia/film/index.json | json, struttura invariata
-- OK: https://www.raiplay.it/film | html
-- OK: https://www.raiplay.it/tipologia/serieitaliane/index.json | json, struttura invariata
-- OK: https://www.raiplay.it/serieitaliane | html
-- PROBLEMA: https://www.raiplay.it/tipologia/serieinternazionali/index.json | chiavi sparite che il canale legge: contents[].info.description, contents[].layout
-- OK: https://www.raiplay.it/serieinternazionali | html
 
 ## DOMINIO PARCHEGGIATO (3)
 
@@ -147,22 +140,26 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27679 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 0 | dimensione: 7179 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5638 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5646 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5666 byte): non e un cambio di struttura
 - peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
-## IRRAGGIUNGIBILE (10)
+## IRRAGGIUNGIBILE (11)
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live
 - findhost non ha dato un indirizzo partendo da https://altadefinizione.nuovo.live: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+
+### altadefinizione01
+Sito: https://altadefinizione-01.best
+- il nome del sito non esiste piu (DNS) (https://altadefinizione-01.best)
 
 ### altadefinizionecommunity
 Sito: https://altaregistrazione.net
@@ -200,19 +197,12 @@ Sito: http://ww25.mondoserietv.club
 Sito: https://piratestreaming.design
 - il nome del sito non esiste piu (DNS) (https://piratestreaming.design)
 
-## CLOUDFLARE (1)
-
-### eurostreaming_actor
-Sito: https://eurostreaming.ooo
-- FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://eurostreaming.ooo)
-
 ## NON VERIFICATO (5)
 
 ### animeunity
 Sito: https://animeunity.cx
 - home https://animeunity.cx: FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl
-- non controllabile senza parametri: https://animeunity.cx/archivio (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
-- non controllabile senza parametri: https://animeunity.cx/archivio/get-animes (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
+- non controllabile senza parametri: https://animeunity.cx/archive (FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Cloudflare has blocked this request. Probabl)
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
 ### aniplay
@@ -232,7 +222,7 @@ Sito: https://streamingita.homes
 Sito: https://vixsrc.to
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
-## OK (20)
+## OK (21)
 
 ### 1337x
 Sito: https://1337x.to
@@ -241,12 +231,10 @@ Sito: https://1337x.to
 - OK: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | 14 risultati
 - OK: peliculas /movie-library/1/ | 25 risultati
 
-### altadefinizione01
-Sito: https://altadefinizione-01.best
-- OK: peliculas /lastnews/ | 99 risultati
-- OK: peliculas /cinema/ | 101 risultati
-- OK: peliculas /sub-ita/ | 101 risultati
-- OK: peliculas /serie-tv/ | 101 risultati
+### accuradio
+Sito: https://www.accuradio.com
+- indirizzo scritto nel canale: https://www.accuradio.com
+- OK: peliculas / | 48 risultati
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.fit
@@ -267,7 +255,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 78 risultati
+- OK: peliculas /updated | 80 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -285,9 +273,9 @@ Sito: https://www.discoveryplus.com
 - OK: https://eu1-prod-direct.discoveryplus.com | html
 
 ### eurostreaming
-Sito: https://eurostream.hair
+Sito: https://eurostream.skin
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
-- peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.hair/?p=23012, controllo quella
+- peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.skin/?p=23012, controllo quella
 - OK: peliculas /aggiornamento-episodi-nuovi/ | 96 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
@@ -336,6 +324,19 @@ Sito: https://pluto.tv
 - OK: https://pluto.tv | html
 - OK: https://pluto.tv/ | html
 
+### raiplay
+Sito: https://www.raiplay.it
+- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
+- OK: https://www.raiplay.it/dirette | html
+- OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
+- OK: https://www.raiplay.it/guidatv | html
+- OK: https://www.raiplay.it/tipologia/film/index.json | json, struttura invariata
+- OK: https://www.raiplay.it/film | html
+- OK: https://www.raiplay.it/tipologia/serieitaliane/index.json | json, struttura invariata
+- OK: https://www.raiplay.it/serieitaliane | html
+- OK: https://www.raiplay.it/tipologia/serieinternazionali/index.json | json, struttura invariata
+- OK: https://www.raiplay.it/serieinternazionali | html
+
 ### streamingcommunity
 Sito: https://streamingcommunityz.dad
 - OK: Pagina film (sliders) | 30 titoli in props.sliders.0.titles
@@ -346,7 +347,7 @@ Sito: https://streamingcommunityz.dad
 - OK: Archivio per nome | 60 titoli in props.titles
 - OK: Ricerca | 60 titoli in props.titles
 - OK: Generi | 20 titoli in props.genres
-- OK: serie di esempio /it/titles/66576-silent-night | 1 stagioni, 1 episodi nella prima
+- OK: serie di esempio /it/titles/66625-vienna-game | 1 stagioni, 6 episodi nella prima
 
 ### thepiratebay
 Sito: https://apibay.org
@@ -356,9 +357,9 @@ Sito: https://apibay.org
 Sito: https://toonitalia.xyz
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
 - OK: peliculas /category/anime | 400 risultati
-- OK: peliculas /anime-ita | 2784 risultati
+- OK: peliculas /anime-ita | 2786 risultati
 - attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
-- OK: peliculas /contatti | 826 risultati
+- OK: peliculas /contatti | 824 risultati
 - attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 
 ### tunein
