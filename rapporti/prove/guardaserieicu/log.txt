@@ -7,18 +7,18 @@ Canale guardaserieicu | indirizzo
       channel_config | txt60587 %s | 
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Scrubs | https://guardaseriex.lol/commedia/5388-scrubs-streaming.html
-      episodios | Babylon Berlin | https://guardaseriex.lol/crime/1541-babylon-berlin.html
+      episodios | The Good Daughter | https://guardaseriex.lol/dramma/5896-the-good-daughter-streaming.html
       episodios | Karin Piccola Dea | https://guardaseriex.lol/animazione/5895-karin-piccola-dea-streaming.html
-      episodios | I casi di Alicia | https://guardaseriex.lol/dramma/5892-i-casi-di-alicia-streaming.html
-== episodios su "Scrubs"
+      episodios | Merry Berry Love | https://guardaseriex.lol/commedia/5815-merry-berry-love-streaming.html
+      episodios | Nocturne | https://guardaseriex.lol/crime/5867-nocturne-streaming.html
+== episodios su "The Good Daughter"
    -> 2 voci
-      findvideos | 1x01 - Il mio ritorno | https://guardaseriex.lol/commedia/5388-scrubs-streaming.html
-      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.lol/commedia/5388-scrubs-streaming.html
-== findvideos su "1x01 - Il mio ritorno"
+      findvideos | 1x01 - Cos'è successo a Charlie | https://guardaseriex.lol/dramma/5896-the-good-daughter-streaming.html
+      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.lol/dramma/5896-the-good-daughter-streaming.html
+== findvideos su "1x01 - Cos'è successo a Charlie"
    -> 1 voci
-      play | 1x01 - Il mio ritorno | https://v.vidxgo.co/40197357/1/1
-== risoluzione vidxgo https://v.vidxgo.co/40197357/1/1
+      play | 1x01 - Cos'è successo a Charlie | https://v.vidxgo.co/31842126/1/1
+== risoluzione vidxgo https://v.vidxgo.co/31842126/1/1
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (2)
     tvshow | '/serietv-streaming/page/1/'
@@ -26,7 +26,7 @@ Canale guardaserieicu | indirizzo
 == controllo di tutte le sezioni
    SEZIONE • Serie TV -> OK 18 
    SEZIONE Biografico -> OK 129 
-   SEZIONE Commedia -> OK 1531 
+   SEZIONE Commedia -> OK 1533 
    SEZIONE Crime -> OK 852 
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE •• txt70741 Serie TV… -> OK 4 

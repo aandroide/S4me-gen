@@ -6,22 +6,42 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
       peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.best
       genres | •• Generi | https://altadefinizione-01.best
 == lista "Tutti "
-   -> 30 voci
-      check | Anatomy of a G.O.A.T  | https://altadefinizione-01.best/35543-anatomy-of-a-g-o-a-t-streaming.html
-      check | Bagarre  | https://altadefinizione-01.best/35520-bagarre-streaming.html
-      check | Desprotexida: delitto in Galizia  | https://altadefinizione-01.best/35521-desprotexida-delitto-in-galizia-streaming.html
-      check | NAZA  | https://altadefinizione-01.best/35517-naza-streaming.html
-== check su "Anatomy of a G.O.A.T "
-   -> 3 voci
-      play | Anatomy of a G.O.A.T  | https://v.vidxgo.co/tm1821866
-      play | Anatomy of a G.O.A.T  | https://vixsrc.to/movie/1821866
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.best/35543-anatomy-of-a-g-o-a-t-streaming.html
-== risoluzione vidxgo https://v.vidxgo.co/tm1821866
-   api /t/ tm1821866 referer https://v.vidxgo.co/tm1821866 -> 404 {"error":"not found"}
-   api /t/ tm1821866 referer https://altadefinizione-01.best/ -> 404 {"error":"not found"}
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
-== risoluzione vixsrc https://vixsrc.to/movie/1821866
-   -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
+
+== lista "•• Al Cinema"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
+
+== lista "•• Ultimi Aggiornati-Aggiunti"
+Traceback (most recent call last):
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
+    r = f()
+        ^^^
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
+
+Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (8)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
     menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])
@@ -32,24 +52,23 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.best
     menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 29 
-   SEZIONE •• Al Cinema -> OK 30 
-   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 41 
-   SEZIONE Azione -> OK 29 
-   SEZIONE Animazione -> OK 27 
-   SEZIONE Avventura -> OK 30 
-   SEZIONE •• Generi -> SOTTOMENU  
-   SEZIONE 0-9 -> OK 30 
-   SEZIONE A -> OK 30 
-   SEZIONE B -> OK 30 
-   SEZIONE •• Lettera -> SOTTOMENU  
-   SEZIONE 2026 -> VUOTA   | ultima pagina: {'url': 'https://altadefinizione-01.best/find/2026/', 'status': 404, 'byte': 764, 'titolo_pagina': '404 | Not Found'}
-   SEZIONE 2025 -> VUOTA   | ultima pagina: {'url': 'https://altadefinizione-01.best/find/2025/', 'status': 404, 'byte': 764, 'titolo_pagina': '404 | Not Found'}
-   SEZIONE 2024 -> VUOTA   | ultima pagina: {'url': 'https://altadefinizione-01.best/find/2024/', 'status': 404, 'byte': 764, 'titolo_pagina': '404 | Not Found'}
-   SEZIONE •• Anni -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://altadefinizione-01.best/find/2025/', 'status': 404, 'byte': 764, 'titolo_pagina': '404 | Not Found'}
-   SEZIONE •• Sub-ITA -> OK 30 
-   SEZIONE Serie TV -> OK 30 
-   SEZIONE txt70741 … -> OK 6 
-SEZIONI: 8 ok su 9
-   SEZIONE SENZA TITOLI: •• Anni | SOTTOMENU SENZA TITOLI
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+   SEZIONE Tutti -> ERRORE WebErrorException
+   SEZIONE •• Al Cinema -> ERRORE WebErrorException
+   SEZIONE •• Ultimi Aggiornati-Aggiunti -> ERRORE WebErrorException
+   SEZIONE •• Generi -> ERRORE WebErrorException
+   SEZIONE •• Lettera -> ERRORE WebErrorException
+   SEZIONE •• Anni -> ERRORE WebErrorException
+   SEZIONE •• Sub-ITA -> ERRORE WebErrorException
+   SEZIONE Serie TV -> ERRORE WebErrorException
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://altadefinizione-01.best', 'status': "'NoneType' object has no attribute 'elapsed'", 'byte': 0, 'titolo_pagina': ''}
+SEZIONI: 0 ok su 9
+   SEZIONE SENZA TITOLI: Tutti | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: •• Al Cinema | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: •• Ultimi Aggiornati-Aggiunti | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: •• Generi | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: •• Lettera | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: •• Anni | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: •• Sub-ITA | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: Serie TV | ERRORE WebErrorException
+   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
+VERDETTO: SI FERMA A: lista "Tutti "

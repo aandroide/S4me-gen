@@ -25,7 +25,7 @@
   {
    "passo": "peliculas su \"A\"",
    "esito": "OK",
-   "voci": 13
+   "voci": 14
   },
   {
    "passo": "findvideos su \"A caccia del vedovo d'oro\"",
@@ -72,7 +72,7 @@
    "sottovoci": 7,
    "figli": [
     {
-     "voce": "str12 17 str31",
+     "voce": "str13 18 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
      "sottovoci": 15,
@@ -86,14 +86,40 @@
       {
        "voce": "Rai 2",
        "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
+       "esito": "OK",
+       "titoli": 23
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
        "esito": "OK",
        "titoli": 17
+      }
+     ]
+    },
+    {
+     "voce": "str12 17 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 33
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 33
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 30
       }
      ]
     },
@@ -122,32 +148,6 @@
        "pagine": []
       }
      ]
-    },
-    {
-     "voce": "str17 15 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      }
-     ]
     }
    ]
   },
@@ -161,7 +161,7 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     },
     {
      "voce": "Da non perdere",
@@ -239,7 +239,7 @@
      "voce": "Intrattenimento",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 22
     },
     {
      "voce": "Territori e itinerari",
@@ -277,7 +277,7 @@
      "voce": "Documentari Original",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 25
     }
    ]
   },
@@ -343,7 +343,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 22
     },
     {
      "voce": "Il teatro di Eduardo",
@@ -355,7 +355,7 @@
      "voce": "Musica classica",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 25
+     "titoli": 24
     }
    ]
   },
@@ -447,7 +447,7 @@
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
    "byte": 597,
-   "secondi": 1.1,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }

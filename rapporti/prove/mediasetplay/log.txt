@@ -6,7 +6,7 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 135 voci
+   -> 134 voci
       findvideos | Transformers - L'ultimo cavaliere | https://mediasetinfinity.mediaset.it/movie/transformerslultimocavaliere/transformers-lultimo-cavalie
       findvideos | Overdrive | https://mediasetinfinity.mediaset.it/movie/overdrive/overdrive_F308184301000102
       findvideos | Indiana Jones e il regno del teschio di cristallo | https://mediasetinfinity.mediaset.it/movie/indianajoneseilregnodelteschiodicristallo/indiana-jones-e
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 21 voci
-      findvideos | Tiziano Terzani: il viaggio della vita | https://mediasetinfinity.mediaset.it/movie/tizianoterzaniilviaggiodellavita/tiziano-terzani-il-viagg
-      findvideos | Sobibor - La grande fuga | https://mediasetinfinity.mediaset.it/movie/sobiborlagrandefuga/sobibor-la-grande-fuga_F3103523010001
-      findvideos | Overdrive | https://mediasetinfinity.mediaset.it/movie/overdrive/overdrive_F308184301000102
-      findvideos | Inga Lindstrom - La speranza di un amore | https://mediasetinfinity.mediaset.it/movie/ingalindstromlasperanzadiunamore/inga-lindstrom-la-speran
-== findvideos su "Tiziano Terzani: il viaggio della vita"
+   -> 20 voci
+      findvideos | Un mondo a parte | https://mediasetinfinity.mediaset.it/movie/unmondoaparte/un-mondo-a-parte_F312712801000101
+      findvideos | La figlia della sciamana | https://mediasetinfinity.mediaset.it/movie/lafigliadellasciamana/la-figlia-della-sciamana_F307002701
+      findvideos | Inga Lindstrom - L'altra figlia | https://mediasetinfinity.mediaset.it/movie/ingalindstromlaltrafiglia/inga-lindstrom-laltra-figlia_F3
+      findvideos | Una notte da dottore | https://mediasetinfinity.mediaset.it/movie/unanottedadottore/una-notte-da-dottore_F310798501000101
+== findvideos su "Un mondo a parte"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -88,15 +88,15 @@ Nessuna voce da riprodurre trovata
     menu | ('Documentari più visti {submenu}', ['/documentari', 'peliculas', {'uxReference': 'documentariPiuVisti24H'}, '
     menu | ('Film Documentari di Focus {submenu}', ['/documentari', 'peliculas', {'uxReference': 'filmDocumentari'}, 'und
 == controllo di tutte le sezioni
-   SEZIONE Dirette -> OK 48 
-   SEZIONE Replay -> OK 24 
-   SEZIONE •• Tutti i Film -> OK 69 
+   SEZIONE Dirette -> OK 46 
+   SEZIONE Replay -> OK 23 
+   SEZIONE •• Tutti i Film -> OK 67 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 6 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 5 
    SEZIONE I Simpson -> OK 5 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
@@ -110,8 +110,8 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• TV Movie italiani -> OK 20 
    SEZIONE •• Animazione Made in Japan -> OK 1 
    SEZIONE I Simpson -> OK 5 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 6 
-   SEZIONE Law & Order: Unità speciale 15 -> OK 6 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 5 
+   SEZIONE Law & Order: Unità speciale 15 -> OK 4 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
    SEZIONE Racconto di una notte -> OK 4 
    SEZIONE Forbidden Fruit 4 -> OK 4 
@@ -129,20 +129,20 @@ Nessuna voce da riprodurre trovata
    SEZIONE Amici 26 -> OK 10 
    SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE •• Talent e reality -> SOTTOMENU  
-   SEZIONE Teen Titans Go! -> OK 10 
    SEZIONE Lo straordinario mondo di Gumball -> OK 9 
-   SEZIONE Looney Tunes Cartoons -> OK 5 
+   SEZIONE Teen Titans Go! -> OK 10 
+   SEZIONE Captain Tsubasa 2 -> OK 20 
    SEZIONE •• Kids Boing -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Paw Patrol -> OK 5 
+   SEZIONE La casa delle bambole di Gabby -> OK 5 
    SEZIONE Hey Duggee -> OK 5 
-   SEZIONE Chi ha sfidato Ninna e Matti? -> OK 15 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
-   SEZIONE Pollyanna -> OK 13 
+   SEZIONE Pollyanna -> OK 16 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 13 
+   SEZIONE •• Tutti i Documentari -> OK 12 
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Enigmi alieni 10 -> OK 8 
    SEZIONE Universo ai raggi X 5 -> OK 8 

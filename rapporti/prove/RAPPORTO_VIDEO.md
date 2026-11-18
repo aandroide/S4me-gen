@@ -1,8 +1,8 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 11, SI FERMA AL SERVER O AL VIDEO 6, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 2
+Riepilogo: ARRIVA AL VIDEO 12, SI FERMA AL SERVER O AL VIDEO 4, SI FERMA PRIMA DEL VIDEO 40, SENZA ESITO 2
 
-## ARRIVA AL VIDEO (11)
+## ARRIVA AL VIDEO (12)
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.fit | verdetto: ARRIVA AL VIDEO
@@ -11,6 +11,10 @@ Sito: https://altadefinizionex.fit | verdetto: ARRIVA AL VIDEO
 ### animesaturn
 Sito: https://www.animesaturn.net | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
+
+### animeunity
+Sito: https://animeunity.cx | verdetto: ARRIVA AL VIDEO
+- server streamingcommunityws: VIDEO OK m3u8 200
 
 ### animeworld
 Sito: https://www.animeworld.ac | verdetto: ARRIVA AL VIDEO
@@ -48,21 +52,11 @@ Sito: https://streamingcommunityz.dad | verdetto: ARRIVA AL VIDEO
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
 - server voe: VIDEO OK m3u8 200
 
-## SI FERMA AL SERVER O AL VIDEO (6)
-
-### altadefinizione01
-Sito: https://altadefinizione-01.best | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
-- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
-- server vixsrc: VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video
+## SI FERMA AL SERVER O AL VIDEO (4)
 
 ### cineblog001
 Sito: https://cineblog001.run | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
-
-### cineblog01
-Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
-- server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
-- server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
 
 ### hd4me
 Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE
@@ -76,7 +70,7 @@ Sito: https://il-geniodellostreaming.website | verdetto: SI FERMA AL SERVER O AL
 Sito: https://tanti-film.tattoo | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
-## SI FERMA PRIMA DEL VIDEO (39)
+## SI FERMA PRIMA DEL VIDEO (40)
 
 ### 1337x
 Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
@@ -86,14 +80,19 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 ### accuradio
 Sito:  | verdetto: SI FERMA A: lista "Most Popular "
 - passo "lista "Most Popular "": VUOTO 
-- passo "lista ""Guitar for Christmas" — Carols and holi"": VUOTO 
-- passo "lista "Anniversary: Whitney Houston's "The Body"": VUOTO 
+- passo "lista ""Holiday Season '63" — The hits, and the"": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
 - passo "lista "Film "": ERRORE kh/addon/core/support.py", line 522, in wrapper     args = func(*args)            ^^^^^^^^^^^ TypeError: '>' not supported between instances of 'str' and 'int' 
 - passo "lista "•• Film al cinema"": ERRORE kh/addon/core/support.py", line 522, in wrapper     args = func(*args)            ^^^^^^^^^^^ TypeError: '>' not supported between instances of 'str' and 'int' 
 - passo "lista "Generi "": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+
+### altadefinizione01
+Sito: https://altadefinizione-01.best | verdetto: SI FERMA A: lista "Tutti "
+- passo "lista "Tutti "": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+- passo "lista "•• Al Cinema"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+- passo "lista "•• Ultimi Aggiornati-Aggiunti"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### altadefinizionecommunity
 Sito: https://altaregistrazione.net | verdetto: SI FERMA A: lista "• Film"
@@ -112,12 +111,6 @@ Sito: https://www.animeforce.it | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "• Anime"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• In Corso"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• Completi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
-
-### animeunity
-Sito: https://animeunity.cx | verdetto: SI FERMA A: genres su "Genere"
-- passo "genres su "Genere"": ERRORE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
-- passo "genres su "Genere"": ERRORE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
-- passo "genres su "Genere"": ERRORE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
 
 ### animeuniverse
 Sito:  | verdetto: SI FERMA A: lista "• Anime"
@@ -138,6 +131,12 @@ Sito: https://cb01new.one | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• Genere"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 - passo "lista "•• Per Lettera"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
+### cineblog01
+Sito: https://cb01official.uno | verdetto: SI FERMA A: lista "• Film"
+- passo "lista "• Film"": VUOTO 
+- passo "lista "•• HD"": VUOTO 
+- passo "lista "•• Genere"": VUOTO 
+
 ### cinemalibero
 Sito: https://cinemalibero.cafe | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Film"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
@@ -145,9 +144,9 @@ Sito: https://cinemalibero.cafe | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "•• Generi"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### dinostreaming
-Sito: https://dinostreaming.it | verdetto: SI FERMA A: lista "• Film"
-- passo "lista "• Film"": VUOTO 
-- passo "lista "•• Film al cinema"": VUOTO 
+Sito: https://dinostreaming.it | verdetto: SI FERMA A: findvideos su "Casino Royale"
+- passo "findvideos su "Casino Royale"": VUOTO 
+- passo "findvideos su "Casino Royale"": VUOTO 
 - passo "lista "•• Generi"": VUOTO 
 
 ### dreamsub
@@ -157,10 +156,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.hair | verdetto: SI FERMA A: findvideos su "1x00 - La Regina di Ghiaccio (puntata do"
-- passo "findvideos su "1x00 - La Regina di Ghiaccio (puntata do"": ERRORE     ^^^^^   File "/tmp/kh/addon/channels/eurostreaming.py", line 107, in findvideos     raise Exception('Manca qualche server') Exception: Manca qualche server 
+Sito: https://eurostream.skin | verdetto: SI FERMA A: findvideos su "1x01 - Klamath Falls "
+- passo "findvideos su "1x01 - Klamath Falls "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/ze9b8iau5a1c 
 - passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk 
-- passo "findvideos su "1x00 - La Regina di Ghiaccio (puntata do"": ERRORE     ^^^^^   File "/tmp/kh/addon/channels/eurostreaming.py", line 107, in findvideos     raise Exception('Manca qualche server') Exception: Manca qualche server 
+- passo "findvideos su "1x01 - Klamath Falls "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/ze9b8iau5a1c 
 
 ### eurostreaming_actor
 Sito: https://eurostreaming.ooo | verdetto: SI FERMA A: lista "• Serie TV"
@@ -222,7 +221,7 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Transformers - L'ultimo cavaliere"
 - passo "findvideos su "Transformers - L'ultimo cavaliere"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Tiziano Terzani: il viaggio della vita"": ERRORE        ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'mediaSelector' 
+- passo "findvideos su "Un mondo a parte"": ERRORE        ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'mediaSelector' 
 - passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo

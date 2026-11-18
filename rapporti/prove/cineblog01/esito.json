@@ -9,33 +9,21 @@
   },
   {
    "passo": "lista \"• Film\"",
-   "esito": "OK",
-   "voci": 13
+   "esito": "VUOTO",
+   "voci": 0
   },
   {
-   "passo": "findvideos su \"Mammina \"",
-   "esito": "OK",
-   "voci": 3
-  }
- ],
- "video": [
-  {
-   "server": "mixdrop",
-   "url": "https://m1xdrop.net/e/l777rdgnuqg71mq",
-   "tipo": "film",
-   "finale": "http://o230m5y6z.mxcontent.net/v2/l777rdgnuqg71mq.mp4?s=o2bHmj4pL54jzqKOQ037Fw&e=1794948362&_t=1794935254",
-   "esito": "VIDEO NON RAGGIUNGIBILE",
-   "dettaglio": "HTTP 403"
+   "passo": "lista \"•• HD\"",
+   "esito": "VUOTO",
+   "voci": 0
   },
   {
-   "server": "mixdrop",
-   "url": "https://m1xdrop.net/e/dkkkwz49s7dkvng",
-   "tipo": "film",
-   "finale": "http://q2dgt5pce.mxcontent.net/v2/dkkkwz49s7dkvng.mp4?s=2aZL9rqAeRaUn2V9xJJ_2g&e=1794948365&_t=1794927635",
-   "esito": "VIDEO NON RAGGIUNGIBILE",
-   "dettaglio": "HTTP 403"
+   "passo": "lista \"•• Genere\"",
+   "esito": "VUOTO",
+   "voci": 0
   }
  ],
+ "video": [],
  "menu_dichiarato": [
   "film | ('HD', ['', 'menu', 'Film HD Streaming'])",
   "film | ('Genere', ['', 'menu', 'Film per Genere'])",
@@ -56,683 +44,866 @@
   {
    "voce": "• Film",
    "azione": "peliculas",
-   "esito": "OK",
-   "titoli": 12
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://cb01official.uno",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   },
   {
    "voce": "•• HD",
    "azione": "menu",
-   "esito": "SOTTOMENU",
-   "sottovoci": 36,
-   "figli": [
+   "esito": "VUOTA",
+   "pagine": [
     {
-     "voce": "ANIMAZIONE HD",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "AVVENTURA HD",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://cb01official.uno",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "AZIONE HD",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     }
    ]
   },
   {
    "voce": "•• Genere",
    "azione": "menu",
-   "esito": "SOTTOMENU",
-   "sottovoci": 24,
-   "figli": [
+   "esito": "VUOTA",
+   "pagine": [
     {
-     "voce": "ANIMAZIONE",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "AVVENTURA",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://cb01official.uno",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "AZIONE",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     }
    ]
   },
   {
    "voce": "•• Anni",
    "azione": "menu",
-   "esito": "SOTTOMENU",
-   "sottovoci": 126,
-   "figli": [
+   "esito": "VUOTA",
+   "pagine": [
     {
-     "voce": "2026",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "2025",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://cb01official.uno",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "2024",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     }
    ]
   },
   {
    "voce": "•• Popolari per Genere",
    "azione": "menu",
-   "esito": "SOTTOMENU",
-   "sottovoci": 23,
-   "figli": [
+   "esito": "VUOTA",
+   "pagine": [
     {
-     "voce": "ANIMAZIONE",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "AVVENTURA",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://cb01official.uno",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "AZIONE",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+     "status": 403,
+     "byte": 5780,
+     "titolo_pagina": "Just a moment..."
     }
    ]
   },
   {
    "voce": "•• Ultimi Aggiunti",
    "azione": "peliculas",
-   "esito": "OK",
-   "titoli": 20
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/ultimi-100-film-aggiunti/",
+     "status": 403,
+     "byte": 5876,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://cb01official.uno/ultimi-100-film-aggiunti/",
+     "status": 403,
+     "byte": 5876,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/ultimi-100-film-aggiunti/",
+     "status": 403,
+     "byte": 5876,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   },
   {
    "voce": "•• Popolari",
    "azione": "peliculas",
-   "esito": "OK",
-   "titoli": 12
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/film-popolari/",
+     "status": 403,
+     "byte": 5870,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://cb01official.uno/category/film-popolari/",
+     "status": 403,
+     "byte": 5870,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/film-popolari/",
+     "status": 403,
+     "byte": 5870,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   },
   {
    "voce": "•• Italiani",
    "azione": "peliculas",
-   "esito": "OK",
-   "titoli": 12
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/nazione/italia/",
+     "status": 403,
+     "byte": 5873,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://cb01official.uno/category/nazione/italia/",
+     "status": 403,
+     "byte": 5873,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/nazione/italia/",
+     "status": 403,
+     "byte": 5873,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   },
   {
    "voce": "•• txt70741 Film…",
    "azione": "search",
-   "esito": "OK",
-   "titoli": 4
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/search/avatar",
+     "status": 403,
+     "byte": 5819,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://cb01official.uno/search/avatar",
+     "status": 403,
+     "byte": 5819,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/search/avatar",
+     "status": 403,
+     "byte": 5819,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   },
   {
    "voce": "• Serie TV",
    "azione": "peliculas",
-   "esito": "OK",
-   "titoli": 12
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://cb01official.uno/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   },
   {
    "voce": "•• Per Lettera",
    "azione": "menu",
-   "esito": "SOTTOMENU",
-   "sottovoci": 27,
-   "figli": [
+   "esito": "VUOTA",
+   "pagine": [
     {
-     "voce": "(#)",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "(A)",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://cb01official.uno/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "(B)",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
     }
    ]
   },
   {
    "voce": "•• Per Genere",
    "azione": "menu",
-   "esito": "SOTTOMENU",
-   "sottovoci": 27,
-   "figli": [
+   "esito": "VUOTA",
+   "pagine": [
     {
-     "voce": "ANIMAZIONE",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "AVVENTURA",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://cb01official.uno/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "AZIONE",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
     }
    ]
   },
   {
    "voce": "•• Per anno",
    "azione": "menu",
-   "esito": "SOTTOMENU",
-   "sottovoci": 25,
-   "figli": [
+   "esito": "VUOTA",
+   "pagine": [
     {
-     "voce": "2026",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "2025",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://cb01official.uno/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
     },
     {
-     "voce": "2024",
-     "azione": "peliculas",
-     "esito": "OK",
-     "titoli": 12
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
+     "status": 403,
+     "byte": 5804,
+     "titolo_pagina": "Just a moment..."
     }
    ]
   },
   {
    "voce": "•• Ultime Aggiunte",
    "azione": "peliculas",
-   "esito": "OK",
-   "titoli": 20
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/ultime-100-serie-tv-aggiunte/",
+     "status": 403,
+     "byte": 5934,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://cb01official.uno/serietv/ultime-100-serie-tv-aggiunte/",
+     "status": 403,
+     "byte": 5934,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serietv/ultime-100-serie-tv-aggiunte/",
+     "status": 403,
+     "byte": 5934,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   },
   {
    "voce": "•• txt70741 Serie TV…",
    "azione": "search",
-   "esito": "OK",
-   "titoli": 2
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/search/avatar",
+     "status": 403,
+     "byte": 5864,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://cb01official.uno/serietv/search/avatar",
+     "status": 403,
+     "byte": 5864,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serietv/search/avatar",
+     "status": 403,
+     "byte": 5864,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   },
   {
    "voce": "• Documentari",
    "azione": "peliculas",
-   "esito": "OK",
-   "titoli": 12
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/documentario/",
+     "status": 403,
+     "byte": 5867,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://cb01official.uno/category/documentario/",
+     "status": 403,
+     "byte": 5867,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/documentario/",
+     "status": 403,
+     "byte": 5867,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   },
   {
    "voce": "•• HD",
    "azione": "peliculas",
-   "esito": "OK",
-   "titoli": 12
+   "esito": "VUOTA",
+   "pagine": [
+    {
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/hd-alta-definizione/documentario-hd/",
+     "status": 403,
+     "byte": 5958,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://cb01official.uno/category/hd-alta-definizione/documentario-hd/",
+     "status": 403,
+     "byte": 5958,
+     "titolo_pagina": "Just a moment..."
+    },
+    {
+     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/hd-alta-definizione/documentario-hd/",
+     "status": 403,
+     "byte": 5958,
+     "titolo_pagina": "Just a moment..."
+    }
+   ]
   }
  ],
- "sezioni_riepilogo": "17 ok su 17",
+ "sezioni_riepilogo": "0 ok su 17",
  "rete": [
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 0.9,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/01.html"
   },
   {
    "url": "https://cb01official.uno",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 1.0,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.5,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/mammina-hd-2026/",
-   "status": 200,
-   "byte": 331806,
-   "secondi": 0.7,
-   "titolo_pagina": "Mammina [HD] (2026) Streaming - FILM GRATIS by CB01 OFFICIAL",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://cb01one.watch/mammina-hd-2026/",
-   "status": 200,
-   "byte": 331806,
-   "secondi": 0.8,
-   "titolo_pagina": "Mammina [HD] (2026) Streaming - FILM GRATIS by CB01 OFFICIAL",
+   "url": "https://cb01official.uno",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://stayonline.pro/ajax/linkView.php",
-   "status": 200,
-   "byte": 109,
-   "secondi": 0.6,
-   "titolo_pagina": "",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://m1xdrop.net/f/l777rdgnuqg71mq",
-   "status": 302,
-   "byte": 510,
-   "secondi": 0.1,
-   "titolo_pagina": "302 Found",
+   "url": "https://cb01official.uno",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://m1xdrop.net/e/l777rdgnuqg71mq",
-   "status": 200,
-   "byte": 78439,
-   "secondi": 0.6,
-   "titolo_pagina": "",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://stayonline.pro/ajax/linkView.php",
-   "status": 200,
-   "byte": 109,
-   "secondi": 1.1,
-   "titolo_pagina": "",
+   "url": "https://cb01official.uno",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://m1xdrop.net/f/dkkkwz49s7dkvng",
-   "status": 302,
-   "byte": 510,
-   "secondi": 0.1,
-   "titolo_pagina": "302 Found",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://m1xdrop.net/e/dkkkwz49s7dkvng",
-   "status": 200,
-   "byte": 78434,
-   "secondi": 0.5,
-   "titolo_pagina": "",
+   "url": "https://cb01official.uno",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 0.7,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/11.html"
   },
   {
    "url": "https://cb01official.uno",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 0.8,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 0.8,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.7,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/13.html"
   },
   {
    "url": "https://cb01official.uno",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 0.9,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.7,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/14.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/film-hd-streaming/animazione-hd/",
-   "status": 200,
-   "byte": 305138,
-   "secondi": 0.5,
-   "titolo_pagina": "Animazione HD - CB01 OFFICIAL - FILM GRATIS by cb01",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/15.html"
   },
   {
-   "url": "https://cb01official.uno/category/film-hd-streaming/animazione-hd/",
-   "status": 200,
-   "byte": 305138,
-   "secondi": 0.6,
-   "titolo_pagina": "Animazione HD - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/film-hd-streaming/avventura-hd/",
-   "status": 200,
-   "byte": 297738,
-   "secondi": 0.3,
-   "titolo_pagina": "Avventura HD - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://cb01official.uno/category/film-hd-streaming/avventura-hd/",
-   "status": 200,
-   "byte": 297738,
+   "url": "https://cb01official.uno",
+   "status": 403,
+   "byte": 5780,
    "secondi": 0.4,
-   "titolo_pagina": "Avventura HD - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/film-hd-streaming/azione-hd/",
-   "status": 200,
-   "byte": 304893,
-   "secondi": 0.5,
-   "titolo_pagina": "Azione HD - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://cb01official.uno/category/film-hd-streaming/azione-hd/",
-   "status": 200,
-   "byte": 304893,
-   "secondi": 0.6,
-   "titolo_pagina": "Azione HD - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 1.2,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://cb01official.uno",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 1.2,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/animazione/",
-   "status": 200,
-   "byte": 306367,
-   "secondi": 0.9,
-   "titolo_pagina": "Animazione - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://cb01official.uno/category/animazione/",
-   "status": 200,
-   "byte": 306367,
-   "secondi": 0.9,
-   "titolo_pagina": "Animazione - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://cb01official.uno",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/avventura/",
-   "status": 200,
-   "byte": 300475,
-   "secondi": 0.5,
-   "titolo_pagina": "Avventura - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.2,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://cb01official.uno/category/avventura/",
-   "status": 200,
-   "byte": 300475,
-   "secondi": 0.5,
-   "titolo_pagina": "Avventura - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://cb01official.uno",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/azione/",
-   "status": 200,
-   "byte": 305760,
-   "secondi": 0.5,
-   "titolo_pagina": "Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://cb01official.uno/category/azione/",
-   "status": 200,
-   "byte": 305760,
-   "secondi": 0.6,
-   "titolo_pagina": "Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://cb01official.uno",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 1.1,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://cb01official.uno",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 1.2,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anno-2026/",
-   "status": 200,
-   "byte": 293816,
-   "secondi": 0.5,
-   "titolo_pagina": "2026 - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://cb01official.uno/category/anno-2026/",
-   "status": 200,
-   "byte": 293816,
-   "secondi": 0.6,
-   "titolo_pagina": "2026 - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://cb01official.uno",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/anno-2025/",
-   "status": 200,
-   "byte": 294907,
-   "secondi": 0.5,
-   "titolo_pagina": "2025 - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://cb01official.uno/category/anno-2025/",
-   "status": 200,
-   "byte": 294907,
-   "secondi": 0.5,
-   "titolo_pagina": "2025 - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anno-2024/",
-   "status": 200,
-   "byte": 296055,
-   "secondi": 0.5,
-   "titolo_pagina": "2024 - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://cb01official.uno/category/anno-2024/",
-   "status": 200,
-   "byte": 296055,
-   "secondi": 0.5,
-   "titolo_pagina": "2024 - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://cb01official.uno",
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 0.5,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://cb01official.uno",
-   "status": 200,
-   "byte": 548667,
-   "secondi": 0.5,
-   "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
+   "status": 403,
+   "byte": 5780,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/film-popolari/fp-animazione/",
-   "status": 200,
-   "byte": 295759,
-   "secondi": 0.5,
-   "titolo_pagina": "FP-Animazione - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://cb01official.uno/category/film-popolari/fp-animazione/",
-   "status": 200,
-   "byte": 295759,
-   "secondi": 0.6,
-   "titolo_pagina": "FP-Animazione - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/film-popolari/fp-avventura/",
-   "status": 200,
-   "byte": 292636,
-   "secondi": 0.5,
-   "titolo_pagina": "FP-Avventura - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://cb01official.uno/category/film-popolari/fp-avventura/",
-   "status": 200,
-   "byte": 292636,
-   "secondi": 0.5,
-   "titolo_pagina": "FP-Avventura - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/film-popolari/fp-azione/",
-   "status": 200,
-   "byte": 294098,
-   "secondi": 0.5,
-   "titolo_pagina": "FP-Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://cb01official.uno/category/film-popolari/fp-azione/",
-   "status": 200,
-   "byte": 294098,
-   "secondi": 0.6,
-   "titolo_pagina": "FP-Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/ultimi-100-film-aggiunti/",
-   "status": 200,
-   "byte": 327873,
-   "secondi": 0.6,
-   "titolo_pagina": "Ultimi 100 film aggiunti - FILM GRATIS by CB01 OFFICIAL"
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/ultimi-100-film-aggiunti/",
+   "status": 403,
+   "byte": 5876,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://cb01official.uno/ultimi-100-film-aggiunti/",
-   "status": 200,
-   "byte": 327873,
-   "secondi": 0.7,
-   "titolo_pagina": "Ultimi 100 film aggiunti - FILM GRATIS by CB01 OFFICIAL"
+   "status": 403,
+   "byte": 5876,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/film-popolari/",
-   "status": 200,
-   "byte": 318630,
-   "secondi": 0.6,
-   "titolo_pagina": "Film Popolari - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/ultimi-100-film-aggiunti/",
+   "status": 403,
+   "byte": 5876,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://cb01official.uno/ultimi-100-film-aggiunti/",
+   "status": 403,
+   "byte": 5876,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/film-popolari/",
+   "status": 403,
+   "byte": 5870,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://cb01official.uno/category/film-popolari/",
-   "status": 200,
-   "byte": 318630,
-   "secondi": 0.7,
-   "titolo_pagina": "Film Popolari - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "status": 403,
+   "byte": 5870,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/nazione/italia/",
-   "status": 200,
-   "byte": 345516,
-   "secondi": 1.0,
-   "titolo_pagina": "Italia - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/film-popolari/",
+   "status": 403,
+   "byte": 5870,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://cb01official.uno/category/film-popolari/",
+   "status": 403,
+   "byte": 5870,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/nazione/italia/",
+   "status": 403,
+   "byte": 5873,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://cb01official.uno/category/nazione/italia/",
-   "status": 200,
-   "byte": 345516,
-   "secondi": 1.1,
-   "titolo_pagina": "Italia - CB01 OFFICIAL - FILM GRATIS by cb01"
+   "status": 403,
+   "byte": 5873,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/nazione/italia/",
+   "status": 403,
+   "byte": 5873,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://cb01official.uno/category/nazione/italia/",
+   "status": 403,
+   "byte": 5873,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/search/avatar",
-   "status": 200,
-   "byte": 268750,
-   "secondi": 1.3,
-   "titolo_pagina": "Hai cercato avatar - CB01 OFFICIAL - FILM"
+   "status": 403,
+   "byte": 5819,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://cb01official.uno/search/avatar",
-   "status": 200,
-   "byte": 268750,
-   "secondi": 1.3,
-   "titolo_pagina": "Hai cercato avatar - CB01 OFFICIAL - FILM"
+   "status": 403,
+   "byte": 5819,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serietv/",
-   "status": 200,
-   "byte": 347449,
-   "secondi": 0.7,
-   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/search/avatar",
+   "status": 403,
+   "byte": 5819,
+   "secondi": 0.2,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://cb01official.uno/search/avatar",
+   "status": 403,
+   "byte": 5819,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://cb01official.uno/serietv/",
-   "status": 200,
-   "byte": 347449,
-   "secondi": 0.7,
-   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serietv/",
-   "status": 200,
-   "byte": 347449,
-   "secondi": 1.1,
-   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://cb01official.uno/serietv/",
-   "status": 200,
-   "byte": 347449,
-   "secondi": 1.2,
-   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/category/numero/",
-   "status": 200,
-   "byte": 248417,
-   "secondi": 0.5,
-   "titolo_pagina": "# - CB01 OFFICIAL - SERIE-TV"
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serietv/",
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://cb01official.uno/serietv/category/numero/",
-   "status": 200,
-   "byte": 248417,
-   "secondi": 0.6,
-   "titolo_pagina": "# - CB01 OFFICIAL - SERIE-TV"
+   "url": "https://cb01official.uno/serietv/",
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/category/a/",
-   "status": 200,
-   "byte": 250480,
-   "secondi": 0.5,
-   "titolo_pagina": "A - CB01 OFFICIAL - SERIE-TV"
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://cb01official.uno/serietv/category/a/",
-   "status": 200,
-   "byte": 250480,
-   "secondi": 0.5,
-   "titolo_pagina": "A - CB01 OFFICIAL - SERIE-TV"
+   "url": "https://cb01official.uno/serietv/",
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/",
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://cb01official.uno/serietv/",
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/",
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://cb01official.uno/serietv/",
+   "status": 403,
+   "byte": 5804,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment..."
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
+ "verdetto": "SI FERMA A: lista \"• Film\""
 }

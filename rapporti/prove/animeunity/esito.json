@@ -10,35 +10,39 @@
   {
    "passo": "lista \"• Anime\"",
    "esito": "OK",
-   "voci": 7
+   "voci": 12
   },
   {
    "passo": "genres su \"Genere\"",
-   "esito": "ERRORE",
-   "errore": "                                        ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 54, in genres\n    genres = json.loads(support.match(response.data, patron='genres=\"([^\"]+)').match.replace('&quot;','\"'))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
-  },
-  {
-   "passo": "lista \"•• Film\"",
    "esito": "OK",
-   "voci": 5
+   "voci": 46
   },
   {
-   "passo": "genres su \"Genere\"",
-   "esito": "ERRORE",
-   "errore": "                                        ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 54, in genres\n    genres = json.loads(support.match(response.data, patron='genres=\"([^\"]+)').match.replace('&quot;','\"'))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
-  },
-  {
-   "passo": "lista \"•• TV\"",
+   "passo": "peliculas su \"Action\"",
    "esito": "OK",
-   "voci": 7
+   "voci": 34
   },
   {
-   "passo": "genres su \"Genere\"",
-   "esito": "ERRORE",
-   "errore": "                                        ^^^^^\n  File \"/tmp/kh/addon/channels/animeunity.py\", line 54, in genres\n    genres = json.loads(support.match(response.data, patron='genres=\"([^\"]+)').match.replace('&quot;','\"'))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
+   "passo": "episodios su \".hack//Quantum \"",
+   "esito": "OK",
+   "voci": 4
+  },
+  {
+   "passo": "findvideos su \"Episodio 1\"",
+   "esito": "OK",
+   "voci": 1
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "streamingcommunityws",
+   "url": "https://animeunity.cx/anime/831-hackquantum/18482",
+   "tipo": "film",
+   "finale": "https://vixcloud.cc/playlist/103592?token=ef8d6b1bbb7da1f460718a8a683e498d&expires=1800195692&asn=&h=1",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
  "menu_dichiarato": [
   "top | ('Ultimi Episodi', ['', 'news'])",
   "menu | ('Anime {bullet bold}', ['', 'menu', {}, 'tvshow'])",
@@ -52,351 +56,489 @@
   {
    "voce": "Ultimi Episodi",
    "azione": "news",
-   "esito": "ERRORE JSONDecodeError",
-   "pagine": [
-    {
-     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
-     "status": 200,
-     "byte": 415084,
-     "titolo_pagina": ""
-    },
-    {
-     "url": "https://animeunity.cx",
-     "status": 200,
-     "byte": 415084,
-     "titolo_pagina": ""
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "• Anime",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://animeunity.cx/archivio/get-animes",
-     "status": 403,
-     "byte": 7127,
-     "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 30
   },
   {
    "voce": "•• Film",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://animeunity.cx/archivio/get-animes",
-     "status": 403,
-     "byte": 7127,
-     "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 1
   },
   {
    "voce": "•• TV",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://animeunity.cx/archivio/get-animes",
-     "status": 403,
-     "byte": 7127,
-     "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 1
   },
   {
    "voce": "•• OVA",
    "azione": "peliculas",
-   "esito": "SOTTOMENU SENZA TITOLI",
-   "sottovoci": 6,
-   "figli": [
-    {
-     "voce": "Tutti",
-     "azione": "peliculas",
-     "esito": "ERRORE KeyError",
-     "pagine": [
-      {
-       "url": "https://animeunity.cx/archivio/get-animes",
-       "status": 403,
-       "byte": 7127,
-       "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-      }
-     ]
-    },
-    {
-     "voce": "ITA",
-     "azione": "peliculas",
-     "esito": "ERRORE KeyError",
-     "pagine": [
-      {
-       "url": "https://animeunity.cx/archivio/get-animes",
-       "status": 403,
-       "byte": 7127,
-       "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-      }
-     ]
-    },
-    {
-     "voce": "Genere",
-     "azione": "genres",
-     "esito": "ERRORE JSONDecodeError",
-     "pagine": []
-    }
-   ],
-   "pagine": [
-    {
-     "url": "https://animeunity.cx/archivio/get-animes",
-     "status": 403,
-     "byte": 7127,
-     "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-    },
-    {
-     "url": "https://animeunity.cx/archivio/get-animes",
-     "status": 403,
-     "byte": 7127,
-     "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 1
   },
   {
    "voce": "•• ONA",
    "azione": "peliculas",
-   "esito": "SOTTOMENU SENZA TITOLI",
-   "sottovoci": 6,
-   "figli": [
-    {
-     "voce": "Tutti",
-     "azione": "peliculas",
-     "esito": "ERRORE KeyError",
-     "pagine": [
-      {
-       "url": "https://animeunity.cx/archivio/get-animes",
-       "status": 403,
-       "byte": 7127,
-       "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-      }
-     ]
-    },
-    {
-     "voce": "ITA",
-     "azione": "peliculas",
-     "esito": "ERRORE KeyError",
-     "pagine": [
-      {
-       "url": "https://animeunity.cx/archivio/get-animes",
-       "status": 403,
-       "byte": 7127,
-       "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-      }
-     ]
-    },
-    {
-     "voce": "Genere",
-     "azione": "genres",
-     "esito": "ERRORE JSONDecodeError",
-     "pagine": []
-    }
-   ],
-   "pagine": [
-    {
-     "url": "https://animeunity.cx/archivio/get-animes",
-     "status": 403,
-     "byte": 7127,
-     "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-    },
-    {
-     "url": "https://animeunity.cx/archivio/get-animes",
-     "status": 403,
-     "byte": 7127,
-     "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 1
   },
   {
    "voce": "•• Special",
    "azione": "peliculas",
-   "esito": "SOTTOMENU SENZA TITOLI",
-   "sottovoci": 6,
-   "figli": [
-    {
-     "voce": "Tutti",
-     "azione": "peliculas",
-     "esito": "ERRORE KeyError",
-     "pagine": [
-      {
-       "url": "https://animeunity.cx/archivio/get-animes",
-       "status": 403,
-       "byte": 7127,
-       "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-      }
-     ]
-    },
-    {
-     "voce": "ITA",
-     "azione": "peliculas",
-     "esito": "ERRORE KeyError",
-     "pagine": [
-      {
-       "url": "https://animeunity.cx/archivio/get-animes",
-       "status": 403,
-       "byte": 7127,
-       "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-      }
-     ]
-    },
-    {
-     "voce": "Genere",
-     "azione": "genres",
-     "esito": "ERRORE JSONDecodeError",
-     "pagine": []
-    }
-   ],
-   "pagine": [
-    {
-     "url": "https://animeunity.cx/archivio/get-animes",
-     "status": 403,
-     "byte": 7127,
-     "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-    },
-    {
-     "url": "https://animeunity.cx/archivio/get-animes",
-     "status": 403,
-     "byte": 7127,
-     "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 1
   },
   {
    "voce": "txt70741 …",
    "azione": "search",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://animeunity.cx/archivio/get-animes",
-     "status": 403,
-     "byte": 7127,
-     "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 7
   }
  ],
- "sezioni_riepilogo": "0 ok su 8",
+ "sezioni_riepilogo": "8 ok su 8",
  "rete": [
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/archivio",
-   "status": 404,
-   "byte": 39678,
-   "secondi": 0.3,
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/archive",
+   "status": 200,
+   "byte": 145358,
+   "secondi": 0.9,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://animeunity.cx/archivio",
-   "status": 404,
-   "byte": 39678,
-   "secondi": 0.9,
+   "url": "https://animeunity.cx/archive",
+   "status": 200,
+   "byte": 145358,
+   "secondi": 2.1,
    "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?genres[0]=1&page=1",
    "status": 200,
-   "byte": 415084,
-   "secondi": 0.8,
+   "byte": 39818,
+   "secondi": 0.7,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://animeunity.cx",
+   "url": "https://animeunity.cx/api/archive?genres[0]=1&page=1",
    "status": 200,
-   "byte": 415084,
+   "byte": 39818,
    "secondi": 0.8,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://animeunity.cx/archivio/get-animes",
-   "status": 403,
-   "byte": 7127,
-   "secondi": 0.1,
-   "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/anime/831-hackquantum",
+   "status": 200,
+   "byte": 226610,
+   "secondi": 1.2,
+   "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://animeunity.cx/archivio/get-animes",
-   "status": 403,
-   "byte": 7127,
-   "secondi": 0.1,
-   "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx",
+   "url": "https://animeunity.cx/anime/831-hackquantum",
+   "status": 200,
+   "byte": 226610,
+   "secondi": 1.3,
+   "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://animeunity.cx/archivio/get-animes",
-   "status": 403,
-   "byte": 7127,
-   "secondi": 0.1,
-   "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/anime/831-hackquantum/18482",
+   "status": 200,
+   "byte": 226656,
+   "secondi": 0.6,
+   "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://animeunity.cx/archivio/get-animes",
-   "status": 403,
-   "byte": 7127,
-   "secondi": 0.1,
-   "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx",
+   "url": "https://animeunity.cx/anime/831-hackquantum/18482",
+   "status": 200,
+   "byte": 226656,
+   "secondi": 0.6,
+   "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://animeunity.cx/archivio/get-animes",
-   "status": 403,
-   "byte": 7127,
-   "secondi": 0.1,
-   "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx",
+   "url": "https://vixcloud.cc/embed/103592?token=9645696ef6ca4f52efc11caefe2dcba6&expires=1800194400&canPlayFHD=1&skin=animeunity2",
+   "status": 200,
+   "byte": 7879,
+   "secondi": 0.2,
+   "titolo_pagina": "103592",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://animeunity.cx/archivio/get-animes",
-   "status": 403,
-   "byte": 7127,
-   "secondi": 0.2,
-   "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "status": 200,
+   "byte": 414141,
+   "secondi": 0.5,
+   "titolo_pagina": "",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://animeunity.cx/archivio/get-animes",
-   "status": 403,
-   "byte": 7127,
-   "secondi": 0.0,
-   "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx",
+   "url": "https://animeunity.cx",
+   "status": 200,
+   "byte": 414141,
+   "secondi": 0.6,
+   "titolo_pagina": "",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://animeunity.cx/archivio/get-animes",
-   "status": 403,
-   "byte": 7127,
-   "secondi": 0.0,
-   "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=The+Detective+Is+Already+Dead+2",
+   "status": 200,
+   "byte": 1620,
+   "secondi": 0.3,
+   "titolo_pagina": "",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://animeunity.cx/archivio/get-animes",
-   "status": 403,
-   "byte": 7127,
-   "secondi": 0.1,
-   "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx",
+   "url": "https://animeunity.cx/api/archive?query=The+Detective+Is+Already+Dead+2",
+   "status": 200,
+   "byte": 1620,
+   "secondi": 0.3,
+   "titolo_pagina": "",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://animeunity.cx/archivio/get-animes",
-   "status": 403,
-   "byte": 7127,
-   "secondi": 0.1,
-   "titolo_pagina": "Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=Sasaki+and+Peeps+2",
+   "status": 200,
+   "byte": 1589,
+   "secondi": 0.4,
+   "titolo_pagina": "",
    "file": "pagine/14.html"
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Sasaki+and+Peeps+2",
+   "status": 200,
+   "byte": 1589,
+   "secondi": 0.4,
+   "titolo_pagina": "",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=The+World%27s+Strongest+Witch",
+   "status": 200,
+   "byte": 1917,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=The+World%27s+Strongest+Witch",
+   "status": 200,
+   "byte": 1917,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=Super+Cube",
+   "status": 200,
+   "byte": 2469,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Super+Cube",
+   "status": 200,
+   "byte": 2469,
+   "secondi": 0.5,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=Battle+Spirits+%5BRe%5D+Zekkai+No+Ku",
+   "status": 200,
+   "byte": 1575,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Battle+Spirits+%5BRe%5D+Zekkai+No+Ku",
+   "status": 200,
+   "byte": 1575,
+   "secondi": 0.5,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=Magical+Girl+Raising+Project%3A+Restart",
+   "status": 200,
+   "byte": 2367,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Magical+Girl+Raising+Project%3A+Restart",
+   "status": 200,
+   "byte": 2367,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=Red+River",
+   "status": 200,
+   "byte": 2138,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Red+River",
+   "status": 200,
+   "byte": 2138,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=Dark+Machine+The+Animation",
+   "status": 200,
+   "byte": 2368,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Dark+Machine+The+Animation",
+   "status": 200,
+   "byte": 2368,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=Chitose+Is+in+the+Ramune+Bottle+Part+2",
+   "status": 200,
+   "byte": 1644,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Chitose+Is+in+the+Ramune+Bottle+Part+2",
+   "status": 200,
+   "byte": 1644,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=The+Laid-Off+Cheat-Granting+Mage+Enjoys+a+Second+Lease+on+Life",
+   "status": 200,
+   "byte": 2860,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=The+Laid-Off+Cheat-Granting+Mage+Enjoys+a+Second+Lease+on+Life",
+   "status": 200,
+   "byte": 2860,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=Super+Psychic+Policeman+Chojo",
+   "status": 200,
+   "byte": 1752,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Super+Psychic+Policeman+Chojo",
+   "status": 200,
+   "byte": 1752,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=Suikoden%3A+The+Anime",
+   "status": 200,
+   "byte": 2064,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Suikoden%3A+The+Anime",
+   "status": 200,
+   "byte": 2064,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=The+Cold+Sato-san+is+Only+Sweet+to+Me",
+   "status": 200,
+   "byte": 2218,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=The+Cold+Sato-san+is+Only+Sweet+to+Me",
+   "status": 200,
+   "byte": 2218,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=Nia+Liston%3A+The+Merciless+Maiden",
+   "status": 200,
+   "byte": 2504,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Nia+Liston%3A+The+Merciless+Maiden",
+   "status": 200,
+   "byte": 2504,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=Dragon+Ball+Daima",
+   "status": 200,
+   "byte": 1932,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Dragon+Ball+Daima",
+   "status": 200,
+   "byte": 1932,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=A+Will+Eternal+4",
+   "status": 200,
+   "byte": 1465,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=A+Will+Eternal+4",
+   "status": 200,
+   "byte": 1465,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=Lazarus",
+   "status": 200,
+   "byte": 2306,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Lazarus",
+   "status": 200,
+   "byte": 2306,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=Boruto%3A+Naruto+Next+Generations",
+   "status": 200,
+   "byte": 1918,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Boruto%3A+Naruto+Next+Generations",
+   "status": 200,
+   "byte": 1918,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?page=1",
+   "status": 200,
+   "byte": 41425,
+   "secondi": 0.7,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?page=1",
+   "status": 200,
+   "byte": 41425,
+   "secondi": 0.8,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=avatar&page=1",
+   "status": 200,
+   "byte": 9047,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=avatar&page=1",
+   "status": 200,
+   "byte": 9047,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/genre/movie/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 562,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%202&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 919,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/genre/tv/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 495,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=avatar%20-%20la%20leggenda%20di%20korra&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 591,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%20%282018%29&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 57,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%203&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 919,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/movie?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%3A%20for%20the%20glory&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 606,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 1273,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%20%282018%29&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 57,
+   "secondi": 0.1,
+   "titolo_pagina": ""
   }
  ],
- "verdetto": "SI FERMA A: genres su \"Genere\""
+ "verdetto": "ARRIVA AL VIDEO"
 }

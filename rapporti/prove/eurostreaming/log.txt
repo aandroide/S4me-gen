@@ -1,23 +1,23 @@
-Canale eurostreaming | indirizzo https://eurostream.hair
+Canale eurostreaming | indirizzo https://eurostream.skin
 == mainlist
    -> 6 voci
-      peliculas | • Serie TV | https://eurostream.hair
-      peliculas | • Anime | https://eurostream.hair/category/anime-cartoni-animati/
-      peliculas | • Aggiornamenti | https://eurostream.hair/nuovi-ep-aggiornamento/
-      peliculas | • Archivio | https://eurostream.hair/category/serie-tv-archive/
+      peliculas | • Serie TV | https://eurostream.skin
+      peliculas | • Anime | https://eurostream.skin/category/anime-cartoni-animati/
+      peliculas | • Aggiornamenti | https://eurostream.skin/nuovi-ep-aggiornamento/
+      peliculas | • Archivio | https://eurostream.skin/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | NCIS - Unità anticrimine | https://eurostream.hair/ncis-6/
-      episodios | I Misteri di Murdoch | https://eurostream.hair/i-misteri-di-murdoch/
-      episodios | Georgie & Mandy’s First Marriage | https://eurostream.hair/georgie-mandys-first-marriage/
-      episodios | Forbidden Fruit | https://eurostream.hair/forbidden-fruit/
-== episodios su "NCIS - Unità anticrimine"
-   -> 585 voci
-      findvideos | 1x00 - La Regina di Ghiaccio (puntata doppia)  | https://eurostream.hair/ncis-6/
-      findvideos | 1x01 - Air Force One  | https://eurostream.hair/ncis-6/
-      findvideos | 1x02 - Parola d’Ordine  | https://eurostream.hair/ncis-6/
-      findvideos | 1x03 - Lupo di Mare  | https://eurostream.hair/ncis-6/
-== findvideos su "1x00 - La Regina di Ghiaccio (puntata do"
+      episodios | Tracker | https://eurostream.skin/tracker-2024-e/
+      episodios | Stick | https://eurostream.skin/stick-2025/
+      episodios | Sacrifice | https://eurostream.skin/sacrifice/
+      episodios | La legge della bestia | https://eurostream.skin/la-legge-della-bestia/
+== episodios su "Tracker"
+   -> 117 voci
+      findvideos | 1x01 - Klamath Falls  | https://eurostream.skin/tracker-2024-e/
+      findvideos | 1x02 - Missoula  | https://eurostream.skin/tracker-2024-e/
+      findvideos | 1x03 - Springland  | https://eurostream.skin/tracker-2024-e/
+      findvideos | 1x04 - Mt. Shasta  | https://eurostream.skin/tracker-2024-e/
+== findvideos su "1x01 - Klamath Falls "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -25,22 +25,29 @@ Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
-  File "/tmp/kh/addon/channels/eurostreaming.py", line 107, in findvideos
-    raise Exception('Manca qualche server')
-Exception: Manca qualche server
+  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
+    itemlist = support.server(item, item.other)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 1287, in server
+    itemList = servertools.find_video_items(data=str(data))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
+    data = unshortenit.findlinks(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Not un-shortened link: https://clicka.cc/delta/ze9b8iau5a1c
 
 == lista "• Anime"
    -> 19 voci
-      episodios | Bass X Machina | https://eurostream.hair/bass-x-machina/
-      episodios | Daemons of the Shadow Realm | https://eurostream.hair/daemons-of-the-shadow-realm/
-      episodios | Adventure Time: Missioni leggendarie | https://eurostream.hair/adventure-time-side-quests/
-      episodios | Avatar: I Sette Rifugi | https://eurostream.hair/avatar-sette-rifugi/
+      episodios | Bass X Machina | https://eurostream.skin/bass-x-machina/
+      episodios | Daemons of the Shadow Realm | https://eurostream.skin/daemons-of-the-shadow-realm/
+      episodios | Adventure Time: Missioni leggendarie | https://eurostream.skin/adventure-time-side-quests/
+      episodios | Avatar: I Sette Rifugi | https://eurostream.skin/avatar-sette-rifugi/
 == episodios su "Bass X Machina"
    -> 7 voci
-      findvideos | 1x01 - Fino ad allora… sono Bass Reeves  | https://eurostream.hair/bass-x-machina/
-      findvideos | 1x02 - Come chiedere una pallottola  | https://eurostream.hair/bass-x-machina/
-      findvideos | 1x03 - Quello non sembra Dio  | https://eurostream.hair/bass-x-machina/
-      findvideos | 1x04 - Questo treno verrà integrato  | https://eurostream.hair/bass-x-machina/
+      findvideos | 1x01 - Fino ad allora… sono Bass Reeves  | https://eurostream.skin/bass-x-machina/
+      findvideos | 1x02 - Come chiedere una pallottola  | https://eurostream.skin/bass-x-machina/
+      findvideos | 1x03 - Quello non sembra Dio  | https://eurostream.skin/bass-x-machina/
+      findvideos | 1x04 - Questo treno verrà integrato  | https://eurostream.skin/bass-x-machina/
 == findvideos su "1x01 - Fino ad allora… sono Bass Reeves "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -62,17 +69,17 @@ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 24x05 - NCIS - Unità anticrimine - Speechless  | https://eurostream.hair/ncis-6/
-      episodios | 10x00 - I Misteri di Murdoch - Speciale: C'era una volta il  | https://eurostream.hair/i-misteri-di-murdoch/
-      episodios | 3x04 - Georgie & Mandy's First Marriage - L'intervallo del d | https://eurostream.hair/georgie-mandys-first-marriage/
-      episodios | 4x160 - Forbidden Fruit - Episodio 160 | https://eurostream.hair/forbidden-fruit/
-== episodios su "24x05 - NCIS - Unità anticrimine - Speec"
-   -> 585 voci
-      findvideos | 1x00 - La Regina di Ghiaccio (puntata doppia)  | https://eurostream.hair/ncis-6/
-      findvideos | 1x01 - Air Force One  | https://eurostream.hair/ncis-6/
-      findvideos | 1x02 - Parola d’Ordine  | https://eurostream.hair/ncis-6/
-      findvideos | 1x03 - Lupo di Mare  | https://eurostream.hair/ncis-6/
-== findvideos su "1x00 - La Regina di Ghiaccio (puntata do"
+      episodios | 4x06 - Tracker (2024) - Blind Spot  | https://eurostream.skin/tracker-2024-e/
+      episodios | 2x04 - Stick (2025) - Il Boog | https://eurostream.skin/stick-2025/
+      episodios | 2x09 - Sacrifice - Balla con il diavolo | https://eurostream.skin/sacrifice/
+      episodios | 1x01 - La legge della bestia - Episodio 01 , 1x02 Episodio 0 | https://eurostream.skin/la-legge-della-bestia/
+== episodios su "4x06 - Tracker (2024) - Blind Spot "
+   -> 117 voci
+      findvideos | 1x01 - Klamath Falls  | https://eurostream.skin/tracker-2024-e/
+      findvideos | 1x02 - Missoula  | https://eurostream.skin/tracker-2024-e/
+      findvideos | 1x03 - Springland  | https://eurostream.skin/tracker-2024-e/
+      findvideos | 1x04 - Mt. Shasta  | https://eurostream.skin/tracker-2024-e/
+== findvideos su "1x01 - Klamath Falls "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -80,9 +87,16 @@ Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
-  File "/tmp/kh/addon/channels/eurostreaming.py", line 107, in findvideos
-    raise Exception('Manca qualche server')
-Exception: Manca qualche server
+  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
+    itemlist = support.server(item, item.other)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 1287, in server
+    itemList = servertools.find_video_items(data=str(data))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
+    data = unshortenit.findlinks(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Not un-shortened link: https://clicka.cc/delta/ze9b8iau5a1c
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -96,4 +110,4 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x00 - La Regina di Ghiaccio (puntata do"
+VERDETTO: SI FERMA A: findvideos su "1x01 - Klamath Falls "

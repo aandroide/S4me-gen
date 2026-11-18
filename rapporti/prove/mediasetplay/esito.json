@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 135
+   "voci": 134
   },
   {
    "passo": "findvideos su \"Transformers - L'ultimo cavaliere\"",
@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 21
+   "voci": 20
   },
   {
-   "passo": "findvideos su \"Tiziano Terzani: il viaggio della vita\"",
+   "passo": "findvideos su \"Un mondo a parte\"",
    "esito": "ERRORE",
    "errore": "enti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'mediaSelector'\n"
   },
@@ -69,19 +69,19 @@
    "voce": "Dirette",
    "azione": "live",
    "esito": "OK",
-   "titoli": 48
+   "titoli": 46
   },
   {
    "voce": "Replay",
    "azione": "restart",
    "esito": "OK",
-   "titoli": 24
+   "titoli": 23
   },
   {
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 69
+   "titoli": 67
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -123,7 +123,7 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 5
     },
     {
      "voce": "I Simpson",
@@ -213,13 +213,13 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 5
     },
     {
      "voce": "Law & Order: Unità speciale 15",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 4
     }
    ]
   },
@@ -337,22 +337,22 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Teen Titans Go!",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 10
-    },
-    {
      "voce": "Lo straordinario mondo di Gumball",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 9
     },
     {
-     "voce": "Looney Tunes Cartoons",
+     "voce": "Teen Titans Go!",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 10
+    },
+    {
+     "voce": "Captain Tsubasa 2",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 20
     }
    ]
   },
@@ -369,16 +369,16 @@
      "titoli": 5
     },
     {
-     "voce": "Hey Duggee",
+     "voce": "La casa delle bambole di Gabby",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
     },
     {
-     "voce": "Chi ha sfidato Ninna e Matti?",
+     "voce": "Hey Duggee",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 15
+     "titoli": 5
     }
    ]
   },
@@ -404,7 +404,7 @@
      "voce": "Pollyanna",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 13
+     "titoli": 16
     }
    ]
   },
@@ -415,7 +415,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 13
+   "titoli": 12
   },
   {
    "voce": "•• Documentari più visti",

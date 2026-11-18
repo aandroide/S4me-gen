@@ -9,11 +9,21 @@
   },
   {
    "passo": "lista \"• Film\"",
+   "esito": "OK",
+   "voci": 5
+  },
+  {
+   "passo": "findvideos su \"Casino Royale\"",
    "esito": "VUOTO",
    "voci": 0
   },
   {
    "passo": "lista \"•• Film al cinema\"",
+   "esito": "OK",
+   "voci": 5
+  },
+  {
+   "passo": "findvideos su \"Casino Royale\"",
    "esito": "VUOTO",
    "voci": 0
   },
@@ -32,40 +42,14 @@
   {
    "voce": "• Film",
    "azione": "peliculas",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://dinostreaming.it/page/3",
-     "status": 404,
-     "byte": 2536,
-     "titolo_pagina": "Pagina non trovata | dinostreaming.it"
-    },
-    {
-     "url": "https://dinostreaming.it",
-     "status": 200,
-     "byte": 80184,
-     "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 5
   },
   {
    "voce": "•• Film al cinema",
    "azione": "peliculas",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://dinostreaming.it/page/3",
-     "status": 404,
-     "byte": 2536,
-     "titolo_pagina": "Pagina non trovata | dinostreaming.it"
-    },
-    {
-     "url": "https://dinostreaming.it/film-category/al-cinema/",
-     "status": 200,
-     "byte": 80187,
-     "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 5
   },
   {
    "voce": "•• Generi",
@@ -83,48 +67,48 @@
   {
    "voce": "txt70741 …",
    "azione": "search",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://dinostreaming.it/?s=avatar",
-     "status": 200,
-     "byte": 80184,
-     "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026"
-    }
-   ]
+   "problemi": [
+    "tipo undefined, in Kodi appare come cartella: Casino Royale",
+    "tipo undefined, in Kodi appare come cartella: GoldBet Pro",
+    "tipo undefined, in Kodi appare come cartella: StarPlay",
+    "tipo undefined, in Kodi appare come cartella: LuxuryBet",
+    "tipo undefined, in Kodi appare come cartella: CryptoKing"
+   ],
+   "esito": "OK",
+   "titoli": 5
   }
  ],
- "sezioni_riepilogo": "0 ok su 4",
+ "sezioni_riepilogo": "3 ok su 4",
  "rete": [
-  {
-   "url": "https://dinostreaming.it/page/2",
-   "status": 404,
-   "byte": 2536,
-   "secondi": 0.3,
-   "titolo_pagina": "Pagina non trovata | dinostreaming.it",
-   "file": "pagine/01.html"
-  },
   {
    "url": "https://dinostreaming.it",
    "status": 200,
    "byte": 80184,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026",
-   "file": "pagine/02.html"
+   "file": "pagine/01.html"
   },
   {
-   "url": "https://dinostreaming.it/page/2",
-   "status": 404,
-   "byte": 2536,
+   "url": "https://dinostreaming.it/#top-casino",
+   "status": 200,
+   "byte": 80184,
    "secondi": 0.1,
-   "titolo_pagina": "Pagina non trovata | dinostreaming.it",
-   "file": "pagine/03.html"
+   "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026",
+   "file": "pagine/02.html"
   },
   {
    "url": "https://dinostreaming.it/film-category/al-cinema/",
    "status": 200,
    "byte": 80187,
-   "secondi": 0.2,
+   "secondi": 0.1,
+   "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026",
+   "file": "pagine/03.html"
+  },
+  {
+   "url": "https://dinostreaming.it/#top-casino",
+   "status": 200,
+   "byte": 80184,
+   "secondi": 0.1,
    "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026",
    "file": "pagine/04.html"
   },
@@ -132,17 +116,9 @@
    "url": "https://dinostreaming.it",
    "status": 200,
    "byte": 80184,
-   "secondi": 0.2,
+   "secondi": 0.1,
    "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026",
    "file": "pagine/05.html"
-  },
-  {
-   "url": "https://dinostreaming.it/page/3",
-   "status": 404,
-   "byte": 2536,
-   "secondi": 0.2,
-   "titolo_pagina": "Pagina non trovata | dinostreaming.it",
-   "file": "pagine/06.html"
   },
   {
    "url": "https://dinostreaming.it",
@@ -150,15 +126,7 @@
    "byte": 80184,
    "secondi": 0.2,
    "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026",
-   "file": "pagine/07.html"
-  },
-  {
-   "url": "https://dinostreaming.it/page/3",
-   "status": 404,
-   "byte": 2536,
-   "secondi": 0.1,
-   "titolo_pagina": "Pagina non trovata | dinostreaming.it",
-   "file": "pagine/08.html"
+   "file": "pagine/06.html"
   },
   {
    "url": "https://dinostreaming.it/film-category/al-cinema/",
@@ -166,7 +134,7 @@
    "byte": 80187,
    "secondi": 0.2,
    "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026",
-   "file": "pagine/09.html"
+   "file": "pagine/07.html"
   },
   {
    "url": "https://dinostreaming.it",
@@ -174,16 +142,16 @@
    "byte": 80184,
    "secondi": 0.2,
    "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026",
-   "file": "pagine/10.html"
+   "file": "pagine/08.html"
   },
   {
    "url": "https://dinostreaming.it/?s=avatar",
    "status": 200,
    "byte": 80184,
-   "secondi": 0.2,
+   "secondi": 0.1,
    "titolo_pagina": "Migliori Casinò Non AAMS, Classifica Top 10 Sicuri 2026",
-   "file": "pagine/11.html"
+   "file": "pagine/09.html"
   }
  ],
- "verdetto": "SI FERMA A: lista \"• Film\""
+ "verdetto": "SI FERMA A: findvideos su \"Casino Royale\""
 }

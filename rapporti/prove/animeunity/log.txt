@@ -6,81 +6,34 @@ Canale animeunity | indirizzo https://animeunity.cx
       menu | •• Film | https://animeunity.cx
       menu | •• TV | https://animeunity.cx
 == lista "• Anime"
-   -> 7 voci
+   -> 12 voci
       peliculas | Tutti | https://animeunity.cx
       peliculas | ITA | https://animeunity.cx
       genres | Genere | https://animeunity.cx
       years | Anno | https://animeunity.cx
 == genres su "Genere"
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
-    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
-                                                                                                  ^^^^^
-  File "/tmp/kh/addon/channels/animeunity.py", line 54, in genres
-    genres = json.loads(support.match(response.data, patron='genres="([^"]+)').match.replace('&quot;','"'))
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/decoder.py", line 338, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-
-== lista "•• Film"
-   -> 5 voci
-      peliculas | Tutti | https://animeunity.cx
-      peliculas | ITA | https://animeunity.cx
-      genres | Genere | https://animeunity.cx
-      years | Anno | https://animeunity.cx
-== genres su "Genere"
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
-    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
-                                                                                                  ^^^^^
-  File "/tmp/kh/addon/channels/animeunity.py", line 54, in genres
-    genres = json.loads(support.match(response.data, patron='genres="([^"]+)').match.replace('&quot;','"'))
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/decoder.py", line 338, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-
-== lista "•• TV"
-   -> 7 voci
-      peliculas | Tutti | https://animeunity.cx
-      peliculas | ITA | https://animeunity.cx
-      genres | Genere | https://animeunity.cx
-      years | Anno | https://animeunity.cx
-== genres su "Genere"
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
-    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
-                                                                                                  ^^^^^
-  File "/tmp/kh/addon/channels/animeunity.py", line 54, in genres
-    genres = json.loads(support.match(response.data, patron='genres="([^"]+)').match.replace('&quot;','"'))
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/decoder.py", line 338, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-
-Nessuna voce da riprodurre trovata
+   -> 46 voci
+      peliculas | Action | https://animeunity.cx
+      peliculas | Adventure | https://animeunity.cx
+      peliculas | Avant Garde | https://animeunity.cx
+      peliculas | Boys Love | https://animeunity.cx
+== peliculas su "Action"
+   -> 34 voci
+      episodios | .hack//Quantum  | https://animeunity.cx/anime/831-hackquantum
+      findvideos | .hack//The Movie: Sekai no Mukou ni  | https://animeunity.cx/anime/833-hackthe-movie-sekai-no-mukou-ni
+      episodios | .hack//Versus OVA  | https://animeunity.cx/anime/832-hackversus-ova
+      episodios | #Compass2.0: Animation Project  | https://animeunity.cx/anime/6446-compass20-animation-project
+== episodios su ".hack//Quantum "
+   -> 4 voci
+      findvideos | Episodio 1 | https://animeunity.cx/anime/831-hackquantum/18482
+      findvideos | Episodio 2 | https://animeunity.cx/anime/831-hackquantum/18480
+      findvideos | Episodio 3 | https://animeunity.cx/anime/831-hackquantum/18481
+      add_serie_to_library | txt30161 %s | https://animeunity.cx/anime/831-hackquantum
+== findvideos su "Episodio 1"
+   -> 1 voci
+      play | Episodio 1 | https://animeunity.cx/anime/831-hackquantum/18482
+== risoluzione streamingcommunityws https://animeunity.cx/anime/831-hackquantum/18482
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (7)
     top | ('Ultimi Episodi', ['', 'news'])
     menu | ('Anime {bullet bold}', ['', 'menu', {}, 'tvshow'])
@@ -90,30 +43,13 @@ Nessuna voce da riprodurre trovata
     menu | ('ONA {submenu} {tv}', ['', 'menu', {'type': 'ONA'}, 'tvshow'])
     menu | ('Special {submenu} {tv}', ['', 'menu', {'type': 'Special'}, 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Ultimi Episodi -> ERRORE JSONDecodeError
-   SEZIONE • Anime -> ERRORE KeyError
-   SEZIONE •• Film -> ERRORE KeyError
-   SEZIONE •• TV -> ERRORE KeyError
-   SEZIONE Tutti -> ERRORE KeyError
-   SEZIONE ITA -> ERRORE KeyError
-   SEZIONE Genere -> ERRORE JSONDecodeError
-   SEZIONE •• OVA -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://animeunity.cx/archivio/get-animes', 'status': 403, 'byte': 7127, 'titolo_pagina': 'Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx'}
-   SEZIONE Tutti -> ERRORE KeyError
-   SEZIONE ITA -> ERRORE KeyError
-   SEZIONE Genere -> ERRORE JSONDecodeError
-   SEZIONE •• ONA -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://animeunity.cx/archivio/get-animes', 'status': 403, 'byte': 7127, 'titolo_pagina': 'Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx'}
-   SEZIONE Tutti -> ERRORE KeyError
-   SEZIONE ITA -> ERRORE KeyError
-   SEZIONE Genere -> ERRORE JSONDecodeError
-   SEZIONE •• Special -> SOTTOMENU SENZA TITOLI   | ultima pagina: {'url': 'https://animeunity.cx/archivio/get-animes', 'status': 403, 'byte': 7127, 'titolo_pagina': 'Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx'}
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://animeunity.cx/archivio/get-animes', 'status': 403, 'byte': 7127, 'titolo_pagina': 'Access denied | animeunity.cx used Cloudflare to restrict access | animeunity.cx'}
-SEZIONI: 0 ok su 8
-   SEZIONE SENZA TITOLI: Ultimi Episodi | ERRORE JSONDecodeError
-   SEZIONE SENZA TITOLI: • Anime | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Film | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• TV | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• OVA | SOTTOMENU SENZA TITOLI
-   SEZIONE SENZA TITOLI: •• ONA | SOTTOMENU SENZA TITOLI
-   SEZIONE SENZA TITOLI: •• Special | SOTTOMENU SENZA TITOLI
-   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: genres su "Genere"
+   SEZIONE Ultimi Episodi -> OK 20 
+   SEZIONE • Anime -> OK 30 
+   SEZIONE •• Film -> OK 1 
+   SEZIONE •• TV -> OK 1 
+   SEZIONE •• OVA -> OK 1 
+   SEZIONE •• ONA -> OK 1 
+   SEZIONE •• Special -> OK 1 
+   SEZIONE txt70741 … -> OK 7 
+SEZIONI: 8 ok su 8
+VERDETTO: ARRIVA AL VIDEO
