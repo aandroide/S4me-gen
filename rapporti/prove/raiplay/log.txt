@@ -6,11 +6,11 @@ Canale raiplay | indirizzo https://www.raiplay.it
       menu | Film | https://www.raiplay.it/film
       menu | Serie italiane | https://www.raiplay.it/serieitaliane
 == lista "Film"
-   -> 14 voci
+   -> 15 voci
       peliculas | Novità | https://www.raiplay.it/film
       peliculas | Da non perdere | https://www.raiplay.it/film
+      peliculas | L'infanzia difficile | https://www.raiplay.it/film
       peliculas | Film in esclusiva | https://www.raiplay.it/film
-      peliculas | Commedie | https://www.raiplay.it/film
 == menu su "Generi"
    -> 10 voci
       genres | Film sottotitolati | https://www.raiplay.it/genere/Film-Sottotitolati-7bae8112-bc92-4892-816f-67078c1354eb.html
@@ -50,22 +50,22 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 20 
-   SEZIONE Rai 2 -> OK 23 
-   SEZIONE Rai 3 -> OK 17 
+   SEZIONE Rai 1 -> OK 21 
+   SEZIONE Rai 2 -> ERRORE JSONDecodeError
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE str14 19 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 29 
+   SEZIONE Rai 2 -> ERRORE JSONDecodeError
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
    SEZIONE str13 18 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 33 
-   SEZIONE Rai 2 -> OK 33 
+   SEZIONE Rai 2 -> ERRORE JSONDecodeError
    SEZIONE Rai 3 -> OK 30 
    SEZIONE str12 17 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 32 
-   SEZIONE Rai 2 -> OK 30 
-   SEZIONE Rai 3 -> ERRORE JSONDecodeError
-   SEZIONE str11 16 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
-   SEZIONE Novità -> OK 24 
-   SEZIONE Da non perdere -> OK 26 
-   SEZIONE Film in esclusiva -> OK 31 
+   SEZIONE Novità -> OK 22 
+   SEZIONE Da non perdere -> OK 23 
+   SEZIONE L'infanzia difficile -> OK 23 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 26 
    SEZIONE Serie Original RaiPlay -> OK 24 
@@ -79,7 +79,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Territori e itinerari -> OK 34 
    SEZIONE Approfondimento -> OK 26 
    SEZIONE Programmi TV -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 26 
+   SEZIONE Da non perdere -> OK 27 
    SEZIONE Docu-serie Original -> OK 29 
    SEZIONE Documentari Original -> OK 25 
    SEZIONE Documentari -> SOTTOMENU  
@@ -103,7 +103,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Generi -> SOTTOMENU SENZA TITOLI  
    SEZIONE Teche Rai -> SOTTOMENU  
    SEZIONE Learning -> ERRORE JSONDecodeError
-   SEZIONE L'offerta -> OK 47 
+   SEZIONE L'offerta -> OK 46 
    SEZIONE Rai Italy -> SOTTOMENU  
    SEZIONE txt70741 … -> OK 8 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: The Avatars

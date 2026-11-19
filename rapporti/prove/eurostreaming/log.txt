@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.skin
       peliculas | • Archivio | https://eurostream.skin/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Tracker | https://eurostream.skin/tracker-2024-e/
-      episodios | Stick | https://eurostream.skin/stick-2025/
-      episodios | Sacrifice | https://eurostream.skin/sacrifice/
-      episodios | La legge della bestia | https://eurostream.skin/la-legge-della-bestia/
-== episodios su "Tracker"
-   -> 117 voci
-      findvideos | 1x01 - Klamath Falls  | https://eurostream.skin/tracker-2024-e/
-      findvideos | 1x02 - Missoula  | https://eurostream.skin/tracker-2024-e/
-      findvideos | 1x03 - Springland  | https://eurostream.skin/tracker-2024-e/
-      findvideos | 1x04 - Mt. Shasta  | https://eurostream.skin/tracker-2024-e/
-== findvideos su "1x01 - Klamath Falls "
+      episodios | Viola come il mare | https://eurostream.skin/viola-come-il-mare/
+      episodios | The Kardashians | https://eurostream.skin/the-kardashians-2022-o/
+      episodios | Eternally Yours | https://eurostream.skin/eternally-yours/
+      episodios | Rivals | https://eurostream.skin/rivals/
+== episodios su "Viola come il mare"
+   -> 17 voci
+      findvideos | 1x01 - 02 Episodi 1 e 2  | https://eurostream.skin/viola-come-il-mare/
+      findvideos | 1x03 - 04 Episodi 3 e 4  | https://eurostream.skin/viola-come-il-mare/
+      findvideos | 1x05 - 06 Episodi 5 e 6  | https://eurostream.skin/viola-come-il-mare/
+      findvideos | 1x07 - 08 Episodi 7 e 8  | https://eurostream.skin/viola-come-il-mare/
+== findvideos su "1x01 - 02 Episodi 1 e 2 "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/ze9b8iau5a1c
+Exception: Not un-shortened link: https://clicka.cc/mix/8fzyhp4r
 
 == lista "• Anime"
    -> 19 voci
@@ -69,17 +69,17 @@ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 4x06 - Tracker (2024) - Blind Spot  | https://eurostream.skin/tracker-2024-e/
-      episodios | 2x04 - Stick (2025) - Il Boog | https://eurostream.skin/stick-2025/
-      episodios | 2x09 - Sacrifice - Balla con il diavolo | https://eurostream.skin/sacrifice/
-      episodios | 1x01 - La legge della bestia - Episodio 01 , 1x02 Episodio 0 | https://eurostream.skin/la-legge-della-bestia/
-== episodios su "4x06 - Tracker (2024) - Blind Spot "
-   -> 117 voci
-      findvideos | 1x01 - Klamath Falls  | https://eurostream.skin/tracker-2024-e/
-      findvideos | 1x02 - Missoula  | https://eurostream.skin/tracker-2024-e/
-      findvideos | 1x03 - Springland  | https://eurostream.skin/tracker-2024-e/
-      findvideos | 1x04 - Mt. Shasta  | https://eurostream.skin/tracker-2024-e/
-== findvideos su "1x01 - Klamath Falls "
+      episodios | 1x07 - Viola come il mare - Settima e ottava puntata | https://eurostream.skin/viola-come-il-mare/
+      episodios | 8x06 - The Kardashians (2022) - Alcune mamme vogliono solo d | https://eurostream.skin/the-kardashians-2022-o/
+      episodios | 1x06 - Eternally Yours - Eternal Sunshine of Phyllis's Mind  | https://eurostream.skin/eternally-yours/
+      episodios | 2x10 - Rivals (2024) - Episodio 10 | https://eurostream.skin/rivals/
+== episodios su "1x07 - Viola come il mare - Settima e ot"
+   -> 17 voci
+      findvideos | 1x01 - 02 Episodi 1 e 2  | https://eurostream.skin/viola-come-il-mare/
+      findvideos | 1x03 - 04 Episodi 3 e 4  | https://eurostream.skin/viola-come-il-mare/
+      findvideos | 1x05 - 06 Episodi 5 e 6  | https://eurostream.skin/viola-come-il-mare/
+      findvideos | 1x07 - 08 Episodi 7 e 8  | https://eurostream.skin/viola-come-il-mare/
+== findvideos su "1x01 - 02 Episodi 1 e 2 "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/ze9b8iau5a1c
+Exception: Not un-shortened link: https://clicka.cc/mix/8fzyhp4r
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -110,4 +110,4 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - Klamath Falls "
+VERDETTO: SI FERMA A: findvideos su "1x01 - 02 Episodi 1 e 2 "

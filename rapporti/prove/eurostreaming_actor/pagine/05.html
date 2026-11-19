@@ -1,1 +1,4352 @@
-<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="content-security-policy" content="default-src &#39;none&#39;; script-src &#39;nonce-9pKnXNTQapsNKOf8THkJ7v&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script nonce="9pKnXNTQapsNKOf8THkJ7v">(function(){window._cf_chl_opt = {cFPWv: 'b',cH: 'lAWN.TpYpFpnm_KrinAidkf32hf_hF.uwfGlrWUmAIg-1795011740-1.2.1.1-gIH_rMEVMkq1YeLaWZIDPh96ZK8aMyaynWsNdCjEvFSl44eAbMQ83ZWNNbpSlRdb',cITimeS: '1795011740',cN: '9pKnXNTQapsNKOf8THkJ7v',cRay: 'a5c7a070ab9af432',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/aggiornamento-episodi/?__cf_chl_tk=RX7.gVS.4IbQXcBfC39LoOVoqFt7fqYrMJ4jmUEQ1vs-1795011740-1.0.1.1-trWw_hfOE4AEeQZgKIQvmlrCsZv8XDBnv_rg6yOKqko",cvId: '3',cZone: 'eurostreaming.ooo',fa:"/aggiornamento-episodi/?__cf_chl_f_tk=RX7.gVS.4IbQXcBfC39LoOVoqFt7fqYrMJ4jmUEQ1vs-1795011740-1.0.1.1-trWw_hfOE4AEeQZgKIQvmlrCsZv8XDBnv_rg6yOKqko",md: 'YvybHOGZ7xhpbd1EC4JCTtXAW.UuqNBdqUL7SNLDKqY-1795011740-1.2.1.1-X2sb8_P79D9Ks4bSXt.35lHSQl8XqfTP70QgoTSuhUgIqOy2Aw.siYFG3xBezCFiq_PRWqtGmcVFBk49N6pEYeAzCvObWuWWFXHRUI1ui6_kQPx9Um.xRrUdMnKyywugwGgHh2tTXf7aUrO3aau7HjO8WCcC6NNsOpS5R91xvSs2c5OwjijFKSBtRGSK9coTmeuCmkORXwqkx.tRFC1fso9GVqr30lJ1Jgq9k2rJD33o3miX4gDd99MN5Mq_0pYUBCh5wpMju4czwFZ_Ql_Z5i2exK5pB0Xha_QuEPHJKNgLNEElhB2y9qVaOIDvgw932OE.8IQxeOd8s8irIG0wp2P7KolWyWOh88F5WcRmUVFFc8n5LJMEe7DhC8kDZiN8_V3NdZwCp8WKd1FfDJNg9X3tECj9d_U45KW0uyvMB29iPhjeoGt8_XJKmK64tl_g5rnkdG57fv6DBUF.ddu3.v0db.ftz689bNkF.RA8kGTPjB3z.a6cHb2dXpDcmSalLJC.jj_f6kUR3YyyminaTNyTqr3enshqRk7INByEhub_hlWMGYYM7tr3Wh1cPWs8AJXiW15GQYeCfCOrGDRDX_Xs0ZogSSdmQHE3oU6EBQKqOvLZmxk6bOJ3fXfrfVue.KbWgll.CER0NJeet7RylWHKOwVI_XBYSFVCzsjc91OmtGyFza2A8knvvP2f7Wf9QQIpzIx8RdcALyWiXU82vMVhSYhqnaulF6m.IaWE5PxehaDcOWH9wrMdz_HbiazaJBD_57J6b.J2HuWha4uAAQbIRWCKuFSzE13zqvByBft6kJgCfVwjBkQFsd.3L3T7BRFRsJb_uuF0TyN2JKiRQEeaguOAQzrjvF4MNIzA8.kXdC7LkBrcP.CIRDbren8aoJU__IoMRKv.7HZNDwjSBrwsrikxYn3ZPhgV9chBQKkgVUW1SPU3MH8vywMjb2iisGRPdjmdDVKErU57GFVrpUbuc3E2FQJALT_RatkhmKOI69xYc0Z_xXROI7mWO1a5EN4yX7CjklIfBaEA41uArZY.nLzwOZFf8gi7UC5bTryGyVMs99Pcucan617DAiEd_0d_bF5Q8CnEiRnc5k2pdZfyTw7X9xFN8RFYP3leEuevGh48Wj8fYwumPg4TF9VuzPbnjmHbg8sbOLFI2FgwnA',mdrd: 'M86HdV.sryVafPl7YhDUPlMPag15j0g2UgdvDtYRaA0-1795011740-1.2.1.1-Mmu9wGenkfxhkMuTKKDBd7wEKYVZKEIZkjEEAW.U7aCKLU245ZDP5hrkz9Tlbsjyb36nig5DMhIphckoZv_fzNoQoLE0zFEkhKCSo5wAKgIAR7Of.vWqAxAaW0sOR5V2a3ZD17.RO9cI1AIEV0BU2snbv9VRvyt7Ec3q91BsNGrJXXWcWDijRuh84zz5uaPX2xGjEo30jhtKv1zT1rU6cy8BfFMIt5CG4NizKP1cLPehusng0Bgj9dINMVymq8klVvuu3KVqdy2.nRCcFjATucNLyvvG8NAxlkgTyIm_CV.nPXeNrZg6NChKXDSAVTe6mLk_3Zbbgky3jA8XT7RKMTw4BATIYJorECpWfamEB5_bLeq48xFk5H4TujpthnKdBzlepzM2dJfZmwkZltY_M8LHDW0qs7I492Cjrss.S4fdcHpn8eB99HuotBGs9CmLAgxyn5jPjJoKW08FYk1FclaChwOanZNM.lFSEptfhhSJ3asNXBH.P5ZuejE7QdMezTuFV3UEluSZJf2Z.M8Yomuv.KgYa3wiiJQ0TxFBH8IrJVzJDxXHr8I85aJtoKl5SeLPSpzUsfb3mvwL0BMTv4EJ1jbManCoPMoN92VxlTiCyf8fkE.9see2AEMbY25dtJqq_NIf4CemqpO411VeSg',};var a = document.createElement('script');a.nonce = '9pKnXNTQapsNKOf8THkJ7v';a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a5c7a070ab9af432';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/aggiornamento-episodi/?__cf_chl_rt_tk=RX7.gVS.4IbQXcBfC39LoOVoqFt7fqYrMJ4jmUEQ1vs-1795011740-1.0.1.1-trWw_hfOE4AEeQZgKIQvmlrCsZv8XDBnv_rg6yOKqko"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html>
+<!doctype html>
+<html>
+  <head>
+    <title>Animazione streaming | Guardaserie</title>
+<meta charset="utf-8">
+<meta name="description" content="Entra su Guardaserie e sfoglia il vasto catalogo delle serie tv streaming complete di tutte le stagioni di genere Animazione.">
+<meta name="keywords" content="Brumm, Bluey, un'inesauribile, Heeler, giocare, trasforma, familiare, tutti, giorni, avventure, straordinarie, sviluppando, immaginazione, capacità, recupero, mentale, fisica, emotiva, uploadsposts2025021738992474_1jpg, Australia">
+<link rel="canonical" href="https://guardaseriex.lol/animazione/">
+<link rel="alternate" type="application/rss+xml" title=" RSS Dzen" href="https://guardaseriex.lol/animazione/rssdzen.xml">
+<link rel="preconnect" href="https://guardaseriex.lol/" fetchpriority="high">
+<meta property="twitter:card" content="summary">
+<meta property="twitter:title" content="Animazione streaming | Guardaserie">
+<meta property="twitter:description" content="Entra su Guardaserie e sfoglia il vasto catalogo delle serie tv streaming complete di tutte le stagioni di genere Animazione.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Guardaserie - Serie TV Streaming Complete GRATIS">
+<meta property="og:title" content="Animazione streaming | Guardaserie">
+<meta property="og:description" content="Entra su Guardaserie e sfoglia il vasto catalogo delle serie tv streaming complete di tutte le stagioni di genere Animazione.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#FFF" />
+    <script>
+    (function () {
+      let savedTheme = localStorage.getItem('theme');
+      savedTheme ? document.documentElement.setAttribute('data-bs-theme', savedTheme) : document.documentElement.setAttribute('data-bs-theme', 'light');
+    })();
+    </script>
+    <link rel="apple-touch-icon" href="/templates/Guardaserie/images/favicon/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="/templates/Guardaserie/images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="/templates/Guardaserie/images/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/templates/Guardaserie/images/favicon/site.webmanifest" crossorigin="use-credentials" />
+    <link rel="icon" href="/templates/Guardaserie/images/favicon/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="/templates/Guardaserie/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/templates/Guardaserie/css/style.min.css?3" rel="stylesheet" />
+    <link href="/templates/Guardaserie/css/engine.css" rel="stylesheet" />
+    
+<script src="/public/js/jquery.js?v=232f3"></script>
+<script src="/public/js/jqueryui.js?v=232f3" defer></script>
+<script src="/public/js/dle_js.js?v=232f3" defer></script>
+    <style>
+      html{visibility:hidden;}
+      html[data-bs-theme]{visibility:visible;}
+      .swiper {
+        overflow: hidden;
+      }
+      /* .swiper{overflow: auto;} */
+    </style>
+    <meta name="google-site-verification" content="LQ5yMc3DqnN0M95cEGcwx60nbyFjS1UkmbxujZ12XNw" />
+    <script data-cfasync="false" async type="text/javascript" src="//nc.quitschemed.com/r7sxepripGJra3f/90109"></script>
+    <meta name="google-site-verification" content="kdwMAnMyXbMUo9xt3OyMlPiPluHQr_WZ57phsjCo6Ow" />
+  </head>
+
+  <body  >
+    <header class="header">
+      <div class="container-fluid">
+        <div class="row header-row flex-nowrap align-items-center">
+          <div class="col-auto d-xl-none me-auto">
+            <button class="btn icon-btn" data-bs-toggle="offcanvas" data-bs-target="#mmenu" aria-controls="mmenu">
+              <svg width="23" height="12" viewbox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.75 0.75H19.4167"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M0.75 10.083H19.4167"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="col-auto me-xl-4">
+            <a href="/" class="logo">
+              <img src="/templates/Guardaserie/images/logo.svg" alt="" />
+            </a>
+          </div>
+          <div class="col-auto flex-grow-1 flex-shrink-1 d-none d-xl-block">
+            <nav class="nav header-nav">
+              <div class="dropdown">
+                <span class="nav-link" role="button">Genere</span>
+                <div class="dropdown-menu">
+                  <ul class="nav row g-2">
+                    <div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/biografico/">Biografico</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/commedia/">Commedia</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/crime/">Crime</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/documentario/">Documentario</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/dramma/">Dramma</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/drammatico/">Drammatico</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/fantascienza/">Fantascienza</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/fantastico/">Fantastico</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/fantasy/">Fantasy</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/famiglia/">Famiglia</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/giallo/">Giallo</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/guerra/">Guerra</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/horror/">Horror</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/intrattenimento/">Intrattenimento</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/miniserie-tv/">Miniserie-tv</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/musicale/">Musicale</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/mistero/">Mistero</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/poliziesco/">Poliziesco</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/reality/">Reality</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/romantico/">Romantico</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/sentimentale/">Sentimentale</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/sitcom/">Sitcom</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/soap-opera/">Soap opera</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/storico/">Storico</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/talent-show/">Talent Show</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/kids/">Kids</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/talk-show/">Talk Show</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/thriller/">Thriller</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/tv-show/">Tv Show</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/animazione/">Animazione</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/avventura/">Avventura</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/azione/">Azione</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/coming-soon/">In Arrivo</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/serietv-popolari/">Popolari</a></div><div class="col-4"><a class="dropdown-item" href="https://guardaseriex.lol/netflix-gratis/">Netflix</a></div>
+
+                  </ul>
+                </div>
+              </div>
+              <a href="/serietv-streaming/" class="nav-link">Archivio</a>
+              <a href="/top-imdb/" class="nav-link">Top IMDb</a>
+              <a href="https://altadefinizionex.ink/" class="nav-link">Film</a>
+              <a href="https://guardaseriex.lol/crime/5899-silent-night-streaming.html" title="Silent Night" class="nav-link d-none d-xxl-flex">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 4L21 7L18 10" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 20L21 17L18 14" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3 7H6C7.32608 7 8.59785 7.52678 9.53553 8.46447C10.4732 9.40215 11 10.6739 11 12C11 13.3261 11.5268 14.5979 12.4645 15.5355C13.4021 16.4732 14.6739 17 16 17H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3 17H6C7.32608 17 8.59785 16.4732 9.53553 15.5355C10.4732 14.5979 11 13.3261 11 12C11 10.6739 11.5268 9.40215 12.4645 8.46447C13.4021 7.52678 14.6739 7 16 7H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+  Random
+</a>
+
+            </nav>
+          </div>
+          <div class="col-auto d-flex align-items-center gap-3 ms-auto">
+            <div class="d-none d-xl-block me-3">
+              <div class="lightdark-switcher">
+                <span></span>
+              </div>
+            </div>
+            <div class="d-none d-xl-block">
+              <form id="q_search" action="/index.php" method="get">
+                <div class="header-search">
+                  <input type="text" class="form-control" id="story" name="story" placeholder="Cerca Serie" />
+                  <input type="hidden" name="do" value="search">
+        					<input type="hidden" name="subaction" value="search">
+                </div>
+              </form>
+            </div>
+            
+
+<button type="button" class="btn icon-btn user-button" data-bs-target="#login-modal" data-bs-toggle="modal">
+	<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M5 20C5 21.9698 5.38799 23.9204 6.14181 25.7403C6.89563 27.5601 8.00052 29.2137 9.3934 30.6066C10.7863 31.9995 12.4399 33.1044 14.2597 33.8582C16.0796 34.612 18.0302 35 20 35C21.9698 35 23.9204 34.612 25.7403 33.8582C27.5601 33.1044 29.2137 31.9995 30.6066 30.6066C31.9995 29.2137 33.1044 27.5601 33.8582 25.7403C34.612 23.9204 35 21.9698 35 20C35 18.0302 34.612 16.0796 33.8582 14.2597C33.1044 12.4399 31.9995 10.7863 30.6066 9.3934C29.2137 8.00052 27.5601 6.89563 25.7403 6.14181C23.9204 5.38799 21.9698 5 20 5C18.0302 5 16.0796 5.38799 14.2597 6.14181C12.4399 6.89563 10.7863 8.00052 9.3934 9.3934C8.00052 10.7863 6.89563 12.4399 6.14181 14.2597C5.38799 16.0796 5 18.0302 5 20Z"
+		  stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		<path d="M15 16.6665C15 17.9926 15.5268 19.2644 16.4645 20.202C17.4021 21.1397 18.6739 21.6665 20 21.6665C21.3261 21.6665 22.5979 21.1397 23.5355 20.202C24.4732 19.2644 25 17.9926 25 16.6665C25 15.3404 24.4732 14.0687 23.5355 13.131C22.5979 12.1933 21.3261 11.6665 20 11.6665C18.6739 11.6665 17.4021 12.1933 16.4645 13.131C15.5268 14.0687 15 15.3404 15 16.6665Z"
+		  stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		<path d="M10.2803 31.4148C10.6928 30.0419 11.5369 28.8385 12.6874 27.9831C13.8378 27.1278 15.2334 26.6661 16.6669 26.6665H23.3336C24.769 26.666 26.1663 27.1288 27.3176 27.9861C28.4689 28.8435 29.3127 30.0495 29.7236 31.4248" stroke="white"
+		  stroke-linecap="round" stroke-linejoin="round" />
+	</svg>
+</button>
+
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <main>
+
+					
+
+          
+
+					
+					<div class="container-fluid">
+						<div class="block">
+							 <div class="block-header d-block">
+								 <h1 class="fs-3 block-title">Animazione</h1>
+                   
+							 </div>
+              
+							 <div class="movies-list" id="dle-content">
+								 <div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt7678620.webp"
+	data-title="Bluey"
+	data-year="2018"
+	
+  
+	data-text="Bluey è un&#039;inesauribile cane Blue Heeler di sei anni, che ama giocare e trasforma la vita familiare di tutti i giorni in avventure..."
+	data-category="Animazione  /  Commedia  /  Famiglia  /  Kids"
+	data-sound="ITA"
+	data-time="7m"
+	>
+	<a href="https://guardaseriex.lol/animazione/3621-bluey.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt7678620.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Bluey"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2025-02/1738992474_1.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt7678620.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Bluey"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt7678620.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2018</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/3621-bluey.html">Bluey</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt3590338.webp"
+	data-title="Puffin Rock"
+	data-year="2015"
+	
+  
+	data-text="La vita è dolce sulla bellissima Puffin Rock, dove la puffin Oona, il suo fratellino Baba ei loro amici imparano a conoscere la natura,..."
+	data-category="Animazione  /  Kids"
+	data-sound="ITA"
+	data-time="7m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5878-puffin-rock-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt3590338.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Puffin Rock"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt3590338.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt3590338.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Puffin Rock"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt3590338.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2015</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5878-puffin-rock-streaming.html">Puffin Rock</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt39957390.webp"
+	data-title="Bass X Machina"
+	data-year="2026"
+	
+  
+	data-text="In un Far West steampunk invaso da fuorilegge, macchine e forze soprannaturali, un padre è costretto a diventare giudice, giuria e boia per..."
+	data-category="Animazione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="41m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5879-bass-x-machina-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt39957390.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Bass X Machina"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt39957390.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt39957390.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Bass X Machina"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt39957390.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5879-bass-x-machina-streaming.html">Bass X Machina</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt2109422.webp"
+	data-title="Karin Piccola Dea"
+	data-year="2007"
+	
+  
+	data-text="Karin è una studentessa delle scuole medie. Vive sola con sua zia dopo la morte dei suoi genitori, avvenuta quando la ragazza era ancora molto..."
+	data-category="Animazione  /  Commedia  /  Dramma  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5895-karin-piccola-dea-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt2109422.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Karin Piccola Dea"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt2109422.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt2109422.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Karin Piccola Dea"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt2109422.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2007</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5895-karin-piccola-dea-streaming.html">Karin Piccola Dea</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt2580046.webp"
+	data-title="Miraculous - Le storie di Ladybug e Chat Noir"
+	data-year="2015"
+	
+  
+	data-text="Quando Parigi è in pericolo, Marinette diventa Ladybug. Non sa che Adrien, il compagno di scuola che le piace, è Chat Noir, un altro supereroe votato..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Kids"
+	data-sound="ITA"
+	data-time="22m"
+	>
+	<a href="https://guardaseriex.lol/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt2580046.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Miraculous - Le storie di Ladybug e Chat Noir"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt2580046.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt2580046.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Miraculous - Le storie di Ladybug e Chat Noir"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt2580046.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2015</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html">Miraculous - Le storie di Ladybug e Chat Noir</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt7713450.webp"
+	data-title="Craig"
+	data-year="2018"
+	
+  
+	data-text="Craig e i suoi due amici Kelsey e JP vivono bellissime avventure nella natura selvaggia conosciuta come Creek: un posto pieno di azione e incredibili..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Commedia  /  Kids"
+	data-sound="ITA"
+	data-time="11m"
+	>
+	<a href="https://guardaseriex.lol/animazione/3489-craig-of-the-creek.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt7713450.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Craig"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt7713450.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt7713450.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Craig"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt7713450.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2018</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/3489-craig-of-the-creek.html">Craig</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt35854736.webp"
+	data-title="Avatar: I sette rifugi"
+	data-year="2026"
+	
+  
+	data-text="Una giovane Dominatrice della Terra scopre di essere il nuovo Avatar dopo Korra, in un mondo sconvolto da un cataclisma devastante. In questa nuova e..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy  /  Famiglia"
+	data-sound="ITA"
+	data-time="22m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5823-avatar-i-sette-rifugi-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt35854736.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Avatar: I sette rifugi"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt35854736.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt35854736.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Avatar: I sette rifugi"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt35854736.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5823-avatar-i-sette-rifugi-streaming.html">Avatar: I sette rifugi</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0182576.webp"
+	data-title="I Griffin"
+	data-year="1999"
+	
+  data-rate="4" 
+	data-text="Nella fittizia cittadina di Quahog, nel Rhode Island, la dissacrante famiglia guidata da Peter Griffin e dalla moglie Lois vive assurde vicissitudini..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="23m"
+	>
+	<a href="https://guardaseriex.lol/animazione/2048-i-griffin.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0182576.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="I Griffin"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2022-02/1646027529_1.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0182576.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="I Griffin"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0182576.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1999</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/2048-i-griffin.html">I Griffin</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt1196478.webp"
+	data-title="Don Dracula"
+	data-year="1982"
+	
+  
+	data-text="Il Conte Dracula dopo aver vissuto per anni in Transilvania è venuto ad abitare a Tokyo con la figlia Chocolat e si è inserito nella vita giapponese...."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="23m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5874-don-dracula-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt1196478.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Don Dracula"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt1196478.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt1196478.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Don Dracula"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt1196478.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1982</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5874-don-dracula-streaming.html">Don Dracula</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0121955.webp"
+	data-title="South Park"
+	data-year="1997"
+	
+  data-rate="4.7" 
+	data-text="Stanley &quot;Stan&quot; Marsh, Eric Cartman e Kyle Broflosky e Kenneth &quot;Kenny&quot; McCormick, quattro ragazzi che frequentano la scuola..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="23m"
+	>
+	<a href="https://guardaseriex.lol/animazione/663-south-park-3.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0121955.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="South Park"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2020-02/1582030294_south-park.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0121955.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="South Park"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0121955.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1997</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/663-south-park-3.html">South Park</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt1586814.webp"
+	data-title="Dance in the Vampire Bund"
+	data-year="2010"
+	
+  
+	data-text="La regina dei vampiri Mina Tepes decide di mostrarsi al mondo per offrire la pace tra vampiri e umani. Il Giappone è stato scelto come luogo dove far..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Dramma  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5872-dance-in-the-vampire-bund-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt1586814.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Dance in the Vampire Bund"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt1586814.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt1586814.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Dance in the Vampire Bund"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt1586814.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2010</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5872-dance-in-the-vampire-bund-streaming.html">Dance in the Vampire Bund</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt33406999.webp"
+	data-title="GET JIRO"
+	data-year="2026"
+	
+  data-rate="1.7" 
+	data-text="In una Los Angeles futuristica, il misterioso chef di sushi Jiro intraprende un percorso all&#039;insegna della vendetta...."
+	data-category="Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="23m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5811-get-jiro-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt33406999.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="GET JIRO"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt33406999.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt33406999.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="GET JIRO"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt33406999.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5811-get-jiro-streaming.html">GET JIRO</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt32813343.webp"
+	data-title="Magic Knight Rayearth"
+	data-year="2026"
+	
+  
+	data-text="Una gita scolastica alla Tokyo Tower si trasforma in una battaglia per un altro mondo quando Hikaru, Umi e Fuu vengono evocate a Cefiro! Con la..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="23m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5863-magic-knight-rayearth-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt32813343.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Magic Knight Rayearth"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt32813343.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt32813343.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Magic Knight Rayearth"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt32813343.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5863-magic-knight-rayearth-streaming.html">Magic Knight Rayearth</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt10691770.webp"
+	data-title="Helluva Boss"
+	data-year="2020"
+	
+  data-rate="5" 
+	data-text="La serie racconta le mansioni e altre avventure quotidiane dei dipendenti della I.M.P. (Immediate Murder Professionals, &quot;Professionisti..."
+	data-category="Animazione  /  Commedia  /  Dramma  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="13m"
+	>
+	<a href="https://guardaseriex.lol/animazione/3209-helluva-boss.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt10691770.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Helluva Boss"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2024-08/1724510055_1.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt10691770.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Helluva Boss"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt10691770.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2020</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/3209-helluva-boss.html">Helluva Boss</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0168346.webp"
+	data-title="Le avventure della dolce Kati"
+	data-year="1984"
+	
+  
+	data-text="Katori è una bambina finlandese che, dopo la morte improvvisa del padre, si vede separata anche dalla madre che decide di partire per la Germania in..."
+	data-category="Animazione  /  Dramma  /  Famiglia"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5869-le-avventure-della-dolce-kati-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0168346.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Le avventure della dolce Kati"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0168346.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0168346.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Le avventure della dolce Kati"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0168346.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1984</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5869-le-avventure-della-dolce-kati-streaming.html">Le avventure della dolce Kati</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt41538904.webp"
+	data-title="LEGO ONE PIECE"
+	data-year="2026"
+	
+  
+	data-text="I Cappello di Paglia solcano i mari in uno speciale LEGO in due parti! Segui Luffy, Nami, Usop e la ciurma nella loro epica avventura, reinventata..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Commedia  /  Fantascienza  /  Fantasy  /  Famiglia"
+	data-sound="ITA"
+	data-time="33m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5794-lego-one-piece-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt41538904.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="LEGO ONE PIECE"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt41538904.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt41538904.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="LEGO ONE PIECE"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt41538904.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5794-lego-one-piece-streaming.html">LEGO ONE PIECE</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0086817.webp"
+	data-title="Transformers G1"
+	data-year="1984"
+	
+  
+	data-text="La loro storia inizia milioni di anni fa, quando sulla Terra non si è ancora sviluppata la vita umana. Su Cybertron, invece, infuria da tempo..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy  /  Kids"
+	data-sound="ITA"
+	data-time="22m"
+	>
+	<a href="https://guardaseriex.lol/animazione/2148-decalogo-dekalog.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0086817.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Transformers G1"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0086817.webp'" />
+ 			<img
+ 			 src="/uploads/posters/tt0086817.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Transformers G1"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0086817.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1984</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/2148-decalogo-dekalog.html">Transformers G1</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt3856074.webp"
+	data-title="Gino il Pollo perso nella rete"
+	data-year="2006"
+	
+  
+	data-text="Gino il pollo (o Gino The Chicken) è un personaggio comico satirico creato dall&#039;artista digitale Andrea Zingoni. Deve principalmente la sua..."
+	data-category="Animazione  /  Kids"
+	data-sound="ITA"
+	data-time="13m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5792-gino-il-pollo-perso-nella-rete-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt3856074.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Gino il Pollo perso nella rete"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt3856074.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt3856074.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Gino il Pollo perso nella rete"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt3856074.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2006</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5792-gino-il-pollo-perso-nella-rete-streaming.html">Gino il Pollo perso nella rete</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt12924420.webp"
+	data-title="Monkey Wrench"
+	data-year="2022"
+	
+  
+	data-text="Una sgangherata squadra di cacciatori di taglie insegue pericolosi criminali in tutta la galassia. Non sono gli eroi che vorremmo, ma sono gli unici..."
+	data-category="Animazione  /  Commedia  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="27m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5757-monkey-wrench-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt12924420.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Monkey Wrench"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt12924420.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt12924420.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Monkey Wrench"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt12924420.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2022</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5757-monkey-wrench-streaming.html">Monkey Wrench</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0096816.webp"
+	data-title="Angel Cop"
+	data-year="1989"
+	
+  
+	data-text="La storia ha inizio in un futuro distopico collocato nel 1990 dove il Giappone è la più grande economia del mondo. Il gruppo radicale comunista, il..."
+	data-category="Animazione  /  Crime  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="30m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5841-angel-cop-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0096816.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Angel Cop"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0096816.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0096816.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Angel Cop"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0096816.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1989</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5841-angel-cop-streaming.html">Angel Cop</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt7033370.webp"
+	data-title="Moby Dick 5"
+	data-year="1980"
+	
+  
+	data-text="30 000 anni fa sulla Terra esistevano due grandi imperi, Mu e Atlantide, che si combattevano per il predominio sul pianeta. La guerra fu tremenda e..."
+	data-category="Animazione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5842-moby-dick-5-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt7033370.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Moby Dick 5"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt7033370.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt7033370.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Moby Dick 5"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt7033370.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1980</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5842-moby-dick-5-streaming.html">Moby Dick 5</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt2293002.webp"
+	data-title="Ben 10: Omniverse"
+	data-year="2012"
+	
+  
+	data-text="La serie ricalca la storia dell&#039;ormai sedicenne Ben Tennyson, portatore dell&#039;Omnitrix, un dispositivo simile ad un orologio che consente..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy  /  Kids"
+	data-sound="ITA"
+	data-time="22m"
+	>
+	<a href="https://guardaseriex.lol/animazione/4904-ben-10-omniverse-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt2293002.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Ben 10: Omniverse"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt2293002.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt2293002.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Ben 10: Omniverse"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt2293002.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2012</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/4904-ben-10-omniverse-streaming.html">Ben 10: Omniverse</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tm136039.webp"
+	data-title="Yotoden: Chronicle of the Warlord Period"
+	data-year="1987"
+	
+  
+	data-text="..."
+	data-category="Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5844-yotoden-chronicle-of-the-warlord-period-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tm136039.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Yotoden: Chronicle of the Warlord Period"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2026-10/tm136039.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tm136039.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Yotoden: Chronicle of the Warlord Period"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tm136039.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1987</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5844-yotoden-chronicle-of-the-warlord-period-streaming.html">Yotoden: Chronicle of the Warlord Period</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt1202625.webp"
+	data-title="Gyakkyou Burai Kaiji: Ultimate Survivor"
+	data-year="2007"
+	
+  
+	data-text="Kaiji Itou è un vagabondo buono a nulla che trascorre le sue giornate bevendo birra e rubando coprimozzi, finché non finisce per essere ingannato dal..."
+	data-category="Animazione  /  Crime  /  Dramma"
+	data-sound="ITA"
+	data-time="23m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5840-kaiji-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt1202625.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Gyakkyou Burai Kaiji: Ultimate Survivor"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt1202625.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt1202625.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Gyakkyou Burai Kaiji: Ultimate Survivor"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt1202625.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2007</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5840-kaiji-streaming.html">Gyakkyou Burai Kaiji: Ultimate Survivor</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt21975436.webp"
+	data-title="Kaiju No. 8"
+	data-year="2024"
+	
+  
+	data-text="Il trentaduenne Kafka Hibino fa parte di una squadra speciale addetta allo smantellamento dei resti dei Kaiju, che vengono uccisi dalle forze di..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/3077-kaiju-no-8.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt21975436.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Kaiju No. 8"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2024-04/1713095044_kaiju-no-8.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt21975436.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Kaiju No. 8"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt21975436.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2024</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/3077-kaiju-no-8.html">Kaiju No. 8</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt1187579.webp"
+	data-title="Il mio amico Rocket"
+	data-year="2007"
+	
+  
+	data-text="I Got a Rocket è una serie animata australiana incentrata su un ragazzo di nome Vincent &quot;Vinnie&quot;, che ha ricevuto un razzo per il suo..."
+	data-category="Animazione  /  Kids"
+	data-sound="ITA"
+	data-time="m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5816-il-mio-amico-rocket-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt1187579.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Il mio amico Rocket"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt1187579.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt1187579.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Il mio amico Rocket"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt1187579.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2007</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5816-il-mio-amico-rocket-streaming.html">Il mio amico Rocket</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt28197251.webp"
+	data-title="Super Cube"
+	data-year="2025"
+	
+  
+	data-text="Wang Xiaoxiu è un ragazzo come tanti che un giorno riceve una confessione d&#039;amore da Shen Yao, la ragazza più bella scuola che ammira fin da..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="20m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5831-super-cube-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt28197251.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Super Cube"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt28197251.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt28197251.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Super Cube"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt28197251.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2025</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5831-super-cube-streaming.html">Super Cube</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt43691394.webp"
+	data-title="TANK CHAIR"
+	data-year="2026"
+	
+  
+	data-text="Nagi Taira was the strongest assassin until he fell into a coma protecting his younger sister from a bullet. However, his unique physical..."
+	data-category="Animazione"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5822-tank-chair-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt43691394.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="TANK CHAIR"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt43691394.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt43691394.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="TANK CHAIR"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt43691394.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5822-tank-chair-streaming.html">TANK CHAIR</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0294180.webp"
+	data-title="High School! Kimengumi"
+	data-year="1985"
+	
+  
+	data-text="..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5830-high-school-kimengumi-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0294180.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="High School! Kimengumi"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0294180.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0294180.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="High School! Kimengumi"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0294180.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1985</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5830-high-school-kimengumi-streaming.html">High School! Kimengumi</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt10885406.webp"
+	data-title="Ascendance of a Bookworm"
+	data-year="2019"
+	
+  
+	data-text="Urano ha appena ottenuto il lavoro dei suoi sogni come bibliotecaria in un&#039;università, quando muore schiacciata dai suoi stessi libri, a seguito..."
+	data-category="Animazione  /  Dramma  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5827-ascendance-of-a-bookworm-sub-ita-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt10885406.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Ascendance of a Bookworm"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt10885406.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt10885406.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Ascendance of a Bookworm"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt10885406.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2019</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5827-ascendance-of-a-bookworm-sub-ita-streaming.html">Ascendance of a Bookworm</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt14348758.webp"
+	data-title="Le sorelle Grimm"
+	data-year="2025"
+	
+  
+	data-text="A un anno dalla misteriosa scomparsa dei genitori, le sorelle Sabrina e Daphne si trasferiscono in una città magica piena di segreti, dove le fiabe..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/animazione/4508-le-sorelle-grimm-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt14348758.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Le sorelle Grimm"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt14348758.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt14348758.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Le sorelle Grimm"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt14348758.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2025</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/4508-le-sorelle-grimm-streaming.html">Le sorelle Grimm</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt32149571.webp"
+	data-title="Golden Axe"
+	data-year="2026"
+	
+  
+	data-text="Il classico gioco arcade Sega prende vita in una nuova serie animata originale. Ax Battler, Gilius Thunderhead e Tyris Flare tornano per..."
+	data-category="Animazione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="20m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5760-golden-axe-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt32149571.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Golden Axe"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt32149571.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt32149571.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Golden Axe"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt32149571.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5760-golden-axe-streaming.html">Golden Axe</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tm330467.webp"
+	data-title="Inuk"
+	data-year="2001"
+	
+  data-rate="2" 
+	data-text="Inuk è un bambino Inuit di sette anni molto fantasioso che vive con la sua famiglia nell&#039;Artico. Destinato a diventare uno sciamano, Inuk ha..."
+	data-category="Animazione  /  Kids"
+	data-sound="ITA"
+	data-time="13m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5805-inuk-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tm330467.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Inuk"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2026-10/tm330467.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tm330467.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Inuk"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tm330467.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2001</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5805-inuk-streaming.html">Inuk</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0870039.webp"
+	data-title="Growing Up Creepie"
+	data-year="2006"
+	
+  
+	data-text="Come si adatterà una ragazzina cresciuta da una famiglia di insetti alla vita scolastica?..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="22m"
+	>
+	<a href="https://guardaseriex.lol/animazione/4633-marines-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0870039.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Growing Up Creepie"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0870039.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0870039.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Growing Up Creepie"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0870039.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2006</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/4633-marines-streaming.html">Growing Up Creepie</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0407398.webp"
+	data-title="Hi Hi Puffy AmiYumi"
+	data-year="2004"
+	
+  
+	data-text="La Serie segue le avventure musicali di Ami Onuki e Yumi Yoshimura, due rockstar sempre in viaggio. Tra concerti, imprevisti e situazioni assurde in..."
+	data-category="Animazione  /  Commedia  /  Kids"
+	data-sound="ITA"
+	data-time="7m"
+	>
+	<a href="https://guardaseriex.lol/animazione/3487-dream-productions.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0407398.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Hi Hi Puffy AmiYumi"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2024-12/1733934809_dream-productions.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0407398.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Hi Hi Puffy AmiYumi"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0407398.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2004</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/3487-dream-productions.html">Hi Hi Puffy AmiYumi</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0118298.webp"
+	data-title="Daria"
+	data-year="1997"
+	
+  
+	data-text="Daria è una serie televisiva animata creata da Glenn Eichler e Susie Lewis Lynn per MTVm che si concentra su un brillante adolescente, Daria..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="22m"
+	>
+	<a href="https://guardaseriex.lol/animazione/2794-un-cuore-due-destini.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0118298.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Daria"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0118298.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0118298.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Daria"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0118298.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1997</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/2794-un-cuore-due-destini.html">Daria</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt36836504.webp"
+	data-title="The All-Devouring Whale: Homecoming"
+	data-year="2025"
+	
+  
+	data-text="Lingxiao Fan è un talentuoso maestro di spiriti e capo della setta Lingxiao. Durante una competizione tra le principali sette, viene tradito e..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Commedia  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="36m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5799-kun-il-divoratore-del-creato-ii-ritorno-del-caposetta-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt36836504.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="The All-Devouring Whale: Homecoming"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt36836504.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt36836504.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="The All-Devouring Whale: Homecoming"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt36836504.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2025</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5799-kun-il-divoratore-del-creato-ii-ritorno-del-caposetta-streaming.html">The All-Devouring Whale: Homecoming</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0149460.webp"
+	data-title="Futurama"
+	data-year="1999"
+	
+  data-rate="4.8" 
+	data-text="Fry, giovane fattorino senza stimoli, consegna una pizza a un laboratorio scientifico e qui rimane intrappolato in una camera criogenica la quale si..."
+	data-category="Animazione  /  Commedia  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="22m"
+	>
+	<a href="https://guardaseriex.lol/animazione/504-futurama.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0149460.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Futurama"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2020-01/1580239526_futurama.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0149460.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Futurama"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0149460.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1999</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/504-futurama.html">Futurama</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt37692332.webp"
+	data-title="President Curtis"
+	data-year="2026"
+	
+  
+	data-text="Il Presidente Curtis e il suo eccentrico staff affrontano crisi bizzarre di cui nemmeno Rick Sanchez si preoccuperebbe, dalla diplomazia..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5686-president-curtis-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt37692332.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="President Curtis"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt37692332.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt37692332.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="President Curtis"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt37692332.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5686-president-curtis-streaming.html">President Curtis</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt43691353.webp"
+	data-title="Overgeared"
+	data-year="2026"
+	
+  
+	data-text="Lasciati alle spalle la vita di tutti i giorni in SATISFY, un gioco VR in cui i giocatori possono ottenere fama e ricchezza anche nel mondo reale...."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5790-overgeared-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt43691353.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Overgeared"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt43691353.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt43691353.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Overgeared"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt43691353.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5790-overgeared-streaming.html">Overgeared</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tm319728.webp"
+	data-title="Seeing Double"
+	data-year="2026"
+	
+  
+	data-text="..."
+	data-category="Animazione  /  Dramma"
+	data-sound="ITA"
+	data-time="10m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5795-seeing-double-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tm319728.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Seeing Double"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2026-09/tm319728.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tm319728.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Seeing Double"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tm319728.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5795-seeing-double-streaming.html">Seeing Double</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt40003445.webp"
+	data-title="Dang!"
+	data-year="2026"
+	
+  
+	data-text="Seguiamo le vicende di un fratello e una sorella: le loro vite newyorkesi, divertenti e caotiche, vengono sconvolte quando il loro peggior incubo..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="27m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5743-dang-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt40003445.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Dang!"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt40003445.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt40003445.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Dang!"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt40003445.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5743-dang-streaming.html">Dang!</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt37532893.webp"
+	data-title="BLACK TORCH"
+	data-year="2026"
+	
+  
+	data-text="Jirô è un ragazzo con la capacità di parlare con gli animali, cresciuto dal nonno e addestrato come ninja. Emarginato per la sua diversità, trova..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy  /  Mistero"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5756-black-torch-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt37532893.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="BLACK TORCH"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt37532893.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt37532893.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="BLACK TORCH"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt37532893.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5756-black-torch-streaming.html">BLACK TORCH</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0290047.webp"
+	data-title="Robottino"
+	data-year="1982"
+	
+  
+	data-text="Robottino (サイボットロボッチ Cybot Robotty) è un anime di 39 episodi da 24 minuti l&#039;uno, su un soggetto creato da Ken Ishikawa (Getter Robo) e prodotto..."
+	data-category="Animazione  /  Commedia  /  Fantascienza  /  Fantasy  /  Famiglia"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5785-robottino-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0290047.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Robottino"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0290047.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0290047.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Robottino"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0290047.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1982</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5785-robottino-streaming.html">Robottino</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt13084120.webp"
+	data-title="AzurLane: Slow Ahead!"
+	data-year="2021"
+	
+  
+	data-text="Spinoff di &quot;Azur Lane&quot; che parla delle tranquille giornate di alcune pacifiche marinarette...."
+	data-category="Animazione  /  Commedia  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="9m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5786-azur-lane-slow-ahead-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt13084120.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="AzurLane: Slow Ahead!"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt13084120.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt13084120.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="AzurLane: Slow Ahead!"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt13084120.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2021</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5786-azur-lane-slow-ahead-streaming.html">AzurLane: Slow Ahead!</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt37015024.webp"
+	data-title="Young Ladies Don&#039;t Play Fighting Games"
+	data-year="2026"
+	
+  
+	data-text="Mitsuki Aya ha un solo obiettivo alla prestigiosa Accademia Femminile Kuromi: diventare una raffinata signorina come l&#039;impeccabile &quot;Giglio..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5772-young-ladies-don-t-play-fighting-games-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt37015024.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Young Ladies Don&#039;t Play Fighting Games"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt37015024.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt37015024.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Young Ladies Don&#039;t Play Fighting Games"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt37015024.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5772-young-ladies-don-t-play-fighting-games-streaming.html">Young Ladies Don&#039;t Play Fighting Games</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt38049145.webp"
+	data-title="Goodbye, Lara"
+	data-year="2026"
+	
+  
+	data-text="C&#039;era una volta una principessa sirena di nome Lara che si innamorò di un principe umano. Per stare con lui, usò la pozione di una strega per..."
+	data-category="Animazione  /  Dramma  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5784-goodbye-lara-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt38049145.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Goodbye, Lara"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt38049145.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt38049145.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Goodbye, Lara"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt38049145.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5784-goodbye-lara-streaming.html">Goodbye, Lara</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt32862795.webp"
+	data-title="The Insipid Prince&#039;s Furtive Grab for the Throne"
+	data-year="2026"
+	
+  
+	data-text="Per l&#039;impero, il principe Arnold è solo una barzelletta: un principe del tuttoinetto, costantemente oscurato dal talento del suo gemello,..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Commedia  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5781-the-insipid-prince-s-furtive-grab-for-the-throne-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt32862795.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="The Insipid Prince&#039;s Furtive Grab for the Throne"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt32862795.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt32862795.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="The Insipid Prince&#039;s Furtive Grab for the Throne"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt32862795.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5781-the-insipid-prince-s-furtive-grab-for-the-throne-streaming.html">The Insipid Prince&#039;s Furtive Grab for the Throne</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt39304754.webp"
+	data-title="Love Unseen Beneath the Clear Night Sky"
+	data-year="2026"
+	
+  
+	data-text="Kakeru Sorano, un tranquillo studente al primo anno di università che tende a evitare gli altri, incontra Koharu Fuyutsuki, una ragazza cieca che..."
+	data-category="Animazione  /  Dramma"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5780-love-unseen-beneath-the-clear-night-sky-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt39304754.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Love Unseen Beneath the Clear Night Sky"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt39304754.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt39304754.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Love Unseen Beneath the Clear Night Sky"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt39304754.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5780-love-unseen-beneath-the-clear-night-sky-streaming.html">Love Unseen Beneath the Clear Night Sky</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt41358179.webp"
+	data-title="Saved by the Ice Cold Prince&#039;s Embrace"
+	data-year="2026"
+	
+  
+	data-text="..."
+	data-category="Animazione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="6m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5783-saved-by-the-ice-cold-prince-s-embrace-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt41358179.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Saved by the Ice Cold Prince&#039;s Embrace"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt41358179.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt41358179.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Saved by the Ice Cold Prince&#039;s Embrace"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt41358179.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5783-saved-by-the-ice-cold-prince-s-embrace-streaming.html">Saved by the Ice Cold Prince&#039;s Embrace</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt41095208.webp"
+	data-title="The Forsaken Saintess and Her Foodie Road Trip in Another World"
+	data-year="2026"
+	
+  
+	data-text="Rin Takanashi è un&#039;ex operatrice socio sanitaria che viene evocata in un altro mondo per coprire il ruolo di santa. Però, le sue skill vengono..."
+	data-category="Animazione"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5774-isekai-camper-i-viaggi-culinari-in-un-altro-mondo-della-santa-rinnegata-ho-evocato-un-camper-grazie-a-una-skill-nascosta-sub-ita-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt41095208.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="The Forsaken Saintess and Her Foodie Road Trip in Another World"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt41095208.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt41095208.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="The Forsaken Saintess and Her Foodie Road Trip in Another World"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt41095208.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5774-isekai-camper-i-viaggi-culinari-in-un-altro-mondo-della-santa-rinnegata-ho-evocato-un-camper-grazie-a-una-skill-nascosta-sub-ita-streaming.html">The Forsaken Saintess and Her Foodie Road Trip in Another World</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt21057046.webp"
+	data-title="The Doomies"
+	data-year="2026"
+	
+  
+	data-text="Quando i migliori amici Bobby e Romy aprono per errore un portale verso un altro mondo, trasformano la loro tranquilla cittadina costiera in un..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Commedia  /  Fantascienza  /  Fantasy  /  Famiglia"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5720-the-doomies-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt21057046.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="The Doomies"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt21057046.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt21057046.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="The Doomies"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt21057046.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5720-the-doomies-streaming.html">The Doomies</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt41279522.webp"
+	data-title="The World Is Dancing"
+	data-year="2026"
+	
+  
+	data-text="Anno 1374, Oniyasha è il figlio dell&#039;artista teatrale Kan&#039;ami, ma non riesce a trovare il proprio modo di esprimersi, costretto a seguire..."
+	data-category="Animazione  /  Dramma"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5660-the-world-is-dancing-sub-ita-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt41279522.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="The World Is Dancing"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt41279522.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt41279522.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="The World Is Dancing"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt41279522.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5660-the-world-is-dancing-sub-ita-streaming.html">The World Is Dancing</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt41278615.webp"
+	data-title="Oh Boy, Was I Wrong About Her"
+	data-year="2026"
+	
+  
+	data-text="Sette anni dopo aver stretto da bambini la promessa di rimanere sempre amici, Hayato si ritrova nello stesso liceo di città con Haruki, la sua amica..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5771-oh-boy-was-i-wrong-about-her-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt41278615.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Oh Boy, Was I Wrong About Her"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt41278615.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt41278615.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Oh Boy, Was I Wrong About Her"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt41278615.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5771-oh-boy-was-i-wrong-about-her-streaming.html">Oh Boy, Was I Wrong About Her</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt39281887.webp"
+	data-title="Jaadugar: A Witch in Mongolia"
+	data-year="2026"
+	
+  
+	data-text="..."
+	data-category="Animazione  /  Dramma  /  Guerra"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5755-jaadugar-a-witch-in-mongolia-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt39281887.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Jaadugar: A Witch in Mongolia"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt39281887.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt39281887.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Jaadugar: A Witch in Mongolia"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt39281887.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5755-jaadugar-a-witch-in-mongolia-streaming.html">Jaadugar: A Witch in Mongolia</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt38264832.webp"
+	data-title="Ricky Gervais Alley Cats"
+	data-year="2026"
+	
+  
+	data-text="In questa commedia animata senza freni di Ricky Gervais, disavventure assurde si susseguono mentre alcuni gatti randagi seminano il caos per le..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="17m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5700-ricky-gervais-alley-cats-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt38264832.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Ricky Gervais Alley Cats"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt38264832.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt38264832.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Ricky Gervais Alley Cats"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt38264832.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5700-ricky-gervais-alley-cats-streaming.html">Ricky Gervais Alley Cats</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt11000446.webp"
+	data-title="Ewilan dei due mondi"
+	data-year="2026"
+	
+  
+	data-text="Camille ha sette anni quando viene adottata, vivendo con un vuoto che non riesce a colmare. A tredici anni, un misterioso passaggio la conduce a..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy  /  Kids"
+	data-sound="ITA"
+	data-time="26m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5750-ewilan-dei-due-mondi-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt11000446.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Ewilan dei due mondi"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt11000446.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt11000446.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Ewilan dei due mondi"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt11000446.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5750-ewilan-dei-due-mondi-streaming.html">Ewilan dei due mondi</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt11237876.webp"
+	data-title="Accademia Soprannaturale"
+	data-year="2022"
+	
+  
+	data-text="Dopo aver scoperto di portare il marchio del drago e di essere stati maledetti a servire il malvagio Re Drago, due gemelli licantropi rivali devono..."
+	data-category="Animazione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="23m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5692-supernatural-academy-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt11237876.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Accademia Soprannaturale"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt11237876.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt11237876.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Accademia Soprannaturale"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt11237876.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2022</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5692-supernatural-academy-streaming.html">Accademia Soprannaturale</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt1909447.webp"
+	data-title="Deadman Wonderland"
+	data-year="2011"
+	
+  
+	data-text="Ganta è l&#039;unico sopravvissuto dopo che un misterioso uomo vestito di rosso ha massacrato un&#039;aula piena di adolescenti. Viene incastrato per..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5740-deadman-wonderland-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt1909447.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Deadman Wonderland"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt1909447.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt1909447.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Deadman Wonderland"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt1909447.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2011</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5740-deadman-wonderland-streaming.html">Deadman Wonderland</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0397306.webp"
+	data-title="American Dad!"
+	data-year="2005"
+	
+  data-rate="4" 
+	data-text="La serie si concentra su una sconclusionata famiglia americana, gli Smith, padre madre (Francine), figlia universitaria e figlio adolescente e Stan,..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="22m"
+	>
+	<a href="https://guardaseriex.lol/animazione/3442-american-dad.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0397306.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="American Dad!"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2024-11/1732286573_1.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0397306.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="American Dad!"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0397306.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2005</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/3442-american-dad.html">American Dad!</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt28093628.webp"
+	data-title="Common Side Effects"
+	data-year="2025"
+	
+  
+	data-text="Marshall e Frances, ex compagni di laboratorio al liceo, iniziano a svelare una cospirazione che coinvolge le grandi aziende farmaceutiche e il..."
+	data-category="Animazione  /  Commedia  /  Dramma  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="23m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5705-common-side-effects-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt28093628.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Common Side Effects"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt28093628.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt28093628.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Common Side Effects"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt28093628.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2025</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5705-common-side-effects-streaming.html">Common Side Effects</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt9310330.webp"
+	data-title="Yasuke"
+	data-year="2021"
+	
+  data-rate="2" 
+	data-text="Un pacifico barcaiolo un tempo noto come il Samurai Nero è riportato in conflitto quando prende una bambina con poteri misteriosi sotto la sua ala..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Dramma  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="30m"
+	>
+	<a href="https://guardaseriex.lol/animazione/1235-yasuke.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt9310330.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Yasuke"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2021-04/1619187061_yasuke.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt9310330.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Yasuke"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt9310330.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2021</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/1235-yasuke.html">Yasuke</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0809815.webp"
+	data-title="Inferno e paradiso"
+	data-year="2004"
+	
+  
+	data-text="La storia prende luogo nel prestigioso Istituto Todou, il cosiddetto &quot;paradiso dei combattenti&quot;, una scuola equivalente al liceo dove,..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Commedia  /  Dramma"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5658-inferno-e-paradiso-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0809815.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Inferno e paradiso"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0809815.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0809815.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Inferno e paradiso"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0809815.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2004</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5658-inferno-e-paradiso-streaming.html">Inferno e paradiso</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt7019028.webp"
+	data-title="101 Dalmatian Street"
+	data-year="2019"
+	
+  
+	data-text="Segui le avventure dei fratelli maggiori Dolly e Dylan, la loro mamma Delilah e papà Doug, e i loro 97 fratelli e sorelle minori mentre si imbarcano..."
+	data-category="Animazione  /  Famiglia  /  Kids"
+	data-sound="ITA"
+	data-time="10m"
+	>
+	<a href="https://guardaseriex.lol/animazione/3347-101-dalmatian-street.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt7019028.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="101 Dalmatian Street"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt7019028.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt7019028.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="101 Dalmatian Street"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt7019028.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2019</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/3347-101-dalmatian-street.html">101 Dalmatian Street</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt36582176.webp"
+	data-title="Winx Club: The Magic Is Back"
+	data-year="2025"
+	
+  
+	data-text="Quando Bloom scopre di avere dei poteri magici, la sua vita prende una piega inaspettata. Ad Alfea, la scuola per fate e streghe, incontra cinque..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Commedia  /  Fantascienza  /  Fantasy  /  Kids"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/animazione/4522-winx-club-the-magic-is-back-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt36582176.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Winx Club: The Magic Is Back"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt36582176.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt36582176.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Winx Club: The Magic Is Back"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt36582176.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2025</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/4522-winx-club-the-magic-is-back-streaming.html">Winx Club: The Magic Is Back</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt1884856.webp"
+	data-title="Masha e Orso"
+	data-year="2009"
+	
+  
+	data-text="Masha è una ragazzina allegra, irrequieta e testarda che si caccia in situazioni divertenti. Veste un abitino tradizionale russo color fucsia. Vive..."
+	data-category="Animazione  /  Commedia  /  Famiglia  /  Kids"
+	data-sound="ITA"
+	data-time="7m"
+	>
+	<a href="https://guardaseriex.lol/animazione/3997-masha-e-orso.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt1884856.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Masha e Orso"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt1884856.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt1884856.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Masha e Orso"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt1884856.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2009</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/3997-masha-e-orso.html">Masha e Orso</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt3061046.webp"
+	data-title="Steven Universe"
+	data-year="2013"
+	
+  data-rate="5" 
+	data-text="Nella cittadina marittima statunitense di Beach City vivono le Crystal Gems, un gruppo di Gemme (una specie extraterrestre ultramillenaria, munita di..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Commedia  /  Fantascienza  /  Fantasy  /  Famiglia"
+	data-sound="ITA"
+	data-time="11m"
+	>
+	<a href="https://guardaseriex.lol/animazione/1891-steven-universe.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt3061046.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Steven Universe"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2022-01/1641201353_steven-universe-2013-235x360.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt3061046.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Steven Universe"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt3061046.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2013</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/1891-steven-universe.html">Steven Universe</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt21056976.webp"
+	data-title="Dragon Striker"
+	data-year="2026"
+	
+  
+	data-text="In un mondo in cui sport e magia si fondono, Key, un ragazzo di campagna, scopre il suo straordinario talento naturale e apprende di poter diventare..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy  /  Famiglia"
+	data-sound="ITA"
+	data-time="23m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5595-dragon-striker-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt21056976.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Dragon Striker"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt21056976.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt21056976.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Dragon Striker"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt21056976.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5595-dragon-striker-streaming.html">Dragon Striker</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt28230655.webp"
+	data-title="Among Us"
+	data-year="2026"
+	
+  
+	data-text="Gli eccentrici e monocromatici membri dell&#039;equipaggio di una nave spaziale cargo devono scovare l&#039;Impostore infiltratosi a bordo, prima di..."
+	data-category="Animazione  /  Commedia  /  Fantascienza  /  Fantasy  /  Mistero"
+	data-sound="ITA"
+	data-time="14m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5589-among-us-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt28230655.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Among Us"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt28230655.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt28230655.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Among Us"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt28230655.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5589-among-us-streaming.html">Among Us</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt43589481.webp"
+	data-title="Thunder 3"
+	data-year="2026"
+	
+  
+	data-text="Pyontaro, Hiroshi e Tsubame, tre studenti di scuola media assolutamente comuni, si ritrovano coinvolti in una straordinaria avventura quando la..."
+	data-category="Animazione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5671-thunder-3-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt43589481.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Thunder 3"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt43589481.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt43589481.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Thunder 3"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt43589481.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5671-thunder-3-streaming.html">Thunder 3</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt36517689.webp"
+	data-title="THE GHOST IN THE SHELL"
+	data-year="2026"
+	
+  
+	data-text="Giappone, 2029. La cyborg Motoko Kusanagi è a capo di una task force specializzata nella neutralizzazione di minacce emergenti. Notata da Daisuke..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5669-the-ghost-in-the-shell-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt36517689.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="THE GHOST IN THE SHELL"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt36517689.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt36517689.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="THE GHOST IN THE SHELL"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt36517689.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5669-the-ghost-in-the-shell-streaming.html">THE GHOST IN THE SHELL</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt32490790.webp"
+	data-title="In campeggio con Snoopy"
+	data-year="2024"
+	
+  
+	data-text="Dopo aver scoperto che il loro gruppo rischia di sciogliersi, Snoopy e i Bracchetto Scout partono per un’avventura all’aria aperta per ottenere i..."
+	data-category="Animazione  /  Famiglia  /  Kids"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5670-in-campeggio-con-snoopy-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt32490790.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="In campeggio con Snoopy"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt32490790.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt32490790.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="In campeggio con Snoopy"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt32490790.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2024</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5670-in-campeggio-con-snoopy-streaming.html">In campeggio con Snoopy</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt38939446.webp"
+	data-title="Sparks of Tomorrow"
+	data-year="2026"
+	
+  
+	data-text="In un passato alternativo, un improbabile duo si unisce per cercare un catalogo scomparso che potrebbe portare l&#039;elettricità nelle strade fumose..."
+	data-category="Animazione  /  Dramma  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5664-sparks-of-tomorrow-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt38939446.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Sparks of Tomorrow"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt38939446.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt38939446.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Sparks of Tomorrow"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt38939446.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5664-sparks-of-tomorrow-streaming.html">Sparks of Tomorrow</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt43490607.webp"
+	data-title="Aeronautica Imperialis"
+	data-year="2026"
+	
+  
+	data-text="Kae, pilota della Marina Imperiale, e i suoi gregari hanno il compito di mettere in sicurezza un vitale complesso minerario: una missione di routine..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="14m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5648-aeronautica-imperialis-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt43490607.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Aeronautica Imperialis"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt43490607.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt43490607.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Aeronautica Imperialis"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt43490607.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5648-aeronautica-imperialis-streaming.html">Aeronautica Imperialis</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt38363695.webp"
+	data-title="Petals of Reincarnation"
+	data-year="2026"
+	
+  
+	data-text="Toya Senji è un ragazzo senza alcun talento. Ha provato di tutto, ma non riesce a eccellere in nulla, per quanto si impegni. Poi incontra Haito, una..."
+	data-category="Animazione  /  Avventura  /  Azione  /  Mistero"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5641-petals-of-reincarnation-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt38363695.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Petals of Reincarnation"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt38363695.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt38363695.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Petals of Reincarnation"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt38363695.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5641-petals-of-reincarnation-streaming.html">Petals of Reincarnation</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt1561755.webp"
+	data-title="Bob&#039;s Burgers"
+	data-year="2011"
+	
+  
+	data-text="Bob&#039;s Burgers racconta le avventure quotidiane di una famiglia alle prese con la gestione di un ristorante. Bob, il proprietario, ha intrapreso..."
+	data-category="Animazione  /  Commedia"
+	data-sound="ITA"
+	data-time="22m"
+	>
+	<a href="https://guardaseriex.lol/animazione/3324-bobs-burgers.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt1561755.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Bob&#039;s Burgers"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt1561755.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt1561755.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Bob&#039;s Burgers"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt1561755.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2011</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/3324-bobs-burgers.html">Bob&#039;s Burgers</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt14690136.webp"
+	data-title="Mating Season"
+	data-year="2026"
+	
+  
+	data-text="Le menti perverse dietro &quot;Big Mouth&quot; presentano questa irriverente serie commedia animata per adulti ambientata nel mondo animale su amore,..."
+	data-category="Animazione  /  Commedia  /  Fantascienza  /  Fantasy"
+	data-sound="ITA"
+	data-time="26m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5494-mating-season-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt14690136.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Mating Season"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt14690136.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt14690136.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Mating Season"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt14690136.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5494-mating-season-streaming.html">Mating Season</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt13980732.webp"
+	data-title="Le cronache di Gumball"
+	data-year="2020"
+	
+  
+	data-text="Le cronache di Gumball è una miniserie spin-off composta prevalentemente da clip riciclate da episodi precedenti, ma con alcuni nuovi contenuti..."
+	data-category="Animazione  /  Famiglia  /  Kids"
+	data-sound="ITA"
+	data-time="10m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5485-le-cronache-di-gumball-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt13980732.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Le cronache di Gumball"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt13980732.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt13980732.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Le cronache di Gumball"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt13980732.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2020</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5485-le-cronache-di-gumball-streaming.html">Le cronache di Gumball</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt36594331.webp"
+	data-title="Star Wars: Maul - Shadow Lord"
+	data-year="2026"
+	
+  
+	data-text="Ambientata dopo gli eventi di &#039;The Clone Wars&#039;, Maul progetta di ricostruire il suo sindacato criminale su un pianeta non toccato..."
+	data-category="Fantascienza  /  Fantasy  /  Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="31m"
+	>
+	<a href="https://guardaseriex.lol/fantascienza/5439-star-wars-maul-shadow-lord-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt36594331.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Star Wars: Maul - Shadow Lord"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt36594331.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt36594331.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Star Wars: Maul - Shadow Lord"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt36594331.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Fantascienza</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/fantascienza/5439-star-wars-maul-shadow-lord-streaming.html">Star Wars: Maul - Shadow Lord</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0147752.webp"
+	data-title="Biker Mice da Marte"
+	data-year="1993"
+	
+  
+	data-text="Tre topi motociclisti antropomorfi, Sterzo (Throttle) Turbo (Vinnie) e Pistone (Modo), scappano da una guerra scoppiata sul loro pianeta natio,..."
+	data-category="Commedia  /  Fantasy  /  Kids  /  Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="22m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5430-biker-mice-da-marte-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0147752.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Biker Mice da Marte"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0147752.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0147752.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Biker Mice da Marte"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0147752.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1993</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5430-biker-mice-da-marte-streaming.html">Biker Mice da Marte</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0816222.webp"
+	data-title="Motori in pista"
+	data-year="1988"
+	
+  
+	data-text="Akagi Gunma è un adolescente giovane, impetuoso ed avventato che decide di trasferirsi nella grande città per realizzare il suo sogno di guidare..."
+	data-category="Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="26m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5429-motori-in-pista-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0816222.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Motori in pista"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2026-03/1774721886_motori-in-pista.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0816222.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Motori in pista"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0816222.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1988</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5429-motori-in-pista-streaming.html">Motori in pista</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0054572.webp"
+	data-title="Top Cat"
+	data-year="1961"
+	
+  
+	data-text="Top Cat è una serie televisiva animata in prima serata di Hanna-Barbera che andò dal 26 novembre 1961 al 18 aprile 1962 per una serie di 30 episodi..."
+	data-category="Commedia  /  Kids  /  Animazione"
+	data-sound="ITA"
+	data-time="26m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5428-top-cat-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0054572.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Top Cat"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0054572.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0054572.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Top Cat"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0054572.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1961</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5428-top-cat-streaming.html">Top Cat</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0240493.webp"
+	data-title="Excel Saga - Animazione Sperimentale Insensata"
+	data-year="1999"
+	
+  
+	data-text="L&#039;iperattiva Excel farebbe di tutto pur di compiacere il suo lord, Il Palazzo. L&#039;attraente e algido “Sua Eccellenza Il Palazzo” ha infatti..."
+	data-category="Commedia  /  Fantasy  /  Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5427-excel-saga-animazione-sperimentale-insensata-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0240493.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Excel Saga - Animazione Sperimentale Insensata"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0240493.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0240493.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Excel Saga - Animazione Sperimentale Insensata"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0240493.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1999</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5427-excel-saga-animazione-sperimentale-insensata-streaming.html">Excel Saga - Animazione Sperimentale Insensata</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0255768.webp"
+	data-title="Yakky Doodle (1961)"
+	data-year="1961"
+	
+  
+	data-text="Il cartone narra le avventure di Iacchi Du-Du, un paperotto orfano che ha come migliore amico un bulldog di nome Chopper, il quale lo difende dagli..."
+	data-category="Animazione"
+	data-sound="ITA"
+	data-time="8m"
+	>
+	<a href="https://guardaseriex.lol/animazione/5426-yakky-doodle-1961-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0255768.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Yakky Doodle (1961)"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0255768.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0255768.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Yakky Doodle (1961)"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0255768.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1961</span>
+				 <span>Animazione</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/animazione/5426-yakky-doodle-1961-streaming.html">Yakky Doodle (1961)</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt28070105.webp"
+	data-title="Magicampers"
+	data-year="2026"
+	
+  
+	data-text="Segui le avventure dei migliori amici Darly e Loomis in un campo estivo per creature magiche. Darly è metà maiale e metà Pegaso, Loomis è metà asino..."
+	data-category="Commedia  /  Fantasy  /  Famiglia  /  Kids  /  Animazione"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5425-magicampers-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt28070105.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Magicampers"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt28070105.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt28070105.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Magicampers"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt28070105.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2026</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5425-magicampers-streaming.html">Magicampers</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt3124992.webp"
+	data-title="Sailor Moon Crystal"
+	data-year="2014"
+	
+  
+	data-text="Usagi Tsukino frequenta la seconda media è un po&#039; goffa e piagnucolona, ma piena di energia. Un giorno incontra Luna, una gatta nera con la..."
+	data-category="Fantasy  /  Animazione"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/fantasy/5419-sailor-moon-crystal-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt3124992.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Sailor Moon Crystal"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt3124992.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt3124992.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Sailor Moon Crystal"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt3124992.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2014</span>
+				 <span>Fantasy</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/fantasy/5419-sailor-moon-crystal-streaming.html">Sailor Moon Crystal</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0278220.webp"
+	data-title="The Hanna-Barbera New Cartoon Series"
+	data-year="1962"
+	
+  
+	data-text="Wally Gator: ospite dello zoo cittadino, Wally è molto curioso e ama scappare per visitare il mondo esterno, ostacolato dal guardiano Mr. Twiddle...."
+	data-category="Commedia  /  Famiglia  /  Kids  /  Animazione"
+	data-sound="ITA"
+	data-time="6m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5418-the-hanna-barbera-new-cartoon-series-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0278220.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="The Hanna-Barbera New Cartoon Series"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0278220.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0278220.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="The Hanna-Barbera New Cartoon Series"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0278220.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1962</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5418-the-hanna-barbera-new-cartoon-series-streaming.html">The Hanna-Barbera New Cartoon Series</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt8009622.webp"
+	data-title="Twelve Forever"
+	data-year="2019"
+	
+  
+	data-text="Dall&#039;immaginazione fervida di Reggie nasce un mondo fantastico e unico nel quale può essere se stessa, sfuggendo alle pressioni dell&#039;età..."
+	data-category="Commedia  /  Famiglia  /  Kids  /  Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5417-twelve-forever-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt8009622.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Twelve Forever"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt8009622.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt8009622.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Twelve Forever"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt8009622.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2019</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5417-twelve-forever-streaming.html">Twelve Forever</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt11425668.webp"
+	data-title="Tatino e Tatone"
+	data-year="1959"
+	
+  
+	data-text="Papino e Tatino sono due cani, rispettivamente padre e figlio. La storia è incentrata sulle disavventure di Tatino, il quale cerca di fare del suo..."
+	data-category="Commedia  /  Kids  /  Animazione"
+	data-sound="ITA"
+	data-time="7m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5416-tatino-e-tatone-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt11425668.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Tatino e Tatone"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt11425668.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt11425668.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Tatino e Tatone"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt11425668.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1959</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5416-tatino-e-tatone-streaming.html">Tatino e Tatone</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0244156.webp"
+	data-title="Ernesto Sparalesto"
+	data-year="1959"
+	
+  
+	data-text="Ernesto Sparalesto (Quick Draw McGraw) è un cavallo antropomorfo con le sembianze di uno sceriffo del far west, con cinturone, cappello e fazzoletto..."
+	data-category="Commedia  /  Crime  /  Kids  /  Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="7m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5415-ernesto-sparalesto-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0244156.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Ernesto Sparalesto"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0244156.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0244156.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Ernesto Sparalesto"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0244156.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1959</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5415-ernesto-sparalesto-streaming.html">Ernesto Sparalesto</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0051283.webp"
+	data-title="Braccobaldo Show"
+	data-year="1958"
+	
+  data-rate="4" 
+	data-text="Braccobaldo è una cane cordiale e di buone maniere che canticchia sempre la canzoncina &quot;O mia cara, o mia cara, o mia cara Clementina!&quot;,..."
+	data-category="Commedia  /  Kids  /  Animazione"
+	data-sound="ITA"
+	data-time="7m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5414-braccobaldo-show-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0051283.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Braccobaldo Show"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0051283.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0051283.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Braccobaldo Show"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0051283.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1958</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5414-braccobaldo-show-streaming.html">Braccobaldo Show</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0470651.webp"
+	data-title="Fantazoo"
+	data-year="1987"
+	
+  
+	data-text="Le storie di Fantazoo ruotano attorno alle buffe, esilaranti e surreali vicende quotidiane di Alvaro, un bue gestore della sua fattoria in un mondo..."
+	data-category="Commedia  /  Animazione"
+	data-sound="ITA"
+	data-time="10m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5401-fantazoo-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0470651.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Fantazoo"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0470651.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0470651.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Fantazoo"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0470651.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1987</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5401-fantazoo-streaming.html">Fantazoo</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt1377255.webp"
+	data-title="A tutto gas"
+	data-year="1984"
+	
+  
+	data-text="Il Mechadock è una potente automobile da corsa costruita con mezzi di fortuna e ricavata da una semplice utilitaria. È in grado di correre su..."
+	data-category="Commedia  /  Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="30m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5400-a-tutto-gas-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt1377255.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="A tutto gas"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2026-03/1774233550_a-tutto-gas.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt1377255.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="A tutto gas"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt1377255.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1984</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5400-a-tutto-gas-streaming.html">A tutto gas</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0090479.webp"
+	data-title="Maison Ikkoku - Cara dolce Kyoko"
+	data-year="1986"
+	
+  data-rate="5" 
+	data-text="Lo studente Yusaku Godai tenta invano di studiare per l&#039;esame d&#039;ammissione all&#039;università, ma è esasperato dai dispetti e dalla..."
+	data-category="Commedia  /  Romantico  /  Animazione"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5399-maison-ikkoku-cara-dolce-kyoko-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0090479.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="Maison Ikkoku - Cara dolce Kyoko"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/tmdb/tt0090479.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0090479.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="Maison Ikkoku - Cara dolce Kyoko"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0090479.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>1986</span>
+				 <span>Commedia</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/commedia/5399-maison-ikkoku-cara-dolce-kyoko-streaming.html">Maison Ikkoku - Cara dolce Kyoko</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt0776469.webp"
+	data-title="La leggenda del drago"
+	data-year="2006"
+	
+  
+	data-text="In una Cina non molto antica i fratelli gemelli (eterozigoti) Ang e Ling Leung, nati nell&#039;anno del dragone, studenti di arti marziali presso il..."
+	data-category="Fantasy  /  Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="24m"
+	>
+	<a href="https://guardaseriex.lol/fantasy/5398-la-leggenda-del-drago-streaming.html" class="ratio">
+			 
+			 <img
+ 				src="/uploads/immagini/tt0776469.webp"
+ 				class="object-fit-cover d-xl-none"
+ 				alt="La leggenda del drago"
+ 				loading="lazy" onerror="this.onerror=null;this.src='/uploads/thumb/300x450-0-80/2026-03/1774232215_la-leggenda-del-drago.jpg?v=202609241200'" />
+ 			<img
+ 			 src="/uploads/posters/tt0776469.webp"
+ 			 class="object-fit-cover d-none d-xl-block"
+ 			 alt="La leggenda del drago"
+ 			 loading="lazy" onerror="this.onerror=null;this.src='/uploads/posters/tt0776469.webp'" />
+		 
+		 
+
+			 <span class="movieItem-overlay">
+  			 
+			 </span>
+		 </a>
+		 <div class="movieItem-bottom">
+			 <div class="movieItem-meta">
+				 <span>2006</span>
+				 <span>Fantasy</span>
+				 <span>ITA</span>
+			 </div>
+			 <div class="movieItem-title text-truncate"><a href="https://guardaseriex.lol/fantasy/5398-la-leggenda-del-drago-streaming.html">La leggenda del drago</a></div>
+		 </div>
+	  <span class="d-none fav-btn">
+			
+			
+		</span>
+	 </div>
+<div class="movieItem"
+	data-tip="true"
+	data-cover="/uploads/posters/tt1124358.webp"
+	data-title="Yatterman"
+	data-year="2008"
+	
+  
+	data-text="Il &quot;Trio Drombo&quot; segue le istruzioni del Dottor Dokrobei, personaggio che comunica con loro impossessandosi di diversi oggetti, i quali..."
+	data-category="Commedia  /  Animazione  /  Avventura  /  Azione"
+	data-sound="ITA"
+	data-time="25m"
+	>
+	<a href="https://guardaseriex.lol/commedia/5397-yatterman-streaming.html" class="ratio"

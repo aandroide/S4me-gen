@@ -13,18 +13,16 @@ Canale tantifilm | indirizzo https://tanti-film.tattoo
       peliculas | Commedia | https://tanti-film.tattoo/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
+      check | Guarding Stars  | https://tanti-film.tattoo/guarda/35767-guarding-stars-streaming-streaming-hd.html
       check | Madden  | https://tanti-film.tattoo/guarda/35761-madden-streaming-streaming-hd.html
       check | Anatomy of a G.O.A.T  | https://tanti-film.tattoo/guarda/35543-anatomy-of-a-g-o-a-t-streaming-streaming-hd.html
       check | Snoopy presenta: Natale con Snoopy  | https://tanti-film.tattoo/guarda/35525-snoopy-presenta-natale-con-snoopy-streaming-streaming-hd.html
-      check | Bagarre  | https://tanti-film.tattoo/guarda/35520-bagarre-streaming-streaming-hd.html
-== check su "Madden "
+== check su "Guarding Stars "
    -> 2 voci
-      play | Madden  | https://v.vidxgo.co/24818230
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.tattoo/guarda/35761-madden-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/24818230
-   api /t/ 24818230 referer https://v.vidxgo.co/24818230 -> 404 {"error":"not found"}
-   api /t/ 24818230 referer https://tanti-film.tattoo/ -> 404 {"error":"not found"}
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+      play | Guarding Stars  | https://v.vidxgo.co/6611324
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.tattoo/guarda/35767-guarding-stars-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/6611324
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
@@ -35,7 +33,7 @@ Canale tantifilm | indirizzo https://tanti-film.tattoo
    SEZIONE Biografico -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE • Film -> OK 20 
-   SEZIONE • Serie TV -> OK 20 
+   SEZIONE • Serie TV -> OK 9 
    SEZIONE txt70741 … -> OK 11 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Wizards
@@ -44,4 +42,4 @@ Canale tantifilm | indirizzo https://tanti-film.tattoo
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'ultimo dominatore dell'aria
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar Aang: L’ultimo dominatore dell’aria
 SEZIONI: 4 ok su 4
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+VERDETTO: ARRIVA AL VIDEO

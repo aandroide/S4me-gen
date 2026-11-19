@@ -1,6 +1,6 @@
 {
  "canale": "eurostreaming_actor",
- "host": "https://eurostreaming.ooo",
+ "host": "https://guardaseriex.lol",
  "passi": [
   {
    "passo": "mainlist",
@@ -9,13 +9,13 @@
   },
   {
    "passo": "lista \"• Serie TV\"",
-   "esito": "VUOTO",
-   "voci": 0
+   "esito": "OK",
+   "voci": 1
   },
   {
    "passo": "lista \"• Anime\"",
-   "esito": "VUOTO",
-   "voci": 0
+   "esito": "OK",
+   "voci": 1
   },
   {
    "passo": "lista \"• Aggiornamenti\"",
@@ -35,16 +35,10 @@
    "esito": "VUOTA",
    "pagine": [
     {
-     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
-     "status": 403,
-     "byte": 5866,
-     "titolo_pagina": "Just a moment..."
-    },
-    {
-     "url": "https://eurostreaming.ooo",
-     "status": 403,
-     "byte": 5866,
-     "titolo_pagina": "Just a moment..."
+     "url": "https://guardaseriex.lol",
+     "status": 200,
+     "byte": 108695,
+     "titolo_pagina": "Guardaserie - Serie TV Streaming Complete GRATIS"
     }
    ]
   },
@@ -54,16 +48,10 @@
    "esito": "VUOTA",
    "pagine": [
     {
-     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/animazione/",
-     "status": 403,
-     "byte": 5899,
-     "titolo_pagina": "Just a moment..."
-    },
-    {
-     "url": "https://eurostreaming.ooo/animazione/",
-     "status": 403,
-     "byte": 5899,
-     "titolo_pagina": "Just a moment..."
+     "url": "https://guardaseriex.lol/animazione/",
+     "status": 200,
+     "byte": 1531376,
+     "titolo_pagina": "Animazione streaming | Guardaserie"
     }
    ]
   },
@@ -73,16 +61,10 @@
    "esito": "VUOTA",
    "pagine": [
     {
-     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/aggiornamento-episodi/",
-     "status": 403,
-     "byte": 5954,
-     "titolo_pagina": "Just a moment..."
-    },
-    {
-     "url": "https://eurostreaming.ooo/aggiornamento-episodi/",
-     "status": 403,
-     "byte": 5954,
-     "titolo_pagina": "Just a moment..."
+     "url": "https://guardaseriex.lol/aggiornamento-episodi/",
+     "status": 404,
+     "byte": 764,
+     "titolo_pagina": "404 | Not Found"
     }
    ]
   },
@@ -92,16 +74,10 @@
    "esito": "VUOTA",
    "pagine": [
     {
-     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/index.php?story=avatar&do=search&subaction=search",
-     "status": 403,
-     "byte": 6122,
-     "titolo_pagina": "Just a moment..."
-    },
-    {
-     "url": "https://eurostreaming.ooo/index.php?story=avatar&do=search&subaction=search",
-     "status": 403,
-     "byte": 6122,
-     "titolo_pagina": "Just a moment..."
+     "url": "https://guardaseriex.lol/index.php?story=avatar&do=search&subaction=search",
+     "status": "HTTPSConnectionPool(host='guardaseriex.lol', port=443): Read timed out. (read timeout=5)",
+     "byte": 0,
+     "titolo_pagina": ""
     }
    ]
   }
@@ -109,117 +85,61 @@
  "sezioni_riepilogo": "0 ok su 4",
  "rete": [
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
-   "status": 403,
-   "byte": 5866,
+   "url": "https://guardaseriex.lol",
+   "status": 200,
+   "byte": 108695,
    "secondi": 0.4,
-   "titolo_pagina": "Just a moment...",
+   "titolo_pagina": "Guardaserie - Serie TV Streaming Complete GRATIS",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://eurostreaming.ooo",
-   "status": 403,
-   "byte": 5866,
+   "url": "https://guardaseriex.lol/animazione/",
+   "status": 200,
+   "byte": 1531376,
    "secondi": 0.5,
-   "titolo_pagina": "Just a moment...",
+   "titolo_pagina": "Animazione streaming | Guardaserie",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/animazione/",
-   "status": 403,
-   "byte": 5899,
-   "secondi": 0.4,
-   "titolo_pagina": "Just a moment...",
+   "url": "https://guardaseriex.lol/aggiornamento-episodi/",
+   "status": 404,
+   "byte": 764,
+   "secondi": 0.3,
+   "titolo_pagina": "404 | Not Found",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://eurostreaming.ooo/animazione/",
-   "status": 403,
-   "byte": 5899,
-   "secondi": 0.4,
-   "titolo_pagina": "Just a moment...",
+   "url": "https://guardaseriex.lol",
+   "status": 200,
+   "byte": 108695,
+   "secondi": 0.2,
+   "titolo_pagina": "Guardaserie - Serie TV Streaming Complete GRATIS",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/aggiornamento-episodi/",
-   "status": 403,
-   "byte": 5954,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment...",
+   "url": "https://guardaseriex.lol/animazione/",
+   "status": 200,
+   "byte": 1531376,
+   "secondi": 0.7,
+   "titolo_pagina": "Animazione streaming | Guardaserie",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://eurostreaming.ooo/aggiornamento-episodi/",
-   "status": 403,
-   "byte": 5954,
-   "secondi": 0.4,
-   "titolo_pagina": "Just a moment...",
+   "url": "https://guardaseriex.lol/aggiornamento-episodi/",
+   "status": 404,
+   "byte": 764,
+   "secondi": 0.5,
+   "titolo_pagina": "404 | Not Found",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
-   "status": 403,
-   "byte": 5866,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment...",
+   "url": "https://guardaseriex.lol/index.php?story=avatar&do=search&subaction=search",
+   "status": "HTTPSConnectionPool(host='guardaseriex.lol', port=443): Read timed out. (read timeout=5)",
+   "byte": 0,
+   "secondi": 5.1,
+   "titolo_pagina": "",
    "file": "pagine/07.html"
-  },
-  {
-   "url": "https://eurostreaming.ooo",
-   "status": 403,
-   "byte": 5866,
-   "secondi": 0.4,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/08.html"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/animazione/",
-   "status": 403,
-   "byte": 5899,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/09.html"
-  },
-  {
-   "url": "https://eurostreaming.ooo/animazione/",
-   "status": 403,
-   "byte": 5899,
-   "secondi": 0.4,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/10.html"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/aggiornamento-episodi/",
-   "status": 403,
-   "byte": 5954,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/11.html"
-  },
-  {
-   "url": "https://eurostreaming.ooo/aggiornamento-episodi/",
-   "status": 403,
-   "byte": 5954,
-   "secondi": 0.4,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/12.html"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/index.php?story=avatar&do=search&subaction=search",
-   "status": 403,
-   "byte": 6122,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/13.html"
-  },
-  {
-   "url": "https://eurostreaming.ooo/index.php?story=avatar&do=search&subaction=search",
-   "status": 403,
-   "byte": 6122,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/14.html"
   }
  ],
- "verdetto": "SI FERMA A: lista \"• Serie TV\""
+ "verdetto": "SI FERMA A: lista \"• Aggiornamenti\""
 }

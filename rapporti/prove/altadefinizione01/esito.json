@@ -1,6 +1,6 @@
 {
  "canale": "altadefinizione01",
- "host": "https://altadefinizione-01.best",
+ "host": "https://altadefinizione-01.ws",
  "passi": [
   {
    "passo": "mainlist",
@@ -9,21 +9,33 @@
   },
   {
    "passo": "lista \"Tutti \"",
-   "esito": "ERRORE",
-   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+   "esito": "OK",
+   "voci": 30
   },
   {
-   "passo": "lista \"•• Al Cinema\"",
-   "esito": "ERRORE",
-   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
-  },
-  {
-   "passo": "lista \"•• Ultimi Aggiornati-Aggiunti\"",
-   "esito": "ERRORE",
-   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
+   "passo": "check su \"Guarding Stars \"",
+   "esito": "OK",
+   "voci": 3
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/6611324",
+   "tipo": "film",
+   "finale": "http://127.0.0.1:41229/hls/6611324/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  },
+  {
+   "server": "vixsrc",
+   "url": "https://vixsrc.to/movie/tt6611324",
+   "tipo": "film",
+   "finale": "https://vixsrc.to/playlist/801158.m3u8?ub=1&token=f0534a33ad6581b219acb435543bad9f&expires=1800283239&h=1&lang=it",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
  "menu_dichiarato": [
   "menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])",
   "menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])",
@@ -38,233 +50,330 @@
   {
    "voce": "Tutti",
    "azione": "peliculas",
-   "esito": "ERRORE WebErrorException",
-   "pagine": [
-    {
-     "url": "https://altadefinizione-01.best/lastnews/",
-     "status": "'NoneType' object has no attribute 'elapsed'",
-     "byte": 0,
-     "titolo_pagina": ""
-    }
-   ]
+   "esito": "OK",
+   "titoli": 29
   },
   {
    "voce": "•• Al Cinema",
    "azione": "peliculas",
-   "esito": "ERRORE WebErrorException",
-   "pagine": [
-    {
-     "url": "https://altadefinizione-01.best/cinema/",
-     "status": "'NoneType' object has no attribute 'elapsed'",
-     "byte": 0,
-     "titolo_pagina": ""
-    }
-   ]
+   "esito": "OK",
+   "titoli": 30
   },
   {
    "voce": "•• Ultimi Aggiornati-Aggiunti",
    "azione": "peliculas",
-   "esito": "ERRORE WebErrorException",
-   "pagine": [
-    {
-     "url": "https://altadefinizione-01.best",
-     "status": "'NoneType' object has no attribute 'elapsed'",
-     "byte": 0,
-     "titolo_pagina": ""
-    }
-   ]
+   "esito": "OK",
+   "titoli": 41
   },
   {
    "voce": "•• Generi",
    "azione": "genres",
-   "esito": "ERRORE WebErrorException",
-   "pagine": [
+   "esito": "SOTTOMENU",
+   "sottovoci": 22,
+   "figli": [
     {
-     "url": "https://altadefinizione-01.best",
-     "status": "'NoneType' object has no attribute 'elapsed'",
-     "byte": 0,
-     "titolo_pagina": ""
+     "voce": "Azione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 29
+    },
+    {
+     "voce": "Animazione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 27
+    },
+    {
+     "voce": "Avventura",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
     }
    ]
   },
   {
    "voce": "•• Lettera",
    "azione": "genres",
-   "esito": "ERRORE WebErrorException",
-   "pagine": [
+   "esito": "SOTTOMENU",
+   "sottovoci": 27,
+   "figli": [
     {
-     "url": "https://altadefinizione-01.best/catalog/a",
-     "status": "'NoneType' object has no attribute 'elapsed'",
-     "byte": 0,
-     "titolo_pagina": ""
+     "voce": "0-9",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    },
+    {
+     "voce": "A",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
+    },
+    {
+     "voce": "B",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 30
     }
    ]
   },
   {
    "voce": "•• Anni",
    "azione": "genres",
-   "esito": "ERRORE WebErrorException",
+   "esito": "SOTTOMENU SENZA TITOLI",
+   "sottovoci": 76,
+   "figli": [
+    {
+     "voce": "2026",
+     "azione": "peliculas",
+     "esito": "VUOTA",
+     "pagine": [
+      {
+       "url": "https://altadefinizione-01.ws/find/2026/",
+       "status": 404,
+       "byte": 764,
+       "titolo_pagina": "404 | Not Found"
+      }
+     ]
+    },
+    {
+     "voce": "2025",
+     "azione": "peliculas",
+     "esito": "VUOTA",
+     "pagine": [
+      {
+       "url": "https://altadefinizione-01.ws/find/2025/",
+       "status": 404,
+       "byte": 764,
+       "titolo_pagina": "404 | Not Found"
+      }
+     ]
+    },
+    {
+     "voce": "2024",
+     "azione": "peliculas",
+     "esito": "VUOTA",
+     "pagine": [
+      {
+       "url": "https://altadefinizione-01.ws/find/2024/",
+       "status": 404,
+       "byte": 764,
+       "titolo_pagina": "404 | Not Found"
+      }
+     ]
+    }
+   ],
    "pagine": [
     {
-     "url": "https://altadefinizione-01.best",
-     "status": "'NoneType' object has no attribute 'elapsed'",
-     "byte": 0,
-     "titolo_pagina": ""
+     "url": "https://altadefinizione-01.ws",
+     "status": 200,
+     "byte": 179722,
+     "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
+    },
+    {
+     "url": "https://altadefinizione-01.ws/find/2026/",
+     "status": 404,
+     "byte": 764,
+     "titolo_pagina": "404 | Not Found"
+    },
+    {
+     "url": "https://altadefinizione-01.ws/find/2025/",
+     "status": 404,
+     "byte": 764,
+     "titolo_pagina": "404 | Not Found"
     }
    ]
   },
   {
    "voce": "•• Sub-ITA",
    "azione": "peliculas",
-   "esito": "ERRORE WebErrorException",
-   "pagine": [
-    {
-     "url": "https://altadefinizione-01.best/sub-ita/",
-     "status": "'NoneType' object has no attribute 'elapsed'",
-     "byte": 0,
-     "titolo_pagina": ""
-    }
-   ]
+   "esito": "OK",
+   "titoli": 30
   },
   {
    "voce": "Serie TV",
    "azione": "peliculas",
-   "esito": "ERRORE WebErrorException",
-   "pagine": [
-    {
-     "url": "https://altadefinizione-01.best/serie-tv/",
-     "status": "'NoneType' object has no attribute 'elapsed'",
-     "byte": 0,
-     "titolo_pagina": ""
-    }
-   ]
+   "esito": "OK",
+   "titoli": 30
   },
   {
    "voce": "txt70741 …",
    "azione": "search",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://altadefinizione-01.best/?do=search&subaction=search&titleonly=3&story=avatar",
-     "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 370, in downloadpage\n    req = session.post(url, data=payload, allow_redirects=False,\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 577, in post\n    return self.request('POST', url, data=data, json=json, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
-     "byte": 0,
-     "titolo_pagina": ""
-    },
-    {
-     "url": "https://altadefinizione-01.best",
-     "status": "'NoneType' object has no attribute 'elapsed'",
-     "byte": 0,
-     "titolo_pagina": ""
-    }
-   ]
+   "esito": "OK",
+   "titoli": 6
   }
  ],
- "sezioni_riepilogo": "0 ok su 9",
+ "sezioni_riepilogo": "8 ok su 9",
  "rete": [
   {
-   "url": "https://altadefinizione-01.best/lastnews/",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.2,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws/lastnews/",
+   "status": 200,
+   "byte": 131223,
+   "secondi": 0.7,
+   "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://altadefinizione-01.best/cinema/",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.4,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws/35767-guarding-stars-streaming.html",
+   "status": 200,
+   "byte": 92066,
+   "secondi": 0.6,
+   "titolo_pagina": "Guarding Stars Streaming HD - Altadefinizione01",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://altadefinizione-01.best",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.1,
+   "url": "https://vixsrc.to/api/movie/tt6611324",
+   "status": 200,
+   "byte": 141,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://altadefinizione-01.best/lastnews/",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.1,
-   "titolo_pagina": "",
+   "url": "https://vixsrc.to/embed/801158?token=072127417bb4e1763c97a61affd7427a&t=R3VhcmRpbmcgU3RhcnM%3D&expires=1795099249&lang=en&skin=vixsrc&canPlayFHD=1",
+   "status": 200,
+   "byte": 6592,
+   "secondi": 0.2,
+   "titolo_pagina": "801158",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://altadefinizione-01.best/cinema/",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.0,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws/lastnews/",
+   "status": 200,
+   "byte": 131223,
+   "secondi": 0.3,
+   "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://altadefinizione-01.best",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.0,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws/cinema/",
+   "status": 200,
+   "byte": 155233,
+   "secondi": 0.3,
+   "titolo_pagina": "Al Cinema – Altadefinizione01",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://altadefinizione-01.best",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.1,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws",
+   "status": 200,
+   "byte": 179722,
+   "secondi": 0.3,
+   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://altadefinizione-01.best/catalog/a",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.3,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws",
+   "status": 200,
+   "byte": 179722,
+   "secondi": 0.2,
+   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://altadefinizione-01.best",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.0,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws/azione/",
+   "status": 200,
+   "byte": 154716,
+   "secondi": 0.3,
+   "titolo_pagina": "Azione – Altadefinizione01",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://altadefinizione-01.best/sub-ita/",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.0,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws/animazione/",
+   "status": 200,
+   "byte": 155894,
+   "secondi": 0.3,
+   "titolo_pagina": "Animazione – Altadefinizione01",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://altadefinizione-01.best/serie-tv/",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.0,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws/avventura/",
+   "status": 200,
+   "byte": 156638,
+   "secondi": 0.3,
+   "titolo_pagina": "Avventura – Altadefinizione01",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://altadefinizione-01.best/?do=search&subaction=search&titleonly=3&story=avatar",
-   "status": "Traceback (most recent call last):\n  File \"/tmp/kh/addon/core/httptools.py\", line 370, in downloadpage\n    req = session.post(url, data=payload, allow_redirects=False,\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 577, in post\n    return self.request('POST', url, data=data, json=json, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 529, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/lib/requests/sessions.py\", line 649, in send\n    r.elapsed = timedelta(seconds=elapsed)\n    ^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'elapsed'\n",
-   "byte": 0,
-   "secondi": 0.0,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws/catalog/a",
+   "status": 200,
+   "byte": 106012,
+   "secondi": 0.4,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://altadefinizione-01.best",
-   "status": "'NoneType' object has no attribute 'elapsed'",
-   "byte": 0,
-   "secondi": 0.0,
-   "titolo_pagina": "",
+   "url": "https://altadefinizione-01.ws/catalog/9",
+   "status": 200,
+   "byte": 104935,
+   "secondi": 0.5,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
    "file": "pagine/13.html"
+  },
+  {
+   "url": "https://altadefinizione-01.ws/catalog/A",
+   "status": 200,
+   "byte": 105850,
+   "secondi": 0.6,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://altadefinizione-01.ws/catalog/B",
+   "status": 200,
+   "byte": 105562,
+   "secondi": 0.5,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://altadefinizione-01.ws",
+   "status": 200,
+   "byte": 179722,
+   "secondi": 0.2,
+   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
+  },
+  {
+   "url": "https://altadefinizione-01.ws/find/2026/",
+   "status": 404,
+   "byte": 764,
+   "secondi": 0.2,
+   "titolo_pagina": "404 | Not Found"
+  },
+  {
+   "url": "https://altadefinizione-01.ws/find/2025/",
+   "status": 404,
+   "byte": 764,
+   "secondi": 0.2,
+   "titolo_pagina": "404 | Not Found"
+  },
+  {
+   "url": "https://altadefinizione-01.ws/find/2024/",
+   "status": 404,
+   "byte": 764,
+   "secondi": 0.2,
+   "titolo_pagina": "404 | Not Found"
+  },
+  {
+   "url": "https://altadefinizione-01.ws/sub-ita/",
+   "status": 200,
+   "byte": 154680,
+   "secondi": 0.3,
+   "titolo_pagina": "Sub-ITA &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
+  },
+  {
+   "url": "https://altadefinizione-01.ws/serie-tv/",
+   "status": 200,
+   "byte": 153526,
+   "secondi": 0.3,
+   "titolo_pagina": "Serie TV in Streaming Gratis - Altadefinizione01"
+  },
+  {
+   "url": "https://altadefinizione-01.ws/?do=search&subaction=search&titleonly=3&story=avatar",
+   "status": 200,
+   "byte": 91791,
+   "secondi": 0.7,
+   "titolo_pagina": "Site search &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   }
  ],
- "verdetto": "SI FERMA A: lista \"Tutti \""
+ "verdetto": "ARRIVA AL VIDEO"
 }

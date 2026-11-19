@@ -1,14 +1,18 @@
-Canale eurostreaming_actor | indirizzo https://eurostreaming.ooo
+Canale eurostreaming_actor | indirizzo https://guardaseriex.lol
 == mainlist
    -> 5 voci
-      peliculas | • Serie TV | https://eurostreaming.ooo
-      peliculas | • Anime | https://eurostreaming.ooo/animazione/
-      peliculas | • Aggiornamenti | https://eurostreaming.ooo/aggiornamento-episodi/
-      search | txt70741 … | https://eurostreaming.ooo
+      peliculas | • Serie TV | https://guardaseriex.lol
+      peliculas | • Anime | https://guardaseriex.lol/animazione/
+      peliculas | • Aggiornamenti | https://guardaseriex.lol/aggiornamento-episodi/
+      search | txt70741 … | https://guardaseriex.lol
 == lista "• Serie TV"
-   -> 0 voci
+   -> 1 voci
+      peliculas | txt30992 %s > | https://guardaseriex.lol/i-titoli-del-momento/
+   la lista non ha titoli: c e solo la pagina successiva
 == lista "• Anime"
-   -> 0 voci
+   -> 1 voci
+      peliculas | txt30992 %s > | https://guardaseriex.lol/commedia/4117-oggy-and-the-cockroaches-next-generation.html
+   la lista non ha titoli: c e solo la pagina successiva
 == lista "• Aggiornamenti"
    -> 0 voci
 Nessuna voce da riprodurre trovata
@@ -16,13 +20,13 @@ Nessuna voce da riprodurre trovata
     anime | '/animazione/'
     mix | ('Aggiornamenti {bullet bold} {TV}', ['/aggiornamento-episodi/', 'peliculas', 'newest'])
 == controllo di tutte le sezioni
-   SEZIONE • Serie TV -> VUOTA   | ultima pagina: {'url': 'https://eurostreaming.ooo', 'status': 403, 'byte': 5866, 'titolo_pagina': 'Just a moment...'}
-   SEZIONE • Anime -> VUOTA   | ultima pagina: {'url': 'https://eurostreaming.ooo/animazione/', 'status': 403, 'byte': 5899, 'titolo_pagina': 'Just a moment...'}
-   SEZIONE • Aggiornamenti -> VUOTA   | ultima pagina: {'url': 'https://eurostreaming.ooo/aggiornamento-episodi/', 'status': 403, 'byte': 5954, 'titolo_pagina': 'Just a moment...'}
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostreaming.ooo/index.php?story=avatar&do=search&subaction=search', 'status': 403, 'byte': 6122, 'titolo_pagina': 'Just a moment...'}
+   SEZIONE • Serie TV -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol', 'status': 200, 'byte': 108695, 'titolo_pagina': 'Guardaserie - Serie TV Streaming Complete GRATIS'}
+   SEZIONE • Anime -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol/animazione/', 'status': 200, 'byte': 1531376, 'titolo_pagina': 'Animazione streaming | Guardaserie'}
+   SEZIONE • Aggiornamenti -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol/aggiornamento-episodi/', 'status': 404, 'byte': 764, 'titolo_pagina': '404 | Not Found'}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol/index.php?story=avatar&do=search&subaction=search', 'status': "HTTPSConnectionPool(host='guardaseriex.lol', port=443): Read timed out. (read timeout=5)", 'byte': 0, 'titolo_pagina': ''}
 SEZIONI: 0 ok su 4
    SEZIONE SENZA TITOLI: • Serie TV | VUOTA
    SEZIONE SENZA TITOLI: • Anime | VUOTA
    SEZIONE SENZA TITOLI: • Aggiornamenti | VUOTA
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: lista "• Serie TV"
+VERDETTO: SI FERMA A: lista "• Aggiornamenti"

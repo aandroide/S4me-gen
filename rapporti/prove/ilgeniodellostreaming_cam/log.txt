@@ -6,17 +6,17 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.webs
       genres | •• Per Lettera | https://il-geniodellostreaming.website/catalog/all
       peliculas | Serie Tv  | https://il-geniodellostreaming.website/serie-tv/
 == lista "Tutti "
-   -> 13 voci
-      check | Guarding Stars | https://il-geniodellostreaming.website/film/35767-guarding-stars-streaming.html
-      check | Anatomy of a G.O.A.T | https://il-geniodellostreaming.website/film/35543-anatomy-of-a-g-o-a-t-streaming.html
-      check | Cunk on Cinema | https://il-geniodellostreaming.website/film/35540-cunk-on-cinema-streaming.html
-      check | Snoopy presenta: Natale con Snoopy | https://il-geniodellostreaming.website/film/35525-snoopy-presenta-natale-con-snoopy-streaming.html
-== check su "Guarding Stars"
+   -> 18 voci
+      check | Alessandro Barbero: 1848 L'Europa in rivolta | https://il-geniodellostreaming.website/film/35771-alessandro-barbero-1848-l-europa-in-rivolta-stream
+      check | Madden | https://il-geniodellostreaming.website/film/35761-madden-streaming.html
+      check | Vienna Game | https://il-geniodellostreaming.website/film/35762-vienna-game-streaming.html
+      check | I 12 segni di Valentina | https://il-geniodellostreaming.website/film/35763-i-12-segni-di-valentina-streaming.html
+== check su "Alessandro Barbero: 1848 L'Europa in riv"
    -> 1 voci
-      play | Guarding Stars | https://v.vidxgo.co/6611324
-== risoluzione vidxgo https://v.vidxgo.co/6611324
-   api /t/ 6611324 referer https://v.vidxgo.co/6611324 -> 404 {"error":"not found"}
-   api /t/ 6611324 referer https://il-geniodellostreaming.website/ -> 404 {"error":"not found"}
+      play | Alessandro Barbero: 1848 L'Europa in rivolta | https://v.vidxgo.co/45114341
+== risoluzione vidxgo https://v.vidxgo.co/45114341
+   api /t/ 45114341 referer https://v.vidxgo.co/45114341 -> 404 {"error":"not found"}
+   api /t/ 45114341 referer https://il-geniodellostreaming.website/ -> 404 {"error":"not found"}
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (4)
     menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])
@@ -24,20 +24,20 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.webs
     menu | ('Per Lettera {submenu}', ['/catalog/all', 'genres', 'template-az', 'undefined'])
     menu | ('Serie Tv', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 12 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Guarding Stars
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Anatomy of a G.O.A.T
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Cunk on Cinema
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Bagarre
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia
+   SEZIONE Tutti -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Madden
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Vienna Game
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: I 12 segni di Valentina
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Gordon
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: La legge della bestia
    SEZIONE Serie TV -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Vienna Game
       PROBLEMA: tipo undefined, in Kodi appare come cartella: I 12 segni di Valentina
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Gordon
       PROBLEMA: tipo undefined, in Kodi appare come cartella: La legge della bestia
       PROBLEMA: tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: La vita segreta delle mogli Mormoni: Orange County
    SEZIONE Animazione -> OK 20 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
@@ -53,27 +53,27 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.webs
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Il Signore degli Anelli - Gli Anelli del Potere
    SEZIONE •• Generi -> SOTTOMENU  
-   SEZIONE 0-9 -> OK 12 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Guarding Stars
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Anatomy of a G.O.A.T
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Cunk on Cinema
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Bagarre
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia
-   SEZIONE A -> OK 12 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Guarding Stars
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Anatomy of a G.O.A.T
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Cunk on Cinema
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Bagarre
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia
-   SEZIONE B -> OK 12 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Guarding Stars
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Anatomy of a G.O.A.T
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Cunk on Cinema
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Bagarre
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Desprotexida: delitto in Galizia
+   SEZIONE 0-9 -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: La torta del presidente
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Madden
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Vienna Game
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: I 12 segni di Valentina
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Gordon
+   SEZIONE A -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Madden
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Vienna Game
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: I 12 segni di Valentina
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Gordon
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: La legge della bestia
+   SEZIONE B -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: La torta del presidente
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Madden
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Vienna Game
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: I 12 segni di Valentina
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Gordon
    SEZIONE •• Per Lettera -> SOTTOMENU  
    SEZIONE Serie Tv -> OK 20 
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://il-geniodellostreaming.website/?s=avatar', 'status': 200, 'byte': 35085, 'titolo_pagina': 'Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis'}

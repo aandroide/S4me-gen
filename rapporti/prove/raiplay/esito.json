@@ -10,7 +10,7 @@
   {
    "passo": "lista \"Film\"",
    "esito": "OK",
-   "voci": 14
+   "voci": 15
   },
   {
    "passo": "menu su \"Generi\"",
@@ -72,6 +72,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str14 19 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 21
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
+      }
+     ]
+    },
+    {
      "voce": "str13 18 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -81,19 +107,19 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 20
+       "titoli": 29
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
-       "esito": "OK",
-       "titoli": 23
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
-       "esito": "OK",
-       "titoli": 17
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
       }
      ]
     },
@@ -112,40 +138,14 @@
       {
        "voce": "Rai 2",
        "azione": "replay",
-       "esito": "OK",
-       "titoli": 33
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      }
-     ]
-    },
-    {
-     "voce": "str11 16 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 32
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
        "esito": "ERRORE JSONDecodeError",
        "pagine": []
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 30
       }
      ]
     }
@@ -155,25 +155,25 @@
    "voce": "Film",
    "azione": "menu",
    "esito": "SOTTOMENU",
-   "sottovoci": 14,
+   "sottovoci": 15,
    "figli": [
     {
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 22
     },
     {
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 26
+     "titoli": 23
     },
     {
-     "voce": "Film in esclusiva",
+     "voce": "L'infanzia difficile",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 31
+     "titoli": 23
     }
    ]
   },
@@ -265,7 +265,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 26
+     "titoli": 27
     },
     {
      "voce": "Docu-serie Original",
@@ -422,7 +422,7 @@
      "voce": "L'offerta",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 47
+     "titoli": 46
     }
    ]
   },
@@ -447,7 +447,7 @@
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
    "byte": 597,
-   "secondi": 0.6,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }
