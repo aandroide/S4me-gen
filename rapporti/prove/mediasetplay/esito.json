@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 135
+   "voci": 131
   },
   {
    "passo": "findvideos su \"Transformers - L'ultimo cavaliere\"",
@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 21
+   "voci": 20
   },
   {
-   "passo": "findvideos su \"In time\"",
+   "passo": "findvideos su \"Le giraffe\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -33,9 +33,9 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"The place\"",
+   "passo": "findvideos su \"Un mondo a parte\"",
    "esito": "ERRORE",
-   "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+   "errore": "enti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'mediaSelector'\n"
   }
  ],
  "video": [],
@@ -69,13 +69,13 @@
    "voce": "Dirette",
    "azione": "live",
    "esito": "OK",
-   "titoli": 46
+   "titoli": 50
   },
   {
    "voce": "Replay",
    "azione": "restart",
    "esito": "OK",
-   "titoli": 23
+   "titoli": 25
   },
   {
    "voce": "•• Tutti i Film",
@@ -123,7 +123,7 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 3
     },
     {
      "voce": "I Simpson",
@@ -213,7 +213,7 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 3
     },
     {
      "voce": "Law & Order: Unità speciale 15",
@@ -349,7 +349,7 @@
      "titoli": 10
     },
     {
-     "voce": "Ben 10",
+     "voce": "Looney Tunes Cartoons",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
@@ -366,7 +366,7 @@
      "voce": "Paw Patrol",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 4
     },
     {
      "voce": "La casa delle bambole di Gabby",
@@ -398,7 +398,7 @@
      "voce": "Pollyanna",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 19
+     "titoli": 22
     },
     {
      "voce": "Holly e Benji Forever",
@@ -430,19 +430,19 @@
      "voce": "Enigmi alieni 10",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 8
+     "titoli": 7
+    },
+    {
+     "voce": "Prove sepolte - Le avventure dell'archeologia",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 7
     },
     {
      "voce": "Fuori le prove! - Indagini ai confini della realtà 3",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 10
-    },
-    {
-     "voce": "Enigmi alieni 13",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 2
+     "titoli": 9
     }
    ]
   },

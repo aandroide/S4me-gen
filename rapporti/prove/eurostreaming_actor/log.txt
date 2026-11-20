@@ -20,10 +20,10 @@ Nessuna voce da riprodurre trovata
     anime | '/animazione/'
     mix | ('Aggiornamenti {bullet bold} {TV}', ['/aggiornamento-episodi/', 'peliculas', 'newest'])
 == controllo di tutte le sezioni
-   SEZIONE • Serie TV -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol', 'status': 200, 'byte': 108695, 'titolo_pagina': 'Guardaserie - Serie TV Streaming Complete GRATIS'}
-   SEZIONE • Anime -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol/animazione/', 'status': 200, 'byte': 1531376, 'titolo_pagina': 'Animazione streaming | Guardaserie'}
+   SEZIONE • Serie TV -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol', 'status': 200, 'byte': 110451, 'titolo_pagina': 'Guardaserie - Serie TV Streaming Complete GRATIS'}
+   SEZIONE • Anime -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol/animazione/', 'status': 200, 'byte': 1531334, 'titolo_pagina': 'Animazione streaming | Guardaserie'}
    SEZIONE • Aggiornamenti -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol/aggiornamento-episodi/', 'status': 404, 'byte': 764, 'titolo_pagina': '404 | Not Found'}
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol/index.php?story=avatar&do=search&subaction=search', 'status': "HTTPSConnectionPool(host='guardaseriex.lol', port=443): Read timed out. (read timeout=5)", 'byte': 0, 'titolo_pagina': ''}
+   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://guardaseriex.lol/index.php?story=avatar&do=search&subaction=search', 'status': 200, 'byte': 38145, 'titolo_pagina': 'Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS'}
 SEZIONI: 0 ok su 4
    SEZIONE SENZA TITOLI: • Serie TV | VUOTA
    SEZIONE SENZA TITOLI: • Anime | VUOTA

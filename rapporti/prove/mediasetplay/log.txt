@@ -6,7 +6,7 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 135 voci
+   -> 131 voci
       findvideos | Transformers - L'ultimo cavaliere | https://mediasetinfinity.mediaset.it/movie/transformerslultimocavaliere/transformers-lultimo-cavalie
       findvideos | In time | https://mediasetinfinity.mediaset.it/movie/intime/in-time_F304255901000102
       findvideos | The rock | https://mediasetinfinity.mediaset.it/movie/therock/the-rock_F007580301000103
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 21 voci
-      findvideos | In time | https://mediasetinfinity.mediaset.it/movie/intime/in-time_F304255901000102
-      findvideos | The rock | https://mediasetinfinity.mediaset.it/movie/therock/the-rock_F007580301000103
-      findvideos | La llorona: le lacrime del male | https://mediasetinfinity.mediaset.it/movie/lalloronalelacrimedelmale/la-llorona-le-lacrime-del-male_
-      findvideos | Inga Lindstrom - L'amore non muore mai | https://mediasetinfinity.mediaset.it/movie/ingalindstromlamorenonmuoremai/inga-lindstrom-lamore-non-
-== findvideos su "In time"
+   -> 20 voci
+      findvideos | Le giraffe | https://mediasetinfinity.mediaset.it/movie/legiraffe/le-giraffe_F010691601000101
+      findvideos | La palestra | https://mediasetinfinity.mediaset.it/movie/lapalestra/la-palestra_F011315501000101
+      findvideos | 90 minuti per salvarla | https://mediasetinfinity.mediaset.it/movie/90minutipersalvarla/90-minuti-per-salvarla_F3023797010001
+      findvideos | Una notte da leoni 3 | https://mediasetinfinity.mediaset.it/movie/unanottedaleoni3/una-notte-da-leoni-3_F305333701000102
+== findvideos su "Le giraffe"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -45,11 +45,11 @@ KeyError: 'response'
 
 == lista "•• Film più visti del giorno"
    -> 21 voci
+      findvideos | Un mondo a parte | https://mediasetinfinity.mediaset.it/movie/unmondoaparte/un-mondo-a-parte_F312712801000101
       findvideos | The place | https://mediasetinfinity.mediaset.it/movie/theplace/the-place_F306383601000101
       findvideos | Harry Potter e la camera dei segreti | https://mediasetinfinity.mediaset.it/movie/harrypotterelacameradeisegreti/harry-potter-e-la-camera-d
-      findvideos | Inga Lindstrom - La speranza di un amore | https://mediasetinfinity.mediaset.it/movie/ingalindstromlasperanzadiunamore/inga-lindstrom-la-speran
-      findvideos | Animali fantastici: i crimini di Grindelwald | https://mediasetinfinity.mediaset.it/movie/animalifantasticiicriminidigrindelwald/animali-fantastici
-== findvideos su "The place"
+      findvideos | Inga Lindstrom - L'altra figlia | https://mediasetinfinity.mediaset.it/movie/ingalindstromlaltrafiglia/inga-lindstrom-laltra-figlia_F3
+== findvideos su "Un mondo a parte"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -60,7 +60,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
     res = session.post(
           ^^^^^^^^^^^^^
-KeyError: 'response'
+KeyError: 'mediaSelector'
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (23)
@@ -88,15 +88,15 @@ Nessuna voce da riprodurre trovata
     menu | ('Documentari più visti {submenu}', ['/documentari', 'peliculas', {'uxReference': 'documentariPiuVisti24H'}, '
     menu | ('Film Documentari di Focus {submenu}', ['/documentari', 'peliculas', {'uxReference': 'filmDocumentari'}, 'und
 == controllo di tutte le sezioni
-   SEZIONE Dirette -> OK 46 
-   SEZIONE Replay -> OK 23 
+   SEZIONE Dirette -> OK 50 
+   SEZIONE Replay -> OK 25 
    SEZIONE •• Tutti i Film -> OK 66 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 4 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 3 
    SEZIONE I Simpson -> OK 5 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
@@ -110,7 +110,7 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• TV Movie italiani -> OK 20 
    SEZIONE •• Animazione Made in Japan -> OK 1 
    SEZIONE I Simpson -> OK 5 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 4 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 3 
    SEZIONE Law & Order: Unità speciale 15 -> OK 2 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
@@ -131,22 +131,22 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Lo straordinario mondo di Gumball -> OK 9 
    SEZIONE Teen Titans Go! -> OK 10 
-   SEZIONE Ben 10 -> OK 5 
+   SEZIONE Looney Tunes Cartoons -> OK 5 
    SEZIONE •• Kids Boing -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
-   SEZIONE Paw Patrol -> OK 5 
+   SEZIONE Paw Patrol -> OK 4 
    SEZIONE La casa delle bambole di Gabby -> OK 5 
    SEZIONE Hey Duggee -> OK 5 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE C'era una volta... Pollon -> OK 51 
-   SEZIONE Pollyanna -> OK 19 
+   SEZIONE Pollyanna -> OK 22 
    SEZIONE Holly e Benji Forever -> OK 52 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
    SEZIONE •• Tutti i Documentari -> OK 15 
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
-   SEZIONE Enigmi alieni 10 -> OK 8 
-   SEZIONE Fuori le prove! - Indagini ai confini della realtà 3 -> OK 10 
-   SEZIONE Enigmi alieni 13 -> OK 2 
+   SEZIONE Enigmi alieni 10 -> OK 7 
+   SEZIONE Prove sepolte - Le avventure dell'archeologia -> OK 7 
+   SEZIONE Fuori le prove! - Indagini ai confini della realtà 3 -> OK 9 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE •• Film Documentari di Focus -> OK 20 

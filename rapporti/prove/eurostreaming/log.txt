@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.skin
       peliculas | • Archivio | https://eurostream.skin/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Viola come il mare | https://eurostream.skin/viola-come-il-mare/
-      episodios | The Kardashians | https://eurostream.skin/the-kardashians-2022-o/
-      episodios | Eternally Yours | https://eurostream.skin/eternally-yours/
-      episodios | Rivals | https://eurostream.skin/rivals/
-== episodios su "Viola come il mare"
-   -> 17 voci
-      findvideos | 1x01 - 02 Episodi 1 e 2  | https://eurostream.skin/viola-come-il-mare/
-      findvideos | 1x03 - 04 Episodi 3 e 4  | https://eurostream.skin/viola-come-il-mare/
-      findvideos | 1x05 - 06 Episodi 5 e 6  | https://eurostream.skin/viola-come-il-mare/
-      findvideos | 1x07 - 08 Episodi 7 e 8  | https://eurostream.skin/viola-come-il-mare/
-== findvideos su "1x01 - 02 Episodi 1 e 2 "
+      episodios | Chicago Fire | https://eurostream.skin/chicago-fire-37/
+      episodios | Percy Jackson e gli dei dell’Olimpo | https://eurostream.skin/percy-jackson-e-gli-dei-dell-olimpo/
+      episodios | The Traitors - Italia | https://eurostream.skin/the-traitors-italia/
+      episodios | Melania Rea | https://eurostream.skin/melania-rea/
+== episodios su "Chicago Fire"
+   -> 527 voci
+      findvideos | 1x01 - La Squadra  | https://eurostream.skin/chicago-fire-37/
+      findvideos | 1x02 - Grazie, Mon Amour  | https://eurostream.skin/chicago-fire-37/
+      findvideos | 1x03 - Un Atto Dovuto  | https://eurostream.skin/chicago-fire-37/
+      findvideos | 1x04 - Un Minuto  | https://eurostream.skin/chicago-fire-37/
+== findvideos su "1x01 - La Squadra "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/8fzyhp4r
+Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f
 
 == lista "• Anime"
    -> 19 voci
@@ -65,21 +65,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk
+Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 1x07 - Viola come il mare - Settima e ottava puntata | https://eurostream.skin/viola-come-il-mare/
-      episodios | 8x06 - The Kardashians (2022) - Alcune mamme vogliono solo d | https://eurostream.skin/the-kardashians-2022-o/
-      episodios | 1x06 - Eternally Yours - Eternal Sunshine of Phyllis's Mind  | https://eurostream.skin/eternally-yours/
-      episodios | 2x10 - Rivals (2024) - Episodio 10 | https://eurostream.skin/rivals/
-== episodios su "1x07 - Viola come il mare - Settima e ot"
-   -> 17 voci
-      findvideos | 1x01 - 02 Episodi 1 e 2  | https://eurostream.skin/viola-come-il-mare/
-      findvideos | 1x03 - 04 Episodi 3 e 4  | https://eurostream.skin/viola-come-il-mare/
-      findvideos | 1x05 - 06 Episodi 5 e 6  | https://eurostream.skin/viola-come-il-mare/
-      findvideos | 1x07 - 08 Episodi 7 e 8  | https://eurostream.skin/viola-come-il-mare/
-== findvideos su "1x01 - 02 Episodi 1 e 2 "
+      episodios | 15x07 - Chicago Fire - No Love Lost  | https://eurostream.skin/chicago-fire-37/
+      episodios | 3x01 - Percy Jackson e gli dei dell’Olimpo - La mia operazio | https://eurostream.skin/percy-jackson-e-gli-dei-dell-olimpo/
+      episodios | 2x06 - The Traitors - Italia - Fino all'ultimo inganno | https://eurostream.skin/the-traitors-italia/
+      episodios | 1x03 - Melania Rea - Episodio 3 | https://eurostream.skin/melania-rea/
+== episodios su "15x07 - Chicago Fire - No Love Lost "
+   -> 527 voci
+      findvideos | 1x01 - La Squadra  | https://eurostream.skin/chicago-fire-37/
+      findvideos | 1x02 - Grazie, Mon Amour  | https://eurostream.skin/chicago-fire-37/
+      findvideos | 1x03 - Un Atto Dovuto  | https://eurostream.skin/chicago-fire-37/
+      findvideos | 1x04 - Un Minuto  | https://eurostream.skin/chicago-fire-37/
+== findvideos su "1x01 - La Squadra "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/8fzyhp4r
+Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -107,7 +107,8 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Serie TV -> OK 18 
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
+      PROBLEMA: titolo rovinato: 3x01 - Percy Jackson e gli dei dell’Olimpo - La mia operazione di salv
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - 02 Episodi 1 e 2 "
+VERDETTO: SI FERMA A: findvideos su "1x01 - La Squadra "

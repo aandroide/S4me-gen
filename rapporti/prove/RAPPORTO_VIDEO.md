@@ -1,8 +1,8 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 15, SI FERMA AL SERVER O AL VIDEO 3, SI FERMA PRIMA DEL VIDEO 38, SENZA ESITO 2
+Riepilogo: ARRIVA AL VIDEO 16, SI FERMA AL SERVER O AL VIDEO 2, SI FERMA PRIMA DEL VIDEO 38, SENZA ESITO 2
 
-## ARRIVA AL VIDEO (15)
+## ARRIVA AL VIDEO (16)
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.ws | verdetto: ARRIVA AL VIDEO
@@ -45,6 +45,10 @@ Sito: https://guardaseriex.lol | verdetto: ARRIVA AL VIDEO
 Sito:  | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
+### ilgeniodellostreaming_cam
+Sito: https://il-geniodellostreaming.website | verdetto: ARRIVA AL VIDEO
+- server vidxgo: VIDEO OK m3u8 200
+
 ### la7
 Sito:  | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK m3u8 206
@@ -65,7 +69,7 @@ Sito: https://tanti-film.tattoo | verdetto: ARRIVA AL VIDEO
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
 - server voe: VIDEO OK m3u8 200
 
-## SI FERMA AL SERVER O AL VIDEO (3)
+## SI FERMA AL SERVER O AL VIDEO (2)
 
 ### cineblog01
 Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
@@ -76,10 +80,6 @@ Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO 
 Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RISOLVE
 - server mega: SERVER NON RISOLVE 
 
-### ilgeniodellostreaming_cam
-Sito: https://il-geniodellostreaming.website | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
-- server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
-
 ## SI FERMA PRIMA DEL VIDEO (38)
 
 ### 1337x
@@ -88,7 +88,9 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
+Sito:  | verdetto: SI FERMA A: lista ""Electronic Christmas" — Add a little ba"
+- passo "lista ""Electronic Christmas" — Add a little ba"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+- passo "lista "Birthday: Dierks Bentley (11/20/75) "": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -152,10 +154,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.skin | verdetto: SI FERMA A: findvideos su "1x01 - 02 Episodi 1 e 2 "
-- passo "findvideos su "1x01 - 02 Episodi 1 e 2 "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/8fzyhp4r 
-- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk 
-- passo "findvideos su "1x01 - 02 Episodi 1 e 2 "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/8fzyhp4r 
+Sito: https://eurostream.skin | verdetto: SI FERMA A: findvideos su "1x01 - La Squadra "
+- passo "findvideos su "1x01 - La Squadra "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f 
+- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty 
+- passo "findvideos su "1x01 - La Squadra "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f 
 
 ### eurostreaming_actor
 Sito: https://guardaseriex.lol | verdetto: SI FERMA A: lista "• Aggiornamenti"
@@ -215,8 +217,8 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Transformers - L'ultimo cavaliere"
 - passo "findvideos su "Transformers - L'ultimo cavaliere"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "In time"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Le giraffe"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Un mondo a parte"": ERRORE        ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'mediaSelector' 
 
 ### metalvideo
 Sito:  | verdetto: SI FERMA A: lista "Generi "

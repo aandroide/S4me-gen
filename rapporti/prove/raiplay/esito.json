@@ -20,7 +20,7 @@
   {
    "passo": "genres su \"Film sottotitolati\"",
    "esito": "OK",
-   "voci": 22
+   "voci": 21
   },
   {
    "passo": "peliculas su \"A\"",
@@ -63,7 +63,7 @@
    "voce": "Dirette",
    "azione": "live",
    "esito": "OK",
-   "titoli": 15
+   "titoli": 16
   },
   {
    "voce": "Replay",
@@ -71,6 +71,32 @@
    "esito": "SOTTOMENU",
    "sottovoci": 7,
    "figli": [
+    {
+     "voce": "str15 20 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 20
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 24
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
+      }
+     ]
+    },
     {
      "voce": "str14 19 str31",
      "azione": "replayChannels",
@@ -81,13 +107,13 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 21
+       "titoli": 33
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
+       "esito": "OK",
+       "titoli": 35
       },
       {
        "voce": "Rai 3",
@@ -112,34 +138,8 @@
       {
        "voce": "Rai 2",
        "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
-      }
-     ]
-    },
-    {
-     "voce": "str12 17 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
        "esito": "OK",
-       "titoli": 33
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "ERRORE JSONDecodeError",
-       "pagine": []
+       "titoli": 35
       },
       {
        "voce": "Rai 3",
@@ -167,13 +167,13 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     },
     {
      "voce": "L'infanzia difficile",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     }
    ]
   },
@@ -187,7 +187,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 26
+     "titoli": 25
     },
     {
      "voce": "Serie Original RaiPlay",
@@ -265,7 +265,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 27
+     "titoli": 23
     },
     {
      "voce": "Docu-serie Original",
@@ -285,25 +285,25 @@
    "voce": "Bambini",
    "azione": "menu",
    "esito": "SOTTOMENU",
-   "sottovoci": 11,
+   "sottovoci": 12,
    "figli": [
     {
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 29
+     "titoli": 23
     },
     {
-     "voce": "Esclusive RaiPlay Bambini",
+     "voce": "20 Novembre - Giornata mondiale per l'infanzia",
      "azione": "peliculas",
      "esito": "OK",
      "titoli": 32
     },
     {
-     "voce": "Cinema bambini",
+     "voce": "Esclusive RaiPlay Bambini",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 33
     }
    ]
   },
@@ -434,8 +434,8 @@
     "tipo undefined, in Kodi appare come cartella: To be",
     "tipo undefined, in Kodi appare come cartella: Fumbleland",
     "tipo undefined, in Kodi appare come cartella: Pupi Avati. Che cinema la vita!",
-    "tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream",
-    "tipo undefined, in Kodi appare come cartella: Cicatrici"
+    "tipo undefined, in Kodi appare come cartella: Cicatrici",
+    "tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream"
    ],
    "esito": "OK",
    "titoli": 8

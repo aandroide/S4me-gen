@@ -13,27 +13,27 @@ Canale tantifilm | indirizzo https://tanti-film.tattoo
       peliculas | Commedia | https://tanti-film.tattoo/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
+      check | The Hotline  | https://tanti-film.tattoo/guarda/35786-the-hotline-linea-di-emergenza-streaming-streaming-hd.html
+      check | Perfetti bugiardi  | https://tanti-film.tattoo/guarda/35784-perfetti-bugiardi-streaming-streaming-hd.html
+      check | La torta del presidente  | https://tanti-film.tattoo/guarda/35775-la-torta-del-presidente-streaming-streaming-hd.html
       check | Guarding Stars  | https://tanti-film.tattoo/guarda/35767-guarding-stars-streaming-streaming-hd.html
-      check | Madden  | https://tanti-film.tattoo/guarda/35761-madden-streaming-streaming-hd.html
-      check | Anatomy of a G.O.A.T  | https://tanti-film.tattoo/guarda/35543-anatomy-of-a-g-o-a-t-streaming-streaming-hd.html
-      check | Snoopy presenta: Natale con Snoopy  | https://tanti-film.tattoo/guarda/35525-snoopy-presenta-natale-con-snoopy-streaming-streaming-hd.html
-== check su "Guarding Stars "
+== check su "The Hotline "
    -> 2 voci
-      play | Guarding Stars  | https://v.vidxgo.co/6611324
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.tattoo/guarda/35767-guarding-stars-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/6611324
+      play | The Hotline  | https://v.vidxgo.co/39640040
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.tattoo/guarda/35786-the-hotline-linea-di-emergenza-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/39640040
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
     tvshow | '/serie-tv/'
 == controllo di tutte le sezioni
-   SEZIONE Animazione -> OK 24 
-   SEZIONE Avventura -> OK 23 
+   SEZIONE Animazione -> OK 25 
+   SEZIONE Avventura -> OK 24 
    SEZIONE Biografico -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE • Film -> OK 20 
-   SEZIONE • Serie TV -> OK 9 
+   SEZIONE • Serie TV -> OK 8 
    SEZIONE txt70741 … -> OK 11 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Wizards

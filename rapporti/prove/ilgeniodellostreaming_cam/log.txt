@@ -7,17 +7,15 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.webs
       peliculas | Serie Tv  | https://il-geniodellostreaming.website/serie-tv/
 == lista "Tutti "
    -> 18 voci
-      check | Alessandro Barbero: 1848 L'Europa in rivolta | https://il-geniodellostreaming.website/film/35771-alessandro-barbero-1848-l-europa-in-rivolta-stream
-      check | Madden | https://il-geniodellostreaming.website/film/35761-madden-streaming.html
-      check | Vienna Game | https://il-geniodellostreaming.website/film/35762-vienna-game-streaming.html
-      check | I 12 segni di Valentina | https://il-geniodellostreaming.website/film/35763-i-12-segni-di-valentina-streaming.html
-== check su "Alessandro Barbero: 1848 L'Europa in riv"
+      check | The Hotline | https://il-geniodellostreaming.website/film/35786-the-hotline-linea-di-emergenza-streaming.html
+      check | Perfetti bugiardi | https://il-geniodellostreaming.website/film/35784-perfetti-bugiardi-streaming.html
+      check | The Chosen: Stagione 6 | https://il-geniodellostreaming.website/film/35781-the-chosen-stagione-6-streaming.html
+      check | La torta del presidente | https://il-geniodellostreaming.website/film/35775-la-torta-del-presidente-streaming.html
+== check su "The Hotline"
    -> 1 voci
-      play | Alessandro Barbero: 1848 L'Europa in rivolta | https://v.vidxgo.co/45114341
-== risoluzione vidxgo https://v.vidxgo.co/45114341
-   api /t/ 45114341 referer https://v.vidxgo.co/45114341 -> 404 {"error":"not found"}
-   api /t/ 45114341 referer https://il-geniodellostreaming.website/ -> 404 {"error":"not found"}
-   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+      play | The Hotline | https://v.vidxgo.co/39640040
+== risoluzione vidxgo https://v.vidxgo.co/39640040
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (4)
     menu | ('Tutti', ['/catalog/all', 'peliculas', 'template-az', 'undefined'])
     menu | ('Generi {submenu}', ['', 'genres', 'genres', 'undefined'])
@@ -25,19 +23,19 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.webs
     menu | ('Serie Tv', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
    SEZIONE Tutti -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Hotline
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Perfetti bugiardi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Chosen: Stagione 6
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: La torta del presidente
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Madden
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Vienna Game
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: I 12 segni di Valentina
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Gordon
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: La legge della bestia
    SEZIONE Serie TV -> OK 20 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Chosen: Stagione 6
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Altruists
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Vienna Game
       PROBLEMA: tipo undefined, in Kodi appare come cartella: I 12 segni di Valentina
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Gordon
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: La legge della bestia
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: 177 Giorni. Il rapimento di Farouk
    SEZIONE Animazione -> OK 20 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
@@ -53,30 +51,30 @@ Canale ilgeniodellostreaming_cam | indirizzo https://il-geniodellostreaming.webs
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'isola dei ricordi
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Il Signore degli Anelli - Gli Anelli del Potere
    SEZIONE •• Generi -> SOTTOMENU  
-   SEZIONE 0-9 -> OK 17 
+   SEZIONE 0-9 -> OK 16 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Blue Road
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Hotline
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Mammina
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Perfetti bugiardi
       PROBLEMA: tipo undefined, in Kodi appare come cartella: La torta del presidente
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Madden
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Vienna Game
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: I 12 segni di Valentina
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Gordon
    SEZIONE A -> OK 17 
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Madden
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Vienna Game
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: I 12 segni di Valentina
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Gordon
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: La legge della bestia
-   SEZIONE B -> OK 17 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Hotline
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Perfetti bugiardi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Chosen: Stagione 6
       PROBLEMA: tipo undefined, in Kodi appare come cartella: La torta del presidente
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Madden
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Vienna Game
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: I 12 segni di Valentina
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Gordon
+   SEZIONE B -> OK 16 
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Blue Road
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: The Hotline
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Mammina
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Perfetti bugiardi
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: La torta del presidente
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta
    SEZIONE •• Per Lettera -> SOTTOMENU  
    SEZIONE Serie Tv -> OK 20 
    SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://il-geniodellostreaming.website/?s=avatar', 'status': 200, 'byte': 35085, 'titolo_pagina': 'Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis'}
 SEZIONI: 4 ok su 5
    SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+VERDETTO: ARRIVA AL VIDEO

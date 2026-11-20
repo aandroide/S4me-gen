@@ -7,26 +7,26 @@ Canale guardaserieicu | indirizzo
       channel_config | txt60587 %s | 
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Silent Night | https://guardaseriex.lol/crime/5899-silent-night-streaming.html
-      episodios | Nocturne | https://guardaseriex.lol/crime/5867-nocturne-streaming.html
-      episodios | YAGA | https://guardaseriex.lol/dramma/5856-yaga-streaming.html
-      episodios | Furia | https://guardaseriex.lol/commedia/5117-furia-streaming.html
-== episodios su "Silent Night"
+      episodios | L'isola Del Tesoro | https://guardaseriex.lol/avventura/5829-l-isola-del-tesoro-streaming.html
+      episodios | L'Istituto | https://guardaseriex.lol/fantascienza/4178-listituto-streaming.html
+      episodios | 177 Giorni. Il rapimento di Farouk | https://guardaseriex.lol/5905-177-giorni-il-rapimento-di-farouk-streaming.html
+      episodios | L'ultimo piatto | https://guardaseriex.lol/dramma/5877-l-ultimo-piatto-streaming.html
+== episodios su "L'isola Del Tesoro"
    -> 2 voci
-      findvideos | 1x01 | https://guardaseriex.lol/crime/5899-silent-night-streaming.html
-      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.lol/crime/5899-silent-night-streaming.html
-== findvideos su "1x01"
+      findvideos | 1x01 - Capitolo 1: L'ammiraglio Benbow | https://guardaseriex.lol/avventura/5829-l-isola-del-tesoro-streaming.html
+      addToLibrary | Aggiungi alla Videoteca | https://guardaseriex.lol/avventura/5829-l-isola-del-tesoro-streaming.html
+== findvideos su "1x01 - Capitolo 1: L'ammiraglio Benbow"
    -> 1 voci
-      play | 1x01 | https://v.vidxgo.co/38961437/1/1
-== risoluzione vidxgo https://v.vidxgo.co/38961437/1/1
+      play | 1x01 - Capitolo 1: L'ammiraglio Benbow | https://v.vidxgo.co/40385667/1/1
+== risoluzione vidxgo https://v.vidxgo.co/40385667/1/1
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (2)
     tvshow | '/serietv-streaming/page/1/'
     tvshow | ('Generi', ['/serietv-streaming/page/1/', 'genres', 'genres'])
 == controllo di tutte le sezioni
    SEZIONE • Serie TV -> OK 18 
-   SEZIONE Biografico -> OK 129 
-   SEZIONE Commedia -> OK 1533 
+   SEZIONE Biografico -> OK 128 
+   SEZIONE Commedia -> OK 1534 
    SEZIONE Crime -> OK 853 
    SEZIONE •• Generi -> SOTTOMENU  
    SEZIONE •• txt70741 Serie TV… -> OK 4 
