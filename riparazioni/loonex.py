@@ -23,7 +23,7 @@ def _abs(url):
 
 
 CATEGORIE = [('Animali', 'Animali'), ('Animazione', 'Animazione'), ('Otaku', 'Anime'),
-             ('Documentari', 'Documentari'), ('Fandub', 'Fandub'), ('Fanmade', 'Fanmade'), ('Film', 'Film'),
+             ('Fandub', 'Fandub'), ('Fanmade', 'Fanmade'), ('Film', 'Film'),
              ('Gli introvabili', 'Gli introvabili'), ('Horror', 'Horror'), ('Indie', 'Indie'),
              ('Made in Italy', 'Made in Italy'), ('SUB ITA', 'SUB ITA'),
              ('Umani', 'Umani'), ('Umani e Animali', 'Umani e Animali')]
