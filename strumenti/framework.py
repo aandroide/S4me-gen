@@ -49,6 +49,36 @@ def _contiene(nodo, testo):
 
 SORGENTE = ['']
 
+EMOJI = re.compile('[\U0001F000-\U0001FAFF\u2600-\u27BF\u2B50\u2B55\uFE0F\u200D]')
+SERVER_PARAMETRI = ('item', 'data', 'itemlist', 'headers', 'CheckLinks', 'Download', 'patronTag', 'Videolibrary',
+                    'Sorted', 'referer')
+
+
+def _controlli_comuni(testo, albero, add):
+    """Regole di AGENTS.md valide per canali e server: emoji, codice di debug, print, sintassi solo Python 3."""
+    for i, riga in enumerate(testo.splitlines(), 1):
+        if EMOJI.search(riga):
+            add(ERRORE, 'F17', i, 'emoji o emoticon nel file: mai emoji nei file Kodi (etichette, stringhe, log)')
+    for n in ast.walk(albero):
+        if isinstance(n, ast.Call):
+            nome = _nome_chiamata(n)
+            if nome.split('.')[-1] in ('dbg', 'regexDbg'):
+                add(ERRORE, 'F18', n.lineno, '%s lasciata nel codice: le funzioni di debug non si consegnano' % nome)
+            if nome == 'print':
+                add(AVVISO, 'F18', n.lineno, 'print nel codice: usa logger o support.info')
+        if isinstance(n, ast.Assign) and isinstance(n.value, ast.Constant) and n.value.value is True:
+            for tgt in n.targets:
+                if isinstance(tgt, ast.Name) and tgt.id in ('debug', 'debugBlock'):
+                    add(ERRORE, 'F18', n.lineno, '%s = True lasciato nel codice: apre il debug e non si consegna' % tgt.id)
+    f_string = next((n for n in ast.walk(albero) if isinstance(n, ast.JoinedStr)), None)
+    annotazione = next((n for n in ast.walk(albero) if isinstance(n, ast.FunctionDef) and
+                        (n.returns is not None or any(a.annotation is not None for a in n.args.args))), None)
+    if f_string is not None or annotazione is not None:
+        nodo = f_string if f_string is not None else annotazione
+        add(AVVISO, 'P01', nodo.lineno, 'sintassi solo Python 3 (f-string o annotazioni): il codice base di S4Me '
+                                          'gira anche su Python 2, meglio format() e niente annotazioni')
+
+
 
 def controlla_canale(testo):
     problemi = []
@@ -200,6 +230,46 @@ def controlla_canale(testo):
                         "viene scambiata per link e parte la riproduzione al posto del menu. Il server si imposta in findvideos")
                     break
 
+    # F15 TMDB, se non trova il titolo, ripiega sul piu simile anche se sbagliato: va controllato
+    chiamate_tmdb = [n for fn in funz.values() if fn.name != 'episodios' for n in ast.walk(fn)
+                     if isinstance(n, ast.Call) and _nome_chiamata(n).endswith('set_infoLabels_itemlist')]
+    if chiamate_tmdb and not re.search(r'difflib|SequenceMatcher', testo):
+        add(AVVISO, 'F15', chiamate_tmdb[0].lineno,
+            'TMDB chiamato dal canale senza controllo di somiglianza del titolo trovato: con titoli rari TMDB '
+            'prende il risultato piu simile anche se sbagliato (Tarzan 1935 diventa Batman 1977). Confronta il '
+            'titolo con difflib (soglia 0.9) e, se non somiglia, tieni i dati del sito')
+
+    # F16 eccezioni generiche: solo in search e newest
+    for fn in albero.body:
+        if not isinstance(fn, ast.FunctionDef):
+            continue
+        for n in ast.walk(fn):
+            if isinstance(n, ast.ExceptHandler) and (n.type is None or getattr(n.type, 'id', '') in ('Exception', 'BaseException')):
+                if fn.name not in ('search', 'newest'):
+                    add(AVVISO, 'F16', n.lineno, "except generico in %s: nasconde errori veri. Cattura solo quelli attesi "
+                                                 "(rete, decodifica); in search e newest e ammesso" % fn.name)
+
+    # F19 support.server: parametri validi e controlli da non spegnere senza motivo
+    for n in ast.walk(albero):
+        if isinstance(n, ast.Call) and _nome_chiamata(n) == 'support.server':
+            for k in n.keywords:
+                if k.arg and k.arg not in SERVER_PARAMETRI:
+                    add(ERRORE, 'F19', n.lineno, 'support.server non ha il parametro %s (firma attuale: %s)' % (
+                        k.arg, ', '.join(SERVER_PARAMETRI)))
+                elif k.arg in ('CheckLinks', 'Download', 'Videolibrary') and isinstance(k.value, ast.Constant) \
+                        and k.value.value is False:
+                    add(AVVISO, 'F19', n.lineno, '%s=False: non si spegne senza motivo (va bene solo per streaming '
+                                                 'protetto, i cui link non si possono salvare o scaricare)' % k.arg)
+
+    # F20 indirizzo del sito nel codice invece che in channels.json
+    for n in albero.body:
+        if isinstance(n, ast.Assign) and isinstance(n.value, ast.Constant) and isinstance(n.value.value, str) \
+                and n.value.value.startswith('http') and any(isinstance(g, ast.Name) and g.id == 'host' for g in n.targets):
+            add(AVVISO, 'F20', n.lineno, 'host scritto nel codice: l\'indirizzo sta in channels.json e si legge con '
+                                          'config.get_channel_url() (con findhost, def findhost(url))')
+
+    _controlli_comuni(testo, albero, add)
+
     return problemi
 
 
@@ -248,6 +318,24 @@ def controlla_server(testo):
                     'Ritorna False solo con 404 o 410 sia sulla richiesta leggera sia sulla pagina del player')
         if not re.search(r'return\s+True', corpo_impl):
             add(AVVISO, 'S04', fn.lineno, 'test_video_exists senza ripiego True: in ogni dubbio il video va provato')
+        # S04: una pagina vuota non e un 404, puo essere la rete dell'utente
+        for m in re.finditer(r'return\s+False\b', corpo_impl):
+            prima = corpo_impl[:m.start()]
+            contesto = prima[prima.rfind('if '):] if prima.rfind('if ') >= 0 else prima
+            if re.search(r'not\s+[\w.]*\bdata\b|not\s+(?:risposta|resp|response|r|page|pagina)\b', contesto):
+                add(AVVISO, 'S04', (impl.lineno if impl else fn.lineno) + prima.count('\n'),
+                    'test_video_exists ritorna False con una pagina vuota: puo essere la rete dell utente. '
+                    'Ritorna False solo con 404 o 410 veri')
+        # S05: il messaggio di video non disponibile e quello standard
+        for n in ast.walk(impl or fn):
+            if isinstance(n, ast.Return) and isinstance(n.value, ast.Tuple) and n.value.elts \
+                    and isinstance(n.value.elts[0], ast.Constant) and n.value.elts[0].value is False \
+                    and len(n.value.elts) > 1:
+                msg = ast.get_source_segment(testo, n.value.elts[1]) or ''
+                if '70449' not in msg and 'get_localized_string' not in msg:
+                    add(AVVISO, 'S05', n.lineno, "messaggio di video non disponibile scritto a mano: usa "
+                                                 "config.get_localized_string(70449) % 'NomeServer'")
+    _controlli_comuni(testo, albero, add)
     return problemi
 
 

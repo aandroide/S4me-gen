@@ -27,6 +27,13 @@ Il generatore (`s4me_gen.py`) aggiunge nel rapporto del canale una sezione `FRAM
 | F12 | `findvideos` con `support.server`; `search` con `try/except` che ritorna `[]` | AutoPlay, controllo link, ricerca globale |
 | F13 | il canale non chiama `probe` o `episodes_api` del server | una richiesta per stagione alla prima apertura puo sembrare traffico anomalo; gli episodi mancanti li scarta `test_video_exists` alla riproduzione |
 | F14 | se il titolo e stato aggiunto da TMDB con un id di film per una serie (o il contrario), prendere l'id dalla pagina (`themoviedb.org/tv/<id>` per le serie) | la ricerca dell'elenco parte come film e puo trovare un film omonimo |
+| F15 | dopo `set_infoLabels_itemlist` nel canale, confrontare il titolo trovato con quello del sito (`difflib`, soglia 0.9) e, se non somiglia, ripristinare i dati del sito | con titoli rari TMDB prende il risultato piu simile anche se sbagliato (Tarzan 1935 diventa Batman 1977) |
+| F16 | niente `except Exception` generico fuori da `search` e `newest`; catturare solo gli errori attesi (rete, decodifica) | l'except generico nasconde errori veri e il canale sembra vuoto senza spiegazione |
+| F17 | mai emoji o emoticon nei file Kodi (etichette, stringhe, log) | non sono supportate in modo uniforme dai caratteri delle skin |
+| F18 | niente `debug = True`, `support.dbg()`, `regexDbg` o `print` lasciati nel codice | il debug apre finestre e riempie il log dell'utente |
+| F19 | `support.server` solo con i parametri della firma attuale (`item, data, itemlist, headers, CheckLinks, Download, patronTag, Videolibrary, Sorted, referer`), senza spegnere `CheckLinks`, `Download`, `Videolibrary` senza motivo | un parametro che non esiste fa fallire la ricerca dei server; spegnere i controlli toglie funzioni all'utente |
+| F20 | l'indirizzo del sito sta in `channels.json` e si legge con `config.get_channel_url()`, non in `host = 'https://...'` nel codice | cosi l'indirizzo si aggiorna senza toccare il canale |
+| P01 | niente f-string e annotazioni di tipo nel codice condiviso | il codice base gira anche su Python 2 |
 
 F14 non si controlla in automatico: si guarda leggendo il canale.
 
@@ -38,6 +45,7 @@ F14 non si controlla in automatico: si guarda leggendo il canale.
 | S02 | thread con `daemon=True` | un thread normale tiene vivo lo script e Kodi blocca il menu |
 | S03 | `test_video_exists` con tempo massimo (thread con `join`, o timeout sulle richieste) | se il sito non risponde il menu resta bloccato |
 | S04 | `test_video_exists` ritorna `False` solo con 404 o 410 veri, anche sulla pagina del player. Mai dopo una verifica di rete extra (`get_embed_page`, `resolve`); in ogni dubbio `True` | la rete dell'utente puo bloccare quella pagina e il server che funziona viene scartato |
+| S05 | il messaggio di video non disponibile e `config.get_localized_string(70449) % 'NomeServer'`, non un testo scritto a mano | uniforma i messaggi e li rende traducibili |
 
 ## Come si arriva a queste regole
 

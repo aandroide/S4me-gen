@@ -105,6 +105,32 @@ deve('verifica di rete extra', SERVER_BUONO.replace(
     "            return False, 'non disponibile'",
     "            if not get_embed_page(u):\n                return False, 'non disponibile'"), 'server', presenti=('S04',))
 
+# regole di AGENTS.md
+deve('canale buono senza nuovi avvisi', CANALE_BUONO, 'canale', assenti=('F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'P01'))
+deve('emoji', CANALE_BUONO + "\nX = 'ciao \U0001F600'\n", 'canale', presenti=('F17',))
+deve('debug lasciato', CANALE_BUONO.replace("    patron = r", "    debug = True\n    patron = r"), 'canale', presenti=('F18',))
+deve('support.dbg lasciata', CANALE_BUONO + "\ndef d():\n    support.dbg()\n", 'canale', presenti=('F18',))
+deve('server con AutoPlay', CANALE_BUONO.replace('support.server(item)', 'support.server(item, AutoPlay=True)'),
+     'canale', presenti=('F19',))
+deve('server con CheckLinks spento', CANALE_BUONO.replace('support.server(item)', 'support.server(item, CheckLinks=False)'),
+     'canale', presenti=('F19',))
+deve('tmdb senza controllo titolo', CANALE_BUONO + "\ndef f(l):\n    support.tmdb.set_infoLabels_itemlist(l, seekTmdb=True)\n",
+     'canale', presenti=('F15',))
+deve('tmdb con controllo titolo', "import difflib\n" + CANALE_BUONO + "\ndef f(l):\n    support.tmdb.set_infoLabels_itemlist(l, seekTmdb=True)\n",
+     'canale', assenti=('F15',))
+deve('except generico', CANALE_BUONO + "\ndef f():\n    try:\n        return 1\n    except Exception:\n        return 0\n",
+     'canale', presenti=('F16',))
+deve('except generico in search ammesso', CANALE_BUONO, 'canale', assenti=('F16',))
+deve('host nel codice', CANALE_BUONO + "\nhost = 'https://sito.it'\n", 'canale', presenti=('F20',))
+deve('f-string', CANALE_BUONO + "\nX = f'{1}'\n", 'canale', presenti=('P01',))
+deve('server senza messaggio standard', SERVER_BUONO, 'server', presenti=('S05',))
+deve('server con messaggio standard', SERVER_BUONO.replace("return False, 'non disponibile'",
+     "return False, config.get_localized_string(70449) % 'Sito'"), 'server', assenti=('S05',))
+deve('server con pagina vuota', SERVER_BUONO.replace(
+    "        if r.status_code in (404, 410):",
+    "        if not r.data or r.status_code in (404, 410):"), 'server', presenti=('S04',))
+deve('server con emoji', SERVER_BUONO + "\nX = '\U0001F600'\n", 'server', presenti=('F17',))
+
 if fallite:
     print('\n'.join(fallite))
     sys.exit(1)
