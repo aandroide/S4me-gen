@@ -6,11 +6,11 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 131 voci
+   -> 134 voci
       findvideos | Transformers - L'ultimo cavaliere | https://mediasetinfinity.mediaset.it/movie/transformerslultimocavaliere/transformers-lultimo-cavalie
+      findvideos | Bumblebee | https://mediasetinfinity.mediaset.it/movie/bumblebee/bumblebee_F309330601000102
+      findvideos | 90 minuti per salvarla | https://mediasetinfinity.mediaset.it/movie/90minutipersalvarla/90-minuti-per-salvarla_F3023797010001
       findvideos | In time | https://mediasetinfinity.mediaset.it/movie/intime/in-time_F304255901000102
-      findvideos | The rock | https://mediasetinfinity.mediaset.it/movie/therock/the-rock_F007580301000103
-      findvideos | Overdrive | https://mediasetinfinity.mediaset.it/movie/overdrive/overdrive_F308184301000102
 == findvideos su "Transformers - L'ultimo cavaliere"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 20 voci
-      findvideos | Le giraffe | https://mediasetinfinity.mediaset.it/movie/legiraffe/le-giraffe_F010691601000101
-      findvideos | La palestra | https://mediasetinfinity.mediaset.it/movie/lapalestra/la-palestra_F011315501000101
-      findvideos | 90 minuti per salvarla | https://mediasetinfinity.mediaset.it/movie/90minutipersalvarla/90-minuti-per-salvarla_F3023797010001
-      findvideos | Una notte da leoni 3 | https://mediasetinfinity.mediaset.it/movie/unanottedaleoni3/una-notte-da-leoni-3_F305333701000102
-== findvideos su "Le giraffe"
+   -> 21 voci
+      findvideos | Bumblebee | https://mediasetinfinity.mediaset.it/movie/bumblebee/bumblebee_F309330601000102
+      findvideos | Matrimonio impossibile | https://mediasetinfinity.mediaset.it/movie/matrimonioimpossibile/matrimonio-impossibile_F01146660100
+      findvideos | Harry Potter e il prigioniero di Azkaban | https://mediasetinfinity.mediaset.it/movie/harrypottereilprigionierodiazkaban/harry-potter-e-il-prig
+      findvideos | The wedding date - L'amore ha il suo prezzo - The Wedding Da | https://mediasetinfinity.mediaset.it/movie/theweddingdatelamorehailsuoprezzo/the-wedding-date-lamore
+== findvideos su "Bumblebee"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -45,11 +45,11 @@ KeyError: 'response'
 
 == lista "•• Film più visti del giorno"
    -> 21 voci
-      findvideos | Un mondo a parte | https://mediasetinfinity.mediaset.it/movie/unmondoaparte/un-mondo-a-parte_F312712801000101
       findvideos | The place | https://mediasetinfinity.mediaset.it/movie/theplace/the-place_F306383601000101
-      findvideos | Harry Potter e la camera dei segreti | https://mediasetinfinity.mediaset.it/movie/harrypotterelacameradeisegreti/harry-potter-e-la-camera-d
-      findvideos | Inga Lindstrom - L'altra figlia | https://mediasetinfinity.mediaset.it/movie/ingalindstromlaltrafiglia/inga-lindstrom-laltra-figlia_F3
-== findvideos su "Un mondo a parte"
+      findvideos | Un mondo a parte | https://mediasetinfinity.mediaset.it/movie/unmondoaparte/un-mondo-a-parte_F312712801000101
+      findvideos | The rock | https://mediasetinfinity.mediaset.it/movie/therock/the-rock_F007580301000103
+      findvideos | Inga Lindstrom - L'amore non muore mai | https://mediasetinfinity.mediaset.it/movie/ingalindstromlamorenonmuoremai/inga-lindstrom-lamore-non-
+== findvideos su "The place"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -60,7 +60,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos
     res = session.post(
           ^^^^^^^^^^^^^
-KeyError: 'mediaSelector'
+KeyError: 'response'
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (23)
@@ -90,46 +90,46 @@ Nessuna voce da riprodurre trovata
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 50 
    SEZIONE Replay -> OK 25 
-   SEZIONE •• Tutti i Film -> OK 66 
+   SEZIONE •• Tutti i Film -> OK 67 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 3 
-   SEZIONE I Simpson -> OK 5 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 2 
+   SEZIONE Will & Grace 5 -> OK 5 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Segreti di famiglia 3 -> OK 5 
    SEZIONE Innocence -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
-   SEZIONE Forbidden Fruit 4 -> OK 4 
-   SEZIONE Beautiful -> OK 6 
-   SEZIONE Tempesta d'amore -> OK 3 
+   SEZIONE Racconto di una notte -> OK 4 
+   SEZIONE La promessa -> OK 7 
+   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
    SEZIONE •• Animazione Made in Japan -> OK 1 
    SEZIONE I Simpson -> OK 5 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 3 
-   SEZIONE Law & Order: Unità speciale 15 -> OK 2 
+   SEZIONE Law & Order: i due volti della giustizia 24 -> OK 2 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 2 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
-   SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
+   SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE •• Serie Turche -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Le Iene presentano: Inside Autunno 2026 -> OK 2 
    SEZIONE Tu Si Que Vales 2026 -> OK 6 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
-   SEZIONE Ore 11 -> OK 3 
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
+   SEZIONE Realpolitik 2026/2027 -> OK 2 
    SEZIONE Caduta libera 2026/2027 -> OK 4 
    SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
    SEZIONE Amici 26 -> OK 10 
    SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE •• Talent e reality -> SOTTOMENU  
-   SEZIONE Lo straordinario mondo di Gumball -> OK 9 
+   SEZIONE Lo straordinario mondo di Gumball -> OK 5 
    SEZIONE Teen Titans Go! -> OK 10 
    SEZIONE Looney Tunes Cartoons -> OK 5 
    SEZIONE •• Kids Boing -> SOTTOMENU  
@@ -146,7 +146,7 @@ Nessuna voce da riprodurre trovata
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Enigmi alieni 10 -> OK 7 
    SEZIONE Prove sepolte - Le avventure dell'archeologia -> OK 7 
-   SEZIONE Fuori le prove! - Indagini ai confini della realtà 3 -> OK 9 
+   SEZIONE Universo ai raggi X 5 -> OK 8 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE •• Film Documentari di Focus -> OK 20 

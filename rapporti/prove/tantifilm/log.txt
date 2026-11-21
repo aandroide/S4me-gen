@@ -13,27 +13,27 @@ Canale tantifilm | indirizzo https://tanti-film.tattoo
       peliculas | Commedia | https://tanti-film.tattoo/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
-      check | The Hotline  | https://tanti-film.tattoo/guarda/35786-the-hotline-linea-di-emergenza-streaming-streaming-hd.html
-      check | Perfetti bugiardi  | https://tanti-film.tattoo/guarda/35784-perfetti-bugiardi-streaming-streaming-hd.html
-      check | La torta del presidente  | https://tanti-film.tattoo/guarda/35775-la-torta-del-presidente-streaming-streaming-hd.html
-      check | Guarding Stars  | https://tanti-film.tattoo/guarda/35767-guarding-stars-streaming-streaming-hd.html
-== check su "The Hotline "
+      check | Flavia de Luce - Una piccola Sherlock Holmes  | https://tanti-film.tattoo/guarda/35797-flavia-de-luce-una-detective-geniale-streaming-streaming-hd.h
+      check | Hokum  | https://tanti-film.tattoo/guarda/35794-hokum-streaming-streaming-hd.html
+      check | A nome di mio figlio  | https://tanti-film.tattoo/guarda/35790-a-nome-di-mio-figlio-streaming-streaming-hd.html
+      check | Steps  | https://tanti-film.tattoo/guarda/35789-steps-streaming-streaming-hd.html
+== check su "Flavia de Luce - Una piccola Sherlock Ho"
    -> 2 voci
-      play | The Hotline  | https://v.vidxgo.co/39640040
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.tattoo/guarda/35786-the-hotline-linea-di-emergenza-streaming-streaming-hd.html
-== risoluzione vidxgo https://v.vidxgo.co/39640040
+      play | Flavia de Luce - Una piccola Sherlock Holmes  | https://v.vidxgo.co/11662534
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.tattoo/guarda/35797-flavia-de-luce-una-detective-geniale-streaming-streaming-hd.h
+== risoluzione vidxgo https://v.vidxgo.co/11662534
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
     tvshow | '/serie-tv/'
 == controllo di tutte le sezioni
-   SEZIONE Animazione -> OK 25 
-   SEZIONE Avventura -> OK 24 
+   SEZIONE Animazione -> OK 24 
+   SEZIONE Avventura -> OK 23 
    SEZIONE Biografico -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE • Film -> OK 20 
-   SEZIONE • Serie TV -> OK 8 
+   SEZIONE • Serie TV -> OK 18 
    SEZIONE txt70741 … -> OK 11 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Wizards

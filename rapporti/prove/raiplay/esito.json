@@ -63,7 +63,7 @@
    "voce": "Dirette",
    "azione": "live",
    "esito": "OK",
-   "titoli": 16
+   "titoli": 15
   },
   {
    "voce": "Replay",
@@ -71,6 +71,32 @@
    "esito": "SOTTOMENU",
    "sottovoci": 7,
    "figli": [
+    {
+     "voce": "str16 21 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 18
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 20
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 20
+      }
+     ]
+    },
     {
      "voce": "str15 20 str31",
      "azione": "replayChannels",
@@ -81,13 +107,13 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 20
+       "titoli": 28
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 24
+       "titoli": 36
       },
       {
        "voce": "Rai 3",
@@ -122,32 +148,6 @@
        "pagine": []
       }
      ]
-    },
-    {
-     "voce": "str13 18 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 29
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 35
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      }
-     ]
     }
    ]
   },
@@ -161,7 +161,7 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 22
+     "titoli": 23
     },
     {
      "voce": "Da non perdere",
@@ -311,7 +311,7 @@
    "voce": "Teen",
    "azione": "menu",
    "esito": "SOTTOMENU",
-   "sottovoci": 12,
+   "sottovoci": 13,
    "figli": [
     {
      "voce": "Da non perdere",
@@ -326,10 +326,10 @@
      "titoli": 15
     },
     {
-     "voce": "Next Star",
+     "voce": "Red Flags",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 21
+     "titoli": 13
     }
    ]
   },
@@ -434,8 +434,8 @@
     "tipo undefined, in Kodi appare come cartella: To be",
     "tipo undefined, in Kodi appare come cartella: Fumbleland",
     "tipo undefined, in Kodi appare come cartella: Pupi Avati. Che cinema la vita!",
-    "tipo undefined, in Kodi appare come cartella: Cicatrici",
-    "tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream"
+    "tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream",
+    "tipo undefined, in Kodi appare come cartella: Cicatrici"
    ],
    "esito": "OK",
    "titoli": 8
@@ -447,7 +447,7 @@
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
    "byte": 597,
-   "secondi": 0.5,
+   "secondi": 0.9,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }

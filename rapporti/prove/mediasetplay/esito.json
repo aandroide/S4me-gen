@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 131
+   "voci": 134
   },
   {
    "passo": "findvideos su \"Transformers - L'ultimo cavaliere\"",
@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 20
+   "voci": 21
   },
   {
-   "passo": "findvideos su \"Le giraffe\"",
+   "passo": "findvideos su \"Bumblebee\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -33,9 +33,9 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"Un mondo a parte\"",
+   "passo": "findvideos su \"The place\"",
    "esito": "ERRORE",
-   "errore": "enti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'mediaSelector'\n"
+   "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   }
  ],
  "video": [],
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 66
+   "titoli": 67
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -123,10 +123,10 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 2
     },
     {
-     "voce": "I Simpson",
+     "voce": "Will & Grace 5",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
@@ -166,22 +166,22 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Forbidden Fruit 4",
+     "voce": "Racconto di una notte",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
     },
     {
-     "voce": "Beautiful",
+     "voce": "La promessa",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 7
     },
     {
-     "voce": "Tempesta d'amore",
+     "voce": "Tutto per la mia famiglia 2",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 4
     }
    ]
   },
@@ -210,13 +210,13 @@
      "titoli": 5
     },
     {
-     "voce": "NCIS - Unità anticrimine 14",
+     "voce": "Law & Order: i due volti della giustizia 24",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 2
     },
     {
-     "voce": "Law & Order: Unità speciale 15",
+     "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 2
@@ -230,16 +230,16 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "My Sweet Lie",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
-    },
-    {
      "voce": "Tutto per la mia famiglia 2",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
+    },
+    {
+     "voce": "My Sweet Lie",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
     },
     {
      "voce": "Forbidden Fruit 4",
@@ -253,7 +253,7 @@
    "voce": "•• Programmi TV Prima serata",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 11,
+   "sottovoci": 12,
    "figli": [
     {
      "voce": "Grande Fratello VIP - Autunno 2026",
@@ -282,16 +282,16 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Ore 11",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 3
-    },
-    {
      "voce": "La ruota della fortuna 2025/2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
+    },
+    {
+     "voce": "Realpolitik 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 2
     },
     {
      "voce": "Caduta libera 2026/2027",
@@ -340,7 +340,7 @@
      "voce": "Lo straordinario mondo di Gumball",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 9
+     "titoli": 5
     },
     {
      "voce": "Teen Titans Go!",
@@ -439,10 +439,10 @@
      "titoli": 7
     },
     {
-     "voce": "Fuori le prove! - Indagini ai confini della realtà 3",
+     "voce": "Universo ai raggi X 5",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 9
+     "titoli": 8
     }
    ]
   },

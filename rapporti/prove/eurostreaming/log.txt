@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.skin
       peliculas | • Archivio | https://eurostream.skin/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | Chicago Fire | https://eurostream.skin/chicago-fire-37/
-      episodios | Percy Jackson e gli dei dell’Olimpo | https://eurostream.skin/percy-jackson-e-gli-dei-dell-olimpo/
-      episodios | The Traitors - Italia | https://eurostream.skin/the-traitors-italia/
-      episodios | Melania Rea | https://eurostream.skin/melania-rea/
-== episodios su "Chicago Fire"
-   -> 527 voci
-      findvideos | 1x01 - La Squadra  | https://eurostream.skin/chicago-fire-37/
-      findvideos | 1x02 - Grazie, Mon Amour  | https://eurostream.skin/chicago-fire-37/
-      findvideos | 1x03 - Un Atto Dovuto  | https://eurostream.skin/chicago-fire-37/
-      findvideos | 1x04 - Un Minuto  | https://eurostream.skin/chicago-fire-37/
-== findvideos su "1x01 - La Squadra "
+      episodios | The Altruists | https://eurostream.skin/the-altruists/
+      episodios | The Blue Road | https://eurostream.skin/the-blue-road/
+      episodios | La famiglia Panini - L’avventura delle figurine | https://eurostream.skin/la-famiglia-panini-lavventura-delle-figurine/
+      episodios | Forbidden Fruit | https://eurostream.skin/forbidden-fruit/
+== episodios su "The Altruists"
+   -> 9 voci
+      findvideos | 1x01 - Relazioni inappropriate  | https://eurostream.skin/the-altruists/
+      findvideos | 1x02 - Sette versioni della verità  | https://eurostream.skin/the-altruists/
+      findvideos | 1x03 - Parole tra amici  | https://eurostream.skin/the-altruists/
+      findvideos | 1x04 - I buoni  | https://eurostream.skin/the-altruists/
+== findvideos su "1x01 - Relazioni inappropriate "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f
+Exception: Not un-shortened link: https://clicka.cc/mix/wrmx24q1
 
 == lista "• Anime"
    -> 19 voci
@@ -65,21 +65,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty
+Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 15x07 - Chicago Fire - No Love Lost  | https://eurostream.skin/chicago-fire-37/
-      episodios | 3x01 - Percy Jackson e gli dei dell’Olimpo - La mia operazio | https://eurostream.skin/percy-jackson-e-gli-dei-dell-olimpo/
-      episodios | 2x06 - The Traitors - Italia - Fino all'ultimo inganno | https://eurostream.skin/the-traitors-italia/
-      episodios | 1x03 - Melania Rea - Episodio 3 | https://eurostream.skin/melania-rea/
-== episodios su "15x07 - Chicago Fire - No Love Lost "
-   -> 527 voci
-      findvideos | 1x01 - La Squadra  | https://eurostream.skin/chicago-fire-37/
-      findvideos | 1x02 - Grazie, Mon Amour  | https://eurostream.skin/chicago-fire-37/
-      findvideos | 1x03 - Un Atto Dovuto  | https://eurostream.skin/chicago-fire-37/
-      findvideos | 1x04 - Un Minuto  | https://eurostream.skin/chicago-fire-37/
-== findvideos su "1x01 - La Squadra "
+      episodios | 1x01 - The Altruists - Relazioni inappropriate , 1x08 God Mo | https://eurostream.skin/the-altruists/
+      episodios | 1x08 - The Blue Road - Episodio 08 | https://eurostream.skin/the-blue-road/
+      episodios | 1x01 - La famiglia Panini - L'avventura delle figurine - Epi | https://eurostream.skin/la-famiglia-panini-lavventura-delle-figurine/
+      episodios | 4x164 - Forbidden Fruit - Episodio 164 | https://eurostream.skin/forbidden-fruit/
+== episodios su "1x01 - The Altruists - Relazioni inappro"
+   -> 9 voci
+      findvideos | 1x01 - Relazioni inappropriate  | https://eurostream.skin/the-altruists/
+      findvideos | 1x02 - Sette versioni della verità  | https://eurostream.skin/the-altruists/
+      findvideos | 1x03 - Parole tra amici  | https://eurostream.skin/the-altruists/
+      findvideos | 1x04 - I buoni  | https://eurostream.skin/the-altruists/
+== findvideos su "1x01 - Relazioni inappropriate "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f
+Exception: Not un-shortened link: https://clicka.cc/mix/wrmx24q1
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -111,4 +111,4 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - La Squadra "
+VERDETTO: SI FERMA A: findvideos su "1x01 - Relazioni inappropriate "

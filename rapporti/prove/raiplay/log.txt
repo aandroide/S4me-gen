@@ -49,21 +49,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Learning {bold}', ['/learning', 'menu', '/tipologia/learning/index.json'])
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
-   SEZIONE Dirette -> OK 16 
-   SEZIONE Rai 1 -> OK 20 
-   SEZIONE Rai 2 -> OK 24 
+   SEZIONE Dirette -> OK 15 
+   SEZIONE Rai 1 -> OK 18 
+   SEZIONE Rai 2 -> OK 20 
+   SEZIONE Rai 3 -> OK 20 
+   SEZIONE str16 21 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 28 
+   SEZIONE Rai 2 -> OK 36 
    SEZIONE Rai 3 -> ERRORE JSONDecodeError
    SEZIONE str15 20 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 33 
    SEZIONE Rai 2 -> OK 35 
    SEZIONE Rai 3 -> ERRORE JSONDecodeError
    SEZIONE str14 19 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 29 
-   SEZIONE Rai 2 -> OK 35 
-   SEZIONE Rai 3 -> OK 30 
-   SEZIONE str13 18 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
-   SEZIONE Novità -> OK 22 
+   SEZIONE Novità -> OK 23 
    SEZIONE Da non perdere -> OK 24 
    SEZIONE L'infanzia difficile -> OK 24 
    SEZIONE Film -> SOTTOMENU  
@@ -89,7 +89,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Bambini -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 36 
    SEZIONE Un mondo di fumetti -> OK 15 
-   SEZIONE Next Star -> OK 21 
+   SEZIONE Red Flags -> OK 13 
    SEZIONE Teen -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 22 
    SEZIONE Il teatro di Eduardo -> OK 25 
@@ -110,8 +110,8 @@ Canale raiplay | indirizzo https://www.raiplay.it
       PROBLEMA: tipo undefined, in Kodi appare come cartella: To be
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Fumbleland
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Pupi Avati. Che cinema la vita!
-      PROBLEMA: tipo undefined, in Kodi appare come cartella: Cicatrici
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Feisbum - Episodio 5 - Indian Dream
+      PROBLEMA: tipo undefined, in Kodi appare come cartella: Cicatrici
 SEZIONI: 13 ok su 14
    SEZIONE SENZA TITOLI: Learning | ERRORE JSONDecodeError
 VERDETTO: ARRIVA AL VIDEO

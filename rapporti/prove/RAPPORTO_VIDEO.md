@@ -88,9 +88,10 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista ""Electronic Christmas" — Add a little ba"
-- passo "lista ""Electronic Christmas" — Add a little ba"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
-- passo "lista "Birthday: Dierks Bentley (11/20/75) "": VUOTO 
+Sito:  | verdetto: SI FERMA A: lista "Most Popular "
+- passo "lista "Most Popular "": VUOTO 
+- passo "lista ""#1s: The '70s" — Every chart-topper fro"": VUOTO 
+- passo "lista "Weekend vibes! "": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -154,10 +155,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.skin | verdetto: SI FERMA A: findvideos su "1x01 - La Squadra "
-- passo "findvideos su "1x01 - La Squadra "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f 
-- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty 
-- passo "findvideos su "1x01 - La Squadra "": ERRORE     itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/tv/2z2np78f 
+Sito: https://eurostream.skin | verdetto: SI FERMA A: findvideos su "1x01 - Relazioni inappropriate "
+- passo "findvideos su "1x01 - Relazioni inappropriate "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/wrmx24q1 
+- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk 
+- passo "findvideos su "1x01 - Relazioni inappropriate "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/wrmx24q1 
 
 ### eurostreaming_actor
 Sito: https://guardaseriex.lol | verdetto: SI FERMA A: lista "• Aggiornamenti"
@@ -217,8 +218,8 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Transformers - L'ultimo cavaliere"
 - passo "findvideos su "Transformers - L'ultimo cavaliere"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Le giraffe"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Un mondo a parte"": ERRORE        ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'mediaSelector' 
+- passo "findvideos su "Bumblebee"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
 Sito:  | verdetto: SI FERMA A: lista "Generi "

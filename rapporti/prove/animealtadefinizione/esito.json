@@ -103,7 +103,7 @@
     },
     {
      "url": "https://www.animealtadefinizione.it",
-     "status": "'NoneType' object has no attribute 'elapsed'",
+     "status": "HTTPSConnectionPool(host='www.animealtadefinizione.it', port=443): Read timed out. (read timeout=5)",
      "byte": 0,
      "titolo_pagina": ""
     }
@@ -135,7 +135,7 @@
    "url": "https://www.animealtadefinizione.it/wp-admin/admin-ajax.php",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 1.6,
+   "secondi": 1.4,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
@@ -199,7 +199,7 @@
    "url": "https://www.animealtadefinizione.it",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.7,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
@@ -207,15 +207,15 @@
    "url": "https://www.animealtadefinizione.it/wp-admin/admin-ajax.php",
    "status": "'NoneType' object has no attribute 'elapsed'",
    "byte": 0,
-   "secondi": 0.7,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/10.html"
   },
   {
    "url": "https://www.animealtadefinizione.it",
-   "status": "'NoneType' object has no attribute 'elapsed'",
+   "status": "HTTPSConnectionPool(host='www.animealtadefinizione.it', port=443): Read timed out. (read timeout=5)",
    "byte": 0,
-   "secondi": 0.6,
+   "secondi": 5.4,
    "titolo_pagina": "",
    "file": "pagine/11.html"
   },

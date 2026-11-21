@@ -13,12 +13,12 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"YAGA\"",
+   "passo": "episodios su \"177 Giorni. Il rapimento di Farouk\"",
    "esito": "OK",
-   "voci": 8
+   "voci": 6
   },
   {
-   "passo": "findvideos su \"1x01 - Uomo in fiamme\"",
+   "passo": "findvideos su \"1x01 - Episodio 1\"",
    "esito": "OK",
    "voci": 1
   }
@@ -26,9 +26,9 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/39980704/1/1",
+   "url": "https://v.vidxgo.co/38354557/1/1",
    "tipo": "film",
-   "finale": "http://127.0.0.1:43003/hls/tv/39980704/1/1/master.m3u8",
+   "finale": "http://127.0.0.1:35063/hls/tv/38354557/1/1/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -89,79 +89,79 @@
   {
    "url": "https://guardaseriex.lol/serietv-streaming",
    "status": 200,
-   "byte": 99818,
-   "secondi": 0.5,
+   "byte": 100305,
+   "secondi": 0.9,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.lol/dramma/5856-yaga-streaming.html",
+   "url": "https://guardaseriex.lol/5905-177-giorni-il-rapimento-di-farouk-streaming.html",
    "status": 200,
-   "byte": 65231,
-   "secondi": 0.7,
-   "titolo_pagina": "YAGA streaming - Guardaserie",
+   "byte": 66087,
+   "secondi": 0.4,
+   "titolo_pagina": "177 Giorni. Il rapimento di Farouk streaming - Guardaserie",
    "file": "pagine/02.html"
   },
   {
    "url": "https://api.themoviedb.org/3/genre/tv/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
    "byte": 495,
-   "secondi": 0.1,
+   "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/find/tt39980704?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/find/tt38354557?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 875,
+   "byte": 1487,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/339424/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 284,
-   "secondi": 0.0,
+   "byte": 26,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
+   "url": "https://api.themoviedb.org/3/tv/339424?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
    "status": 200,
-   "byte": 12160,
+   "byte": 6147,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "url": "https://api.themoviedb.org/3/tv/339424/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
    "status": 200,
-   "byte": 284,
+   "byte": 26,
    "secondi": 0.0,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/339424?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 3001,
+   "byte": 2609,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "url": "https://api.themoviedb.org/3/tv/339424/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 14874,
+   "byte": 3575,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://api.themoviedb.org/3/tv/314360/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
+   "url": "https://api.themoviedb.org/3/tv/339424/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
    "status": 200,
-   "byte": 19578,
+   "byte": 6514,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/10.html"
@@ -169,55 +169,55 @@
   {
    "url": "https://guardaseriex.lol/serietv-streaming",
    "status": 200,
-   "byte": 99818,
-   "secondi": 1.1,
+   "byte": 100305,
+   "secondi": 0.5,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/11.html"
   },
   {
    "url": "https://guardaseriex.lol/serietv-popolari/",
    "status": 200,
-   "byte": 404140,
-   "secondi": 0.3,
+   "byte": 404192,
+   "secondi": 0.5,
    "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
    "file": "pagine/12.html"
   },
   {
    "url": "https://guardaseriex.lol/serietv-streaming",
    "status": 200,
-   "byte": 99818,
-   "secondi": 0.5,
+   "byte": 100305,
+   "secondi": 0.4,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/13.html"
   },
   {
    "url": "https://guardaseriex.lol/biografico/",
    "status": 200,
-   "byte": 219960,
-   "secondi": 0.3,
+   "byte": 220012,
+   "secondi": 0.4,
    "titolo_pagina": "Biografico streaming | Guardaserie",
    "file": "pagine/14.html"
   },
   {
    "url": "https://guardaseriex.lol/commedia/",
    "status": 200,
-   "byte": 2267909,
-   "secondi": 3.2,
+   "byte": 2268043,
+   "secondi": 0.9,
    "titolo_pagina": "Commedia streaming | Guardaserie",
    "file": "pagine/15.html"
   },
   {
    "url": "https://guardaseriex.lol/crime/",
    "status": 200,
-   "byte": 1263603,
-   "secondi": 4.6,
+   "byte": 1263506,
+   "secondi": 0.4,
    "titolo_pagina": "Crime streaming | Guardaserie"
   },
   {
    "url": "https://guardaseriex.lol/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 38145,
-   "secondi": 0.5,
+   "byte": 38197,
+   "secondi": 0.2,
    "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS"
   }
  ],
