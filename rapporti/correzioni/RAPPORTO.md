@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 4, CORRETTO IN PARTE 1, ROTTO 5, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 11, NON VERIFICATO 5, OK 21, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 4, CORRETTO IN PARTE 1, ROTTO 5, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 10, NON VERIFICATO 5, OK 22, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (4)
 
@@ -135,7 +135,7 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27520 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27587 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
@@ -146,11 +146,7 @@ Sito: https://cinemalibero.cafe
 - peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
 - peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
-## IRRAGGIUNGIBILE (11)
-
-### accuradio
-Sito: https://www.accuradio.com
-- HTTP 404 (https://www.accuradio.com)
+## IRRAGGIUNGIBILE (10)
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live
@@ -217,7 +213,7 @@ Sito: https://streamingita.homes
 Sito: https://vixsrc.to
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
-## OK (21)
+## OK (22)
 
 ### 1337x
 Sito: https://1337x.to
@@ -225,6 +221,11 @@ Sito: https://1337x.to
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
 - OK: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | 14 risultati
 - OK: peliculas /movie-library/1/ | 25 risultati
+
+### accuradio
+Sito: https://www.accuradio.com
+- indirizzo scritto nel canale: https://www.accuradio.com
+- OK: peliculas / | 48 risultati
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.ws
@@ -250,7 +251,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 79 risultati
+- OK: peliculas /updated | 78 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
