@@ -10,10 +10,25 @@
   {
    "passo": "lista \"Tutti \"",
    "esito": "OK",
-   "voci": 18
+   "voci": 17
   },
   {
-   "passo": "check su \"Sierra Madre - Linea di fuoco\"",
+   "passo": "check su \"Segreti Di Stato (Stagione 1)\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Generi\"",
+   "esito": "OK",
+   "voci": 41
+  },
+  {
+   "passo": "peliculas su \"Prossimamente\"",
+   "esito": "OK",
+   "voci": 21
+  },
+  {
+   "passo": "check su \"La fine di Oak Street \"",
    "esito": "OK",
    "voci": 1
   }
@@ -21,9 +36,9 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/32394984",
+   "url": "https://v.vidxgo.co/27165187",
    "tipo": "film",
-   "finale": "http://127.0.0.1:35187/hls/32394984/master.m3u8",
+   "finale": "http://127.0.0.1:37707/hls/27165187/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -39,15 +54,15 @@
    "voce": "Tutti",
    "azione": "peliculas",
    "problemi": [
-    "tipo undefined, in Kodi appare come cartella: Sierra Madre - Linea di fuoco",
-    "tipo undefined, in Kodi appare come cartella: Flavia de Luce - Una piccola Sherlock Holmes",
-    "tipo undefined, in Kodi appare come cartella: Hokum",
-    "tipo undefined, in Kodi appare come cartella: Melania, la serie",
-    "tipo undefined, in Kodi appare come cartella: Steps",
-    "tipo undefined, in Kodi appare come cartella: The Blue Road"
+    "tipo undefined, in Kodi appare come cartella: Segreti Di Stato (Stagione 1)",
+    "tipo undefined, in Kodi appare come cartella: Primetime Preacher$: Storia di un telepredicatore",
+    "tipo undefined, in Kodi appare come cartella: Profumo di bergamotto",
+    "tipo undefined, in Kodi appare come cartella: Adventure Time: Missioni Leggendarie",
+    "tipo undefined, in Kodi appare come cartella: La famiglia Panini - L’avventura delle figurine",
+    "tipo undefined, in Kodi appare come cartella: Flavia de Luce - Una piccola Sherlock Holmes"
    ],
    "esito": "OK",
-   "titoli": 17
+   "titoli": 16
   },
   {
    "voce": "•• Generi",
@@ -59,12 +74,12 @@
      "voce": "Serie TV",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Segreti Di Stato (Stagione 1)",
+      "tipo undefined, in Kodi appare come cartella: Adventure Time: Missioni Leggendarie",
+      "tipo undefined, in Kodi appare come cartella: La famiglia Panini - L’avventura delle figurine",
       "tipo undefined, in Kodi appare come cartella: Melania, la serie",
       "tipo undefined, in Kodi appare come cartella: The Blue Road",
-      "tipo undefined, in Kodi appare come cartella: Yellowjackets",
-      "tipo undefined, in Kodi appare come cartella: The Chosen: Stagione 6",
-      "tipo undefined, in Kodi appare come cartella: The Altruists",
-      "tipo undefined, in Kodi appare come cartella: Alessandro Barbero: 1848 L'Europa in rivolta"
+      "tipo undefined, in Kodi appare come cartella: The Chosen: Stagione 6"
      ],
      "esito": "OK",
      "titoli": 20
@@ -73,12 +88,12 @@
      "voce": "Animazione",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Adventure Time: Missioni Leggendarie",
       "tipo undefined, in Kodi appare come cartella: Steps",
       "tipo undefined, in Kodi appare come cartella: Snoopy presenta: Natale con Snoopy",
       "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi",
       "tipo undefined, in Kodi appare come cartella: Bass X Machina",
-      "tipo undefined, in Kodi appare come cartella: Helluva Boss",
-      "tipo undefined, in Kodi appare come cartella: Thomas & Friends: Really Helpful Engines"
+      "tipo undefined, in Kodi appare come cartella: Helluva Boss"
      ],
      "esito": "OK",
      "titoli": 20
@@ -87,12 +102,12 @@
      "voce": "Avventura",
      "azione": "peliculas",
      "problemi": [
+      "tipo undefined, in Kodi appare come cartella: Adventure Time: Missioni Leggendarie",
       "tipo undefined, in Kodi appare come cartella: Flavia de Luce - Una piccola Sherlock Holmes",
+      "tipo undefined, in Kodi appare come cartella: Steps",
       "tipo undefined, in Kodi appare come cartella: Bagarre",
       "tipo undefined, in Kodi appare come cartella: 12 12 12",
-      "tipo undefined, in Kodi appare come cartella: Allen",
-      "tipo undefined, in Kodi appare come cartella: Azzurrina - Oltre il tempo",
-      "tipo undefined, in Kodi appare come cartella: L'isola dei ricordi"
+      "tipo undefined, in Kodi appare come cartella: Allen"
      ],
      "esito": "OK",
      "titoli": 19
@@ -109,12 +124,12 @@
      "voce": "0-9",
      "azione": "peliculas",
      "problemi": [
-      "tipo undefined, in Kodi appare come cartella: Flavia de Luce - Una piccola Sherlock Holmes",
-      "tipo undefined, in Kodi appare come cartella: Hokum",
-      "tipo undefined, in Kodi appare come cartella: Melania, la serie",
-      "tipo undefined, in Kodi appare come cartella: Steps",
-      "tipo undefined, in Kodi appare come cartella: The Blue Road",
-      "tipo undefined, in Kodi appare come cartella: The Hotline"
+      "tipo undefined, in Kodi appare come cartella: Good Luck, Have Fun, Don't Die",
+      "tipo undefined, in Kodi appare come cartella: Primetime Preacher$: Storia di un telepredicatore",
+      "tipo undefined, in Kodi appare come cartella: Profumo di bergamotto",
+      "tipo undefined, in Kodi appare come cartella: Adventure Time: Missioni Leggendarie",
+      "tipo undefined, in Kodi appare come cartella: La famiglia Panini - L’avventura delle figurine",
+      "tipo undefined, in Kodi appare come cartella: Flavia de Luce - Una piccola Sherlock Holmes"
      ],
      "esito": "OK",
      "titoli": 17
@@ -123,12 +138,12 @@
      "voce": "A",
      "azione": "peliculas",
      "problemi": [
-      "tipo undefined, in Kodi appare come cartella: Flavia de Luce - Una piccola Sherlock Holmes",
-      "tipo undefined, in Kodi appare come cartella: Hokum",
-      "tipo undefined, in Kodi appare come cartella: Melania, la serie",
-      "tipo undefined, in Kodi appare come cartella: Steps",
-      "tipo undefined, in Kodi appare come cartella: The Blue Road",
-      "tipo undefined, in Kodi appare come cartella: The Hotline"
+      "tipo undefined, in Kodi appare come cartella: Good Luck, Have Fun, Don't Die",
+      "tipo undefined, in Kodi appare come cartella: Primetime Preacher$: Storia di un telepredicatore",
+      "tipo undefined, in Kodi appare come cartella: Profumo di bergamotto",
+      "tipo undefined, in Kodi appare come cartella: Adventure Time: Missioni Leggendarie",
+      "tipo undefined, in Kodi appare come cartella: La famiglia Panini - L’avventura delle figurine",
+      "tipo undefined, in Kodi appare come cartella: Flavia de Luce - Una piccola Sherlock Holmes"
      ],
      "esito": "OK",
      "titoli": 17
@@ -137,15 +152,15 @@
      "voce": "B",
      "azione": "peliculas",
      "problemi": [
-      "tipo undefined, in Kodi appare come cartella: Sierra Madre - Linea di fuoco",
-      "tipo undefined, in Kodi appare come cartella: Flavia de Luce - Una piccola Sherlock Holmes",
-      "tipo undefined, in Kodi appare come cartella: Hokum",
-      "tipo undefined, in Kodi appare come cartella: Melania, la serie",
-      "tipo undefined, in Kodi appare come cartella: Steps",
-      "tipo undefined, in Kodi appare come cartella: The Blue Road"
+      "tipo undefined, in Kodi appare come cartella: Segreti Di Stato (Stagione 1)",
+      "tipo undefined, in Kodi appare come cartella: Primetime Preacher$: Storia di un telepredicatore",
+      "tipo undefined, in Kodi appare come cartella: Profumo di bergamotto",
+      "tipo undefined, in Kodi appare come cartella: Adventure Time: Missioni Leggendarie",
+      "tipo undefined, in Kodi appare come cartella: La famiglia Panini - L’avventura delle figurine",
+      "tipo undefined, in Kodi appare come cartella: Flavia de Luce - Una piccola Sherlock Holmes"
      ],
      "esito": "OK",
-     "titoli": 17
+     "titoli": 16
     }
    ]
   },
@@ -174,114 +189,143 @@
   {
    "url": "https://il-geniodellostreaming.website/catalog/all",
    "status": 200,
-   "byte": 38344,
-   "secondi": 0.4,
+   "byte": 38618,
+   "secondi": 0.3,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://il-geniodellostreaming.website/film/35800-sierra-madre-linea-di-fuoco-streaming.html",
+   "url": "https://il-geniodellostreaming.website/film/35810-segreti-di-stato-stagione-1-streaming.html",
    "status": 200,
-   "byte": 31227,
-   "secondi": 0.2,
-   "titolo_pagina": "Sierra Madre - Linea di fuoco Streaming HD Gratis - ilGenioDelloStreaming",
+   "byte": 30158,
+   "secondi": 0.1,
+   "titolo_pagina": "Segreti Di Stato (Stagione 1) Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://il-geniodellostreaming.website/film/35800-sierra-madre-linea-di-fuoco-streaming.html",
+   "url": "https://il-geniodellostreaming.website/film/35810-segreti-di-stato-stagione-1-streaming.html",
    "status": 200,
-   "byte": 31227,
-   "secondi": 0.2,
-   "titolo_pagina": "Sierra Madre - Linea di fuoco Streaming HD Gratis - ilGenioDelloStreaming",
+   "byte": 30158,
+   "secondi": 0.3,
+   "titolo_pagina": "Segreti Di Stato (Stagione 1) Streaming - Serie TV - ilGenioDelloStreaming",
    "file": "pagine/03.html"
-  },
-  {
-   "url": "https://il-geniodellostreaming.website/catalog/all",
-   "status": 200,
-   "byte": 38344,
-   "secondi": 0.4,
-   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
-   "file": "pagine/04.html"
   },
   {
    "url": "https://il-geniodellostreaming.website",
    "status": 200,
-   "byte": 88927,
-   "secondi": 0.2,
+   "byte": 93754,
+   "secondi": 0.1,
    "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.website/prossimamente/",
+   "status": 200,
+   "byte": 85942,
+   "secondi": 0.1,
+   "titolo_pagina": "Prossimamente al Cinema",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://il-geniodellostreaming.website/serie-tv/",
+   "url": "https://il-geniodellostreaming.website/film/34552-la-fine-di-oak-street-streaming.html",
    "status": 200,
-   "byte": 86765,
+   "byte": 31251,
    "secondi": 0.2,
-   "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
+   "titolo_pagina": "La fine di Oak Street Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://il-geniodellostreaming.website/animazione/",
+   "url": "https://il-geniodellostreaming.website/film/34552-la-fine-di-oak-street-streaming.html",
    "status": 200,
-   "byte": 86093,
-   "secondi": 0.2,
-   "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
+   "byte": 31251,
+   "secondi": 0.1,
+   "titolo_pagina": "La fine di Oak Street Streaming HD Gratis - ilGenioDelloStreaming",
    "file": "pagine/07.html"
-  },
-  {
-   "url": "https://il-geniodellostreaming.website/avventura/",
-   "status": 200,
-   "byte": 85799,
-   "secondi": 0.2,
-   "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
-   "file": "pagine/08.html"
   },
   {
    "url": "https://il-geniodellostreaming.website/catalog/all",
    "status": 200,
-   "byte": 38344,
+   "byte": 38618,
    "secondi": 0.4,
    "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/08.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.website",
+   "status": 200,
+   "byte": 93754,
+   "secondi": 0.1,
+   "titolo_pagina": "IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
    "file": "pagine/09.html"
-  },
-  {
-   "url": "https://il-geniodellostreaming.website/catalog/0",
-   "status": 200,
-   "byte": 38632,
-   "secondi": 0.4,
-   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
-   "file": "pagine/10.html"
-  },
-  {
-   "url": "https://il-geniodellostreaming.website/catalog/a",
-   "status": 200,
-   "byte": 38670,
-   "secondi": 0.4,
-   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
-   "file": "pagine/11.html"
-  },
-  {
-   "url": "https://il-geniodellostreaming.website/catalog/b",
-   "status": 200,
-   "byte": 38727,
-   "secondi": 0.4,
-   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
-   "file": "pagine/12.html"
   },
   {
    "url": "https://il-geniodellostreaming.website/serie-tv/",
    "status": 200,
-   "byte": 86765,
-   "secondi": 0.2,
+   "byte": 86692,
+   "secondi": 0.1,
    "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.website/animazione/",
+   "status": 200,
+   "byte": 85549,
+   "secondi": 0.1,
+   "titolo_pagina": "Animazione Archivi - ilGenioDelloStreaming",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.website/avventura/",
+   "status": 200,
+   "byte": 85674,
+   "secondi": 0.2,
+   "titolo_pagina": "Avventura Archivi - ilGenioDelloStreaming",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.website/catalog/all",
+   "status": 200,
+   "byte": 38618,
+   "secondi": 0.3,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
    "file": "pagine/13.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.website/catalog/0",
+   "status": 200,
+   "byte": 39133,
+   "secondi": 0.2,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.website/catalog/a",
+   "status": 200,
+   "byte": 39171,
+   "secondi": 0.4,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://il-geniodellostreaming.website/catalog/b",
+   "status": 200,
+   "byte": 39119,
+   "secondi": 0.3,
+   "titolo_pagina": "Film A-Z - ilGenioDelloStreaming"
+  },
+  {
+   "url": "https://il-geniodellostreaming.website/serie-tv/",
+   "status": 200,
+   "byte": 86692,
+   "secondi": 0.2,
+   "titolo_pagina": "Serie TV in Streaming Gratis - ilGenioDelloStreaming"
   },
   {
    "url": "https://il-geniodellostreaming.website/?s=avatar",
    "status": 200,
    "byte": 35085,
-   "secondi": 2.2,
-   "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis",
-   "file": "pagine/14.html"
+   "secondi": 1.9,
+   "titolo_pagina": "Site search &raquo; IlGenioDelloStreaming - Esprimi un Film Streaming Gratis"
   }
  ],
  "verdetto": "ARRIVA AL VIDEO"

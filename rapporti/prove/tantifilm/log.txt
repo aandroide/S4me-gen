@@ -13,27 +13,27 @@ Canale tantifilm | indirizzo https://tanti-film.tattoo
       peliculas | Commedia | https://tanti-film.tattoo/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
-      check | Flavia de Luce - Una piccola Sherlock Holmes  | https://tanti-film.tattoo/guarda/35797-flavia-de-luce-una-detective-geniale-streaming-streaming-hd.h
-      check | Hokum  | https://tanti-film.tattoo/guarda/35794-hokum-streaming-streaming-hd.html
-      check | A nome di mio figlio  | https://tanti-film.tattoo/guarda/35790-a-nome-di-mio-figlio-streaming-streaming-hd.html
-      check | Steps  | https://tanti-film.tattoo/guarda/35789-steps-streaming-streaming-hd.html
-== check su "Flavia de Luce - Una piccola Sherlock Ho"
+      check | Good Luck, Have Fun, Don't Die  | https://tanti-film.tattoo/guarda/35808-good-luck-have-fun-don-t-die-streaming-streaming-hd.html
+      check | Primetime Preacher$: Storia di un telepredicatore  | https://tanti-film.tattoo/guarda/35807-primetime-preacher-storia-di-un-telepredicatore-streaming-str
+      check | Profumo di bergamotto  | https://tanti-film.tattoo/guarda/35803-profumo-di-bergamotto-streaming-streaming-hd.html
+      check | Sierra Madre - Linea di fuoco  | https://tanti-film.tattoo/guarda/35800-sierra-madre-linea-di-fuoco-streaming-streaming-hd.html
+== check su "Good Luck, Have Fun, Don't Die "
    -> 2 voci
-      play | Flavia de Luce - Una piccola Sherlock Holmes  | https://v.vidxgo.co/11662534
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.tattoo/guarda/35797-flavia-de-luce-una-detective-geniale-streaming-streaming-hd.h
-== risoluzione vidxgo https://v.vidxgo.co/11662534
+      play | Good Luck, Have Fun, Don't Die  | https://v.vidxgo.co/1341338
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.tattoo/guarda/35808-good-luck-have-fun-don-t-die-streaming-streaming-hd.html
+== risoluzione vidxgo https://v.vidxgo.co/1341338
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
     film | '/film'
     tvshow | '/serie-tv/'
 == controllo di tutte le sezioni
-   SEZIONE Animazione -> OK 24 
+   SEZIONE Animazione -> OK 25 
    SEZIONE Avventura -> OK 23 
    SEZIONE Biografico -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE • Film -> OK 20 
-   SEZIONE • Serie TV -> OK 18 
+   SEZIONE • Serie TV -> OK 4 
    SEZIONE txt70741 … -> OK 11 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Wizards

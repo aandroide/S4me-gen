@@ -7,17 +7,16 @@ Canale eurostreaming | indirizzo https://eurostream.skin
       peliculas | • Archivio | https://eurostream.skin/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | The Altruists | https://eurostream.skin/the-altruists/
-      episodios | The Blue Road | https://eurostream.skin/the-blue-road/
-      episodios | La famiglia Panini - L’avventura delle figurine | https://eurostream.skin/la-famiglia-panini-lavventura-delle-figurine/
-      episodios | Forbidden Fruit | https://eurostream.skin/forbidden-fruit/
-== episodios su "The Altruists"
-   -> 9 voci
-      findvideos | 1x01 - Relazioni inappropriate  | https://eurostream.skin/the-altruists/
-      findvideos | 1x02 - Sette versioni della verità  | https://eurostream.skin/the-altruists/
-      findvideos | 1x03 - Parole tra amici  | https://eurostream.skin/the-altruists/
-      findvideos | 1x04 - I buoni  | https://eurostream.skin/the-altruists/
-== findvideos su "1x01 - Relazioni inappropriate "
+      episodios | Segreti di Stato - Secret Service | https://eurostream.skin/segreti-di-stato-secret-service/
+      episodios | Scrubs | https://eurostream.skin/scrubs-2026/
+      episodios | S.W.A.T. Exiles | https://eurostream.skin/s-w-t-exiles/
+      episodios | R.J. Decker | https://eurostream.skin/r-j-decker/
+== episodios su "Segreti di Stato - Secret Service"
+   -> 3 voci
+      findvideos | 1x01 - Episodio 01  | https://eurostream.skin/segreti-di-stato-secret-service/
+      findvideos | 1x01 - Episode 01  | https://eurostream.skin/segreti-di-stato-secret-service/
+      add_serie_to_library | txt30161 %s | https://eurostream.skin/segreti-di-stato-secret-service/
+== findvideos su "1x01 - Episodio 01 "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +33,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/wrmx24q1
+Exception: Not un-shortened link: https://clicka.cc/mix/0szql94i
 
 == lista "• Anime"
    -> 19 voci
@@ -65,21 +64,20 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk
+Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 1x01 - The Altruists - Relazioni inappropriate , 1x08 God Mo | https://eurostream.skin/the-altruists/
-      episodios | 1x08 - The Blue Road - Episodio 08 | https://eurostream.skin/the-blue-road/
-      episodios | 1x01 - La famiglia Panini - L'avventura delle figurine - Epi | https://eurostream.skin/la-famiglia-panini-lavventura-delle-figurine/
-      episodios | 4x164 - Forbidden Fruit - Episodio 164 | https://eurostream.skin/forbidden-fruit/
-== episodios su "1x01 - The Altruists - Relazioni inappro"
-   -> 9 voci
-      findvideos | 1x01 - Relazioni inappropriate  | https://eurostream.skin/the-altruists/
-      findvideos | 1x02 - Sette versioni della verità  | https://eurostream.skin/the-altruists/
-      findvideos | 1x03 - Parole tra amici  | https://eurostream.skin/the-altruists/
-      findvideos | 1x04 - I buoni  | https://eurostream.skin/the-altruists/
-== findvideos su "1x01 - Relazioni inappropriate "
+      episodios | 1x01 - Segreti di Stato - Secret Service - Episodio 01 | https://eurostream.skin/segreti-di-stato-secret-service/
+      episodios | 2x03 - Scrubs (2026) - L'ex del mio ex | https://eurostream.skin/scrubs-2026/
+      episodios | 1x07 - S.W.A.T. Exiles - Trappola a domicilio , 1x08 Ultimo  | https://eurostream.skin/s-w-t-exiles/
+      episodios | 2x04 - R.J. Decker - Il pescatore , 2x05 Buona fortuna doman | https://eurostream.skin/r-j-decker/
+== episodios su "1x01 - Segreti di Stato - Secret Service"
+   -> 3 voci
+      findvideos | 1x01 - Episodio 01  | https://eurostream.skin/segreti-di-stato-secret-service/
+      findvideos | 1x01 - Episode 01  | https://eurostream.skin/segreti-di-stato-secret-service/
+      add_serie_to_library | txt30161 %s | https://eurostream.skin/segreti-di-stato-secret-service/
+== findvideos su "1x01 - Episodio 01 "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +94,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/wrmx24q1
+Exception: Not un-shortened link: https://clicka.cc/mix/0szql94i
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -111,4 +109,4 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - Relazioni inappropriate "
+VERDETTO: SI FERMA A: findvideos su "1x01 - Episodio 01 "

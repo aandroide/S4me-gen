@@ -23,9 +23,9 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"Bumblebee\"",
+   "passo": "findvideos su \"Alex l'ariete\"",
    "esito": "ERRORE",
-   "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
+   "errore": "enti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'mediaSelector'\n"
   },
   {
    "passo": "lista \"•• Film più visti del giorno\"",
@@ -69,19 +69,19 @@
    "voce": "Dirette",
    "azione": "live",
    "esito": "OK",
-   "titoli": 50
+   "titoli": 46
   },
   {
    "voce": "Replay",
    "azione": "restart",
    "esito": "OK",
-   "titoli": 25
+   "titoli": 23
   },
   {
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 67
+   "titoli": 63
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -129,7 +129,7 @@
      "voce": "Will & Grace 5",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 6
     }
    ]
   },
@@ -166,16 +166,16 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Racconto di una notte",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
-    },
-    {
      "voce": "La promessa",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 7
+    },
+    {
+     "voce": "Forbidden Fruit 4",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
     },
     {
      "voce": "Tutto per la mia famiglia 2",
@@ -216,7 +216,7 @@
      "titoli": 2
     },
     {
-     "voce": "NCIS - Unità anticrimine 14",
+     "voce": "NCIS: Los Angeles 7",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 2
@@ -256,6 +256,12 @@
    "sottovoci": 12,
    "figli": [
     {
+     "voce": "Tu Si Que Vales 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
      "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
@@ -266,12 +272,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 2
-    },
-    {
-     "voce": "Tu Si Que Vales 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 6
     }
    ]
   },
@@ -308,6 +308,12 @@
    "sottovoci": 100,
    "figli": [
     {
+     "voce": "Tu Si Que Vales 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
      "voce": "Amici 26",
      "azione": "epmenu",
      "esito": "OK",
@@ -318,12 +324,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
-    },
-    {
-     "voce": "Grande Fratello VIP - Autunno 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 6
     }
    ]
   },
@@ -340,7 +340,7 @@
      "voce": "Lo straordinario mondo di Gumball",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 7
     },
     {
      "voce": "Teen Titans Go!",
@@ -366,7 +366,7 @@
      "voce": "Paw Patrol",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 5
     },
     {
      "voce": "La casa delle bambole di Gabby",
@@ -415,7 +415,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 15
+   "titoli": 14
   },
   {
    "voce": "•• Documentari più visti",

@@ -47,6 +47,7 @@ Sito:  | verdetto: ARRIVA AL VIDEO
 
 ### ilgeniodellostreaming_cam
 Sito: https://il-geniodellostreaming.website | verdetto: ARRIVA AL VIDEO
+- passo "check su "Segreti Di Stato (Stagione 1)"": VUOTO 
 - server vidxgo: VIDEO OK m3u8 200
 
 ### la7
@@ -55,7 +56,7 @@ Sito:  | verdetto: ARRIVA AL VIDEO
 
 ### raiplay
 Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
-- server directo: VIDEO OK 206 video/mp4
+- server directo: VIDEO OK m3u8 206
 
 ### streamingcommunity
 Sito: https://streamingcommunityz.dad | verdetto: ARRIVA AL VIDEO
@@ -67,7 +68,7 @@ Sito: https://tanti-film.tattoo | verdetto: ARRIVA AL VIDEO
 
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
-- server voe: VIDEO OK m3u8 200
+- server voe: VIDEO OK m3u8 206
 
 ## SI FERMA AL SERVER O AL VIDEO (2)
 
@@ -89,9 +90,7 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 
 ### accuradio
 Sito:  | verdetto: SI FERMA A: lista "Most Popular "
-- passo "lista "Most Popular "": VUOTO 
-- passo "lista ""#1s: The '70s" — Every chart-topper fro"": VUOTO 
-- passo "lista "Weekend vibes! "": VUOTO 
+- passo "lista "Most Popular "": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -155,10 +154,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.skin | verdetto: SI FERMA A: findvideos su "1x01 - Relazioni inappropriate "
-- passo "findvideos su "1x01 - Relazioni inappropriate "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/wrmx24q1 
-- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk 
-- passo "findvideos su "1x01 - Relazioni inappropriate "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/wrmx24q1 
+Sito: https://eurostream.skin | verdetto: SI FERMA A: findvideos su "1x01 - Episodio 01 "
+- passo "findvideos su "1x01 - Episodio 01 "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/0szql94i 
+- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty 
+- passo "findvideos su "1x01 - Episodio 01 "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/0szql94i 
 
 ### eurostreaming_actor
 Sito: https://guardaseriex.lol | verdetto: SI FERMA A: lista "• Aggiornamenti"
@@ -218,7 +217,7 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Transformers - L'ultimo cavaliere"
 - passo "findvideos su "Transformers - L'ultimo cavaliere"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Bumblebee"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Alex l'ariete"": ERRORE        ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'mediaSelector' 
 - passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
