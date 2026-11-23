@@ -5,7 +5,7 @@
 "tipo": "html"
 },
 "https://www.raiplay.it/dirette": {
-"dimensione": 165237,
+"dimensione": 165862,
 "stato": "ok",
 "tipo": "html"
 },
@@ -20,7 +20,7 @@
 "tipo": "html"
 },
 "https://www.raiplay.it/guidatv": {
-"dimensione": 76985,
+"dimensione": 77610,
 "stato": "ok",
 "tipo": "html"
 },
@@ -357,6 +357,7 @@
 "adv",
 "categoryPath",
 "contents",
+"contents[].content_item_id",
 "contents[].contents",
 "contents[].contents[].actions",
 "contents[].contents[].actions[].action",
@@ -415,11 +416,20 @@
 "contents[].contents[].type",
 "contents[].contents[].vanity",
 "contents[].contents[].weblink",
+"contents[].fallback_list",
 "contents[].header",
 "contents[].header.label",
 "contents[].id",
+"contents[].info",
+"contents[].info.description",
+"contents[].info.img",
+"contents[].info.title",
+"contents[].layout",
+"contents[].mode",
 "contents[].name",
+"contents[].section",
 "contents[].type",
+"contents[].use_case",
 "name",
 "nofloorad",
 "noroll",
