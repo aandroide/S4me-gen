@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"Flavia de Luce: Una detective geniale \"",
+   "passo": "findvideos su \"Scontrarsi a Natale \"",
    "esito": "OK",
    "voci": 3
   }
@@ -21,17 +21,17 @@
  "video": [
   {
    "server": "mixdrop",
-   "url": "https://m1xdrop.net/e/9ww6meq0hxmze",
+   "url": "https://m1xdrop.net/e/q11ez91ku1v04k",
    "tipo": "film",
-   "finale": "http://ebij8ni1d.mxcontent.net/v2/9ww6meq0hxmze.mp4?s=kOObU2KhVNoATLXjAN8nfw&e=1795376234&_t=1795357005",
+   "finale": "http://ebij8ni1d.mxcontent.net/v2/q11ez91ku1v04k.mp4?s=zob7kmVxJWebAfuu7EWX9A&e=1795472261&_t=1795452297",
    "esito": "VIDEO NON RAGGIUNGIBILE",
    "dettaglio": "HTTP 403"
   },
   {
    "server": "mixdrop",
-   "url": "https://m1xdrop.net/e/pjjn7wm4czd6ed",
+   "url": "https://m1xdrop.net/e/z11elzmqto6npv",
    "tipo": "film",
-   "finale": "http://o230m5y6z.mxcontent.net/v2/pjjn7wm4czd6ed.mp4?s=GKOosChVCsp9mrcPz5qFdQ&e=1795376237&_t=1795363551",
+   "finale": "http://592lvpizh.mxcontent.net/v2/z11elzmqto6npv.mp4?s=4hjkdzrs176r4b4glvVYHA&e=1795472264&_t=1795455015",
    "esito": "VIDEO NON RAGGIUNGIBILE",
    "dettaglio": "HTTP 403"
   }
@@ -248,25 +248,26 @@
   {
    "voce": "•• Per anno",
    "azione": "menu",
-   "esito": "VUOTA",
-   "pagine": [
+   "esito": "SOTTOMENU",
+   "sottovoci": 25,
+   "figli": [
     {
-     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
-     "status": 429,
-     "byte": 7396,
-     "titolo_pagina": "Access denied | cb01one.live used Cloudflare to restrict access | cb01one.live |"
+     "voce": "2026",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
     },
     {
-     "url": "https://cb01official.uno/serietv/",
-     "status": 429,
-     "byte": 7396,
-     "titolo_pagina": "Access denied | cb01one.live used Cloudflare to restrict access | cb01one.live |"
+     "voce": "2025",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
     },
     {
-     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/",
-     "status": 429,
-     "byte": 7396,
-     "titolo_pagina": "Access denied | cb01one.live used Cloudflare to restrict access | cb01one.live |"
+     "voce": "2024",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 12
     }
    ]
   },
@@ -295,50 +296,50 @@
    "titoli": 12
   }
  ],
- "sezioni_riepilogo": "16 ok su 17",
+ "sezioni_riepilogo": "17 ok su 17",
  "rete": [
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.8,
+   "byte": 549273,
+   "secondi": 1.3,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/01.html"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.9,
+   "byte": 549273,
+   "secondi": 1.4,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/flavia-de-luce-una-detective-geniale-hd-2026/",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/scontrarsi-a-natale-hd-2026/",
    "status": 200,
-   "byte": 310728,
-   "secondi": 0.4,
-   "titolo_pagina": "Flavia de Luce: Una detective geniale [HD] (2026) Streaming - FILM GRATIS by CB0",
+   "byte": 310253,
+   "secondi": 0.3,
+   "titolo_pagina": "Scontrarsi a Natale [HD] (2026) Streaming - FILM GRATIS by CB01 OFFICIAL",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://cb01one.live/flavia-de-luce-una-detective-geniale-hd-2026/",
+   "url": "https://cb01one.live/scontrarsi-a-natale-hd-2026/",
    "status": 200,
-   "byte": 310728,
-   "secondi": 0.6,
-   "titolo_pagina": "Flavia de Luce: Una detective geniale [HD] (2026) Streaming - FILM GRATIS by CB0",
+   "byte": 310253,
+   "secondi": 0.4,
+   "titolo_pagina": "Scontrarsi a Natale [HD] (2026) Streaming - FILM GRATIS by CB01 OFFICIAL",
    "file": "pagine/04.html"
   },
   {
    "url": "https://stayonline.pro/ajax/linkView.php",
    "status": 200,
-   "byte": 107,
-   "secondi": 1.5,
+   "byte": 108,
+   "secondi": 0.9,
    "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://m1xdrop.net/f/9ww6meq0hxmze",
+   "url": "https://m1xdrop.net/f/q11ez91ku1v04k",
    "status": 302,
    "byte": 510,
    "secondi": 0.1,
@@ -346,10 +347,10 @@
    "file": "pagine/06.html"
   },
   {
-   "url": "https://m1xdrop.net/e/9ww6meq0hxmze",
+   "url": "https://m1xdrop.net/e/q11ez91ku1v04k",
    "status": 200,
-   "byte": 78465,
-   "secondi": 0.3,
+   "byte": 78721,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
@@ -357,12 +358,12 @@
    "url": "https://stayonline.pro/ajax/linkView.php",
    "status": 200,
    "byte": 108,
-   "secondi": 1.2,
+   "secondi": 0.9,
    "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://m1xdrop.net/f/pjjn7wm4czd6ed",
+   "url": "https://m1xdrop.net/f/z11elzmqto6npv",
    "status": 302,
    "byte": 510,
    "secondi": 0.1,
@@ -370,42 +371,42 @@
    "file": "pagine/09.html"
   },
   {
-   "url": "https://m1xdrop.net/e/pjjn7wm4czd6ed",
+   "url": "https://m1xdrop.net/e/z11elzmqto6npv",
    "status": 200,
-   "byte": 78469,
-   "secondi": 0.3,
+   "byte": 78720,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.9,
+   "byte": 549273,
+   "secondi": 1.3,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/11.html"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.9,
+   "byte": 549273,
+   "secondi": 1.3,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.8,
+   "byte": 549273,
+   "secondi": 1.3,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/13.html"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.9,
+   "byte": 549273,
+   "secondi": 1.3,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD",
    "file": "pagine/14.html"
   },
@@ -413,7 +414,7 @@
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/film-hd-streaming/animazione-hd/",
    "status": 200,
    "byte": 306799,
-   "secondi": 0.7,
+   "secondi": 0.5,
    "titolo_pagina": "Animazione HD - CB01 OFFICIAL - FILM GRATIS by cb01",
    "file": "pagine/15.html"
   },
@@ -421,179 +422,179 @@
    "url": "https://cb01official.uno/category/film-hd-streaming/animazione-hd/",
    "status": 200,
    "byte": 306799,
-   "secondi": 0.8,
+   "secondi": 0.5,
    "titolo_pagina": "Animazione HD - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/film-hd-streaming/avventura-hd/",
    "status": 200,
    "byte": 299446,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "Avventura HD - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/film-hd-streaming/avventura-hd/",
    "status": 200,
    "byte": 299446,
-   "secondi": 0.4,
+   "secondi": 0.6,
    "titolo_pagina": "Avventura HD - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/film-hd-streaming/azione-hd/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/film-hd-streaming/azione-hd/",
    "status": 200,
    "byte": 306522,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "Azione HD - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/film-hd-streaming/azione-hd/",
    "status": 200,
    "byte": 306522,
-   "secondi": 0.3,
+   "secondi": 0.6,
    "titolo_pagina": "Azione HD - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.5,
+   "byte": 549273,
+   "secondi": 0.7,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.5,
+   "byte": 549273,
+   "secondi": 0.7,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
   },
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/animazione/",
    "status": 200,
    "byte": 307976,
-   "secondi": 0.9,
+   "secondi": 0.3,
    "titolo_pagina": "Animazione - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/animazione/",
    "status": 200,
    "byte": 307976,
-   "secondi": 1.0,
+   "secondi": 0.3,
    "titolo_pagina": "Animazione - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/avventura/",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/avventura/",
    "status": 200,
    "byte": 302130,
-   "secondi": 0.8,
+   "secondi": 0.3,
    "titolo_pagina": "Avventura - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/avventura/",
    "status": 200,
    "byte": 302130,
-   "secondi": 0.8,
+   "secondi": 0.3,
    "titolo_pagina": "Avventura - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/azione/",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/azione/",
    "status": 200,
    "byte": 307332,
-   "secondi": 0.3,
+   "secondi": 1.1,
    "titolo_pagina": "Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/azione/",
    "status": 200,
    "byte": 307332,
-   "secondi": 0.4,
+   "secondi": 1.1,
    "titolo_pagina": "Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.3,
+   "byte": 549273,
+   "secondi": 0.6,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.4,
+   "byte": 549273,
+   "secondi": 0.7,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/anno-2026/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anno-2026/",
    "status": 200,
    "byte": 295388,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "2026 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/anno-2026/",
    "status": 200,
    "byte": 295388,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "2026 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/anno-2025/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anno-2025/",
    "status": 200,
    "byte": 297027,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "2025 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/anno-2025/",
    "status": 200,
    "byte": 297027,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "2025 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anno-2024/",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/anno-2024/",
    "status": 200,
    "byte": 297761,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "2024 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/anno-2024/",
    "status": 200,
    "byte": 297761,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "2024 - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.4,
+   "byte": 549273,
+   "secondi": 0.6,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
   },
   {
    "url": "https://cb01official.uno",
    "status": 200,
-   "byte": 548340,
-   "secondi": 0.5,
+   "byte": 549273,
+   "secondi": 0.7,
    "titolo_pagina": "CB01 OFFICIAL - FILM GRATIS HD STREAMING e DOWNLOAD"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/film-popolari/fp-animazione/",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/film-popolari/fp-animazione/",
    "status": 200,
    "byte": 297502,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "FP-Animazione - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/film-popolari/fp-animazione/",
    "status": 200,
    "byte": 297502,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "FP-Animazione - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/film-popolari/fp-avventura/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/film-popolari/fp-avventura/",
    "status": 200,
    "byte": 294392,
    "secondi": 0.3,
@@ -610,27 +611,27 @@
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/film-popolari/fp-azione/",
    "status": 200,
    "byte": 295845,
-   "secondi": 0.3,
+   "secondi": 0.5,
    "titolo_pagina": "FP-Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/film-popolari/fp-azione/",
    "status": 200,
    "byte": 295845,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "FP-Azione - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/ultimi-100-film-aggiunti/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/ultimi-100-film-aggiunti/",
    "status": 200,
-   "byte": 330152,
-   "secondi": 0.3,
+   "byte": 330216,
+   "secondi": 0.2,
    "titolo_pagina": "Ultimi 100 film aggiunti - FILM GRATIS by CB01 OFFICIAL"
   },
   {
    "url": "https://cb01official.uno/ultimi-100-film-aggiunti/",
    "status": 200,
-   "byte": 330152,
+   "byte": 330216,
    "secondi": 0.3,
    "titolo_pagina": "Ultimi 100 film aggiunti - FILM GRATIS by CB01 OFFICIAL"
   },
@@ -638,98 +639,98 @@
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/film-popolari/",
    "status": 200,
    "byte": 320095,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "Film Popolari - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/film-popolari/",
    "status": 200,
    "byte": 320095,
-   "secondi": 0.5,
+   "secondi": 0.3,
    "titolo_pagina": "Film Popolari - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/category/nazione/italia/",
    "status": 200,
    "byte": 346641,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "Italia - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://cb01official.uno/category/nazione/italia/",
    "status": 200,
    "byte": 346641,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "Italia - CB01 OFFICIAL - FILM GRATIS by cb01"
   },
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/search/avatar",
    "status": 200,
-   "byte": 270777,
-   "secondi": 0.3,
+   "byte": 270676,
+   "secondi": 1.2,
    "titolo_pagina": "Hai cercato avatar - CB01 OFFICIAL - FILM"
   },
   {
    "url": "https://cb01official.uno/search/avatar",
    "status": 200,
-   "byte": 270777,
-   "secondi": 0.3,
+   "byte": 270676,
+   "secondi": 1.2,
    "titolo_pagina": "Hai cercato avatar - CB01 OFFICIAL - FILM"
   },
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/",
    "status": 200,
-   "byte": 349181,
-   "secondi": 0.4,
-   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
-  },
-  {
-   "url": "https://cb01official.uno/serietv/",
-   "status": 200,
-   "byte": 349181,
-   "secondi": 0.5,
-   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/",
-   "status": 200,
-   "byte": 349181,
+   "byte": 345623,
    "secondi": 0.6,
    "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
   },
   {
    "url": "https://cb01official.uno/serietv/",
    "status": 200,
-   "byte": 349181,
+   "byte": 345623,
    "secondi": 0.7,
    "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serietv/category/numero/",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/",
    "status": 200,
-   "byte": 258390,
-   "secondi": 0.9,
+   "byte": 345623,
+   "secondi": 0.6,
+   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
+  },
+  {
+   "url": "https://cb01official.uno/serietv/",
+   "status": 200,
+   "byte": 345623,
+   "secondi": 0.7,
+   "titolo_pagina": "CB01 OFFICIAL - SERIE TV GRATIS HD STREAMING e DOWNLOAD"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/category/numero/",
+   "status": 200,
+   "byte": 248270,
+   "secondi": 0.4,
    "titolo_pagina": "# - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/category/numero/",
    "status": 200,
-   "byte": 258390,
-   "secondi": 0.9,
+   "byte": 248270,
+   "secondi": 0.5,
    "titolo_pagina": "# - CB01 OFFICIAL - SERIE-TV"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/category/a/",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serietv/category/a/",
    "status": 200,
-   "byte": 260617,
-   "secondi": 1.1,
+   "byte": 250444,
+   "secondi": 0.3,
    "titolo_pagina": "A - CB01 OFFICIAL - SERIE-TV"
   },
   {
    "url": "https://cb01official.uno/serietv/category/a/",
    "status": 200,
-   "byte": 260617,
-   "secondi": 1.1,
+   "byte": 250444,
+   "secondi": 0.3,
    "titolo_pagina": "A - CB01 OFFICIAL - SERIE-TV"
   }
  ],

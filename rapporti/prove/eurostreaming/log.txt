@@ -6,34 +6,16 @@ Canale eurostreaming | indirizzo https://eurostream.skin
       peliculas | • Aggiornamenti | https://eurostream.skin/nuovi-ep-aggiornamento/
       peliculas | • Archivio | https://eurostream.skin/category/serie-tv-archive/
 == lista "• Serie TV"
-   -> 19 voci
-      episodios | Segreti di Stato - Secret Service | https://eurostream.skin/segreti-di-stato-secret-service/
-      episodios | Scrubs | https://eurostream.skin/scrubs-2026/
-      episodios | S.W.A.T. Exiles | https://eurostream.skin/s-w-t-exiles/
-      episodios | R.J. Decker | https://eurostream.skin/r-j-decker/
-== episodios su "Segreti di Stato - Secret Service"
-   -> 3 voci
-      findvideos | 1x01 - Episodio 01  | https://eurostream.skin/segreti-di-stato-secret-service/
-      findvideos | 1x01 - Episode 01  | https://eurostream.skin/segreti-di-stato-secret-service/
-      add_serie_to_library | txt30161 %s | https://eurostream.skin/segreti-di-stato-secret-service/
-== findvideos su "1x01 - Episodio 01 "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
-    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
-                                                                                                  ^^^^^
-  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
-    itemlist = support.server(item, item.other)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/support.py", line 1287, in server
-    itemList = servertools.find_video_items(data=str(data))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
-    data = unshortenit.findlinks(data)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/0szql94i
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
+    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
+                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
+    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
+platformcode.logger.WebErrorException
 
 == lista "• Anime"
    -> 19 voci
@@ -64,20 +46,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty
+Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 1x01 - Segreti di Stato - Secret Service - Episodio 01 | https://eurostream.skin/segreti-di-stato-secret-service/
-      episodios | 2x03 - Scrubs (2026) - L'ex del mio ex | https://eurostream.skin/scrubs-2026/
-      episodios | 1x07 - S.W.A.T. Exiles - Trappola a domicilio , 1x08 Ultimo  | https://eurostream.skin/s-w-t-exiles/
-      episodios | 2x04 - R.J. Decker - Il pescatore , 2x05 Buona fortuna doman | https://eurostream.skin/r-j-decker/
-== episodios su "1x01 - Segreti di Stato - Secret Service"
-   -> 3 voci
-      findvideos | 1x01 - Episodio 01  | https://eurostream.skin/segreti-di-stato-secret-service/
-      findvideos | 1x01 - Episode 01  | https://eurostream.skin/segreti-di-stato-secret-service/
-      add_serie_to_library | txt30161 %s | https://eurostream.skin/segreti-di-stato-secret-service/
-== findvideos su "1x01 - Episodio 01 "
+      episodios | 2x01 - Piedone - Uno sbirro a Napoli - Scugnizzi | https://eurostream.skin/piedone-uno-sbirro-a-napoli/
+      episodios | 3x09 - Wild Cards (2025) - Crimini alla Ridgemont High , 3x1 | https://eurostream.skin/wild-cards-2025/
+      episodios | 1x01 - Una Finestra Vista Lago - Nome d'arte Doris Brilli ,  | https://eurostream.skin/una-finestra-vista-lago/
+      episodios | 4x04 - The Gilded Age - Buon gusto | https://eurostream.skin/the-gilded-age-5/
+== episodios su "2x01 - Piedone - Uno sbirro a Napoli - S"
+   -> 6 voci
+      findvideos | 1x01 - Appucundria  | https://eurostream.skin/piedone-uno-sbirro-a-napoli/
+      findvideos | 1x02 - Scuorno  | https://eurostream.skin/piedone-uno-sbirro-a-napoli/
+      findvideos | 1x03 - Oltre il confine  | https://eurostream.skin/piedone-uno-sbirro-a-napoli/
+      findvideos | 1x04 - Anema e core  | https://eurostream.skin/piedone-uno-sbirro-a-napoli/
+== findvideos su "1x01 - Appucundria "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -94,7 +77,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/0szql94i
+Exception: Not un-shortened link: https://clicka.cc/mix/qn9rz50y
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -105,8 +88,7 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Serie TV -> OK 18 
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
-      PROBLEMA: titolo rovinato: 3x01 - Percy Jackson e gli dei dell’Olimpo - La mia operazione di salv
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: findvideos su "1x01 - Episodio 01 "
+VERDETTO: SI FERMA A: lista "• Serie TV"

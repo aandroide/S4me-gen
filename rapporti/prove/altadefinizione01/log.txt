@@ -6,20 +6,22 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.ws
       peliculas | •• Ultimi Aggiornati-Aggiunti | https://altadefinizione-01.ws
       genres | •• Generi | https://altadefinizione-01.ws
 == lista "Tutti "
-   -> 30 voci
-      check | Good Luck, Have Fun, Don't Die  | https://altadefinizione-01.ws/35808-good-luck-have-fun-don-t-die-streaming.html
+   -> 29 voci
+      check | Rammstein: Live in Mexico City  | https://altadefinizione-01.ws/35817-rammstein-live-in-mexico-city-streaming.html
       check | Primetime Preacher$: Storia di un telepredicatore  | https://altadefinizione-01.ws/35807-primetime-preacher-storia-di-un-telepredicatore-streaming.html
       check | Profumo di bergamotto  | https://altadefinizione-01.ws/35803-profumo-di-bergamotto-streaming.html
       check | Sierra Madre - Linea di fuoco  | https://altadefinizione-01.ws/35800-sierra-madre-linea-di-fuoco-streaming.html
-== check su "Good Luck, Have Fun, Don't Die "
+== check su "Rammstein: Live in Mexico City "
    -> 3 voci
-      play | Good Luck, Have Fun, Don't Die  | https://v.vidxgo.co/1341338
-      play | Good Luck, Have Fun, Don't Die  | https://vixsrc.to/movie/tt1341338
-      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.ws/35808-good-luck-have-fun-don-t-die-streaming.html
-== risoluzione vidxgo https://v.vidxgo.co/1341338
-   -> VIDEO OK m3u8 200 
-== risoluzione vixsrc https://vixsrc.to/movie/tt1341338
-   -> VIDEO OK m3u8 200 
+      play | Rammstein: Live in Mexico City  | https://v.vidxgo.co/46000907
+      play | Rammstein: Live in Mexico City  | https://vixsrc.to/movie/tt46000907
+      add_pelicula_to_library | txt30161 %s | https://altadefinizione-01.ws/35817-rammstein-live-in-mexico-city-streaming.html
+== risoluzione vidxgo https://v.vidxgo.co/46000907
+   api /t/ 46000907 referer https://v.vidxgo.co/46000907 -> 404 {"error":"not found"}
+   api /t/ 46000907 referer https://altadefinizione-01.ws/ -> 404 {"error":"not found"}
+   -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
+== risoluzione vixsrc https://vixsrc.to/movie/tt46000907
+   -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
 == voci dichiarate in mainlist (8)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
     menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])
@@ -30,9 +32,9 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.ws
     menu | ('Sub-ITA {submenu}', ['/sub-ita/', 'peliculas', '', 'undefined'])
     menu | ('Serie TV', ['/serie-tv/', 'peliculas', '', 'tvshow'])
 == controllo di tutte le sezioni
-   SEZIONE Tutti -> OK 29 
+   SEZIONE Tutti -> OK 28 
    SEZIONE •• Al Cinema -> OK 30 
-   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 41 
+   SEZIONE •• Ultimi Aggiornati-Aggiunti -> OK 40 
    SEZIONE Azione -> OK 29 
    SEZIONE Animazione -> OK 27 
    SEZIONE Avventura -> OK 30 
@@ -50,4 +52,4 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.ws
    SEZIONE txt70741 … -> OK 6 
 SEZIONI: 8 ok su 9
    SEZIONE SENZA TITOLI: •• Anni | SOTTOMENU SENZA TITOLI
-VERDETTO: ARRIVA AL VIDEO
+VERDETTO: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)

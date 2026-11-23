@@ -9,18 +9,8 @@
   },
   {
    "passo": "lista \"• Serie TV\"",
-   "esito": "OK",
-   "voci": 19
-  },
-  {
-   "passo": "episodios su \"Segreti di Stato - Secret Service\"",
-   "esito": "OK",
-   "voci": 3
-  },
-  {
-   "passo": "findvideos su \"1x01 - Episodio 01 \"",
    "esito": "ERRORE",
-   "errore": "sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/mix/0szql94i\n"
+   "errore": "sta = passo('lista \"%s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/core/support.py\", line 614, in wrapper\n    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)\nplatformcode.logger.WebErrorException\n"
   },
   {
    "passo": "lista \"• Anime\"",
@@ -35,7 +25,7 @@
   {
    "passo": "findvideos su \"1x01 - Fino ad allora… sono Bass Reeves \"",
    "esito": "ERRORE",
-   "errore": "sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/mix/2ri018ty\n"
+   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk\n"
   },
   {
    "passo": "lista \"• Aggiornamenti\"",
@@ -43,14 +33,14 @@
    "voci": 21
   },
   {
-   "passo": "episodios su \"1x01 - Segreti di Stato - Secret Service\"",
+   "passo": "episodios su \"2x01 - Piedone - Uno sbirro a Napoli - S\"",
    "esito": "OK",
-   "voci": 3
+   "voci": 6
   },
   {
-   "passo": "findvideos su \"1x01 - Episodio 01 \"",
+   "passo": "findvideos su \"1x01 - Appucundria \"",
    "esito": "ERRORE",
-   "errore": "sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/mix/0szql94i\n"
+   "errore": "sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/mix/qn9rz50y\n"
   }
  ],
  "video": [],
@@ -75,9 +65,6 @@
   {
    "voce": "• Aggiornamenti",
    "azione": "peliculas",
-   "problemi": [
-    "titolo rovinato: 3x01 - Percy Jackson e gli dei dell’Olimpo - La mia operazione di salv"
-   ],
    "esito": "OK",
    "titoli": 20
   },
@@ -98,46 +85,46 @@
  "rete": [
   {
    "url": "https://eurostream.skin",
-   "status": 200,
-   "byte": 43062,
-   "secondi": 0.7,
-   "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming",
+   "status": "HTTPSConnectionPool(host='eurostream.skin', port=443): Read timed out. (read timeout=5)",
+   "byte": 0,
+   "secondi": 5.1,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://eurostream.skin/segreti-di-stato-secret-service/",
+   "url": "https://eurostream.skin/category/anime-cartoni-animati/",
    "status": 200,
-   "byte": 33486,
-   "secondi": 0.6,
-   "titolo_pagina": "Segreti di Stato - Secret Service streaming Serie TV - euroStreaming",
+   "byte": 44139,
+   "secondi": 1.0,
+   "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/mix/0szql94i",
-   "status": 403,
-   "byte": 5859,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment...",
+   "url": "https://eurostream.skin/bass-x-machina/",
+   "status": 200,
+   "byte": 34162,
+   "secondi": 0.8,
+   "titolo_pagina": "Bass X Machina streaming Serie TV - euroStreaming",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://clicka.cc/mix/0szql94i",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/delta/pcmgkril78mk",
    "status": 403,
-   "byte": 5859,
+   "byte": 5877,
    "secondi": 0.4,
    "titolo_pagina": "Just a moment...",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/7sofdns9l63b",
+   "url": "https://clicka.cc/delta/pcmgkril78mk",
    "status": 403,
-   "byte": 6521,
-   "secondi": 0.4,
-   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "byte": 5877,
+   "secondi": 0.5,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://uprot.net/msf/7sofdns9l63b",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/msf/zu6q34wimke8",
    "status": 403,
    "byte": 6521,
    "secondi": 0.5,
@@ -145,182 +132,133 @@
    "file": "pagine/06.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/delta/nkiiktqrw1ol",
-   "status": 403,
-   "byte": 5877,
-   "secondi": 0.5,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/07.html"
-  },
-  {
-   "url": "https://clicka.cc/delta/nkiiktqrw1ol",
-   "status": 403,
-   "byte": 5877,
-   "secondi": 0.6,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/08.html"
-  },
-  {
-   "url": "https://eurostream.skin/category/anime-cartoni-animati/",
-   "status": 200,
-   "byte": 44139,
-   "secondi": 0.6,
-   "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming",
-   "file": "pagine/09.html"
-  },
-  {
-   "url": "https://eurostream.skin/bass-x-machina/",
-   "status": 200,
-   "byte": 34162,
-   "secondi": 0.6,
-   "titolo_pagina": "Bass X Machina streaming Serie TV - euroStreaming",
-   "file": "pagine/10.html"
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/zu6q34wimke8",
-   "status": 403,
-   "byte": 6521,
-   "secondi": 0.3,
-   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
-   "file": "pagine/11.html"
-  },
-  {
    "url": "https://uprot.net/msf/zu6q34wimke8",
    "status": 403,
    "byte": 6521,
-   "secondi": 0.3,
+   "secondi": 0.6,
    "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
-   "file": "pagine/12.html"
+   "file": "pagine/07.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/mix/2ri018ty",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/mix/2ri018ty",
    "status": 403,
    "byte": 5859,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "Just a moment...",
-   "file": "pagine/13.html"
+   "file": "pagine/08.html"
   },
   {
    "url": "https://clicka.cc/mix/2ri018ty",
    "status": 403,
    "byte": 5859,
-   "secondi": 0.4,
+   "secondi": 0.6,
    "titolo_pagina": "Just a moment...",
-   "file": "pagine/14.html"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/delta/pcmgkril78mk",
-   "status": 403,
-   "byte": 5877,
-   "secondi": 0.5,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/15.html"
-  },
-  {
-   "url": "https://clicka.cc/delta/pcmgkril78mk",
-   "status": 403,
-   "byte": 5877,
-   "secondi": 0.5,
-   "titolo_pagina": "Just a moment..."
+   "file": "pagine/09.html"
   },
   {
    "url": "https://eurostream.skin/nuovi-ep-aggiornamento/",
    "status": 200,
-   "byte": 46006,
-   "secondi": 0.8,
-   "titolo_pagina": "Aggiornamento Episodi - euroStreaming"
+   "byte": 46010,
+   "secondi": 0.7,
+   "titolo_pagina": "Aggiornamento Episodi - euroStreaming",
+   "file": "pagine/10.html"
   },
   {
-   "url": "https://eurostream.skin/segreti-di-stato-secret-service/",
+   "url": "https://eurostream.skin/piedone-uno-sbirro-a-napoli/",
    "status": 200,
-   "byte": 33486,
-   "secondi": 0.4,
-   "titolo_pagina": "Segreti di Stato - Secret Service streaming Serie TV - euroStreaming"
+   "byte": 34331,
+   "secondi": 0.5,
+   "titolo_pagina": "Piedone - Uno sbirro a Napoli streaming Serie TV - euroStreaming",
+   "file": "pagine/11.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/7sofdns9l63b",
-   "status": 403,
-   "byte": 6521,
-   "secondi": 0.2,
-   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud"
-  },
-  {
-   "url": "https://uprot.net/msf/7sofdns9l63b",
-   "status": 403,
-   "byte": 6521,
-   "secondi": 0.3,
-   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud"
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/mix/0szql94i",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/mix/qn9rz50y",
    "status": 403,
    "byte": 5859,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment..."
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/12.html"
   },
   {
-   "url": "https://clicka.cc/mix/0szql94i",
+   "url": "https://clicka.cc/mix/qn9rz50y",
    "status": 403,
    "byte": 5859,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment..."
+   "secondi": 0.5,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/13.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/delta/nkiiktqrw1ol",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/unusl8wc9ada",
    "status": 403,
-   "byte": 5877,
+   "byte": 6521,
    "secondi": 0.4,
-   "titolo_pagina": "Just a moment..."
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "file": "pagine/14.html"
   },
   {
-   "url": "https://clicka.cc/delta/nkiiktqrw1ol",
+   "url": "https://uprot.net/msf/unusl8wc9ada",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.5,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/delta/pdavvshua164",
    "status": 403,
    "byte": 5877,
    "secondi": 0.5,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://clicka.cc/delta/pdavvshua164",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.6,
    "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://eurostream.skin",
    "status": 200,
-   "byte": 43062,
-   "secondi": 0.8,
+   "byte": 42852,
+   "secondi": 0.7,
    "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming"
   },
   {
    "url": "https://eurostream.skin/category/anime-cartoni-animati/",
    "status": 200,
    "byte": 44139,
-   "secondi": 0.7,
+   "secondi": 1.1,
    "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming"
   },
   {
    "url": "https://eurostream.skin/nuovi-ep-aggiornamento/",
    "status": 200,
-   "byte": 46006,
-   "secondi": 0.7,
+   "byte": 46010,
+   "secondi": 1.3,
    "titolo_pagina": "Aggiornamento Episodi - euroStreaming"
   },
   {
    "url": "https://eurostream.skin/category/serie-tv-archive/",
    "status": 200,
-   "byte": 42982,
+   "byte": 43236,
    "secondi": 0.8,
    "titolo_pagina": "SERIE TV ARCHIVIO Archives - euroStreaming :: Serie TV e Film in Streaming"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/?s=avatar",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/?s=avatar",
    "status": 200,
-   "byte": 43324,
-   "secondi": 1.4,
+   "byte": 43325,
+   "secondi": 1.7,
    "titolo_pagina": "Hai cercato avatar - euroStreaming :: Serie TV e Film in Streaming"
   },
   {
    "url": "https://eurostream.skin/?s=avatar",
    "status": 200,
-   "byte": 43324,
-   "secondi": 1.4,
+   "byte": 43325,
+   "secondi": 1.7,
    "titolo_pagina": "Hai cercato avatar - euroStreaming :: Serie TV e Film in Streaming"
   }
  ],
- "verdetto": "SI FERMA A: findvideos su \"1x01 - Episodio 01 \""
+ "verdetto": "SI FERMA A: lista \"• Serie TV\""
 }

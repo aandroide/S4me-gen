@@ -7,20 +7,20 @@ Canale cineblog01 | indirizzo https://cb01official.uno
       menu | •• Anni | https://cb01official.uno
 == lista "• Film"
    -> 13 voci
+      findvideos | Scontrarsi a Natale  | https://cb01one.live/scontrarsi-a-natale-hd-2026/
+      findvideos | Scrooge e gli spiriti del Natale | https://cb01one.live/scrooge-e-gli-spiriti-del-natale-2026/
       findvideos | Flavia de Luce: Una detective geniale  | https://cb01one.live/flavia-de-luce-una-detective-geniale-hd-2026/
       findvideos | Good Luck, Have Fun, Don’t Die  | https://cb01one.live/good-luck-have-fun-dont-die-hd-2025/
-      findvideos | Sierra Madre - Linea di fuoco  | https://cb01one.live/sierra-madre-linea-di-fuoco-hd-2026/
-      findvideos | Operation Kabul | https://cb01one.live/operation-kabul-2025/
-== findvideos su "Flavia de Luce: Una detective geniale "
+== findvideos su "Scontrarsi a Natale "
    -> 3 voci
-      play | Flavia de Luce: Una detective geniale  | https://stayonline.pro/l/Px1G3/
-      play | Flavia de Luce: Una detective geniale  | https://stayonline.pro/l/930NR/
-      add_pelicula_to_library | txt30161 %s | https://cb01one.live/flavia-de-luce-una-detective-geniale-hd-2026/
-   play del canale -> mixdrop https://m1xdrop.net/e/9ww6meq0hxmze
-== risoluzione mixdrop https://m1xdrop.net/e/9ww6meq0hxmze
+      play | Scontrarsi a Natale  | https://stayonline.pro/l/XN1l9/
+      play | Scontrarsi a Natale  | https://stayonline.pro/l/6kG0Z/
+      add_pelicula_to_library | txt30161 %s | https://cb01one.live/scontrarsi-a-natale-hd-2026/
+   play del canale -> mixdrop https://m1xdrop.net/e/q11ez91ku1v04k
+== risoluzione mixdrop https://m1xdrop.net/e/q11ez91ku1v04k
    -> VIDEO NON RAGGIUNGIBILE HTTP 403 
-   play del canale -> mixdrop https://m1xdrop.net/e/pjjn7wm4czd6ed
-== risoluzione mixdrop https://m1xdrop.net/e/pjjn7wm4czd6ed
+   play del canale -> mixdrop https://m1xdrop.net/e/z11elzmqto6npv
+== risoluzione mixdrop https://m1xdrop.net/e/z11elzmqto6npv
    -> VIDEO NON RAGGIUNGIBILE HTTP 403 
 == voci dichiarate in mainlist (14)
     film | ('HD', ['', 'menu', 'Film HD Streaming'])
@@ -68,11 +68,13 @@ Canale cineblog01 | indirizzo https://cb01official.uno
    SEZIONE AVVENTURA -> OK 12 
    SEZIONE AZIONE -> OK 12 
    SEZIONE •• Per Genere -> SOTTOMENU  
-   SEZIONE •• Per anno -> VUOTA   | ultima pagina: {'url': 'https://quiet-base-584a.ifewfijdqwji.workers.dev/serietv/', 'status': 429, 'byte': 7396, 'titolo_pagina': 'Access denied | cb01one.live used Cloudflare to restrict access | cb01one.live |'}
+   SEZIONE 2026 -> OK 12 
+   SEZIONE 2025 -> OK 12 
+   SEZIONE 2024 -> OK 12 
+   SEZIONE •• Per anno -> SOTTOMENU  
    SEZIONE •• Ultime Aggiunte -> OK 20 
    SEZIONE •• txt70741 Serie TV… -> OK 2 
    SEZIONE • Documentari -> OK 12 
    SEZIONE •• HD -> OK 12 
-SEZIONI: 16 ok su 17
-   SEZIONE SENZA TITOLI: •• Per anno | VUOTA
+SEZIONI: 17 ok su 17
 VERDETTO: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE

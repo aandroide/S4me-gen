@@ -36,11 +36,11 @@
  "video": [
   {
    "server": "directo",
-   "url": "https://vod8-rai-it.akamaized.net/podcastcdn/teche_root/Catalogo_Italia_HD_multiaudio/HFZssSlash6hEv2Fl5uEXnDOCKNQeeqqEEqualeeqqEEqual_,1200,1800,2400/playlist.m3u8?hdnea=st=1795354677~exp=1795354827~",
+   "url": "https://download-rai-it.akamaized.net/video_no_available.mp4",
    "tipo": "film",
-   "finale": "https://vod8-rai-it.akamaized.net/podcastcdn/teche_root/Catalogo_Italia_HD_multiaudio/HFZssSlash6hEv2Fl5uEXnDOCKNQeeqqEEqualeeqqEEqual_,1200,1800,2400/playlist.m3u8?hdnea=st=1795354677~exp=1795354827~",
+   "finale": "https://download-rai-it.akamaized.net/video_no_available.mp4",
    "esito": "VIDEO OK",
-   "dettaglio": "m3u8 206"
+   "dettaglio": "206 video/mp4"
   }
  ],
  "menu_dichiarato": [
@@ -72,6 +72,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str11 23 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 21
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 20
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
+      }
+     ]
+    },
+    {
      "voce": "str17 22 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -81,13 +107,13 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 22
+       "titoli": 33
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 21
+       "titoli": 33
       },
       {
        "voce": "Rai 3",
@@ -122,32 +148,6 @@
        "titoli": 31
       }
      ]
-    },
-    {
-     "voce": "str15 20 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 28
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 36
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 33
-      }
-     ]
     }
    ]
   },
@@ -161,7 +161,7 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 21
     },
     {
      "voce": "Da non perdere",
@@ -170,10 +170,10 @@
      "titoli": 24
     },
     {
-     "voce": "L'infanzia difficile",
+     "voce": "Film al Torino Film Festival",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 21
     }
    ]
   },
@@ -239,7 +239,7 @@
      "voce": "Intrattenimento",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 22
+     "titoli": 23
     },
     {
      "voce": "Territori e itinerari",
@@ -251,7 +251,7 @@
      "voce": "Approfondimento",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 26
+     "titoli": 27
     }
    ]
   },
@@ -265,7 +265,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     },
     {
      "voce": "Docu-serie Original",
@@ -291,13 +291,13 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 23
+     "titoli": 24
     },
     {
-     "voce": "20 Novembre - Giornata mondiale per l'infanzia",
+     "voce": "24 Novembre - Auguri a Carlo Collodi, 200 anni di Pinocchio!",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 32
+     "titoli": 6
     },
     {
      "voce": "Esclusive RaiPlay Bambini",
@@ -326,10 +326,10 @@
      "titoli": 15
     },
     {
-     "voce": "Red Flags",
+     "voce": "Coming of age Stories",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 13
+     "titoli": 29
     }
    ]
   },
@@ -446,8 +446,8 @@
   {
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
-   "byte": 1457,
-   "secondi": 0.3,
+   "byte": 597,
+   "secondi": 0.5,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }

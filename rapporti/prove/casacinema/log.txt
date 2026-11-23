@@ -29,10 +29,7 @@ Canale casacinema | indirizzo https://casa-cinema.lol
     tvshow | '/serie-tv'
     tvshow | ('Miniserie ', ['/miniserie-tv', 'peliculas', ''])
 == controllo di tutte le sezioni
-   SEZIONE Animazione -> OK 16 
-   SEZIONE Avventura -> OK 16 
-   SEZIONE Biografico -> OK 16 
-   SEZIONE Generi -> SOTTOMENU  
+   SEZIONE Generi -> ERRORE WebErrorException
    SEZIONE • Film -> OK 16 
    SEZIONE • Serie TV -> OK 16 
    SEZIONE •• Miniserie -> OK 16 
@@ -43,5 +40,6 @@ Canale casacinema | indirizzo https://casa-cinema.lol
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar - La leggenda di Aang
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'ultimo dominatore dell'aria
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar Aang: L’ultimo dominatore dell’aria
-SEZIONI: 5 ok su 5
+SEZIONI: 4 ok su 5
+   SEZIONE SENZA TITOLI: Generi | ERRORE WebErrorException
 VERDETTO: ARRIVA AL VIDEO

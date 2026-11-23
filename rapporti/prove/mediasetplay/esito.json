@@ -10,22 +10,22 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 134
+   "voci": 130
   },
   {
-   "passo": "findvideos su \"Transformers - L'ultimo cavaliere\"",
+   "passo": "findvideos su \"Cash out - I maghi del furto\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 21
+   "voci": 20
   },
   {
-   "passo": "findvideos su \"Alex l'ariete\"",
+   "passo": "findvideos su \"Il segreto del suo passato\"",
    "esito": "ERRORE",
-   "errore": "enti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'mediaSelector'\n"
+   "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
   {
    "passo": "lista \"•• Film più visti del giorno\"",
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 63
+   "titoli": 57
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -111,7 +111,7 @@
    "voce": "•• Fiction e Serie Tv del momento",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 17,
+   "sottovoci": 18,
    "figli": [
     {
      "voce": "Viola come il mare - Terza stagione",
@@ -126,10 +126,10 @@
      "titoli": 2
     },
     {
-     "voce": "Will & Grace 5",
+     "voce": "NCIS: Los Angeles 7",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 3
     }
    ]
   },
@@ -166,10 +166,10 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "La promessa",
+     "voce": "Tutto per la mia famiglia 2",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 4
     },
     {
      "voce": "Forbidden Fruit 4",
@@ -178,10 +178,10 @@
      "titoli": 4
     },
     {
-     "voce": "Tutto per la mia famiglia 2",
+     "voce": "Beautiful",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 6
     }
    ]
   },
@@ -216,7 +216,7 @@
      "titoli": 2
     },
     {
-     "voce": "NCIS: Los Angeles 7",
+     "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 2
@@ -230,19 +230,19 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Tutto per la mia famiglia 2",
+     "voce": "Racconto di una notte",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
     },
     {
-     "voce": "My Sweet Lie",
+     "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 4
     },
     {
-     "voce": "Forbidden Fruit 4",
+     "voce": "Tutto per la mia famiglia 2",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
@@ -256,13 +256,13 @@
    "sottovoci": 12,
    "figli": [
     {
-     "voce": "Tu Si Que Vales 2026",
+     "voce": "Grande Fratello VIP - Autunno 2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
     },
     {
-     "voce": "Grande Fratello VIP - Autunno 2026",
+     "voce": "Tu Si Que Vales 2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
@@ -282,22 +282,22 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Uomini e Donne 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 10
+    },
+    {
+     "voce": "Ore 11",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
+    },
+    {
      "voce": "La ruota della fortuna 2025/2026",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
-    },
-    {
-     "voce": "Realpolitik 2026/2027",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 2
-    },
-    {
-     "voce": "Caduta libera 2026/2027",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
     }
    ]
   },
@@ -308,22 +308,22 @@
    "sottovoci": 100,
    "figli": [
     {
-     "voce": "Tu Si Que Vales 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 6
-    },
-    {
      "voce": "Amici 26",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
     },
     {
-     "voce": "Uomini e Donne 2026/2027",
+     "voce": "Tu Si Que Vales 2026",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 10
+     "titoli": 6
+    },
+    {
+     "voce": "Grande Fratello VIP - Autunno 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
     }
    ]
   },
@@ -349,10 +349,10 @@
      "titoli": 10
     },
     {
-     "voce": "Looney Tunes Cartoons",
+     "voce": "Captain Tsubasa 2",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 31
     }
    ]
   },
@@ -372,13 +372,13 @@
      "voce": "La casa delle bambole di Gabby",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 2
     },
     {
-     "voce": "Hey Duggee",
+     "voce": "Chi ha sfidato Ninna e Matti?",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 15
     }
    ]
   },
@@ -395,16 +395,16 @@
      "titoli": 51
     },
     {
-     "voce": "Pollyanna",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 22
-    },
-    {
      "voce": "Holly e Benji Forever",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 52
+    },
+    {
+     "voce": "Pollyanna",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 25
     }
    ]
   },
@@ -439,10 +439,10 @@
      "titoli": 7
     },
     {
-     "voce": "Universo ai raggi X 5",
+     "voce": "Enigmi alieni 13",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 8
+     "titoli": 4
     }
    ]
   },
@@ -464,5 +464,5 @@
  ],
  "sezioni_riepilogo": "24 ok su 24",
  "rete": [],
- "verdetto": "SI FERMA A: findvideos su \"Transformers - L'ultimo cavaliere\""
+ "verdetto": "SI FERMA A: findvideos su \"Cash out - I maghi del furto\""
 }
