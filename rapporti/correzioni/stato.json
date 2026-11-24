@@ -49,11 +49,13 @@
   "stato": "OK",
   "dettagli": [
    "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
+   "il sito reindirizza a un altro indirizzo: https://altadefinizionex.stream (in channels.json c'e https://altadefinizionex.ink)",
    "OK: peliculas /film/ | 30 risultati",
    "OK: peliculas /serie-tv/ | 30 risultati"
   ],
   "correzione": false,
-  "host": "https://altadefinizionex.ink"
+  "host": "https://altadefinizionex.ink",
+  "nuovo_host": "https://altadefinizionex.stream"
  },
  {
   "canale": "altadefinizionecommunity",
@@ -156,7 +158,7 @@
    "OK: peliculas /miniserie-tv | 16 risultati"
   ],
   "correzione": false,
-  "host": "https://casa-cinema.lol"
+  "host": "https://casa-cinema.xyz"
  },
  {
   "canale": "cb01anime",
@@ -185,7 +187,7 @@
    "  non applicata al file: regex dinamica"
   ],
   "correzione": false,
-  "host": "https://cineblog001.run",
+  "host": "https://cineblog001.cafe",
   "proposte": [
    {
     "funzione": "peliculas",
@@ -194,17 +196,17 @@
     "esempi": [
      {
       "title": "Yellowjackets",
-      "url": "https://cineblog001.run/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
+      "url": "https://cineblog001.cafe/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt11041332.jpg"
      },
      {
       "title": "Perfetti bugiardi",
-      "url": "https://cineblog001.run/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
+      "url": "https://cineblog001.cafe/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt18351090.jpg"
      },
      {
       "title": "The Body",
-      "url": "https://cineblog001.run/cb01-streaming/35490-the-body-streaming-cb01.html",
+      "url": "https://cineblog001.cafe/cb01-streaming/35490-the-body-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt8014982.jpg"
      }
     ],
@@ -217,17 +219,17 @@
     "esempi": [
      {
       "title": "Yellowjackets",
-      "url": "https://cineblog001.run/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
+      "url": "https://cineblog001.cafe/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt11041332.jpg"
      },
      {
       "title": "Perfetti bugiardi",
-      "url": "https://cineblog001.run/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
+      "url": "https://cineblog001.cafe/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt18351090.jpg"
      },
      {
       "title": "The Body",
-      "url": "https://cineblog001.run/cb01-streaming/35490-the-body-streaming-cb01.html",
+      "url": "https://cineblog001.cafe/cb01-streaming/35490-the-body-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt8014982.jpg"
      }
     ],
@@ -240,17 +242,17 @@
     "esempi": [
      {
       "title": "Yellowjackets",
-      "url": "https://cineblog001.run/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
+      "url": "https://cineblog001.cafe/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt11041332.jpg"
      },
      {
       "title": "Perfetti bugiardi",
-      "url": "https://cineblog001.run/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
+      "url": "https://cineblog001.cafe/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt18351090.jpg"
      },
      {
       "title": "The Body",
-      "url": "https://cineblog001.run/cb01-streaming/35490-the-body-streaming-cb01.html",
+      "url": "https://cineblog001.cafe/cb01-streaming/35490-the-body-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt8014982.jpg"
      }
     ],
@@ -271,9 +273,9 @@
   "canale": "cinemalibero",
   "stato": "BLOCCO ANTI BOT",
   "dettagli": [
-   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5642 byte): non e un cambio di struttura",
+   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5638 byte): non e un cambio di struttura",
    "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5650 byte): non e un cambio di struttura",
-   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5670 byte): non e un cambio di struttura",
+   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5666 byte): non e un cambio di struttura",
    "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5659 byte): non e un cambio di struttura"
   ],
   "correzione": false,
@@ -380,21 +382,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/MwaBZCX5nh",
-      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
-      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?",
+      "url": "/play/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life.4SaIK/j5THWtvUlg",
+      "thumb": "https://img.animeworld.ac/locandine/4SaIK.png",
+      "title": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
       "lang": null
      },
      {
-      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/plOhFTdcok",
-      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
-      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
+      "url": "/play/suikoden-the-anime.j3VlW/0MtCFAkvPG",
+      "thumb": "https://img.animeworld.ac/locandine/j3VlW.jpg",
+      "title": "Suikoden: The Anime",
       "lang": null
      },
      {
-      "url": "/play/star-detective-precure.quYaR/TuRttWPSWX",
-      "thumb": "https://img.animeworld.ac/locandine/quYaR.jpg",
-      "title": "Star Detective Pretty Cure!",
+      "url": "/play/choujun-choujou-senpai.fspzM/sYM8ZJ531b",
+      "thumb": "https://img.animeworld.ac/locandine/fspzM.jpg",
+      "title": "Super Psychic Policeman Chojo",
       "lang": null
      }
     ],
@@ -409,21 +411,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/MwaBZCX5nh",
-      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
-      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?",
+      "url": "/play/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life.4SaIK/j5THWtvUlg",
+      "thumb": "https://img.animeworld.ac/locandine/4SaIK.png",
+      "title": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
       "lang": null
      },
      {
-      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/plOhFTdcok",
-      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
-      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
+      "url": "/play/suikoden-the-anime.j3VlW/0MtCFAkvPG",
+      "thumb": "https://img.animeworld.ac/locandine/j3VlW.jpg",
+      "title": "Suikoden: The Anime",
       "lang": null
      },
      {
-      "url": "/play/star-detective-precure.quYaR/TuRttWPSWX",
-      "thumb": "https://img.animeworld.ac/locandine/quYaR.jpg",
-      "title": "Star Detective Pretty Cure!",
+      "url": "/play/choujun-choujou-senpai.fspzM/sYM8ZJ531b",
+      "thumb": "https://img.animeworld.ac/locandine/fspzM.jpg",
+      "title": "Super Psychic Policeman Chojo",
       "lang": null
      }
     ],
@@ -438,21 +440,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/MwaBZCX5nh",
-      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
-      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?",
+      "url": "/play/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life.4SaIK/j5THWtvUlg",
+      "thumb": "https://img.animeworld.ac/locandine/4SaIK.png",
+      "title": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
       "lang": null
      },
      {
-      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/plOhFTdcok",
-      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
-      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
+      "url": "/play/suikoden-the-anime.j3VlW/0MtCFAkvPG",
+      "thumb": "https://img.animeworld.ac/locandine/j3VlW.jpg",
+      "title": "Suikoden: The Anime",
       "lang": null
      },
      {
-      "url": "/play/star-detective-precure.quYaR/TuRttWPSWX",
-      "thumb": "https://img.animeworld.ac/locandine/quYaR.jpg",
-      "title": "Star Detective Pretty Cure!",
+      "url": "/play/choujun-choujou-senpai.fspzM/sYM8ZJ531b",
+      "thumb": "https://img.animeworld.ac/locandine/fspzM.jpg",
+      "title": "Super Psychic Policeman Chojo",
       "lang": null
      }
     ],
@@ -467,21 +469,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/so-whats-wrong-with-getting-reborn-as-a-goblin.UC3Im/MwaBZCX5nh",
-      "thumb": "https://img.animeworld.ac/locandine/UC3Im.jpg",
-      "title": "So What&#x27;s Wrong with Getting Reborn as a Goblin?",
+      "url": "/play/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life.4SaIK/j5THWtvUlg",
+      "thumb": "https://img.animeworld.ac/locandine/4SaIK.png",
+      "title": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
       "lang": null
      },
      {
-      "url": "/play/im-a-witch-whos-crush-requested-a-love-potion.AGegB/plOhFTdcok",
-      "thumb": "https://img.animeworld.ac/locandine/AGegB.png?0",
-      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
+      "url": "/play/suikoden-the-anime.j3VlW/0MtCFAkvPG",
+      "thumb": "https://img.animeworld.ac/locandine/j3VlW.jpg",
+      "title": "Suikoden: The Anime",
       "lang": null
      },
      {
-      "url": "/play/star-detective-precure.quYaR/TuRttWPSWX",
-      "thumb": "https://img.animeworld.ac/locandine/quYaR.jpg",
-      "title": "Star Detective Pretty Cure!",
+      "url": "/play/choujun-choujou-senpai.fspzM/sYM8ZJ531b",
+      "thumb": "https://img.animeworld.ac/locandine/fspzM.jpg",
+      "title": "Super Psychic Policeman Chojo",
       "lang": null
      }
     ],
@@ -496,14 +498,16 @@
   "canale": "eurostreaming",
   "stato": "OK",
   "dettagli": [
+   "il sito reindirizza a un altro indirizzo: https://eurostream.homes (in channels.json c'e https://eurostream.skin)",
    "OK: peliculas /category/anime-cartoni-animati/ | 18 risultati",
-   "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.skin/?p=23012, controllo quella",
+   "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.homes/?p=23012, controllo quella",
    "OK: peliculas /aggiornamento-episodi-nuovi/ | 96 risultati",
    "attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
    "OK: peliculas /category/serie-tv-archive/ | 18 risultati"
   ],
   "correzione": false,
-  "host": "https://eurostream.skin"
+  "host": "https://eurostream.skin",
+  "nuovo_host": "https://eurostream.homes"
  },
  {
   "canale": "eurostreaming_actor",
@@ -511,12 +515,12 @@
   "dettagli": [
    "ROTTO: peliculas /animazione/ | patron non trova titoli",
    "  campione della pagina salvato in rapporti/correzioni/eurostreaming_actor/pagina_peliculas_animazione.html",
-   "  regex proposta: 1030 titoli su 335 card | gruppi persi: episode, title2",
+   "  regex proposta: 1029 titoli su 335 card | gruppi persi: episode, title2",
    "  non applicata al file: la funzione ha piu varianti di regex",
    "peliculas /aggiornamento-episodi/: pagina non scaricata (HTTP 404)"
   ],
   "correzione": false,
-  "host": "https://guardaseriex.lol",
+  "host": "https://guardaseriex.help",
   "proposte": [
    {
     "funzione": "peliculas",
@@ -524,24 +528,24 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.lol/animazione/663-south-park-3.html",
+      "url": "https://guardaseriex.help/animazione/663-south-park-3.html",
       "thumb": "/uploads/immagini/tt0121955.webp",
       "year": "1997",
       "title": "South Park",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.lol/animazione/5918-adventure-time-missioni-leggendarie-streaming.html",
-      "thumb": "/uploads/immagini/tt32603995.webp",
-      "year": "2026",
-      "title": "Adventure Time: Missioni Leggendarie",
-      "lang": null
-     },
-     {
-      "url": "https://guardaseriex.lol/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html",
+      "url": "https://guardaseriex.help/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html",
       "thumb": "/uploads/immagini/tt2580046.webp",
       "year": "2015",
       "title": "Miraculous - Le storie di Ladybug e Chat Noir",
+      "lang": null
+     },
+     {
+      "url": "https://guardaseriex.help/animazione/5918-adventure-time-missioni-leggendarie-streaming.html",
+      "thumb": "/uploads/immagini/tt32603995.webp",
+      "year": "2026",
+      "title": "Adventure Time: Missioni Leggendarie",
       "lang": null
      }
     ],
@@ -580,7 +584,7 @@
    "file corretto scritto in rapporti/correzioni/guardaseriecam: 1 pagine su 1 ora trovano titoli"
   ],
   "correzione": true,
-  "host": "https://guardaseriex.lol",
+  "host": "https://guardaseriex.help",
   "proposte": [
    {
     "funzione": "peliculas",
@@ -588,21 +592,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.lol/commedia/5907-i-12-segni-di-valentina-streaming.html",
+      "url": "https://guardaseriex.help/commedia/5907-i-12-segni-di-valentina-streaming.html",
       "thumb": "/uploads/immagini/tt39161219.webp",
       "year": "2026",
       "title": "I 12 segni di Valentina",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.lol/5905-177-giorni-il-rapimento-di-farouk-streaming.html",
+      "url": "https://guardaseriex.help/5905-177-giorni-il-rapimento-di-farouk-streaming.html",
       "thumb": "/uploads/immagini/tt38354557.webp",
       "year": "2026",
       "title": "177 Giorni. Il rapimento di Farouk",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.lol/dramma/5796-sacrifice-streaming.html",
+      "url": "https://guardaseriex.help/dramma/5796-sacrifice-streaming.html",
       "thumb": "/uploads/immagini/tt13236336.webp",
       "year": "2021",
       "title": "Sacrifice",
@@ -628,7 +632,7 @@
   "stato": "CORRETTO",
   "dettagli": [
    "indirizzo scritto nel canale: https://guardaseriex.cyou",
-   "il sito reindirizza a un altro indirizzo: https://guardaseriex.lol (in channels.json c'e https://guardaseriex.cyou)",
+   "il sito reindirizza a un altro indirizzo: https://guardaseriex.help (in channels.json c'e https://guardaseriex.cyou)",
    "ROTTO: peliculas /serietv-streaming/page/1/ | patron non trova titoli",
    "  campione della pagina salvato in rapporti/correzioni/guardaserieicu/pagina_peliculas_serietv_streaming_page_1.html",
    "  regex proposta: 18 titoli su 18 card | gruppi persi: audio, category, duration, plot, rating, thumbnail",
@@ -637,7 +641,7 @@
   ],
   "correzione": true,
   "host": "https://guardaseriex.cyou",
-  "nuovo_host": "https://guardaseriex.lol",
+  "nuovo_host": "https://guardaseriex.help",
   "proposte": [
    {
     "funzione": "peliculas",
@@ -645,21 +649,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem(?:\\s[^\"]*)?\")).)*?<div(?=[^>]*class=\"(?:[^\"]*\\s)?movieItem\\-title(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?text\\-truncate(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "https://guardaseriex.lol/commedia/5907-i-12-segni-di-valentina-streaming.html",
+      "url": "https://guardaseriex.help/commedia/5907-i-12-segni-di-valentina-streaming.html",
       "thumb": "/uploads/immagini/tt39161219.webp",
       "year": "2026",
       "title": "I 12 segni di Valentina",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.lol/5905-177-giorni-il-rapimento-di-farouk-streaming.html",
+      "url": "https://guardaseriex.help/5905-177-giorni-il-rapimento-di-farouk-streaming.html",
       "thumb": "/uploads/immagini/tt38354557.webp",
       "year": "2026",
       "title": "177 Giorni. Il rapimento di Farouk",
       "lang": null
      },
      {
-      "url": "https://guardaseriex.lol/dramma/5796-sacrifice-streaming.html",
+      "url": "https://guardaseriex.help/dramma/5796-sacrifice-streaming.html",
       "thumb": "/uploads/immagini/tt13236336.webp",
       "year": "2021",
       "title": "Sacrifice",
@@ -727,7 +731,7 @@
    "  non applicata al file: la funzione ha piu varianti di regex"
   ],
   "correzione": false,
-  "host": "https://il-geniodellostreaming.website",
+  "host": "https://il-geniodellostreaming.my",
   "proposte": [
    {
     "funzione": "peliculas",
@@ -735,21 +739,21 @@
     "patron": "<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<h3[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<(?:(?!<article(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?=[^>]*class=\"(?:[^\"]*\\s)?movies(?:\\s[^\"]*)?\")).)*?<span[^>]*>\\s*\\(?(?P<year>[0-9]{4})\\)?",
     "esempi": [
      {
-      "url": "https://il-geniodellostreaming.website/film/35819-oobah-l-arte-dell-inganno-streaming.html",
+      "url": "https://il-geniodellostreaming.my/film/35819-oobah-l-arte-dell-inganno-streaming.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt50688819.jpg",
       "title": "Oobah: Scams for a Better Tomorrow",
       "lang": null,
       "year": "2026"
      },
      {
-      "url": "https://il-geniodellostreaming.website/film/35814-una-finestra-vista-lago-streaming.html",
+      "url": "https://il-geniodellostreaming.my/film/35814-una-finestra-vista-lago-streaming.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt36841140.jpg",
       "title": "Una finestra vista lago",
       "lang": null,
       "year": "2026"
      },
      {
-      "url": "https://il-geniodellostreaming.website/film/35813-segreti-di-stato-streaming.html",
+      "url": "https://il-geniodellostreaming.my/film/35813-segreti-di-stato-streaming.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt32477632.jpg",
       "title": "Segreti di stato",
       "lang": null,
@@ -890,7 +894,7 @@
   "canale": "raiplay",
   "stato": "OK",
   "dettagli": [
-   "OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata",
+   "attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.tech_datetime_en",
    "OK: https://www.raiplay.it/dirette | html",
    "OK: https://www.raiplay.it/guidatv.json | json, struttura invariata",
    "OK: https://www.raiplay.it/guidatv | html",
@@ -908,7 +912,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27510 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27581 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -928,7 +932,7 @@
    "OK: serie di esempio /it/titles/66658-oobah-larte-dellinganno | 1 stagioni, 1 episodi nella prima"
   ],
   "correzione": false,
-  "host": "https://streamingcommunityz.dad"
+  "host": "https://streamingcommunityz.mov"
  },
  {
   "canale": "streamingita",
@@ -959,13 +963,14 @@
    "file corretto scritto in rapporti/correzioni/tantifilm: 2 pagine su 2 ora trovano titoli"
   ],
   "correzione": true,
-  "host": "https://tanti-film.tattoo",
+  "host": "https://tanti-film.my",
   "rigenerabile": false
  },
  {
   "canale": "thepiratebay",
   "stato": "OK",
   "dettagli": [
+   "home https://apibay.org: il sito non risponde (tempo scaduto)",
    "OK: https://apibay.org/q.php?q=matrix | json, struttura invariata"
   ],
   "correzione": false,
@@ -973,14 +978,9 @@
  },
  {
   "canale": "toonitalia",
-  "stato": "OK",
+  "stato": "CLOUDFLARE",
   "dettagli": [
-   "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
-   "OK: peliculas /category/anime | 400 risultati",
-   "OK: peliculas /anime-ita | 2786 risultati",
-   "attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
-   "OK: peliculas /contatti | 824 risultati",
-   "attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)"
+   "FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://toonitalia.xyz)"
   ],
   "correzione": false,
   "host": "https://toonitalia.xyz"
