@@ -55,7 +55,7 @@
      "voce": "Recommender Test Row 3",
      "azione": "radio",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 4
     },
     {
      "voce": "Critica sportiva non-stop",
@@ -164,7 +164,7 @@
         {
          "url": "https://api.radiotime.com/categories/c100001521?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQADAAMAW1sMQuIAAAEHDKHx9QUMofH1BScRAgAAAAAA",
          "status": 200,
-         "byte": 151412,
+         "byte": 148957,
          "titolo_pagina": ""
         }
        ]
@@ -177,7 +177,7 @@
         {
          "url": "https://api.radiotime.com/categories/c100002931?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgADAAMAW1sMQuIAAAEHDKHx9QUMofH1BT0RAgAAAAAA",
          "status": 200,
-         "byte": 49227,
+         "byte": 49168,
          "titolo_pagina": ""
         }
        ]
@@ -225,7 +225,7 @@
         {
          "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
          "status": 200,
-         "byte": 1753077,
+         "byte": 1753176,
          "titolo_pagina": ""
         }
        ]
@@ -241,7 +241,7 @@
       {
        "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
        "status": 200,
-       "byte": 1753077,
+       "byte": 1753176,
        "titolo_pagina": ""
       }
      ]
@@ -385,7 +385,7 @@
     {
      "url": "http://api.radiotime.com/categories/c100000088?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
      "status": 200,
-     "byte": 282488,
+     "byte": 282252,
      "titolo_pagina": ""
     },
     {
@@ -397,7 +397,7 @@
     {
      "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
      "status": 200,
-     "byte": 1753077,
+     "byte": 1753176,
      "titolo_pagina": ""
     }
    ]
@@ -537,7 +537,7 @@
         {
          "url": "https://api.radiotime.com/categories/r101215?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAEAAQABAAEAEhIAAQcAAA",
          "status": 200,
-         "byte": 107837,
+         "byte": 107883,
          "titolo_pagina": ""
         }
        ]
@@ -550,7 +550,7 @@
         {
          "url": "https://api.radiotime.com/categories/r101216?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAIAAgABAAEAEhIAAQcAAA",
          "status": 200,
-         "byte": 93761,
+         "byte": 93977,
          "titolo_pagina": ""
         }
        ]
@@ -563,7 +563,7 @@
         {
          "url": "https://api.radiotime.com/categories/r100297?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAMAAwABAAEAEhIAAQcAAA",
          "status": 200,
-         "byte": 65555,
+         "byte": 65403,
          "titolo_pagina": ""
         }
        ]
@@ -573,19 +573,19 @@
       {
        "url": "https://api.radiotime.com/categories/r101215?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAEAAQABAAEAEhIAAQcAAA",
        "status": 200,
-       "byte": 107837,
+       "byte": 107883,
        "titolo_pagina": ""
       },
       {
        "url": "https://api.radiotime.com/categories/r101216?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAIAAgABAAEAEhIAAQcAAA",
        "status": 200,
-       "byte": 93761,
+       "byte": 93977,
        "titolo_pagina": ""
       },
       {
        "url": "https://api.radiotime.com/categories/r100297?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAMAAwABAAEAEhIAAQcAAA",
        "status": 200,
-       "byte": 65555,
+       "byte": 65403,
        "titolo_pagina": ""
       }
      ]
@@ -608,7 +608,7 @@
      "voce": "Aborigeno",
      "azione": "radio",
      "esito": "OK",
-     "titoli": 19
+     "titoli": 20
     },
     {
      "voce": "Afrikaans",
@@ -644,7 +644,7 @@
      ]
     },
     {
-     "voce": "Legado Avatar",
+     "voce": "Avatar Meher Baba",
      "azione": "radio",
      "esito": "ERRORE AttributeError",
      "pagine": [
@@ -657,7 +657,7 @@
      ]
     },
     {
-     "voce": "Avatar Meher Baba",
+     "voce": "Legado Avatar",
      "azione": "radio",
      "esito": "ERRORE AttributeError",
      "pagine": [
@@ -674,7 +674,7 @@
     {
      "url": "http://api.radiotime.com/profiles?fullTextSearch=true&query=avatar&formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
      "status": 200,
-     "byte": 39282,
+     "byte": 39261,
      "titolo_pagina": ""
     },
     {
@@ -697,15 +697,15 @@
   {
    "url": "http://api.radiotime.com/categories/music?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 353571,
-   "secondi": 0.2,
+   "byte": 353613,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
    "url": "http://api.radiotime.com/categories/sports?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 295542,
+   "byte": 291204,
    "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/02.html"
@@ -714,7 +714,7 @@
    "url": "https://api.radiotime.com/categories/c1736013?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQADAAMAW1sMFnsGAAEHDJTh9QUMlOH1BU7XAQAAAAAA",
    "status": 200,
    "byte": 68823,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
@@ -722,7 +722,7 @@
    "url": "https://api.radiotime.com/categories/c403161?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgADAAMAW1sMFnsGAAEHDJTh9QUMlOH1Ba78AQAAAAAA",
    "status": 200,
    "byte": 26204,
-   "secondi": 0.1,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
@@ -737,23 +737,23 @@
   {
    "url": "http://api.radiotime.com/categories/c57922?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 128322,
-   "secondi": 0.1,
+   "byte": 128320,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
    "url": "https://api.radiotime.com/categories/c100001521?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQADAAMAW1sMQuIAAAEHDKHx9QUMofH1BScRAgAAAAAA",
    "status": 200,
-   "byte": 151412,
-   "secondi": 1.9,
+   "byte": 148957,
+   "secondi": 0.6,
    "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
    "url": "https://api.radiotime.com/categories/c100002931?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgADAAMAW1sMQuIAAAEHDKHx9QUMofH1BT0RAgAAAAAA",
    "status": 200,
-   "byte": 49227,
+   "byte": 49168,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/08.html"
@@ -769,8 +769,8 @@
   {
    "url": "http://api.radiotime.com/categories/c100000088?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 282488,
-   "secondi": 0.1,
+   "byte": 282252,
+   "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/10.html"
   },
@@ -778,15 +778,15 @@
    "url": "https://api.radiotime.com/categories/c100035580?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BaR_AgAAAAAA",
    "status": 200,
    "byte": 113639,
-   "secondi": 0.3,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/11.html"
   },
   {
    "url": "https://api.radiotime.com/categories/c100005901?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwIAAgABAAEAW1sMWOH1BQEHDBlq9gUMGWr2BeZyAgAAAAAA",
    "status": 200,
-   "byte": 1753077,
-   "secondi": 2.4,
+   "byte": 1753176,
+   "secondi": 5.0,
    "titolo_pagina": "",
    "file": "pagine/12.html"
   },
@@ -839,14 +839,14 @@
    "url": "http://api.radiotime.com/categories/c100006408?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
    "byte": 64189,
-   "secondi": 0.3,
+   "secondi": 0.4,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/g4535?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAwEAAQABAAEAW1sMCPr1BQEHDCT69QUMJPr1BXhQAgAAAAAA",
    "status": 200,
    "byte": 58,
-   "secondi": 0.1,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
@@ -887,28 +887,28 @@
   {
    "url": "http://api.radiotime.com/categories/regions?formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 43242,
+   "byte": 42207,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/r101215?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAEAAQABAAEAEhIAAQcAAA",
    "status": 200,
-   "byte": 107837,
+   "byte": 107883,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/r101216?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAIAAgABAAEAEhIAAQcAAA",
    "status": 200,
-   "byte": 93761,
+   "byte": 93977,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/r100297?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&viewModel=False&itemToken=BgcHAAMAAwABAAEAEhIAAQcAAA",
    "status": 200,
-   "byte": 65555,
+   "byte": 65403,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
@@ -922,28 +922,28 @@
   {
    "url": "https://api.radiotime.com/categories/languages?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&filter=l169&viewModel=False&itemToken=BgcHAAEAAQABAAEAExMAAQcTUgAAABNSAAAA",
    "status": 200,
-   "byte": 34391,
+   "byte": 34515,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/languages?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&filter=l191&viewModel=False&itemToken=BgcHAAIAAgABAAEAExMAAQcTUgAAABNSAAAA",
    "status": 200,
-   "byte": 34038,
-   "secondi": 0.1,
+   "byte": 34444,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://api.radiotime.com/categories/languages?partnerId=RadioTime&formats=mp3%2caac%2cogg%2cflash%2chtml%2chls%2cwma&filter=l226&viewModel=False&itemToken=BgcHAAMAAwABAAEAExMAAQcTUgAAABNSAAAA",
    "status": 200,
-   "byte": 34668,
-   "secondi": 0.1,
+   "byte": 34845,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "http://api.radiotime.com/profiles?fullTextSearch=true&query=avatar&formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&itemToken=",
    "status": 200,
-   "byte": 39282,
+   "byte": 39261,
    "secondi": 0.4,
    "titolo_pagina": ""
   },

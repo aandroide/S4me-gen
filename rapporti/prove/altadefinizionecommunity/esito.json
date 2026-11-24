@@ -204,7 +204,7 @@
    "url": "https://altaregistrazione.net/load-more-film?type=movie&anno=&quality=&cat=&order=&page=1",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/01.html"
   },
@@ -212,7 +212,7 @@
    "url": "https://altaregistrazione.net/type/movie",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/02.html"
   },
@@ -228,7 +228,7 @@
    "url": "https://altaregistrazione.net/cerca",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.5,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/04.html"
   },
@@ -236,7 +236,7 @@
    "url": "https://altaregistrazione.net/type/movie",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.4,
+   "secondi": 0.5,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/05.html"
   },
@@ -244,7 +244,7 @@
    "url": "https://altaregistrazione.net/type/movie",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/06.html"
   },
@@ -252,7 +252,7 @@
    "url": "https://altaregistrazione.net/type/movie",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/07.html"
   },
@@ -260,7 +260,7 @@
    "url": "https://altaregistrazione.net/load-more-film?type=movie&anno=&quality=&cat=&order=&page=1",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/08.html"
   },
@@ -268,7 +268,7 @@
    "url": "https://altaregistrazione.net/type/movie",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/09.html"
   },
@@ -284,7 +284,7 @@
    "url": "https://altaregistrazione.net/cerca",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/11.html"
   },
@@ -292,7 +292,7 @@
    "url": "https://altaregistrazione.net/type/movie",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.4,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/12.html"
   },
@@ -316,7 +316,7 @@
    "url": "https://altaregistrazione.net/search?s=avatar&f=movie",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.4,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming",
    "file": "pagine/15.html"
   },
@@ -331,7 +331,7 @@
    "url": "https://altaregistrazione.net/load-more-film?type=tvshow&anno=&quality=&cat=&order=&page=1",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming"
   },
   {
@@ -352,6 +352,13 @@
    "url": "https://altaregistrazione.net/cerca",
    "status": 200,
    "byte": 27219,
+   "secondi": 0.2,
+   "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming"
+  },
+  {
+   "url": "https://altaregistrazione.net/serie-tv/tvshow",
+   "status": 200,
+   "byte": 27219,
    "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming"
   },
@@ -359,25 +366,11 @@
    "url": "https://altaregistrazione.net/serie-tv/tvshow",
    "status": 200,
    "byte": 27219,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming"
   },
   {
    "url": "https://altaregistrazione.net/serie-tv/tvshow",
-   "status": 200,
-   "byte": 27219,
-   "secondi": 0.2,
-   "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming"
-  },
-  {
-   "url": "https://altaregistrazione.net/serie-tv/tvshow",
-   "status": 200,
-   "byte": 27219,
-   "secondi": 0.2,
-   "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming"
-  },
-  {
-   "url": "https://altaregistrazione.net/search?s=avatar&f=tvshow",
    "status": 200,
    "byte": 27219,
    "secondi": 0.3,
@@ -388,6 +381,13 @@
    "status": 200,
    "byte": 27219,
    "secondi": 0.2,
+   "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming"
+  },
+  {
+   "url": "https://altaregistrazione.net/search?s=avatar&f=tvshow",
+   "status": 200,
+   "byte": 27219,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione — Film e Serie TV in streaming"
   }
  ],

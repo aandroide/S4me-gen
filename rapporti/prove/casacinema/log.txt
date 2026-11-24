@@ -1,26 +1,26 @@
-Canale casacinema | indirizzo https://casa-cinema.lol
+Canale casacinema | indirizzo https://casa-cinema.xyz
 == mainlist
    -> 6 voci
-      genres | Generi | https://casa-cinema.lol
-      peliculas | • Film | https://casa-cinema.lol/film
-      peliculas | • Serie TV | https://casa-cinema.lol/serie-tv
-      peliculas | •• Miniserie | https://casa-cinema.lol/miniserie-tv
+      genres | Generi | https://casa-cinema.xyz
+      peliculas | • Film | https://casa-cinema.xyz/film
+      peliculas | • Serie TV | https://casa-cinema.xyz/serie-tv
+      peliculas | •• Miniserie | https://casa-cinema.xyz/miniserie-tv
 == lista "Generi"
    -> 40 voci
-      peliculas | Animazione | https://casa-cinema.lol/animazione/
-      peliculas | Avventura | https://casa-cinema.lol/avventura/
-      peliculas | Biografico | https://casa-cinema.lol/biografico/
-      peliculas | Commedia | https://casa-cinema.lol/commedia/
+      peliculas | Animazione | https://casa-cinema.xyz/animazione/
+      peliculas | Avventura | https://casa-cinema.xyz/avventura/
+      peliculas | Biografico | https://casa-cinema.xyz/biografico/
+      peliculas | Commedia | https://casa-cinema.xyz/commedia/
 == peliculas su "Prossimamente"
    -> 17 voci
-      findvideos | La fine di Oak Street  | https://casa-cinema.lol/gratis/34552-guarda-la-fine-di-oak-street-streaming-online-ita.html
-      findvideos | Masters of the Universe | https://casa-cinema.lol/gratis/33777-guarda-masters-of-the-universe-streaming-community-online-ita.h
-      findvideos | The Rapture  | https://casa-cinema.lol/gratis/23739-guarda-the-rapture-streaming-online-ita.html
-      findvideos | La donna più ricca del mondo  | https://casa-cinema.lol/gratis/33182-guarda-la-donna-piu-ricca-del-mondo-streaming-online-ita.html
+      findvideos | La fine di Oak Street  | https://casa-cinema.xyz/gratis/34552-guarda-la-fine-di-oak-street-streaming-online-ita.html
+      findvideos | Masters of the Universe | https://casa-cinema.xyz/gratis/33777-guarda-masters-of-the-universe-streaming-community-online-ita.h
+      findvideos | The Rapture  | https://casa-cinema.xyz/gratis/23739-guarda-the-rapture-streaming-online-ita.html
+      findvideos | La donna più ricca del mondo  | https://casa-cinema.xyz/gratis/33182-guarda-la-donna-piu-ricca-del-mondo-streaming-online-ita.html
 == findvideos su "La fine di Oak Street "
    -> 2 voci
       play | La fine di Oak Street  | https://v.vidxgo.co/27165187
-      add_pelicula_to_library | txt30161 %s | https://casa-cinema.lol/gratis/34552-guarda-la-fine-di-oak-street-streaming-online-ita.html
+      add_pelicula_to_library | txt30161 %s | https://casa-cinema.xyz/gratis/34552-guarda-la-fine-di-oak-street-streaming-online-ita.html
 == risoluzione vidxgo https://v.vidxgo.co/27165187
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (4)
@@ -29,7 +29,10 @@ Canale casacinema | indirizzo https://casa-cinema.lol
     tvshow | '/serie-tv'
     tvshow | ('Miniserie ', ['/miniserie-tv', 'peliculas', ''])
 == controllo di tutte le sezioni
-   SEZIONE Generi -> ERRORE WebErrorException
+   SEZIONE Animazione -> OK 16 
+   SEZIONE Avventura -> OK 16 
+   SEZIONE Biografico -> OK 16 
+   SEZIONE Generi -> SOTTOMENU  
    SEZIONE • Film -> OK 16 
    SEZIONE • Serie TV -> OK 16 
    SEZIONE •• Miniserie -> OK 16 
@@ -40,6 +43,5 @@ Canale casacinema | indirizzo https://casa-cinema.lol
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar - La leggenda di Aang
       PROBLEMA: tipo undefined, in Kodi appare come cartella: L'ultimo dominatore dell'aria
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar Aang: L’ultimo dominatore dell’aria
-SEZIONI: 4 ok su 5
-   SEZIONE SENZA TITOLI: Generi | ERRORE WebErrorException
+SEZIONI: 5 ok su 5
 VERDETTO: ARRIVA AL VIDEO

@@ -21,7 +21,7 @@ Sito: https://www.animeworld.ac | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
 
 ### casacinema
-Sito: https://casa-cinema.lol | verdetto: ARRIVA AL VIDEO
+Sito: https://casa-cinema.xyz | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
 ### cinetecadibologna
@@ -29,7 +29,7 @@ Sito: http://cinestore.cinetecadibologna.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/x-flv
 
 ### guardaseriecam
-Sito: https://guardaseriex.lol | verdetto: ARRIVA AL VIDEO
+Sito: https://guardaseriex.help | verdetto: ARRIVA AL VIDEO
 - server vidxgo: VIDEO OK m3u8 200
 
 ### guardaserieicu
@@ -45,12 +45,12 @@ Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
 
 ### streamingcommunity
-Sito: https://streamingcommunityz.dad | verdetto: ARRIVA AL VIDEO
+Sito: https://streamingcommunityz.mov | verdetto: ARRIVA AL VIDEO
 - server streamingcommunityws: VIDEO OK m3u8 200
 
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
-- server voe: VIDEO OK m3u8 200
+- server voe: VIDEO OK m3u8 206
 
 ## SI FERMA AL SERVER O AL VIDEO (5)
 
@@ -60,7 +60,7 @@ Sito: https://altadefinizione-01.ws | verdetto: SI FERMA AL SERVER O AL VIDEO: N
 - server vixsrc: VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video
 
 ### cineblog001
-Sito: https://cineblog001.run | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+Sito: https://cineblog001.cafe | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
 ### cineblog01
@@ -73,7 +73,7 @@ Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RI
 - server mega: SERVER NON RISOLVE 
 
 ### tantifilm
-Sito: https://tanti-film.tattoo | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+Sito: https://tanti-film.my | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
 ## SI FERMA PRIMA DEL VIDEO (38)
@@ -84,10 +84,8 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista "Most Popular "
-- passo "lista "Most Popular "": VUOTO 
-- passo "lista ""Soul 'n Blues Christmas" — With Charles"": VUOTO 
-- passo "lista "Signature Channels "": VUOTO 
+Sito:  | verdetto: SI FERMA A: lista ""Alabanzas Navideñas" — Musica Navideña "
+- passo "lista ""Alabanzas Navideñas" — Musica Navideña "": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -151,13 +149,13 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.skin | verdetto: SI FERMA A: lista "• Serie TV"
-- passo "lista "• Serie TV"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
-- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk 
-- passo "findvideos su "1x01 - Appucundria "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/qn9rz50y 
+Sito: https://eurostream.skin | verdetto: SI FERMA A: findvideos su "1x01 - Episodio 01 "
+- passo "findvideos su "1x01 - Episodio 01 "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/vm8fiwevpcdk 
+- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty 
+- passo "findvideos su "1x01 - Pilota "": ERRORE     ^^^^^   File "/tmp/kh/addon/channels/eurostreaming.py", line 107, in findvideos     raise Exception('Manca qualche server') Exception: Manca qualche server 
 
 ### eurostreaming_actor
-Sito: https://guardaseriex.lol | verdetto: SI FERMA A: lista "• Aggiornamenti"
+Sito: https://guardaseriex.help | verdetto: SI FERMA A: lista "• Aggiornamenti"
 - passo "lista "• Aggiornamenti"": VUOTO 
 
 ### filmpertutti
@@ -212,9 +210,9 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Serie TV"": VUOTO 
 
 ### mediasetplay
-Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Cash out - I maghi del furto"
-- passo "findvideos su "Cash out - I maghi del furto"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Il segreto del suo passato"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "The foreigner"
+- passo "findvideos su "The foreigner"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "La prima cosa bella"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo

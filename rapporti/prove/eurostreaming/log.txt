@@ -6,29 +6,48 @@ Canale eurostreaming | indirizzo https://eurostream.skin
       peliculas | • Aggiornamenti | https://eurostream.skin/nuovi-ep-aggiornamento/
       peliculas | • Archivio | https://eurostream.skin/category/serie-tv-archive/
 == lista "• Serie TV"
+   -> 19 voci
+      episodios | The Good Daughter | https://eurostream.homes/the-good-daughter/
+      episodios | One Piece | https://eurostream.homes/one-piece-14/
+      episodios | Pennyworth | https://eurostream.homes/pennyworth/
+      episodios | Gialappa’s Show | https://eurostream.homes/gialappas-show-2023-q/
+== episodios su "The Good Daughter"
+   -> 13 voci
+      findvideos | 1x01 - Episodio 01  | https://eurostream.homes/the-good-daughter/
+      findvideos | 1x02 - Episodio 02  | https://eurostream.homes/the-good-daughter/
+      findvideos | 1x03 - Episodio 03  | https://eurostream.homes/the-good-daughter/
+      findvideos | 1x04 - Episodio 04  | https://eurostream.homes/the-good-daughter/
+== findvideos su "1x01 - Episodio 01 "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
         ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
-    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
-                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/support.py", line 614, in wrapper
-    raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel)
-platformcode.logger.WebErrorException
+  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
+    r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
+                                                                                                  ^^^^^
+  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
+    itemlist = support.server(item, item.other)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/support.py", line 1287, in server
+    itemList = servertools.find_video_items(data=str(data))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
+    data = unshortenit.findlinks(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Not un-shortened link: https://clicka.cc/delta/vm8fiwevpcdk
 
 == lista "• Anime"
    -> 19 voci
-      episodios | Bass X Machina | https://eurostream.skin/bass-x-machina/
-      episodios | Daemons of the Shadow Realm | https://eurostream.skin/daemons-of-the-shadow-realm/
-      episodios | Adventure Time: Missioni leggendarie | https://eurostream.skin/adventure-time-side-quests/
-      episodios | Avatar: I Sette Rifugi | https://eurostream.skin/avatar-sette-rifugi/
+      episodios | Bass X Machina | https://eurostream.homes/bass-x-machina/
+      episodios | Daemons of the Shadow Realm | https://eurostream.homes/daemons-of-the-shadow-realm/
+      episodios | Adventure Time: Missioni leggendarie | https://eurostream.homes/adventure-time-side-quests/
+      episodios | Avatar: I Sette Rifugi | https://eurostream.homes/avatar-sette-rifugi/
 == episodios su "Bass X Machina"
    -> 7 voci
-      findvideos | 1x01 - Fino ad allora… sono Bass Reeves  | https://eurostream.skin/bass-x-machina/
-      findvideos | 1x02 - Come chiedere una pallottola  | https://eurostream.skin/bass-x-machina/
-      findvideos | 1x03 - Quello non sembra Dio  | https://eurostream.skin/bass-x-machina/
-      findvideos | 1x04 - Questo treno verrà integrato  | https://eurostream.skin/bass-x-machina/
+      findvideos | 1x01 - Fino ad allora… sono Bass Reeves  | https://eurostream.homes/bass-x-machina/
+      findvideos | 1x02 - Come chiedere una pallottola  | https://eurostream.homes/bass-x-machina/
+      findvideos | 1x03 - Quello non sembra Dio  | https://eurostream.homes/bass-x-machina/
+      findvideos | 1x04 - Questo treno verrà integrato  | https://eurostream.homes/bass-x-machina/
 == findvideos su "1x01 - Fino ad allora… sono Bass Reeves "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -46,21 +65,21 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk
+Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 2x01 - Piedone - Uno sbirro a Napoli - Scugnizzi | https://eurostream.skin/piedone-uno-sbirro-a-napoli/
-      episodios | 3x09 - Wild Cards (2025) - Crimini alla Ridgemont High , 3x1 | https://eurostream.skin/wild-cards-2025/
-      episodios | 1x01 - Una Finestra Vista Lago - Nome d'arte Doris Brilli ,  | https://eurostream.skin/una-finestra-vista-lago/
-      episodios | 4x04 - The Gilded Age - Buon gusto | https://eurostream.skin/the-gilded-age-5/
-== episodios su "2x01 - Piedone - Uno sbirro a Napoli - S"
-   -> 6 voci
-      findvideos | 1x01 - Appucundria  | https://eurostream.skin/piedone-uno-sbirro-a-napoli/
-      findvideos | 1x02 - Scuorno  | https://eurostream.skin/piedone-uno-sbirro-a-napoli/
-      findvideos | 1x03 - Oltre il confine  | https://eurostream.skin/piedone-uno-sbirro-a-napoli/
-      findvideos | 1x04 - Anema e core  | https://eurostream.skin/piedone-uno-sbirro-a-napoli/
-== findvideos su "1x01 - Appucundria "
+      episodios | 3x01 - Pennyworth - Chi è chi , 3x10 Matrimonio nelle Highla | https://eurostream.homes/pennyworth/
+      episodios | 8x06 - Gialappa’s Show - Episodio 6 | https://eurostream.homes/gialappas-show-2023-q/
+      episodios | 3x05 - Georgie & Mandy's First Marriage - Un atteggiamento a | https://eurostream.homes/georgie-mandys-first-marriage/
+      episodios | 4x167 - Forbidden Fruit - Episodio 167 | https://eurostream.homes/forbidden-fruit/
+== episodios su "3x01 - Pennyworth - Chi è chi , 3x10 Mat"
+   -> 51 voci
+      findvideos | 1x01 - Pilota  | https://eurostream.homes/pennyworth/
+      findvideos | 1x02 - La Figlia del Padrone  | https://eurostream.homes/pennyworth/
+      findvideos | 1x04 - Martha Kane  | https://eurostream.homes/pennyworth/
+      findvideos | 1x04 - Lady Penelope  | https://eurostream.homes/pennyworth/
+== findvideos su "1x01 - Pilota "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -68,16 +87,9 @@ Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 148, in <lambda>
     r = passo('%s su "%s"' % (it.action, re.sub(r'\[[^\]]*\]', '', it.title or '')[:40]), lambda: f(it))
                                                                                                   ^^^^^
-  File "/tmp/kh/addon/channels/eurostreaming.py", line 103, in findvideos
-    itemlist = support.server(item, item.other)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/support.py", line 1287, in server
-    itemList = servertools.find_video_items(data=str(data))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
-    data = unshortenit.findlinks(data)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/mix/qn9rz50y
+  File "/tmp/kh/addon/channels/eurostreaming.py", line 107, in findvideos
+    raise Exception('Manca qualche server')
+Exception: Manca qualche server
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -88,7 +100,8 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Serie TV -> OK 18 
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
+      PROBLEMA: titolo rovinato: 3x05 - Georgie & Mandy's First Marriage - Un atteggiamento arrogante e
    SEZIONE • Archivio -> OK 18 
    SEZIONE txt70741 … -> OK 11 
 SEZIONI: 5 ok su 5
-VERDETTO: SI FERMA A: lista "• Serie TV"
+VERDETTO: SI FERMA A: findvideos su "1x01 - Episodio 01 "

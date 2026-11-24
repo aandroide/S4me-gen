@@ -6,12 +6,12 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 130 voci
+   -> 129 voci
+      findvideos | The foreigner | https://mediasetinfinity.mediaset.it/movie/theforeigner/the-foreigner_F308881001000102
       findvideos | Cash out - I maghi del furto | https://mediasetinfinity.mediaset.it/movie/cashoutimaghidelfurto/cash-out-i-maghi-del-furto_F3128023
       findvideos | Alex l'ariete | https://mediasetinfinity.mediaset.it/movie/alexlariete/alex-lariete_F010394901000101
       findvideos | Bumblebee | https://mediasetinfinity.mediaset.it/movie/bumblebee/bumblebee_F309330601000102
-      findvideos | 90 minuti per salvarla | https://mediasetinfinity.mediaset.it/movie/90minutipersalvarla/90-minuti-per-salvarla_F3023797010001
-== findvideos su "Cash out - I maghi del furto"
+== findvideos su "The foreigner"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 20 voci
-      findvideos | Il segreto del suo passato | https://mediasetinfinity.mediaset.it/movie/ilsegretodelsuopassato/il-segreto-del-suo-passato_F309468
-      findvideos | Maigret e la casa del giudice | https://mediasetinfinity.mediaset.it/movie/maigretelacasadelgiudice/maigret-e-la-casa-del-giudice_F0
-      findvideos | Il dono più grande | https://mediasetinfinity.mediaset.it/movie/ildonopiugrande/il-dono-piu-grande_F311243601000104
-      findvideos | Cash out - I maghi del furto | https://mediasetinfinity.mediaset.it/movie/cashoutimaghidelfurto/cash-out-i-maghi-del-furto_F3128023
-== findvideos su "Il segreto del suo passato"
+   -> 21 voci
+      findvideos | La prima cosa bella | https://mediasetinfinity.mediaset.it/movie/laprimacosabella/la-prima-cosa-bella_F301623501000101
+      findvideos | Voglio stare sotto al letto | https://mediasetinfinity.mediaset.it/movie/vogliostaresottoalletto/voglio-stare-sotto-al-letto_F0101
+      findvideos | I babysitter | https://mediasetinfinity.mediaset.it/movie/ibabysitter/i-babysitter_F307566701000101
+      findvideos | L'agenzia dei bugiardi | https://mediasetinfinity.mediaset.it/movie/lagenziadeibugiardi/lagenzia-dei-bugiardi_F30862370100010
+== findvideos su "La prima cosa bella"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -90,67 +90,70 @@ Nessuna voce da riprodurre trovata
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 46 
    SEZIONE Replay -> OK 23 
-   SEZIONE •• Tutti i Film -> OK 57 
+   SEZIONE •• Tutti i Film -> OK 58 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 5 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 2 
-   SEZIONE NCIS: Los Angeles 7 -> OK 3 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 3 
+   SEZIONE Chicago Fire 2 -> OK 11 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Segreti di famiglia 3 -> OK 5 
    SEZIONE Innocence -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
-   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE Beautiful -> OK 6 
+   SEZIONE Tempesta d'amore -> OK 3 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
-   SEZIONE •• Animazione Made in Japan -> OK 1 
+   SEZIONE Dragon Ball Daima -> OK 17 
+   SEZIONE Captain Tsubasa 2 -> OK 33 
+   SEZIONE One Piece 18 -> OK 2 
+   SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
    SEZIONE I Simpson -> OK 5 
    SEZIONE Law & Order: i due volti della giustizia 24 -> OK 2 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 2 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 3 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
    SEZIONE Racconto di una notte -> OK 4 
-   SEZIONE Forbidden Fruit 4 -> OK 4 
+   SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE •• Serie Turche -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Tu Si Que Vales 2026 -> OK 6 
    SEZIONE Le Iene presentano: Inside Autunno 2026 -> OK 2 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
-   SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE Ore 11 -> OK 3 
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
+   SEZIONE Caduta libera 2026/2027 -> OK 4 
    SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
-   SEZIONE Amici 26 -> OK 10 
-   SEZIONE Tu Si Que Vales 2026 -> OK 6 
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
+   SEZIONE Amici 26 -> OK 10 
+   SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Lo straordinario mondo di Gumball -> OK 7 
+   SEZIONE Captain Tsubasa 2 -> OK 33 
    SEZIONE Teen Titans Go! -> OK 10 
-   SEZIONE Captain Tsubasa 2 -> OK 31 
    SEZIONE •• Kids Boing -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Paw Patrol -> OK 5 
-   SEZIONE La casa delle bambole di Gabby -> OK 2 
    SEZIONE Chi ha sfidato Ninna e Matti? -> OK 15 
+   SEZIONE Hey Duggee -> OK 5 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
+   SEZIONE Pollyanna -> OK 28 
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
-   SEZIONE Pollyanna -> OK 25 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 14 
+   SEZIONE •• Tutti i Documentari -> OK 15 
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
-   SEZIONE Enigmi alieni 10 -> OK 7 
+   SEZIONE Enigmi alieni 10 -> OK 6 
    SEZIONE Prove sepolte - Le avventure dell'archeologia -> OK 7 
-   SEZIONE Enigmi alieni 13 -> OK 4 
+   SEZIONE Universo ai raggi X 5 -> OK 8 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE •• Film Documentari di Focus -> OK 20 
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE txt70741 … -> OK 20 
 SEZIONI: 24 ok su 24
-VERDETTO: SI FERMA A: findvideos su "Cash out - I maghi del furto"
+VERDETTO: SI FERMA A: findvideos su "The foreigner"

@@ -10,20 +10,20 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 130
+   "voci": 129
   },
   {
-   "passo": "findvideos su \"Cash out - I maghi del furto\"",
+   "passo": "findvideos su \"The foreigner\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 20
+   "voci": 21
   },
   {
-   "passo": "findvideos su \"Il segreto del suo passato\"",
+   "passo": "findvideos su \"La prima cosa bella\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 57
+   "titoli": 58
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -111,7 +111,7 @@
    "voce": "•• Fiction e Serie Tv del momento",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 18,
+   "sottovoci": 20,
    "figli": [
     {
      "voce": "Viola come il mare - Terza stagione",
@@ -123,13 +123,13 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 3
     },
     {
-     "voce": "NCIS: Los Angeles 7",
+     "voce": "Chicago Fire 2",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 11
     }
    ]
   },
@@ -166,12 +166,6 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Tutto per la mia famiglia 2",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
-    },
-    {
      "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
@@ -182,6 +176,12 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
+    },
+    {
+     "voce": "Tempesta d'amore",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 3
     }
    ]
   },
@@ -194,8 +194,28 @@
   {
    "voce": "•• Animazione Made in Japan",
    "azione": "peliculas",
-   "esito": "OK",
-   "titoli": 1
+   "esito": "SOTTOMENU",
+   "sottovoci": 20,
+   "figli": [
+    {
+     "voce": "Dragon Ball Daima",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 17
+    },
+    {
+     "voce": "Captain Tsubasa 2",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 33
+    },
+    {
+     "voce": "One Piece 18",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 2
+    }
+   ]
   },
   {
    "voce": "•• Serie TV Piu Viste",
@@ -219,7 +239,7 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 3
     }
    ]
   },
@@ -236,10 +256,10 @@
      "titoli": 4
     },
     {
-     "voce": "Forbidden Fruit 4",
+     "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 5
     },
     {
      "voce": "Tutto per la mia famiglia 2",
@@ -253,7 +273,7 @@
    "voce": "•• Programmi TV Prima serata",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 12,
+   "sottovoci": 13,
    "figli": [
     {
      "voce": "Grande Fratello VIP - Autunno 2026",
@@ -282,12 +302,6 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Uomini e Donne 2026/2027",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 10
-    },
-    {
      "voce": "Ore 11",
      "azione": "epmenu",
      "esito": "OK",
@@ -298,6 +312,12 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
+    },
+    {
+     "voce": "Caduta libera 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
     }
    ]
   },
@@ -308,22 +328,22 @@
    "sottovoci": 100,
    "figli": [
     {
+     "voce": "Grande Fratello VIP - Autunno 2026",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
+    },
+    {
      "voce": "Amici 26",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
     },
     {
-     "voce": "Tu Si Que Vales 2026",
+     "voce": "Uomini e Donne 2026/2027",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
-    },
-    {
-     "voce": "Grande Fratello VIP - Autunno 2026",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 6
+     "titoli": 10
     }
    ]
   },
@@ -343,16 +363,16 @@
      "titoli": 7
     },
     {
+     "voce": "Captain Tsubasa 2",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 33
+    },
+    {
      "voce": "Teen Titans Go!",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 10
-    },
-    {
-     "voce": "Captain Tsubasa 2",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 31
     }
    ]
   },
@@ -360,7 +380,7 @@
    "voce": "•• Kids Cartoonito",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 14,
+   "sottovoci": 15,
    "figli": [
     {
      "voce": "Paw Patrol",
@@ -369,16 +389,16 @@
      "titoli": 5
     },
     {
-     "voce": "La casa delle bambole di Gabby",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 2
-    },
-    {
      "voce": "Chi ha sfidato Ninna e Matti?",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 15
+    },
+    {
+     "voce": "Hey Duggee",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
     }
    ]
   },
@@ -388,6 +408,12 @@
    "esito": "SOTTOMENU",
    "sottovoci": 7,
    "figli": [
+    {
+     "voce": "Pollyanna",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 28
+    },
     {
      "voce": "C'era una volta... Pollon",
      "azione": "epmenu",
@@ -399,12 +425,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 52
-    },
-    {
-     "voce": "Pollyanna",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 25
     }
    ]
   },
@@ -415,7 +435,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 14
+   "titoli": 15
   },
   {
    "voce": "•• Documentari più visti",
@@ -430,7 +450,7 @@
      "voce": "Enigmi alieni 10",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 6
     },
     {
      "voce": "Prove sepolte - Le avventure dell'archeologia",
@@ -439,10 +459,10 @@
      "titoli": 7
     },
     {
-     "voce": "Enigmi alieni 13",
+     "voce": "Universo ai raggi X 5",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 8
     }
    ]
   },
@@ -464,5 +484,5 @@
  ],
  "sezioni_riepilogo": "24 ok su 24",
  "rete": [],
- "verdetto": "SI FERMA A: findvideos su \"Cash out - I maghi del furto\""
+ "verdetto": "SI FERMA A: findvideos su \"The foreigner\""
 }

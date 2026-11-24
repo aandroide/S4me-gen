@@ -1,29 +1,29 @@
-Canale tantifilm | indirizzo https://tanti-film.tattoo
+Canale tantifilm | indirizzo https://tanti-film.my
 == mainlist
    -> 5 voci
-      genres | Generi | https://tanti-film.tattoo
-      peliculas | • Film | https://tanti-film.tattoo/film
-      peliculas | • Serie TV | https://tanti-film.tattoo/serie-tv/
-      search | txt70741 … | https://tanti-film.tattoo
+      genres | Generi | https://tanti-film.my
+      peliculas | • Film | https://tanti-film.my/film
+      peliculas | • Serie TV | https://tanti-film.my/serie-tv/
+      search | txt70741 … | https://tanti-film.my
 == lista "Generi"
    -> 40 voci
-      peliculas | Animazione | https://tanti-film.tattoo/animazione/
-      peliculas | Avventura | https://tanti-film.tattoo/avventura/
-      peliculas | Biografico | https://tanti-film.tattoo/biografico/
-      peliculas | Commedia | https://tanti-film.tattoo/commedia/
+      peliculas | Animazione | https://tanti-film.my/animazione/
+      peliculas | Avventura | https://tanti-film.my/avventura/
+      peliculas | Biografico | https://tanti-film.my/biografico/
+      peliculas | Commedia | https://tanti-film.my/commedia/
 == peliculas su "Prossimamente"
    -> 26 voci
-      check | Rammstein: Live in Mexico City  | https://tanti-film.tattoo/guarda/35817-rammstein-live-in-mexico-city-streaming-streaming-hd.html
-      check | Good Luck, Have Fun, Don't Die  | https://tanti-film.tattoo/guarda/35808-good-luck-have-fun-don-t-die-streaming-streaming-hd.html
-      check | Primetime Preacher$: Storia di un telepredicatore  | https://tanti-film.tattoo/guarda/35807-primetime-preacher-storia-di-un-telepredicatore-streaming-str
-      check | Profumo di bergamotto  | https://tanti-film.tattoo/guarda/35803-profumo-di-bergamotto-streaming-streaming-hd.html
+      check | Rammstein: Live in Mexico City  | https://tanti-film.my/guarda/35817-rammstein-live-in-mexico-city-streaming-streaming-hd.html
+      check | Good Luck, Have Fun, Don't Die  | https://tanti-film.my/guarda/35808-good-luck-have-fun-don-t-die-streaming-streaming-hd.html
+      check | Primetime Preacher$: Storia di un telepredicatore  | https://tanti-film.my/guarda/35807-primetime-preacher-storia-di-un-telepredicatore-streaming-streami
+      check | Profumo di bergamotto  | https://tanti-film.my/guarda/35803-profumo-di-bergamotto-streaming-streaming-hd.html
 == check su "Rammstein: Live in Mexico City "
    -> 2 voci
       play | Rammstein: Live in Mexico City  | https://v.vidxgo.co/46000907
-      add_pelicula_to_library | txt30161 %s | https://tanti-film.tattoo/guarda/35817-rammstein-live-in-mexico-city-streaming-streaming-hd.html
+      add_pelicula_to_library | txt30161 %s | https://tanti-film.my/guarda/35817-rammstein-live-in-mexico-city-streaming-streaming-hd.html
 == risoluzione vidxgo https://v.vidxgo.co/46000907
    api /t/ 46000907 referer https://v.vidxgo.co/46000907 -> 404 {"error":"not found"}
-   api /t/ 46000907 referer https://tanti-film.tattoo/ -> 404 {"error":"not found"}
+   api /t/ 46000907 referer https://tanti-film.my/ -> 404 {"error":"not found"}
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == voci dichiarate in mainlist (3)
     top | ('Generi', ['', 'genres'])
@@ -35,7 +35,7 @@ Canale tantifilm | indirizzo https://tanti-film.tattoo
    SEZIONE Biografico -> OK 20 
    SEZIONE Generi -> SOTTOMENU  
    SEZIONE • Film -> OK 20 
-   SEZIONE • Serie TV -> OK 16 
+   SEZIONE • Serie TV -> OK 6 
    SEZIONE txt70741 … -> OK 11 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Avatar
       PROBLEMA: tipo undefined, in Kodi appare come cartella: Wizards

@@ -50,21 +50,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 21 
-   SEZIONE Rai 2 -> OK 20 
-   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE Rai 1 -> OK 23 
+   SEZIONE Rai 2 -> OK 23 
+   SEZIONE Rai 3 -> OK 23 
+   SEZIONE str12 24 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 31 
+   SEZIONE Rai 2 -> OK 30 
+   SEZIONE Rai 3 -> OK 29 
    SEZIONE str11 23 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 33 
    SEZIONE Rai 2 -> OK 33 
-   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE Rai 3 -> OK 22 
    SEZIONE str17 22 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 29 
-   SEZIONE Rai 2 -> ERRORE JSONDecodeError
-   SEZIONE Rai 3 -> OK 31 
-   SEZIONE str16 21 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
-   SEZIONE Novità -> OK 21 
-   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Novità -> OK 22 
+   SEZIONE Da non perdere -> OK 25 
    SEZIONE Film al Torino Film Festival -> OK 21 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 25 
@@ -75,13 +75,13 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Drama -> OK 13 
    SEZIONE Serie Original RaiPlay -> OK 24 
    SEZIONE Serie Internazionali -> SOTTOMENU  
-   SEZIONE Intrattenimento -> OK 23 
+   SEZIONE Intrattenimento -> OK 24 
    SEZIONE Territori e itinerari -> OK 34 
-   SEZIONE Approfondimento -> OK 27 
+   SEZIONE Approfondimento -> OK 30 
    SEZIONE Programmi TV -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 24 
    SEZIONE Docu-serie Original -> OK 29 
-   SEZIONE Documentari Original -> OK 25 
+   SEZIONE Documentari Original -> OK 24 
    SEZIONE Documentari -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 24 
    SEZIONE 24 Novembre - Auguri a Carlo Collodi, 200 anni di Pinocchio! -> OK 6 
@@ -91,7 +91,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Un mondo di fumetti -> OK 15 
    SEZIONE Coming of age Stories -> OK 29 
    SEZIONE Teen -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 23 
+   SEZIONE Da non perdere -> OK 24 
    SEZIONE Il teatro di Eduardo -> OK 25 
    SEZIONE Musica classica -> OK 24 
    SEZIONE Musica e Teatro -> SOTTOMENU  

@@ -1,6 +1,6 @@
 {
  "canale": "eurostreaming_actor",
- "host": "https://guardaseriex.lol",
+ "host": "https://guardaseriex.help",
  "passi": [
   {
    "passo": "mainlist",
@@ -35,9 +35,9 @@
    "esito": "VUOTA",
    "pagine": [
     {
-     "url": "https://guardaseriex.lol",
+     "url": "https://guardaseriex.help",
      "status": 200,
-     "byte": 108192,
+     "byte": 108181,
      "titolo_pagina": "Guardaserie - Serie TV Streaming Complete GRATIS"
     }
    ]
@@ -48,9 +48,9 @@
    "esito": "VUOTA",
    "pagine": [
     {
-     "url": "https://guardaseriex.lol/animazione/",
+     "url": "https://guardaseriex.help/animazione/",
      "status": 200,
-     "byte": 1531545,
+     "byte": 1533702,
      "titolo_pagina": "Animazione streaming | Guardaserie"
     }
    ]
@@ -61,7 +61,7 @@
    "esito": "VUOTA",
    "pagine": [
     {
-     "url": "https://guardaseriex.lol/aggiornamento-episodi/",
+     "url": "https://guardaseriex.help/aggiornamento-episodi/",
      "status": 404,
      "byte": 764,
      "titolo_pagina": "404 | Not Found"
@@ -74,9 +74,9 @@
    "esito": "VUOTA",
    "pagine": [
     {
-     "url": "https://guardaseriex.lol/index.php?story=avatar&do=search&subaction=search",
+     "url": "https://guardaseriex.help/index.php?story=avatar&do=search&subaction=search",
      "status": 200,
-     "byte": 38185,
+     "byte": 38266,
      "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS"
     }
    ]
@@ -85,58 +85,58 @@
  "sezioni_riepilogo": "0 ok su 4",
  "rete": [
   {
-   "url": "https://guardaseriex.lol",
+   "url": "https://guardaseriex.help",
    "status": 200,
-   "byte": 108192,
-   "secondi": 0.4,
+   "byte": 108181,
+   "secondi": 0.3,
    "titolo_pagina": "Guardaserie - Serie TV Streaming Complete GRATIS",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://guardaseriex.lol/animazione/",
+   "url": "https://guardaseriex.help/animazione/",
    "status": 200,
-   "byte": 1531545,
-   "secondi": 0.8,
+   "byte": 1533702,
+   "secondi": 0.6,
    "titolo_pagina": "Animazione streaming | Guardaserie",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://guardaseriex.lol/aggiornamento-episodi/",
+   "url": "https://guardaseriex.help/aggiornamento-episodi/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.6,
+   "secondi": 0.4,
    "titolo_pagina": "404 | Not Found",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://guardaseriex.lol",
+   "url": "https://guardaseriex.help",
    "status": 200,
-   "byte": 108192,
+   "byte": 108181,
    "secondi": 0.4,
    "titolo_pagina": "Guardaserie - Serie TV Streaming Complete GRATIS",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://guardaseriex.lol/animazione/",
+   "url": "https://guardaseriex.help/animazione/",
    "status": 200,
-   "byte": 1531545,
-   "secondi": 0.8,
+   "byte": 1533702,
+   "secondi": 0.5,
    "titolo_pagina": "Animazione streaming | Guardaserie",
    "file": "pagine/05.html"
   },
   {
-   "url": "https://guardaseriex.lol/aggiornamento-episodi/",
+   "url": "https://guardaseriex.help/aggiornamento-episodi/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "404 | Not Found",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://guardaseriex.lol/index.php?story=avatar&do=search&subaction=search",
+   "url": "https://guardaseriex.help/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 38185,
-   "secondi": 0.9,
+   "byte": 38266,
+   "secondi": 0.6,
    "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS",
    "file": "pagine/07.html"
   }
