@@ -6,6 +6,9 @@ Riepilogo: ARRIVA AL VIDEO 12, SI FERMA AL SERVER O AL VIDEO 5, SI FERMA PRIMA D
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.ink | verdetto: ARRIVA AL VIDEO
+- passo "lista "• Film"": VUOTO 
+- server vidxgo: VIDEO OK m3u8 200
+- server vidxgo: VIDEO OK m3u8 200
 - server vidxgo: VIDEO OK m3u8 200
 
 ### animesaturn
@@ -50,7 +53,7 @@ Sito: https://streamingcommunityz.mov | verdetto: ARRIVA AL VIDEO
 
 ### toonitalia
 Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
-- server voe: VIDEO OK m3u8 206
+- server voe: VIDEO OK m3u8 200
 
 ## SI FERMA AL SERVER O AL VIDEO (5)
 
@@ -84,8 +87,9 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: lista ""Alabanzas Navideñas" — Musica Navideña "
-- passo "lista ""Alabanzas Navideñas" — Musica Navideña "": VUOTO 
+Sito:  | verdetto: SI FERMA A: lista "Most Popular "
+- passo "lista "Most Popular "": VUOTO 
+- passo "lista ""The Carols Catalogue "Expert Mode" — Fo"": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -149,10 +153,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.skin | verdetto: SI FERMA A: findvideos su "1x01 - Episodio 01 "
-- passo "findvideos su "1x01 - Episodio 01 "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/vm8fiwevpcdk 
-- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/2ri018ty 
-- passo "findvideos su "1x01 - Pilota "": ERRORE     ^^^^^   File "/tmp/kh/addon/channels/eurostreaming.py", line 107, in findvideos     raise Exception('Manca qualche server') Exception: Manca qualche server 
+Sito: https://eurostream.homes | verdetto: SI FERMA A: findvideos su "1x01 - Episodio 1 "
+- passo "findvideos su "1x01 - Episodio 1 "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/hftic10k00t5 
+- passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk 
+- passo "findvideos su "1x01 - Episodio 1 "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/hftic10k00t5 
 
 ### eurostreaming_actor
 Sito: https://guardaseriex.help | verdetto: SI FERMA A: lista "• Aggiornamenti"
@@ -210,9 +214,9 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 - passo "lista "• Serie TV"": VUOTO 
 
 ### mediasetplay
-Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "The foreigner"
-- passo "findvideos su "The foreigner"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "La prima cosa bella"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Demolition man"
+- passo "findvideos su "Demolition man"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "La terza stella"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 - passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo

@@ -7,16 +7,16 @@ Canale streamingcommunity | indirizzo https://streamingcommunityz.mov
       peliculas | • Serie TV | https://streamingcommunityz.mov/it/tv-shows
 == lista "• Film"
    -> 21 voci
+      findvideos | Chiara  | https://streamingcommunityz.mov/it/watch/66660
+      findvideos | Perfetti bugiardi  | https://streamingcommunityz.mov/it/watch/66641
       findvideos | A Story of Derry  | https://streamingcommunityz.mov/it/watch/66468
       findvideos | Drive - Cuori in pista  | https://streamingcommunityz.mov/it/watch/66440
-      findvideos | Clayface  | https://streamingcommunityz.mov/it/watch/65705
-      findvideos | Street Fighter  | https://streamingcommunityz.mov/it/watch/65706
-== findvideos su "A Story of Derry "
+== findvideos su "Chiara "
    -> 2 voci
-      play | A Story of Derry  | https://streamingcommunityz.mov/it/iframe/66468
-      add_pelicula_to_library | txt30161 %s | https://streamingcommunityz.mov/it/watch/66468
-   play del canale -> streamingcommunityws https://streamingcommunityz.mov/it/iframe/66468
-== risoluzione streamingcommunityws https://streamingcommunityz.mov/it/iframe/66468
+      play | Chiara  | https://streamingcommunityz.mov/it/iframe/66660
+      add_pelicula_to_library | txt30161 %s | https://streamingcommunityz.mov/it/watch/66660
+   play del canale -> streamingcommunityws https://streamingcommunityz.mov/it/iframe/66660
+== risoluzione streamingcommunityws https://streamingcommunityz.mov/it/iframe/66660
    -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (15)
     film | '/it/movies'

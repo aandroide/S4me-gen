@@ -28,7 +28,7 @@
    "server": "vidxgo",
    "url": "https://v.vidxgo.co/27165187",
    "tipo": "film",
-   "finale": "http://127.0.0.1:43125/hls/27165187/master.m3u8",
+   "finale": "http://127.0.0.1:43111/hls/27165187/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -105,7 +105,7 @@
    "url": "https://casa-cinema.xyz",
    "status": 200,
    "byte": 38931,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "CasaCinema - Il tuo Cinema Streaming Numero UNO",
    "file": "pagine/01.html"
   },
@@ -113,7 +113,7 @@
    "url": "https://casa-cinema.xyz/prossimamente/",
    "status": 200,
    "byte": 53723,
-   "secondi": 0.1,
+   "secondi": 0.2,
    "titolo_pagina": "Prossimamente al Cinema",
    "file": "pagine/02.html"
   },
@@ -121,7 +121,7 @@
    "url": "https://casa-cinema.xyz/gratis/34552-guarda-la-fine-di-oak-street-streaming-online-ita.html",
    "status": 200,
    "byte": 28219,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "La fine di Oak Street (2026) Streaming HD | CasaCinema",
    "file": "pagine/03.html"
   },
@@ -145,7 +145,7 @@
    "url": "https://casa-cinema.xyz/avventura/",
    "status": 200,
    "byte": 53590,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Avventura Genere Film | Film Streaming",
    "file": "pagine/06.html"
   },
@@ -153,7 +153,7 @@
    "url": "https://casa-cinema.xyz/biografico/",
    "status": 200,
    "byte": 53689,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Biografico Genere Film | Film Streaming",
    "file": "pagine/07.html"
   },
@@ -168,8 +168,8 @@
   {
    "url": "https://casa-cinema.xyz/serie-tv",
    "status": 200,
-   "byte": 53711,
-   "secondi": 0.5,
+   "byte": 53310,
+   "secondi": 0.3,
    "titolo_pagina": "Serie TV in Streaming Gratis - CasaCinema",
    "file": "pagine/09.html"
   },
@@ -177,7 +177,7 @@
    "url": "https://casa-cinema.xyz/miniserie-tv",
    "status": 200,
    "byte": 53252,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/10.html"
   },
@@ -185,7 +185,7 @@
    "url": "https://casa-cinema.xyz/?story=avatar&do=search&subaction=search",
    "status": 200,
    "byte": 29239,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "Site search &raquo; CasaCinema - Il tuo Cinema Streaming Numero UNO",
    "file": "pagine/11.html"
   }

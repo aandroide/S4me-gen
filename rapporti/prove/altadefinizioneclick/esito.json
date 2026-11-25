@@ -9,21 +9,47 @@
   },
   {
    "passo": "lista \"• Film\"",
+   "esito": "VUOTO",
+   "voci": 0
+  },
+  {
+   "passo": "lista \"•• Generi\"",
+   "esito": "OK",
+   "voci": 30
+  },
+  {
+   "passo": "lista \"• Serie TV\"",
    "esito": "OK",
    "voci": 13
   },
   {
-   "passo": "findvideos su \"Anche i fantasmi lo fanno\"",
+   "passo": "episodios su \"The Lowdown\"",
    "esito": "OK",
-   "voci": 2
+   "voci": 15
   }
  ],
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/0089974",
+   "url": "https://v.vidxgo.co/31289994/1/1",
    "tipo": "film",
-   "finale": "http://127.0.0.1:39075/hls/0089974/master.m3u8",
+   "finale": "http://127.0.0.1:41831/hls/tv/31289994/1/1/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  },
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/31289994/1/2",
+   "tipo": "film",
+   "finale": "http://127.0.0.1:33733/hls/tv/31289994/1/2/master.m3u8",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  },
+  {
+   "server": "vidxgo",
+   "url": "https://v.vidxgo.co/31289994/1/3",
+   "tipo": "film",
+   "finale": "http://127.0.0.1:44147/hls/tv/31289994/1/3/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -118,75 +144,107 @@
  "rete": [
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/film/",
-   "status": 200,
-   "byte": 131709,
-   "secondi": 0.6,
-   "titolo_pagina": "Film Streaming - Altadefinizione",
+   "status": 502,
+   "byte": 6464,
+   "secondi": 1.0,
+   "titolo_pagina": "altadefinizionex.stream | 502: Bad gateway",
    "file": "pagine/01.html"
   },
   {
    "url": "https://altadefinizionex.ink/film/",
-   "status": 200,
-   "byte": 131709,
-   "secondi": 0.7,
-   "titolo_pagina": "Film Streaming - Altadefinizione",
+   "status": 502,
+   "byte": 6464,
+   "secondi": 1.2,
+   "titolo_pagina": "altadefinizionex.stream | 502: Bad gateway",
    "file": "pagine/02.html"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/commedia/45621-anche-i-fantasmi-lo-fanno-streaming.html",
-   "status": 200,
-   "byte": 164503,
-   "secondi": 0.2,
-   "titolo_pagina": "",
-   "file": "pagine/03.html"
-  },
-  {
-   "url": "https://altadefinizionex.ink/commedia/45621-anche-i-fantasmi-lo-fanno-streaming.html",
-   "status": 200,
-   "byte": 164503,
-   "secondi": 0.3,
-   "titolo_pagina": "",
-   "file": "pagine/04.html"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/film/",
-   "status": 200,
-   "byte": 131709,
-   "secondi": 0.6,
-   "titolo_pagina": "Film Streaming - Altadefinizione",
-   "file": "pagine/05.html"
-  },
-  {
-   "url": "https://altadefinizionex.ink/film/",
-   "status": 200,
-   "byte": 131709,
-   "secondi": 0.7,
-   "titolo_pagina": "Film Streaming - Altadefinizione",
-   "file": "pagine/06.html"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
    "status": 200,
-   "byte": 507363,
+   "byte": 508708,
    "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
-   "file": "pagine/07.html"
+   "file": "pagine/03.html"
   },
   {
    "url": "https://altadefinizionex.ink",
    "status": 200,
-   "byte": 507363,
-   "secondi": 0.2,
+   "byte": 508708,
+   "secondi": 0.4,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serie-tv/",
+   "status": 200,
+   "byte": 136189,
+   "secondi": 0.6,
+   "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://altadefinizionex.ink/serie-tv/",
+   "status": 200,
+   "byte": 136189,
+   "secondi": 0.7,
+   "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione",
+   "file": "pagine/06.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serie-tv/31529-the-lowdown-streaming.html",
+   "status": 200,
+   "byte": 397510,
+   "secondi": 1.4,
+   "titolo_pagina": "",
+   "file": "pagine/07.html"
+  },
+  {
+   "url": "https://altadefinizionex.ink/serie-tv/31529-the-lowdown-streaming.html",
+   "status": 200,
+   "byte": 397510,
+   "secondi": 1.5,
+   "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/cinema/film",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/film/",
+   "status": 200,
+   "byte": 130126,
+   "secondi": 1.6,
+   "titolo_pagina": "Film Streaming - Altadefinizione",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://altadefinizionex.ink/film/",
+   "status": 200,
+   "byte": 130126,
+   "secondi": 1.7,
+   "titolo_pagina": "Film Streaming - Altadefinizione",
+   "file": "pagine/10.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
+   "status": 200,
+   "byte": 508708,
+   "secondi": 0.4,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
+   "file": "pagine/11.html"
+  },
+  {
+   "url": "https://altadefinizionex.ink",
+   "status": 200,
+   "byte": 508708,
+   "secondi": 0.5,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
+   "file": "pagine/12.html"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/cinema/film",
    "status": 404,
    "byte": 32181,
    "secondi": 0.5,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
-   "file": "pagine/09.html"
+   "file": "pagine/13.html"
   },
   {
    "url": "https://altadefinizionex.ink/cinema/film",
@@ -194,141 +252,137 @@
    "byte": 32181,
    "secondi": 0.6,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
-   "file": "pagine/10.html"
+   "file": "pagine/14.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/cinema/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/cinema/",
    "status": 200,
    "byte": 71803,
-   "secondi": 1.4,
+   "secondi": 0.6,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
-   "file": "pagine/11.html"
+   "file": "pagine/15.html"
   },
   {
    "url": "https://altadefinizionex.ink/cinema/",
    "status": 200,
    "byte": 71803,
-   "secondi": 1.5,
-   "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
-   "file": "pagine/12.html"
+   "secondi": 0.7,
+   "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/azione/film",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/azione/film",
    "status": 200,
-   "byte": 132440,
-   "secondi": 0.8,
-   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
-   "file": "pagine/13.html"
+   "byte": 132571,
+   "secondi": 0.9,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/azione/film",
    "status": 200,
-   "byte": 132440,
-   "secondi": 0.9,
-   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
-   "file": "pagine/14.html"
+   "byte": 132571,
+   "secondi": 1.0,
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/animazione/film",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/animazione/film",
    "status": 200,
-   "byte": 134952,
+   "byte": 135058,
    "secondi": 0.9,
-   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
-   "file": "pagine/15.html"
+   "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/animazione/film",
    "status": 200,
-   "byte": 134952,
+   "byte": 135058,
    "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/serie-tv/",
    "status": 200,
-   "byte": 132126,
-   "secondi": 0.6,
+   "byte": 136189,
+   "secondi": 0.5,
    "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/serie-tv/",
    "status": 200,
-   "byte": 132126,
+   "byte": 136189,
    "secondi": 0.6,
    "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
    "status": 200,
-   "byte": 507363,
+   "byte": 508708,
    "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink",
    "status": 200,
-   "byte": 507363,
-   "secondi": 0.2,
+   "byte": 508708,
+   "secondi": 0.3,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/cinema/serie-tv",
    "status": 404,
    "byte": 32189,
-   "secondi": 0.6,
+   "secondi": 0.5,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/cinema/serie-tv",
    "status": 404,
    "byte": 32189,
-   "secondi": 0.7,
+   "secondi": 0.6,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/cinema/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/cinema/",
    "status": 200,
    "byte": 71803,
-   "secondi": 0.6,
+   "secondi": 0.4,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/cinema/",
    "status": 200,
    "byte": 71803,
-   "secondi": 0.6,
+   "secondi": 0.5,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/azione/serie-tv",
    "status": 200,
-   "byte": 135787,
-   "secondi": 0.8,
+   "byte": 136898,
+   "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/azione/serie-tv",
    "status": 200,
-   "byte": 135787,
-   "secondi": 0.9,
+   "byte": 136898,
+   "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/animazione/serie-tv",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/animazione/serie-tv",
    "status": 200,
-   "byte": 135052,
-   "secondi": 0.9,
+   "byte": 136283,
+   "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/animazione/serie-tv",
    "status": 200,
-   "byte": 135052,
-   "secondi": 1.0,
+   "byte": 136283,
+   "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/archivio?search=avatar&f=all&page=1",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/archivio?search=avatar&f=all&page=1",
    "status": 200,
    "byte": 96111,
    "secondi": 0.9,

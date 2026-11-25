@@ -50,21 +50,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 23 
-   SEZIONE Rai 2 -> OK 23 
-   SEZIONE Rai 3 -> OK 23 
+   SEZIONE Rai 1 -> OK 22 
+   SEZIONE Rai 2 -> OK 24 
+   SEZIONE Rai 3 -> OK 20 
+   SEZIONE str13 25 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 33 
+   SEZIONE Rai 2 -> OK 33 
+   SEZIONE Rai 3 -> OK 31 
    SEZIONE str12 24 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 31 
    SEZIONE Rai 2 -> OK 30 
    SEZIONE Rai 3 -> OK 29 
    SEZIONE str11 23 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 33 
-   SEZIONE Rai 2 -> OK 33 
-   SEZIONE Rai 3 -> OK 22 
-   SEZIONE str17 22 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE Novità -> OK 22 
-   SEZIONE Da non perdere -> OK 25 
+   SEZIONE Da non perdere -> OK 26 
    SEZIONE Film al Torino Film Festival -> OK 21 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 25 
@@ -77,7 +77,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Serie Internazionali -> SOTTOMENU  
    SEZIONE Intrattenimento -> OK 24 
    SEZIONE Territori e itinerari -> OK 34 
-   SEZIONE Approfondimento -> OK 30 
+   SEZIONE Approfondimento -> OK 31 
    SEZIONE Programmi TV -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 24 
    SEZIONE Docu-serie Original -> OK 29 
@@ -103,7 +103,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Generi -> SOTTOMENU SENZA TITOLI  
    SEZIONE Teche Rai -> SOTTOMENU  
    SEZIONE Learning -> ERRORE JSONDecodeError
-   SEZIONE L'offerta -> OK 46 
+   SEZIONE L'offerta -> OK 47 
    SEZIONE Rai Italy -> SOTTOMENU  
    SEZIONE txt70741 … -> OK 8 
       PROBLEMA: tipo undefined, in Kodi appare come cartella: The Avatars

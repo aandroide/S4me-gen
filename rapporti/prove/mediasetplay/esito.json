@@ -13,7 +13,7 @@
    "voci": 129
   },
   {
-   "passo": "findvideos su \"The foreigner\"",
+   "passo": "findvideos su \"Demolition man\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -23,7 +23,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"La prima cosa bella\"",
+   "passo": "findvideos su \"La terza stella\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 58
+   "titoli": 57
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -105,7 +105,7 @@
    "voce": "•• Tutte le Serie TV",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 5
+   "titoli": 6
   },
   {
    "voce": "•• Fiction e Serie Tv del momento",
@@ -123,7 +123,7 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 4
     },
     {
      "voce": "Chicago Fire 2",
@@ -166,6 +166,12 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Tutto per la mia famiglia 2",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
      "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
@@ -176,12 +182,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
-    },
-    {
-     "voce": "Tempesta d'amore",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 3
     }
    ]
   },
@@ -198,16 +198,16 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "Captain Tsubasa 2",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 35
+    },
+    {
      "voce": "Dragon Ball Daima",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 17
-    },
-    {
-     "voce": "Captain Tsubasa 2",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 33
     },
     {
      "voce": "One Piece 18",
@@ -230,16 +230,16 @@
      "titoli": 5
     },
     {
-     "voce": "Law & Order: i due volti della giustizia 24",
+     "voce": "Law & Order: Unità speciale 16",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 11
     },
     {
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 3
+     "titoli": 4
     }
    ]
   },
@@ -250,12 +250,6 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Racconto di una notte",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
-    },
-    {
      "voce": "My Sweet Lie",
      "azione": "epmenu",
      "esito": "OK",
@@ -263,6 +257,12 @@
     },
     {
      "voce": "Tutto per la mia famiglia 2",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
+    },
+    {
+     "voce": "Forbidden Fruit 4",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 4
@@ -366,7 +366,7 @@
      "voce": "Captain Tsubasa 2",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 33
+     "titoli": 35
     },
     {
      "voce": "Teen Titans Go!",
@@ -380,7 +380,7 @@
    "voce": "•• Kids Cartoonito",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 15,
+   "sottovoci": 16,
    "figli": [
     {
      "voce": "Paw Patrol",
@@ -389,13 +389,13 @@
      "titoli": 5
     },
     {
-     "voce": "Chi ha sfidato Ninna e Matti?",
+     "voce": "Hey Duggee",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 15
+     "titoli": 5
     },
     {
-     "voce": "Hey Duggee",
+     "voce": "La casa delle bambole di Gabby",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
@@ -412,7 +412,7 @@
      "voce": "Pollyanna",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 28
+     "titoli": 30
     },
     {
      "voce": "C'era una volta... Pollon",
@@ -435,7 +435,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 15
+   "titoli": 17
   },
   {
    "voce": "•• Documentari più visti",
@@ -450,7 +450,7 @@
      "voce": "Enigmi alieni 10",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 5
     },
     {
      "voce": "Prove sepolte - Le avventure dell'archeologia",
@@ -484,5 +484,5 @@
  ],
  "sezioni_riepilogo": "24 ok su 24",
  "rete": [],
- "verdetto": "SI FERMA A: findvideos su \"The foreigner\""
+ "verdetto": "SI FERMA A: findvideos su \"Demolition man\""
 }

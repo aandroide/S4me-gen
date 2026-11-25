@@ -72,6 +72,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str13 25 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 22
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 24
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 20
+      }
+     ]
+    },
+    {
      "voce": "str12 24 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -81,19 +107,19 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 23
+       "titoli": 33
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 23
+       "titoli": 33
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 23
+       "titoli": 31
       }
      ]
     },
@@ -122,32 +148,6 @@
        "titoli": 29
       }
      ]
-    },
-    {
-     "voce": "str17 22 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 33
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 33
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 22
-      }
-     ]
     }
    ]
   },
@@ -167,7 +167,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 25
+     "titoli": 26
     },
     {
      "voce": "Film al Torino Film Festival",
@@ -251,7 +251,7 @@
      "voce": "Approfondimento",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 30
+     "titoli": 31
     }
    ]
   },
@@ -422,7 +422,7 @@
      "voce": "L'offerta",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 46
+     "titoli": 47
     }
    ]
   },
@@ -447,7 +447,7 @@
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
    "byte": 597,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }
