@@ -142,16 +142,16 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27581 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27450 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5638 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5650 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5666 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5659 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5654 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5670 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5663 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (10)
 
@@ -261,7 +261,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 78 risultati
+- OK: peliculas /updated | 80 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -279,14 +279,12 @@ Sito: https://www.discoveryplus.com
 - OK: https://eu1-prod-direct.discoveryplus.com | html
 
 ### eurostreaming
-Sito: https://eurostream.skin
-- il sito reindirizza a un altro indirizzo: https://eurostream.homes (in channels.json c'e https://eurostream.skin)
+Sito: https://eurostream.homes
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.homes/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 96 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 95 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
-- riga per channels.json: "eurostreaming": "https://eurostream.homes",
 
 ### hd4me
 Sito: https://hd4me.net
@@ -334,7 +332,7 @@ Sito: https://pluto.tv
 
 ### raiplay
 Sito: https://www.raiplay.it
-- attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.tech_datetime_en
+- OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata
 - OK: https://www.raiplay.it/dirette | html
 - OK: https://www.raiplay.it/guidatv.json | json, struttura invariata
 - OK: https://www.raiplay.it/guidatv | html
@@ -355,7 +353,7 @@ Sito: https://streamingcommunityz.mov
 - OK: Archivio per nome | 60 titoli in props.titles
 - OK: Ricerca | 60 titoli in props.titles
 - OK: Generi | 20 titoli in props.genres
-- OK: serie di esempio /it/titles/66658-oobah-larte-dellinganno | 1 stagioni, 1 episodi nella prima
+- OK: serie di esempio /it/titles/66670-blade-runner-2099 | 1 stagioni, 8 episodi nella prima
 
 ### thepiratebay
 Sito: https://apibay.org

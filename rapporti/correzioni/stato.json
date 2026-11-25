@@ -122,7 +122,7 @@
   "dettagli": [
    "OK: peliculas /filter?sort= | 40 risultati",
    "OK: peliculas /ongoing | 40 risultati",
-   "OK: peliculas /updated | 78 risultati",
+   "OK: peliculas /updated | 80 risultati",
    "OK: peliculas /newest | 40 risultati"
   ],
   "correzione": false,
@@ -273,10 +273,10 @@
   "canale": "cinemalibero",
   "stato": "BLOCCO ANTI BOT",
   "dettagli": [
-   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5638 byte): non e un cambio di struttura",
-   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5650 byte): non e un cambio di struttura",
-   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5666 byte): non e un cambio di struttura",
-   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5659 byte): non e un cambio di struttura"
+   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5642 byte): non e un cambio di struttura",
+   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5654 byte): non e un cambio di struttura",
+   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5670 byte): non e un cambio di struttura",
+   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5663 byte): non e un cambio di struttura"
   ],
   "correzione": false,
   "host": "https://cinemalibero.cafe"
@@ -382,21 +382,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life.4SaIK/j5THWtvUlg",
-      "thumb": "https://img.animeworld.ac/locandine/4SaIK.png",
-      "title": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
+      "url": "/play/magic-knight-rayearth-2026.vPQng/CldoTuy02w",
+      "thumb": "https://img.animeworld.ac/locandine/vPQng.jpg",
+      "title": "Magic Knight Rayearth (2026)",
       "lang": null
      },
      {
-      "url": "/play/suikoden-the-anime.j3VlW/0MtCFAkvPG",
-      "thumb": "https://img.animeworld.ac/locandine/j3VlW.jpg",
-      "title": "Suikoden: The Anime",
+      "url": "/play/paw-and-palaces.zoZiA/h0JSAwQwAZ",
+      "thumb": "https://img.animeworld.ac/locandine/zoZiA.jpg",
+      "title": "Paw &amp; Palaces",
       "lang": null
      },
      {
-      "url": "/play/choujun-choujou-senpai.fspzM/sYM8ZJ531b",
-      "thumb": "https://img.animeworld.ac/locandine/fspzM.jpg",
-      "title": "Super Psychic Policeman Chojo",
+      "url": "/play/the-detective-is-already-dead-2.9d0Kh/ecE6fTixBj",
+      "thumb": "https://img.animeworld.ac/locandine/9d0Kh.jpg",
+      "title": "The Detective Is Already Dead 2",
       "lang": null
      }
     ],
@@ -411,21 +411,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life.4SaIK/j5THWtvUlg",
-      "thumb": "https://img.animeworld.ac/locandine/4SaIK.png",
-      "title": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
+      "url": "/play/magic-knight-rayearth-2026.vPQng/CldoTuy02w",
+      "thumb": "https://img.animeworld.ac/locandine/vPQng.jpg",
+      "title": "Magic Knight Rayearth (2026)",
       "lang": null
      },
      {
-      "url": "/play/suikoden-the-anime.j3VlW/0MtCFAkvPG",
-      "thumb": "https://img.animeworld.ac/locandine/j3VlW.jpg",
-      "title": "Suikoden: The Anime",
+      "url": "/play/paw-and-palaces.zoZiA/h0JSAwQwAZ",
+      "thumb": "https://img.animeworld.ac/locandine/zoZiA.jpg",
+      "title": "Paw &amp; Palaces",
       "lang": null
      },
      {
-      "url": "/play/choujun-choujou-senpai.fspzM/sYM8ZJ531b",
-      "thumb": "https://img.animeworld.ac/locandine/fspzM.jpg",
-      "title": "Super Psychic Policeman Chojo",
+      "url": "/play/the-detective-is-already-dead-2.9d0Kh/ecE6fTixBj",
+      "thumb": "https://img.animeworld.ac/locandine/9d0Kh.jpg",
+      "title": "The Detective Is Already Dead 2",
       "lang": null
      }
     ],
@@ -440,21 +440,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life.4SaIK/j5THWtvUlg",
-      "thumb": "https://img.animeworld.ac/locandine/4SaIK.png",
-      "title": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
+      "url": "/play/magic-knight-rayearth-2026.vPQng/CldoTuy02w",
+      "thumb": "https://img.animeworld.ac/locandine/vPQng.jpg",
+      "title": "Magic Knight Rayearth (2026)",
       "lang": null
      },
      {
-      "url": "/play/suikoden-the-anime.j3VlW/0MtCFAkvPG",
-      "thumb": "https://img.animeworld.ac/locandine/j3VlW.jpg",
-      "title": "Suikoden: The Anime",
+      "url": "/play/paw-and-palaces.zoZiA/h0JSAwQwAZ",
+      "thumb": "https://img.animeworld.ac/locandine/zoZiA.jpg",
+      "title": "Paw &amp; Palaces",
       "lang": null
      },
      {
-      "url": "/play/choujun-choujou-senpai.fspzM/sYM8ZJ531b",
-      "thumb": "https://img.animeworld.ac/locandine/fspzM.jpg",
-      "title": "Super Psychic Policeman Chojo",
+      "url": "/play/the-detective-is-already-dead-2.9d0Kh/ecE6fTixBj",
+      "thumb": "https://img.animeworld.ac/locandine/9d0Kh.jpg",
+      "title": "The Detective Is Already Dead 2",
       "lang": null
      }
     ],
@@ -469,21 +469,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life.4SaIK/j5THWtvUlg",
-      "thumb": "https://img.animeworld.ac/locandine/4SaIK.png",
-      "title": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
+      "url": "/play/magic-knight-rayearth-2026.vPQng/CldoTuy02w",
+      "thumb": "https://img.animeworld.ac/locandine/vPQng.jpg",
+      "title": "Magic Knight Rayearth (2026)",
       "lang": null
      },
      {
-      "url": "/play/suikoden-the-anime.j3VlW/0MtCFAkvPG",
-      "thumb": "https://img.animeworld.ac/locandine/j3VlW.jpg",
-      "title": "Suikoden: The Anime",
+      "url": "/play/paw-and-palaces.zoZiA/h0JSAwQwAZ",
+      "thumb": "https://img.animeworld.ac/locandine/zoZiA.jpg",
+      "title": "Paw &amp; Palaces",
       "lang": null
      },
      {
-      "url": "/play/choujun-choujou-senpai.fspzM/sYM8ZJ531b",
-      "thumb": "https://img.animeworld.ac/locandine/fspzM.jpg",
-      "title": "Super Psychic Policeman Chojo",
+      "url": "/play/the-detective-is-already-dead-2.9d0Kh/ecE6fTixBj",
+      "thumb": "https://img.animeworld.ac/locandine/9d0Kh.jpg",
+      "title": "The Detective Is Already Dead 2",
       "lang": null
      }
     ],
@@ -498,16 +498,14 @@
   "canale": "eurostreaming",
   "stato": "OK",
   "dettagli": [
-   "il sito reindirizza a un altro indirizzo: https://eurostream.homes (in channels.json c'e https://eurostream.skin)",
    "OK: peliculas /category/anime-cartoni-animati/ | 18 risultati",
    "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.homes/?p=23012, controllo quella",
-   "OK: peliculas /aggiornamento-episodi-nuovi/ | 96 risultati",
+   "OK: peliculas /aggiornamento-episodi-nuovi/ | 95 risultati",
    "attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
    "OK: peliculas /category/serie-tv-archive/ | 18 risultati"
   ],
   "correzione": false,
-  "host": "https://eurostream.skin",
-  "nuovo_host": "https://eurostream.homes"
+  "host": "https://eurostream.homes"
  },
  {
   "canale": "eurostreaming_actor",
@@ -535,17 +533,17 @@
       "lang": null
      },
      {
-      "url": "https://guardaseriex.help/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html",
-      "thumb": "/uploads/immagini/tt2580046.webp",
-      "year": "2015",
-      "title": "Miraculous - Le storie di Ladybug e Chat Noir",
-      "lang": null
-     },
-     {
       "url": "https://guardaseriex.help/animazione/5918-adventure-time-missioni-leggendarie-streaming.html",
       "thumb": "/uploads/immagini/tt32603995.webp",
       "year": "2026",
       "title": "Adventure Time: Missioni Leggendarie",
+      "lang": null
+     },
+     {
+      "url": "https://guardaseriex.help/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html",
+      "thumb": "/uploads/immagini/tt2580046.webp",
+      "year": "2015",
+      "title": "Miraculous - Le storie di Ladybug e Chat Noir",
       "lang": null
      }
     ],
@@ -894,7 +892,7 @@
   "canale": "raiplay",
   "stato": "OK",
   "dettagli": [
-   "attenzione: https://www.raiplay.it/palinsesto/onAir.json | chiavi sparite (non lette dal canale): on_air[].nextItem.tech_datetime_en",
+   "OK: https://www.raiplay.it/palinsesto/onAir.json | json, struttura invariata",
    "OK: https://www.raiplay.it/dirette | html",
    "OK: https://www.raiplay.it/guidatv.json | json, struttura invariata",
    "OK: https://www.raiplay.it/guidatv | html",
@@ -912,7 +910,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27581 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27450 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -929,7 +927,7 @@
    "OK: Archivio per nome | 60 titoli in props.titles",
    "OK: Ricerca | 60 titoli in props.titles",
    "OK: Generi | 20 titoli in props.genres",
-   "OK: serie di esempio /it/titles/66658-oobah-larte-dellinganno | 1 stagioni, 1 episodi nella prima"
+   "OK: serie di esempio /it/titles/66670-blade-runner-2099 | 1 stagioni, 8 episodi nella prima"
   ],
   "correzione": false,
   "host": "https://streamingcommunityz.mov"
