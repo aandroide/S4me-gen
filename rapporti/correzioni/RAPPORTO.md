@@ -1,6 +1,6 @@
 # Controllo dei canali
 
-Riepilogo: CORRETTO 4, CORRETTO IN PARTE 1, ROTTO 6, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 10, CLOUDFLARE 1, NON VERIFICATO 5, OK 20, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
+Riepilogo: CORRETTO 4, CORRETTO IN PARTE 1, ROTTO 5, DOMINIO PARCHEGGIATO 3, BLOCCO ANTI BOT 1, IRRAGGIUNGIBILE 10, NON VERIFICATO 5, OK 22, SENZA INDIRIZZO 6, TEMPO SCADUTO 1
 
 ## CORRETTO (4)
 
@@ -56,17 +56,11 @@ Sito: http://cinestore.cinetecadibologna.it
 - file corretto scritto in rapporti/correzioni/cinetecadibologna: 3 pagine su 4 ora trovano titoli
 - attenzione: non tutte le pagine sono state riparate, il canale resta da rivedere a mano
 
-## ROTTO (6)
-
-### accuradio
-Sito: https://www.accuradio.com
-- indirizzo scritto nel canale: https://www.accuradio.com
-- ROTTO: peliculas / | patron non trova titoli
--   campione della pagina salvato in rapporti/correzioni/accuradio/pagina_peliculas_home.html
--   nessuna regex sostitutiva trovata automaticamente in /
+## ROTTO (5)
 
 ### cineblog001
 Sito: https://cineblog001.cafe
+- il sito reindirizza a un altro indirizzo: https://cine-blog01.uno (in channels.json c'e https://cineblog001.cafe)
 - ROTTO: peliculas /film/ | patron non trova titoli
 -   campione della pagina salvato in rapporti/correzioni/cineblog001/pagina_peliculas_film.html
 -   regex proposta: 70 titoli su 51 card
@@ -79,6 +73,7 @@ Sito: https://cineblog001.cafe
 -   campione della pagina salvato in rapporti/correzioni/cineblog001/pagina_peliculas_sub_ita.html
 -   regex proposta: 70 titoli su 51 card
 -   non applicata al file: regex dinamica
+- riga per channels.json: "cineblog001": "https://cine-blog01.uno",
 
 ### dreamsub
 Sito: https://www.animeworld.ac
@@ -142,16 +137,16 @@ Sito: https://lordchannel.net
 
 ### serietvu
 Sito: http://ww1.serietvu.live
-- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27450 | titolo: nessuno
+- la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase "abovedomains" | link: 1 | dimensione: 27506 | titolo: nessuno
 
 ## BLOCCO ANTI BOT (1)
 
 ### cinemalibero
 Sito: https://cinemalibero.cafe
-- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5642 byte): non e un cambio di struttura
-- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5654 byte): non e un cambio di struttura
-- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5670 byte): non e un cambio di struttura
-- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5663 byte): non e un cambio di struttura
+- peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5634 byte): non e un cambio di struttura
+- peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5646 byte): non e un cambio di struttura
+- peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5662 byte): non e un cambio di struttura
+- peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo "redirecting...", 1 link, 5655 byte): non e un cambio di struttura
 
 ## IRRAGGIUNGIBILE (10)
 
@@ -195,12 +190,6 @@ Sito: http://ww25.mondoserietv.club
 Sito: https://piratestreaming.design
 - il nome del sito non esiste piu (DNS) (https://piratestreaming.design)
 
-## CLOUDFLARE (1)
-
-### toonitalia
-Sito: https://toonitalia.xyz
-- FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://toonitalia.xyz)
-
 ## NON VERIFICATO (5)
 
 ### animeunity
@@ -226,7 +215,7 @@ Sito: https://streamingita.homes
 Sito: https://vixsrc.to
 - nessun indirizzo controllabile senza parametri o accessi: canale a API con login o dati dinamici
 
-## OK (20)
+## OK (22)
 
 ### 1337x
 Sito: https://1337x.to
@@ -234,6 +223,11 @@ Sito: https://1337x.to
 - sito protetto da Cloudflare: pagine scaricate con FlareSolverr
 - OK: peliculas /movie-lib-sort/all/it/popularity/desc/all/1/ | 14 risultati
 - OK: peliculas /movie-library/1/ | 25 risultati
+
+### accuradio
+Sito: https://www.accuradio.com
+- indirizzo scritto nel canale: https://www.accuradio.com
+- OK: peliculas / | 48 risultati
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.ws
@@ -261,7 +255,7 @@ Sito: https://www.animesaturn.net
 Sito: https://www.animeworld.ac
 - OK: peliculas /filter?sort= | 40 risultati
 - OK: peliculas /ongoing | 40 risultati
-- OK: peliculas /updated | 80 risultati
+- OK: peliculas /updated | 79 risultati
 - OK: peliculas /newest | 40 risultati
 
 ### bt4g
@@ -282,7 +276,7 @@ Sito: https://www.discoveryplus.com
 Sito: https://eurostream.homes
 - OK: peliculas /category/anime-cartoni-animati/ | 18 risultati
 - peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.homes/?p=23012, controllo quella
-- OK: peliculas /aggiornamento-episodi-nuovi/ | 95 risultati
+- OK: peliculas /aggiornamento-episodi-nuovi/ | 94 risultati
 - attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 - OK: peliculas /category/serie-tv-archive/ | 18 risultati
 
@@ -353,12 +347,21 @@ Sito: https://streamingcommunityz.mov
 - OK: Archivio per nome | 60 titoli in props.titles
 - OK: Ricerca | 60 titoli in props.titles
 - OK: Generi | 20 titoli in props.genres
-- OK: serie di esempio /it/titles/66670-blade-runner-2099 | 1 stagioni, 8 episodi nella prima
+- OK: serie di esempio /it/titles/66680-always-on-call | 1 stagioni, 7 episodi nella prima
 
 ### thepiratebay
 Sito: https://apibay.org
 - home https://apibay.org: il sito non risponde (tempo scaduto)
 - OK: https://apibay.org/q.php?q=matrix | json, struttura invariata
+
+### toonitalia
+Sito: https://toonitalia.xyz
+- sito protetto da Cloudflare: pagine scaricate con FlareSolverr
+- OK: peliculas /category/anime | 400 risultati
+- OK: peliculas /anime-ita | 2786 risultati
+- attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
+- OK: peliculas /contatti | 824 risultati
+- attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)
 
 ### tunein
 Sito: http://api.radiotime.com

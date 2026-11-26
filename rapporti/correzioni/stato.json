@@ -13,12 +13,10 @@
  },
  {
   "canale": "accuradio",
-  "stato": "ROTTO",
+  "stato": "OK",
   "dettagli": [
    "indirizzo scritto nel canale: https://www.accuradio.com",
-   "ROTTO: peliculas / | patron non trova titoli",
-   "  campione della pagina salvato in rapporti/correzioni/accuradio/pagina_peliculas_home.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /"
+   "OK: peliculas / | 48 risultati"
   ],
   "correzione": false,
   "host": "https://www.accuradio.com"
@@ -122,7 +120,7 @@
   "dettagli": [
    "OK: peliculas /filter?sort= | 40 risultati",
    "OK: peliculas /ongoing | 40 risultati",
-   "OK: peliculas /updated | 80 risultati",
+   "OK: peliculas /updated | 79 risultati",
    "OK: peliculas /newest | 40 risultati"
   ],
   "correzione": false,
@@ -173,6 +171,7 @@
   "canale": "cineblog001",
   "stato": "ROTTO",
   "dettagli": [
+   "il sito reindirizza a un altro indirizzo: https://cine-blog01.uno (in channels.json c'e https://cineblog001.cafe)",
    "ROTTO: peliculas /film/ | patron non trova titoli",
    "  campione della pagina salvato in rapporti/correzioni/cineblog001/pagina_peliculas_film.html",
    "  regex proposta: 70 titoli su 51 card",
@@ -188,6 +187,7 @@
   ],
   "correzione": false,
   "host": "https://cineblog001.cafe",
+  "nuovo_host": "https://cine-blog01.uno",
   "proposte": [
    {
     "funzione": "peliculas",
@@ -196,17 +196,17 @@
     "esempi": [
      {
       "title": "Yellowjackets",
-      "url": "https://cineblog001.cafe/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
+      "url": "https://cine-blog01.uno/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt11041332.jpg"
      },
      {
       "title": "Perfetti bugiardi",
-      "url": "https://cineblog001.cafe/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
+      "url": "https://cine-blog01.uno/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt18351090.jpg"
      },
      {
       "title": "The Body",
-      "url": "https://cineblog001.cafe/cb01-streaming/35490-the-body-streaming-cb01.html",
+      "url": "https://cine-blog01.uno/cb01-streaming/35490-the-body-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt8014982.jpg"
      }
     ],
@@ -219,17 +219,17 @@
     "esempi": [
      {
       "title": "Yellowjackets",
-      "url": "https://cineblog001.cafe/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
+      "url": "https://cine-blog01.uno/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt11041332.jpg"
      },
      {
       "title": "Perfetti bugiardi",
-      "url": "https://cineblog001.cafe/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
+      "url": "https://cine-blog01.uno/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt18351090.jpg"
      },
      {
       "title": "The Body",
-      "url": "https://cineblog001.cafe/cb01-streaming/35490-the-body-streaming-cb01.html",
+      "url": "https://cine-blog01.uno/cb01-streaming/35490-the-body-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt8014982.jpg"
      }
     ],
@@ -242,17 +242,17 @@
     "esempi": [
      {
       "title": "Yellowjackets",
-      "url": "https://cineblog001.cafe/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
+      "url": "https://cine-blog01.uno/cb01-streaming/26423-yellowjackets-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt11041332.jpg"
      },
      {
       "title": "Perfetti bugiardi",
-      "url": "https://cineblog001.cafe/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
+      "url": "https://cine-blog01.uno/cb01-streaming/35784-perfetti-bugiardi-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt18351090.jpg"
      },
      {
       "title": "The Body",
-      "url": "https://cineblog001.cafe/cb01-streaming/35490-the-body-streaming-cb01.html",
+      "url": "https://cine-blog01.uno/cb01-streaming/35490-the-body-streaming-cb01.html",
       "thumb": "/uploads/thumb/203x293-0-70/2026-11/tt8014982.jpg"
      }
     ],
@@ -273,10 +273,10 @@
   "canale": "cinemalibero",
   "stato": "BLOCCO ANTI BOT",
   "dettagli": [
-   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5642 byte): non e un cambio di struttura",
-   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5654 byte): non e un cambio di struttura",
-   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5670 byte): non e un cambio di struttura",
-   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5663 byte): non e un cambio di struttura"
+   "peliculas /category/film/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5634 byte): non e un cambio di struttura",
+   "peliculas /category/serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5646 byte): non e un cambio di struttura",
+   "peliculas /category/anime-giapponesi/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5662 byte): non e un cambio di struttura",
+   "peliculas /aggiornamenti-serie-tv/: il sito risponde con una pagina di sfida o di redirect via script (titolo \"redirecting...\", 1 link, 5655 byte): non e un cambio di struttura"
   ],
   "correzione": false,
   "host": "https://cinemalibero.cafe"
@@ -382,21 +382,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/magic-knight-rayearth-2026.vPQng/CldoTuy02w",
-      "thumb": "https://img.animeworld.ac/locandine/vPQng.jpg",
-      "title": "Magic Knight Rayearth (2026)",
+      "url": "/play/fx-fighter-kurumi-chan.M32Ff/WwY2Zj8w3H",
+      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
+      "title": "FX Fighter Kurumi-chan",
       "lang": null
      },
      {
-      "url": "/play/paw-and-palaces.zoZiA/h0JSAwQwAZ",
-      "thumb": "https://img.animeworld.ac/locandine/zoZiA.jpg",
-      "title": "Paw &amp; Palaces",
-      "lang": null
+      "url": "/play/the-all-devouring-whale-homecoming-ita.ZPe5V/x5FUKc",
+      "thumb": "https://img.animeworld.ac/locandine/kBWUd.jpg",
+      "title": "The All-devouring Whale: Homecoming",
+      "lang": "ITA"
      },
      {
-      "url": "/play/the-detective-is-already-dead-2.9d0Kh/ecE6fTixBj",
-      "thumb": "https://img.animeworld.ac/locandine/9d0Kh.jpg",
-      "title": "The Detective Is Already Dead 2",
+      "url": "/play/a-returners-magic-should-be-special-2.psLV9/6Smk8aOoKN",
+      "thumb": "https://img.animeworld.ac/locandine/psLV9.jpg",
+      "title": "A Returner&#x27;s Magic Should Be Special 2",
       "lang": null
      }
     ],
@@ -411,21 +411,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/magic-knight-rayearth-2026.vPQng/CldoTuy02w",
-      "thumb": "https://img.animeworld.ac/locandine/vPQng.jpg",
-      "title": "Magic Knight Rayearth (2026)",
+      "url": "/play/fx-fighter-kurumi-chan.M32Ff/WwY2Zj8w3H",
+      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
+      "title": "FX Fighter Kurumi-chan",
       "lang": null
      },
      {
-      "url": "/play/paw-and-palaces.zoZiA/h0JSAwQwAZ",
-      "thumb": "https://img.animeworld.ac/locandine/zoZiA.jpg",
-      "title": "Paw &amp; Palaces",
-      "lang": null
+      "url": "/play/the-all-devouring-whale-homecoming-ita.ZPe5V/x5FUKc",
+      "thumb": "https://img.animeworld.ac/locandine/kBWUd.jpg",
+      "title": "The All-devouring Whale: Homecoming",
+      "lang": "ITA"
      },
      {
-      "url": "/play/the-detective-is-already-dead-2.9d0Kh/ecE6fTixBj",
-      "thumb": "https://img.animeworld.ac/locandine/9d0Kh.jpg",
-      "title": "The Detective Is Already Dead 2",
+      "url": "/play/a-returners-magic-should-be-special-2.psLV9/6Smk8aOoKN",
+      "thumb": "https://img.animeworld.ac/locandine/psLV9.jpg",
+      "title": "A Returner&#x27;s Magic Should Be Special 2",
       "lang": null
      }
     ],
@@ -440,21 +440,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/magic-knight-rayearth-2026.vPQng/CldoTuy02w",
-      "thumb": "https://img.animeworld.ac/locandine/vPQng.jpg",
-      "title": "Magic Knight Rayearth (2026)",
+      "url": "/play/fx-fighter-kurumi-chan.M32Ff/WwY2Zj8w3H",
+      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
+      "title": "FX Fighter Kurumi-chan",
       "lang": null
      },
      {
-      "url": "/play/paw-and-palaces.zoZiA/h0JSAwQwAZ",
-      "thumb": "https://img.animeworld.ac/locandine/zoZiA.jpg",
-      "title": "Paw &amp; Palaces",
-      "lang": null
+      "url": "/play/the-all-devouring-whale-homecoming-ita.ZPe5V/x5FUKc",
+      "thumb": "https://img.animeworld.ac/locandine/kBWUd.jpg",
+      "title": "The All-devouring Whale: Homecoming",
+      "lang": "ITA"
      },
      {
-      "url": "/play/the-detective-is-already-dead-2.9d0Kh/ecE6fTixBj",
-      "thumb": "https://img.animeworld.ac/locandine/9d0Kh.jpg",
-      "title": "The Detective Is Already Dead 2",
+      "url": "/play/a-returners-magic-should-be-special-2.psLV9/6Smk8aOoKN",
+      "thumb": "https://img.animeworld.ac/locandine/psLV9.jpg",
+      "title": "A Returner&#x27;s Magic Should Be Special 2",
       "lang": null
      }
     ],
@@ -469,21 +469,21 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/magic-knight-rayearth-2026.vPQng/CldoTuy02w",
-      "thumb": "https://img.animeworld.ac/locandine/vPQng.jpg",
-      "title": "Magic Knight Rayearth (2026)",
+      "url": "/play/fx-fighter-kurumi-chan.M32Ff/WwY2Zj8w3H",
+      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
+      "title": "FX Fighter Kurumi-chan",
       "lang": null
      },
      {
-      "url": "/play/paw-and-palaces.zoZiA/h0JSAwQwAZ",
-      "thumb": "https://img.animeworld.ac/locandine/zoZiA.jpg",
-      "title": "Paw &amp; Palaces",
-      "lang": null
+      "url": "/play/the-all-devouring-whale-homecoming-ita.ZPe5V/x5FUKc",
+      "thumb": "https://img.animeworld.ac/locandine/kBWUd.jpg",
+      "title": "The All-devouring Whale: Homecoming",
+      "lang": "ITA"
      },
      {
-      "url": "/play/the-detective-is-already-dead-2.9d0Kh/ecE6fTixBj",
-      "thumb": "https://img.animeworld.ac/locandine/9d0Kh.jpg",
-      "title": "The Detective Is Already Dead 2",
+      "url": "/play/a-returners-magic-should-be-special-2.psLV9/6Smk8aOoKN",
+      "thumb": "https://img.animeworld.ac/locandine/psLV9.jpg",
+      "title": "A Returner&#x27;s Magic Should Be Special 2",
       "lang": null
      }
     ],
@@ -500,7 +500,7 @@
   "dettagli": [
    "OK: peliculas /category/anime-cartoni-animati/ | 18 risultati",
    "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.homes/?p=23012, controllo quella",
-   "OK: peliculas /aggiornamento-episodi-nuovi/ | 95 risultati",
+   "OK: peliculas /aggiornamento-episodi-nuovi/ | 94 risultati",
    "attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
    "OK: peliculas /category/serie-tv-archive/ | 18 risultati"
   ],
@@ -533,17 +533,17 @@
       "lang": null
      },
      {
-      "url": "https://guardaseriex.help/animazione/5918-adventure-time-missioni-leggendarie-streaming.html",
-      "thumb": "/uploads/immagini/tt32603995.webp",
-      "year": "2026",
-      "title": "Adventure Time: Missioni Leggendarie",
-      "lang": null
-     },
-     {
       "url": "https://guardaseriex.help/animazione/4249-miraculous-le-storie-di-ladybug-e-chat-noir-streaming.html",
       "thumb": "/uploads/immagini/tt2580046.webp",
       "year": "2015",
       "title": "Miraculous - Le storie di Ladybug e Chat Noir",
+      "lang": null
+     },
+     {
+      "url": "https://guardaseriex.help/animazione/5918-adventure-time-missioni-leggendarie-streaming.html",
+      "thumb": "/uploads/immagini/tt32603995.webp",
+      "year": "2026",
+      "title": "Adventure Time: Missioni Leggendarie",
       "lang": null
      }
     ],
@@ -910,7 +910,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27450 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27506 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
@@ -927,7 +927,7 @@
    "OK: Archivio per nome | 60 titoli in props.titles",
    "OK: Ricerca | 60 titoli in props.titles",
    "OK: Generi | 20 titoli in props.genres",
-   "OK: serie di esempio /it/titles/66670-blade-runner-2099 | 1 stagioni, 8 episodi nella prima"
+   "OK: serie di esempio /it/titles/66680-always-on-call | 1 stagioni, 7 episodi nella prima"
   ],
   "correzione": false,
   "host": "https://streamingcommunityz.mov"
@@ -976,9 +976,14 @@
  },
  {
   "canale": "toonitalia",
-  "stato": "CLOUDFLARE",
+  "stato": "OK",
   "dettagli": [
-   "FlareSolverr non ha superato la challenge: Error: Error solving the challenge. Timeout after 60.0 seconds. (https://toonitalia.xyz)"
+   "sito protetto da Cloudflare: pagine scaricate con FlareSolverr",
+   "OK: peliculas /category/anime | 400 risultati",
+   "OK: peliculas /anime-ita | 2786 risultati",
+   "attenzione: peliculas /anime-ita, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
+   "OK: peliculas /contatti | 824 risultati",
+   "attenzione: peliculas /contatti, patronNext non trova la pagina successiva (puo essere l'ultima pagina)"
   ],
   "correzione": false,
   "host": "https://toonitalia.xyz"
