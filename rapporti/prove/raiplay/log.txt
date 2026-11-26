@@ -50,21 +50,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 22 
+   SEZIONE Rai 1 -> OK 23 
    SEZIONE Rai 2 -> OK 24 
-   SEZIONE Rai 3 -> OK 20 
+   SEZIONE Rai 3 -> OK 21 
+   SEZIONE str14 26 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 30 
+   SEZIONE Rai 2 -> OK 34 
+   SEZIONE Rai 3 -> OK 30 
    SEZIONE str13 25 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 33 
    SEZIONE Rai 2 -> OK 33 
-   SEZIONE Rai 3 -> OK 31 
+   SEZIONE Rai 3 -> OK 30 
    SEZIONE str12 24 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 31 
-   SEZIONE Rai 2 -> OK 30 
-   SEZIONE Rai 3 -> OK 29 
-   SEZIONE str11 23 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE Novità -> OK 22 
-   SEZIONE Da non perdere -> OK 26 
+   SEZIONE Da non perdere -> OK 25 
    SEZIONE Film al Torino Film Festival -> OK 21 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 25 
@@ -75,7 +75,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Drama -> OK 13 
    SEZIONE Serie Original RaiPlay -> OK 24 
    SEZIONE Serie Internazionali -> SOTTOMENU  
-   SEZIONE Intrattenimento -> OK 24 
+   SEZIONE Intrattenimento -> OK 25 
    SEZIONE Territori e itinerari -> OK 34 
    SEZIONE Approfondimento -> OK 31 
    SEZIONE Programmi TV -> SOTTOMENU  
@@ -88,7 +88,7 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Esclusive RaiPlay Bambini -> OK 33 
    SEZIONE Bambini -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 36 
-   SEZIONE Un mondo di fumetti -> OK 15 
+   SEZIONE Un mondo di fumetti -> OK 13 
    SEZIONE Coming of age Stories -> OK 29 
    SEZIONE Teen -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 24 

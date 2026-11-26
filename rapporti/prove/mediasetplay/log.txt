@@ -7,11 +7,11 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
    -> 129 voci
+      findvideos | Xxx - Il ritorno di Xander Cage - XXX - Il ritorno di Xander | https://mediasetinfinity.mediaset.it/movie/xxxilritornodixandercage/xxx-il-ritorno-di-xander-cage_F3
+      findvideos | King Arthur (di a. fuqua) - King Arthur | https://mediasetinfinity.mediaset.it/movie/kingarthurdiafuqua/king-arthur_F011654001000102
       findvideos | Demolition man | https://mediasetinfinity.mediaset.it/movie/demolitionman/demolition-man_F006121501000104
       findvideos | The foreigner | https://mediasetinfinity.mediaset.it/movie/theforeigner/the-foreigner_F308881001000102
-      findvideos | Cash out - I maghi del furto | https://mediasetinfinity.mediaset.it/movie/cashoutimaghidelfurto/cash-out-i-maghi-del-furto_F3128023
-      findvideos | Alex l'ariete | https://mediasetinfinity.mediaset.it/movie/alexlariete/alex-lariete_F010394901000101
-== findvideos su "Demolition man"
+== findvideos su "Xxx - Il ritorno di Xander Cage - XXX - "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -26,11 +26,11 @@ KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
    -> 21 voci
-      findvideos | La terza stella | https://mediasetinfinity.mediaset.it/movie/laterzastella/la-terza-stella_F012066401000101
-      findvideos | Demolition man | https://mediasetinfinity.mediaset.it/movie/demolitionman/demolition-man_F006121501000104
-      findvideos | Sicilia express - Sicilia Express | https://mediasetinfinity.mediaset.it/movie/siciliaexpress/sicilia-express_F314565003000101
-      findvideos | La figlia della sciamana 2 - Il dono del serpente | https://mediasetinfinity.mediaset.it/movie/lafigliadellasciamana2ildonodelserpente/la-figlia-della-s
-== findvideos su "La terza stella"
+      findvideos | Xxx - Il ritorno di Xander Cage - XXX - Il ritorno di Xander | https://mediasetinfinity.mediaset.it/movie/xxxilritornodixandercage/xxx-il-ritorno-di-xander-cage_F3
+      findvideos | King Arthur (di a. fuqua) - King Arthur | https://mediasetinfinity.mediaset.it/movie/kingarthurdiafuqua/king-arthur_F011654001000102
+      findvideos | Il peggior Natale della mia vita | https://mediasetinfinity.mediaset.it/movie/ilpeggiornataledellamiavita/il-peggior-natale-della-mia-v
+      findvideos | Un Natale al sud | https://mediasetinfinity.mediaset.it/movie/unnatalealsud/un-natale-al-sud_F307878201000101
+== findvideos su "Xxx - Il ritorno di Xander Cage - XXX - "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,25 +96,25 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 6 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 4 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 5 
    SEZIONE Chicago Fire 2 -> OK 11 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Segreti di famiglia 3 -> OK 5 
    SEZIONE Innocence -> OK 5 
    SEZIONE •• Le serie di Mediaset Infinity -> SOTTOMENU  
-   SEZIONE Tutto per la mia famiglia 2 -> OK 4 
    SEZIONE Forbidden Fruit 4 -> OK 4 
    SEZIONE Beautiful -> OK 6 
+   SEZIONE Tempesta d'amore -> OK 3 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
-   SEZIONE Captain Tsubasa 2 -> OK 35 
+   SEZIONE Captain Tsubasa 2 -> OK 36 
    SEZIONE Dragon Ball Daima -> OK 17 
    SEZIONE One Piece 18 -> OK 2 
    SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
    SEZIONE I Simpson -> OK 5 
    SEZIONE Law & Order: Unità speciale 16 -> OK 11 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 4 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 5 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
@@ -124,17 +124,17 @@ Nessuna voce da riprodurre trovata
    SEZIONE Tu Si Que Vales 2026 -> OK 6 
    SEZIONE Le Iene presentano: Inside Autunno 2026 -> OK 2 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
+   SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE Ore 11 -> OK 3 
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
-   SEZIONE Caduta libera 2026/2027 -> OK 4 
    SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Amici 26 -> OK 10 
    SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Lo straordinario mondo di Gumball -> OK 7 
-   SEZIONE Captain Tsubasa 2 -> OK 35 
-   SEZIONE Teen Titans Go! -> OK 10 
+   SEZIONE Captain Tsubasa 2 -> OK 36 
+   SEZIONE Teen Titans Go! -> OK 8 
    SEZIONE •• Kids Boing -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE Paw Patrol -> OK 5 
@@ -145,9 +145,9 @@ Nessuna voce da riprodurre trovata
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 17 
+   SEZIONE •• Tutti i Documentari -> OK 19 
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
-   SEZIONE Enigmi alieni 10 -> OK 5 
+   SEZIONE Enigmi alieni 10 -> OK 4 
    SEZIONE Prove sepolte - Le avventure dell'archeologia -> OK 7 
    SEZIONE Universo ai raggi X 5 -> OK 8 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
@@ -156,4 +156,4 @@ Nessuna voce da riprodurre trovata
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE txt70741 … -> OK 20 
 SEZIONI: 24 ok su 24
-VERDETTO: SI FERMA A: findvideos su "Demolition man"
+VERDETTO: SI FERMA A: findvideos su "Xxx - Il ritorno di Xander Cage - XXX - "

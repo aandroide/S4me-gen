@@ -7,17 +7,17 @@ Canale eurostreaming | indirizzo https://eurostream.homes
       peliculas | • Archivio | https://eurostream.homes/category/serie-tv-archive/
 == lista "• Serie TV"
    -> 19 voci
-      episodios | The Devil’s Plan | https://eurostream.homes/the-devils-plan/
-      episodios | The Assassin | https://eurostream.homes/the-assassin/
-      episodios | Stick | https://eurostream.homes/stick-2025/
-      episodios | Sacrifice | https://eurostream.homes/sacrifice/
-== episodios su "The Devil’s Plan"
-   -> 39 voci
-      findvideos | 1x01 - Episodio 1  | https://eurostream.homes/the-devils-plan/
-      findvideos | 1x02 - Episodio 2  | https://eurostream.homes/the-devils-plan/
-      findvideos | 1x03 - Episodio 3  | https://eurostream.homes/the-devils-plan/
-      findvideos | 1x04 - Episodio 4  | https://eurostream.homes/the-devils-plan/
-== findvideos su "1x01 - Episodio 1 "
+      episodios | NCIS: Origins | https://eurostream.homes/ncis-origins/
+      episodios | Oak Island e il tesoro maledetto | https://eurostream.homes/oak-island-e-il-tesoro-maledetto/
+      episodios | The Kardashians | https://eurostream.homes/the-kardashians-2022-o/
+      episodios | Viola come il mare | https://eurostream.homes/viola-come-il-mare/
+== episodios su "NCIS: Origins"
+   -> 61 voci
+      findvideos | 1x01 - Un nuovo inizio (prima parte)  | https://eurostream.homes/ncis-origins/
+      findvideos | 1x02 - Un nuovo inizio - Parte seconda  | https://eurostream.homes/ncis-origins/
+      findvideos | 1x03 - Uomo falena  | https://eurostream.homes/ncis-origins/
+      findvideos | 1x04 - Non tutto è perduto  | https://eurostream.homes/ncis-origins/
+== findvideos su "1x01 - Un nuovo inizio (prima parte) "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/hftic10k00t5
+Exception: Not un-shortened link: https://clicka.cc/delta/165rsctdww0h
 
 == lista "• Anime"
    -> 19 voci
@@ -69,17 +69,17 @@ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk
 
 == lista "• Aggiornamenti"
    -> 21 voci
-      episodios | 3x11 - The Devil's Plan - Episodio 11 , 3x12 Episodio 12 , 3 | https://eurostream.homes/the-devils-plan/
-      episodios | 2x04 - The Assassin - Episode 4  | https://eurostream.homes/the-assassin/
-      episodios | 2x05 - Stick (2025) - È il momento | https://eurostream.homes/stick-2025/
-      episodios | 2x10 - Sacrifice - La resa dei conti | https://eurostream.homes/sacrifice/
-== episodios su "3x11 - The Devil's Plan - Episodio 11 , "
-   -> 39 voci
-      findvideos | 1x01 - Episodio 1  | https://eurostream.homes/the-devils-plan/
-      findvideos | 1x02 - Episodio 2  | https://eurostream.homes/the-devils-plan/
-      findvideos | 1x03 - Episodio 3  | https://eurostream.homes/the-devils-plan/
-      findvideos | 1x04 - Episodio 4  | https://eurostream.homes/the-devils-plan/
-== findvideos su "1x01 - Episodio 1 "
+      episodios | 13x07 - Oak Island e il tesoro maledetto - Alla ricerca di n | https://eurostream.homes/oak-island-e-il-tesoro-maledetto/
+      episodios | 8x08 - The Kardashians (2022) - Il prossimo dramma | https://eurostream.homes/the-kardashians-2022-o/
+      episodios | 3x09 - Viola come il mare - Nona e decima puntata | https://eurostream.homes/viola-come-il-mare/
+      episodios | 1x07 - Eternally Yours - Jesse's Girl  | https://eurostream.homes/eternally-yours/
+== episodios su "13x07 - Oak Island e il tesoro maledetto"
+   -> 250 voci
+      findvideos | 1x01 - Che la Caccia Abbia Inizio!  | https://eurostream.homes/oak-island-e-il-tesoro-maledetto/
+      findvideos | 1x02 - Il Tesoro è Vicino  | https://eurostream.homes/oak-island-e-il-tesoro-maledetto/
+      findvideos | 1x03 - Nella Palude Stregata  | https://eurostream.homes/oak-island-e-il-tesoro-maledetto/
+      findvideos | 1x04 - Il Segreto del Tempio  | https://eurostream.homes/oak-island-e-il-tesoro-maledetto/
+== findvideos su "1x01 - Che la Caccia Abbia Inizio! "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -96,7 +96,7 @@ Traceback (most recent call last):
   File "/tmp/kh/addon/core/servertools.py", line 50, in find_video_items
     data = unshortenit.findlinks(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Not un-shortened link: https://clicka.cc/delta/hftic10k00t5
+Exception: Not un-shortened link: https://clicka.cc/delta/84w38t0e4el9
 
 Nessuna voce da riprodurre trovata
 == voci dichiarate in mainlist (3)
@@ -107,9 +107,8 @@ Nessuna voce da riprodurre trovata
    SEZIONE • Serie TV -> OK 18 
    SEZIONE • Anime -> OK 18 
    SEZIONE • Aggiornamenti -> OK 20 
-      PROBLEMA: titolo rovinato: 3x05 - Georgie & Mandy's First Marriage - Un atteggiamento arrogante e
+      PROBLEMA: titolo rovinato: 13x07 - Oak Island e il tesoro maledetto - Alla ricerca di nuove tracc
    SEZIONE • Archivio -> OK 18 
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://eurostream.homes/?s=avatar', 'status': 403, 'byte': 5915, 'titolo_pagina': 'Just a moment...'}
-SEZIONI: 4 ok su 5
-   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: findvideos su "1x01 - Episodio 1 "
+   SEZIONE txt70741 … -> OK 11 
+SEZIONI: 5 ok su 5
+VERDETTO: SI FERMA A: findvideos su "1x01 - Un nuovo inizio (prima parte) "

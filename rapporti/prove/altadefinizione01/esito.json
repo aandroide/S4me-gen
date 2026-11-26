@@ -49,7 +49,7 @@
    "tipo": "film",
    "finale": "https://vixsrc.to/movie/tt46000907",
    "esito": "VIDEO NON RAGGIUNGIBILE",
-   "dettaglio": "200 text/html; charset=utf-8 non sembra un video"
+   "dettaglio": "HTTP 403"
   }
  ],
  "menu_dichiarato": [
@@ -225,7 +225,7 @@
    "url": "https://altadefinizione-01.ws/lastnews/",
    "status": 200,
    "byte": 132089,
-   "secondi": 0.4,
+   "secondi": 0.8,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
    "file": "pagine/01.html"
   },
@@ -233,161 +233,175 @@
    "url": "https://altadefinizione-01.ws/35817-rammstein-live-in-mexico-city-streaming.html",
    "status": 200,
    "byte": 91249,
-   "secondi": 0.4,
+   "secondi": 0.2,
    "titolo_pagina": "Rammstein: Live in Mexico City Streaming HD - Altadefinizione01",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://vixsrc.to/api/movie/tt46000907",
-   "status": 404,
-   "byte": 6953,
-   "secondi": 0.2,
-   "titolo_pagina": "Not Found",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/movie/tt46000907",
+   "status": 403,
+   "byte": 4550,
+   "secondi": 0.5,
+   "titolo_pagina": "Attention Required! | Cloudflare",
    "file": "pagine/03.html"
+  },
+  {
+   "url": "https://vixsrc.to/api/movie/tt46000907",
+   "status": 403,
+   "byte": 4550,
+   "secondi": 0.6,
+   "titolo_pagina": "Attention Required! | Cloudflare",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/movie/tt46000907",
+   "status": 200,
+   "byte": 13445,
+   "secondi": 0.5,
+   "titolo_pagina": "VixSrc",
+   "file": "pagine/05.html"
   },
   {
    "url": "https://vixsrc.to/movie/tt46000907",
    "status": 200,
-   "byte": 8023,
-   "secondi": 0.2,
+   "byte": 13445,
+   "secondi": 0.5,
    "titolo_pagina": "VixSrc",
-   "file": "pagine/04.html"
+   "file": "pagine/06.html"
   },
   {
    "url": "https://altadefinizione-01.ws/lastnews/",
    "status": 200,
    "byte": 132089,
-   "secondi": 0.3,
+   "secondi": 0.7,
    "titolo_pagina": "Ultimi film inseriti - Altadefinizione01",
-   "file": "pagine/05.html"
+   "file": "pagine/07.html"
   },
   {
    "url": "https://altadefinizione-01.ws/cinema/",
    "status": 200,
    "byte": 156121,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Al Cinema – Altadefinizione01",
-   "file": "pagine/06.html"
-  },
-  {
-   "url": "https://altadefinizione-01.ws",
-   "status": 200,
-   "byte": 181352,
-   "secondi": 0.3,
-   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
-   "file": "pagine/07.html"
-  },
-  {
-   "url": "https://altadefinizione-01.ws",
-   "status": 200,
-   "byte": 181352,
-   "secondi": 0.4,
-   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
    "file": "pagine/08.html"
+  },
+  {
+   "url": "https://altadefinizione-01.ws",
+   "status": 200,
+   "byte": 181352,
+   "secondi": 0.2,
+   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
+   "file": "pagine/09.html"
+  },
+  {
+   "url": "https://altadefinizione-01.ws",
+   "status": 200,
+   "byte": 181352,
+   "secondi": 0.7,
+   "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis",
+   "file": "pagine/10.html"
   },
   {
    "url": "https://altadefinizione-01.ws/azione/",
    "status": 200,
    "byte": 155341,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "Azione – Altadefinizione01",
-   "file": "pagine/09.html"
+   "file": "pagine/11.html"
   },
   {
    "url": "https://altadefinizione-01.ws/animazione/",
    "status": 200,
-   "byte": 157391,
-   "secondi": 0.3,
+   "byte": 156934,
+   "secondi": 0.2,
    "titolo_pagina": "Animazione – Altadefinizione01",
-   "file": "pagine/10.html"
+   "file": "pagine/12.html"
   },
   {
    "url": "https://altadefinizione-01.ws/avventura/",
    "status": 200,
    "byte": 157315,
-   "secondi": 0.3,
+   "secondi": 0.4,
    "titolo_pagina": "Avventura – Altadefinizione01",
-   "file": "pagine/11.html"
+   "file": "pagine/13.html"
   },
   {
    "url": "https://altadefinizione-01.ws/catalog/a",
    "status": 200,
-   "byte": 107795,
-   "secondi": 0.3,
+   "byte": 107345,
+   "secondi": 0.5,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
-   "file": "pagine/12.html"
+   "file": "pagine/14.html"
   },
   {
    "url": "https://altadefinizione-01.ws/catalog/9",
    "status": 200,
    "byte": 106880,
-   "secondi": 0.8,
+   "secondi": 0.5,
    "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
-   "file": "pagine/13.html"
+   "file": "pagine/15.html"
   },
   {
    "url": "https://altadefinizione-01.ws/catalog/A",
    "status": 200,
    "byte": 107795,
-   "secondi": 0.6,
-   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
-   "file": "pagine/14.html"
+   "secondi": 0.7,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01"
   },
   {
    "url": "https://altadefinizione-01.ws/catalog/B",
    "status": 200,
    "byte": 107795,
-   "secondi": 0.6,
-   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01",
-   "file": "pagine/15.html"
+   "secondi": 0.7,
+   "titolo_pagina": "Lista film A-Z - L'elenco film streaming completo - Altadefinizione01"
   },
   {
    "url": "https://altadefinizione-01.ws",
    "status": 200,
    "byte": 181352,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione01 - Film Streaming in HD Gratis"
   },
   {
    "url": "https://altadefinizione-01.ws/find/2026/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "404 | Not Found"
   },
   {
    "url": "https://altadefinizione-01.ws/find/2025/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "404 | Not Found"
   },
   {
    "url": "https://altadefinizione-01.ws/find/2024/",
    "status": 404,
    "byte": 764,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "404 | Not Found"
   },
   {
    "url": "https://altadefinizione-01.ws/sub-ita/",
    "status": 200,
    "byte": 155347,
-   "secondi": 0.5,
+   "secondi": 0.4,
    "titolo_pagina": "Sub-ITA &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   },
   {
    "url": "https://altadefinizione-01.ws/serie-tv/",
    "status": 200,
    "byte": 154592,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": "Serie TV in Streaming Gratis - Altadefinizione01"
   },
   {
    "url": "https://altadefinizione-01.ws/?do=search&subaction=search&titleonly=3&story=avatar",
    "status": 200,
    "byte": 92458,
-   "secondi": 0.7,
+   "secondi": 0.6,
    "titolo_pagina": "Site search &raquo; Altadefinizione01 - Film Streaming in HD Gratis"
   }
  ],

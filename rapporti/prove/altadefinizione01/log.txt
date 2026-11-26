@@ -21,7 +21,7 @@ Canale altadefinizione01 | indirizzo https://altadefinizione-01.ws
    api /t/ 46000907 referer https://altadefinizione-01.ws/ -> 404 {"error":"not found"}
    -> NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)  il server non risponde entro 90 secondi
 == risoluzione vixsrc https://vixsrc.to/movie/tt46000907
-   -> VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video 
+   -> VIDEO NON RAGGIUNGIBILE HTTP 403 
 == voci dichiarate in mainlist (8)
     menu | ('Tutti', ['/lastnews/', 'peliculas', '', 'undefined'])
     menu | ('Al Cinema {submenu}', ['/cinema/', 'peliculas', '', 'undefined'])

@@ -32,18 +32,18 @@ Canale la7 | indirizzo
     menu | ('Coffee Tech {bullet bold} {teen}', ['/coffee-tech', 'episodios', '', 'tvshow'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 2 
-   SEZIONE Oggi 25 novembre -> OK 7 
+   SEZIONE Oggi 26 novembre -> OK 7 
+   SEZIONE Mercoledi 25 novembre -> OK 21 
    SEZIONE Martedi 24 novembre -> OK 20 
-   SEZIONE Lunedi 23 novembre -> OK 20 
    SEZIONE La7 -> SOTTOMENU  
-   SEZIONE Oggi 25 novembre -> OK 5 
+   SEZIONE Oggi 26 novembre -> OK 3 
+   SEZIONE Mercoledi 25 novembre -> OK 7 
    SEZIONE Martedi 24 novembre -> OK 6 
-   SEZIONE Lunedi 23 novembre -> OK 9 
    SEZIONE La7Cinema -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
    SEZIONE • Programmi TV -> OK 71 
    SEZIONE • Film -> OK 45 
-   SEZIONE • Documentari -> OK 27 
+   SEZIONE • Documentari -> OK 28 
    SEZIONE • Tg La7 -> OK 20 
       PROBLEMA: titolo rovinato: txt30992 %s >
    SEZIONE • Coffee Tech -> OK 20 
