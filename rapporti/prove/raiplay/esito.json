@@ -72,6 +72,32 @@
    "sottovoci": 7,
    "figli": [
     {
+     "voce": "str15 27 str31",
+     "azione": "replayChannels",
+     "esito": "SOTTOMENU",
+     "sottovoci": 15,
+     "figli": [
+      {
+       "voce": "Rai 1",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 20
+      },
+      {
+       "voce": "Rai 2",
+       "azione": "replay",
+       "esito": "OK",
+       "titoli": 23
+      },
+      {
+       "voce": "Rai 3",
+       "azione": "replay",
+       "esito": "ERRORE JSONDecodeError",
+       "pagine": []
+      }
+     ]
+    },
+    {
      "voce": "str14 26 str31",
      "azione": "replayChannels",
      "esito": "SOTTOMENU",
@@ -81,19 +107,19 @@
        "voce": "Rai 1",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 23
+       "titoli": 34
       },
       {
        "voce": "Rai 2",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 24
+       "titoli": 34
       },
       {
        "voce": "Rai 3",
        "azione": "replay",
        "esito": "OK",
-       "titoli": 21
+       "titoli": 31
       }
      ]
     },
@@ -122,32 +148,6 @@
        "titoli": 30
       }
      ]
-    },
-    {
-     "voce": "str12 24 str31",
-     "azione": "replayChannels",
-     "esito": "SOTTOMENU",
-     "sottovoci": 15,
-     "figli": [
-      {
-       "voce": "Rai 1",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 33
-      },
-      {
-       "voce": "Rai 2",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 33
-      },
-      {
-       "voce": "Rai 3",
-       "azione": "replay",
-       "esito": "OK",
-       "titoli": 30
-      }
-     ]
     }
    ]
   },
@@ -161,13 +161,13 @@
      "voce": "Novità",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 22
+     "titoli": 21
     },
     {
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 25
+     "titoli": 21
     },
     {
      "voce": "Film al Torino Film Festival",
@@ -265,7 +265,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 23
     },
     {
      "voce": "Docu-serie Original",
@@ -285,25 +285,25 @@
    "voce": "Bambini",
    "azione": "menu",
    "esito": "SOTTOMENU",
-   "sottovoci": 12,
+   "sottovoci": 10,
    "figli": [
     {
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 25
     },
     {
-     "voce": "24 Novembre - Auguri a Carlo Collodi, 200 anni di Pinocchio!",
+     "voce": "Cinema bambini",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 6
+     "titoli": 23
     },
     {
      "voce": "Esclusive RaiPlay Bambini",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 33
+     "titoli": 31
     }
    ]
   },
@@ -323,7 +323,7 @@
      "voce": "Un mondo di fumetti",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 13
+     "titoli": 12
     },
     {
      "voce": "Coming of age Stories",
@@ -343,7 +343,7 @@
      "voce": "Da non perdere",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 25
     },
     {
      "voce": "Il teatro di Eduardo",
@@ -355,7 +355,7 @@
      "voce": "Musica classica",
      "azione": "peliculas",
      "esito": "OK",
-     "titoli": 24
+     "titoli": 25
     }
    ]
   },
@@ -447,7 +447,7 @@
    "url": "https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vAJHECdpPpPlussjcE9Gx4WDBkssSlash4weeqqEEqualeeqqEEqual&output=56",
    "status": 200,
    "byte": 597,
-   "secondi": 0.5,
+   "secondi": 1.0,
    "titolo_pagina": "",
    "file": "pagine/01.html"
   }

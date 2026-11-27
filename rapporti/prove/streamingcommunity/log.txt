@@ -6,45 +6,18 @@ Canale streamingcommunity | indirizzo https://streamingcommunityz.mov
       peliculas | •• Top 10 film di oggi | https://streamingcommunityz.mov/it/movies
       peliculas | • Serie TV | https://streamingcommunityz.mov/it/tv-shows
 == lista "• Film"
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
-    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
-                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/channels/streamingcommunity.py", line 121, in peliculas
-    records = data_page['props']['sliders'][item.args]['titles']
-              ~~~~~~~~~^^^^^^^^^
-KeyError: 'props'
-
-== lista "•• Aggiunti di recente"
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
-    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
-                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/channels/streamingcommunity.py", line 121, in peliculas
-    records = data_page['props']['sliders'][item.args]['titles']
-              ~~~~~~~~~^^^^^^^^^
-KeyError: 'props'
-
-== lista "•• Top 10 film di oggi"
-Traceback (most recent call last):
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
-    r = f()
-        ^^^
-  File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 166, in <lambda>
-    lista = passo('lista "%s"' % re.sub(r'\[[^\]]*\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))
-                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/kh/addon/channels/streamingcommunity.py", line 121, in peliculas
-    records = data_page['props']['sliders'][item.args]['titles']
-              ~~~~~~~~~^^^^^^^^^
-KeyError: 'props'
-
-Nessuna voce da riprodurre trovata
+   -> 21 voci
+      findvideos | Chiara  | https://streamingcommunityz.mov/it/watch/66660
+      findvideos | Perfetti bugiardi  | https://streamingcommunityz.mov/it/watch/66641
+      findvideos | A Story of Derry  | https://streamingcommunityz.mov/it/watch/66468
+      findvideos | Drive - Cuori in pista  | https://streamingcommunityz.mov/it/watch/66440
+== findvideos su "Chiara "
+   -> 2 voci
+      play | Chiara  | https://streamingcommunityz.mov/it/iframe/66660
+      add_pelicula_to_library | txt30161 %s | https://streamingcommunityz.mov/it/watch/66660
+   play del canale -> streamingcommunityws https://streamingcommunityz.mov/it/iframe/66660
+== risoluzione streamingcommunityws https://streamingcommunityz.mov/it/iframe/66660
+   -> VIDEO OK m3u8 200 
 == voci dichiarate in mainlist (15)
     film | '/it/movies'
     film | ('Aggiunti di recente', ['/it/movies', 'peliculas', 1])
@@ -62,37 +35,24 @@ Nessuna voce da riprodurre trovata
     menu | ('Archivio per numero visioni {submenu}', ['/it/archive?sort=views', 'peliculas', -1])
     menu | ('Archivio per nome {submenu}', ['/it/archive?sort=name', 'peliculas', -1])
 == controllo di tutte le sezioni
-   SEZIONE • Film -> ERRORE KeyError
-   SEZIONE •• Aggiunti di recente -> ERRORE KeyError
-   SEZIONE •• Top 10 film di oggi -> ERRORE KeyError
-   SEZIONE • Serie TV -> ERRORE KeyError
-   SEZIONE •• Aggiunti di recente -> ERRORE KeyError
-   SEZIONE •• Top 10 serie TV di oggi -> ERRORE KeyError
-   SEZIONE Generi -> ERRORE KeyError
-   SEZIONE Archivio -> ERRORE KeyError
-   SEZIONE •• Archivio Film -> ERRORE KeyError
-   SEZIONE •• Archivio Serie TV -> ERRORE KeyError
-   SEZIONE •• Archivio per data aggiornamento -> ERRORE KeyError
-   SEZIONE •• Archivio per data aggiunta -> ERRORE KeyError
-   SEZIONE •• Archivio per valutazione -> ERRORE KeyError
-   SEZIONE •• Archivio per numero visioni -> ERRORE KeyError
-   SEZIONE •• Archivio per nome -> ERRORE KeyError
-   SEZIONE txt70741 … -> VUOTA   | ultima pagina: {'url': 'https://streamingcommunityz.mov/it/search?q=avatar', 'status': 403, 'byte': 6563, 'titolo_pagina': 'Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str'}
-SEZIONI: 0 ok su 16
-   SEZIONE SENZA TITOLI: • Film | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Aggiunti di recente | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Top 10 film di oggi | ERRORE KeyError
-   SEZIONE SENZA TITOLI: • Serie TV | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Aggiunti di recente | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Top 10 serie TV di oggi | ERRORE KeyError
-   SEZIONE SENZA TITOLI: Generi | ERRORE KeyError
-   SEZIONE SENZA TITOLI: Archivio | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Archivio Film | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Archivio Serie TV | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Archivio per data aggiornamento | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Archivio per data aggiunta | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Archivio per valutazione | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Archivio per numero visioni | ERRORE KeyError
-   SEZIONE SENZA TITOLI: •• Archivio per nome | ERRORE KeyError
-   SEZIONE SENZA TITOLI: txt70741 … | VUOTA
-VERDETTO: SI FERMA A: lista "• Film"
+   SEZIONE • Film -> OK 20 
+   SEZIONE •• Aggiunti di recente -> OK 20 
+   SEZIONE •• Top 10 film di oggi -> OK 10 
+   SEZIONE • Serie TV -> OK 20 
+   SEZIONE •• Aggiunti di recente -> OK 20 
+   SEZIONE •• Top 10 serie TV di oggi -> OK 10 
+   SEZIONE Azione -> OK 20 
+   SEZIONE Action & Adventure -> OK 20 
+   SEZIONE Avventura -> OK 20 
+   SEZIONE Generi -> SOTTOMENU  
+   SEZIONE Archivio -> OK 20 
+   SEZIONE •• Archivio Film -> OK 20 
+   SEZIONE •• Archivio Serie TV -> OK 20 
+   SEZIONE •• Archivio per data aggiornamento -> OK 20 
+   SEZIONE •• Archivio per data aggiunta -> OK 20 
+   SEZIONE •• Archivio per valutazione -> OK 20 
+   SEZIONE •• Archivio per numero visioni -> OK 20 
+   SEZIONE •• Archivio per nome -> OK 20 
+   SEZIONE txt70741 … -> OK 10 
+SEZIONI: 16 ok su 16
+VERDETTO: ARRIVA AL VIDEO

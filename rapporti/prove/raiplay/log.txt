@@ -50,21 +50,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
     menu | ('Rai Italy{bold tv}', ['/raiitaly', 'menu', '/tipologia/raiitaly/index.json'])
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 15 
-   SEZIONE Rai 1 -> OK 23 
-   SEZIONE Rai 2 -> OK 24 
-   SEZIONE Rai 3 -> OK 21 
+   SEZIONE Rai 1 -> OK 20 
+   SEZIONE Rai 2 -> OK 23 
+   SEZIONE Rai 3 -> ERRORE JSONDecodeError
+   SEZIONE str15 27 str31 -> SOTTOMENU  
+   SEZIONE Rai 1 -> OK 34 
+   SEZIONE Rai 2 -> OK 34 
+   SEZIONE Rai 3 -> OK 31 
    SEZIONE str14 26 str31 -> SOTTOMENU  
    SEZIONE Rai 1 -> OK 30 
    SEZIONE Rai 2 -> OK 34 
    SEZIONE Rai 3 -> OK 30 
    SEZIONE str13 25 str31 -> SOTTOMENU  
-   SEZIONE Rai 1 -> OK 33 
-   SEZIONE Rai 2 -> OK 33 
-   SEZIONE Rai 3 -> OK 30 
-   SEZIONE str12 24 str31 -> SOTTOMENU  
    SEZIONE Replay -> SOTTOMENU  
-   SEZIONE Novità -> OK 22 
-   SEZIONE Da non perdere -> OK 25 
+   SEZIONE Novità -> OK 21 
+   SEZIONE Da non perdere -> OK 21 
    SEZIONE Film al Torino Film Festival -> OK 21 
    SEZIONE Film -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 25 
@@ -79,21 +79,21 @@ Canale raiplay | indirizzo https://www.raiplay.it
    SEZIONE Territori e itinerari -> OK 34 
    SEZIONE Approfondimento -> OK 31 
    SEZIONE Programmi TV -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Da non perdere -> OK 23 
    SEZIONE Docu-serie Original -> OK 29 
    SEZIONE Documentari Original -> OK 24 
    SEZIONE Documentari -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 24 
-   SEZIONE 24 Novembre - Auguri a Carlo Collodi, 200 anni di Pinocchio! -> OK 6 
-   SEZIONE Esclusive RaiPlay Bambini -> OK 33 
+   SEZIONE Da non perdere -> OK 25 
+   SEZIONE Cinema bambini -> OK 23 
+   SEZIONE Esclusive RaiPlay Bambini -> OK 31 
    SEZIONE Bambini -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 36 
-   SEZIONE Un mondo di fumetti -> OK 13 
+   SEZIONE Un mondo di fumetti -> OK 12 
    SEZIONE Coming of age Stories -> OK 29 
    SEZIONE Teen -> SOTTOMENU  
-   SEZIONE Da non perdere -> OK 24 
+   SEZIONE Da non perdere -> OK 25 
    SEZIONE Il teatro di Eduardo -> OK 25 
-   SEZIONE Musica classica -> OK 24 
+   SEZIONE Musica classica -> OK 25 
    SEZIONE Musica e Teatro -> SOTTOMENU  
    SEZIONE Da non perdere -> OK 24 
    SEZIONE BiblioTeche -> OK 24 

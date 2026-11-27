@@ -7,16 +7,20 @@ Canale cineblog01 | indirizzo https://cb01official.uno
       menu | •• Anni | https://cb01official.uno
 == lista "• Film"
    -> 13 voci
-      findvideos | Come rapinare una banca | https://cb01one.xyz/come-rapinare-una-banca-2026/
-      findvideos | The Mosquito Bowl  | https://cb01one.xyz/the-mosquito-bowl-hd-2026/
-      findvideos | Il delitto del 3° piano  | https://cb01one.xyz/il-delitto-del-3-piano-hd-2026/
-      findvideos | Scuola per guerrieri coraggiosi  | https://cb01one.xyz/scuola-per-guerrieri-coraggiosi-hd-2026/
-== findvideos su "Come rapinare una banca"
-   -> 2 voci
-      play | Come rapinare una banca | https://stayonline.pro/l/KXRXB/
-      add_pelicula_to_library | txt30161 %s | https://cb01one.xyz/come-rapinare-una-banca-2026/
-   play del canale -> mixdrop https://m1xdrop.net/e/36680n18hm6dol0
-== risoluzione mixdrop https://m1xdrop.net/e/36680n18hm6dol0
+      findvideos | Quasimodo, l’anima di Parigi  | https://cb01one.xyz/quasimodo-lanima-di-parigi-hd-2026/
+      findvideos | Tony - Diario di un giovane cuoco  | https://cb01one.xyz/tony-diario-di-un-giovane-cuoco-hd-2026/
+      findvideos | Il bambino  | https://cb01one.xyz/il-bambino-hd-2026/
+      findvideos | Nella morsa del ghiaccio  | https://cb01one.xyz/nella-morsa-del-ghiaccio-hd-2026/
+== findvideos su "Quasimodo, l’anima di Parigi "
+   -> 3 voci
+      play | Quasimodo, l’anima di Parigi  | https://stayonline.pro/l/B6ZLZ/
+      play | Quasimodo, l’anima di Parigi  | https://stayonline.pro/l/rLkxQ/
+      add_pelicula_to_library | txt30161 %s | https://cb01one.xyz/quasimodo-lanima-di-parigi-hd-2026/
+   play del canale -> mixdrop https://m1xdrop.net/e/3668kwz8hv3xd7
+== risoluzione mixdrop https://m1xdrop.net/e/3668kwz8hv3xd7
+   -> VIDEO NON RAGGIUNGIBILE HTTP 403 
+   play del canale -> mixdrop https://m1xdrop.net/e/q11qz4vetxeqwq
+== risoluzione mixdrop https://m1xdrop.net/e/q11qz4vetxeqwq
    -> VIDEO NON RAGGIUNGIBILE HTTP 403 
 == voci dichiarate in mainlist (14)
     film | ('HD', ['', 'menu', 'Film HD Streaming'])
@@ -68,10 +72,9 @@ Canale cineblog01 | indirizzo https://cb01official.uno
    SEZIONE 2025 -> OK 12 
    SEZIONE 2024 -> OK 12 
    SEZIONE •• Per anno -> SOTTOMENU  
-   SEZIONE •• Ultime Aggiunte -> VUOTA   | ultima pagina: {'url': 'https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/serietv/ultime-100-serie-tv-aggiunte/', 'status': 429, 'byte': 7393, 'titolo_pagina': 'Access denied | cb01one.xyz used Cloudflare to restrict access | cb01one.xyz | C'}
+   SEZIONE •• Ultime Aggiunte -> OK 20 
    SEZIONE •• txt70741 Serie TV… -> OK 2 
    SEZIONE • Documentari -> OK 12 
    SEZIONE •• HD -> OK 12 
-SEZIONI: 16 ok su 17
-   SEZIONE SENZA TITOLI: •• Ultime Aggiunte | VUOTA
+SEZIONI: 17 ok su 17
 VERDETTO: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE

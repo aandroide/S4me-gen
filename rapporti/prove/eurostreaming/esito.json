@@ -13,14 +13,14 @@
    "voci": 19
   },
   {
-   "passo": "episodios su \"NCIS: Origins\"",
+   "passo": "episodios su \"War: Il divorzio del secolo\"",
    "esito": "OK",
-   "voci": 61
+   "voci": 5
   },
   {
-   "passo": "findvideos su \"1x01 - Un nuovo inizio (prima parte) \"",
+   "passo": "findvideos su \"1x01 - È fatta \"",
    "esito": "ERRORE",
-   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/165rsctdww0h\n"
+   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/1bkmgazpmt0s\n"
   },
   {
    "passo": "lista \"• Anime\"",
@@ -43,14 +43,14 @@
    "voci": 21
   },
   {
-   "passo": "episodios su \"13x07 - Oak Island e il tesoro maledetto\"",
+   "passo": "episodios su \"1x01 - War: Il divorzio del secolo (2026\"",
    "esito": "OK",
-   "voci": 250
+   "voci": 5
   },
   {
-   "passo": "findvideos su \"1x01 - Che la Caccia Abbia Inizio! \"",
+   "passo": "findvideos su \"1x01 - È fatta \"",
    "esito": "ERRORE",
-   "errore": "\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/delta/84w38t0e4el9\n"
+   "errore": "sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/eurostreaming.py\", line 103, in findvideos\n    itemlist = support.server(item, item.other)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Not un-shortened link: https://clicka.cc/mix/bsa2u39w\n"
   }
  ],
  "video": [],
@@ -76,6 +76,7 @@
    "voce": "• Aggiornamenti",
    "azione": "peliculas",
    "problemi": [
+    "titolo rovinato: 1x61 - Boruto: Naruto Next Generations - Utilizzatore della Sabbia Fer",
     "titolo rovinato: 13x07 - Oak Island e il tesoro maledetto - Alla ricerca di nuove tracc"
    ],
    "esito": "OK",
@@ -97,286 +98,230 @@
  "sezioni_riepilogo": "5 ok su 5",
  "rete": [
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+   "url": "https://eurostream.homes",
    "status": 200,
-   "byte": 42446,
-   "secondi": 1.0,
+   "byte": 43045,
+   "secondi": 1.2,
    "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://eurostream.homes",
+   "url": "https://eurostream.beer/war-il-divorzio-del-secolo-2026/",
    "status": 200,
-   "byte": 42446,
-   "secondi": 1.1,
-   "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming",
+   "byte": 33646,
+   "secondi": 0.6,
+   "titolo_pagina": "War: Il divorzio del secolo (2026) streaming Serie TV - euroStreaming",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/ncis-origins/",
-   "status": 200,
-   "byte": 50926,
-   "secondi": 0.4,
-   "titolo_pagina": "NCIS: Origins streaming Serie TV - euroStreaming",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/delta/1bkmgazpmt0s",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment...",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://eurostream.homes/ncis-origins/",
-   "status": 200,
-   "byte": 50926,
-   "secondi": 0.5,
-   "titolo_pagina": "NCIS: Origins streaming Serie TV - euroStreaming",
-   "file": "pagine/04.html"
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/delta/165rsctdww0h",
-   "status": 403,
-   "byte": 5877,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment...",
-   "file": "pagine/05.html"
-  },
-  {
-   "url": "https://clicka.cc/delta/165rsctdww0h",
+   "url": "https://clicka.cc/delta/1bkmgazpmt0s",
    "status": 403,
    "byte": 5877,
    "secondi": 0.4,
    "titolo_pagina": "Just a moment...",
+   "file": "pagine/04.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/msf/cwm3pvu0z6mq",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.5,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "file": "pagine/05.html"
+  },
+  {
+   "url": "https://uprot.net/msf/cwm3pvu0z6mq",
+   "status": 403,
+   "byte": 6521,
+   "secondi": 0.6,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/mix/qpwha3xf",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/mix/bsa2u39w",
    "status": 403,
    "byte": 5859,
-   "secondi": 0.3,
+   "secondi": 0.6,
    "titolo_pagina": "Just a moment...",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://clicka.cc/mix/qpwha3xf",
+   "url": "https://clicka.cc/mix/bsa2u39w",
    "status": 403,
    "byte": 5859,
-   "secondi": 0.5,
+   "secondi": 0.7,
    "titolo_pagina": "Just a moment...",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/4kr7sodoucsq",
-   "status": 403,
-   "byte": 6521,
-   "secondi": 0.7,
-   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "url": "https://eurostream.homes/category/anime-cartoni-animati/",
+   "status": 200,
+   "byte": 44139,
+   "secondi": 1.0,
+   "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://uprot.net/msf/4kr7sodoucsq",
-   "status": 403,
-   "byte": 6521,
+   "url": "https://eurostream.beer/bass-x-machina/",
+   "status": 200,
+   "byte": 34162,
    "secondi": 0.8,
-   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "titolo_pagina": "Bass X Machina streaming Serie TV - euroStreaming",
    "file": "pagine/10.html"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anime-cartoni-animati/",
-   "status": 200,
-   "byte": 43884,
-   "secondi": 1.0,
-   "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming",
-   "file": "pagine/11.html"
-  },
-  {
-   "url": "https://eurostream.homes/category/anime-cartoni-animati/",
-   "status": 200,
-   "byte": 43884,
-   "secondi": 1.1,
-   "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming",
-   "file": "pagine/12.html"
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/bass-x-machina/",
-   "status": 200,
-   "byte": 33856,
-   "secondi": 0.4,
-   "titolo_pagina": "Bass X Machina streaming Serie TV - euroStreaming",
-   "file": "pagine/13.html"
-  },
-  {
-   "url": "https://eurostream.homes/bass-x-machina/",
-   "status": 200,
-   "byte": 33856,
-   "secondi": 0.5,
-   "titolo_pagina": "Bass X Machina streaming Serie TV - euroStreaming",
-   "file": "pagine/14.html"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/delta/pcmgkril78mk",
    "status": 403,
    "byte": 5877,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "Just a moment...",
-   "file": "pagine/15.html"
+   "file": "pagine/11.html"
   },
   {
    "url": "https://clicka.cc/delta/pcmgkril78mk",
    "status": 403,
    "byte": 5877,
    "secondi": 0.3,
-   "titolo_pagina": "Just a moment..."
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/12.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/mix/2ri018ty",
-   "status": 403,
-   "byte": 5859,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment..."
-  },
-  {
-   "url": "https://clicka.cc/mix/2ri018ty",
-   "status": 403,
-   "byte": 5859,
-   "secondi": 0.3,
-   "titolo_pagina": "Just a moment..."
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/zu6q34wimke8",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/msf/zu6q34wimke8",
    "status": 403,
    "byte": 6521,
    "secondi": 0.3,
-   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud"
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "file": "pagine/13.html"
   },
   {
    "url": "https://uprot.net/msf/zu6q34wimke8",
    "status": 403,
    "byte": 6521,
+   "secondi": 0.4,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/mix/2ri018ty",
+   "status": 403,
+   "byte": 5859,
+   "secondi": 0.6,
+   "titolo_pagina": "Just a moment...",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://clicka.cc/mix/2ri018ty",
+   "status": 403,
+   "byte": 5859,
+   "secondi": 0.7,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://eurostream.homes/nuovi-ep-aggiornamento/",
+   "status": 200,
+   "byte": 46728,
+   "secondi": 0.9,
+   "titolo_pagina": "Aggiornamento Episodi - euroStreaming"
+  },
+  {
+   "url": "https://eurostream.beer/war-il-divorzio-del-secolo-2026/",
+   "status": 200,
+   "byte": 33646,
+   "secondi": 0.6,
+   "titolo_pagina": "War: Il divorzio del secolo (2026) streaming Serie TV - euroStreaming"
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/msf/cwm3pvu0z6mq",
+   "status": 403,
+   "byte": 6521,
    "secondi": 0.3,
    "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/nuovi-ep-aggiornamento/",
-   "status": 200,
-   "byte": 45873,
-   "secondi": 1.2,
-   "titolo_pagina": "Aggiornamento Episodi - euroStreaming"
-  },
-  {
-   "url": "https://eurostream.homes/nuovi-ep-aggiornamento/",
-   "status": 200,
-   "byte": 45873,
-   "secondi": 1.2,
-   "titolo_pagina": "Aggiornamento Episodi - euroStreaming"
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/oak-island-e-il-tesoro-maledetto/",
-   "status": 200,
-   "byte": 88574,
-   "secondi": 0.9,
-   "titolo_pagina": "Oak Island e il Tesoro Maledetto streaming Serie TV - euroStreaming"
-  },
-  {
-   "url": "https://eurostream.homes/oak-island-e-il-tesoro-maledetto/",
-   "status": 200,
-   "byte": 88574,
-   "secondi": 0.9,
-   "titolo_pagina": "Oak Island e il Tesoro Maledetto streaming Serie TV - euroStreaming"
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/delta/84w38t0e4el9",
+   "url": "https://uprot.net/msf/cwm3pvu0z6mq",
    "status": 403,
-   "byte": 5877,
-   "secondi": 0.2,
-   "titolo_pagina": "Just a moment..."
+   "byte": 6521,
+   "secondi": 0.3,
+   "titolo_pagina": "Access denied | uprot.net used Cloudflare to restrict access | uprot.net | Cloud"
   },
   {
-   "url": "https://clicka.cc/delta/84w38t0e4el9",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/mix/bsa2u39w",
    "status": 403,
-   "byte": 5877,
-   "secondi": 0.2,
-   "titolo_pagina": "Just a moment..."
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/tv/gvz0p1ur",
-   "status": 403,
-   "byte": 5856,
-   "secondi": 0.2,
-   "titolo_pagina": "Just a moment..."
-  },
-  {
-   "url": "https://clicka.cc/tv/gvz0p1ur",
-   "status": 403,
-   "byte": 5856,
+   "byte": 5859,
    "secondi": 0.3,
    "titolo_pagina": "Just a moment..."
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
-   "status": 200,
-   "byte": 42446,
-   "secondi": 1.0,
-   "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming"
+   "url": "https://clicka.cc/mix/bsa2u39w",
+   "status": 403,
+   "byte": 5859,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/delta/1bkmgazpmt0s",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.3,
+   "titolo_pagina": "Just a moment..."
+  },
+  {
+   "url": "https://clicka.cc/delta/1bkmgazpmt0s",
+   "status": 403,
+   "byte": 5877,
+   "secondi": 0.4,
+   "titolo_pagina": "Just a moment..."
   },
   {
    "url": "https://eurostream.homes",
    "status": 200,
-   "byte": 42446,
-   "secondi": 1.0,
-   "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/category/anime-cartoni-animati/",
-   "status": 200,
-   "byte": 43884,
+   "byte": 43045,
    "secondi": 0.9,
-   "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming"
+   "titolo_pagina": "euroStreaming - Serie Tv e Film in streaming"
   },
   {
    "url": "https://eurostream.homes/category/anime-cartoni-animati/",
    "status": 200,
-   "byte": 43884,
-   "secondi": 0.9,
+   "byte": 44139,
+   "secondi": 0.8,
    "titolo_pagina": "Anime / Cartoni Archives - euroStreaming :: Serie TV e Film in Streaming"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/nuovi-ep-aggiornamento/",
-   "status": 200,
-   "byte": 45873,
-   "secondi": 1.0,
-   "titolo_pagina": "Aggiornamento Episodi - euroStreaming"
   },
   {
    "url": "https://eurostream.homes/nuovi-ep-aggiornamento/",
    "status": 200,
-   "byte": 45873,
-   "secondi": 1.0,
+   "byte": 46728,
+   "secondi": 0.9,
    "titolo_pagina": "Aggiornamento Episodi - euroStreaming"
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/category/serie-tv-archive/",
-   "status": 200,
-   "byte": 43047,
-   "secondi": 0.7,
-   "titolo_pagina": "SERIE TV ARCHIVIO Archives - euroStreaming :: Serie TV e Film in Streaming"
   },
   {
    "url": "https://eurostream.homes/category/serie-tv-archive/",
    "status": 200,
-   "byte": 43047,
-   "secondi": 0.7,
+   "byte": 42984,
+   "secondi": 0.9,
    "titolo_pagina": "SERIE TV ARCHIVIO Archives - euroStreaming :: Serie TV e Film in Streaming"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/?s=avatar",
    "status": 200,
-   "byte": 43459,
+   "byte": 44510,
    "secondi": 1.6,
    "titolo_pagina": "Hai cercato avatar - euroStreaming :: Serie TV e Film in Streaming"
   },
   {
    "url": "https://eurostream.homes/?s=avatar",
    "status": 200,
-   "byte": 43459,
+   "byte": 44510,
    "secondi": 1.7,
    "titolo_pagina": "Hai cercato avatar - euroStreaming :: Serie TV e Film in Streaming"
   }
  ],
- "verdetto": "SI FERMA A: findvideos su \"1x01 - Un nuovo inizio (prima parte) \""
+ "verdetto": "SI FERMA A: findvideos su \"1x01 - È fatta \""
 }

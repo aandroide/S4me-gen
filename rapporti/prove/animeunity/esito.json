@@ -38,9 +38,9 @@
    "server": "streamingcommunityws",
    "url": "https://animeunity.cx/anime/831-hackquantum/18482",
    "tipo": "film",
-   "finale": "https://vixcloud.cc/playlist/103592?token=17795e6b066c44eb384c0abe59f5f341&expires=1800891346&asn=&h=1",
-   "esito": "VIDEO NON RAGGIUNGIBILE",
-   "dettaglio": "HTTP 403"
+   "finale": "https://vixcloud.cc/playlist/103592?token=a2490d418c9da379aec250ce85eb3db0&expires=1800976987&asn=&h=1",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
   }
  ],
  "menu_dichiarato": [
@@ -105,26 +105,26 @@
  "sezioni_riepilogo": "8 ok su 8",
  "rete": [
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/archive",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/archive",
    "status": 200,
-   "byte": 148434,
-   "secondi": 0.5,
+   "byte": 148699,
+   "secondi": 0.4,
    "titolo_pagina": "AnimeUnity",
    "file": "pagine/01.html"
   },
   {
    "url": "https://animeunity.cx/archive",
    "status": 200,
-   "byte": 148434,
-   "secondi": 0.5,
+   "byte": 148699,
+   "secondi": 1.0,
    "titolo_pagina": "AnimeUnity",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?genres[0]=1&page=1",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?genres[0]=1&page=1",
    "status": 200,
    "byte": 59933,
-   "secondi": 0.3,
+   "secondi": 0.8,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
@@ -132,97 +132,202 @@
    "url": "https://animeunity.cx/api/archive?genres[0]=1&page=1",
    "status": 200,
    "byte": 59933,
-   "secondi": 0.3,
+   "secondi": 0.8,
    "titolo_pagina": "",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/anime/831-hackquantum",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/anime/831-hackquantum",
    "status": 200,
-   "byte": 257171,
-   "secondi": 0.3,
+   "byte": 257749,
+   "secondi": 0.4,
    "titolo_pagina": ".hack//Quantum Streaming SUB ITA/ITA &amp; Download - AnimeUnity",
    "file": "pagine/05.html"
   },
   {
    "url": "https://animeunity.cx/anime/831-hackquantum",
    "status": 200,
-   "byte": 257171,
-   "secondi": 0.3,
+   "byte": 257749,
+   "secondi": 0.5,
    "titolo_pagina": ".hack//Quantum Streaming SUB ITA/ITA &amp; Download - AnimeUnity",
    "file": "pagine/06.html"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/anime/831-hackquantum/18482",
    "status": 200,
-   "byte": 257217,
-   "secondi": 0.7,
+   "byte": 257856,
+   "secondi": 0.3,
    "titolo_pagina": ".hack//Quantum Episodio 1 Streaming SUB ITA/ITA &amp; Download - AnimeUnity",
    "file": "pagine/07.html"
   },
   {
    "url": "https://animeunity.cx/anime/831-hackquantum/18482",
    "status": 200,
-   "byte": 257217,
-   "secondi": 0.7,
+   "byte": 257856,
+   "secondi": 0.3,
    "titolo_pagina": ".hack//Quantum Episodio 1 Streaming SUB ITA/ITA &amp; Download - AnimeUnity",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/embed/103592?token=030514cff3ea361199588c19713ec539&expires=1800889200&canPlayFHD=1&skin=animeunity2",
+   "url": "https://vixcloud.cc/embed/103592?token=c9264732a6c1a25a1dec89ad3898887e&expires=1800975600&canPlayFHD=1&skin=animeunity2",
    "status": 200,
-   "byte": 7512,
-   "secondi": 0.5,
+   "byte": 7879,
+   "secondi": 0.3,
    "titolo_pagina": "103592",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://vixcloud.cc/embed/103592?token=030514cff3ea361199588c19713ec539&expires=1800889200&canPlayFHD=1&skin=animeunity2",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev",
    "status": 200,
-   "byte": 7512,
+   "byte": 512947,
    "secondi": 0.6,
-   "titolo_pagina": "103592",
+   "titolo_pagina": "AnimeUnity",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
+   "url": "https://animeunity.cx",
    "status": 200,
-   "byte": 499504,
+   "byte": 512947,
    "secondi": 0.6,
    "titolo_pagina": "AnimeUnity",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://animeunity.cx",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=One+Piece",
    "status": 200,
-   "byte": 499504,
-   "secondi": 0.7,
-   "titolo_pagina": "AnimeUnity",
+   "byte": 67015,
+   "secondi": 0.3,
+   "titolo_pagina": "",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=FX+Fighter+Kurumi-chan",
+   "url": "https://animeunity.cx/api/archive?query=One+Piece",
    "status": 200,
-   "byte": 3147,
+   "byte": 67015,
    "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/13.html"
   },
   {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=Devils%27+Crest",
+   "status": 200,
+   "byte": 2624,
+   "secondi": 0.4,
+   "titolo_pagina": "",
+   "file": "pagine/14.html"
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Devils%27+Crest",
+   "status": 200,
+   "byte": 2624,
+   "secondi": 0.4,
+   "titolo_pagina": "",
+   "file": "pagine/15.html"
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=Le+Bizzarre+Avventure+di+JoJo%3A+Steel+Ball+Run+2nd+-+3rd+Stage",
+   "status": 200,
+   "byte": 2716,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Le+Bizzarre+Avventure+di+JoJo%3A+Steel+Ball+Run+2nd+-+3rd+Stage",
+   "status": 200,
+   "byte": 2716,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=With+Vengeance%2C+Sincerely%2C+Your+Broken+Saintess+2",
+   "status": 200,
+   "byte": 2271,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=With+Vengeance%2C+Sincerely%2C+Your+Broken+Saintess+2",
+   "status": 200,
+   "byte": 2271,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=Fool+Night",
+   "status": 200,
+   "byte": 3102,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=Fool+Night",
+   "status": 200,
+   "byte": 3102,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=The+Iceblade+Sorcerer+Shall+Rule+the+World+2",
+   "status": 200,
+   "byte": 2273,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=The+Iceblade+Sorcerer+Shall+Rule+the+World+2",
+   "status": 200,
+   "byte": 2273,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=The+Exiled+Heavy+Knight+Knows+How+to+Game+the+System",
+   "status": 200,
+   "byte": 3226,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=The+Exiled+Heavy+Knight+Knows+How+to+Game+the+System",
+   "status": 200,
+   "byte": 3226,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=The+Ramparts+of+Ice+2",
+   "status": 200,
+   "byte": 2184,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://animeunity.cx/api/archive?query=The+Ramparts+of+Ice+2",
+   "status": 200,
+   "byte": 2184,
+   "secondi": 0.3,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=FX+Fighter+Kurumi-chan",
+   "status": 200,
+   "byte": 3147,
+   "secondi": 0.4,
+   "titolo_pagina": ""
+  },
+  {
    "url": "https://animeunity.cx/api/archive?query=FX+Fighter+Kurumi-chan",
    "status": 200,
    "byte": 3147,
-   "secondi": 0.3,
-   "titolo_pagina": "",
-   "file": "pagine/14.html"
+   "secondi": 0.4,
+   "titolo_pagina": ""
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=The+All-devouring+Whale%3A+Homecoming",
    "status": 200,
    "byte": 2827,
-   "secondi": 0.3,
-   "titolo_pagina": "",
-   "file": "pagine/15.html"
+   "secondi": 0.2,
+   "titolo_pagina": ""
   },
   {
    "url": "https://animeunity.cx/api/archive?query=The+All-devouring+Whale%3A+Homecoming",
@@ -232,10 +337,10 @@
    "titolo_pagina": ""
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=Tougen+Anki%3A+Nikko+Kegon+Falls+Arc",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=Tougen+Anki%3A+Nikko+Kegon+Falls+Arc",
    "status": 200,
    "byte": 2542,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
@@ -246,203 +351,7 @@
    "titolo_pagina": ""
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=A+Returner%27s+Magic+Should+be+Special+2",
-   "status": 200,
-   "byte": 2213,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=A+Returner%27s+Magic+Should+be+Special+2",
-   "status": 200,
-   "byte": 2213,
-   "secondi": 0.7,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=Dandivine",
-   "status": 200,
-   "byte": 2541,
-   "secondi": 0.2,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=Dandivine",
-   "status": 200,
-   "byte": 2541,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=Magic+Knight+Rayearth+%282026%29",
-   "status": 200,
-   "byte": 2703,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=Magic+Knight+Rayearth+%282026%29",
-   "status": 200,
-   "byte": 2703,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=The+Prince+of+Tennis+II+U-17+WORLD+CUP%3A+Final+Member+Selection+Match",
-   "status": 200,
-   "byte": 2411,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=The+Prince+of+Tennis+II+U-17+WORLD+CUP%3A+Final+Member+Selection+Match",
-   "status": 200,
-   "byte": 2411,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=Reincarnated+as+a+Sword+2",
-   "status": 200,
-   "byte": 2348,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=Reincarnated+as+a+Sword+2",
-   "status": 200,
-   "byte": 2348,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=Paw+%26+Palaces",
-   "status": 200,
-   "byte": 2542,
-   "secondi": 0.4,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=Paw+%26+Palaces",
-   "status": 200,
-   "byte": 2542,
-   "secondi": 0.4,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=The+Detective+Is+Already+Dead+2",
-   "status": 200,
-   "byte": 2196,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=The+Detective+Is+Already+Dead+2",
-   "status": 200,
-   "byte": 2196,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=The+World%27s+Strongest+Witch",
-   "status": 200,
-   "byte": 2682,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=The+World%27s+Strongest+Witch",
-   "status": 200,
-   "byte": 2682,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=Sasaki+and+Peeps+2",
-   "status": 200,
-   "byte": 2354,
-   "secondi": 0.2,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=Sasaki+and+Peeps+2",
-   "status": 200,
-   "byte": 2354,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=Super+Cube",
-   "status": 200,
-   "byte": 3045,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=Super+Cube",
-   "status": 200,
-   "byte": 3045,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=The+Lonely+Snow+Widow+and+the+Cursed+Ring",
-   "status": 200,
-   "byte": 2658,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=The+Lonely+Snow+Widow+and+the+Cursed+Ring",
-   "status": 200,
-   "byte": 2658,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=My+Girlfriend%27s+Friend",
-   "status": 200,
-   "byte": 2824,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=My+Girlfriend%27s+Friend",
-   "status": 200,
-   "byte": 2824,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?query=I%27m+Dating+a+Dark+Summoner",
-   "status": 200,
-   "byte": 3066,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=I%27m+Dating+a+Dark+Summoner",
-   "status": 200,
-   "byte": 3066,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=Magical+Girl+Raising+Project%3A+Restart",
-   "status": 200,
-   "byte": 2943,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://animeunity.cx/api/archive?query=Magical+Girl+Raising+Project%3A+Restart",
-   "status": 200,
-   "byte": 2943,
-   "secondi": 0.3,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/api/archive?page=1",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?page=1",
    "status": 200,
    "byte": 60784,
    "secondi": 0.4,
@@ -456,7 +365,7 @@
    "titolo_pagina": ""
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/api/archive?query=avatar&page=1",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/api/archive?query=avatar&page=1",
    "status": 200,
    "byte": 13457,
    "secondi": 0.3,
@@ -473,34 +382,6 @@
    "url": "https://api.themoviedb.org/3/genre/movie/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
    "byte": 562,
-   "secondi": 0.0,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/genre/tv/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
-   "status": 200,
-   "byte": 495,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%20%282018%29&language=it&include_adult=False&page=1",
-   "status": 200,
-   "byte": 57,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%202&language=it&include_adult=False&page=1",
-   "status": 200,
-   "byte": 919,
-   "secondi": 0.1,
-   "titolo_pagina": ""
-  },
-  {
-   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%203&language=it&include_adult=False&page=1",
-   "status": 200,
-   "byte": 919,
    "secondi": 0.1,
    "titolo_pagina": ""
   },
@@ -512,17 +393,38 @@
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar&language=it&include_adult=False&page=1",
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%203&language=it&include_adult=False&page=1",
    "status": 200,
-   "byte": 1273,
-   "secondi": 0.1,
+   "byte": 919,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
-   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=avatar%20-%20la%20leggenda%20di%20aang&language=it&include_adult=False&page=1",
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%20%282018%29&language=it&include_adult=False&page=1",
    "status": 200,
-   "byte": 1217,
-   "secondi": 0.1,
+   "byte": 57,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/genre/tv/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
+   "status": 200,
+   "byte": 495,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 1274,
+   "secondi": 0.2,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%27s%20avatar%202&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 919,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
@@ -538,7 +440,70 @@
    "byte": 606,
    "secondi": 0.1,
    "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/33880/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "status": 200,
+   "byte": 1303,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=avatar%20-%20la%20leggenda%20di%20aang&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 1216,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/71194/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "status": 200,
+   "byte": 230,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/71194/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "status": 200,
+   "byte": 230,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/71194/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "status": 200,
+   "byte": 230,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%20s%20avatar%20%202018&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 57,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/movie/613200/release_dates?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "status": 200,
+   "byte": 639,
+   "secondi": 0.1,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/search/tv?api_key=a1ab8b8669da03637a4b98fa39c39228&query=the%20king%20s%20avatar%20%202018&language=it&include_adult=False&page=1",
+   "status": 200,
+   "byte": 57,
+   "secondi": 0.0,
+   "titolo_pagina": ""
+  },
+  {
+   "url": "https://api.themoviedb.org/3/tv/82452/content_ratings?api_key=a1ab8b8669da03637a4b98fa39c39228",
+   "status": 200,
+   "byte": 1430,
+   "secondi": 0.1,
+   "titolo_pagina": ""
   }
  ],
- "verdetto": "SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE"
+ "verdetto": "ARRIVA AL VIDEO"
 }

@@ -13,7 +13,7 @@
    "voci": 13
   },
   {
-   "passo": "findvideos su \"Come rapinare una banca\"",
+   "passo": "findvideos su \"Quasimodo, l'anima di Parigi\"",
    "esito": "OK",
    "voci": 2
   }
@@ -21,9 +21,9 @@
  "video": [
   {
    "server": "vidxgo",
-   "url": "https://v.vidxgo.co/35866986",
+   "url": "https://v.vidxgo.co/37267166",
    "tipo": "film",
-   "finale": "http://127.0.0.1:40519/hls/35866986/master.m3u8",
+   "finale": "http://127.0.0.1:42535/hls/37267166/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -117,41 +117,41 @@
  "sezioni_riepilogo": "5 ok su 5",
  "rete": [
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/film/",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/film/",
    "status": 200,
-   "byte": 131689,
-   "secondi": 1.9,
+   "byte": 131521,
+   "secondi": 1.8,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/01.html"
   },
   {
    "url": "https://altadefinizionex.ink/film/",
    "status": 200,
-   "byte": 131689,
-   "secondi": 2.0,
+   "byte": 131521,
+   "secondi": 1.9,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/azione/45664-come-rapinare-una-banca-streaming.html",
+   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/drammatico/45674-quasimodo-lanima-di-parigi-streaming.html",
    "status": 200,
-   "byte": 375473,
-   "secondi": 1.5,
-   "titolo_pagina": "Come rapinare una banca Streaming ITA - Altadefinizione",
+   "byte": 265422,
+   "secondi": 1.2,
+   "titolo_pagina": "Quasimodo, l&#x27;anima di Parigi Streaming ITA - Altadefinizione",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://altadefinizionex.ink/azione/45664-come-rapinare-una-banca-streaming.html",
+   "url": "https://altadefinizionex.ink/drammatico/45674-quasimodo-lanima-di-parigi-streaming.html",
    "status": 200,
-   "byte": 375473,
-   "secondi": 1.6,
-   "titolo_pagina": "Come rapinare una banca Streaming ITA - Altadefinizione",
+   "byte": 265422,
+   "secondi": 1.2,
+   "titolo_pagina": "Quasimodo, l&#x27;anima di Parigi Streaming ITA - Altadefinizione",
    "file": "pagine/04.html"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/film/",
    "status": 200,
-   "byte": 131689,
+   "byte": 131521,
    "secondi": 0.3,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/05.html"
@@ -159,31 +159,31 @@
   {
    "url": "https://altadefinizionex.ink/film/",
    "status": 200,
-   "byte": 131689,
+   "byte": 131521,
    "secondi": 0.4,
    "titolo_pagina": "Film Streaming - Altadefinizione",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
    "status": 200,
-   "byte": 513860,
-   "secondi": 1.4,
+   "byte": 518288,
+   "secondi": 0.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/07.html"
   },
   {
    "url": "https://altadefinizionex.ink",
    "status": 200,
-   "byte": 513860,
-   "secondi": 1.5,
+   "byte": 518288,
+   "secondi": 0.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/08.html"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/cinema/film",
    "status": 404,
-   "byte": 32181,
+   "byte": 32185,
    "secondi": 0.7,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/09.html"
@@ -191,7 +191,7 @@
   {
    "url": "https://altadefinizionex.ink/cinema/film",
    "status": 404,
-   "byte": 32181,
+   "byte": 32185,
    "secondi": 0.7,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/10.html"
@@ -199,31 +199,31 @@
   {
    "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/cinema/",
    "status": 200,
-   "byte": 71803,
-   "secondi": 1.8,
+   "byte": 71807,
+   "secondi": 1.5,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/11.html"
   },
   {
    "url": "https://altadefinizionex.ink/cinema/",
    "status": 200,
-   "byte": 71803,
-   "secondi": 1.9,
+   "byte": 71807,
+   "secondi": 1.6,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/azione/film",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/azione/film",
    "status": 200,
-   "byte": 132909,
-   "secondi": 1.2,
+   "byte": 133127,
+   "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/13.html"
   },
   {
    "url": "https://altadefinizionex.ink/azione/film",
    "status": 200,
-   "byte": 132909,
+   "byte": 133127,
    "secondi": 1.2,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/14.html"
@@ -231,114 +231,114 @@
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/animazione/film",
    "status": 200,
-   "byte": 135058,
-   "secondi": 1.2,
+   "byte": 135062,
+   "secondi": 0.6,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione",
    "file": "pagine/15.html"
   },
   {
    "url": "https://altadefinizionex.ink/animazione/film",
    "status": 200,
-   "byte": 135058,
-   "secondi": 1.2,
+   "byte": 135062,
+   "secondi": 0.7,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/serie-tv/",
    "status": 200,
-   "byte": 134991,
-   "secondi": 1.4,
+   "byte": 135613,
+   "secondi": 0.6,
    "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/serie-tv/",
    "status": 200,
-   "byte": 134991,
-   "secondi": 1.4,
+   "byte": 135613,
+   "secondi": 0.6,
    "titolo_pagina": "Serie TV Streaming - Archivio - Altadefinizione"
   },
   {
    "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev",
    "status": 200,
-   "byte": 513860,
+   "byte": 518288,
    "secondi": 0.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink",
    "status": 200,
-   "byte": 513860,
-   "secondi": 0.2,
+   "byte": 518288,
+   "secondi": 0.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/cinema/serie-tv",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/cinema/serie-tv",
    "status": 404,
-   "byte": 32189,
+   "byte": 32193,
    "secondi": 0.7,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/cinema/serie-tv",
    "status": 404,
-   "byte": 32189,
+   "byte": 32193,
    "secondi": 0.8,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/cinema/",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/cinema/",
    "status": 200,
-   "byte": 71803,
-   "secondi": 0.3,
+   "byte": 71807,
+   "secondi": 0.7,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/cinema/",
    "status": 200,
-   "byte": 71803,
-   "secondi": 0.3,
+   "byte": 71807,
+   "secondi": 0.8,
    "titolo_pagina": "Al cinema — Film attualmente in sala - Altadefinizione"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/azione/serie-tv",
+   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/azione/serie-tv",
    "status": 200,
-   "byte": 137165,
-   "secondi": 1.2,
+   "byte": 136954,
+   "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/azione/serie-tv",
    "status": 200,
-   "byte": 137165,
-   "secondi": 1.3,
+   "byte": 136954,
+   "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/animazione/serie-tv",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/animazione/serie-tv",
    "status": 200,
-   "byte": 136463,
-   "secondi": 0.7,
+   "byte": 136305,
+   "secondi": 1.0,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/animazione/serie-tv",
    "status": 200,
-   "byte": 136463,
-   "secondi": 0.7,
+   "byte": 136305,
+   "secondi": 1.1,
    "titolo_pagina": "Altadefinizione (2026) - Guarda film streaming in Altadefinizione"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/archivio?search=avatar&f=all&page=1",
+   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/archivio?search=avatar&f=all&page=1",
    "status": 200,
-   "byte": 96111,
-   "secondi": 1.1,
+   "byte": 96115,
+   "secondi": 0.9,
    "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione"
   },
   {
    "url": "https://altadefinizionex.ink/archivio?search=avatar&f=all&page=1",
    "status": 200,
-   "byte": 96111,
-   "secondi": 1.1,
+   "byte": 96115,
+   "secondi": 1.0,
    "titolo_pagina": "Archivio Film e Serie TV - Altadefinizione"
   }
  ],

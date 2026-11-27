@@ -6,11 +6,11 @@ Canale mediasetplay | indirizzo https://mediasetinfinity.mediaset.it
       peliculas | •• Tutti i Film | https://mediasetinfinity.mediaset.it/cinema
       peliculas | •• Film ultimi arrivi | https://mediasetinfinity.mediaset.it/cinema
 == lista "•• Tutti i Film"
-   -> 129 voci
+   -> 127 voci
       findvideos | Xxx - Il ritorno di Xander Cage - XXX - Il ritorno di Xander | https://mediasetinfinity.mediaset.it/movie/xxxilritornodixandercage/xxx-il-ritorno-di-xander-cage_F3
+      findvideos | Retribution (di n. antal) - Retribution | https://mediasetinfinity.mediaset.it/movie/retributiondinantal/retribution_F312216901000102
       findvideos | King Arthur (di a. fuqua) - King Arthur | https://mediasetinfinity.mediaset.it/movie/kingarthurdiafuqua/king-arthur_F011654001000102
       findvideos | Demolition man | https://mediasetinfinity.mediaset.it/movie/demolitionman/demolition-man_F006121501000104
-      findvideos | The foreigner | https://mediasetinfinity.mediaset.it/movie/theforeigner/the-foreigner_F308881001000102
 == findvideos su "Xxx - Il ritorno di Xander Cage - XXX - "
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
@@ -25,12 +25,12 @@ Traceback (most recent call last):
 KeyError: 'response'
 
 == lista "•• Film ultimi arrivi"
-   -> 21 voci
-      findvideos | Xxx - Il ritorno di Xander Cage - XXX - Il ritorno di Xander | https://mediasetinfinity.mediaset.it/movie/xxxilritornodixandercage/xxx-il-ritorno-di-xander-cage_F3
-      findvideos | King Arthur (di a. fuqua) - King Arthur | https://mediasetinfinity.mediaset.it/movie/kingarthurdiafuqua/king-arthur_F011654001000102
-      findvideos | Il peggior Natale della mia vita | https://mediasetinfinity.mediaset.it/movie/ilpeggiornataledellamiavita/il-peggior-natale-della-mia-v
-      findvideos | Un Natale al sud | https://mediasetinfinity.mediaset.it/movie/unnatalealsud/un-natale-al-sud_F307878201000101
-== findvideos su "Xxx - Il ritorno di Xander Cage - XXX - "
+   -> 20 voci
+      findvideos | Annabelle | https://mediasetinfinity.mediaset.it/movie/annabelle/annabelle_F306258101000102
+      findvideos | Una pazza giornata a New York | https://mediasetinfinity.mediaset.it/movie/unapazzagiornataanewyork/una-pazza-giornata-a-new-york_F0
+      findvideos | Rosamunde Pilcher: al settimo cielo | https://mediasetinfinity.mediaset.it/movie/rosamundepilcheralsettimocielo/rosamunde-pilcher-al-setti
+      findvideos | Matrimonio a quattro mani | https://mediasetinfinity.mediaset.it/movie/matrimonioaquattromani/matrimonio-a-quattro-mani_F0072611
+== findvideos su "Annabelle"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -45,11 +45,11 @@ KeyError: 'response'
 
 == lista "•• Film più visti del giorno"
    -> 21 voci
-      findvideos | The place | https://mediasetinfinity.mediaset.it/movie/theplace/the-place_F306383601000101
+      findvideos | Sicilia express - Sicilia Express | https://mediasetinfinity.mediaset.it/movie/siciliaexpress/sicilia-express_F314565003000101
       findvideos | Harry Potter e il prigioniero di Azkaban | https://mediasetinfinity.mediaset.it/movie/harrypottereilprigionierodiazkaban/harry-potter-e-il-prig
-      findvideos | Animali fantastici - I segreti di Silente | https://mediasetinfinity.mediaset.it/movie/animalifantasticiisegretidisilente/animali-fantastici-i-s
-      findvideos | Inga Lindstrom - Nuovi amori | https://mediasetinfinity.mediaset.it/movie/ingalindstromnuoviamori/inga-lindstrom-nuovi-amori_F30832
-== findvideos su "The place"
+      findvideos | Demolition man | https://mediasetinfinity.mediaset.it/movie/demolitionman/demolition-man_F006121501000104
+      findvideos | Inga Lindstrom - Quattro donne e l'amore | https://mediasetinfinity.mediaset.it/movie/ingalindstromquattrodonneelamore/inga-lindstrom-quattro-d
+== findvideos su "Sicilia express - Sicilia Express"
 Traceback (most recent call last):
   File "/home/runner/work/S4me-gen/S4me-gen/strumenti/prova_video.py", line 86, in passo
     r = f()
@@ -90,14 +90,14 @@ Nessuna voce da riprodurre trovata
 == controllo di tutte le sezioni
    SEZIONE Dirette -> OK 46 
    SEZIONE Replay -> OK 23 
-   SEZIONE •• Tutti i Film -> OK 57 
+   SEZIONE •• Tutti i Film -> OK 58 
    SEZIONE •• Film ultimi arrivi -> OK 10 
    SEZIONE •• Film più visti del giorno -> OK 10 
    SEZIONE •• Film da non perdere -> OK 20 
    SEZIONE •• Tutte le Serie TV -> OK 6 
    SEZIONE Viola come il mare - Terza stagione -> OK 4 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 5 
-   SEZIONE Chicago Fire 2 -> OK 11 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 6 
+   SEZIONE I Simpson -> OK 5 
    SEZIONE •• Fiction e Serie Tv del momento -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Segreti di famiglia 3 -> OK 5 
@@ -108,25 +108,25 @@ Nessuna voce da riprodurre trovata
    SEZIONE Tempesta d'amore -> OK 3 
    SEZIONE •• Soap del momento -> SOTTOMENU  
    SEZIONE •• TV Movie italiani -> OK 20 
+   SEZIONE One Piece 18 -> OK 2 
    SEZIONE Captain Tsubasa 2 -> OK 36 
    SEZIONE Dragon Ball Daima -> OK 17 
-   SEZIONE One Piece 18 -> OK 2 
    SEZIONE •• Animazione Made in Japan -> SOTTOMENU  
    SEZIONE I Simpson -> OK 5 
    SEZIONE Law & Order: Unità speciale 16 -> OK 11 
-   SEZIONE NCIS - Unità anticrimine 14 -> OK 5 
+   SEZIONE NCIS - Unità anticrimine 14 -> OK 6 
    SEZIONE •• Serie TV Piu Viste -> SOTTOMENU  
    SEZIONE My Sweet Lie -> OK 5 
    SEZIONE Tutto per la mia famiglia 2 -> OK 4 
-   SEZIONE Forbidden Fruit 4 -> OK 4 
+   SEZIONE Love For Rent -> OK 3 
    SEZIONE •• Serie Turche -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
+   SEZIONE Le Iene 2026/2027 -> OK 6 
    SEZIONE Tu Si Que Vales 2026 -> OK 6 
-   SEZIONE Le Iene presentano: Inside Autunno 2026 -> OK 2 
    SEZIONE •• Programmi TV Prima serata -> SOTTOMENU  
-   SEZIONE Uomini e Donne 2026/2027 -> OK 10 
    SEZIONE Ore 11 -> OK 3 
    SEZIONE La ruota della fortuna 2025/2026 -> OK 5 
+   SEZIONE Caduta libera 2026/2027 -> OK 4 
    SEZIONE •• Programmi TV Daytime -> SOTTOMENU  
    SEZIONE Grande Fratello VIP - Autunno 2026 -> OK 6 
    SEZIONE Amici 26 -> OK 10 
@@ -134,22 +134,22 @@ Nessuna voce da riprodurre trovata
    SEZIONE •• Talent e reality -> SOTTOMENU  
    SEZIONE Lo straordinario mondo di Gumball -> OK 7 
    SEZIONE Captain Tsubasa 2 -> OK 36 
-   SEZIONE Teen Titans Go! -> OK 8 
+   SEZIONE Teen Titans Go! -> OK 4 
    SEZIONE •• Kids Boing -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
+   SEZIONE La casa delle bambole di Gabby -> OK 5 
    SEZIONE Paw Patrol -> OK 5 
    SEZIONE Hey Duggee -> OK 5 
-   SEZIONE La casa delle bambole di Gabby -> OK 5 
    SEZIONE •• Kids Cartoonito -> SOTTOMENU  
    SEZIONE Pollyanna -> OK 30 
    SEZIONE C'era una volta... Pollon -> OK 51 
    SEZIONE Holly e Benji Forever -> OK 52 
    SEZIONE •• Kids Evergreen -> SOTTOMENU  
-   SEZIONE •• Tutti i Documentari -> OK 19 
+   SEZIONE •• Tutti i Documentari -> OK 18 
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
-   SEZIONE Enigmi alieni 10 -> OK 4 
-   SEZIONE Prove sepolte - Le avventure dell'archeologia -> OK 7 
-   SEZIONE Universo ai raggi X 5 -> OK 8 
+   SEZIONE Prove sepolte - Le avventure dell'archeologia -> OK 8 
+   SEZIONE Enigmi alieni 10 -> OK 3 
+   SEZIONE L'Egitto dei faraoni: ascesa e caduta di una civiltà -> OK 6 
    SEZIONE •• Documentari più visti -> SOTTOMENU  
       PROBLEMA: il tasto Successivo ha tipo undefined e appare come cartella
    SEZIONE •• Film Documentari di Focus -> OK 20 

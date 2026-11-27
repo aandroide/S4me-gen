@@ -10,7 +10,7 @@
   {
    "passo": "lista \"•• Tutti i Film\"",
    "esito": "OK",
-   "voci": 129
+   "voci": 127
   },
   {
    "passo": "findvideos su \"Xxx - Il ritorno di Xander Cage - XXX - \"",
@@ -20,10 +20,10 @@
   {
    "passo": "lista \"•• Film ultimi arrivi\"",
    "esito": "OK",
-   "voci": 21
+   "voci": 20
   },
   {
-   "passo": "findvideos su \"Xxx - Il ritorno di Xander Cage - XXX - \"",
+   "passo": "findvideos su \"Annabelle\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   },
@@ -33,7 +33,7 @@
    "voci": 21
   },
   {
-   "passo": "findvideos su \"The place\"",
+   "passo": "findvideos su \"Sicilia express - Sicilia Express\"",
    "esito": "ERRORE",
    "errore": "strumenti/prova_video.py\", line 148, in <lambda>\n    r = passo('%s su \"%s\"' % (it.action, re.sub(r'\\[[^\\]]*\\]', '', it.title or '')[:40]), lambda: f(it))\n                                                                                                  ^^^^^\n  File \"/tmp/kh/addon/channels/mediasetplay.py\", line 432, in findvideos\n    res = session.post(\n          ^^^^^^^^^^^^^\nKeyError: 'response'\n"
   }
@@ -81,7 +81,7 @@
    "voce": "•• Tutti i Film",
    "azione": "peliculas",
    "esito": "OK",
-   "titoli": 57
+   "titoli": 58
   },
   {
    "voce": "•• Film ultimi arrivi",
@@ -111,7 +111,7 @@
    "voce": "•• Fiction e Serie Tv del momento",
    "azione": "peliculas",
    "esito": "SOTTOMENU",
-   "sottovoci": 20,
+   "sottovoci": 19,
    "figli": [
     {
      "voce": "Viola come il mare - Terza stagione",
@@ -123,13 +123,13 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 6
     },
     {
-     "voce": "Chicago Fire 2",
+     "voce": "I Simpson",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 11
+     "titoli": 5
     }
    ]
   },
@@ -198,6 +198,12 @@
    "sottovoci": 20,
    "figli": [
     {
+     "voce": "One Piece 18",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 2
+    },
+    {
      "voce": "Captain Tsubasa 2",
      "azione": "epmenu",
      "esito": "OK",
@@ -208,12 +214,6 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 17
-    },
-    {
-     "voce": "One Piece 18",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 2
     }
    ]
   },
@@ -239,7 +239,7 @@
      "voce": "NCIS - Unità anticrimine 14",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 5
+     "titoli": 6
     }
    ]
   },
@@ -262,10 +262,10 @@
      "titoli": 4
     },
     {
-     "voce": "Forbidden Fruit 4",
+     "voce": "Love For Rent",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 4
+     "titoli": 3
     }
    ]
   },
@@ -282,16 +282,16 @@
      "titoli": 6
     },
     {
-     "voce": "Tu Si Que Vales 2026",
+     "voce": "Le Iene 2026/2027",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 6
     },
     {
-     "voce": "Le Iene presentano: Inside Autunno 2026",
+     "voce": "Tu Si Que Vales 2026",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 2
+     "titoli": 6
     }
    ]
   },
@@ -301,12 +301,6 @@
    "esito": "SOTTOMENU",
    "sottovoci": 20,
    "figli": [
-    {
-     "voce": "Uomini e Donne 2026/2027",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 10
-    },
     {
      "voce": "Ore 11",
      "azione": "epmenu",
@@ -318,6 +312,12 @@
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
+    },
+    {
+     "voce": "Caduta libera 2026/2027",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 4
     }
    ]
   },
@@ -372,7 +372,7 @@
      "voce": "Teen Titans Go!",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 8
+     "titoli": 4
     }
    ]
   },
@@ -383,6 +383,12 @@
    "sottovoci": 16,
    "figli": [
     {
+     "voce": "La casa delle bambole di Gabby",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 5
+    },
+    {
      "voce": "Paw Patrol",
      "azione": "epmenu",
      "esito": "OK",
@@ -390,12 +396,6 @@
     },
     {
      "voce": "Hey Duggee",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 5
-    },
-    {
-     "voce": "La casa delle bambole di Gabby",
      "azione": "epmenu",
      "esito": "OK",
      "titoli": 5
@@ -435,7 +435,7 @@
     "il tasto Successivo ha tipo undefined e appare come cartella"
    ],
    "esito": "OK",
-   "titoli": 19
+   "titoli": 18
   },
   {
    "voce": "•• Documentari più visti",
@@ -447,22 +447,22 @@
    "sottovoci": 20,
    "figli": [
     {
-     "voce": "Enigmi alieni 10",
-     "azione": "epmenu",
-     "esito": "OK",
-     "titoli": 4
-    },
-    {
      "voce": "Prove sepolte - Le avventure dell'archeologia",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 7
+     "titoli": 8
     },
     {
-     "voce": "Universo ai raggi X 5",
+     "voce": "Enigmi alieni 10",
      "azione": "epmenu",
      "esito": "OK",
-     "titoli": 8
+     "titoli": 3
+    },
+    {
+     "voce": "L'Egitto dei faraoni: ascesa e caduta di una civiltà",
+     "azione": "epmenu",
+     "esito": "OK",
+     "titoli": 6
     }
    ]
   },

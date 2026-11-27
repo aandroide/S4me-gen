@@ -325,12 +325,12 @@
    "voce": "•• Nuove Aggiunte",
    "azione": "peliculas",
    "problemi": [
+    "tipo undefined, in Kodi appare come cartella: Monster Strike: MeraxDeath - Shinigami to Boku no ",
+    "tipo undefined, in Kodi appare come cartella: The Cat and the Dragon 2",
     "tipo undefined, in Kodi appare come cartella: Si alza il vento",
     "tipo undefined, in Kodi appare come cartella: Booty Royale: Never Go Down Without a Fight!",
     "tipo undefined, in Kodi appare come cartella: Sekiro: No Defeat",
-    "tipo undefined, in Kodi appare come cartella: Hirayasumi",
-    "tipo undefined, in Kodi appare come cartella: Living It Up in Another World Until I Get Bored",
-    "tipo undefined, in Kodi appare come cartella: Getting Shots on a Frying Pan"
+    "tipo undefined, in Kodi appare come cartella: Hirayasumi"
    ],
    "esito": "OK",
    "titoli": 40
@@ -413,8 +413,8 @@
   {
    "url": "https://www.animeworld.ac/filter?sort=",
    "status": 200,
-   "byte": 372681,
-   "secondi": 0.7,
+   "byte": 372758,
+   "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime",
    "file": "pagine/02.html"
   },
@@ -429,7 +429,7 @@
   {
    "url": "https://www.animeworld.ac/filter?sort=0",
    "status": 200,
-   "byte": 372691,
+   "byte": 372768,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime",
    "file": "pagine/04.html"
@@ -478,7 +478,7 @@
    "url": "https://www.animeworld.ac/api/episode/serverPlayerAnimeWorld?id=vodn-Y",
    "status": 200,
    "byte": 4923,
-   "secondi": 0.2,
+   "secondi": 0.4,
    "titolo_pagina": "AnimeWorld - Streaming",
    "file": "pagine/10.html"
   },
@@ -493,8 +493,8 @@
   {
    "url": "https://www.animeworld.ac/filter?sort=0",
    "status": 200,
-   "byte": 372691,
-   "secondi": 0.4,
+   "byte": 372768,
+   "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime",
    "file": "pagine/12.html"
   },
@@ -509,7 +509,7 @@
   {
    "url": "https://www.animeworld.ac/filter?sort=0",
    "status": 200,
-   "byte": 372691,
+   "byte": 372768,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime",
    "file": "pagine/14.html"
@@ -518,14 +518,14 @@
    "url": "https://www.animeworld.ac/filter?dub=1&sort=",
    "status": 200,
    "byte": 0,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": "",
    "file": "pagine/15.html"
   },
   {
    "url": "https://www.animeworld.ac/filter?dub=1&sort=",
    "status": 200,
-   "byte": 377657,
+   "byte": 377734,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -539,7 +539,7 @@
   {
    "url": "https://www.animeworld.ac/filter?dub=1&sort=",
    "status": 200,
-   "byte": 377657,
+   "byte": 377734,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -553,7 +553,7 @@
   {
    "url": "https://www.animeworld.ac/filter?dub=1&sort=0",
    "status": 200,
-   "byte": 377667,
+   "byte": 377744,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -561,13 +561,13 @@
    "url": "https://www.animeworld.ac/filter?genre=3&dub=1&sort=",
    "status": 200,
    "byte": 0,
-   "secondi": 0.2,
+   "secondi": 0.3,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.animeworld.ac/filter?genre=3&dub=1&sort=",
    "status": 200,
-   "byte": 380663,
+   "byte": 380740,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -581,8 +581,8 @@
   {
    "url": "https://www.animeworld.ac/filter?genre=3&dub=1&sort=0",
    "status": 200,
-   "byte": 380673,
-   "secondi": 0.3,
+   "byte": 380750,
+   "secondi": 0.5,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
   {
@@ -595,7 +595,7 @@
   {
    "url": "https://www.animeworld.ac/filter?genre=5&dub=1&sort=",
    "status": 200,
-   "byte": 345487,
+   "byte": 345564,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -609,7 +609,7 @@
   {
    "url": "https://www.animeworld.ac/filter?genre=5&dub=1&sort=0",
    "status": 200,
-   "byte": 345495,
+   "byte": 345572,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -623,7 +623,7 @@
   {
    "url": "https://www.animeworld.ac/filter?genre=2&dub=1&sort=",
    "status": 200,
-   "byte": 379151,
+   "byte": 379228,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -637,7 +637,7 @@
   {
    "url": "https://www.animeworld.ac/filter?genre=2&dub=1&sort=0",
    "status": 200,
-   "byte": 379161,
+   "byte": 379238,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -651,7 +651,7 @@
   {
    "url": "https://www.animeworld.ac/filter?season=winter&dub=1&sort=",
    "status": 200,
-   "byte": 379980,
+   "byte": 380057,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -659,14 +659,14 @@
    "url": "https://www.animeworld.ac/filter?season=winter&dub=1&sort=0",
    "status": 200,
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.animeworld.ac/filter?season=winter&dub=1&sort=0",
    "status": 200,
-   "byte": 379990,
-   "secondi": 0.3,
+   "byte": 380067,
+   "secondi": 0.5,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
   {
@@ -679,7 +679,7 @@
   {
    "url": "https://www.animeworld.ac/filter?season=spring&dub=1&sort=",
    "status": 200,
-   "byte": 378511,
+   "byte": 378588,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -693,7 +693,7 @@
   {
    "url": "https://www.animeworld.ac/filter?season=spring&dub=1&sort=0",
    "status": 200,
-   "byte": 378521,
+   "byte": 378598,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -707,7 +707,7 @@
   {
    "url": "https://www.animeworld.ac/filter?season=summer&dub=1&sort=",
    "status": 200,
-   "byte": 382001,
+   "byte": 382078,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -715,13 +715,13 @@
    "url": "https://www.animeworld.ac/filter?season=summer&dub=1&sort=0",
    "status": 200,
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.animeworld.ac/filter?season=summer&dub=1&sort=0",
    "status": 200,
-   "byte": 382011,
+   "byte": 382088,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -735,7 +735,7 @@
   {
    "url": "https://www.animeworld.ac/filter?dub=0&sort=",
    "status": 200,
-   "byte": 372315,
+   "byte": 372392,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -749,7 +749,7 @@
   {
    "url": "https://www.animeworld.ac/filter?dub=0&sort=",
    "status": 200,
-   "byte": 372315,
+   "byte": 372392,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -757,13 +757,13 @@
    "url": "https://www.animeworld.ac/filter?dub=0&sort=0",
    "status": 200,
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.animeworld.ac/filter?dub=0&sort=0",
    "status": 200,
-   "byte": 372325,
+   "byte": 372402,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -771,13 +771,13 @@
    "url": "https://www.animeworld.ac/filter?genre=3&dub=0&sort=",
    "status": 200,
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.animeworld.ac/filter?genre=3&dub=0&sort=",
    "status": 200,
-   "byte": 374752,
+   "byte": 374829,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -785,13 +785,13 @@
    "url": "https://www.animeworld.ac/filter?genre=3&dub=0&sort=0",
    "status": 200,
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.animeworld.ac/filter?genre=3&dub=0&sort=0",
    "status": 200,
-   "byte": 374762,
+   "byte": 374839,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -799,27 +799,27 @@
    "url": "https://www.animeworld.ac/filter?genre=5&dub=0&sort=",
    "status": 200,
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.animeworld.ac/filter?genre=5&dub=0&sort=",
    "status": 200,
-   "byte": 374308,
-   "secondi": 0.3,
+   "byte": 374385,
+   "secondi": 0.5,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
   {
    "url": "https://www.animeworld.ac/filter?genre=5&dub=0&sort=0",
    "status": 200,
    "byte": 0,
-   "secondi": 0.3,
+   "secondi": 0.2,
    "titolo_pagina": ""
   },
   {
    "url": "https://www.animeworld.ac/filter?genre=5&dub=0&sort=0",
    "status": 200,
-   "byte": 374318,
+   "byte": 374395,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   },
@@ -833,7 +833,7 @@
   {
    "url": "https://www.animeworld.ac/filter?genre=2&dub=0&sort=",
    "status": 200,
-   "byte": 373789,
+   "byte": 373866,
    "secondi": 0.3,
    "titolo_pagina": "AnimeWorld - Filtro ricerca anime"
   }

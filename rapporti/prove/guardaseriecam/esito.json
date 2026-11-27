@@ -28,7 +28,7 @@
    "server": "vidxgo",
    "url": "https://v.vidxgo.co/39161219/1/1",
    "tipo": "film",
-   "finale": "http://127.0.0.1:40795/hls/tv/39161219/1/1/master.m3u8",
+   "finale": "http://127.0.0.1:40461/hls/tv/39161219/1/1/master.m3u8",
    "esito": "VIDEO OK",
    "dettaglio": "m3u8 200"
   }
@@ -89,15 +89,15 @@
   {
    "url": "https://guardaseriex.help/serietv-streaming",
    "status": 200,
-   "byte": 100571,
-   "secondi": 0.6,
+   "byte": 100101,
+   "secondi": 0.5,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/01.html"
   },
   {
    "url": "https://guardaseriex.help/commedia/5907-i-12-segni-di-valentina-streaming.html",
    "status": 200,
-   "byte": 65096,
+   "byte": 65104,
    "secondi": 0.4,
    "titolo_pagina": "I 12 segni di Valentina streaming - Guardaserie",
    "file": "pagine/02.html"
@@ -106,14 +106,14 @@
    "url": "https://api.themoviedb.org/3/genre/tv/list?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
    "byte": 495,
-   "secondi": 0.0,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
    "url": "https://api.themoviedb.org/3/find/tt39161219?external_source=imdb_id&api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 788,
+   "byte": 787,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/04.html"
@@ -129,8 +129,8 @@
   {
    "url": "https://api.themoviedb.org/3/tv/318420?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=images,videos,external_ids,credits&include_image_language=it,en,null",
    "status": 200,
-   "byte": 11286,
-   "secondi": 0.0,
+   "byte": 11290,
+   "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/06.html"
   },
@@ -145,7 +145,7 @@
   {
    "url": "https://api.themoviedb.org/3/tv/318420?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it",
    "status": 200,
-   "byte": 2187,
+   "byte": 2186,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/08.html"
@@ -161,7 +161,7 @@
   {
    "url": "https://api.themoviedb.org/3/tv/318420/season/1?api_key=a1ab8b8669da03637a4b98fa39c39228&language=it&append_to_response=videos,images,credits,external_ids&include_image_language=it,en,null",
    "status": 200,
-   "byte": 12415,
+   "byte": 12420,
    "secondi": 0.1,
    "titolo_pagina": "",
    "file": "pagine/10.html"
@@ -169,15 +169,15 @@
   {
    "url": "https://guardaseriex.help/serietv-streaming",
    "status": 200,
-   "byte": 100571,
-   "secondi": 0.6,
+   "byte": 100101,
+   "secondi": 0.5,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/11.html"
   },
   {
    "url": "https://guardaseriex.help/serietv-popolari/",
    "status": 200,
-   "byte": 404768,
+   "byte": 404776,
    "secondi": 1.0,
    "titolo_pagina": "Serie tv Popolari in Italia - Guardaserie",
    "file": "pagine/12.html"
@@ -185,38 +185,38 @@
   {
    "url": "https://guardaseriex.help/serietv-streaming",
    "status": 200,
-   "byte": 100571,
-   "secondi": 0.4,
+   "byte": 100101,
+   "secondi": 0.5,
    "titolo_pagina": "Lista completa Serie tv Streaming - Guardaserie",
    "file": "pagine/13.html"
   },
   {
    "url": "https://guardaseriex.help/biografico/",
    "status": 200,
-   "byte": 220340,
-   "secondi": 0.7,
+   "byte": 220348,
+   "secondi": 0.4,
    "titolo_pagina": "Biografico streaming | Guardaserie",
    "file": "pagine/14.html"
   },
   {
    "url": "https://guardaseriex.help/commedia/",
    "status": 200,
-   "byte": 2271329,
-   "secondi": 3.5,
+   "byte": 2271358,
+   "secondi": 0.5,
    "titolo_pagina": "Commedia streaming | Guardaserie",
    "file": "pagine/15.html"
   },
   {
    "url": "https://guardaseriex.help/crime/",
    "status": 200,
-   "byte": 1265845,
+   "byte": 1265867,
    "secondi": 0.4,
    "titolo_pagina": "Crime streaming | Guardaserie"
   },
   {
    "url": "https://guardaseriex.help/index.php?story=avatar&do=search&subaction=search",
    "status": 200,
-   "byte": 38266,
+   "byte": 38274,
    "secondi": 0.2,
    "titolo_pagina": "Site search &raquo; Guardaserie - Serie TV Streaming Complete GRATIS"
   }

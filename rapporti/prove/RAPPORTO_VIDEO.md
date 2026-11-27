@@ -1,8 +1,8 @@
 # Controllo fino al video
 
-Riepilogo: ARRIVA AL VIDEO 9, SI FERMA AL SERVER O AL VIDEO 7, SI FERMA PRIMA DEL VIDEO 39, SENZA ESITO 3
+Riepilogo: ARRIVA AL VIDEO 12, SI FERMA AL SERVER O AL VIDEO 5, SI FERMA PRIMA DEL VIDEO 38, SENZA ESITO 3
 
-## ARRIVA AL VIDEO (9)
+## ARRIVA AL VIDEO (12)
 
 ### altadefinizioneclick
 Sito: https://altadefinizionex.ink | verdetto: ARRIVA AL VIDEO
@@ -11,6 +11,10 @@ Sito: https://altadefinizionex.ink | verdetto: ARRIVA AL VIDEO
 ### animesaturn
 Sito: https://www.animesaturn.net | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
+
+### animeunity
+Sito: https://animeunity.cx | verdetto: ARRIVA AL VIDEO
+- server streamingcommunityws: VIDEO OK m3u8 200
 
 ### animeworld
 Sito: https://www.animeworld.ac | verdetto: ARRIVA AL VIDEO
@@ -40,23 +44,28 @@ Sito:  | verdetto: ARRIVA AL VIDEO
 Sito: https://www.raiplay.it | verdetto: ARRIVA AL VIDEO
 - server directo: VIDEO OK 206 video/mp4
 
-## SI FERMA AL SERVER O AL VIDEO (7)
+### streamingcommunity
+Sito: https://streamingcommunityz.mov | verdetto: ARRIVA AL VIDEO
+- server streamingcommunityws: VIDEO OK m3u8 200
+
+### toonitalia
+Sito: https://toonitalia.xyz | verdetto: ARRIVA AL VIDEO
+- server voe: VIDEO OK m3u8 200
+
+## SI FERMA AL SERVER O AL VIDEO (5)
 
 ### altadefinizione01
 Sito: https://altadefinizione-01.ws | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
-- server vixsrc: VIDEO NON RAGGIUNGIBILE HTTP 403
-
-### animeunity
-Sito: https://animeunity.cx | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
-- server streamingcommunityws: VIDEO NON RAGGIUNGIBILE HTTP 403
+- server vixsrc: VIDEO NON RAGGIUNGIBILE 200 text/html; charset=utf-8 non sembra un video
 
 ### cineblog001
-Sito: https://cineblog001.cafe | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
+Sito: https://cine-blog01.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
 ### cineblog01
 Sito: https://cb01official.uno | verdetto: SI FERMA AL SERVER O AL VIDEO: VIDEO NON RAGGIUNGIBILE
+- server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
 - server mixdrop: VIDEO NON RAGGIUNGIBILE HTTP 403
 
 ### hd4me
@@ -67,11 +76,7 @@ Sito: https://hd4me.net | verdetto: SI FERMA AL SERVER O AL VIDEO: SERVER NON RI
 Sito: https://tanti-film.my | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
 - server vidxgo: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) il server non risponde entro 90 secondi
 
-### toonitalia
-Sito: https://toonitalia.xyz | verdetto: SI FERMA AL SERVER O AL VIDEO: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403)
-- server voe: NON VERIFICABILE DA GITHUB (il server del video blocca l'IP: HTTP 403) 
-
-## SI FERMA PRIMA DEL VIDEO (39)
+## SI FERMA PRIMA DEL VIDEO (38)
 
 ### 1337x
 Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
@@ -79,7 +84,10 @@ Sito:  | verdetto: SI FERMA A: lista "• Film ITA"
 - passo "lista "•• Film"": VUOTO 
 
 ### accuradio
-Sito:  | verdetto: SI FERMA A: ultimo passo, nessuna voce da riprodurre
+Sito:  | verdetto: SI FERMA A: lista "Most Popular "
+- passo "lista "Most Popular "": VUOTO 
+- passo "lista ""Musical Comedies" — Humorous numbers fr"": VUOTO 
+- passo "lista "Birthday: Jimi Hendrix (11/27/42) "": VUOTO 
 
 ### altadefinizione
 Sito: https://altadefinizione.nuovo.live | verdetto: SI FERMA A: lista "Film "
@@ -143,10 +151,10 @@ Sito: https://www.animeworld.ac | verdetto: SI FERMA A: lista "• Anime"
 - passo "lista "•• OAV"": VUOTO 
 
 ### eurostreaming
-Sito: https://eurostream.homes | verdetto: SI FERMA A: findvideos su "1x01 - Un nuovo inizio (prima parte) "
-- passo "findvideos su "1x01 - Un nuovo inizio (prima parte) "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/165rsctdww0h 
+Sito: https://eurostream.homes | verdetto: SI FERMA A: findvideos su "1x01 - È fatta "
+- passo "findvideos su "1x01 - È fatta "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/1bkmgazpmt0s 
 - passo "findvideos su "1x01 - Fino ad allora… sono Bass Reeves "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/pcmgkril78mk 
-- passo "findvideos su "1x01 - Che la Caccia Abbia Inizio! "": ERRORE mlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/delta/84w38t0e4el9 
+- passo "findvideos su "1x01 - È fatta "": ERRORE    itemlist = support.server(item, item.other)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Exception: Not un-shortened link: https://clicka.cc/mix/bsa2u39w 
 
 ### eurostreaming_actor
 Sito: https://guardaseriex.help | verdetto: SI FERMA A: lista "• Aggiornamenti"
@@ -172,9 +180,9 @@ Sito:  | verdetto: SI FERMA A: lista "• Serie TV"
 
 ### ilcorsaronero
 Sito: https://ilcorsaronero.link | verdetto: SI FERMA A: lista "Film"
-- passo "lista "Film"": VUOTO 
-- passo "lista "Serie TV "": VUOTO 
-- passo "lista "Animazione "": VUOTO 
+- passo "lista "Film"": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+- passo "lista "Serie TV "": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
+- passo "lista "Animazione "": ERRORE kh/addon/core/support.py", line 614, in wrapper     raise WebErrorException(urlparse.urlparse(item.url)[1], item.channel) platformcode.logger.WebErrorException 
 
 ### ilgeniodellostreaming
 Sito:  | verdetto: SI FERMA A: lista "• Film"
@@ -206,8 +214,8 @@ Sito: https://lordchannel.net | verdetto: SI FERMA A: lista "• Film"
 ### mediasetplay
 Sito: https://mediasetinfinity.mediaset.it | verdetto: SI FERMA A: findvideos su "Xxx - Il ritorno di Xander Cage - XXX - "
 - passo "findvideos su "Xxx - Il ritorno di Xander Cage - XXX - "": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "Xxx - Il ritorno di Xander Cage - XXX - "": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
-- passo "findvideos su "The place"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Annabelle"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
+- passo "findvideos su "Sicilia express - Sicilia Express"": ERRORE             ^^^^^   File "/tmp/kh/addon/channels/mediasetplay.py", line 432, in findvideos     res = session.post(           ^^^^^^^^^^^^^ KeyError: 'response' 
 
 ### metalvideo
 Sito:  | verdetto: SI FERMA A: lista "Generi "
@@ -235,12 +243,6 @@ Sito: http://ww1.serietvu.live/?sub1=47fb879a-5325-11ee-94a7-cc35006f53d1 | verd
 - passo "lista "• Serie TV"": VUOTO 
 - passo "lista "•• Ultimi episodi"": VUOTO 
 - passo "lista "•• Generi"": VUOTO 
-
-### streamingcommunity
-Sito: https://streamingcommunityz.mov | verdetto: SI FERMA A: lista "• Film"
-- passo "lista "• Film"": ERRORE eamingcommunity.py", line 121, in peliculas     records = data_page['props']['sliders'][item.args]['titles']               ~~~~~~~~~^^^^^^^^^ KeyError: 'props' 
-- passo "lista "•• Aggiunti di recente"": ERRORE eamingcommunity.py", line 121, in peliculas     records = data_page['props']['sliders'][item.args]['titles']               ~~~~~~~~~^^^^^^^^^ KeyError: 'props' 
-- passo "lista "•• Top 10 film di oggi"": ERRORE eamingcommunity.py", line 121, in peliculas     records = data_page['props']['sliders'][item.args]['titles']               ~~~~~~~~~^^^^^^^^^ KeyError: 'props' 
 
 ### streamingita
 Sito: https://streamingita.homes | verdetto: SI FERMA A: lista "Generi"

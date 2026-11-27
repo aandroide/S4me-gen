@@ -9,21 +9,25 @@
   },
   {
    "passo": "lista \"• Film\"",
-   "esito": "ERRORE",
-   "errore": "s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/channels/streamingcommunity.py\", line 121, in peliculas\n    records = data_page['props']['sliders'][item.args]['titles']\n              ~~~~~~~~~^^^^^^^^^\nKeyError: 'props'\n"
+   "esito": "OK",
+   "voci": 21
   },
   {
-   "passo": "lista \"•• Aggiunti di recente\"",
-   "esito": "ERRORE",
-   "errore": "s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/channels/streamingcommunity.py\", line 121, in peliculas\n    records = data_page['props']['sliders'][item.args]['titles']\n              ~~~~~~~~~^^^^^^^^^\nKeyError: 'props'\n"
-  },
-  {
-   "passo": "lista \"•• Top 10 film di oggi\"",
-   "esito": "ERRORE",
-   "errore": "s\"' % re.sub(r'\\[[^\\]]*\\]', '', vm.title or '')[:40], lambda: getattr(ch, vm.action)(vm))\n                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/kh/addon/channels/streamingcommunity.py\", line 121, in peliculas\n    records = data_page['props']['sliders'][item.args]['titles']\n              ~~~~~~~~~^^^^^^^^^\nKeyError: 'props'\n"
+   "passo": "findvideos su \"Chiara \"",
+   "esito": "OK",
+   "voci": 2
   }
  ],
- "video": [],
+ "video": [
+  {
+   "server": "streamingcommunityws",
+   "url": "https://streamingcommunityz.mov/it/iframe/66660",
+   "tipo": "film",
+   "finale": "https://vixcloud.cc/playlist/801846?token=792d54d006e1d4f709891cc992de9e20&expires=1800977133&asn=",
+   "esito": "VIDEO OK",
+   "dettaglio": "m3u8 200"
+  }
+ ],
  "menu_dichiarato": [
   "film | '/it/movies'",
   "film | ('Aggiunti di recente', ['/it/movies', 'peliculas', 1])",
@@ -45,591 +49,298 @@
   {
    "voce": "• Film",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/movies",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/movies",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Aggiunti di recente",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/movies",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/movies",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Top 10 film di oggi",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/it/movies",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/movies",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 10
   },
   {
    "voce": "• Serie TV",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/it/tv-shows",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/tv-shows",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Aggiunti di recente",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/tv-shows",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/tv-shows",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Top 10 serie TV di oggi",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/tv-shows",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/tv-shows",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 10
   },
   {
    "voce": "Generi",
    "azione": "genres",
-   "esito": "ERRORE KeyError",
-   "pagine": [
+   "esito": "SOTTOMENU",
+   "sottovoci": 26,
+   "figli": [
     {
-     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
+     "voce": "Azione",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
     },
     {
-     "url": "https://streamingcommunityz.mov",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
+     "voce": "Action & Adventure",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
+    },
+    {
+     "voce": "Avventura",
+     "azione": "peliculas",
+     "esito": "OK",
+     "titoli": 20
     }
    ]
   },
   {
    "voce": "Archivio",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/it/archive",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/archive",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Archivio Film",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/it/archive?type=movie",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/archive?type=movie",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Archivio Serie TV",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/it/archive?type=tv",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/archive?type=tv",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Archivio per data aggiornamento",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/archive?sort=last_air_date",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/archive?sort=last_air_date",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Archivio per data aggiunta",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/it/archive?sort=created_at",
-     "status": 200,
-     "byte": 230160,
-     "titolo_pagina": ""
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/archive?sort=created_at",
-     "status": 200,
-     "byte": 230160,
-     "titolo_pagina": ""
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Archivio per valutazione",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/archive?sort=score",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/archive?sort=score",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Archivio per numero visioni",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/it/archive?sort=views",
-     "status": 200,
-     "byte": 290178,
-     "titolo_pagina": ""
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/archive?sort=views",
-     "status": 200,
-     "byte": 290178,
-     "titolo_pagina": ""
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "•• Archivio per nome",
    "azione": "peliculas",
-   "esito": "ERRORE KeyError",
-   "pagine": [
-    {
-     "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/archive?sort=name",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/archive?sort=name",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 20
   },
   {
    "voce": "txt70741 …",
    "azione": "search",
-   "esito": "VUOTA",
-   "pagine": [
-    {
-     "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/it/search?q=avatar",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    },
-    {
-     "url": "https://streamingcommunityz.mov/it/search?q=avatar",
-     "status": 403,
-     "byte": 6563,
-     "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-    }
-   ]
+   "esito": "OK",
+   "titoli": 10
   }
  ],
- "sezioni_riepilogo": "0 ok su 16",
+ "sezioni_riepilogo": "16 ok su 16",
  "rete": [
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/it/movies",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "url": "https://streamingcommunityz.mov/it/movies",
+   "status": 200,
+   "byte": 298083,
+   "secondi": 0.6,
+   "titolo_pagina": "",
    "file": "pagine/01.html"
   },
   {
-   "url": "https://streamingcommunityz.mov/it/movies",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "url": "https://streamingcommunityz.mov/it/iframe/66660",
+   "status": 200,
+   "byte": 1766,
+   "secondi": 0.2,
+   "titolo_pagina": "",
    "file": "pagine/02.html"
   },
   {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/it/movies",
+   "url": "https://streamingcommunityz.mov/it/iframe/66660",
    "status": 200,
-   "byte": 304094,
-   "secondi": 0.9,
+   "byte": 1766,
+   "secondi": 0.2,
    "titolo_pagina": "",
    "file": "pagine/03.html"
   },
   {
-   "url": "https://streamingcommunityz.mov/it/movies",
+   "url": "https://vixcloud.cc/embed/801846?token=116a069fa7a880d743ae690aad34d36d&t=Q2hpYXJh&referer=1&expires=1795793143&lang=it&scz=1",
    "status": 200,
-   "byte": 304094,
-   "secondi": 0.9,
-   "titolo_pagina": "",
+   "byte": 7726,
+   "secondi": 0.2,
+   "titolo_pagina": "801846",
    "file": "pagine/04.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/it/movies",
-   "status": 403,
-   "byte": 6563,
+   "url": "https://streamingcommunityz.mov/it/movies",
+   "status": 200,
+   "byte": 298083,
    "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "titolo_pagina": "",
    "file": "pagine/05.html"
   },
   {
    "url": "https://streamingcommunityz.mov/it/movies",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.8,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "status": 200,
+   "byte": 298083,
+   "secondi": 0.5,
+   "titolo_pagina": "",
    "file": "pagine/06.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/movies",
-   "status": 403,
-   "byte": 6563,
+   "url": "https://streamingcommunityz.mov/it/movies",
+   "status": 200,
+   "byte": 298083,
    "secondi": 0.5,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "titolo_pagina": "",
    "file": "pagine/07.html"
   },
   {
-   "url": "https://streamingcommunityz.mov/it/movies",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.6,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "url": "https://streamingcommunityz.mov/it/tv-shows",
+   "status": 200,
+   "byte": 317035,
+   "secondi": 0.5,
+   "titolo_pagina": "",
    "file": "pagine/08.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/movies",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.4,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "url": "https://streamingcommunityz.mov/it/tv-shows",
+   "status": 200,
+   "byte": 317035,
+   "secondi": 0.8,
+   "titolo_pagina": "",
    "file": "pagine/09.html"
   },
   {
-   "url": "https://streamingcommunityz.mov/it/movies",
-   "status": 403,
-   "byte": 6563,
+   "url": "https://streamingcommunityz.mov/it/tv-shows",
+   "status": 200,
+   "byte": 317035,
    "secondi": 0.5,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "titolo_pagina": "",
    "file": "pagine/10.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/it/movies",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.6,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "url": "https://streamingcommunityz.mov",
+   "status": 200,
+   "byte": 319772,
+   "secondi": 0.5,
+   "titolo_pagina": "",
    "file": "pagine/11.html"
   },
   {
-   "url": "https://streamingcommunityz.mov/it/movies",
-   "status": 403,
-   "byte": 6563,
+   "url": "https://streamingcommunityz.mov/it/archive?genre[]=4",
+   "status": 200,
+   "byte": 230272,
    "secondi": 0.6,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "titolo_pagina": "",
    "file": "pagine/12.html"
   },
   {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/it/tv-shows",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.4,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "url": "https://streamingcommunityz.mov/it/archive?genre[]=13",
+   "status": 200,
+   "byte": 237176,
+   "secondi": 0.8,
+   "titolo_pagina": "",
    "file": "pagine/13.html"
   },
   {
-   "url": "https://streamingcommunityz.mov/it/tv-shows",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.5,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "url": "https://streamingcommunityz.mov/it/archive?genre[]=11",
+   "status": 200,
+   "byte": 235532,
+   "secondi": 0.6,
+   "titolo_pagina": "",
    "file": "pagine/14.html"
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/tv-shows",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.5,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str",
+   "url": "https://streamingcommunityz.mov/it/archive",
+   "status": 200,
+   "byte": 221571,
+   "secondi": 0.3,
+   "titolo_pagina": "",
    "file": "pagine/15.html"
   },
   {
-   "url": "https://streamingcommunityz.mov/it/tv-shows",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.5,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/tv-shows",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.5,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://streamingcommunityz.mov/it/tv-shows",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.5,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.6,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://streamingcommunityz.mov",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.6,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/it/archive",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://streamingcommunityz.mov/it/archive",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/it/archive?type=movie",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
    "url": "https://streamingcommunityz.mov/it/archive?type=movie",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/it/archive?type=tv",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.5,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
+   "status": 200,
+   "byte": 222247,
+   "secondi": 0.6,
+   "titolo_pagina": ""
   },
   {
    "url": "https://streamingcommunityz.mov/it/archive?type=tv",
-   "status": 403,
-   "byte": 6563,
+   "status": 200,
+   "byte": 221801,
    "secondi": 0.6,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/archive?sort=last_air_date",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
+   "titolo_pagina": ""
   },
   {
    "url": "https://streamingcommunityz.mov/it/archive?sort=last_air_date",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/it/archive?sort=created_at",
    "status": 200,
-   "byte": 230160,
-   "secondi": 0.9,
+   "byte": 238484,
+   "secondi": 0.6,
    "titolo_pagina": ""
   },
   {
    "url": "https://streamingcommunityz.mov/it/archive?sort=created_at",
    "status": 200,
-   "byte": 230160,
-   "secondi": 0.9,
+   "byte": 224206,
+   "secondi": 0.6,
    "titolo_pagina": ""
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/archive?sort=score",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.5,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
    "url": "https://streamingcommunityz.mov/it/archive?sort=score",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.6,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://u88929j98eijdjskfkls.lcbtcnob.workers.dev/it/archive?sort=views",
    "status": 200,
-   "byte": 290178,
-   "secondi": 1.0,
+   "byte": 258229,
+   "secondi": 0.7,
    "titolo_pagina": ""
   },
   {
    "url": "https://streamingcommunityz.mov/it/archive?sort=views",
    "status": 200,
-   "byte": 290178,
-   "secondi": 1.0,
+   "byte": 285747,
+   "secondi": 0.7,
    "titolo_pagina": ""
   },
   {
-   "url": "https://quiet-base-584a.ifewfijdqwji.workers.dev/it/archive?sort=name",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
    "url": "https://streamingcommunityz.mov/it/archive?sort=name",
-   "status": 403,
-   "byte": 6563,
+   "status": 200,
+   "byte": 267949,
    "secondi": 0.7,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
-  },
-  {
-   "url": "https://jfhofuhueshfuh.fmegvvon.workers.dev/it/search?q=avatar",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.6,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
+   "titolo_pagina": ""
   },
   {
    "url": "https://streamingcommunityz.mov/it/search?q=avatar",
-   "status": 403,
-   "byte": 6563,
-   "secondi": 0.6,
-   "titolo_pagina": "Access denied | streamingcommunityz.mov used Cloudflare to restrict access | str"
+   "status": 200,
+   "byte": 83718,
+   "secondi": 0.4,
+   "titolo_pagina": ""
   }
  ],
- "verdetto": "SI FERMA A: lista \"• Film\""
+ "verdetto": "ARRIVA AL VIDEO"
 }
