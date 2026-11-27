@@ -13,10 +13,12 @@
  },
  {
   "canale": "accuradio",
-  "stato": "OK",
+  "stato": "ROTTO",
   "dettagli": [
    "indirizzo scritto nel canale: https://www.accuradio.com",
-   "OK: peliculas / | 48 risultati"
+   "ROTTO: peliculas / | patron non trova titoli",
+   "  campione della pagina salvato in rapporti/correzioni/accuradio/pagina_peliculas_home.html",
+   "  nessuna regex sostitutiva trovata automaticamente in /"
   ],
   "correzione": false,
   "host": "https://www.accuradio.com"
@@ -171,7 +173,6 @@
   "canale": "cineblog001",
   "stato": "ROTTO",
   "dettagli": [
-   "il sito reindirizza a un altro indirizzo: https://cine-blog01.uno (in channels.json c'e https://cineblog001.cafe)",
    "ROTTO: peliculas /film/ | patron non trova titoli",
    "  campione della pagina salvato in rapporti/correzioni/cineblog001/pagina_peliculas_film.html",
    "  regex proposta: 70 titoli su 51 card",
@@ -186,8 +187,7 @@
    "  non applicata al file: regex dinamica"
   ],
   "correzione": false,
-  "host": "https://cineblog001.cafe",
-  "nuovo_host": "https://cine-blog01.uno",
+  "host": "https://cine-blog01.uno",
   "proposte": [
    {
     "funzione": "peliculas",
@@ -382,22 +382,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/fx-fighter-kurumi-chan.M32Ff/WwY2Zj8w3H",
-      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
-      "title": "FX Fighter Kurumi-chan",
-      "lang": null
-     },
-     {
-      "url": "/play/the-all-devouring-whale-homecoming-ita.ZPe5V/x5FUKc",
-      "thumb": "https://img.animeworld.ac/locandine/kBWUd.jpg",
-      "title": "The All-devouring Whale: Homecoming",
+      "url": "/play/devils-crest-ita.T6LXb/66QNCw3NBY",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": "ITA"
      },
      {
-      "url": "/play/a-returners-magic-should-be-special-2.psLV9/6Smk8aOoKN",
-      "thumb": "https://img.animeworld.ac/locandine/psLV9.jpg",
-      "title": "A Returner&#x27;s Magic Should Be Special 2",
+      "url": "/play/demons-crest.Qipbr/AQj7x83awV",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": null
+     },
+     {
+      "url": "/play/one-piece-ita.d5nahE/pwZqNB",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
+      "lang": "ITA"
      }
     ],
     "perse": [
@@ -411,22 +411,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/fx-fighter-kurumi-chan.M32Ff/WwY2Zj8w3H",
-      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
-      "title": "FX Fighter Kurumi-chan",
-      "lang": null
-     },
-     {
-      "url": "/play/the-all-devouring-whale-homecoming-ita.ZPe5V/x5FUKc",
-      "thumb": "https://img.animeworld.ac/locandine/kBWUd.jpg",
-      "title": "The All-devouring Whale: Homecoming",
+      "url": "/play/devils-crest-ita.T6LXb/66QNCw3NBY",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": "ITA"
      },
      {
-      "url": "/play/a-returners-magic-should-be-special-2.psLV9/6Smk8aOoKN",
-      "thumb": "https://img.animeworld.ac/locandine/psLV9.jpg",
-      "title": "A Returner&#x27;s Magic Should Be Special 2",
+      "url": "/play/demons-crest.Qipbr/AQj7x83awV",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": null
+     },
+     {
+      "url": "/play/one-piece-ita.d5nahE/pwZqNB",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
+      "lang": "ITA"
      }
     ],
     "perse": [
@@ -440,22 +440,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/fx-fighter-kurumi-chan.M32Ff/WwY2Zj8w3H",
-      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
-      "title": "FX Fighter Kurumi-chan",
-      "lang": null
-     },
-     {
-      "url": "/play/the-all-devouring-whale-homecoming-ita.ZPe5V/x5FUKc",
-      "thumb": "https://img.animeworld.ac/locandine/kBWUd.jpg",
-      "title": "The All-devouring Whale: Homecoming",
+      "url": "/play/devils-crest-ita.T6LXb/66QNCw3NBY",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": "ITA"
      },
      {
-      "url": "/play/a-returners-magic-should-be-special-2.psLV9/6Smk8aOoKN",
-      "thumb": "https://img.animeworld.ac/locandine/psLV9.jpg",
-      "title": "A Returner&#x27;s Magic Should Be Special 2",
+      "url": "/play/demons-crest.Qipbr/AQj7x83awV",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": null
+     },
+     {
+      "url": "/play/one-piece-ita.d5nahE/pwZqNB",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
+      "lang": "ITA"
      }
     ],
     "perse": [
@@ -469,22 +469,22 @@
     "patron": "<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a [^>]*?href=\"(?P<url>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<img [^>]*?src=\"(?P<thumb>[^\"]+)\"(?:(?!<div(?=[^>]*class=\"(?:[^\"]*\\s)?item(?:\\s[^\"]*)?\")).)*?<a(?=[^>]*class=\"(?:[^\"]*\\s)?name(?:\\s[^\"]*)?\")[^>]*>\\s*(?:<[^>]+>\\s*)*(?P<title>[^<]+?)(?:\\s*\\((?P<lang>ITA|SUB[\\ \\-]?ITA|Sub[\\ \\-]?Ita)\\))?\\s*<",
     "esempi": [
      {
-      "url": "/play/fx-fighter-kurumi-chan.M32Ff/WwY2Zj8w3H",
-      "thumb": "https://img.animeworld.ac/locandine/M32Ff.png",
-      "title": "FX Fighter Kurumi-chan",
-      "lang": null
-     },
-     {
-      "url": "/play/the-all-devouring-whale-homecoming-ita.ZPe5V/x5FUKc",
-      "thumb": "https://img.animeworld.ac/locandine/kBWUd.jpg",
-      "title": "The All-devouring Whale: Homecoming",
+      "url": "/play/devils-crest-ita.T6LXb/66QNCw3NBY",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": "ITA"
      },
      {
-      "url": "/play/a-returners-magic-should-be-special-2.psLV9/6Smk8aOoKN",
-      "thumb": "https://img.animeworld.ac/locandine/psLV9.jpg",
-      "title": "A Returner&#x27;s Magic Should Be Special 2",
+      "url": "/play/demons-crest.Qipbr/AQj7x83awV",
+      "thumb": "https://img.animeworld.ac/locandine/Qipbr.png",
+      "title": "Devils&#x27; Crest",
       "lang": null
+     },
+     {
+      "url": "/play/one-piece-ita.d5nahE/pwZqNB",
+      "thumb": "https://img.animeworld.ac/locandine/d5nahE.png?0",
+      "title": "One Piece",
+      "lang": "ITA"
      }
     ],
     "perse": [
@@ -498,14 +498,16 @@
   "canale": "eurostreaming",
   "stato": "OK",
   "dettagli": [
+   "il sito reindirizza a un altro indirizzo: https://eurostream.beer (in channels.json c'e https://eurostream.homes)",
    "OK: peliculas /category/anime-cartoni-animati/ | 18 risultati",
-   "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.homes/?p=23012, controllo quella",
-   "OK: peliculas /aggiornamento-episodi-nuovi/ | 94 risultati",
+   "peliculas /aggiornamento-episodi-nuovi/: la pagina rimanda via script a https://eurostream.beer/?p=23012, controllo quella",
+   "OK: peliculas /aggiornamento-episodi-nuovi/ | 92 risultati",
    "attenzione: peliculas /aggiornamento-episodi-nuovi/, patronNext non trova la pagina successiva (puo essere l'ultima pagina)",
    "OK: peliculas /category/serie-tv-archive/ | 18 risultati"
   ],
   "correzione": false,
-  "host": "https://eurostream.homes"
+  "host": "https://eurostream.homes",
+  "nuovo_host": "https://eurostream.beer"
  },
  {
   "canale": "eurostreaming_actor",
@@ -691,20 +693,9 @@
  },
  {
   "canale": "ilcorsaronero",
-  "stato": "ROTTO",
+  "stato": "IRRAGGIUNGIBILE",
   "dettagli": [
-   "ROTTO: peliculas /cat/film | patron non trova titoli",
-   "  campione della pagina salvato in rapporti/correzioni/ilcorsaronero/pagina_peliculas_cat_film.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /cat/film",
-   "ROTTO: peliculas /cat/serie-tv | patron non trova titoli",
-   "  campione della pagina salvato in rapporti/correzioni/ilcorsaronero/pagina_peliculas_cat_serie_tv.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /cat/serie-tv",
-   "ROTTO: peliculas /cat/animazione | patron non trova titoli",
-   "  campione della pagina salvato in rapporti/correzioni/ilcorsaronero/pagina_peliculas_cat_animazione.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /cat/animazione",
-   "ROTTO: peliculas /cat/altro/documentari | patron non trova titoli",
-   "  campione della pagina salvato in rapporti/correzioni/ilcorsaronero/pagina_peliculas_cat_altro_documentari.html",
-   "  nessuna regex sostitutiva trovata automaticamente in /cat/altro/documentari"
+   "il sito non risponde (tempo scaduto) (https://ilcorsaronero.link)"
   ],
   "correzione": false,
   "host": "https://ilcorsaronero.link"
@@ -910,7 +901,7 @@
   "canale": "serietvu",
   "stato": "DOMINIO PARCHEGGIATO",
   "dettagli": [
-   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27506 | titolo: nessuno"
+   "la home di http://ww1.serietvu.live sembra un dominio in vendita o vuoto | motivo: frase \"abovedomains\" | link: 1 | dimensione: 27408 | titolo: nessuno"
   ],
   "correzione": false,
   "host": "http://ww1.serietvu.live"
